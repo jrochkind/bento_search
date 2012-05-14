@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     bento_search (0.0.1)
+      confstruct (>= 0.2.3, < 1.0)
       rails (~> 3.2.3)
 
 GEM
@@ -36,6 +37,7 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     builder (3.0.0)
+    confstruct (0.2.3)
     erubis (2.7.0)
     hike (1.2.1)
     i18n (0.6.0)

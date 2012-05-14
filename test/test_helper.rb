@@ -2,6 +2,11 @@
 ENV["RAILS_ENV"] = "test"
 
 require File.expand_path("../dummy/config/environment.rb",  __FILE__)
+
+# we insist on minitest, when only the best will do. 
+# Rails will build on top of it if it's there. 
+require 'minitest/unit'
+
 require "rails/test_help"
 
 Rails.backtrace_cleaner.remove_silencers!
