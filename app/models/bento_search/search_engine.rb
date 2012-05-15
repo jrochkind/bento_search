@@ -21,11 +21,16 @@ module BentoSearch
   #  Do use HTTPClient, if possible, for http searches, 
   #  using a class-level HTTPClient to maintain persistent connections. 
   #
+  #  Other options:
+  #  * implement a class-level `self.required_configuration' returning
+  #    an array of config keys or dot keypaths, and it'll raise on init
+  #    if those config's weren't supplied. 
+  #
   module SearchEngine
     extend ActiveSupport::Concern
     
     included do
-      attr_accessor :configuration
+      attr_accessor :configuration      
     end
     
     # If specific SearchEngine calls initialize, you want to call super
@@ -45,7 +50,33 @@ module BentoSearch
       
     end
         
+    protected
+    def parse_search_arguments(*orig_arguments)
+      arguments = {}
+      
+      if (orig_arguments.length > 1 ||
+          (orig_arguments.length == 1 && ! orig_arguments.first.kind_of?(Hash)))
+        arguments[:query] = orig_arguments.delete_at(0)      
+      end
 
+      arguments.merge!(orig_arguments.first)  if orig_arguments.length > 0
+      
+      # illegal arguments
+      if (arguments[:start] || arguments[:page]) && ! arguments[:per_page]
+        raise IllegalArgument.new("Must supply :per_page if supplying :start or :page")
+      end
+      if (arguments[:start] && arguments[:page])
+        raise IllegalArgument.new("Can't supply both :page and :start")
+      end
+      
+      # Normalize :page to :start
+      if arguments[:page]
+        arguments[:start] = arguments[:page] * arguments[:per_page]
+        arguments.delete(:page)
+      end
+              
+      return arguments
+    end
     
     
   end

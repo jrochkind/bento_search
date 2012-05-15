@@ -25,10 +25,18 @@ module BentoSearch
     self.suppress_key = false
     
     
-    def search(query)
-      query_url = base_url + "volumes?q=#{CGI.escape(query)}"
+    def search(*arguments)
+      arguments = parse_search_arguments(*arguments)
+      
+      query_url = base_url + "volumes?q=#{CGI.escape  arguments[:query]}"
       unless suppress_key
         query_url += "&key=#{configuration.api_key}"
+      end
+      if arguments[:per_page]
+        query_url += "&maxResults=#{arguments[:per_page]}"
+      end
+      if arguments[:start]
+        query_url += "&startIndex=#{arguments[:start]}"
       end
       
       results = Results.new
@@ -57,6 +65,8 @@ module BentoSearch
       end
       
       results.total_items = json["totalItems"]
+      results.start = arguments[:start] || 0
+      results.per_page = arguments[:per_page] || 10
       
       json["items"].each do |j_item|
         j_item = j_item["volumeInfo"] if j_item["volumeInfo"]
@@ -86,6 +96,11 @@ module BentoSearch
     def self.required_configuration
       ["api_key"]
     end
+    
+    def self.max_per_page
+      100
+    end
+    
     
     def get_year(iso8601)
       return nil if iso8601.blank?

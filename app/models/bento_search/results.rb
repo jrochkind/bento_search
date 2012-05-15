@@ -7,6 +7,10 @@ module BentoSearch
   # be an error. You can use failed? to see. 
   class Results < ::Array
     attr_accessor :total_items
+    # 0-based index into total results, used for pagination
+    attr_accessor :start
+    # per_page setting, can be used for pagination. 
+    attr_accessor :per_page
 
     # If error is non-nil, it's an error condition with no real results.
     # error should be a hash with these (and possibly other) keys, although

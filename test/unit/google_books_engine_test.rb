@@ -15,6 +15,8 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
     assert_kind_of BentoSearch::Results, results
     
     assert_not_nil results.total_items
+    assert_equal 0, results.start
+    assert_equal 10, results.per_page
     
     assert_not_empty results
     
@@ -29,6 +31,17 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
     assert_not_empty first.abstract
     assert first.abstract.html_safe?
   end
+  
+  def test_pagination
+    results = @engine.search("cancer", :per_page => 20, :start => 40)
+    
+    assert_equal 20, results.length
+    
+    assert_equal 20, results.per_page
+    assert_equal 20, results.size
+    assert_equal 40, results.start
+  end
+    
   
   def test_error_condition
     # Intentionally send with bad google api key to trigger error
