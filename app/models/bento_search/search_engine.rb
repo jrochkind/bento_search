@@ -36,7 +36,7 @@ module BentoSearch
     # If specific SearchEngine calls initialize, you want to call super
     # handles configuration loading, mostly. Argument is a
     # Confstruct::Configuration. 
-    def initialize(aConfiguration)
+    def initialize(aConfiguration = Confstruct::Configuration.new)
       self.configuration = aConfiguration
       # check for required keys
       
@@ -54,6 +54,7 @@ module BentoSearch
     def parse_search_arguments(*orig_arguments)
       arguments = {}
       
+      # Two-arg style to one hash, if present
       if (orig_arguments.length > 1 ||
           (orig_arguments.length == 1 && ! orig_arguments.first.kind_of?(Hash)))
         arguments[:query] = orig_arguments.delete_at(0)      
@@ -61,17 +62,27 @@ module BentoSearch
 
       arguments.merge!(orig_arguments.first)  if orig_arguments.length > 0
       
+      
+      # allow strings for pagination (like from url query), change to
+      # int please. 
+      [:page, :per_page, :start].each do |key|
+        arguments.delete(key) if arguments[key].blank?
+        arguments[key] = arguments[key].to_i if arguments[key]
+      end   
+      
       # illegal arguments
       if (arguments[:start] || arguments[:page]) && ! arguments[:per_page]
-        raise IllegalArgument.new("Must supply :per_page if supplying :start or :page")
+        raise ArgumentError.new("Must supply :per_page if supplying :start or :page")
       end
       if (arguments[:start] && arguments[:page])
-        raise IllegalArgument.new("Can't supply both :page and :start")
+        raise ArgumentError.new("Can't supply both :page and :start")
       end
+      
+   
       
       # Normalize :page to :start
       if arguments[:page]
-        arguments[:start] = arguments[:page] * arguments[:per_page]
+        arguments[:start] = (arguments[:page] - 1) * arguments[:per_page]
         arguments.delete(:page)
       end
               

@@ -1,0 +1,84 @@
+require 'test_helper'
+
+class ParseSearchArgumentsTest < ActiveSupport::TestCase
+  class Dummy
+    include BentoSearch::SearchEngine
+    
+    def test_parse(*args)
+      # original method is protected, this is a lame way
+      # to expose it. 
+      parse_search_arguments(*args)
+    end
+    
+  end  
+  
+  
+  def test_single_arg
+    d = Dummy.new
+    
+    args = d.test_parse("query")
+    
+    assert_equal( {:query => "query"}, args )        
+  end
+  
+  def test_two_arg
+    d = Dummy.new
+    
+    args = d.test_parse("query", :arg => "1")
+    
+    assert_equal( {:query => "query", :arg => "1"}, args )
+  end
+  
+  def test_illegal_pagination_args
+    d = Dummy.new
+    # can't do start and page both
+    assert_raise(ArgumentError) {  d.test_parse("query", :page => 4, :start => 40, :per_page => 20)  }
+    # start or page need per_page
+    assert_raise(ArgumentError) { d.test_parse("query", :page => 4) }
+    assert_raise(ArgumentError) { d.test_parse("query", :start => 40) }    
+  end
+  
+  def test_convert_page_to_start
+    d = Dummy.new
+    
+    args = d.test_parse(:query => "query", :page => 1, :per_page => 20)
+    
+    assert_equal 0, args[:start]
+    assert_nil args[:page]
+    assert_equal 20, args[:per_page]
+    
+    args = d.test_parse(:query => "query", :page => 3, :per_page => 20)
+
+    assert_equal 40, args[:start]
+    assert_nil args[:page]
+    assert_equal 20, args[:per_page]    
+  end
+  
+  def test_pagination_to_integer
+    d = Dummy.new
+    
+    args = d.test_parse(:query => "query", :page => "1", :per_page => "20")
+    assert_equal 0, args[:start]
+    assert_nil args[:page]
+    assert_equal 20, args[:per_page]
+    
+    args = d.test_parse(:query => "query", :start => "20", :per_page => "20")
+    assert_equal 20, args[:start]
+    assert_nil args[:page]
+    assert_equal 20, args[:per_page]
+    
+  end
+  
+  def test_ignore_blank_pagination_args
+    d = Dummy.new
+    
+    args = d.test_parse(:query => "query", :page => "", :per_page => "", :start => "")
+    
+    assert ! (args.has_key? :page)
+    assert ! (args.has_key? :start)
+    assert ! (args.has_key? :per_page)    
+  end
+  
+  
+end
+
