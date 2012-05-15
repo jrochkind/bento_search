@@ -44,25 +44,30 @@ module BentoSearch
       begin
         response = http_client.get(query_url )
         json = MultiJson.load( response.body )
-      ensure
-        # Trap json parse error, but also check for bad http
-        # status, or error reported in the json. In any of those cases
-        # return results obj with error status. 
-        #                 
-        if ( (! HTTP::Status.successful? response.status) ||
-             (json && json["error"]))
-
-         results.error = {}
-         results.error[:status] = response.status if response
-         if json && json["error"] && json["error"]["errors"] && json["error"]["errors"].kind_of?(Array)
-           results.error[:message] = json["error"]["errors"].first.values.join(", ")
-         end
-         results.error[:error_info] = json["error"] if json && json.respond_to?("[]")
-         
-         # escape early!
-         return results
-        end                        
+      rescue Exception => e
+        results.error ||= {}
+        results.error[:exception] = e
       end
+            
+      # Trap json parse error, but also check for bad http
+      # status, or error reported in the json. In any of those cases
+      # return results obj with error status. 
+      #                 
+      if ( response.nil? || json.nil? || 
+          (! HTTP::Status.successful? response.status) ||
+          (json && json["error"]))
+
+       results.error ||= {}
+       results.error[:status] = response.status if response
+       if json && json["error"] && json["error"]["errors"] && json["error"]["errors"].kind_of?(Array)
+         results.error[:message] = json["error"]["errors"].first.values.join(", ")
+       end
+       results.error[:error_info] = json["error"] if json && json.respond_to?("[]")
+       
+       # escape early!
+       return results
+      end                        
+      
       
       results.total_items = json["totalItems"]
       results.start = arguments[:start] || 0
