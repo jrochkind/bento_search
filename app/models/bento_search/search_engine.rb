@@ -77,7 +77,11 @@ module BentoSearch
       if (arguments[:start] && arguments[:page])
         raise ArgumentError.new("Can't supply both :page and :start")
       end
-      
+      if ( arguments[:per_page] && 
+           self.class.respond_to?(:max_per_page) && 
+           arguments[:per_page] > self.class.max_per_page)
+        raise ArgumentError.new("#{arguments[:per_page]} is more than maximum :per_page of #{self.class.max_per_page} for #{self.class}")
+      end
    
       
       # Normalize :page to :start

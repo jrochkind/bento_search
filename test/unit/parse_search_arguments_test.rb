@@ -10,6 +10,10 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
       parse_search_arguments(*args)
     end
     
+    def self.max_per_page
+      40
+    end
+    
   end  
   
   
@@ -78,6 +82,13 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
     assert ! (args.has_key? :start)
     assert ! (args.has_key? :per_page)    
   end
+  
+  def test_enforce_max_per_page
+    d = Dummy.new
+    
+    assert_raise(ArgumentError) { d.test_parse(:query => "query", :per_page => 1000) }        
+  end
+    
   
   
 end
