@@ -8,6 +8,7 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
     # tell it not to send our bad API key
     @engine.suppress_key = true
   end
+
   
   def test_search
     results = @engine.search("cancer")
@@ -58,10 +59,17 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
     end
   end
   
-  #def test_fielded_search
-  #  results = @engine.search('cancer "by radiation"', :search_field => :intitle)
+  def test_fielded_search
+    # Have to use protected methods to get at what we want to test. 
+    # Is there a better way to factor this for testing?
+    norm_args = @engine.send(:parse_search_arguments, 'cancer "by radiation"', :search_field => :intitle)
+    url = @engine.send(:args_to_search_url, norm_args)
     
-  #end
+    query_params = CGI.parse( URI.parse(url).query )
+    
+    assert_match /^|\sintitle\:cancer\s|$/, query_params["q"].first
+    assert_match /^|\sintitle\:"by radiation"\s|$/, query_params["q"].first
+  end
     
   
 end
