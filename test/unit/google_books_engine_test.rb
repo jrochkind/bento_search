@@ -58,4 +58,10 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
     end
   end
   
+  #def test_fielded_search
+  #  results = @engine.search('cancer "by radiation"', :search_field => :intitle)
+    
+  #end
+    
+  
 end

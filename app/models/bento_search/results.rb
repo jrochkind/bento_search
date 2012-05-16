@@ -25,7 +25,9 @@ module BentoSearch
     # [:error_info]
     #     A service-specific way of reporting more error info, for developers,
     #     not suitable for end-users. Might be a string, might be a hash,
-    #     depends on the service. 
+    #     depends on the service. may be nil. 
+    # [:exception]
+    #     Possibly a ruby exception object. may be nil. 
     attr_accessor :error
     
     def failed?

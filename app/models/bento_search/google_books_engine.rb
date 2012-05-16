@@ -28,16 +28,10 @@ module BentoSearch
     def search(*arguments)
       arguments = parse_search_arguments(*arguments)
       
-      query_url = base_url + "volumes?q=#{CGI.escape  arguments[:query]}"
-      unless suppress_key
-        query_url += "&key=#{configuration.api_key}"
-      end
-      if arguments[:per_page]
-        query_url += "&maxResults=#{arguments[:per_page]}"
-      end
-      if arguments[:start]
-        query_url += "&startIndex=#{arguments[:start]}"
-      end
+      query_url = args_to_search_url(arguments)
+      
+      
+      
       
       results = Results.new
       
@@ -52,7 +46,7 @@ module BentoSearch
       # Trap json parse error, but also check for bad http
       # status, or error reported in the json. In any of those cases
       # return results obj with error status. 
-      #                 
+      #     
       if ( response.nil? || json.nil? || 
           (! HTTP::Status.successful? response.status) ||
           (json && json["error"]))
@@ -98,12 +92,56 @@ module BentoSearch
     
     protected
     
+    ###########
+    # BentoBox::SearchEngine API
+    ###########
+    
     def self.required_configuration
       ["api_key"]
     end
     
     def self.max_per_page
       100
+    end
+    
+    #############
+    # Our own implementation code
+    ##############
+    
+    
+    # takes a normalized #search arguments hash from SearchEngine
+    # turns it into a URL for Google API. Factored out to make testing
+    # possible. 
+    def args_to_search_url(arguments)
+      query = if arguments[:search_field]
+        fielded_query(arguments[:query], arguments[:search_field])
+      else
+        arguments[:query]
+      end
+      
+      query_url = base_url + "volumes?q=#{CGI.escape  query}"
+      unless suppress_key
+        query_url += "&key=#{configuration.api_key}"
+      end
+      
+      if arguments[:per_page]
+        query_url += "&maxResults=#{arguments[:per_page]}"
+      end
+      if arguments[:start]
+        query_url += "&startIndex=#{arguments[:start]}"
+      end
+      
+      return query_url
+    end
+    
+    
+    # If they ask for a <one two> :intitle, we're
+    # actually gonna do like google's own form does,
+    # and change it to <intitle:one intitle:two>. Internal
+    # phrases will be respected. 
+    def fielded_query(query, field)
+      tokens = query.split(%r{\s|("[^"]+")}).delete_if {|a| a.blank?}
+      return tokens.collect {|token| "#{field}:#{token}"}.join(" ")            
     end
     
     
