@@ -14,6 +14,14 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
       40
     end
     
+    def self.search_field_definitions
+      {
+        "my_title" => {:semantic => :title},
+        "my_author" => {:semantic => :author},
+        "my_other" => nil
+      }
+    end
+    
   end  
   
   
@@ -89,6 +97,10 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
     assert_raise(ArgumentError) { d.test_parse(:query => "query", :per_page => 1000) }        
   end
     
+  def test_search_field_keys    
+    assert_equal ["my_title", "my_author", "my_other"], Dummy.search_field_keys
+    assert_equal [:title, :author], Dummy.semantic_search_fields
+  end
   
   
 end

@@ -104,6 +104,17 @@ module BentoSearch
       100
     end
     
+    def self.search_field_definitions
+      { "intitle"     => {:semantic => :title},
+        "inauthor"    => {:semantic => :author},
+        "inpublisher" => {:semantic => :publisher},
+        "subject"     => {:semantic => :subject},
+        "isbn"        => {:semantic => :isbn}
+      }      
+    end
+      
+   
+    
     #############
     # Our own implementation code
     ##############

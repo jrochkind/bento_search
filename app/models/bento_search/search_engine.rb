@@ -8,6 +8,11 @@ module BentoSearch
   #
   # ==Using a SearchEngine 
   #
+  # * init/config
+  # * search
+  #   * pagination, with max per_page
+  #   * search fields, with semantics. ask for supported search fields. 
+  #
   # == Implementing a SearchEngine
   #
   # `include BentoSearch::SearchEngine`
@@ -25,6 +30,8 @@ module BentoSearch
   #  * implement a class-level `self.required_configuration' returning
   #    an array of config keys or dot keypaths, and it'll raise on init
   #    if those config's weren't supplied. 
+  #  * max per page
+  #  * search fields
   #
   module SearchEngine
     extend ActiveSupport::Concern
@@ -49,6 +56,9 @@ module BentoSearch
       end
       
     end
+    
+
+    
         
     protected
     def parse_search_arguments(*orig_arguments)
@@ -93,6 +103,19 @@ module BentoSearch
       return arguments
     end
     
+    module ClassMethods
+      def search_field_keys
+        return [] unless respond_to? :search_field_definitions
+        return search_field_definitions.keys
+      end
+      
+      def semantic_search_fields        
+        return [] unless respond_to? :search_field_definitions
+        search_field_definitions.collect do |k, v|
+          v[:semantic] if v
+        end.compact
+      end
+    end
     
   end
 end
