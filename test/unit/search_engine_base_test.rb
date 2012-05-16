@@ -98,9 +98,28 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
   end
     
   def test_search_field_keys    
-    assert_equal ["my_title", "my_author", "my_other"], Dummy.search_field_keys
-    assert_equal [:title, :author], Dummy.semantic_search_fields
+    assert_equal ["my_title", "my_author", "my_other"], Dummy.search_keys
+    assert_equal [:title, :author], Dummy.semantic_search_keys
   end
+  
+  def test_semantic_search_map
+    assert_equal( {:title => "my_title", :author => "my_author"}, 
+                  Dummy.semantic_search_map)
+  end
+  
+  def test_translate_search_field_semantics
+    d = Dummy.new
+    
+    args = d.test_parse(:query => "query", :semantic_search_field => :title)
+    
+    assert ! (args.has_key? :semantic_search_field), "translates semantic_search_field to search_field"
+    assert_equal "my_title", args[:search_field]
+    
+    assert_raise(ArgumentError, "Raises for undefined semantic_search_field") do
+      d.test_parse(:query => "query", :semantic_search_field => :subject)
+    end
+  end
+    
   
   
 end

@@ -99,22 +99,47 @@ module BentoSearch
         arguments[:start] = (arguments[:page] - 1) * arguments[:per_page]
         arguments.delete(:page)
       end
+      
+      # translate semantic_search_field to search_field, or raise if
+      # can't. 
+      if semantic = arguments.delete(:semantic_search_field)
+        mapped = self.class.semantic_search_map[semantic]
+        unless mapped
+          raise ArgumentError.new("#{self.class.name} does not know about :semantic_search_field #{semantic}")
+        end
+        arguments[:search_field] = mapped
+      end
               
       return arguments
     end
     
     module ClassMethods
-      def search_field_keys
+      # Returns list of string internal search_field's that can
+      # be supplied to search(:search_field => x)
+      def search_keys
         return [] unless respond_to? :search_field_definitions
         return search_field_definitions.keys
       end
       
-      def semantic_search_fields        
-        return [] unless respond_to? :search_field_definitions
-        search_field_definitions.collect do |k, v|
-          v[:semantic] if v
-        end.compact
+      # Returns list of symbol semantic_search_field that can be
+      # supplied to search(:semantic_search_field => x)
+      def semantic_search_keys  
+        semantic_search_map.keys
       end
+      
+      # returns a hash keyed by semantic search field symbol,
+      # value string internal search field key. 
+      def semantic_search_map
+        return {} unless respond_to? :search_field_definitions
+        
+        # Hash[] conveniently takes an array of k-v pairs. 
+        return Hash[
+          search_field_definitions.collect do |field, defn|
+            [ defn[:semantic], field ] if defn && defn[:semantic]
+          end.compact        
+        ]
+      end
+      
     end
     
   end
