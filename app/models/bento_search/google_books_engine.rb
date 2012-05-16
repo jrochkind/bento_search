@@ -13,8 +13,8 @@ module BentoSearch
     include ActionView::Helpers::SanitizeHelper
     
     # class-level HTTPClient for maintaining persistent HTTP connections
-    class_attribute :http_client
-    self.http_client = HTTPClient.new
+    #class_attribute :http_client
+    #self.http_client = HTTPClient.new
     
     class_attribute :base_url
     self.base_url = "https://www.googleapis.com/books/v1/"
@@ -29,16 +29,17 @@ module BentoSearch
       arguments = parse_search_arguments(*arguments)
       
       query_url = args_to_search_url(arguments)
-      
-      
-      
-      
+
       results = Results.new
-      
+
       begin
+        http_client = HTTPClient.new
         response = http_client.get(query_url )
         json = MultiJson.load( response.body )
-      rescue Exception => e
+        # Can't rescue everything, or we catch VCR errors, making
+        # things confusing. 
+      rescue TimeoutError, HTTPClient::TimeoutError, 
+            HTTPClient::ConfigurationError, HTTPClient::BadResponseError  => e
         results.error ||= {}
         results.error[:exception] = e
       end
@@ -91,6 +92,7 @@ module BentoSearch
     
     
     protected
+    
     
     ###########
     # BentoBox::SearchEngine API
