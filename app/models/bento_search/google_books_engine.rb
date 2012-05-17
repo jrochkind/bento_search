@@ -4,6 +4,8 @@ require 'multi_json'
 
 require 'action_view/helpers/sanitize_helper'
 
+require 'http_client_patch/include_client'
+
 module BentoSearch
   #
   # https://developers.google.com/books/docs/v1/using
@@ -12,9 +14,8 @@ module BentoSearch
     include BentoSearch::SearchEngine
     include ActionView::Helpers::SanitizeHelper
     
-    # class-level HTTPClient for maintaining persistent HTTP connections
-    class_attribute :http_client
-    self.http_client = HTTPClient.new
+    extend HTTPClientPatch::IncludeClient
+    include_http_client # gives us a #http_client with persistent class-level    
     
     class_attribute :base_url
     self.base_url = "https://www.googleapis.com/books/v1/"
