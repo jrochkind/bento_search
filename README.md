@@ -1,3 +1,3 @@
 = BentoSearch
 
-This project rocks and uses MIT-LICENSE.
+This project uses MIT-LICENSE.
