@@ -35,6 +35,9 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
     assert_not_nil first.year
     assert_not_empty first.abstract
     assert first.abstract.html_safe?
+    
+    assert_not_empty first.authors
+    assert_not_empty first.authors.first.display
   end
   
   test_with_cassette("pagination", :gbs) do

@@ -83,7 +83,11 @@ module BentoSearch
                               :serial
                             else
                               "Book"
-                            end        
+                            end    
+                            
+        (j_item["authors"] || []).each do |author_name|
+          item.authors << Author.new(:display => author_name)
+        end
       end
       
       

@@ -13,5 +13,9 @@ module BentoSearch
     # middle name or initial, as and if provided by source
     attr_accessor :middle
     
+    # if source doens't provide seperate first/last, 
+    # source may only be able to provide one big string, author_display
+    attr_accessor :display
+    
   end
 end
