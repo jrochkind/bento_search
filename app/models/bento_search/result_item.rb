@@ -28,13 +28,25 @@ module BentoSearch
     # * :dissertation (dissertation or thesis)
     attr_accessor :format
     
-    #a ruby int
+    # year published. a ruby int
     # PART of:. 
     # * schema.org CreativeWork "datePublished"
     # * dcterms.issued
     # * prism:?
-    attr_accessor :year_published
+    attr_accessor :year
     
+    attr_accessor :volume
+    attr_accessor :issue
+    attr_accessor :start_page
+    attr_accessor :end_page
+    
+    attr_accessor :journal_title
+    attr_accessor :issn
+    
+    # an openurl kev-encoded context object. optional,
+    # only if source provides one that may be better
+    # than can be constructed from individual elements above
+    attr_accessor :openurl_kev_co
     
     # Short summary of item. 
     # Mark .html_safe if it includes html -- creator is responsible
