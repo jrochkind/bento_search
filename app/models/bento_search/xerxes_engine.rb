@@ -130,7 +130,7 @@ module BentoSearch
         item.issn           = node_text record.at_xpath("xerxes_record/standard_numbers/issn")         
         
       end
-                  
+      return results     
     end
     
     protected

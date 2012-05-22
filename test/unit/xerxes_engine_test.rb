@@ -41,8 +41,21 @@ class XerxesEngineTest < ActiveSupport::TestCase
   test_with_cassette("live search", :xerxes) do
     results = @engine.search("skin disease")
     
-    require 'debugger'
-    1+1
+    assert results.length > 0
+    
+    record = results.first
+    
+    assert_present record.title
+    assert_present record.format
+    #assert_present record.link
+    assert_present record.volume
+    assert_present record.issue
+    assert_present record.start_page
+    assert_present record.end_page
+    assert_present record.abstract
+    assert_present record.openurl_kev_co
+    assert_present record.journal_title
+    assert_present record.issn
     
   end
   
