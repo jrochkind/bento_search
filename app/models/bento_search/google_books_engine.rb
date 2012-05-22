@@ -26,9 +26,7 @@ module BentoSearch
     self.suppress_key = false
     
     
-    def search(*arguments)
-      arguments = parse_search_arguments(*arguments)
-      
+    def search_implementation(arguments)            
       query_url = args_to_search_url(arguments)
 
       results = Results.new
@@ -65,8 +63,7 @@ module BentoSearch
       
       
       results.total_items = json["totalItems"]
-      results.start = arguments[:start] || 0
-      results.per_page = arguments[:per_page] || 10
+
       
       json["items"].each do |j_item|
         j_item = j_item["volumeInfo"] if j_item["volumeInfo"]
@@ -108,7 +105,7 @@ module BentoSearch
     
     def self.max_per_page
       100
-    end
+    end   
     
     def self.search_field_definitions
       { "intitle"     => {:semantic => :title},

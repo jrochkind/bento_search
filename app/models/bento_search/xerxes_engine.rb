@@ -27,8 +27,7 @@ module BentoSearch
       ["base_url", "databases"]
     end
     
-    def search(*arguments)
-      arguments = parse_search_arguments(*arguments)
+    def search_implementation(arguments)
       
       # We're gonna have to do a search 'screen scrape' style, then refresh it
       # until it's ready, and then request format=xerxes when it's ready

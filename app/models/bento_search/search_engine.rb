@@ -57,8 +57,23 @@ module BentoSearch
       
     end
     
+    # Calls individual engine #search_implementation.
+    # first normalizes arguments, also adds on standard metadata
+    # to results. 
+    def search(*arguments)
+      arguments = parse_search_arguments(*arguments)
 
-    
+      results = search_implementation(arguments)
+      
+      results.start = arguments[:start] || 0
+      results.per_page = arguments[:per_page] || 
+        (self.class.respond_to?(:default_per_page) ? 
+          self.class.default_per_page :
+          10
+        )
+      
+      return results
+    end
         
     protected
     def parse_search_arguments(*orig_arguments)
