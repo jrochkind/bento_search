@@ -11,6 +11,11 @@ class SearchEngineTest < ActiveSupport::TestCase
         def self.required_configuration
           ["required.key"]
         end
+        
+        def search_implementation(arguments)
+          #no-op for now
+          BentoSearch::Results.new
+        end
       end
     end
   

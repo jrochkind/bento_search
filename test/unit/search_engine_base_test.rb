@@ -4,6 +4,11 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
   class Dummy
     include BentoSearch::SearchEngine
     
+    def search_implementation(args)
+      # no-op for now
+      BentoSearch::Results.new
+    end
+    
     def test_parse(*args)
       # original method is protected, this is a lame way
       # to expose it. 
@@ -118,6 +123,13 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
     assert_raise(ArgumentError, "Raises for undefined semantic_search_field") do
       d.test_parse(:query => "query", :semantic_search_field => :subject)
     end
+  end
+  
+  def test_search
+    d = Dummy.new
+    results = d.search("foo")
+    
+    assert_not_nil results.timing
   end
     
   

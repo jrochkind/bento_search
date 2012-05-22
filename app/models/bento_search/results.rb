@@ -30,6 +30,9 @@ module BentoSearch
     #     Possibly a ruby exception object. may be nil. 
     attr_accessor :error
     
+    # time it took to do search, in seconds. 
+    attr_accessor :timing
+    
     def failed?
       ! error.nil?
     end

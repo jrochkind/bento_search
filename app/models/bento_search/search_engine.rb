@@ -61,6 +61,8 @@ module BentoSearch
     # first normalizes arguments, also adds on standard metadata
     # to results. 
     def search(*arguments)
+      start_t = Time.now
+      
       arguments = parse_search_arguments(*arguments)
 
       results = search_implementation(arguments)
@@ -72,6 +74,8 @@ module BentoSearch
           10
         )
       
+      results.timing = (Time.now - start_t)
+        
       return results
     end
         
