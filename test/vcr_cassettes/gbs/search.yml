@@ -1,0 +1,391 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/books/v1/volumes?q=cancer
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "RXhwaXJlcw==":
+      - !binary |-
+        VHVlLCAyMiBNYXkgMjAxMiAxNDo1MzoxNiBHTVQ=
+      !binary "RGF0ZQ==":
+      - !binary |-
+        VHVlLCAyMiBNYXkgMjAxMiAxNDo1MzoxNiBHTVQ=
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        cHJpdmF0ZSwgbWF4LWFnZT0wLCBtdXN0LXJldmFsaWRhdGUsIG5vLXRyYW5z
+        Zm9ybQ==
+      !binary "RXRhZw==":
+      - !binary |-
+        InFOc29QS09MZGZxaEc1V0c3OFlsTFZWYmNiby9nZ19OMk1nV1UzYmhoSXMx
+        NlJVUWw2YmJHb00i
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD1VVEYtOA==
+      !binary "WC1Db250ZW50LVR5cGUtT3B0aW9ucw==":
+      - !binary |-
+        bm9zbmlmZg==
+      !binary "WC1GcmFtZS1PcHRpb25z":
+      - !binary |-
+        U0FNRU9SSUdJTg==
+      !binary "WC1Yc3MtUHJvdGVjdGlvbg==":
+      - !binary |-
+        MTsgbW9kZT1ibG9jaw==
+      !binary "U2VydmVy":
+      - !binary |-
+        R1NF
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+    body:
+      encoding: UTF-8
+      string: ! "{\n \"kind\": \"books#volumes\",\n \"totalItems\": 1099,\n \"items\":
+        [\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"Av6R41nQhboC\",\n   \"etag\":
+        \"SoUTK/E+UvQ\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/Av6R41nQhboC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"50 Essential
+        Things to Do\",\n    \"authors\": [\n     \"Greg Anderson\"\n    ],\n    \"publisher\":
+        \"Plume\",\n    \"publishedDate\": \"2009-02-24\",\n    \"description\": \"The
+        ground-breaking classic guide to surviving cancerÂ—now completely updated!
+        Revised and updated for the first time since 1999, this invaluable guide to
+        cancer recovery offers an easily accessible plan for patients and family members.
+        Written by a cancer survivor, the book is an inspiring, action-oriented roadmap
+        for those who choose to adopt a stance of hope and take charge of their diagnosis.
+        With penetrating insights that bring together more than two decades of scientifically
+        supported research and experience, Anderson reveals a step-by-step holistic
+        action plan that has been successfully employed by hundreds of thousands of
+        cancer patients worldwide. AndersonÂ's message is: Â“You must not simply treat
+        illness, you must also create wellnessÂ—physically, emotionally and spiritually.Â”\",\n
+        \   \"industryIdentifiers\": [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\":
+        \"0452290104\"\n     },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\":
+        \"9780452290105\"\n     }\n    ],\n    \"pageCount\": 198,\n    \"printType\":
+        \"BOOK\",\n    \"categories\": [\n     \"Medical\"\n    ],\n    \"averageRating\":
+        3.5,\n    \"ratingsCount\": 7,\n    \"contentVersion\": \"0.0.2.0.preview.0\",\n
+        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks1.books.google.com/books?id=Av6R41nQhboC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks1.books.google.com/books?id=Av6R41nQhboC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=Av6R41nQhboC&printsec=frontcover&dq=cancer&cd=1&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=Av6R41nQhboC&dq=cancer&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=Av6R41nQhboC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
+        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=Av6R41nQhboC&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"The ground-breaking classic guide to surviving cancerÂ—now completely updated!
+        Revised and updated for the first time since 1999, this invaluable guide to
+        cancer recovery offers an easily accessible plan for patients and family members.\"\n
+        \  }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"u3bnPGRxs1YC\",\n
+        \  \"etag\": \"RasOaJt2Q/M\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/u3bnPGRxs1YC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"we live
+        and die by radiation\",\n    \"authors\": [\n     \"Michelangelo Delfino\",\n
+        \    \"Mary E. Day\"\n    ],\n    \"publisher\": \"MoBeta Publishing\",\n
+        \   \"publishedDate\": \"2006-09-30\",\n    \"description\": \"Discusses the
+        effect of radiation on the body and its role in the development, diagnosis,
+        and treatment of cancer, offering summaries and evaluations of radiation treatment
+        options for different types of cancer.\",\n    \"industryIdentifiers\": [\n
+        \    {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"0972514112\"\n
+        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9780972514118\"\n
+        \    }\n    ],\n    \"pageCount\": 273,\n    \"printType\": \"BOOK\",\n    \"categories\":
+        [\n     \"Medical\"\n    ],\n    \"averageRating\": 1.0,\n    \"ratingsCount\":
+        1,\n    \"contentVersion\": \"preview-1.0.0\",\n    \"imageLinks\": {\n     \"smallThumbnail\":
+        \"http://bks5.books.google.com/books?id=u3bnPGRxs1YC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks5.books.google.com/books?id=u3bnPGRxs1YC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=u3bnPGRxs1YC&printsec=frontcover&dq=cancer&cd=2&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=u3bnPGRxs1YC&dq=cancer&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=u3bnPGRxs1YC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": true,\n     \"acsTokenLink\": \"http://books.google.com/books/download/Cancer-sample-epub.acsm?id=u3bnPGRxs1YC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": false\n    },\n    \"webReaderLink\":
+        \"http://books.google.com/books/reader?id=u3bnPGRxs1YC&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"This unique book gives timely advice for those facing difficult choices.\"\n
+        \  }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"eaz89v-3eQ4C\",\n
+        \  \"etag\": \"EIFzhReG8Hg\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/eaz89v-3eQ4C\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"Basic
+        Science and Clinical Aspects\",\n    \"authors\": [\n     \"Craig A. Almeida\",\n
+        \    \"Sheila A. Barry\"\n    ],\n    \"publisher\": \"Wiley-Blackwell\",\n
+        \   \"publishedDate\": \"2010-01-26\",\n    \"description\": \"“... Useful
+        background information is displayed in blue boxes, and good use is made of
+        numerous tables and diagrams... a useful book for the undergraduate medical
+        or allied health professional...” –Oncology News, May/June 2010 This forward
+        looking cancer biology book appeals to a wide ranging audience. Introductory
+        chapters that provide the molecular, cellular, and genetic information needed
+        to comprehend the material of the subsequent chapters bring unprepared students
+        up to speed for the rest of the book and serve as a useful refresher for those
+        with previous biology background. The second set of chapters focuses on the
+        main cancers in terms of risk factors, diagnostic and treatment methods and
+        relevant current research. The final section encompasses the immune system's
+        role in the prevention and development of cancer and the impact that the Human
+        Genome Project will have on future approaches to cancer care. While best suited
+        to non-majors cancer biology courses, the depth provided satisfies courses
+        that combine both majors and non-majors. Also, and deliberately, the authors
+        have incorporated relevant information on diagnosis and treatment options
+        that lend appeal to the lay reader.\",\n    \"industryIdentifiers\": [\n     {\n
+        \     \"type\": \"ISBN_10\",\n      \"identifier\": \"1405156066\"\n     },\n
+        \    {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9781405156066\"\n
+        \    }\n    ],\n    \"pageCount\": 424,\n    \"printType\": \"BOOK\",\n    \"categories\":
+        [\n     \"Medical\"\n    ],\n    \"contentVersion\": \"preview-1.0.0\",\n
+        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks4.books.google.com/books?id=eaz89v-3eQ4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks4.books.google.com/books?id=eaz89v-3eQ4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=eaz89v-3eQ4C&printsec=frontcover&dq=cancer&cd=3&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=eaz89v-3eQ4C&dq=cancer&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=eaz89v-3eQ4C\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"FOR_SALE\",\n    \"isEbook\": true,\n    \"listPrice\": {\n     \"amount\":
+        64.99,\n     \"currencyCode\": \"USD\"\n    },\n    \"retailPrice\": {\n     \"amount\":
+        64.99,\n     \"currencyCode\": \"USD\"\n    },\n    \"buyLink\": \"http://books.google.com/books?id=eaz89v-3eQ4C&dq=cancer&buy=&source=gbs_api\"\n
+        \  },\n   \"accessInfo\": {\n    \"country\": \"US\",\n    \"viewability\":
+        \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\": false,\n    \"textToSpeechPermission\":
+        \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\": {\n     \"isAvailable\": false\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": true,\n     \"acsTokenLink\":
+        \"http://books.google.com/books/download/Cancer-sample-pdf.acsm?id=eaz89v-3eQ4C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=eaz89v-3eQ4C&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"The text is strategically inclusive of pedagogical features that will assist
+        students in both study and comprehension while illustrating real life application
+        of the concepts.\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\":
+        \"SkWAmFkK-7cC\",\n   \"etag\": \"gmFATov9GLg\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/SkWAmFkK-7cC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"A Comprehensive
+        Clinical Guide\",\n    \"authors\": [\n     \"David Morris\",\n     \"John
+        Kearsley\"\n    ],\n    \"publisher\": \"Taylor & Francis\",\n    \"publishedDate\":
+        \"1998-11-01\",\n    \"description\": \"The editors have adopted a multidisciplinary
+        approach which successfully integrates the medical and nursing aspects of
+        cancer care. An introductory section, discussing general principles and aspects
+        of oncology, is followed by site-specific chapters describing the epidemiology,
+        pathology, clinical signs, investigations, diagnosis and treatment of each
+        cancer type. Special chapters are devoted to cancer in children, HIV-associated
+        malignancies, secondary cancers and unknown primary cancers. Cancer: A comprehensive
+        clinical guide is essential reading for medical students, junior doctors,
+        nurses and general physicians and for all who seek a rational approach to
+        cancer care.\",\n    \"industryIdentifiers\": [\n     {\n      \"type\": \"ISBN_10\",\n
+        \     \"identifier\": \"905702215X\"\n     },\n     {\n      \"type\": \"ISBN_13\",\n
+        \     \"identifier\": \"9789057022159\"\n     }\n    ],\n    \"pageCount\":
+        321,\n    \"printType\": \"BOOK\",\n    \"categories\": [\n     \"Medical\"\n
+        \   ],\n    \"contentVersion\": \"preview-1.0.0\",\n    \"imageLinks\": {\n
+        \    \"smallThumbnail\": \"http://bks1.books.google.com/books?id=SkWAmFkK-7cC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks1.books.google.com/books?id=SkWAmFkK-7cC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=SkWAmFkK-7cC&printsec=frontcover&dq=cancer&cd=4&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=SkWAmFkK-7cC&dq=cancer&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=SkWAmFkK-7cC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"FOR_SALE\",\n    \"isEbook\": true,\n    \"listPrice\": {\n     \"amount\":
+        99.95,\n     \"currencyCode\": \"USD\"\n    },\n    \"retailPrice\": {\n     \"amount\":
+        79.96,\n     \"currencyCode\": \"USD\"\n    },\n    \"buyLink\": \"http://books.google.com/books?id=SkWAmFkK-7cC&dq=cancer&buy=&source=gbs_api\"\n
+        \  },\n   \"accessInfo\": {\n    \"country\": \"US\",\n    \"viewability\":
+        \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\": false,\n    \"textToSpeechPermission\":
+        \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\": {\n     \"isAvailable\": true,\n
+        \    \"acsTokenLink\": \"http://books.google.com/books/download/Cancer-sample-epub.acsm?id=SkWAmFkK-7cC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": true,\n     \"acsTokenLink\":
+        \"http://books.google.com/books/download/Cancer-sample-pdf.acsm?id=SkWAmFkK-7cC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=SkWAmFkK-7cC&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"This useful book highlights current trends in the diagnosis and treatment
+        of all cancers, including aspects of nursing and palliative care.\"\n   }\n
+        \ },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"9ckIYAjOe_oC\",\n
+        \  \"etag\": \"9/h4fpMdMDY\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/9ckIYAjOe_oC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Everyone's Guide to Cancer Therapy\",\n
+        \   \"subtitle\": \"How Cancer Is Diagnosed, Treated, and Managed Day to Day\",\n
+        \   \"publisher\": \"Andrews McMeel Publishing\",\n    \"publishedDate\":
+        \"2009-01-01\",\n    \"description\": \"Revised 5th Edition Praise for the
+        first edition of Everyone's Guide to Cancer Therapy: How Cancer Is Diagnosed,
+        Treated, and Managed Day to Day: A landmark book . . . So much of what the
+        cancer patient must know to make informed decisions. --Publishers Weekly *
+        A completely revised and accessible guide created by more than 100 esteemed
+        oncologists for the millions of people whose lives are affected by cancer.
+        The Centers for Disease Control reports that more than 20 million people in
+        the U.S. are currently diagnosed with cancer, and 1.4 million people are expected
+        to be diagnosed in the coming year. For the millions confronting cancer's
+        many challenges, Everyone's Guide to Cancer Therapy: How Cancer Is Diagnosed,
+        Treated, and Managed Day to Day relies on an esteemed panel of oncology specialists--more
+        than 100 strong, and each experts in their fields-to completely update this
+        definitive cancer resource. Equally informative and accessible, this comprehensive
+        book navigates cancer patients and their caregivers through diagnosis, treatment,
+        and supportive care. Every chapter has been methodically updated to include
+        the latest medical breakthroughs and advice concerning cancer treatment, including:
+        * Information on recently approved targeted therapies for various cancer types
+        * The newest strategies in cancer diagnosis and prevention * Cancer biology:
+        translating scientific discoveries into meaningful advances for patients *
+        Supportive care and complementary approaches\",\n    \"industryIdentifiers\":
+        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"0740786318\"\n
+        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9780740786310\"\n
+        \    }\n    ],\n    \"printType\": \"BOOK\",\n    \"averageRating\": 4.0,\n
+        \   \"ratingsCount\": 2,\n    \"contentVersion\": \"0.1.1.0.preview.3\",\n
+        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks4.books.google.com/books?id=9ckIYAjOe_oC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks4.books.google.com/books?id=9ckIYAjOe_oC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=9ckIYAjOe_oC&printsec=frontcover&dq=cancer&cd=5&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=9ckIYAjOe_oC&dq=cancer&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Everyone_s_Guide_to_Cancer_Therapy.html?id=9ckIYAjOe_oC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"FOR_SALE\",\n    \"isEbook\": true,\n    \"listPrice\": {\n     \"amount\":
+        14.99,\n     \"currencyCode\": \"USD\"\n    },\n    \"retailPrice\": {\n     \"amount\":
+        9.99,\n     \"currencyCode\": \"USD\"\n    },\n    \"buyLink\": \"http://books.google.com/books?id=9ckIYAjOe_oC&dq=cancer&buy=&source=gbs_api\"\n
+        \  },\n   \"accessInfo\": {\n    \"country\": \"US\",\n    \"viewability\":
+        \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\": false,\n    \"textToSpeechPermission\":
+        \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\": {\n     \"isAvailable\": true,\n
+        \    \"acsTokenLink\": \"http://books.google.com/books/download/Everyone_s_Guide_to_Cancer_Therapy-sample-epub.acsm?id=9ckIYAjOe_oC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": true,\n     \"acsTokenLink\":
+        \"http://books.google.com/books/download/Everyone_s_Guide_to_Cancer_Therapy-sample-pdf.acsm?id=9ckIYAjOe_oC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=9ckIYAjOe_oC&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"Equally informative and accessible, this comprehensive book navigates cancer
+        patients and their caregivers through diagnosis, treatment, and supportive
+        care.\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"Im1brI9098YC\",\n
+        \  \"etag\": \"rg8VstCRlds\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/Im1brI9098YC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"authors\": [\n     \"Joseph
+        Panno\"\n    ],\n    \"publisher\": \"Infobase Publishing\",\n    \"publishedDate\":
+        \"2004\",\n    \"description\": \"Examines what is known about cancer cells
+        and current cancer research.\",\n    \"industryIdentifiers\": [\n     {\n
+        \     \"type\": \"ISBN_10\",\n      \"identifier\": \"0816067325\"\n     },\n
+        \    {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9780816067329\"\n
+        \    }\n    ],\n    \"pageCount\": 177,\n    \"printType\": \"BOOK\",\n    \"contentVersion\":
+        \"preview-1.0.0\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks1.books.google.com/books?id=Im1brI9098YC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks1.books.google.com/books?id=Im1brI9098YC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=Im1brI9098YC&printsec=frontcover&dq=cancer&cd=6&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=Im1brI9098YC&dq=cancer&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=Im1brI9098YC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": true,\n     \"acsTokenLink\": \"http://books.google.com/books/download/Cancer-sample-epub.acsm?id=Im1brI9098YC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": true,\n     \"acsTokenLink\":
+        \"http://books.google.com/books/download/Cancer-sample-pdf.acsm?id=Im1brI9098YC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=Im1brI9098YC&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"Examines what is known about cancer cells and current cancer research.\"\n
+        \  }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"qhLVMMEWxYEC\",\n
+        \  \"etag\": \"K43Y9rt/hYg\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/qhLVMMEWxYEC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"Fight
+        It with the Blood Type Diet\",\n    \"authors\": [\n     \"Peter J. D'Adamo\",\n
+        \    \"Catherine Whitney\"\n    ],\n    \"publisher\": \"Berkley Trade\",\n
+        \   \"publishedDate\": \"2004-08-01\",\n    \"description\": \"Drawing on
+        the principles of the Blood Type Diet, the naturopathic physician and author
+        of Eat Right 4 (for) Your Type presents a revolutionary, personalized approach
+        to preventing and treating cancer that incorporates self-assessment tests,
+        lifestyle changes, nutritional supplements, and exercise protocols. Reprint.\",\n
+        \   \"industryIdentifiers\": [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\":
+        \"0425200078\"\n     },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\":
+        \"9780425200070\"\n     }\n    ],\n    \"pageCount\": 212,\n    \"printType\":
+        \"BOOK\",\n    \"categories\": [\n     \"Medical\"\n    ],\n    \"contentVersion\":
+        \"preview-1.0.0\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks5.books.google.com/books?id=qhLVMMEWxYEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks5.books.google.com/books?id=qhLVMMEWxYEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=qhLVMMEWxYEC&printsec=frontcover&dq=cancer&cd=7&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=qhLVMMEWxYEC&dq=cancer&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=qhLVMMEWxYEC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
+        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=qhLVMMEWxYEC&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"Drawing on the principles of the Blood Type Diet, the naturopathic physician
+        and author of Eat Right 4 (for) Your Type presents a revolutionary, personalized
+        approach to preventing and treating cancer that incorporates self-assessment
+        tests ...\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"LteAUrJQyfEC\",\n
+        \  \"etag\": \"W01XS/b7aPE\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/LteAUrJQyfEC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"authors\": [\n     \"Susan
+        Elaine Pories\",\n     \"Marsha A. Moses\",\n     \"Margaret Marie Lotz\"\n
+        \   ],\n    \"publisher\": \"Greenwood Press\",\n    \"publishedDate\": \"2009-09-23\",\n
+        \   \"description\": \"Cancer is a diagnosis that causes fear and confusion.
+        It is really a family of diseases, and the process, causes, and prognosis
+        can vary widely. Get an overview of the history of cancer as well as seminal
+        figures and discoveries on the path to today's understanding of cancer.\",\n
+        \   \"industryIdentifiers\": [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\":
+        \"0313359792\"\n     },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\":
+        \"9780313359798\"\n     }\n    ],\n    \"pageCount\": 174,\n    \"printType\":
+        \"BOOK\",\n    \"contentVersion\": \"preview-1.0.0\",\n    \"imageLinks\":
+        {\n     \"smallThumbnail\": \"http://bks8.books.google.com/books?id=LteAUrJQyfEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks8.books.google.com/books?id=LteAUrJQyfEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=LteAUrJQyfEC&printsec=frontcover&dq=cancer&cd=8&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=LteAUrJQyfEC&dq=cancer&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=LteAUrJQyfEC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"FOR_SALE\",\n    \"isEbook\": true,\n    \"listPrice\": {\n     \"amount\":
+        45.0,\n     \"currencyCode\": \"USD\"\n    },\n    \"retailPrice\": {\n     \"amount\":
+        36.0,\n     \"currencyCode\": \"USD\"\n    },\n    \"buyLink\": \"http://books.google.com/books?id=LteAUrJQyfEC&dq=cancer&buy=&source=gbs_api\"\n
+        \  },\n   \"accessInfo\": {\n    \"country\": \"US\",\n    \"viewability\":
+        \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\": false,\n    \"textToSpeechPermission\":
+        \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\": {\n     \"isAvailable\": true,\n
+        \    \"acsTokenLink\": \"http://books.google.com/books/download/Cancer-sample-epub.acsm?id=LteAUrJQyfEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": true,\n     \"acsTokenLink\":
+        \"http://books.google.com/books/download/Cancer-sample-pdf.acsm?id=LteAUrJQyfEC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=LteAUrJQyfEC&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"Cancer is a diagnosis that causes fear and confusion.\"\n   }\n  },\n  {\n
+        \  \"kind\": \"books#volume\",\n   \"id\": \"xpPukn3LNFwC\",\n   \"etag\":
+        \"8KQFFplMcs0\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/xpPukn3LNFwC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"National cancer control programmes\",\n
+        \   \"subtitle\": \"policies and managerial guidelines\",\n    \"authors\":
+        [\n     \"World Health Organization\"\n    ],\n    \"publishedDate\": \"2002-01-01\",\n
+        \   \"description\": \"Each year, cancer affects more than 10 million people
+        worldwide and kills 6 million, even though many cases are preventable or treatable
+        through early detection. Without effective control of the disease, these figures
+        will increase significantly, especially in developing countries. This publication,
+        now in its second edition, explains how national cancer control programmes
+        integrated with existing health systems represent the best available method
+        for the control of cancer, including prevention, treatment and palliation.
+        It discusses the appropriateness of particular technologies and considers
+        how to manage national programmes in different resource settings in developed
+        and developing countries.\",\n    \"industryIdentifiers\": [\n     {\n      \"type\":
+        \"ISBN_10\",\n      \"identifier\": \"9241545577\"\n     },\n     {\n      \"type\":
+        \"ISBN_13\",\n      \"identifier\": \"9789241545570\"\n     }\n    ],\n    \"pageCount\":
+        180,\n    \"printType\": \"BOOK\",\n    \"averageRating\": 2.0,\n    \"ratingsCount\":
+        2,\n    \"contentVersion\": \"preview-1.0.0\",\n    \"imageLinks\": {\n     \"smallThumbnail\":
+        \"http://bks3.books.google.com/books?id=xpPukn3LNFwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks3.books.google.com/books?id=xpPukn3LNFwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=xpPukn3LNFwC&printsec=frontcover&dq=cancer&cd=9&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=xpPukn3LNFwC&dq=cancer&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/National_cancer_control_programmes.html?id=xpPukn3LNFwC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
+        \"US\",\n    \"viewability\": \"ALL_PAGES\",\n    \"embeddable\": true,\n
+        \   \"publicDomain\": false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n
+        \   \"epub\": {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
+        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=xpPukn3LNFwC&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"This publication, now in its second edition, explains how national cancer
+        control programmes integrated with existing health systems represent the best
+        available method for the control of cancer, including prevention, treatment
+        and ...\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"aVTMqaclr_kC\",\n
+        \  \"etag\": \"cfbYj+VJ39k\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/aVTMqaclr_kC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"authors\": [\n     \"Alvin
+        Silverstein\",\n     \"Virginia B. Silverstein\",\n     \"Laura Silverstein
+        Nunn\"\n    ],\n    \"publisher\": \"21st Century\",\n    \"publishedDate\":
+        \"2006\",\n    \"description\": \"Explains different types of cancer, their
+        causes, symptoms and treatment, and, through case studies, what it is like
+        to live with cancer.\",\n    \"industryIdentifiers\": [\n     {\n      \"type\":
+        \"ISBN_10\",\n      \"identifier\": \"0761328335\"\n     },\n     {\n      \"type\":
+        \"ISBN_13\",\n      \"identifier\": \"9780761328339\"\n     }\n    ],\n    \"pageCount\":
+        121,\n    \"printType\": \"BOOK\",\n    \"categories\": [\n     \"Medical\"\n
+        \   ],\n    \"contentVersion\": \"0.1.0.0.preview.0\",\n    \"imageLinks\":
+        {\n     \"smallThumbnail\": \"http://bks3.books.google.com/books?id=aVTMqaclr_kC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks3.books.google.com/books?id=aVTMqaclr_kC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=aVTMqaclr_kC&printsec=frontcover&dq=cancer&cd=10&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=aVTMqaclr_kC&dq=cancer&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=aVTMqaclr_kC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
+        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=aVTMqaclr_kC&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"Explains different types of cancer, their causes, symptoms and treatment,
+        and, through case studies, what it is like to live with cancer.\"\n   }\n
+        \ }\n ]\n}\n"
+    http_version: 
+  recorded_at: Tue, 22 May 2012 14:53:16 GMT
+recorded_with: VCR 2.1.1

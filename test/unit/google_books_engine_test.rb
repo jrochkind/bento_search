@@ -1,7 +1,8 @@
 require 'test_helper'
 
-
 class GoogleBooksEngineTest < ActiveSupport::TestCase
+  extend TestWithCassette
+  
   def setup
     conf = Confstruct::Configuration.new :api_key => "dummy"
     @engine = BentoSearch::GoogleBooksEngine.new(  conf   )
@@ -10,10 +11,13 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
   end
 
   
-  def test_search
+  
+  test_with_cassette("search", :gbs) do
     results = @engine.search("cancer")
     
     assert_kind_of BentoSearch::Results, results
+    
+    assert ! results.failed?
     
     assert_not_nil results.total_items
     assert_equal 0, results.start
@@ -33,8 +37,10 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
     assert first.abstract.html_safe?
   end
   
-  def test_pagination
+  test_with_cassette("pagination", :gbs) do
     results = @engine.search("cancer", :per_page => 20, :start => 40)
+    
+    assert ! results.failed?
     
     assert_equal 20, results.length
     
@@ -42,24 +48,28 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
     assert_equal 20, results.size
     assert_equal 40, results.start
   end
+
     
   
-  def test_error_condition
-    # Intentionally send with bad google api key to trigger error
-    @engine.suppress_key = false
-    begin    
-      results = @engine.search("cancer")      
-      
-      assert results.failed?
-      assert_not_nil results.error
-      assert_not_nil results.error[:status]
-      assert_not_nil results.error[:error_info]      
-    ensure
-      @engine.suppress_key = true
-    end
+  test_with_cassette("error condition", :gbs) do    
+      # Intentionally send with bad google api key to trigger error
+      @engine.suppress_key = false
+      begin    
+        results = @engine.search("cancer")      
+        
+        assert results.failed?
+        assert_not_nil results.error
+        assert_not_nil results.error[:status]
+        assert_not_nil results.error[:error_info]      
+      ensure
+        @engine.suppress_key = true
+      end
   end
   
-  def test_fielded_search
+  
+
+  
+  def test_fielded_search    
     # Have to use protected methods to get at what we want to test. 
     # Is there a better way to factor this for testing?
     norm_args = @engine.send(:parse_search_arguments, 'cancer "by radiation"', :search_field => :intitle)
