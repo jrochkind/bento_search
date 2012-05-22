@@ -78,7 +78,7 @@ module BentoSearch
         item.subtitle       = j_item["subtitle"] 
         item.link           = j_item["canonicalVolumeLink"]        
         item.abstract       = sanitize j_item["description"]        
-        item.year_published = get_year j_item["publishedDate"]         
+        item.year           = get_year j_item["publishedDate"]         
         item.format         = if j_item["printType"] == "MAGAZINE"
                               :serial
                             else

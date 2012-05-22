@@ -32,7 +32,7 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
     assert_not_empty first.title
     assert_not_empty first.link
     assert_not_empty first.format
-    assert_not_nil first.year_published
+    assert_not_nil first.year
     assert_not_empty first.abstract
     assert first.abstract.html_safe?
   end
