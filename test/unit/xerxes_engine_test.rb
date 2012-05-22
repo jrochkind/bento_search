@@ -47,7 +47,7 @@ class XerxesEngineTest < ActiveSupport::TestCase
     
     assert_present record.title
     assert_present record.format
-    #assert_present record.link
+    assert_present record.link
     assert_present record.volume
     assert_present record.issue
     assert_present record.start_page

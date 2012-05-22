@@ -107,8 +107,8 @@ module BentoSearch
         else
           nil
         end
-        
-        item.link           = node_text record.at_xpath("xerxes_record/links/link[type=original_record]/url")
+                
+        item.link           = node_text record.at_xpath("xerxes_record/links/link[@type='original_record']/url")
         
         item.year           = node_text record.at_xpath("xerxes_record/year")
         item.volume         = node_text record.at_xpath("xerxes_record/volume")
