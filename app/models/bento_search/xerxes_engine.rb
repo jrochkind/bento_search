@@ -127,7 +127,16 @@ module BentoSearch
             item.journal_title = openurl.referent.jtitle
           end
         end          
-        item.issn           = node_text record.at_xpath("xerxes_record/standard_numbers/issn")         
+        item.issn           = node_text record.at_xpath("xerxes_record/standard_numbers/issn")    
+        
+        # authors
+        record.xpath("xerxes_record/authors/author").each do |author|
+          item.authors << Author.new(:first => node_text(author.at_xpath("aufirst")),
+            :middle => node_text(author.at_xpath("auinit")),
+            :last => node_text(author.at_xpath("aulast"))
+            )
+        end
+        
         
       end
       return results     

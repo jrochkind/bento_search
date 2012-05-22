@@ -4,6 +4,15 @@ module BentoSearch
   #
   # ANY field can be nil, clients should be aware.  
   class ResultItem
+    # Can initialize with a hash of key/values
+    def initialize(args = {})
+      args.each_pair do |key, value|
+        send("#{key}=", value)
+      end
+      
+      @authors = []
+    end
+    
     # * dc.title 
     # * schema.org CreativeWork: 'name'    
     attr_accessor :title
@@ -54,5 +63,10 @@ module BentoSearch
     # rails ActionView::Helpers::Sanistize #sanitize and #strip_tags
     # may be helpful. 
     attr_accessor :abstract
+    
+    # An array (order matters) of BentoSearch::Author objects
+    # add authors to it with results.authors << Author
+    attr_reader :authors
+    
   end
 end

@@ -57,6 +57,11 @@ class XerxesEngineTest < ActiveSupport::TestCase
     assert_present record.journal_title
     assert_present record.issn
     
+    assert_operator record.authors.length, :>, 0
+    
+    assert_present record.authors.first.first
+    assert_present record.authors.first.last
+    
   end
   
 end
