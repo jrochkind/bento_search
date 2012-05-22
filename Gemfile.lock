@@ -5,6 +5,8 @@ PATH
       confstruct (>= 0.2.3, < 1.0)
       httpclient (~> 2.2.5)
       multi_json (~> 1.3)
+      nokogiri
+      openurl (>= 0.3.1, < 1.1)
       rails (~> 3.2.3)
 
 GEM
@@ -63,8 +65,12 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    marc (0.5.0)
     mime-types (1.18)
     multi_json (1.3.5)
+    nokogiri (1.5.2)
+    openurl (0.3.1)
+      marc
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)

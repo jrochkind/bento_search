@@ -21,6 +21,8 @@ Gem::Specification.new do |s|
   s.add_dependency "confstruct", ">= 0.2.3", "< 1.0"
   s.add_dependency "httpclient", "~> 2.2.5"
   s.add_dependency "multi_json", "~> 1.3"
+  s.add_dependency "nokogiri"
+  s.add_dependency "openurl", ">= 0.3.1", "< 1.1"
 
 
   s.add_development_dependency "vcr"
