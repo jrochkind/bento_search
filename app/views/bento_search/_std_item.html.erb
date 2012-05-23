@@ -1,0 +1,27 @@
+<%#  must pass in local 'item' that's a BentoSearch::ResultItem %>
+
+<div class="bento_item">
+  <h2 class="bento_item_title"><%= item.title %></h2>
+  
+  <% if item.format %>
+    <div class="bento_item_about">
+      <strong><%= t(item.format, :scope => [:bento_search, :format], :default => item.format.to_s.titleize) %></strong>
+    </div>
+  <% end %>
+  
+  <% if item.authors.length > 0 %>
+    <ul class="bento_item_authors">
+      <% item.authors.slice(0,3).each do |author| %>
+        <li><%= item.author_display(author) %>.</li> 
+      <% end %>    
+    </ul>
+  <% end %>      
+    
+  <% if item.published_in %>
+    <div class="bento_item_row published_in">
+      <span class="label"><strong>Published in</strong></span>
+      <span class="value"><%= item.published_in %> </span>
+    </div>
+  <% end %>
+  
+</div>

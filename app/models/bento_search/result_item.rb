@@ -4,6 +4,8 @@ module BentoSearch
   #
   # ANY field can be nil, clients should be aware.  
   class ResultItem
+    include ERB::Util # for html_escape for our presentational stuff
+    
     # Can initialize with a hash of key/values
     def initialize(args = {})
       args.each_pair do |key, value|
@@ -52,6 +54,9 @@ module BentoSearch
     attr_accessor :journal_title
     attr_accessor :issn
     
+    # usually used for books rather than articles
+    attr_accessor :publisher
+    
     # an openurl kev-encoded context object. optional,
     # only if source provides one that may be better
     # than can be constructed from individual elements above
@@ -67,6 +72,67 @@ module BentoSearch
     # An array (order matters) of BentoSearch::Author objects
     # add authors to it with results.authors << Author
     attr_reader :authors
+    
+    ##################
+    # Presentation related methods. 
+    # yes, it really makes sense to include them here, they can be overridden
+    # by decorators. 
+    # May extract these to their own base decorator module at some point,
+    # but the OO hieararchy would be basically the same either way. 
+    #######################
+    
+    
+    # How to display a BentoSearch::Author object as a name
+    def author_display(author)
+      if (author.first && author.last)
+        "#{author.last}, #{author.first.slice[0,1]}"
+      elsif author.display
+        author.display
+      elsif author.last
+        author.last
+      else
+        nil
+      end
+    end
+    
+    
+    
+    # A simple user-displayable citation, _without_ author/title.
+    # the journal, year, vol, iss, page; or publisher and year; etc. 
+    # Constructed from individual details. Not formal APA or MLA or anything,
+    # just a rough and ready display. 
+    #
+    # TODO: Should this be moved to a rails helper method? Not sure. 
+    def published_in
+      result_elements = []
+      
+      result_elements.push(journal_title) unless journal_title.blank?
+      
+      if journal_title.blank? && ! publisher.blank?
+        result_elements.push html_escape publisher
+      end
+      
+      unless year.blank?
+        # wrap year in a span so we can bold it. 
+        result_elements.push content_tag("span", year, :class => "year")
+      end
+      if (! volume.blank?) && (! issue.blank?)
+        result_elements.push html_escape "#{volume}(#{issue})"
+      else
+        result_elements.push html_escape volume unless volume.blank?
+        result_elements.push html_escape issue unless issue.blank?
+      end
+      
+      if (! start_page.blank?) && (! end_page.blank?)
+        result_elements.push html_escape "pp. #{start_page}-#{end_page}"
+      elsif ! start_page.blank?
+        result_elements.push html_escape "p. #{start_page}"
+      end
+      
+      return nil if result_elements.empty?
+      
+      return result_elements.join(", ").html_safe
+    end
     
   end
 end

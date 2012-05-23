@@ -1,0 +1,15 @@
+en:
+  foo: bar
+  bento_search:
+    format:
+      # Schema.org formats
+      Article: Article
+      Book: Book
+      Movie: Movie
+      MusicRecording: Musical Recording
+      Photograph: Photo
+      SoftwareApplication: Software
+      # And some custom ones that Schema.org didn't cover, alas
+      serial: Magazine or Journal
+      dissertation: Dissertation or Thesis
+  
