@@ -9,7 +9,9 @@ class StdItemTest < ActionView::TestCase
     render "bento_search/std_item", :item => item
     
     assert_select("div.bento_item", 1) do    
-      assert_select "h2", item.title
+      assert_select "h2", item.title do 
+        assert_select "a", false
+      end
       # No author/title/etc rows, cause we don't have data
       assert_select "ul.bento_item_authors", false
       assert_select ".bento_item_key_meta", false
@@ -22,6 +24,7 @@ class StdItemTest < ActionView::TestCase
   def test_complete_article_item
     hash = {}
     hash[:title] = "Some Title"   
+    hash[:link] = "http://example.org/1"
     hash[:journal_title] = "Journal of Invalid Results"
     hash[:volume] = "10"
     hash[:issue] = "1"
@@ -34,7 +37,9 @@ class StdItemTest < ActionView::TestCase
     render "bento_search/std_item", :item => item
     
     assert_select("div.bento_item", 1) do    
-      assert_select "h2", item.title
+      assert_select "h2", item.title do |h2|
+        assert_select "a[href='#{item.link}']"
+      end
       
       # Make sure we have the items for complete citation
       
@@ -58,6 +63,9 @@ class StdItemTest < ActionView::TestCase
     assert_select(".bento_item_about", /Bar/)
   end
   
+  def test_no_title_link
+    
+  end
   
   
 end

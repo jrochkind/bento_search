@@ -1,7 +1,15 @@
 <%#  must pass in local 'item' that's a BentoSearch::ResultItem %>
 
 <div class="bento_item">
-  <h2 class="bento_item_title"><%= item.title %></h2>
+  <h2 class="bento_item_title">
+    <% unless item.link.blank? %>
+      <%= content_tag("a", :href => item.link) do %>
+        <%= item.title %>
+       <% end %>
+     <% else %>
+        <%= item.title %>
+     <% end %>
+  </h2>
   
   <% if item.format %>
     <div class="bento_item_about">
