@@ -2,13 +2,7 @@
 
 <div class="bento_item">
   <h2 class="bento_item_title">
-    <% unless item.link.blank? %>
-      <%= content_tag("a", :href => item.link) do %>
-        <%= item.title %>
-       <% end %>
-     <% else %>
-        <%= item.title %>
-     <% end %>
+    <%= link_to_unless item.link.blank?, item.title, item.link %>    
   </h2>
   
   <% if item.format %>
