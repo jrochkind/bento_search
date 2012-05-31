@@ -33,6 +33,14 @@ class RegisterEngineTest < ActiveSupport::TestCase
     assert_kind_of BentoSearch::DummyEngine, BentoSearch.get_engine("test_engine")
   end
   
+  test "raises for no engine class" do
+    assert_raises(ArgumentError) do
+      BentoSearch.register_engine("test_engine") do |conf|              
+        conf.api_key = "dummy"
+      end
+    end
+  end
+  
   
   test "raises on unregistered engine access" do
     assert_raise(ArgumentError) { BentoSearch.get_engine("not_registered")}

@@ -22,7 +22,9 @@ module BentoSearch
   def self.register_engine(id, &block)
     conf = Confstruct::Configuration.new(&block)
     conf.id = id
-            
+    
+    raise ArgumentError.new("Must supply an `engine` class name") unless conf.engine
+    
     @@registered_engine_confs[id] = conf    
   end
   
