@@ -3,6 +3,9 @@ require 'test_helper'
 require 'cgi'
 require 'uri'
 
+# If you need to re-record cassette, you need to REMOVE
+# the :refresh_wait => 0 below, along with
+# the :record => once in the use_cassette
 class XerxesEngineTest < ActiveSupport::TestCase
   extend TestWithCassette
   
@@ -38,10 +41,10 @@ class XerxesEngineTest < ActiveSupport::TestCase
     end        
   end
   
-  test_with_cassette("live search", :xerxes) do
+  test_with_cassette("live search", :xerxes, :record => :none) do
     results = @engine.search("skin disease")
     
-    assert results.length > 0
+    assert results.length > 0, "returns results"
     
     record = results.first
     
