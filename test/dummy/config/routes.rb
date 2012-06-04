@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  require 'bento_search/routes'
+  BentoSearch::Routes.new(self).draw
+  
 
-  mount BentoSearch::Engine => "/bento_search"
 end
