@@ -44,10 +44,17 @@ module BentoSearch
     # handles configuration loading, mostly. Argument is a
     # Confstruct::Configuration. 
     def initialize(aConfiguration = Confstruct::Configuration.new)
-      self.configuration = aConfiguration
+      # init, from copy of default, or new      
+      if self.class.default_configuration
+        self.configuration = Confstruct::Configuration.new(self.class.default_configuration)
+      else
+        self.configuration = Confstruct::Configuration.new
+      end
+      # merge in current instance config
+      self.configuration.configure ( aConfiguration )
+            
       # check for required keys
-      
-      if self.class.respond_to?(:required_configuration)
+      if self.class.required_configuration
         self.class.required_configuration.each do |required_key|
           if self.configuration.lookup!(required_key, "**NOT_FOUND**") == "**NOT_FOUND**"
             raise ArgumentError.new("#{self.class.name} requires configuration key #{required_key}")
@@ -157,6 +164,18 @@ module BentoSearch
             [ defn[:semantic], field ] if defn && defn[:semantic]
           end.compact        
         ]
+      end
+      
+      # Over-ride returning a hash or Confstruct with 
+      # any configuration values you want by default. 
+      # actual user-specified config values will be deep-merged
+      # into the defaults. 
+      def default_configuration
+      end
+      
+      # Over-ride returning an array of symbols for required
+      # configuration keys.
+      def required_configuration
       end
       
     end
