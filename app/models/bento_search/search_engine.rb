@@ -42,7 +42,7 @@ module BentoSearch
     
     # If specific SearchEngine calls initialize, you want to call super
     # handles configuration loading, mostly. Argument is a
-    # Confstruct::Configuration. 
+    # Confstruct::Configuration or Hash. 
     def initialize(aConfiguration = Confstruct::Configuration.new)
       # init, from copy of default, or new      
       if self.class.default_configuration
