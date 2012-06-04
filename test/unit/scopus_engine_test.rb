@@ -6,8 +6,15 @@ require 'test_helper'
 class ScopusEngineTest < ActiveSupport::TestCase
   extend TestWithCassette
   
+  # Filter API key out of VCR cache for tag :scopus, which we'll use
+  # in this test. 
+  @@api_key = (ENV["SCOPUS_KEY"] || "DUMMY_API_KEY")
+  VCR.config do |c|
+    c.filter_sensitive_data("DUMMY_API_KEY", :scopus) { @@api_key }
+  end
+  
   def setup
-    @engine = BentoSearch::ScopusEngine.new(:api_key => (ENV["SCOPUS_KEY"] || "dummy"))
+    @engine = BentoSearch::ScopusEngine.new(:api_key => @@api_key)
   end
   
   
@@ -22,5 +29,11 @@ class ScopusEngineTest < ActiveSupport::TestCase
     
     assert_equal "http://api.elsevier.com/content/search/index:SCOPUS?query=AUTH%28one+two%29", url
   end
+  
+  test_with_cassette("simple search", :scopus) do
+    response = @engine.search(:query => "cancer")
+    
+  end
+    
   
 end
