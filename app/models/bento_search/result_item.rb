@@ -114,7 +114,7 @@ module BentoSearch
       
       unless year.blank?
         # wrap year in a span so we can bold it. 
-        result_elements.push content_tag("span", year, :class => "year")
+        result_elements.push "<span class='year'>#{year}</span>"
       end
       if (! volume.blank?) && (! issue.blank?)
         result_elements.push html_escape "#{volume}(#{issue})"
