@@ -25,14 +25,14 @@ class BentoSearchHelperTest < ActionView::TestCase
   end
   
   def test_with_results_arg
-    do_bento_search(@dummy_results)    
+    bento_search(@dummy_results)    
     
     assert_select("div.bento_item", 10)    
   end
   
   def test_with_engine_arg
     engine = DummySearcher.new
-    do_bento_search(engine, :query => "QUERY")
+    bento_search(engine, :query => "QUERY")
     
     assert_select("div.bento_item", 10).each_with_index do |node, i|
       node.match /QUERY/
@@ -45,7 +45,7 @@ class BentoSearchHelperTest < ActionView::TestCase
       conf.engine = "BentoSearchHelperTest::DummySearcher"
     end
     
-    do_bento_search("test_engine", :query => "QUERY")
+    bento_search("test_engine", :query => "QUERY")
     
     assert_select("div.bento_item", 10).each_with_index do |node, i|
       node.match /QUERY/
@@ -58,7 +58,7 @@ class BentoSearchHelperTest < ActionView::TestCase
       conf.engine = "BentoSearchHelperTest::DummySearcher"
     end
     
-    results = do_bento_search("test_engine", :query => "QUERY", :load => :ajax)
+    results = bento_search("test_engine", :query => "QUERY", :load => :ajax)
     results = HTML::Document.new(results)
     
     

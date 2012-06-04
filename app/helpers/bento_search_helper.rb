@@ -2,7 +2,7 @@
 # in host app's helpers. 
 module BentoSearchHelper
   
-  def do_bento_search(search, options = {})
+  def bento_search(search, options = {})
     results = search if search.kind_of? BentoSearch::Results
     
     load_mode = options.delete(:load) 
@@ -20,7 +20,7 @@ module BentoSearchHelper
 
     if (!results && load_mode == :ajax)
       content_tag(:div, :class => "bento_search_ajax_wait",
-        :"data-bento-ajax-url" => to_bento_search_path( {:engine_id => engine.configuration.id}.merge(options) )) do
+        :"data-bento-ajax-url" => to_bento_search_url( {:engine_id => engine.configuration.id}.merge(options) )) do
         content_tag("noscript") do
           "Can not load results without javascript"
         end
