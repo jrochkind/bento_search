@@ -10,6 +10,9 @@ module BentoSearch
   #
   # https://developers.google.com/books/docs/v1/using
   # https://developers.google.com/books/docs/v1/reference/volumes#resource  
+  #
+  # Configuration :api_key STRONGLY recommended, or google will severely
+  # rate-limit you. 
   class GoogleBooksEngine
     include BentoSearch::SearchEngine
     include ActionView::Helpers::SanitizeHelper
@@ -20,12 +23,7 @@ module BentoSearch
     class_attribute :base_url
     self.base_url = "https://www.googleapis.com/books/v1/"
     
-    # used for testing only, GBS does allow some limited rate
-    # of searches without a key. 
-    class_attribute :suppress_key
-    self.suppress_key = false
-    
-    
+        
     def search_implementation(arguments)            
       query_url = args_to_search_url(arguments)
 
@@ -99,10 +97,6 @@ module BentoSearch
     # BentoBox::SearchEngine API
     ###########
     
-    def self.required_configuration
-      ["api_key"]
-    end
-    
     def self.max_per_page
       100
     end   
@@ -134,7 +128,7 @@ module BentoSearch
       end
       
       query_url = base_url + "volumes?q=#{CGI.escape  query}"
-      unless suppress_key
+      if configuration.api_key
         query_url += "&key=#{configuration.api_key}"
       end
       

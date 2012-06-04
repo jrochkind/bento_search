@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.googleapis.com/books/v1/volumes?key=dummy&q=cancer
+    uri: https://www.googleapis.com/books/v1/volumes?key=BAD_KEY&q=cancer
     body:
       encoding: US-ASCII
       string: ''
@@ -15,9 +15,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 22 May 2012 14:53:15 GMT
+      - Mon, 04 Jun 2012 20:59:05 GMT
       Expires:
-      - Tue, 22 May 2012 14:53:15 GMT
+      - Mon, 04 Jun 2012 20:59:05 GMT
       Cache-Control:
       - private, max-age=0
       X-Content-Type-Options:
@@ -36,5 +36,5 @@ http_interactions:
         \   \"reason\": \"keyInvalid\",\n    \"message\": \"Bad Request\"\n   }\n
         \ ],\n  \"code\": 400,\n  \"message\": \"Bad Request\"\n }\n}\n"
     http_version: 
-  recorded_at: Tue, 22 May 2012 14:53:15 GMT
-recorded_with: VCR 2.1.1
+  recorded_at: Mon, 04 Jun 2012 20:59:05 GMT
+recorded_with: VCR 2.2.0

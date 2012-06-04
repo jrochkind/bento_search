@@ -3,11 +3,9 @@ require 'test_helper'
 class GoogleBooksEngineTest < ActiveSupport::TestCase
   extend TestWithCassette
   
-  def setup
-    conf = Confstruct::Configuration.new :api_key => "dummy"
-    @engine = BentoSearch::GoogleBooksEngine.new(  conf   )
+  def setup    
+    @engine = BentoSearch::GoogleBooksEngine.new
     # tell it not to send our bad API key
-    @engine.suppress_key = true
   end
 
   
@@ -54,19 +52,16 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
 
     
   
-  test_with_cassette("error condition", :gbs) do    
-      # Intentionally send with bad google api key to trigger error
-      @engine.suppress_key = false
-      begin    
-        results = @engine.search("cancer")      
-        
-        assert results.failed?
-        assert_not_nil results.error
-        assert_not_nil results.error[:status]
-        assert_not_nil results.error[:error_info]      
-      ensure
-        @engine.suppress_key = true
-      end
+  test_with_cassette("error condition", :gbs) do       
+    # send a bad API key on purpose to get error
+    @engine = BentoSearch::GoogleBooksEngine.new(:api_key => "BAD_KEY")
+    
+    results = @engine.search("cancer")      
+    
+    assert results.failed?
+    assert_not_nil results.error
+    assert_not_nil results.error[:status]
+    assert_not_nil results.error[:error_info]            
   end
   
   
