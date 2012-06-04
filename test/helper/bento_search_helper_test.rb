@@ -54,7 +54,7 @@ class BentoSearchHelperTest < ActionView::TestCase
   end
   
   def test_ajax_load_without_registration
-    assert_raises(ArgumentError) { bento_search(BentoSearchHelperTest::DummySearcher.new, :load => :ajax) }
+    assert_raises(ArgumentError) { bento_search(BentoSearchHelperTest::DummySearcher.new, :load => :ajax_auto) }
   end
   
   def test_ajax_load 
@@ -62,7 +62,7 @@ class BentoSearchHelperTest < ActionView::TestCase
       conf.engine = "BentoSearchHelperTest::DummySearcher"
     end
     
-    results = bento_search("test_engine", :query => "QUERY", :load => :ajax)
+    results = bento_search("test_engine", :query => "QUERY", :load => :ajax_auto)
     results = HTML::Document.new(results)
     
     
