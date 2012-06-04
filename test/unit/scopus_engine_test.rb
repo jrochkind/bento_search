@@ -9,7 +9,7 @@ class ScopusEngineTest < ActiveSupport::TestCase
   # Filter API key out of VCR cache for tag :scopus, which we'll use
   # in this test. 
   @@api_key = (ENV["SCOPUS_KEY"] || "DUMMY_API_KEY")
-  VCR.config do |c|
+  VCR.configure do |c|
     c.filter_sensitive_data("DUMMY_API_KEY", :scopus) { @@api_key }
   end
   
