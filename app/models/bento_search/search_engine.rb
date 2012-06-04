@@ -140,10 +140,22 @@ module BentoSearch
     end
     
     module ClassMethods
+      
+      # If support fielded search, over-ride to specify fields
+      # supported. Returns a hash, key is engine-specific internal
+      # search field, value is nil or a hash of metadata about
+      # the search field, including semantic mapping. 
+      #
+      # def search_field_definitions
+      #  { "intitle" => {:semantic => :title}}
+      # end
+      def search_field_definitions
+        {}
+      end
+      
       # Returns list of string internal search_field's that can
       # be supplied to search(:search_field => x)
-      def search_keys
-        return [] unless respond_to? :search_field_definitions
+      def search_keys        
         return search_field_definitions.keys
       end
       
@@ -155,9 +167,7 @@ module BentoSearch
       
       # returns a hash keyed by semantic search field symbol,
       # value string internal search field key. 
-      def semantic_search_map
-        return {} unless respond_to? :search_field_definitions
-        
+      def semantic_search_map                
         # Hash[] conveniently takes an array of k-v pairs. 
         return Hash[
           search_field_definitions.collect do |field, defn|
