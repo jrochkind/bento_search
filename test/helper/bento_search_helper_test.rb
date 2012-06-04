@@ -79,7 +79,8 @@ class BentoSearchHelperTest < ActionView::TestCase
         
     assert div.find(:tag => "noscript"), "has <noscript> tag"
     
-    
+    assert (img = div.find(:tag => "img")), "Has spinner gif"
+    assert_equal I18n.translate("bento_search.ajax_loading"), img.attributes["alt"]
   end
     
     

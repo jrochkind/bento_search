@@ -44,6 +44,7 @@ module BentoSearchHelper
       raise ArgumentError.new("`:load => :ajax` requires a registered engine with an id") unless engine.configuration.id
       content_tag(:div, :class => "bento_search_ajax_wait",
         :"data-bento-ajax-url" => to_bento_search_url( {:engine_id => engine.configuration.id}.merge(options) )) do
+        image_tag("bento_search/large_loader.gif", :alt => I18n.translate("bento_search.ajax_loading")) +
         content_tag("noscript") do
           "Can not load results without javascript"
         end
