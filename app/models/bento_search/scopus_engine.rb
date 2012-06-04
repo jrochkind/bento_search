@@ -28,11 +28,13 @@ module BentoSearch
     
     def search(args)            
       
-      response = http_client.get( scopus_url(args) , 
-        :headers => {"X-ELS-APIKey" => configuration.api_key, 
+      response = http_client.get( scopus_url(args) , nil,
+        # HTTP headers. 
+        {"X-ELS-APIKey" => configuration.api_key, 
         "X-ELS-ResourceVersion" => "XOCS"}
       )
       
+      return response
     end
     
     
