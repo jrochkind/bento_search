@@ -2,8 +2,10 @@
 # in host app's helpers. 
 module BentoSearchHelper
   
-  def bento_search(search, options = {})
+  def do_bento_search(search, options = {})
     results = search if search.kind_of? BentoSearch::Results
+    
+    load_mode = options.delete(:load) 
     
     engine = nil
     unless results
@@ -15,10 +17,10 @@ module BentoSearchHelper
       end      
       
     end
-    
-    if (!results && options[:load] == :ajax)
+
+    if (!results && load_mode == :ajax)
       content_tag(:div, :class => "bento_search_ajax_wait",
-        :"data-bento-ajax-url" => "foo") do
+        :"data-bento-ajax-url" => to_bento_search_path( {:engine_id => engine.configuration.id}.merge(options) )) do
         content_tag("noscript") do
           "Can not load results without javascript"
         end
