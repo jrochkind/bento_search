@@ -1,6 +1,6 @@
 en:
-  foo: bar
   bento_search:
+    ajax_loading: "Loading..."
     format:
       # Schema.org formats
       Article: Article
