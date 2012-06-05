@@ -24,18 +24,18 @@ module BentoSearchHelper
   #     bento_results( engine_obj, :query => "cancer")
   #     bento_results("google_books", :query => "cancer", :load => :ajax_auto)
   #  
-  def bento_search(search, options = {})
-    results = search if search.kind_of? BentoSearch::Results
+  def bento_search(search_arg, options = {})
+    results = search_arg if search_arg.kind_of? BentoSearch::Results
     
     load_mode = options.delete(:load) 
     
     engine = nil
     unless results
       # need to load an engine and do a search, or ajax, etc. 
-      engine = (if search.kind_of? BentoSearch::SearchEngine
-        search
+      engine = (if search_arg.kind_of? BentoSearch::SearchEngine
+        search_arg
       else
-        BentoSearch.get_engine(search.to_s)
+        BentoSearch.get_engine(search_arg.to_s)
       end)
       
     end
