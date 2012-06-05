@@ -132,7 +132,11 @@ module BentoSearch
         item.issn           = node_text record.at_xpath("xerxes_record/standard_numbers/issn")    
         
         # authors
+        require 'debugger'
+        debugger
         record.xpath("xerxes_record/authors/author").each do |author|
+          next unless author.at_xpath("aulast") # don't even have a lastname, we can do nothing
+          
           item.authors << Author.new(:first => node_text(author.at_xpath("aufirst")),
             :middle => node_text(author.at_xpath("auinit")),
             :last => node_text(author.at_xpath("aulast"))
