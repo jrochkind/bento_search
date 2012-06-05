@@ -52,6 +52,20 @@ class ScopusEngineTest < ActiveSupport::TestCase
     assert_not_nil results.start, "start not nil"
     assert_not_nil results.per_page, "per_page not nil"
     
+    assert_equal BentoSearch::ScopusEngine.default_per_page, results.length
+    
+    sample_result = results.first
+    
+    assert_present sample_result.title
+    assert_present sample_result.link
+    assert_present sample_result.journal_title
+    assert_present sample_result.issn
+    assert_present sample_result.volume
+    assert_present sample_result.issue
+    assert_present sample_result.start_page
+    
+    assert_present sample_result.authors    
+    
   end
   
   

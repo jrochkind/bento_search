@@ -60,6 +60,42 @@ module BentoSearch
       
       results.total_items = node_text xml.at_xpath("//opensearch:totalResults", xml_ns)
       
+      xml.xpath("//atom:entry", xml_ns).each do | entry |
+
+        results << (item = ResultItem.new)        
+        item.link           = node_text entry.at_xpath("prism:url", xml_ns)
+        item.title          = node_text entry.at_xpath("dc:title", xml_ns)
+        item.journal_title  = node_text entry.at_xpath("prism:publicationName", xml_ns)
+        item.issn           = node_text entry.at_xpath("prism:issn", xml_ns)
+        item.volume         = node_text entry.at_xpath("prism:volume", xml_ns)
+        item.issue          = node_text entry.at_xpath("prism:issueIdentifier", xml_ns)
+        item.doi            = node_text entry.at_xpath("prism:doi", xml_ns)
+        
+        # pages might be in startingPage/endingPage OR in pageRange
+        if (start = entry.at_xpath("prism:startingPage", xml_ns))
+          item.start_page = start.text.to_i
+          if ( epage = entry.at_xpath("prism:endingPage", xml_ns))
+            item.end_page = epage.text.to_i
+          end
+        elsif (range = entry.at_xpath("prism:pageRange", xml_ns))
+          (spage, epage) = *range.text().split("-")
+          item.start_page = spage
+          item.end_page = epage
+        end
+        
+        # Authors might be in atom:authors seperated by |, or just
+        # a single one in dc:creator
+        if (authors = entry.at_xpath("atom:authors", xml_ns))
+          authors.text.split("|").each do |author|
+            item.authors << Author.new(:display => author.strip)
+          end
+        elsif (author = entry.at_xpath("dc:creator", xml_ns))
+          item.authors << Author.new(:display => author.text.strip)
+        end
+          
+        
+      end
+      
       return results
     end
     
@@ -84,6 +120,10 @@ module BentoSearch
         "ISBN"        => {:semantic => :isbn},
         "ISSN"        => {:semantic => :issn},              
       }
+    end
+    
+    def self.default_per_page
+      25
     end
     
     protected
