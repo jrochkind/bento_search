@@ -40,13 +40,18 @@ class ScopusEngineTest < ActiveSupport::TestCase
   test_with_cassette("bad api key should return error response", :scopus) do
     @engine = BentoSearch::ScopusEngine.new(:api_key => "BAD_KEY_ERROR")
     
-    response = @engine.search(:query => "cancer")
+    results = @engine.search(:query => "cancer")
     
-    assert response.failed?, "response.failed? should be"  
+    assert results.failed?, "response.failed? should be"  
   end
   
   test_with_cassette("simple search", :scopus) do
-    response = @engine.search(:query => "cancer")      
+    results = @engine.search(:query => "cancer")
+    
+    assert_not_nil results.total_items, "total_items not nil"
+    assert_not_nil results.start, "start not nil"
+    assert_not_nil results.per_page, "per_page not nil"
+    
   end
   
   

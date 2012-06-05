@@ -28,7 +28,7 @@ module BentoSearch
     extend HTTPClientPatch::IncludeClient
     include_http_client
     
-    def search(args)        
+    def search_implementation(args)        
       results = Results.new
       
       xml, response, exception = nil, nil, nil
@@ -56,9 +56,11 @@ module BentoSearch
         # but sometimes it's an error message. 
         results.error[:error_info] = xml.at_xpath("service_error") if xml
         return results
-      end
+      end                  
       
-      return response
+      results.total_items = node_text xml.at_xpath("//opensearch:totalResults", xml_ns)
+      
+      return results
     end
     
     
@@ -85,6 +87,21 @@ module BentoSearch
     end
     
     protected
+    
+    # returns nil if passed in nil, otherwise
+    # returns nokogiri text()
+    def node_text(node)
+      return nil if node.nil?
+      
+      return node.text()
+    end
+    
+    def xml_ns
+      {"opensearch" => "http://a9.com/-/spec/opensearch/1.1/",
+       "prism"      => "http://prismstandard.org/namespaces/basic/2.0/",
+       "dc"         => "http://purl.org/dc/elements/1.1/",
+       "atom"       => "http://www.w3.org/2005/Atom"}
+     end
     
     def scopus_url(args)
       query = args[:query]
