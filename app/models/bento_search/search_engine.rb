@@ -75,11 +75,7 @@ module BentoSearch
       results = search_implementation(arguments)
       
       results.start = arguments[:start] || 0
-      results.per_page = arguments[:per_page] || 
-        (self.class.respond_to?(:default_per_page) ? 
-          self.class.default_per_page :
-          10
-        )
+      results.per_page = arguments[:per_page] || self.class.default_per_page        
       
       results.timing = (Time.now - start_t)
         
@@ -151,6 +147,12 @@ module BentoSearch
       # end
       def search_field_definitions
         {}
+      end
+      
+      # Default per-page, returns 10 by default,
+      # over-ride if different than 10
+      def default_per_page
+        10
       end
       
       # Returns list of string internal search_field's that can
