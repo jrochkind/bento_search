@@ -54,6 +54,8 @@ module BentoSearch
     attr_accessor :journal_title
     attr_accessor :issn
     
+    attr_accessor :doi
+    
     # usually used for books rather than articles
     attr_accessor :publisher
     
