@@ -1,7 +1,11 @@
 require 'cgi'
 require 'nokogiri'
 
+require 'http_client_patch/include_client'
+require 'httpclient'
 module BentoSearch
+  # TODO: Sorting, Facets. 
+  #
   # Uses the Scopus SciVerse REST API. You need to be a Scopus customer
   # to access. http://api.elsevier.com
   # 
