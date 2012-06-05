@@ -85,7 +85,7 @@ module BentoSearch
     # How to display a BentoSearch::Author object as a name
     def author_display(author)
       if (author.first && author.last)
-        "#{author.last}, #{author.first.slice[0,1]}"
+        "#{author.last}, #{author.first.slice(0,1)}"
       elsif author.display
         author.display
       elsif author.last
