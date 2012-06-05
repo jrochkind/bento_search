@@ -70,6 +70,11 @@ class ScopusEngineTest < ActiveSupport::TestCase
     
   end
   
+  test_with_cassette("fielded search", :scopus) do
+    results = @engine.search(:query => "cancer", :semantic_search_field => :title)
+
+    assert results.first.title.downcase.include?("cancer"), "Title includes query term"    
+  end
   
   
     
