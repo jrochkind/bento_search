@@ -66,8 +66,10 @@ module BentoSearch
       
       xml.xpath("//atom:entry", xml_ns).each do | entry |
 
-        results << (item = ResultItem.new)        
-        item.link           = node_text entry.at_xpath("prism:url", xml_ns)
+        results << (item = ResultItem.new)  
+        if scopus_link = entry.at_xpath("atom:link[@ref='scopus']", xml_ns)
+          item.link = scopus_link["href"]
+        end
         item.title          = node_text entry.at_xpath("dc:title", xml_ns)
         item.journal_title  = node_text entry.at_xpath("prism:publicationName", xml_ns)
         item.issn           = node_text entry.at_xpath("prism:issn", xml_ns)
