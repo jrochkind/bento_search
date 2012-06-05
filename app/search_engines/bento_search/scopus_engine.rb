@@ -9,12 +9,13 @@ module BentoSearch
   # Also: http://www.developers.elsevier.com/cms/apiserviceagreement
   #
   # Register for an API key at "Register New Site" at http://developers.elsevier.com/action/devnewsite
-  # You will then need to get server IP addresses registered with Scopus too, email?
+  # You will then need to get server IP addresses registered with Scopus too, 
+  # apparently by emailing directly to dave.santucci at elsevier dot com.  
   #    
   # Scopus API Docs:   
   # * http://www.developers.elsevier.com/devcms/content-api-search-request
   # * http://www.developers.elsevier.com/devcms/content/search-fields-overview
-  # Un-used API's at present:
+  # Other API's in the suite not being used by this code at present: 
   # * http://www.developers.elsevier.com/devcms/content-api-retrieval-request
   # * http://www.developers.elsevier.com/devcms/content-api-metadata-request
   #
