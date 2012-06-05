@@ -2,6 +2,9 @@ require 'uri'
 require 'nokogiri'
 require 'openurl'
 
+require 'httpclient'
+require 'http_client_patch/include_client'
+
 module BentoSearch
   # a **very limited and hacky** bento search engine for the Xerxes Metalib
   # front-end. Probably not suitable for real production use, just a demo,
