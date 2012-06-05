@@ -51,7 +51,7 @@ module BentoSearchHelper
       end
     else
       results = engine.search(options) unless results
-      
+
       if results.length > 0      
         render :partial => "bento_search/std_item", :collection => results
       else

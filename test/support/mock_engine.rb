@@ -3,10 +3,14 @@ class MockEngine
     
     def search_implementation(args)
       results = BentoSearch::Results.new
-      1.upto(10) do |i|
+      1.upto(configuration.num_results) do |i|
         results << BentoSearch::ResultItem.new(:title => "Item #{i}: #{args[:query]}")
       end      
       return results
     end    
+    
+    def self.default_configuration
+      {:num_results => 10}
+    end
     
 end

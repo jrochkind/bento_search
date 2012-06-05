@@ -9,29 +9,34 @@ class BentoSearchHelperTest < ActionView::TestCase
   end
 
   
-  class DummySearcher
-    include BentoSearch::SearchEngine
-    
-    def search_implementation(args)
-      return BentoSearchHelperTest.dummy_results(:title_words => args[:query])
-    end
-  end
+
   
   def setup
     # Make routing work
-    @routes = Rails.application.routes
-    
-    @dummy_results = self.class.dummy_results
+    @routes = Rails.application.routes        
   end
   
   def test_with_results_arg
-    bento_search(@dummy_results)    
+    results = MockEngine.new.search(:query => "foo")
+    bento_search(results)    
     
     assert_select("div.bento_item", 10)    
   end
   
+  def test_with_empty_results
+    results = MockEngine.new(:num_results => 0).search(:query => "foo")
+    
+    response = HTML::Document.new(bento_search(results))
+    
+    assert (no_results_div = response.find(:attributes => {:class => "bento_search_no_results"})), "has no_results div"
+    assert no_results_div.match(I18n.translate("bento_search.no_results"))
+
+    
+    assert_nil response.find(:attributes => {:class => "bento_item"})
+  end
+  
   def test_with_engine_arg
-    engine = DummySearcher.new
+    engine = MockEngine.new
     bento_search(engine, :query => "QUERY")
     
     assert_select("div.bento_item", 10).each_with_index do |node, i|
@@ -42,7 +47,7 @@ class BentoSearchHelperTest < ActionView::TestCase
   
   def test_with_registered_id
     BentoSearch.register_engine("test_engine") do |conf|
-      conf.engine = "BentoSearchHelperTest::DummySearcher"
+      conf.engine = "MockEngine"
     end
     
     bento_search("test_engine", :query => "QUERY")
@@ -54,12 +59,12 @@ class BentoSearchHelperTest < ActionView::TestCase
   end
   
   def test_ajax_load_without_registration
-    assert_raises(ArgumentError) { bento_search(BentoSearchHelperTest::DummySearcher.new, :load => :ajax_auto) }
+    assert_raises(ArgumentError) { bento_search(MockEngine.new, :load => :ajax_auto) }
   end
   
   def test_ajax_load 
     BentoSearch.register_engine("test_engine") do |conf|
-      conf.engine = "BentoSearchHelperTest::DummySearcher"
+      conf.engine = "MockEngine"
     end
     
     results = bento_search("test_engine", :query => "QUERY", :load => :ajax_auto)
@@ -84,12 +89,6 @@ class BentoSearchHelperTest < ActionView::TestCase
   end
     
     
-  def self.dummy_results(options = {})
-    dummy_results = BentoSearch::Results.new
-    1.upto(10) do |i|
-      dummy_results << BentoSearch::ResultItem.new(:title => "Item #{i}: #{options[:title_words]}")
-    end
-    return dummy_results
-  end
+
   
 end
