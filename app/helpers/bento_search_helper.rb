@@ -51,7 +51,14 @@ module BentoSearchHelper
       end
     else
       results = engine.search(options) unless results
-      render :partial => "bento_search/std_item", :collection => results    
+      
+      if results.length > 0      
+        render :partial => "bento_search/std_item", :collection => results
+      else
+        content_tag(:div, :class=> "bento_search_no_results") do
+          I18n.translate("bento_search.no_results")
+        end
+      end
     end                          
   end
     
