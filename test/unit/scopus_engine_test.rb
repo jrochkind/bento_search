@@ -30,10 +30,27 @@ class ScopusEngineTest < ActiveSupport::TestCase
     assert_equal "http://api.elsevier.com/content/search/index:SCOPUS?query=AUTH%28one+two%29", url
   end
   
-  test_with_cassette("simple search", :scopus) do
+  def test_construct_search_with_per_page
+    url = @engine.send(:scopus_url, :query => "one two", :per_page => 25)
+    
+    assert_equal "http://api.elsevier.com/content/search/index:SCOPUS?query=one+two&count=25", url
+  end
+  
+  
+  test_with_cassette("bad api key should return error response", :scopus) do
+    @engine = BentoSearch::ScopusEngine.new(:api_key => "BAD_KEY_ERROR")
+    
     response = @engine.search(:query => "cancer")
     
+    assert response.failed?, "response.failed? should be"  
   end
+  
+  test_with_cassette("simple search", :scopus) do
+    response = @engine.search(:query => "cancer")      
+  end
+  
+  
+  
     
   
 end

@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.elsevier.com/content/search/index:SCOPUS?query=cancer
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Els-Apikey:
+      - BAD_KEY_ERROR
+      X-Els-Resourceversion:
+      - XOCS
+      Accept:
+      - application/atom+xml
+  response:
+    status:
+      code: 401
+      message: !binary |-
+        VW5hdXRob3JpemVk
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        YXBpLmVsc2V2aWVyLmNvbSAgOTk5OQ==
+      !binary "WC1FbHMtU3RhdHVz":
+      - !binary |-
+        QVVUSE9SSVpBVElPTl9FUlJPUihBUElLZXkgQkFEX0tFWV9FUlJPUiB3aXRo
+        IElQIGFkZHJlc3MgMTI4LjIyMC4yMDUuMTI1IGlzIHVucmVjb2duaXplZCBv
+        ciBoYXMgaW5zdWZmaWNpZW50IHByaXZpbGVnZXMgZm9yIGFjY2VzcyB0byB0
+        aGlzIHJlc291cmNlKQ==
+      !binary "WC1FbHMtUmVxaWQ=":
+      - !binary |-
+        MDAwMDAxMzc1MzhhZTFjYy0xNWI2MjBk
+      !binary "WC1FbHMtQXBpa2V5":
+      - !binary |-
+        QkFEX0tFWV9FUlJPUg==
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        dGV4dC94bWw7Y2hhcnNldD11dGYtOA==
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        MjU1
+      !binary "RGF0ZQ==":
+      - !binary |-
+        VHVlLCAwNSBKdW4gMjAxMiAxOTowMjoxOSBHTVQ=
+      !binary "WC1SZS1SZWY=":
+      - !binary |-
+        MSAxMjQ0NTMxODM5
+      !binary "UDNw":
+      - !binary |-
+        Q1A9IklEQyBEU1AgTEFXIEFETSBERVYgVEFJIFBTQSBQU0QgSVZBIElWRCBD
+        T04gSElTIFRFTCBPVVIgREVMIFNBTSBPVFIgSU5EIE9UQyI=
+    body:
+      encoding: US-ASCII
+      string: ! "<service-error>\n\t<status>\n\t\t<statusCode>AUTHORIZATION_ERROR</statusCode>\n\t\t<statusText>APIKey
+        BAD_KEY_ERROR with IP address 128.220.205.125 is unrecognized or has insufficient
+        privileges for access to this resource</statusText>\n\t</status>\n</service-error>"
+    http_version: 
+  recorded_at: Tue, 05 Jun 2012 19:02:19 GMT
+recorded_with: VCR 2.2.0

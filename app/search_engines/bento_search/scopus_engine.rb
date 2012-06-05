@@ -1,4 +1,5 @@
 require 'cgi'
+require 'nokogiri'
 
 module BentoSearch
   # Uses the Scopus SciVerse REST API. You need to be a Scopus customer
@@ -27,15 +28,35 @@ module BentoSearch
     extend HTTPClientPatch::IncludeClient
     include_http_client
     
-    def search(args)            
+    def search(args)        
+      results = Results.new
       
-      response = http_client.get( scopus_url(args) , nil,
-        # HTTP headers. 
-        {"X-ELS-APIKey" => configuration.api_key, 
-        "X-ELS-ResourceVersion" => "XOCS",
-        "Accept" => "application/atom+xml"}
-      )
+      xml, response, exception = nil, nil, nil
       
+      begin
+        response = http_client.get( scopus_url(args) , nil,
+          # HTTP headers. 
+          {"X-ELS-APIKey" => configuration.api_key, 
+          "X-ELS-ResourceVersion" => "XOCS",
+          "Accept" => "application/atom+xml"}
+        )
+        xml = Nokogiri::XML(response.body)
+      rescue TimeoutError, HTTPClient::ConfigurationError, HTTPClient::BadResponseError, Nokogiri::SyntaxError  => e
+        exception = e        
+      end
+      # handle errors
+      if (response.nil? || xml.nil? || exception || 
+          (! HTTP::Status.successful? response.status) ||
+          xml.at_xpath("service-error")
+          )
+        results.error ||= {}
+        results.error[:exception] = e
+        results.error[:status] = response.status if response
+        # keep from storing the entire possibly huge response as error
+        # but sometimes it's an error message. 
+        results.error[:error_info] = xml.at_xpath("service_error") if xml
+        return results
+      end
       
       return response
     end
