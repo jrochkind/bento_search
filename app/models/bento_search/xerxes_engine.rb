@@ -132,8 +132,6 @@ module BentoSearch
         item.issn           = node_text record.at_xpath("xerxes_record/standard_numbers/issn")    
         
         # authors
-        require 'debugger'
-        debugger
         record.xpath("xerxes_record/authors/author").each do |author|
           next unless author.at_xpath("aulast") # don't even have a lastname, we can do nothing
           
