@@ -32,8 +32,10 @@ module BentoSearch
       response = http_client.get( scopus_url(args) , nil,
         # HTTP headers. 
         {"X-ELS-APIKey" => configuration.api_key, 
-        "X-ELS-ResourceVersion" => "XOCS"}
+        "X-ELS-ResourceVersion" => "XOCS",
+        "Accept" => "application/atom+xml"}
       )
+      
       
       return response
     end
@@ -70,7 +72,11 @@ module BentoSearch
         query = "#{args[:search_field]}(#{query})"
       end
       
-      "#{configuration.base_url.chomp("/")}/content/search/index:#{configuration.cluster}?query=#{CGI.escape(query)}"
+      query = "#{configuration.base_url.chomp("/")}/content/search/index:#{configuration.cluster}?query=#{CGI.escape(query)}"
+      
+      query += "&count=#{args[:per_page]}" if args[:per_page]
+      
+      return query
     end
     
   end
