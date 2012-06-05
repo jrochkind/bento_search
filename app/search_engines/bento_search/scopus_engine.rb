@@ -92,7 +92,12 @@ module BentoSearch
         elsif (author = entry.at_xpath("dc:creator", xml_ns))
           item.authors << Author.new(:display => author.text.strip)
         end
-          
+        
+        # Format we're still trying to figure out how Scopus API
+        # delivers it. Here is at at least one way.
+        if (doctype = entry.at_xpath("atom:subtype", xml_ns))
+          item.format = doctype_map(doctype.text)
+        end
         
       end
       
@@ -143,6 +148,18 @@ module BentoSearch
        "atom"       => "http://www.w3.org/2005/Atom"}
      end
     
+    # Maps from Scopus "doctype" as listed at http://www.developers.elsevier.com/devcms/content/search-fields-overview
+    # and delivered in the XML response as atom:subtype. 
+    # Maps to our own internal formats as documented in ResultItem#format
+    # Returns nil if can't map. 
+    def doctype_map(doctype)
+      { "ar" => "Article",
+        "ip" => "Article",
+        "bk" => "Book",
+        "bz" => "Artilce"
+      }[doctype.to_s]
+    end
+     
     def scopus_url(args)
       query = args[:query]
       

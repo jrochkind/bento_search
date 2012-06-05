@@ -66,6 +66,8 @@ class ScopusEngineTest < ActiveSupport::TestCase
     
     assert_present sample_result.authors    
     
+    assert_present sample_result.format
+    
   end
   
   
