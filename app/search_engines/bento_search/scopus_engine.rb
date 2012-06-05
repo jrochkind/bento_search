@@ -89,6 +89,12 @@ module BentoSearch
           item.end_page = epage
         end
         
+        # get the year out of the date
+        if date = entry.at_xpath("prism:coverDate", xml_ns)
+          date.text =~ /^(\d\d\d\d)/
+          item.year = $1.to_i if $1
+        end
+        
         # Authors might be in atom:authors seperated by |, or just
         # a single one in dc:creator
         if (authors = entry.at_xpath("atom:authors", xml_ns))

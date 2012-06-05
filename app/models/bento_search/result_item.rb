@@ -41,9 +41,9 @@ module BentoSearch
     
     # year published. a ruby int
     # PART of:. 
-    # * schema.org CreativeWork "datePublished"
-    # * dcterms.issued
-    # * prism:?
+    # * schema.org CreativeWork "datePublished", year portion
+    # * dcterms.issued, year portion
+    # * prism:coverDate, year portion
     attr_accessor :year
     
     attr_accessor :volume

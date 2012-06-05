@@ -59,6 +59,7 @@ class ScopusEngineTest < ActiveSupport::TestCase
     assert_present sample_result.title
     assert_present sample_result.link
     assert_present sample_result.journal_title
+    assert_kind_of Integer, sample_result.year
     assert_present sample_result.issn
     assert_present sample_result.volume
     assert_present sample_result.issue
