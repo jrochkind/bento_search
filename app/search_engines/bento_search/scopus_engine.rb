@@ -139,6 +139,18 @@ module BentoSearch
       }
     end
     
+    def self.sort_definitions
+      # scopus &sort= values, not yet URI-escaped. 
+      {
+        "title_asc"     => {:implementation => "+itemtitle"},
+        "date_desc"     => {:implementation => "-datesort,+auth"},
+        "relevance"     => {:implementation => nil }, # default sort
+        "author_asc"    => {:implementation => "+auth"},        
+        "num_cite_desc" => {:implementation => "-numcitedby"}
+      }
+    end
+
+    
     def self.default_per_page
       25
     end
@@ -182,6 +194,11 @@ module BentoSearch
       query = "#{configuration.base_url.chomp("/")}/content/search/index:#{configuration.cluster}?query=#{CGI.escape(query)}"
       
       query += "&count=#{args[:per_page]}" if args[:per_page]
+      
+      if (defn = self.class.sort_definitions[args[:sort]]) &&
+         ( value = defn[:implementation])
+        query += "&sort=#{CGI.escape(value)}"
+      end      
       
       return query
     end

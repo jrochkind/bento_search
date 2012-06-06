@@ -1,6 +1,7 @@
 en:
   bento_search:
     ajax_loading: "Loading..."
+    no_results: "No results found."
     format:
       # Schema.org formats
       Article: Article
@@ -12,4 +13,9 @@ en:
       # And some custom ones that Schema.org didn't cover, alas
       serial: Magazine or Journal
       dissertation: Dissertation or Thesis
-  
+    sort_keys:
+      title_asc: "title" 
+      date_desc: "publication date" 
+      relevance: "relevance"
+      author_asc: "author"
+      num_cite_desc: "citation count"

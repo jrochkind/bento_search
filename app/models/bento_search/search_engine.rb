@@ -149,6 +149,24 @@ module BentoSearch
         {}
       end
       
+      # Over-ride with a HASH of available sorts. Each key is the string
+      # that will be passed in engine.search(...., :sort => key)
+      # The key combines a choice of sort field, ascending/descending,
+      # secondary sorts etc -- we combine this all with one key, because
+      # typical examined interfaces did same from a select menu. 
+      #
+      # Keys should where possible be _standard_ keys chosen from
+      # those listed in config/i18n/en:bento_search.sort_keys.*
+      # But if you need something not there, it can be custom to engine.
+      # Value of hash is for internal use by engine, it may be a convenient
+      # place to store implementation details. 
+      #
+      # For a particular engine, a sort not mentioned here will-- raise?
+      # be ignored? Not sure. 
+      def sort_definitions
+        {}
+      end
+      
       # Default per-page, returns 10 by default,
       # over-ride if different than 10
       def default_per_page
