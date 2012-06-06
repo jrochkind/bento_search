@@ -110,6 +110,12 @@ module BentoSearch
       }      
     end
       
+    def self.sort_definitions
+      {
+        "relevance" => {:implementation => nil}, # default
+        "date_desc" => {:implementation => "newest"}
+      }
+    end
    
     
     #############
@@ -138,6 +144,13 @@ module BentoSearch
       if arguments[:start]
         query_url += "&startIndex=#{arguments[:start]}"
       end
+      
+      if arguments[:sort] && 
+          (defn = self.class.sort_definitions[arguments[:sort]]) &&
+          (value = defn[:implementation])
+        query_url += "&sort=#{CGI.escape(value)}" 
+      end
+      
       
       return query_url
     end

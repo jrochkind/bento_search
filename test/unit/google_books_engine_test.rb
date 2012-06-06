@@ -65,7 +65,15 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
   end
   
   
-
+  def test_sort_construction
+    url = @engine.send(:args_to_search_url, :query => "cancer", :sort => "date_desc")
+    
+    assert_match '&sort=newest', url
+    
+    url = @engine.send(:args_to_search_url, :query => "cancer", :sort => "relevance")
+    
+    assert_not_match "&sort", url    
+  end
   
   def test_fielded_search    
     # Have to use protected methods to get at what we want to test. 
