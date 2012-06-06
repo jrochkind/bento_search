@@ -195,6 +195,8 @@ module BentoSearch
       
       query += "&count=#{args[:per_page]}" if args[:per_page]
       
+      query += "&start=#{args[:start]}" if args[:start]
+      
       if (defn = self.class.sort_definitions[args[:sort]]) &&
          ( value = defn[:implementation])
         query += "&sort=#{CGI.escape(value)}"
