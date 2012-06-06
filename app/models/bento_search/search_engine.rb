@@ -122,6 +122,12 @@ module BentoSearch
         arguments.delete(:page)
       end
       
+      # normalize :sort from possibly symbol to string
+      # TODO: raise if unrecognized sort key?
+      if arguments[:sort]
+        arguments[:sort] = arguments[:sort].to_s
+      end
+      
       # translate semantic_search_field to search_field, or raise if
       # can't. 
       if semantic = arguments.delete(:semantic_search_field)

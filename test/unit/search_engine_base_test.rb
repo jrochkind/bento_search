@@ -125,7 +125,15 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
     end
   end
   
-  def test_search
+  def test_converts_sort_to_string
+    d = Dummy.new
+    
+    args = d.test_parse(:query => "query", :sort => :title_asc)
+    
+    assert_equal "title_asc", args[:sort]
+  end
+  
+  def test_sets_timing
     d = Dummy.new
     results = d.search("foo")
     
