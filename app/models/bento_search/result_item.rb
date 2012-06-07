@@ -32,12 +32,28 @@ module BentoSearch
     
     # schema.org 'type' that's a sub-type of CreativeWork. 
     # should hold a string that, when appended to "http://schema.org/"
-    # is a valid schema.org type uri, that sub-types CreativeWork. 
+    # is a valid schema.org type uri, that sub-types CreativeWork. Eg.
+    # * Article
+    # * Book
+    # * Movie
+    # * MusicRecording
+    # * Photograph
+    # * SoftwareApplication
+    # * WebPage
+    # * VideoObject
+    # * AudioObject
+    # * SoftwareApplication
+    # 
+    # 
     # 
     # OR one of these symbols, sadly not covered by schema.org types:
     # * :serial (magazine or journal)
     # * :dissertation (dissertation or thesis)
-    attr_accessor :format
+    # * :conference_paper  # individual paper
+    # * :conference_proceedings # collected proceedings
+    # * :report # white paper or other report.
+    # * :book_item # section or exceprt from book. 
+    attr_accessor :format    
     
     # year published. a ruby int
     # PART of:. 
@@ -53,6 +69,7 @@ module BentoSearch
     
     attr_accessor :journal_title
     attr_accessor :issn
+    attr_accessor :isbn
     
     attr_accessor :doi
     
@@ -95,6 +112,15 @@ module BentoSearch
       else
         nil
       end
+    end
+    
+    # Put together title and subtitle if neccesary. 
+    def complete_title
+      t = self.title
+      if self.subtitle
+        t += ": #{self.subtitle}"
+      end
+      return t
     end
     
     
