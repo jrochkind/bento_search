@@ -92,6 +92,12 @@ module BentoSearch
     # add authors to it with results.authors << Author
     attr_reader :authors
     
+    
+    # Returns a ruby OpenURL::ContextObject (NISO Z39.88).     
+    def to_openurl
+      BentoSearch::OpenurlCreator.new(self).to_openurl
+    end
+    
     ##################
     # Presentation related methods. 
     # yes, it really makes sense to include them here, they can be overridden

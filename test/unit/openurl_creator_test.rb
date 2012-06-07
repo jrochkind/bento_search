@@ -76,5 +76,17 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
 
   end
   
+  def result_item_to_openurl
+    item = BentoSearch::ResultItem.new(
+      :format => "Book",
+      :title => "Something",
+      :openurl_kev_co => "rft.title=Foo+Bar&rft.au=Smith"
+      )
+    
+    openurl = item.to_openurl
+    
+    assert_kind_of OpenURL::ContextObject, openurl
+  end
+  
   
 end
