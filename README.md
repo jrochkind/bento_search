@@ -94,7 +94,7 @@ to do so:
 
 An engine advertises what sort types it supports:
 
-   BentoSearch::GoogleBooksEngine.sort_definitions
+    BentoSearch::GoogleBooksEngine.sort_definitions
    
 That returns a hash, where the keys are sort identifiers, where possible
 chosen from a standard list of semantics. (See list in config/i18n/en.yml,
@@ -109,7 +109,7 @@ use _either_ `:start` (0-based item offset) or `:page` (1-based page
 offset) keys to paginate into the results. 
 
     google_books_engine.search("my query", :per_page => 20, :start => 40)
-    google_books_engine.search("my query", :per_page => 20, :page => 3)
+    google_books_engine.search("my query", :per_page => 20, :page => 3) # means same as above
     
 An engine advertises it's maximum and default per-page values. 
 
@@ -129,6 +129,7 @@ You can write your own logic using ruby threads to do this, but
 BentoSearch provides a multi-searching helper using [Celluloid](https://github.com/celluloid/celluloid)
 to help you do this easily. Say, in a controller:
 
+~~~~ruby
     # constructor takes id's registered with BentoSearch.register_engine
     searcher = BentoSearch::MultiSearcher.new(:gbs, :scopus, :summon)
     
@@ -141,7 +142,8 @@ to help you do this easily. Say, in a controller:
     
     # @results will be a hash, keyed by registered engine id, values
     # are BentoSearch::Results
-    
+~~~~
+
 For more info, see BentoSearch::MultiSearcher. 
 
 ### Delayed results loading via AJAX (actually more like AJAHtml)
