@@ -1,7 +1,8 @@
 # BentoSearch
 
 bento_search provides an abstraction/normalization layer for querying and 
-displaying results for external search engines. 
+displaying results for external search engines, in Ruby on Rails. Requires
+Rails3 and tested only under ruby 1.9.3. 
 
 It is focused on use cases for academic libraries, but may be useful in generic
 cases too. Initially, engine adapters are planned to be provided for: 
@@ -23,6 +24,8 @@ search engine adapters support all features.  Search engine adapters can
 declare search fields and sort options with 'semantics', so you can for
 instance search or sort by 'title' across search engines without regard
 to internal engine-specific field names. 
+
+'[[_TOC_]]
 
 ## Usage
 
@@ -148,11 +151,82 @@ For more info, see BentoSearch::MultiSearcher.
 
 ### Delayed results loading via AJAX (actually more like AJAHtml)
 
+BentoSearch provides some basic support for initially displaying a placeholder
+progress spinner, and having Javascript call back to get the actual results. 
+
+**Note** that this is not a panacea for a very slow search engine -- if the
+search results take 20 seconds to come in, when the AJAX call back happens,
+your Rails process _will_ be blocked from serving any other requests for that 20
+seconds. But it can still sometimes be useful. 
+
+You have have registered a configured engine globally, and given it the special
+`:allow_routable_results` key. 
+
+    BentoSearch.register_engine("gbs") do |conf|
+      conf.api_key = "x"
+      conf.allow_routable_results = true
+    end
+    
+Now you can use the `bento_search` helper method with the registered id
+and query, instead of with results as before, and with an option for
+ajax auto-load. 
+
+    <%= bento_search("gbs", :query => "my query", 
+                     :semantic_search_field => :title,
+                     :load => :ajax_auto) %>
+
+Beware that there are some authorization considerations if your search
+engine is not publically configurable, see BentoSearch::SearchController
+for more details. 
+
+### Item Decorators, and Links
+
+You can configure Decorators, in the form of plain old ruby modules, to be
+applied to BentoSearch::Items, on an engine-by-engine basis. These can modify,
+add, or remove Item data, as well as over-ride some presentational methods.  
+
+One common use for these Decorators is changing, adding, or removing links
+associated with an item. For instance, to link to your local OpenURL 
+link resolver.
+
+BentoSearch::Items can have a main link associated with them (generally 
+hyperlinked from title), as well as a list of additional links. Most engines
+do not provide additional links by default, custom local Decorators would
+be used to add them.
+
+    BentoSearch.register_engine("something") do |conf|
+       conf.engine = SomeEngine
+       conf.item_decorators = [ SomeModule, OtherModule]
+    end
+
+See BentoSearch::Item for more information on decorators, and BentoSearch::Link
+on links. 
+
 ## Planned Features
+
+I am trying to keep BentoSearch as simple as it can be to conveniently meet
+actual use cases.  Trying to avoid premature over-engineering, and pave
+the cowpaths as needed. 
+
+Probably:
+
+* Support for display facets for engines that support such, as well as 
+  search with limits from controlled vocabulary (ie, selected facet, but
+  also may be supported by some engines that do not support facetting). 
+* Support for multi-field, multi-entry-box 'advanced search' UI's, in
+  a normalized cross-engine way. 
+* More mindless support for displaying pagination UI with kaminari.
+
+Other needs or suggestions?
+  
 
 ## Developing
 
-    
+BentoSearch is fairly well covered by automated tests. We simply use Test::Unit.
+Run tests with `rake test`. 
+
+The testing environment was generated with `rails plugin new`, and includes
+a dummy app used when testing at `./test/dummy`. 
 
 
 
