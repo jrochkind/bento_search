@@ -129,7 +129,7 @@ You can write your own logic using ruby threads to do this, but
 BentoSearch provides a multi-searching helper using [Celluloid](https://github.com/celluloid/celluloid)
 to help you do this easily. Say, in a controller:
 
-~~~~ruby
+    ~~~~ruby
     # constructor takes id's registered with BentoSearch.register_engine
     searcher = BentoSearch::MultiSearcher.new(:gbs, :scopus, :summon)
     
@@ -142,7 +142,7 @@ to help you do this easily. Say, in a controller:
     
     # @results will be a hash, keyed by registered engine id, values
     # are BentoSearch::Results
-~~~~
+    ~~~~
 
 For more info, see BentoSearch::MultiSearcher. 
 
