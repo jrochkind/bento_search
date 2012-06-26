@@ -2,7 +2,10 @@ require 'httpclient'
 require 'cgi'
 require 'multi_json'
 
-require 'action_view/helpers/sanitize_helper'
+# not sure why we need to require the entire 'helpers'
+# when all we want is sanitize_helper, but I think we do:
+require 'action_view/helpers'
+#require 'action_view/helpers/sanitize_helper'
 
 require 'http_client_patch/include_client'
 
