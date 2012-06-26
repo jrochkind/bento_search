@@ -13,6 +13,9 @@ module BentoSearch
   #   * pagination, with max per_page
   #   * search fields, with semantics. ask for supported search fields. 
   #
+  # == Standard config
+  #  * item_decorators : Array of Modules that will be decorated. See Decorators section. 
+  #
   # == Implementing a SearchEngine
   #
   # `include BentoSearch::SearchEngine`
@@ -52,6 +55,9 @@ module BentoSearch
       end
       # merge in current instance config
       self.configuration.configure ( aConfiguration )
+      
+      # global defaults?
+      self.configuration[:item_decorators] ||= []
             
       # check for required keys
       if self.class.required_configuration
@@ -74,6 +80,9 @@ module BentoSearch
 
       results = search_implementation(arguments)
       
+      decorate(results)      
+      
+      # standard result metadata
       results.start = arguments[:start] || 0
       results.per_page = arguments[:per_page] || self.class.default_per_page        
       
@@ -83,6 +92,16 @@ module BentoSearch
     end
         
     protected
+    
+    # Extend each result with each specified decorator module
+    def decorate(results)      
+      results.each do |result|
+        configuration.item_decorators.each do |decorator|
+          result.extend decorator
+        end
+      end
+    end
+    
     def parse_search_arguments(*orig_arguments)
       arguments = {}
       
