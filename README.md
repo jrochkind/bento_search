@@ -1,4 +1,4 @@
-= BentoSearch
+# BentoSearch
 
 bento_search provides an abstraction/normalization layer for querying and 
 displaying results for external search engines. 
@@ -24,9 +24,9 @@ declare search fields and sort options with 'semantics', so you can for
 instance search or sort by 'title' across search engines without regard
 to internal engine-specific field names. 
 
-== Usage
+## Usage
 
-=== Instantiate and engine, and search
+### Instantiate and engine, and search
 
 When you instantiate an engine, you can provide configuration keys. There
 are a few standard keys (see BentoSearch::SearchEngine), and others that
@@ -42,7 +42,7 @@ search itself (pagination keys, etc).  BentoSearch::Results and Item fields
 are standardized accross engines. BentoSearch::Items provide semantic
 values (title, author, etc.), as available from the particular engine. 
 
-=== Register engines in global configuration
+### Register engines in global configuration
 
 It can be convenient to register an engine in global configuration, and is 
 required for certain functionality (like out-of-the-box AJAX loading). 
@@ -59,7 +59,7 @@ Then you can refer to it, for instance in a controller, by the id you registered
 
     @results = BentoSearch.get_engine("gbs").search("my query")
     
-=== Display results
+### Display results
 
 You can of course write your own code to display a BentoSearch::Results object
 however you like. But BentoSearch comes with a helper method for displaying
@@ -68,7 +68,7 @@ helper method.
 
     <%= bento_search(@results) %>
     
-=== Fielded searching.
+### Fielded searching.
 
 You can search by an internal engine-specific field name:
 
@@ -90,7 +90,7 @@ to do so:
 
     google_books_engine.search(:query => "smith", :search_field => "inauthor")
     
-=== Sorting
+### Sorting
 
 An engine advertises what sort types it supports:
 
@@ -102,7 +102,7 @@ bento_search.sort_keys).
 
     google_books_engine.search("my query", :sort => "date_desc")
     
-=== Pagination
+### Pagination
 
 You can tell the search engine how many items you want per-page, and 
 use _either_ `:start` (0-based item offset) or `:page` (1-based page
@@ -116,7 +116,7 @@ An engine advertises it's maximum and default per-page values.
     BentoSearch::GoogleBooksEngine.max_per_page
     BentoSearch::GoogleBooksEngine.default_per_age
     
-=== Concurrent searching
+### Concurrent searching
 
 If you're going to search 2 or more search engines at once, you'll want to execute
 those searches concurrently. For instance, if GoogleBooks results take 2 second
@@ -144,11 +144,11 @@ to help you do this easily. Say, in a controller:
     
 For more info, see BentoSearch::MultiSearcher. 
 
-=== Delayed results loading via AJAX (actually more like AJAHtml)
+### Delayed results loading via AJAX (actually more like AJAHtml)
 
-== Planned Features
+## Planned Features
 
-== Developing
+## Developing
 
     
 
