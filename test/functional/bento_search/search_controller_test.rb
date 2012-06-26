@@ -39,6 +39,33 @@ module BentoSearch
       
       assert_response 404
     end
+    
+    test "custom before filter" do
+      # Okay, we're going to do a weird thing with a custom controller subclass
+      # we can add a custom before filter like a local app might. 
+      class CustomSearchController < BentoSearch::SearchController
+        before_filter :deny_everyone
+        
+        def deny_everyone
+          raise BentoSearch::SearchController::AccessDenied
+        end
+      end
+      
+      orig_controller = @controller
+      
+      begin
+        @controller = CustomSearchController.new
+        
+        get :search, {:engine_id => "mock", :query => "my search"}
+
+        assert_response 403
+      ensure
+        @controller = orig_controller
+      end
+      
+    end
+    
+    
         
     
   end
