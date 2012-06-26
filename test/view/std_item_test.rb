@@ -18,7 +18,10 @@ class StdItemTest < ActionView::TestCase
       
       assert_select ".bento_item_row", false
       assert_select ".published_in", false
-    end            
+    end  
+    
+    # No other links in this test
+    assert_select(".bento_item_other_links", 0)
   end
   
   def test_complete_article_item
@@ -64,6 +67,24 @@ class StdItemTest < ActionView::TestCase
   end
   
   def test_no_title_link
+    pending "no title link"
+  end
+  
+  def test_other_links
+    item = BentoSearch::ResultItem.new(:title => "Foo")
+    item.other_links << BentoSearch::Link.new(:label => "A Link", 
+                          :url => "http://example.org/", 
+                          :rel => "http://example.org/rel", 
+                          :style_classes => [:one, :two])
+    
+    render "bento_search/std_item", :item => item
+    
+    assert_select(".bento_item_other_links", 1) do
+      assert_select("a.bento_search_link.one.two", :text => "A Link", 
+        :attributes => 
+          {:rel  => "http://example.org/rel",
+           :href => "http://example.org/"})
+    end
     
   end
   

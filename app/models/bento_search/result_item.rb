@@ -12,8 +12,15 @@ module BentoSearch
         send("#{key}=", value)
       end
       
-      @authors = []
+      self.authors ||= []
+      self.other_links ||= []
     end
+    
+    # Array (possibly empty) of BentoSearch::Link objects
+    # representing additional links. Often SearchEngine's themselves
+    # won't include any of these, but Decorators will be used
+    # to add them in. 
+    attr_accessor :other_links
     
     # * dc.title 
     # * schema.org CreativeWork: 'name'    
@@ -90,7 +97,7 @@ module BentoSearch
     
     # An array (order matters) of BentoSearch::Author objects
     # add authors to it with results.authors << Author
-    attr_reader :authors
+    attr_accessor :authors
     
     
     # Returns a ruby OpenURL::ContextObject (NISO Z39.88).     

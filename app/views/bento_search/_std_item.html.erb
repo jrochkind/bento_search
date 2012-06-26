@@ -31,4 +31,10 @@
     </div>
   <% end %>
   
+  <% if item.other_links.present? %>
+    <div class="bento_item_other_links">
+      <%= render :partial => "bento_search/link", :collection => item.other_links %>
+    </div>
+  <% end %>
+  
 </div>
