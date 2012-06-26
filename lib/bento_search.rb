@@ -2,6 +2,8 @@ require "bento_search/engine"
 require 'confstruct'
 
 module BentoSearch
+  class NoSuchEngine < Exception ; end
+  
   @@registered_engine_confs = {}
   
   # Register a configuration for a BentoSearch search engine. 
@@ -30,10 +32,11 @@ module BentoSearch
   
   # Get a configured SearchEngine, using configuration and engine
   # class previously registered for `id` with #register_engine. 
+  # Raises a BentoSearch::NoSuchEngine if is is not registered.
   def self.get_engine(id)
     conf = @@registered_engine_confs[id.to_s]
     
-    raise ArgumentError.new("No registered engine for identifier '#{id}'") unless conf
+    raise NoSuchEngine.new("No registered engine for identifier '#{id}'") unless conf
     
     # Figure out which SearchEngine class to instantiate
     klass = constantize(conf.engine)

@@ -34,7 +34,11 @@ module BentoSearch
       assert_response 403
     end
     
-
+    test "non-existent engine" do
+      get :search, {:engine_id => "not_existing", :query => "my search"}
+      
+      assert_response 404
+    end
         
     
   end

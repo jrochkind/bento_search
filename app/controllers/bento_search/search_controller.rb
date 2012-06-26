@@ -36,13 +36,15 @@ module BentoSearch
 
     
     rescue_from AccessDenied, :with => :deny_access
+    rescue_from NoSuchEngine, :with => :render_404
       
     # returns partial HTML results, suitable for
     # AJAX to insert into DOM. 
     # arguments for engine.search are taken from URI request params.
     # (TODO: Is this a security issue, do we need to whitelist em? )
-    def search      
+    def search                  
       engine = BentoSearch.get_engine(params[:engine_id])
+
       
       unless engine.configuration.allow_routable_results == true
         raise AccessDenied.new("engine needs to be registered with :allow_routable_results => true")
@@ -59,6 +61,10 @@ module BentoSearch
     
     def deny_access(exception)
       render :text => exception.message, :status => 403
+    end
+    
+    def render_404(exception)      
+      render :text => exception.message, :status => 404
     end
     
     
