@@ -235,9 +235,9 @@ The testing environment was generated with `rails plugin new`, and includes
 a dummy app used when testing at `./test/dummy`. 
 
 For integration tests against live external search API's, we use the awesome
-VCR gem to cache responses. To write your own Test::Unit tests using VCR, 
-take note of the `test_with_cassette` method provided in 
-`./test/support/test_with_cassette.rb`. 
+[VCR](https://github.com/myronmarston/vcr) gem to cache responses. 
+To write your own Test::Unit tests using VCR, take note of the 
+`test_with_cassette` method provided in `./test/support/test_with_cassette.rb`. 
 
 Also note use of VCR.filter_sensitive_data to make sure your API keys
 do not get saved in cached response in the repo, while still allowing
