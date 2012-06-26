@@ -43,6 +43,9 @@ module BentoSearch
     test "custom before filter" do
       # Okay, we're going to do a weird thing with a custom controller subclass
       # we can add a custom before filter like a local app might. 
+      #
+      # SUPER HACKY, but I dunno what else to do. 
+      
       class CustomSearchController < BentoSearch::SearchController
         before_filter :deny_everyone
         
@@ -51,16 +54,22 @@ module BentoSearch
         end
       end
       
+
+      
       orig_controller = @controller
       
       begin
+        Rails.application.routes.draw do
+          match "/custom_search" => "bento_search/search_controller_test/custom_search#search"
+        end
         @controller = CustomSearchController.new
         
         get :search, {:engine_id => "mock", :query => "my search"}
-
+        
         assert_response 403
       ensure
         @controller = orig_controller
+        Rails.application.reload_routes!
       end
       
     end
