@@ -43,7 +43,7 @@ class RegisterEngineTest < ActiveSupport::TestCase
   
   
   test "raises on unregistered engine access" do
-    assert_raise(ArgumentError) { BentoSearch.get_engine("not_registered")}
+    assert_raise(BentoSearch::NoSuchEngine) { BentoSearch.get_engine("not_registered")}
   end
   
 end
