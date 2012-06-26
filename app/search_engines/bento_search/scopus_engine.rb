@@ -5,6 +5,10 @@ require 'http_client_patch/include_client'
 require 'httpclient'
 module BentoSearch
   # TODO: Sorting, Facets. 
+  # 
+  # Required configuration: 
+  # * api_key
+  #               
   #
   # Uses the Scopus SciVerse REST API. You need to be a Scopus customer
   # to access. http://api.elsevier.com
@@ -20,6 +24,10 @@ module BentoSearch
   # Scopus API Docs:   
   # * http://www.developers.elsevier.com/devcms/content-api-search-request
   # * http://www.developers.elsevier.com/devcms/content/search-fields-overview
+  #
+  # Some more docs on response elements and query elements:
+  # * http://api.elsevier.com/content/search/#d0n14606
+  # 
   # Other API's in the suite not being used by this code at present: 
   # * http://www.developers.elsevier.com/devcms/content-api-retrieval-request
   # * http://www.developers.elsevier.com/devcms/content-api-metadata-request
@@ -119,6 +127,11 @@ module BentoSearch
     
     def self.required_configuration
       ["api_key"]
+    end
+    
+    # Max per-page is 200, as per http://www.developers.elsevier.com/devcms/content-apis, bottom of page. 
+    def self.max_per_page
+      200
     end
     
     def self.default_configuration
