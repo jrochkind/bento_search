@@ -28,7 +28,6 @@ declare search fields and sort options with 'semantics', so you can for
 instance search or sort by 'title' across search engines without regard
 to internal engine-specific field names. 
 
-[[_TOC_]]
 
 ## Usage
 
