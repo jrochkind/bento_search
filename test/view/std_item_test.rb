@@ -67,7 +67,13 @@ class StdItemTest < ActionView::TestCase
   end
   
   def test_no_title_link
-    pending "no title link"
+    item = BentoSearch::ResultItem.new(:title => "Foo")  
+    
+    render "bento_search/std_item", :item => item
+    
+    assert_select("h2.bento_item_title") do
+      assert_select("a", 0)
+    end    
   end
   
   def test_other_links
