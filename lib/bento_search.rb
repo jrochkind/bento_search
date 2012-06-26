@@ -21,7 +21,7 @@ module BentoSearch
   # URLs, for AJAX etc. 
   def self.register_engine(id, &block)
     conf = Confstruct::Configuration.new(&block)
-    conf.id = id
+    conf.id = id.to_s
     
     raise ArgumentError.new("Must supply an `engine` class name") unless conf.engine
     
@@ -31,7 +31,7 @@ module BentoSearch
   # Get a configured SearchEngine, using configuration and engine
   # class previously registered for `id` with #register_engine. 
   def self.get_engine(id)
-    conf = @@registered_engine_confs[id]
+    conf = @@registered_engine_confs[id.to_s]
     
     raise ArgumentError.new("No registered engine for identifier '#{id}'") unless conf
     
