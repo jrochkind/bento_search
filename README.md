@@ -1,5 +1,8 @@
 # BentoSearch
 
+(**in progress*, not yet ready for use, mainly because we need more
+out of the box search engines supported). 
+
 bento_search provides an abstraction/normalization layer for querying and 
 displaying results for external search engines, in Ruby on Rails. Requires
 Rails3 and tested only under ruby 1.9.3. 
@@ -25,7 +28,6 @@ declare search fields and sort options with 'semantics', so you can for
 instance search or sort by 'title' across search engines without regard
 to internal engine-specific field names. 
 
-'[[_TOC_]]
 
 ## Usage
 
@@ -228,5 +230,26 @@ Run tests with `rake test`.
 The testing environment was generated with `rails plugin new`, and includes
 a dummy app used when testing at `./test/dummy`. 
 
+For integration tests against live external search API's, we use the awesome
+VCR gem to cache responses. To write your own Test::Unit tests using VCR, 
+take note of the `test_with_cassette` method provided in 
+`./test/support/test_with_cassette.rb`. 
+
+Also note use of VCR.filter_sensitive_data to make sure your API keys
+do not get saved in cached response in the repo, while still allowing
+tests to be run against cached responses even for engines that require
+auth. 
+
+To re-generate cached responses, delete the relevant files in 
+`./test/vcr_cassettes` and re-run tests. You may have to set an ENV
+variable with your own API keys to re-run tests without cached response
+like this. 
+
+Also note `./test/support/mock_engine.rb`, a simple mock/dummy SearchEngine
+implementation that can be used in other tests. 
+
+Pull requests welcome.  Pull requests with additional search engine implementations
+welcome. See more info on writing a BentoSearch::SearchEngine in the inline
+docs in that file. 
 
 
