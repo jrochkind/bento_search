@@ -33,6 +33,12 @@ class MultiSearcherTest < ActiveSupport::TestCase
       assert_kind_of BentoSearch::Results, results[key]
     end
     
+    # call results again, we get an empty hash, can only call
+    # results once per start. 
+    new_results = searcher.results
+    assert_kind_of Hash, new_results
+    assert_empty new_results
+    
   end
     
   

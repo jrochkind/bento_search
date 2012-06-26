@@ -20,7 +20,8 @@ require 'celluloid'
 #
 # returns a Hash keyed by engine id, values BentoSearch::Results objects. 
 #
-# Can only call #results once per #start, after that it'll return nil. 
+# Can only call #results once per #start, after that it'll return empty hash.
+# (should we make it actually raise instead?). . 
 # 
 # important to call results at some point after calling start, in order
 # to make sure Celluloid::Actors are properly terminated to avoid
