@@ -33,7 +33,7 @@ module BentoSearch
       def search
         add_routes do |options|
           scope options[:scope] do
-            match ":engine_id" => "bento_search/search#search", :as => "to_bento_search"
+            get ":engine_id" => "bento_search/search#search", :as => "to_bento_search"
           end
         end
         
