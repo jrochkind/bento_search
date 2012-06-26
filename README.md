@@ -7,20 +7,20 @@ bento_search provides an abstraction/normalization layer for querying and
 displaying results for external search engines, in Ruby on Rails. Requires
 Rails3 and tested only under ruby 1.9.3. 
 
-It is focused on use cases for academic libraries, but may be useful in generic
+* It is focused on use cases for academic libraries, but may be useful in generic
 cases too. Initially, engine adapters are planned to be provided for: 
 Google Books, Scopus, SerialSolutions Summon, Ex Libris Primo, 
 and EBSCO Discovery Service. (Possibly ThomsonReuters Web of Knowledge). Most
 of these search engines require a vendor license to use. 
 
-bento_search could be considered building blocks for a type of 'federated
+* bento_search could be considered building blocks for a type of 'federated
 search' functionality, but it does not and will never support merging results
 from multiple engines into one result set. It is meant to support displaying the
 first few results from multiple engines on one page, "bento box" style (as
 named by Tito Sierra@NCSU), as well as more expanded single-search-on-a-page
 uses. 
 
-bento_search provides abstract functionality for pagination, sorting, 
+* bento_search provides abstract functionality for pagination, sorting, 
 and single-field-specified queries. Faceting, limiting, and 'advanced'
 multi-field searches are not yet supported, but planned. Not all
 search engine adapters support all features.  Search engine adapters can
@@ -31,7 +31,7 @@ to internal engine-specific field names.
 
 ## Usage
 
-### Instantiate and engine, and search
+### Instantiate an engine, and search
 
 When you instantiate an engine, you can provide configuration keys. There
 are a few standard keys (see BentoSearch::SearchEngine), and others that
