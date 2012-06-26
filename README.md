@@ -149,6 +149,10 @@ to help you do this easily. Say, in a controller:
     # are BentoSearch::Results
 ~~~~
 
+You will need to add the 'celluloid' gem to your app to use this feature, 
+BentoSearch doesn't automatically include the celluloid dependency right now
+(should it?). 
+
 For more info, see BentoSearch::MultiSearcher. 
 
 ### Delayed results loading via AJAX (actually more like AJAHtml)
