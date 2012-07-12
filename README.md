@@ -28,6 +28,10 @@ declare search fields and sort options with 'semantics', so you can for
 instance search or sort by 'title' across search engines without regard
 to internal engine-specific field names. 
 
+bento_search is designed to allow code to be written agnostic of the search
+provider, so you can switch out the search provider without having to 
+rewrite dependencies. 
+
 
 ## Usage
 
