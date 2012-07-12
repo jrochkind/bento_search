@@ -76,7 +76,7 @@ module BentoSearch
     def search(*arguments)
       start_t = Time.now
       
-      arguments = parse_search_arguments(*arguments)
+      arguments = normalized_search_arguments(*arguments)
 
       results = search_implementation(arguments)
       
@@ -91,18 +91,9 @@ module BentoSearch
       return results
     end
         
-    protected
+
     
-    # Extend each result with each specified decorator module
-    def decorate(results)      
-      results.each do |result|
-        configuration.item_decorators.each do |decorator|
-          result.extend decorator
-        end
-      end
-    end
-    
-    def parse_search_arguments(*orig_arguments)
+    def normalized_search_arguments(*orig_arguments)
       arguments = {}
       
       # Two-arg style to one hash, if present
@@ -159,6 +150,19 @@ module BentoSearch
               
       return arguments
     end
+    alias_method :parse_search_arguments, :normalized_search_arguments
+    
+    protected
+    
+    # Extend each result with each specified decorator module
+    def decorate(results)      
+      results.each do |result|
+        configuration.item_decorators.each do |decorator|
+          result.extend decorator
+        end
+      end
+    end
+    
     
     module ClassMethods
       
