@@ -61,27 +61,40 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
     args = d.test_parse(:query => "query", :page => 1, :per_page => 20)
     
     assert_equal 0, args[:start]
-    assert_nil args[:page]
+    assert_equal 1, args[:page]
     assert_equal 20, args[:per_page]
     
     args = d.test_parse(:query => "query", :page => 3, :per_page => 20)
 
     assert_equal 40, args[:start]
-    assert_nil args[:page]
+    assert_equal 3, args[:page]
     assert_equal 20, args[:per_page]    
   end
+  
+  def test_convert_start_to_page
+    d = Dummy.new
+    
+    # rounds down to get closest 'page' if need be. 
+    args = d.test_parse(:query => "query", :start => '19', :per_page => '20')
+    
+    assert_equal 19, args[:start]
+    assert_equal 1,  args[:page]
+    
+    args = d.test_parse(:query => "query", :start => '20', :per_page => '20')
+    assert_equal 2,  args[:page]
+  end
+  
   
   def test_pagination_to_integer
     d = Dummy.new
     
     args = d.test_parse(:query => "query", :page => "1", :per_page => "20")
     assert_equal 0, args[:start]
-    assert_nil args[:page]
+    assert_equal 1, args[:page]
     assert_equal 20, args[:per_page]
     
     args = d.test_parse(:query => "query", :start => "20", :per_page => "20")
-    assert_equal 20, args[:start]
-    assert_nil args[:page]
+    assert_equal 20, args[:start]    
     assert_equal 20, args[:per_page]
     
   end

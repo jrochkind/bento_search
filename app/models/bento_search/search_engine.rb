@@ -126,10 +126,11 @@ module BentoSearch
       end
    
       
-      # Normalize :page to :start
+      # Normalize :page to :start, and vice versa
       if arguments[:page]
         arguments[:start] = (arguments[:page] - 1) * arguments[:per_page]
-        arguments.delete(:page)
+      elsif arguments[:start]
+        arguments[:page] = (arguments[:start] / arguments[:per_page]) + 1
       end
       
       # normalize :sort from possibly symbol to string
