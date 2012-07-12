@@ -4,7 +4,7 @@ require 'nokogiri'
 require 'http_client_patch/include_client'
 require 'httpclient'
 module BentoSearch
-  # TODO: Sorting, Facets. 
+  # Supports fielded searching, sorting, pagination. 
   # 
   # Required configuration: 
   # * api_key
