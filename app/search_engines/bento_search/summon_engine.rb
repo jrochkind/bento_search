@@ -26,7 +26,9 @@ require 'summon/transport/headers'
 #     from all search results, in config:
 #         :fixed_params => {"s.fvf" => ["ContentType,Newspaper Article,true", "ContentType,Book,true"]
 #     Note that values are NOT URI escaped in config, code will take care
-#     of that for you. 
+#     of that for you. You could also fix "s.role" to 'authenticated' using
+#     this mechanism, if you restrict all access to your app to authenticated
+#     affiliated users. 
 #
 # == Custom search params
 #
@@ -92,6 +94,15 @@ class BentoSearch::SummonEngine
     # to generate auth headers that way. Value is array of values that
     # are NOT URI-encoded yet. 
     query_params = Hash.new {|h, k| h[k] = [] }
+    
+    # Add in fixed params from config, if any. 
+    if configuration.fixed_params
+      configuration.fixed_params.each_pair do |key, value|
+        [value].flatten.each do |v|
+          query_params[key] << v
+        end
+      end
+    end
 
     if args[:search_field]
       query_params['s.q'] = "#{args[:search_field]}:(#{summon_escape(args[:query])})"
@@ -105,13 +116,8 @@ class BentoSearch::SummonEngine
       query_params['s.sort'] =  literal
     end
     
-    # Add in fixed params from config, if any. 
-    if configuration.fixed_params
-      configuration.fixed_params.each_pair do |key, value|
-        [value].flatten.each do |v|
-          query_params[key] << v
-        end
-      end
+    if args[:auth] == true
+      query_params['s.role'] = "authenticated"
     end
       
         

@@ -36,6 +36,9 @@ module BentoSearch
   #  * max per page
   #  * search fields
   #
+  #  Some engines support `:auth => true` for elevated access to affiliated
+  #  users. 
+  #
   module SearchEngine
     extend ActiveSupport::Concern
     

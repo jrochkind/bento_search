@@ -153,7 +153,14 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
     assert_not_nil results.timing
   end
     
-  
+  def test_passes_arbitrary_keys
+    d = Dummy.new
+    args = d.test_parse(:query => "foo", :custom_auth => true)
+    
+    assert_present args[:custom_auth]
+    assert_equal true, args[:custom_auth]
+    
+  end
   
 end
 

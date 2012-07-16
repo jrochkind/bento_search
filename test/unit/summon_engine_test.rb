@@ -70,14 +70,22 @@ class SummonEngineTest < ActiveSupport::TestCase
 
     assert_equal "SomeField:(eleph\\\)ants)", query_params["s.q"].first
   end
-    
   
+  def test_authenticated_user_construction 
+    uri, headers = @engine.construct_request(:query => "elephants", :auth => true)
     
+    query_params = CGI.parse( URI.parse(uri).query )
+    
+    assert_present query_params['s.role']
+    assert_equal "authenticated", query_params['s.role'].first   
+  end        
+  
   def test_construct_fixed_param_config
     engine = BentoSearch::SummonEngine.new('access_id' => @@access_id, 
       'secret_key' => @@secret_key,
       'fixed_params' => {
-        "s.fvf" => ["ContentType,Newspaper Article,true", "ContentType,Book,true"]
+        "s.fvf" => ["ContentType,Newspaper Article,true", "ContentType,Book,true"],
+        "s.role" => "authenticated"
       })
     
     uri, headers = engine.construct_request(:query => "elephants")
@@ -86,6 +94,7 @@ class SummonEngineTest < ActiveSupport::TestCase
     
     assert_include query_params["s.fvf"], "ContentType,Newspaper Article,true"
     assert_include query_params["s.fvf"], "ContentType,Book,true"
+    assert_include query_params["s.role"], "authenticated"
     
   end
   
