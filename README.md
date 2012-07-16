@@ -158,6 +158,11 @@ to help you do this easily. Say, in a controller:
     # are BentoSearch::Results
 ~~~~
 
+Even if you are only searching one engine, this may be useful to have the
+search execute in a seperate thread, so you can continue doing other work
+in the main thread (like search a local store of some kind outside of
+bento_search)
+
 You will need to add the 'celluloid' gem to your app to use this feature, 
 BentoSearch doesn't automatically include the celluloid dependency right now
 (should it?). 
