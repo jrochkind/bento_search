@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency "multi_json", "~> 1.3"
   s.add_dependency "nokogiri"
   s.add_dependency "openurl", ">= 0.3.1", "< 1.1"
-
+  s.add_dependency "summon"
 
   s.add_development_dependency "vcr"
   s.add_development_dependency "webmock"

@@ -61,8 +61,8 @@ module BentoSearch
             
       # check for required keys
       if self.class.required_configuration
-        self.class.required_configuration.each do |required_key|
-          if self.configuration.lookup!(required_key, "**NOT_FOUND**") == "**NOT_FOUND**"
+        self.class.required_configuration.each do |required_key|          
+          if self.configuration.lookup!(required_key.to_s, "**NOT_FOUND**") == "**NOT_FOUND**"
             raise ArgumentError.new("#{self.class.name} requires configuration key #{required_key}")
           end
         end
@@ -152,6 +152,10 @@ module BentoSearch
       return arguments
     end
     alias_method :parse_search_arguments, :normalized_search_arguments
+    
+    
+
+   
     
     protected
     
