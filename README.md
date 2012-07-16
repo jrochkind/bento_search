@@ -29,8 +29,10 @@ instance search or sort by 'title' across search engines without regard
 to internal engine-specific field names. 
 
 bento_search is designed to allow code to be written agnostic of the search
-provider, so you can switch out the search provider without having to 
-rewrite dependencies. 
+provider, so you can switch out the search provider, minimizing dependent
+code in your app that needs to be rewritten. As well as letting you get
+started quick without reinventing the wheel and figuring out poorly
+documented vendor API's yourself. 
 
 
 ## Usage
@@ -156,6 +158,11 @@ to help you do this easily. Say, in a controller:
     # are BentoSearch::Results
 ~~~~
 
+Even if you are only searching one engine, this may be useful to have the
+search execute in a seperate thread, so you can continue doing other work
+in the main thread (like search a local store of some kind outside of
+bento_search)
+
 You will need to add the 'celluloid' gem to your app to use this feature, 
 BentoSearch doesn't automatically include the celluloid dependency right now
 (should it?). 
@@ -170,7 +177,8 @@ progress spinner, and having Javascript call back to get the actual results.
 **Note** that this is not a panacea for a very slow search engine -- if the
 search results take 20 seconds to come in, when the AJAX call back happens,
 your Rails process _will_ be blocked from serving any other requests for that 20
-seconds. But it can still sometimes be useful. 
+seconds. In fact, that makes this feature of very limited applicability in general,
+think carefully about what this will do for you. 
 
 You have have registered a configured engine globally, and given it the special
 `:allow_routable_results` key. 
