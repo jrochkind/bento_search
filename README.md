@@ -29,8 +29,10 @@ instance search or sort by 'title' across search engines without regard
 to internal engine-specific field names. 
 
 bento_search is designed to allow code to be written agnostic of the search
-provider, so you can switch out the search provider without having to 
-rewrite dependencies. 
+provider, so you can switch out the search provider, minimizing dependent
+code in your app that needs to be rewritten. As well as letting you get
+started quick without reinventing the wheel and figuring out poorly
+documented vendor API's yourself. 
 
 
 ## Usage
