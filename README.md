@@ -177,7 +177,8 @@ progress spinner, and having Javascript call back to get the actual results.
 **Note** that this is not a panacea for a very slow search engine -- if the
 search results take 20 seconds to come in, when the AJAX call back happens,
 your Rails process _will_ be blocked from serving any other requests for that 20
-seconds. But it can still sometimes be useful. 
+seconds. In fact, that makes this feature of very limited applicability in general,
+think carefully about what this will do for you. 
 
 You have have registered a configured engine globally, and given it the special
 `:allow_routable_results` key. 
