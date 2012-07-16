@@ -17,6 +17,9 @@ module BentoSearch
   # "Federated Search" use case. 
   # Also: http://www.developers.elsevier.com/cms/apiserviceagreement
   #
+  # Note that ToS applying to you probably means you must restrict access
+  # to search functionality to authenticated affiliated users only. 
+  #
   # Register for an API key at "Register New Site" at http://developers.elsevier.com/action/devnewsite
   # You will then need to get server IP addresses registered with Scopus too, 
   # apparently by emailing directly to dave.santucci at elsevier dot com.  
