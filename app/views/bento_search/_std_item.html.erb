@@ -9,31 +9,33 @@
   <h4 class="bento_item_title">
     <%= link_to_unless item.link.blank?, item.title, item.link %>    
   </h4>
-  
-  <% if item.format %>
-    <p class="bento_item_about">
-      <strong><%= t(item.format, :scope => [:bento_search, :format], :default => item.format.to_s.titleize) %></strong>
-    </p>
-  <% end %>
-  
-  <% if item.authors.length > 0 %>
-    <p class="bento_item_authors">
-      <% item.authors.slice(0,3).each do |author| %>
-        <span class="bento_item_author"><%= item.author_display(author) %>.</span> 
-      <% end %>    
-    </p>
-  <% end %>      
+  <div class="bento_item_body">
+    <% if item.format %>
+      <p class="bento_item_about">
+        <strong><%= t(item.format, :scope => [:bento_search, :format], :default => item.format.to_s.titleize) %></strong>
+      </p>
+    <% end %>
     
-  <% if item.published_in %>
-    <p class="bento_item_row published_in">
-      <span class="bento_value"><%= item.published_in %> </span>
-    </p>
-  <% end %>
-  
-  <% if item.other_links.present? %>
-    <p class="bento_item_other_links">
-      <%= render :partial => "bento_search/link", :collection => item.other_links %>
-    </p>
-  <% end %>
+    <% if item.authors.length > 0 %>
+      <p class="bento_item_authors">
+      
+        <% item.authors.slice(0,3).each do |author| %>
+          <span class="bento_item_author"><%= item.author_display(author) %>; </span> 
+        <% end %>    
+      </p>
+    <% end %>      
+      
+    <% if item.published_in %>
+      <p class="bento_item_row published_in">
+        <span class="bento_value"><%= item.published_in %> </span>
+      </p>
+    <% end %>
+    
+    <% if item.other_links.present? %>
+      <p class="bento_item_other_links">
+        <%= render :partial => "bento_search/link", :collection => item.other_links %>
+      </p>
+    <% end %>
+  </div>
   
 </div>
