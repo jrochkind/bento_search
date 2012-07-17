@@ -49,8 +49,7 @@ module BentoSearch
       
       xml, response, exception = nil, nil, nil
       
-      url = scopus_url(args) + "&sort=auth"
-
+      url = scopus_url(args) 
       begin
         response = http_client.get( url , nil,
           # HTTP headers. 
