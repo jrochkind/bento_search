@@ -123,7 +123,7 @@ use _either_ `:start` (0-based item offset) or `:page` (1-based page
 offset) keys to paginate into the results. 
 
     google_books_engine.search("my query", :per_page => 20, :start => 40)
-    google_books_engine.search("my query", :per_page => 20, :page => 3) # means same as above
+    google_books_engine.search("my query", :per_page => 20, :page => 2) # means same as above
     
 An engine advertises it's maximum and default per-page values. 
 
