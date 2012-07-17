@@ -1,4 +1,5 @@
 require "bento_search/engine"
+require 'bento_search/routes'
 require 'confstruct'
 
 module BentoSearch
