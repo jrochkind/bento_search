@@ -44,13 +44,15 @@ module BentoSearch
     extend HTTPClientPatch::IncludeClient
     include_http_client
     
-    def search_implementation(args)        
+    def search_implementation(args)         
       results = Results.new
       
       xml, response, exception = nil, nil, nil
       
+      url = scopus_url(args) + "&sort=auth"
+
       begin
-        response = http_client.get( scopus_url(args) , nil,
+        response = http_client.get( url , nil,
           # HTTP headers. 
           {"X-ELS-APIKey" => configuration.api_key, 
           "X-ELS-ResourceVersion" => "XOCS",
@@ -158,10 +160,13 @@ module BentoSearch
     
     def self.sort_definitions
       # scopus &sort= values, not yet URI-escaped. 
+      # Scopus sorting is not working right, or we aren't using it right,
+      # something is weird. Sending "DUMMY" for relevance (which is supposed
+      # to be default) seems to at least get us relevance. 
       {
         "title_asc"     => {:implementation => "+itemtitle"},
         "date_desc"     => {:implementation => "-datesort,+auth"},
-        "relevance"     => {:implementation => nil }, # default sort
+        "relevance"     => {:implementation => "DUMMY" }, # default sort
         "author_asc"    => {:implementation => "+auth"},        
         "num_cite_desc" => {:implementation => "-numcitedby"}
       }
