@@ -8,12 +8,12 @@ class StdItemTest < ActionView::TestCase
         
     render "bento_search/std_item", :item => item
     
-    assert_select("div.bento_item", 1) do    
-      assert_select "h2", item.title do 
+    assert_select(".bento_item", 1) do    
+      assert_select ".bento_item_title", item.title do 
         assert_select "a", false
       end
       # No author/title/etc rows, cause we don't have data
-      assert_select "ul.bento_item_authors", false
+      assert_select ".bento_item_authors", false
       assert_select ".bento_item_key_meta", false
       
       assert_select ".bento_item_row", false
@@ -39,15 +39,15 @@ class StdItemTest < ActionView::TestCase
     
     render "bento_search/std_item", :item => item
     
-    assert_select("div.bento_item", 1) do    
-      assert_select "h2", item.title do |h2|
+    assert_select(".bento_item", 1) do    
+      assert_select ".bento_item_title", item.title do |h2|
         assert_select "a[href='#{item.link}']"
       end
       
       # Make sure we have the items for complete citation
       
 
-      assert_select "ul.bento_item_authors"
+      assert_select ".bento_item_authors"
       assert_select ".bento_item_about" , 
         Regexp.new(Regexp.escape( I18n.t(item.format, :scope => [:bento_search, :format])   ))
         
@@ -71,7 +71,7 @@ class StdItemTest < ActionView::TestCase
     
     render "bento_search/std_item", :item => item
     
-    assert_select("h2.bento_item_title") do
+    assert_select(".bento_item_title") do
       assert_select("a", 0)
     end    
   end
