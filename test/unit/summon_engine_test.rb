@@ -41,7 +41,7 @@ class SummonEngineTest < ActiveSupport::TestCase
   end
   
   def test_summon_escape
-    uri, headers = @engine.construct_request(:query=> "Foo: A) \\Bar")
+    uri, headers = @engine.construct_request(:query=> "Foo: A) \\Bar \"a phrase\"")
     
     query_params = CGI.parse( URI.parse(uri).query )
     
@@ -49,7 +49,7 @@ class SummonEngineTest < ActiveSupport::TestCase
     
     # double backslashes are escaping for ruby string literal,
     # it's actually only a single backslash in output. 
-    assert_equal "Foo\\: A\\) \\\\Bar", query
+    assert_equal "Foo\\: A\\) \\\\Bar \"a phrase\"", query
   end
   
   def test_sort_construction
@@ -117,12 +117,12 @@ class SummonEngineTest < ActiveSupport::TestCase
     
   
   def test_search
-    pending "need sersol to fix account"
+    #pending "need sersol to fix account"
     VCR.turned_off do 
       WebMock.allow_net_connect!
       
-      results = @engine.search("elephants")
-      
+      results = @engine.search("elephant_search")
+
       assert ! results.failed?
       
       assert_present results

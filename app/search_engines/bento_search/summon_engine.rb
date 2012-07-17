@@ -163,8 +163,11 @@ class BentoSearch::SummonEngine
     # replace with backslash followed by original matched thing,
     # need to double backslash for ruby string literal makes
     # this ridiculously confusing, sorry. Block form of gsub
-    # is the only thing that keeps it from being impossible. 
-    string.gsub(/([+\-&|!\(\){}\[\]^"~*?\\:])/) do |match|
+    # is the only thing that keeps it from being impossible.
+    #
+    # Do NOT escape double quotes, let people use them for
+    # phrases! 
+    string.gsub(/([+\-&|!\(\){}\[\]^~*?\\:])/) do |match|
       "\\#{$1}"
     end
   end
