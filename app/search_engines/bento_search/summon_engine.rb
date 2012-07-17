@@ -201,10 +201,13 @@ class BentoSearch::SummonEngine
       {
         "AuthorCombined"      => {:semantic => :author},
         "TitleCombined"       => {:semantic => :title},
-        # controlled and author-assigned keywords
-        "SubjectCombined"     => {:semantic => :subject},
-        "ISBNCombined"        => {:semantic => :isbn},
-        "ISSNCombined"        => {:semantic => :issn},              
+        # SubjectTerms does not include TemporalSubjectTerms
+        # or Keywords, sorry. 
+        "SubjectTerms"        => {:semantic => :subject},
+        # ISBN and ISSN do not include seperate EISSN and EISBN
+        # fields, sorry. 
+        "ISBN"                => {:semantic => :isbn},
+        "ISSN"                => {:semantic => :issn},              
       }
     end
     
