@@ -177,7 +177,7 @@ progress spinner, and having Javascript call back to get the actual results.
 * **Setup Pre-requisites** 
     * In your `./config/routes.rb`, you need `BentoSearch::Routes.new(self).draw` in order
       to route to the ajax loader. 
-    * In your asset pipeline, you must have `//= require 'bento_search/ajax_load' 
+    * In your asset pipeline, you must have `//= require 'bento_search/ajax_load` 
       to get JS for ajax loading. (or require 'bento_search' to get all bento_search JS)
 * **Note** that this is not a panacea for a very slow search engine -- if the
 search results take 20 seconds to come in, when the AJAX call back happens,
