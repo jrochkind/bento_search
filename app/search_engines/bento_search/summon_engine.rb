@@ -207,7 +207,9 @@ class BentoSearch::SummonEngine
         # ISBN and ISSN do not include seperate EISSN and EISBN
         # fields, sorry. 
         "ISBN"                => {:semantic => :isbn},
-        "ISSN"                => {:semantic => :issn},              
+        "ISSN"                => {:semantic => :issn},  
+        "OCLC"                => {:semantic => :oclcnum},
+        "PublicationSeriesTitle" => {}
       }
     end
     
