@@ -23,16 +23,31 @@ class BentoSearchHelperTest < ActionView::TestCase
     assert_select("div.bento_item", 10)    
   end
   
+  def test_with_failed_search
+    results = BentoSearch::Results.new
+    results.error = {:error => true}
+    
+    assert results.failed?
+    
+    response = HTML::Document.new(bento_search(results))
+    
+    assert (no_results_div = response.find(:attributes => {:class => "bento_search_error"})), "has search_error div"
+    
+    assert no_results_div.match(Regexp.new I18n.translate("bento_search.search_error")), "has error message"
+
+    assert_nil response.find(:attributes => {:class => "bento_item"})    
+  end
+  
   def test_with_empty_results
     results = MockEngine.new(:num_results => 0).search(:query => "foo")
     
     response = HTML::Document.new(bento_search(results))
     
     assert (no_results_div = response.find(:attributes => {:class => "bento_search_no_results"})), "has no_results div"
-    assert no_results_div.match(I18n.translate("bento_search.no_results"))
+    assert no_results_div.match(Regexp.new(I18n.translate("bento_search.no_results")))
 
     
-    assert_nil response.find(:attributes => {:class => "bento_item"})
+    assert_nil response.find(:attributes => {:class => "bento_item"}), "has no results message"
   end
   
   def test_with_engine_arg

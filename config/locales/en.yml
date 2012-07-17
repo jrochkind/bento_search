@@ -2,6 +2,7 @@ en:
   bento_search:
     ajax_loading: "Loading..."
     no_results: "No results found."
+    search_error: "Sorry! An error occured and results could not be retrieved."
     format:
       # Schema.org formats
       Article: Article
