@@ -12,6 +12,7 @@ module BentoSearch
   #
   # Uses the Scopus SciVerse REST API. You need to be a Scopus customer
   # to access. http://api.elsevier.com
+  # http://www.developers.elsevier.com/action/devprojects
   # 
   # ToS: http://www.developers.elsevier.com/devcms/content-policies
   # "Federated Search" use case. 
@@ -196,7 +197,8 @@ module BentoSearch
       { "ar" => "Article",
         "ip" => "Article",
         "bk" => "Book",
-        "bz" => "Artilce"
+        "bz" => "Article",
+        "re" => "Article" # most of what scopus labels 'Report' seem to be ordinary articles. 
       }[doctype.to_s]
     end
      
