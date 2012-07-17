@@ -28,11 +28,13 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
     assert_kind_of BentoSearch::ResultItem, first
     
     assert_not_empty first.title
+    assert_not_empty first.publisher
     assert_not_empty first.link
     assert_not_empty first.format
     assert_not_nil first.year
     assert_not_empty first.abstract
     assert first.abstract.html_safe?
+    
     
     assert_not_empty first.authors
     assert_not_empty first.authors.first.display

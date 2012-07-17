@@ -68,12 +68,13 @@ module BentoSearch
       
       json["items"].each do |j_item|
         j_item = j_item["volumeInfo"] if j_item["volumeInfo"]
-        
+
         item = ResultItem.new
         results << item
         
         item.title          = j_item["title"] 
         item.subtitle       = j_item["subtitle"] 
+        item.publisher      = j_item["publisher"]
         item.link           = j_item["canonicalVolumeLink"]        
         item.abstract       = sanitize j_item["description"]        
         item.year           = get_year j_item["publishedDate"]         
