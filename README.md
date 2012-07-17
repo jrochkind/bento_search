@@ -123,7 +123,7 @@ use _either_ `:start` (0-based item offset) or `:page` (1-based page
 offset) keys to paginate into the results. 
 
     google_books_engine.search("my query", :per_page => 20, :start => 40)
-    google_books_engine.search("my query", :per_page => 20, :page => 3) # means same as above
+    google_books_engine.search("my query", :per_page => 20, :page => 2) # means same as above
     
 An engine advertises it's maximum and default per-page values. 
 
@@ -135,7 +135,7 @@ An engine advertises it's maximum and default per-page values.
 If you're going to search 2 or more search engines at once, you'll want to execute
 those searches concurrently. For instance, if GoogleBooks results take 2 second
 to come in, and Scopus results take 3 seconds -- you don't want to first wait
-the 1 second then wait the 3 seconds for a total of 4 -- you instead want
+the 2 second then wait the 3 seconds for a total of 5 -- you instead want
 to execute concurrently in seperate threads, so the total wait time is the slowest
 engine, not the sum of the engines. 
 
