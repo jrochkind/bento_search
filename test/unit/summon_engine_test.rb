@@ -71,6 +71,15 @@ class SummonEngineTest < ActiveSupport::TestCase
     assert_equal "SomeField:(eleph\\\)ants)", query_params["s.q"].first
   end
   
+  def test_pagination_construction
+    uri, headers = @engine.construct_request(:query => "elephants_per_page", :per_page => 20, :page => 2)
+    
+    query_params = CGI.parse( URI.parse(uri).query )
+    
+    assert_equal "20", query_params["s.ps"].first
+    assert_equal "2",  query_params["s.pn"].first
+  end
+  
   def test_authenticated_user_construction 
     uri, headers = @engine.construct_request(:query => "elephants", :auth => true)
     

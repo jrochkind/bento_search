@@ -13,6 +13,11 @@ require 'summon/transport/headers'
 # http://api.summon.serialssolutions.com/help/api/search
 # http://api.summon.serialssolutions.com/help/api/search/fields
 #
+# == Functionality notes
+#
+# * for pagination, underlying summon API only supports 'page', not 'start'
+#   style, if you pass in 'start' style it will be 'rounded' to containing 'page'. 
+#
 # == Required config params
 # [access_id]   supplied by SerSol for your account
 # [secret_key]  supplied by SerSol for your account
@@ -103,6 +108,13 @@ class BentoSearch::SummonEngine
         end
       end
     end
+    
+    if args[:per_page]
+      query_params["s.ps"] = args[:per_page]
+    end
+    if args[:page]
+      query_params["s.pn"] = args[:page]
+    end
 
     if args[:search_field]
       query_params['s.q'] = "#{args[:search_field]}:(#{summon_escape(args[:query])})"
@@ -132,7 +144,7 @@ class BentoSearch::SummonEngine
     
     query_string = query_params.keys.collect do |key|
       [query_params[key]].flatten.collect do |value|
-        "#{CGI.escape(key)}=#{CGI.escape(value)}"
+        "#{CGI.escape(key.to_s)}=#{CGI.escape(value.to_s)}"
       end
     end.flatten.join("&")
     
