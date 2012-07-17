@@ -27,14 +27,14 @@ http_interactions:
         T0s=
       !binary "WC1FbHMtUmVxaWQ=":
       - !binary |-
-        MDAwMDAxMzc1MzhhZTFjYy0xNWNhYTcy
+        MDAwMDAxMzZjNGQ4ODA5ZS02YmFlYjBl
       !binary "WC1FbHMtQXBpa2V5":
       - !binary |-
         RFVNTVlfQVBJX0tFWQ==
       !binary "U2V0LUNvb2tpZQ==":
       - !binary |-
-        SlNFU1NJT05JRD04NEVGMDZBNzQ2RTRFOTI2RjI4RTQzNzZDRTc4NzI0NS5w
-        c2MxOTk3X0Zhc3RTZWFyY2hfMDAxOyBEb21haW49YXBpLmVsc2V2aWVyLmNv
+        SlNFU1NJT05JRD04MDlEOEMxNTk3MkYwRDcwOTU2NjU1NjYzRkNCMEM2MS54
+        RGFMQmxvQmduTXRmYnpTSDN2NnNnOyBEb21haW49YXBpLmVsc2V2aWVyLmNv
         bTsgUGF0aD0vY29udGVudC9zZWFyY2g=
       !binary "Q29udGVudC1UeXBl":
       - !binary |-
@@ -44,10 +44,10 @@ http_interactions:
         Y2h1bmtlZA==
       !binary "RGF0ZQ==":
       - !binary |-
-        VHVlLCAwNSBKdW4gMjAxMiAyMDo1Mzo0NSBHTVQ=
+        VHVlLCAxNyBKdWwgMjAxMiAyMDo1MDoxMiBHTVQ=
       !binary "WC1SZS1SZWY=":
       - !binary |-
-        MSAtNjU4NzEyOTI0
+        MSAtOTYxODg3OTI1
       !binary "UDNw":
       - !binary |-
         Q1A9IklEQyBEU1AgTEFXIEFETSBERVYgVEFJIFBTQSBQU0QgSVZBIElWRCBD
@@ -57,8 +57,8 @@ http_interactions:
       string: ! '<feed xmlns="http://www.w3.org/2005/Atom" xmlns:atom="http://www.w3.org/2005/Atom"
         xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/"
         xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/"><title>SCOPUS
-        Search Results: TITLE%28cancer%29</title><updated>2012-06-05T20:53:46.646Z</updated><author><name>Elsevier,
-        Inc.</name></author><id>http://api.elsevier.com:80/content/search/index:SCOPUS?query=TITLE%28cancer%29&amp;count=25&amp;start=0&amp;view=STANDARD&amp;field=</id><opensearch:totalResults>635367</opensearch:totalResults><opensearch:startIndex>0</opensearch:startIndex><opensearch:itemsPerPage>25</opensearch:itemsPerPage><opensearch:Query
+        Search Results: TITLE%28cancer%29</title><updated>2012-07-17T20:50:12.673Z</updated><author><name>Elsevier,
+        Inc.</name></author><id>http://api.elsevier.com:80/content/search/index:SCOPUS?query=TITLE%28cancer%29&amp;count=25&amp;start=0&amp;view=STANDARD&amp;field=</id><opensearch:totalResults>639670</opensearch:totalResults><opensearch:startIndex>0</opensearch:startIndex><opensearch:itemsPerPage>25</opensearch:itemsPerPage><opensearch:Query
         role="request" searchTerms="TITLE%28cancer%29" startPage="0"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=0&amp;count=25&amp;query=TITLE%28cancer%29"
         ref="self" type="application/atom+xml"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=0&amp;count=25&amp;query=TITLE%28cancer%29"
         ref="first" type="application/atom+xml"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=25&amp;count=25&amp;query=TITLE%28cancer%29"
@@ -127,16 +127,6 @@ http_interactions:
         of South Carolina School of Medicine | University of South Carolina School
         of Medicine ^ Univ. of S. Carolina Sch. of Med.</affilname></affiliation><affiliation><affilname>University
         of South Carolina | University of South Carolina</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84856788468" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84856788468"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84856788468"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84856788468</prism:url><dc:identifier>SCOPUS_ID:84856788468</dc:identifier><dc:title>Reliability
-        and validity of the valued activity inventory for adults with cancer</dc:title><dc:creator>Lyons,
-        K.D.</dc:creator><prism:publicationName>OTJR Occupation, Participation and
-        Health</prism:publicationName><prism:issn>15394492</prism:issn><prism:volume>32</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>238-245</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><prism:doi>10.3928/15394492-20110623-02</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Dartmouth
-        Medical School | Dartmouth Medical School ^ Dartmouth Med. Sch.</affilname></affiliation><affiliation><affilname>Dartmouth
-        College | Dartmouth College ^ Dartmouth Coll</affilname></affiliation><affiliation><affilname>Norris
-        Cotton Cancer Center | Norris Cotton Cancer Center</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
         href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84855323454" ref="self"/><link
         href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84855323454"
         ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84855323454"
@@ -146,9 +136,9 @@ http_interactions:
         of Rural Health</prism:publicationName><prism:issn>0890765X</prism:issn><prism:eIssn>17480361</prism:eIssn><prism:volume>28</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>54-62</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><prism:doi>10.1111/j.1748-0361.2011.00371.x</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Fred
         Hutchinson Cancer Research Center | Fred Hutchinson Cancer Research Center
         ^ Fred Hutchinson Cancer Res. Center</affilname></affiliation><affiliation><affilname>University
-        of Washington | University of Washington</affilname></affiliation><affiliation><affilname>University
-        of Washington | University of Washington</affilname></affiliation><affiliation><affilname>University
-        of Washington | University of Washington</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
+        of Washington Seattle | Univ. Washington ^ University of Washington</affilname></affiliation><affiliation><affilname>University
+        of Washington Seattle | Univ. Washington ^ University of Washington</affilname></affiliation><affiliation><affilname>University
+        of Washington Seattle | Univ. Washington ^ University of Washington</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
         href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84860347841" ref="self"/><link
         href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84860347841"
         ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84860347841"
@@ -156,14 +146,35 @@ http_interactions:
         stem cells.</dc:title><dc:creator>Williams, J.L.</dc:creator><prism:publicationName>Clinical
         laboratory science : journal of the American Society for Medical Technology</prism:publicationName><prism:issn>0894959X</prism:issn><prism:volume>25</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>50-57</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><citedby-count>0</citedby-count><affiliation><affilname>Oakland
         University | Oakland University</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84863011858" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84863011858"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84863011858"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84863011858</prism:url><dc:identifier>SCOPUS_ID:84863011858</dc:identifier><dc:title>Reliability
+        and validity of the valued activity inventory for adults with cancer</dc:title><dc:creator>Lyons,
+        K.D.</dc:creator><prism:publicationName>OTJR Occupation, Participation and
+        Health</prism:publicationName><prism:issn>15394492</prism:issn><prism:volume>32</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>238-245</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><prism:doi>10.3928/15394492-20110623-02</prism:doi><citedby-count>1</citedby-count><affiliation><affilname>Dartmouth
+        Medical School | Dartmouth Medical School ^ Dartmouth Med. Sch.</affilname></affiliation><affiliation><affilname>Norris
+        Cotton Cancer Center | Norris Cotton Cancer Center</affilname></affiliation><affiliation><affilname>Dartmouth
+        College | Dartmouth College ^ Dartmouth Coll</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
         href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84858757266" ref="self"/><link
         href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84858757266"
         ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84858757266"
         ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84858757266</prism:url><dc:identifier>SCOPUS_ID:84858757266</dc:identifier><dc:title>Outcomes
         of oral cancer early detection and prevention statewide model in Maryland</dc:title><dc:creator>Maybury,
-        C.</dc:creator><prism:publicationName>Journal of Public Health Dentistry</prism:publicationName><prism:issn>00224006</prism:issn><prism:eIssn>17527325</prism:eIssn><prism:volume>72</prism:volume><prism:issueIdentifier>SUPPL.1</prism:issueIdentifier><prism:pageRange>S34-S38</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><prism:doi>10.1111/j.1752-7325.2012.00320.x</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>University
+        C.</dc:creator><prism:publicationName>Journal of Public Health Dentistry</prism:publicationName><prism:issn>00224006</prism:issn><prism:eIssn>17527325</prism:eIssn><prism:volume>72</prism:volume><prism:issueIdentifier>SUPPL.1</prism:issueIdentifier><prism:pageRange>S34-S38</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><prism:doi>10.1111/j.1752-7325.2012.00320.x</prism:doi><citedby-count>1</citedby-count><affiliation><affilname>University
         of Maryland | University of Maryland</affilname></affiliation><affiliation><affilname>DHMH
         | Maryland Department of Health and Mental Hygiene</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861660086" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861660086"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861660086"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84861660086</prism:url><dc:identifier>SCOPUS_ID:84861660086</dc:identifier><dc:title>Racial
+        and ethnic disparities in lifetime risk of corpus uterine cancer: A comparative
+        study of Puerto Rico and the United States SEER population</dc:title><dc:creator>Ortiz,
+        A.P.</dc:creator><prism:publicationName>Ethnicity and Disease</prism:publicationName><prism:issn>1049510X</prism:issn><prism:volume>22</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>90-95</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><citedby-count>0</citedby-count><affiliation><affilname>University
+        of Puerto Rico | University of Puerto Rico</affilname></affiliation><affiliation><affilname>University
+        of Puerto Rico School of Medicine | University of Puerto Rico School of Medicine
+        ^ University of Puerto Rico ^ Univ. Puerto Rico Sch. Med.</affilname></affiliation><affiliation><affilname>University
+        of Puerto Rico | University of Puerto Rico</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
         href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84857221607" ref="self"/><link
         href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84857221607"
         ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84857221607"
@@ -186,6 +197,13 @@ http_interactions:
         Shimin Hospital | Matsuyama Shimin Hospital ^ Matsuyama-shimin Hospital</affilname></affiliation><affiliation><affilname>Matsuyama
         Shimin Hospital | Matsuyama Shimin Hospital ^ Matsuyama-shimin Hospital</affilname></affiliation><affiliation><affilname>Kochi
         University | Kochi University</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84858012195" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84858012195"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84858012195"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84858012195</prism:url><dc:identifier>SCOPUS_ID:84858012195</dc:identifier><dc:title>Optimism
+        among cancer patients: The oncology nursing perspective</dc:title><dc:creator>Gonzalez,
+        V.</dc:creator><prism:publicationName>Journal of Gynecologic Oncology Nursing</prism:publicationName><prism:issn>15369935</prism:issn><prism:volume>22</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>18-39</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><citedby-count>0</citedby-count><affiliation><affilname>University
+        of Kansas | University of Kansas</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
         href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84858658744" ref="self"/><link
         href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84858658744"
         ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84858658744"
@@ -205,21 +223,6 @@ http_interactions:
         Isfahan Univ. of Medical Sciences</affilname></affiliation><affiliation><affilname>Urmia
         University of Medical Sciences | Urmia University of Medical Sciences ^ Urmia
         Medical Sciences University</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84858012195" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84858012195"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84858012195"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84858012195</prism:url><dc:identifier>SCOPUS_ID:84858012195</dc:identifier><dc:title>Optimism
-        among cancer patients: The oncology nursing perspective</dc:title><dc:creator>Gonzalez,
-        V.</dc:creator><prism:publicationName>Journal of Gynecologic Oncology Nursing</prism:publicationName><prism:issn>15369935</prism:issn><prism:volume>22</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>18-39</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><citedby-count>0</citedby-count><affiliation><affilname>University
-        of Kansas | University of Kansas</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84860633585" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84860633585"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84860633585"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84860633585</prism:url><dc:identifier>SCOPUS_ID:84860633585</dc:identifier><dc:title>Forty
-        years in cancer nursing research: time flies when you''re having fun!</dc:title><dc:creator>Degner,
-        L.</dc:creator><prism:publicationName>Canadian oncology nursing journal =
-        Revue canadienne de nursing oncologique</prism:publicationName><prism:issn>1181912X</prism:issn><prism:volume>22</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>6-11</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><citedby-count>0</citedby-count><affiliation><affilname>University
-        of Manitoba | University of Manitoba</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
         href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84860319832" ref="self"/><link
         href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84860319832"
         ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84860319832"
@@ -228,6 +231,14 @@ http_interactions:
         K.R.</dc:creator><prism:publicationName>Clinical laboratory science : journal
         of the American Society for Medical Technology</prism:publicationName><prism:issn>0894959X</prism:issn><prism:volume>25</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>35-37</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><citedby-count>0</citedby-count><affiliation><affilname>Oakland
         University | Oakland University</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ed</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84860633585" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84860633585"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84860633585"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84860633585</prism:url><dc:identifier>SCOPUS_ID:84860633585</dc:identifier><dc:title>Forty
+        years in cancer nursing research: time flies when you''re having fun!</dc:title><dc:creator>Degner,
+        L.</dc:creator><prism:publicationName>Canadian oncology nursing journal =
+        Revue canadienne de nursing oncologique</prism:publicationName><prism:issn>1181912X</prism:issn><prism:volume>22</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>6-11</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><citedby-count>0</citedby-count><affiliation><affilname>University
+        of Manitoba | University of Manitoba</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
         href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84860635245" ref="self"/><link
         href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84860635245"
         ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84860635245"
@@ -242,7 +253,8 @@ http_interactions:
         ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84858756305</prism:url><dc:identifier>SCOPUS_ID:84858756305</dc:identifier><dc:title>Steps
         to further reduce oral cancer burden for Marylanders</dc:title><dc:creator>Mao,
         L.</dc:creator><prism:publicationName>Journal of Public Health Dentistry</prism:publicationName><prism:issn>00224006</prism:issn><prism:eIssn>17527325</prism:eIssn><prism:volume>72</prism:volume><prism:issueIdentifier>SUPPL.1</prism:issueIdentifier><prism:pageRange>S39-S40</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><prism:doi>10.1111/j.1752-7325.2012.00318.x</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>University
-        of Maryland | University of Maryland</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>no</subtype></entry><entry><link
+        of Maryland, Baltimore | University of Maryland ^ U Maryland ^ University
+        of Maryland Baltimore</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>no</subtype></entry><entry><link
         href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84857965058" ref="self"/><link
         href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84857965058"
         ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84857965058"
@@ -256,6 +268,20 @@ http_interactions:
         Universidad de Chile ^ Hospital Clínico de la Universidad de Chile</affilname></affiliation><affiliation><affilname>Facultad
         de Medicina de la Universidad de Chile | Universidad de Chile ^ University
         of Chile</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ip</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861807248" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861807248"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861807248"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84861807248</prism:url><dc:identifier>SCOPUS_ID:84861807248</dc:identifier><dc:title>Genistein
+        inhibits the stemness properties of prostate cancer cells through targeting
+        Hedgehog-Gli1 pathway</dc:title><dc:creator>Zhang, L.</dc:creator><prism:publicationName>Cancer
+        Letters</prism:publicationName><prism:issn>03043835</prism:issn><prism:eIssn>18727980</prism:eIssn><prism:volume>323</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>48-57</prism:pageRange><prism:coverDate>2012-10-01</prism:coverDate><prism:doi>10.1016/j.canlet.2012.03.037</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Xi''an
+        Jiaotong University | Xi''an Jiaotong University ^ Xi''an Jiaotong Univ ^
+        Xi''an Jiaotong Univ.</affilname></affiliation><affiliation><affilname>Xi''an
+        Jiaotong University | Xi''an Jiaotong University ^ Xi''an Jiaotong Univ ^
+        Xi''an Jiaotong Univ.</affilname></affiliation><affiliation><affilname>Ministry
+        of Education China | Ministry of Education</affilname></affiliation><affiliation><affilname>UT
+        Southwestern Medical Center | University of Texas Southwestern Medical Center
+        ^ University of Texas ^ Univ. Texas Southwestern Med. Ctr.</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
         href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861102186" ref="self"/><link
         href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861102186"
         ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861102186"
@@ -265,6 +291,14 @@ http_interactions:
         Chemistry</prism:publicationName><prism:issn>03088146</prism:issn><prism:eIssn>18737072</prism:eIssn><prism:volume>134</prism:volume><prism:issueIdentifier>3</prism:issueIdentifier><prism:pageRange>1385-1391</prism:pageRange><prism:coverDate>2012-10-01</prism:coverDate><prism:doi>10.1016/j.foodchem.2012.03.036</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Universitat
         de Barcelona | Universitat de Barcelona ^ University of Barcelona ^ Universidad
         de Barcelona</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84862818281" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84862818281"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84862818281"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84862818281</prism:url><dc:identifier>SCOPUS_ID:84862818281</dc:identifier><dc:title>Can
+        lung cancer stem cells be targeted for therapies?</dc:title><dc:creator>Wu,
+        X.</dc:creator><prism:publicationName>Cancer Treatment Reviews</prism:publicationName><prism:issn>03057372</prism:issn><prism:eIssn>15321967</prism:eIssn><prism:volume>38</prism:volume><prism:issueIdentifier>6</prism:issueIdentifier><prism:pageRange>580-588</prism:pageRange><prism:coverDate>2012-10-01</prism:coverDate><prism:doi>10.1016/j.ctrv.2012.02.013</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Fudan
+        University | Fudan University</affilname></affiliation><affiliation><affilname>Fudan
+        University | Fudan University</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
         href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861098703" ref="self"/><link
         href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861098703"
         ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861098703"
@@ -273,50 +307,16 @@ http_interactions:
         cancer cell migration</dc:title><dc:creator>Jayakumar, R.</dc:creator><prism:publicationName>Food
         Chemistry</prism:publicationName><prism:issn>03088146</prism:issn><prism:eIssn>18737072</prism:eIssn><prism:volume>134</prism:volume><prism:issueIdentifier>3</prism:issueIdentifier><prism:pageRange>1580-1584</prism:pageRange><prism:coverDate>2012-10-01</prism:coverDate><prism:doi>10.1016/j.foodchem.2012.03.101</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>University
         of Malaya | University of Malaya</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861100527" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861100527"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861100527"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84861100527</prism:url><dc:identifier>SCOPUS_ID:84861100527</dc:identifier><dc:title>Comparative
-        study on antiproliferation properties and cellular antioxidant activities
-        of commonly consumed food legumes against nine human cancer cell lines</dc:title><dc:creator>Xu,
-        B.</dc:creator><prism:publicationName>Food Chemistry</prism:publicationName><prism:issn>03088146</prism:issn><prism:eIssn>18737072</prism:eIssn><prism:volume>134</prism:volume><prism:issueIdentifier>3</prism:issueIdentifier><prism:pageRange>1287-1296</prism:pageRange><prism:coverDate>2012-10-01</prism:coverDate><prism:doi>10.1016/j.foodchem.2012.02.212</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Beijing
-        Normal University | Beijing Normal University</affilname></affiliation><affiliation><affilname>North
-        Dakota State University | North Dakota State University</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861186580" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861186580"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861186580"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84861186580</prism:url><dc:identifier>SCOPUS_ID:84861186580</dc:identifier><dc:title>Development
-        of an optimized multi-biomarker panel for the detection of lung cancer based
-        on principal component analysis and artificial neural network modeling</dc:title><dc:creator>Flores-Fernández,
-        J.M.</dc:creator><prism:publicationName>Expert Systems with Applications</prism:publicationName><prism:issn>09574174</prism:issn><prism:volume>39</prism:volume><prism:issueIdentifier>12</prism:issueIdentifier><prism:pageRange>10851-10856</prism:pageRange><prism:coverDate>2012-09-15</prism:coverDate><prism:doi>10.1016/j.eswa.2012.03.008</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Centro
-        de Investigación y Asistencia en Tecnologia y Diseño del Estado de Jalisco
-        | CIATEJ ^ Centro de Investigacion y Asistencia en Tecnologia y Diseno del
-        Estado de Jalisco ^ Centro de Investigacion Y Asistencia en Tecnologia Y Diseno
-        del Estado de Jalisco</affilname></affiliation><affiliation><affilname>Hospital
-        Civil de Guadalajara | Hospital Civil de Guadalajara</affilname></affiliation><affiliation><affilname>Centro
-        Oncológico Estatal ISSEMyM | Centro Oncológico Estatal ISSEMyM ^ Centro Oncológico
-        Estatal ISSEMYM</affilname></affiliation><affiliation><affilname>División
-        de Matemáticas Aplicadas | División de Matemáticas Aplicadas</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861460660" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861460660"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861460660"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84861460660</prism:url><dc:identifier>SCOPUS_ID:84861460660</dc:identifier><dc:title>Combined
-        inhibition of EGFR and CK2 augments the attenuation of PI3K-Akt-mTOR signaling
-        and the killing of cancer cells</dc:title><dc:creator>Bliesath, J.</dc:creator><prism:publicationName>Cancer
-        Letters</prism:publicationName><prism:issn>03043835</prism:issn><prism:eIssn>18727980</prism:eIssn><prism:volume>322</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>113-118</prism:pageRange><prism:coverDate>2012-09-01</prism:coverDate><prism:doi>10.1016/j.canlet.2012.02.032</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Cylene
-        Pharmaceuticals</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861460801" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861460801"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861460801"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84861460801</prism:url><dc:identifier>SCOPUS_ID:84861460801</dc:identifier><dc:title>The
-        novel NF-κB inhibitor DHMEQ synergizes with celecoxib to exert antitumor effects
-        on human liver cancer cells by a ROS-dependent mechanism</dc:title><dc:creator>Lampiasi,
-        N.</dc:creator><prism:publicationName>Cancer Letters</prism:publicationName><prism:issn>03043835</prism:issn><prism:eIssn>18727980</prism:eIssn><prism:volume>322</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>35-44</prism:pageRange><prism:coverDate>2012-09-01</prism:coverDate><prism:doi>10.1016/j.canlet.2012.02.008</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Consiglio
-        Nazionale delle Ricerche | CNR</affilname></affiliation><affiliation><affilname>Keio
-        University | Keio University ^ Keio Univ</affilname></affiliation><affiliation><affilname>Università
-        degli Studi di Palermo | Università di Palermo ^ University of Palermo</affilname></affiliation><affiliation><affilname>The
-        Brody School of Medicine | East Carolina University ^ East Carolina University
-        School of Medicine</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry></feed>'
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861656466" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861656466"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861656466"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84861656466</prism:url><dc:identifier>SCOPUS_ID:84861656466</dc:identifier><dc:title>Cancer
+        stem cells: In the line of fire</dc:title><dc:creator>Alison, M.R.</dc:creator><prism:publicationName>Cancer
+        Treatment Reviews</prism:publicationName><prism:issn>03057372</prism:issn><prism:eIssn>15321967</prism:eIssn><prism:volume>38</prism:volume><prism:issueIdentifier>6</prism:issueIdentifier><prism:pageRange>589-598</prism:pageRange><prism:coverDate>2012-10-01</prism:coverDate><prism:doi>10.1016/j.ctrv.2012.03.003</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Barts
+        and The London Queen Mary''s School of Medicine and Dentistry</affilname></affiliation><affiliation><affilname>Chang
+        Gung University College of Medicine | Chang Gung University College of Medicine</affilname></affiliation><affiliation><affilname>National
+        University of Singapore | National University of Singapore</affilname></affiliation><affiliation><affilname>King''s
+        College London | King''s College London ^ King''s College</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry></feed>'
     http_version: 
-  recorded_at: Tue, 05 Jun 2012 20:53:46 GMT
-recorded_with: VCR 2.2.0
+  recorded_at: Tue, 17 Jul 2012 20:56:11 GMT
+recorded_with: VCR 2.2.3
