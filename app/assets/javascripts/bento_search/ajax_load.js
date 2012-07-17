@@ -5,12 +5,17 @@ jQuery(document).ready(function($) {
       $(".bento_search_ajax_wait").each(function(i, div) {
          div = $(div);
          // from html5 data-bento-ajax-url
-         div.load( div.data("bentoAjaxUrl"), function(response, status, xhr) {
-            if (status == "error") {
-              var msg = "Sorry but there was an error: ";
-              div.html(msg + xhr.status + " " + xhr.statusText);
-            }        
-         });            
+         $.ajax({
+           url: div.data("bentoAjaxUrl"), 
+           success: function(response, status, xhr) {
+            div.replaceWith(response);   
+           },
+           error: function(xhr, status, errorThrown) {
+             var msg = "Sorry but there was an error: ";
+             div.html(msg + xhr.status + " " + xhr.statusText + ", " + status);
+           }
+         });
+                              
       });
     });
     
