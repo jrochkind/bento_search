@@ -78,8 +78,7 @@ class BentoSearch::SummonEngine
       
       return results
     end
-    
-
+        
     results.total_items = hash["recordCount"]
     
     hash["documents"].each do |doc_hash|
@@ -180,6 +179,10 @@ class BentoSearch::SummonEngine
     {
       :base_url => "http://api.summon.serialssolutions.com/2.0.0/search"
     }
+  end
+  
+  def self.max_per_page
+    200
   end
   
   # Summon actually only supports relevancy sort, and pub year asc or desc.
