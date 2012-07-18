@@ -40,7 +40,7 @@ class StdItemTest < ActionView::TestCase
     render "bento_search/std_item", :item => item
     
     assert_select(".bento_item", 1) do    
-      assert_select ".bento_item_title", item.title do |h2|
+      assert_select ".bento_item_title", Regexp.new( Regexp.escape item.title) do |h2|
         assert_select "a[href='#{item.link}']"
       end
       

@@ -7,14 +7,16 @@
 
 <div class="bento_item">
   <h4 class="bento_item_title">
-    <%= link_to_unless item.link.blank?, item.title, item.link %>    
+    <%= link_to_unless item.link.blank?, item.title, item.link %>
+    <% if item.format %>
+      <small class="bento_item_about">
+        (<%= t(item.format, :scope => [:bento_search, :format], :default => item.format.to_s.titleize) %>)
+      </small>
+    <% end %>
+    
   </h4>
   <div class="bento_item_body">
-    <% if item.format %>
-      <p class="bento_item_about">
-        <strong><%= t(item.format, :scope => [:bento_search, :format], :default => item.format.to_s.titleize) %></strong>
-      </p>
-    <% end %>
+    
     
     <% if item.authors.length > 0 %>
       <p class="bento_item_authors">
