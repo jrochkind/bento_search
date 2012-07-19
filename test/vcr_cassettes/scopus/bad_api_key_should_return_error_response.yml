@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.elsevier.com/content/search/index:SCOPUS?query=cancer
+    uri: http://api.elsevier.com/content/search/index:SCOPUS?query=cancer&sort=refeid
     body:
       encoding: US-ASCII
       string: ''
@@ -30,7 +30,7 @@ http_interactions:
         aGlzIHJlc291cmNlKQ==
       !binary "WC1FbHMtUmVxaWQ=":
       - !binary |-
-        MDAwMDAxMzc1MzhhZTFjYy0xNWI2MjBk
+        MDAwMDAxMzc1MzhhZTFjYy0zZjE5MDJh
       !binary "WC1FbHMtQXBpa2V5":
       - !binary |-
         QkFEX0tFWV9FUlJPUg==
@@ -42,10 +42,10 @@ http_interactions:
         MjU1
       !binary "RGF0ZQ==":
       - !binary |-
-        VHVlLCAwNSBKdW4gMjAxMiAxOTowMjoxOSBHTVQ=
+        VGh1LCAxOSBKdWwgMjAxMiAxNDoxNDowNyBHTVQ=
       !binary "WC1SZS1SZWY=":
       - !binary |-
-        MSAxMjQ0NTMxODM5
+        MSAxNjg2OTM3Njg4
       !binary "UDNw":
       - !binary |-
         Q1A9IklEQyBEU1AgTEFXIEFETSBERVYgVEFJIFBTQSBQU0QgSVZBIElWRCBD
@@ -56,5 +56,5 @@ http_interactions:
         BAD_KEY_ERROR with IP address 128.220.205.125 is unrecognized or has insufficient
         privileges for access to this resource</statusText>\n\t</status>\n</service-error>"
     http_version: 
-  recorded_at: Tue, 05 Jun 2012 19:02:19 GMT
-recorded_with: VCR 2.2.0
+  recorded_at: Thu, 19 Jul 2012 14:14:07 GMT
+recorded_with: VCR 2.2.3

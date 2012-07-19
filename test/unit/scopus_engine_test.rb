@@ -24,19 +24,19 @@ class ScopusEngineTest < ActiveSupport::TestCase
   def test_construct_search_url
     url = @engine.send(:scopus_url, :query => "one two")
     
-    assert_equal "http://api.elsevier.com/content/search/index:SCOPUS?query=one+two", url
+    assert_equal "http://api.elsevier.com/content/search/index:SCOPUS?query=one+two&sort=refeid", url
   end
   
   def test_construct_fielded_search_url
     url = @engine.send(:scopus_url, :query => "one two", :search_field => "AUTH")
     
-    assert_equal "http://api.elsevier.com/content/search/index:SCOPUS?query=AUTH%28one+two%29", url
+    assert_equal "http://api.elsevier.com/content/search/index:SCOPUS?query=AUTH%28one+two%29&sort=refeid", url
   end
   
   def test_construct_search_with_per_page
     url = @engine.send(:scopus_url, :query => "one two", :per_page => 30)
     
-    assert_equal "http://api.elsevier.com/content/search/index:SCOPUS?query=one+two&count=30", url
+    assert_equal "http://api.elsevier.com/content/search/index:SCOPUS?query=one+two&count=30&sort=refeid", url
   end
   
   def test_construct_search_with_sort
@@ -46,9 +46,17 @@ class ScopusEngineTest < ActiveSupport::TestCase
     
     url = @engine.send(:scopus_url, :query => "one two", :sort => "relevance")
     
-    assert_equal "http://api.elsevier.com/content/search/index:SCOPUS?query=one+two", url
+    assert_equal "http://api.elsevier.com/content/search/index:SCOPUS?query=one+two&sort=refeid", url
     
   end
+  
+  def test_construct_default_relevance_sort
+    url_implicit = @engine.send(:scopus_url, :query => "one two")
+    url_explicit = @engine.send(:scopus_url, :query => "one two", :sort => "relevance")
+    
+    assert_equal url_explicit, url_implicit
+  end
+    
   
   def test_construct_with_pagination
     url = @engine.send(:scopus_url, :query => "one two", :start => 20, :per_page => 10)

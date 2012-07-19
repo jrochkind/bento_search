@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.elsevier.com/content/search/index:SCOPUS?query=cancer
+    uri: http://api.elsevier.com/content/search/index:SCOPUS?query=cancer&sort=refeid
     body:
       encoding: US-ASCII
       string: ''
@@ -14,7 +14,7 @@ http_interactions:
       Accept:
       - application/atom+xml
       Cookie:
-      - JSESSIONID=809D8C15972F0D70956655663FCB0C61.xDaLBloBgnMtfbzSH3v6sg
+      - JSESSIONID=F1984DE89F0383B8118C2D10CBC254BD.QSkINH9oEufKvNUai1nwg
   response:
     status:
       code: 200
@@ -29,14 +29,14 @@ http_interactions:
         T0s=
       !binary "WC1FbHMtUmVxaWQ=":
       - !binary |-
-        MDAwMDAxMzZjNGQ4ODA5ZS02YmFlYjE5
+        MDAwMDAxMzc1MzhhZTFjYy0zZjE5MDQ1
       !binary "WC1FbHMtQXBpa2V5":
       - !binary |-
         RFVNTVlfQVBJX0tFWQ==
       !binary "U2V0LUNvb2tpZQ==":
       - !binary |-
-        SlNFU1NJT05JRD0wRTQyQjYyMkUwMUFERkJCRjM0MTNFQTBBNDM1NUYyMC5k
-        SjREVGtQOTFNUVNzWURyVVh2MUE7IERvbWFpbj1hcGkuZWxzZXZpZXIuY29t
+        SlNFU1NJT05JRD05RDlFRDI2MjAwMzRFQUI1MUZBRTM5NjgwNkQ3RTY3Ni5a
+        R1BUc3l2UFpzNWdDSEFBNGFTTlE7IERvbWFpbj1hcGkuZWxzZXZpZXIuY29t
         OyBQYXRoPS9jb250ZW50L3NlYXJjaA==
       !binary "Q29udGVudC1UeXBl":
       - !binary |-
@@ -46,10 +46,10 @@ http_interactions:
         Y2h1bmtlZA==
       !binary "RGF0ZQ==":
       - !binary |-
-        VHVlLCAxNyBKdWwgMjAxMiAyMDo1MDoxMyBHTVQ=
+        VGh1LCAxOSBKdWwgMjAxMiAxNDoxNDoxMCBHTVQ=
       !binary "WC1SZS1SZWY=":
       - !binary |-
-        MSAtOTYxODg3OTI1
+        MSAxNjg2OTM3Njg4
       !binary "UDNw":
       - !binary |-
         Q1A9IklEQyBEU1AgTEFXIEFETSBERVYgVEFJIFBTQSBQU0QgSVZBIElWRCBD
@@ -59,274 +59,500 @@ http_interactions:
       string: ! '<feed xmlns="http://www.w3.org/2005/Atom" xmlns:atom="http://www.w3.org/2005/Atom"
         xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/"
         xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/"><title>SCOPUS
-        Search Results: cancer</title><updated>2012-07-17T20:50:13.973Z</updated><author><name>Elsevier,
-        Inc.</name></author><id>http://api.elsevier.com:80/content/search/index:SCOPUS?query=cancer&amp;count=25&amp;start=0&amp;view=STANDARD&amp;field=</id><opensearch:totalResults>3270019</opensearch:totalResults><opensearch:startIndex>0</opensearch:startIndex><opensearch:itemsPerPage>25</opensearch:itemsPerPage><opensearch:Query
-        role="request" searchTerms="cancer" startPage="0"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=0&amp;count=25&amp;query=cancer"
-        ref="self" type="application/atom+xml"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=0&amp;count=25&amp;query=cancer"
-        ref="first" type="application/atom+xml"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=25&amp;count=25&amp;query=cancer"
-        ref="next" type="application/atom+xml"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=1975&amp;count=25&amp;query=cancer"
-        ref="last" type="application/atom+xml"/><entry><link href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84859628443"
-        ref="self"/><link href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84859628443"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84859628443"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84859628443</prism:url><dc:identifier>SCOPUS_ID:84859628443</dc:identifier><dc:title>Using
-        repeated choice experiments to evaluate the impact of policy changes on cervical
-        screening</dc:title><dc:creator>Johar, M.</dc:creator><prism:publicationName>Applied
-        Economics</prism:publicationName><prism:issn>00036846</prism:issn><prism:eIssn>14664283</prism:eIssn><prism:volume>45</prism:volume><prism:issueIdentifier>14</prism:issueIdentifier><prism:pageRange>1845-1855</prism:pageRange><prism:coverDate>2013-05-01</prism:coverDate><prism:doi>10.1080/00036846.2011.639741</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>University
-        of Technology Sydney | University of Technology ^ University of Technology
-        Sydney</affilname></affiliation><affiliation><affilname>University of New
-        South Wales | University of New South Wales</affilname></affiliation><affiliation><affilname>University
-        of Technology Sydney | University of Technology ^ University of Technology
-        Sydney</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84857694535" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84857694535"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84857694535"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84857694535</prism:url><dc:identifier>SCOPUS_ID:84857694535</dc:identifier><dc:title>The
-        welfare effects of innovative pharmaceuticals: An international perspective
-        from the Dutch experience</dc:title><dc:creator>Tsiachristas, A.</dc:creator><prism:publicationName>Applied
-        Economics</prism:publicationName><prism:issn>00036846</prism:issn><prism:eIssn>14664283</prism:eIssn><prism:volume>45</prism:volume><prism:issueIdentifier>9</prism:issueIdentifier><prism:pageRange>1219-1226</prism:pageRange><prism:coverDate>2013-03-01</prism:coverDate><prism:doi>10.1080/00036846.2011.628296</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Erasmus
+        Search Results: cancer</title><updated>2012-07-19T14:14:10.322Z</updated><author><name>Elsevier,
+        Inc.</name></author><id>http://api.elsevier.com:80/content/search/index:SCOPUS?query=cancer&amp;count=25&amp;start=0&amp;view=STANDARD&amp;field=</id><opensearch:totalResults>3274104</opensearch:totalResults><opensearch:startIndex>0</opensearch:startIndex><opensearch:itemsPerPage>25</opensearch:itemsPerPage><opensearch:Query
+        role="request" searchTerms="cancer" startPage="0"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=0&amp;count=25&amp;query=cancer&amp;sort=refeid"
+        ref="self" type="application/atom+xml"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=0&amp;count=25&amp;query=cancer&amp;sort=refeid"
+        ref="first" type="application/atom+xml"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=25&amp;count=25&amp;query=cancer&amp;sort=refeid"
+        ref="next" type="application/atom+xml"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=1975&amp;count=25&amp;query=cancer&amp;sort=refeid"
+        ref="last" type="application/atom+xml"/><entry><link href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84855801774"
+        ref="self"/><link href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84855801774"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84855801774"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84855801774</prism:url><dc:identifier>SCOPUS_ID:84855801774</dc:identifier><dc:title>American
+        Cancer Society guidelines on nutrition and physical activity for cancer prevention:
+        Reducing the Risk of Cancer with Healthy Food Choices and Physical Activity</dc:title><dc:creator>Kushi,
+        L.H.</dc:creator><prism:publicationName>CA Cancer Journal for Clinicians</prism:publicationName><prism:issn>00079235</prism:issn><prism:eIssn>15424863</prism:eIssn><prism:volume>62</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>30-67</prism:pageRange><prism:coverDate>2012-01-01</prism:coverDate><prism:doi>10.3322/caac.20140</prism:doi><citedby-count>3</citedby-count><affiliation><affilname>Kaiser
+        Permanente Division of Research | ^ Division of Research ^ Kaiser Foundation
+        Research Institute</affilname></affiliation><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>University
+        of California, San Diego, School of Medicine | University of California, San
+        Diego ^ University of California ^ Univ. California</affilname></affiliation><affiliation><affilname>University
+        of Alabama at Birmingham | University of Alabama at Birmingham</affilname></affiliation><affiliation><affilname>The
+        Cancer Institute of New Jersey | Cancer Institute of New Jersey</affilname></affiliation><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:79952232216" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=79952232216"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=79952232216"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:79952232216</prism:url><dc:identifier>SCOPUS_ID:79952232216</dc:identifier><dc:title>Global
+        cancer statistics</dc:title><dc:creator>Jemal, A.</dc:creator><prism:publicationName>CA
+        Cancer Journal for Clinicians</prism:publicationName><prism:issn>00079235</prism:issn><prism:eIssn>15424863</prism:eIssn><prism:volume>61</prism:volume><prism:issueIdentifier>2</prism:issueIdentifier><prism:pageRange>69-90</prism:pageRange><prism:coverDate>2011-03-01</prism:coverDate><prism:doi>10.3322/caac.20107</prism:doi><citedby-count>992</citedby-count><affiliation><affilname>International
+        Agency for Research on Cancer | International Agency for Research on Cancer
+        ^ Intl. Agency for Research on Cancer</affilname></affiliation><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:49849100140" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=49849100140"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=49849100140"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:49849100140</prism:url><dc:identifier>SCOPUS_ID:49849100140</dc:identifier><dc:title>Biological
+        approaches to therapy of pancreatic cancer</dc:title><dc:creator>Wong, H.H.</dc:creator><prism:publicationName>Pancreatology</prism:publicationName><prism:issn>14243903</prism:issn><prism:volume>8</prism:volume><prism:issueIdentifier>4-5</prism:issueIdentifier><prism:pageRange>431-461</prism:pageRange><prism:coverDate>2008-10-01</prism:coverDate><prism:doi>10.1159/000151536</prism:doi><citedby-count>11</citedby-count><affiliation><affilname>Barts
+        and The London Queen Mary''s School of Medicine and Dentistry</affilname></affiliation><affiliation><affilname>Barts
+        and The London Queen Mary''s School of Medicine and Dentistry</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:77955462853" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=77955462853"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=77955462853"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:77955462853</prism:url><dc:identifier>SCOPUS_ID:77955462853</dc:identifier><dc:title>Global
+        patterns of cancer incidence and mortality rates and trends</dc:title><dc:creator>Jemal,
+        A.</dc:creator><prism:publicationName>Cancer Epidemiology Biomarkers and Prevention</prism:publicationName><prism:issn>10559965</prism:issn><prism:volume>19</prism:volume><prism:issueIdentifier>8</prism:issueIdentifier><prism:pageRange>1893-1907</prism:pageRange><prism:coverDate>2010-08-01</prism:coverDate><prism:doi>10.1158/1055-9965.EPI-10-0437</prism:doi><citedby-count>134</citedby-count><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:68349100621" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=68349100621"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=68349100621"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:68349100621</prism:url><dc:identifier>SCOPUS_ID:68349100621</dc:identifier><dc:title>Occupation
+        and cancer follow-up of 15 million people in five Nordic countries</dc:title><dc:creator>Pukkala,
+        E.</dc:creator><prism:publicationName>Acta Oncologica</prism:publicationName><prism:issn>0284186X</prism:issn><prism:eIssn>1651226X</prism:eIssn><prism:volume>48</prism:volume><prism:issueIdentifier>5</prism:issueIdentifier><prism:pageRange>646-790</prism:pageRange><prism:coverDate>2009-11-18</prism:coverDate><prism:doi>10.1080/02841860902913546</prism:doi><citedby-count>72</citedby-count><affiliation><affilname>Finnish
+        Cancer Registry | Finnish Cancer Registry</affilname></affiliation><affiliation><affilname>Tampere
+        School of Public Health | University of Tampere</affilname></affiliation><affiliation><affilname>Cancer
+        Registry of Norway Institute of Population-Based Cancer Research | Cancer
+        Registry of Norway ^ Institute for Cancer Research</affilname></affiliation><affiliation><affilname>Københavns
+        Universitet | University of Copenhagen</affilname></affiliation><affiliation><affilname>Research
+        Centre for Occupational Health and Working Life, Iceland | Research Centre
+        for Occupational Health and Working Life ^ Research Center for Occupational
+        Health and Working Life</affilname></affiliation><affiliation><affilname>Karolinska
+        Institutet | Karolinska Institutet ^ Karolinska Institute ^ Karolinska Inst.</affilname></affiliation><affiliation><affilname>Icelandic
+        Cancer Registry | Icelandic Cancer Registry</affilname></affiliation><affiliation><affilname>Folkhälsan
+        | Folkhälsan Research Center ^ Folkhälsan Research Centre</affilname></affiliation><affiliation><affilname>Universitetet
+        i Tromsø | University of Tromsø ^ University of Tromso</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:79951834315" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=79951834315"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=79951834315"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:79951834315</prism:url><dc:identifier>SCOPUS_ID:79951834315</dc:identifier><dc:title>Cancer
+        screening in the United States, 2011: A review of current American Cancer
+        Society guidelines and issues in cancer screening</dc:title><dc:creator>Smith,
+        R.A.</dc:creator><prism:publicationName>CA Cancer Journal for Clinicians</prism:publicationName><prism:issn>00079235</prism:issn><prism:eIssn>15424863</prism:eIssn><prism:volume>61</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>8-30</prism:pageRange><prism:coverDate>2011-01-01</prism:coverDate><prism:doi>10.3322/caac.20096</prism:doi><citedby-count>33</citedby-count><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>Associate
+        Director of Federal Relations | Associate Director of Federal Relations</affilname></affiliation><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84860564294" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84860564294"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84860564294"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84860564294</prism:url><dc:identifier>SCOPUS_ID:84860564294</dc:identifier><dc:title>American
+        Cancer Society, American Society for Colposcopy and Cervical Pathology, and
+        American Society for Clinical Pathology screening guidelines for the prevention
+        and early detection of cervical cancer</dc:title><dc:creator>Saslow, D.</dc:creator><prism:publicationName>American
+        Journal of Clinical Pathology</prism:publicationName><prism:issn>00029173</prism:issn><prism:eIssn>19437722</prism:eIssn><prism:volume>137</prism:volume><prism:issueIdentifier>4</prism:issueIdentifier><prism:pageRange>516-542</prism:pageRange><prism:coverDate>2012-04-01</prism:coverDate><prism:doi>10.1309/AJCPTGD94EVRSJCG</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>National
+        Cancer Institute | National Cancer Institute ^ NIH</affilname></affiliation><affiliation><affilname>Emory
+        University School of Medicine | Emory University School of Medicine</affilname></affiliation><affiliation><affilname>Memorial
+        Sloan-Kettering Cancer Center | Memorial Sloan-Kettering Cancer Center ^ Mem.
+        Sloan-Kettering Cancer Center</affilname></affiliation><affiliation><affilname>University
+        of Minnesota System | University of Minnesota</affilname></affiliation><affiliation><affilname>University
+        of Massachusetts Medical School | University of Massachusetts Medical School
+        ^ Univ. of Massachusetts Med. School ^ University of Massachusetts ^</affilname></affiliation><affiliation><affilname>University
+        of Arizona | University of Arizona</affilname></affiliation><affiliation><affilname>University
+        of New Mexico School of Medicine | University of New Mexico School of Medicine
+        ^ University of New Mexico ^ Univ. New Mexico Sch. Med.</affilname></affiliation><affiliation><affilname>Massachusetts
+        General Hospital | Massachusetts General Hospital</affilname></affiliation><affiliation><affilname>National
+        Cancer Institute | National Cancer Institute ^ NIH</affilname></affiliation><affiliation><affilname>University
+        of Minnesota Medical School | University of Minnesota Medical School ^ Univ.
+        of Minnesota Medical School ^ Univ. Minnesota Med. Sch.</affilname></affiliation><affiliation><affilname>Weill
+        Cornell Medical College | Cornell University Medical College ^ Cornell University
+        ^ Weill Medical College of Cornell University</affilname></affiliation><affiliation><affilname>University
+        of California, San Francisco | University of California</affilname></affiliation><affiliation><affilname>McGill
+        University | McGill University</affilname></affiliation><affiliation><affilname>University
+        of Virginia Health System | University of Virginia Health System ^ University
+        of Virginia ^ Univ. of Virginia Hlth. Sci. Center ^ University of Virginia
+        Health Sciences Center</affilname></affiliation><affiliation><affilname>American
+        Society for Clinical Pathology Institute | American Society for Clinical Pathology
+        Institute</affilname></affiliation><affiliation><affilname>Duke University
+        School of Medicine | Duke University Medical Center ^ Duke Univ. Med. Cent.</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:80155159982" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=80155159982"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=80155159982"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:80155159982</prism:url><dc:identifier>SCOPUS_ID:80155159982</dc:identifier><dc:title>Recent
+        developments in treatment stratification for metastatic breast cancer</dc:title><dc:creator>Barton,
+        S.</dc:creator><prism:publicationName>Drugs</prism:publicationName><prism:issn>00126667</prism:issn><prism:eIssn>11791950</prism:eIssn><prism:volume>71</prism:volume><prism:issueIdentifier>16</prism:issueIdentifier><prism:pageRange>2099-2113</prism:pageRange><prism:coverDate>2011-11-07</prism:coverDate><prism:doi>10.2165/11594480-000000000-00000</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Royal
+        Marsden Hospital, Sutton | Royal Marsden Hospital ^ The Royal Marsden Hospital</affilname></affiliation><affiliation><affilname>Cancer
+        Research UK | Imperial Cancer Research Fund ^ Cancer Research UK</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:77955709954" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=77955709954"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=77955709954"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:77955709954</prism:url><dc:identifier>SCOPUS_ID:77955709954</dc:identifier><dc:title>Anti-cancer
+        drug resistance: Understanding the mechanisms through the use of integrative
+        genomics and functional RNA interference</dc:title><dc:creator>Tan, D.S.-W.</dc:creator><prism:publicationName>European
+        Journal of Cancer</prism:publicationName><prism:issn>09598049</prism:issn><prism:volume>46</prism:volume><prism:issueIdentifier>12</prism:issueIdentifier><prism:pageRange>2166-2177</prism:pageRange><prism:coverDate>2010-04-20</prism:coverDate><prism:doi>10.1016/j.ejca.2010.03.019</prism:doi><citedby-count>15</citedby-count><affiliation><affilname>Cancer
+        Research UK | Imperial Cancer Research Fund ^ Cancer Research UK</affilname></affiliation><affiliation><affilname>National
+        Cancer Centre, Singapore | National Cancer Centre ^ National Cancer Center</affilname></affiliation><affiliation><affilname>National
+        Cancer Centre, Singapore | National Cancer Centre ^ National Cancer Center</affilname></affiliation><affiliation><affilname>Barts
+        and The London Queen Mary''s School of Medicine and Dentistry</affilname></affiliation><affiliation><affilname>Royal
+        Marsden NHS Foundation Trust | Royal Marsden NHS Trust ^ Royal Marsden NHS
+        Foundation Trust</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:45949095855" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=45949095855"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=45949095855"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:45949095855</prism:url><dc:identifier>SCOPUS_ID:45949095855</dc:identifier><dc:title>Quality
+        of life of family caregivers of cancer survivors: Across the trajectory of
+        the illness</dc:title><dc:creator>Kim, Y.</dc:creator><prism:publicationName>Cancer</prism:publicationName><prism:issn>0008543X</prism:issn><prism:eIssn>10970142</prism:eIssn><prism:volume>112</prism:volume><prism:issueIdentifier>11
+        SUPPL.</prism:issueIdentifier><prism:pageRange>2556-2568</prism:pageRange><prism:coverDate>2008-06-01</prism:coverDate><prism:doi>10.1002/cncr.23449</prism:doi><citedby-count>62</citedby-count><affiliation><affilname>Michigan
+        State University | Michigan State University</affilname></affiliation><affiliation><affilname>Behavioral
+        Research Center | American Cancer Society</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:67749086527" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=67749086527"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=67749086527"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:67749086527</prism:url><dc:identifier>SCOPUS_ID:67749086527</dc:identifier><dc:title>Vitamin
+        D gene pathway polymorphisms and risk of colorectal, breast, and prostate
+        cancer</dc:title><dc:creator>McCullough, M.L.</dc:creator><prism:publicationName>Annual
+        Review of Nutrition</prism:publicationName><prism:issn>01999885</prism:issn><prism:volume>29</prism:volume><prism:pageRange>111-132</prism:pageRange><prism:coverDate>2009-08-01</prism:coverDate><prism:doi>10.1146/annurev-nutr-080508-141248</prism:doi><citedby-count>32</citedby-count><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>Rollins
+        School of Public Health | Emory University</affilname></affiliation><prism:aggregationType>Book
+        Series</prism:aggregationType><subtype>re</subtype></entry><entry><link href="http://api.elsevier.com/content/abstract/SCOPUS_ID:3042628862"
+        ref="self"/><link href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=3042628862"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=3042628862"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:3042628862</prism:url><dc:identifier>SCOPUS_ID:3042628862</dc:identifier><dc:title>Annual
+        report to the nation on the status of cancer, 1975-2001, with a special feature
+        regarding survival</dc:title><dc:creator>Jemal, A.</dc:creator><prism:publicationName>Cancer</prism:publicationName><prism:issn>0008543X</prism:issn><prism:volume>101</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>3-27</prism:pageRange><prism:coverDate>2004-07-01</prism:coverDate><prism:doi>10.1002/cncr.20288</prism:doi><citedby-count>592</citedby-count><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>National
+        Cancer Institute | National Cancer Institute ^ NIH</affilname></affiliation><affiliation><affilname>LSU
+        Health Sciences Center - New Orleans | Louisiana State University Medical
+        Center ^ Louisiana State University Health Sciences Center ^ Louisiana State
+        Univ. Medical Center ^ Louisiana State Univ. Med. Cent. ^ LSU Medical Center</affilname></affiliation><affiliation><affilname>N.
+        Amer. Assoc. Ctrl. Cancer Regis. | N. Amer. Assoc. Ctrl. Cancer Regis. ^ N.
+        Amer. Assoc. Ctrl. Cancer R. ^ N. Amer. Assoc. Ctrl. Cancer Regist.</affilname></affiliation><affiliation><affilname>National
+        Center for Chronic Disease Prevention and Health Promotion | National Center
+        for Chronic Disease Prevention and Health Promotion ^ Centers for Dis. Contr.
+        and Prev.</affilname></affiliation><affiliation><affilname>National Center
+        for Health Statistics | National Center for Health Statistics ^ Natl. Center
+        for Health Statistics</affilname></affiliation><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84859747129" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84859747129"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84859747129"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84859747129</prism:url><dc:identifier>SCOPUS_ID:84859747129</dc:identifier><dc:title>Magnetic
+        resonance spectroscopy of cancer metabolism and response to therapy</dc:title><dc:creator>McIntyre,
+        D.J.O.</dc:creator><prism:publicationName>Radiation Research</prism:publicationName><prism:issn>00337587</prism:issn><prism:eIssn>19385404</prism:eIssn><prism:volume>177</prism:volume><prism:issueIdentifier>4</prism:issueIdentifier><prism:pageRange>398-435</prism:pageRange><prism:coverDate>2012-04-01</prism:coverDate><prism:doi>10.1667/RR2903.1</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Cancer
+        Research UK | Imperial Cancer Research Fund ^ Cancer Research UK</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:45949088183" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=45949088183"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=45949088183"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:45949088183</prism:url><dc:identifier>SCOPUS_ID:45949088183</dc:identifier><dc:title>Physical
+        and psychological long-term and late effects of cancer</dc:title><dc:creator>Stein,
+        K.D.</dc:creator><prism:publicationName>Cancer</prism:publicationName><prism:issn>0008543X</prism:issn><prism:eIssn>10970142</prism:eIssn><prism:volume>112</prism:volume><prism:issueIdentifier>11
+        SUPPL.</prism:issueIdentifier><prism:pageRange>2577-2592</prism:pageRange><prism:coverDate>2008-06-01</prism:coverDate><prism:doi>10.1002/cncr.23448</prism:doi><citedby-count>55</citedby-count><affiliation><affilname>Behavioral
+        Research Center | American Cancer Society</affilname></affiliation><affiliation><affilname>Rollins
+        School of Public Health | Emory University</affilname></affiliation><affiliation><affilname>Fred
+        Hutchinson Cancer Research Center | Fred Hutchinson Cancer Research Center
+        ^ Fred Hutchinson Cancer Res. Center</affilname></affiliation><affiliation><affilname>University
+        of Washington School of Medicine | University of Washington ^ University of
+        Washington School of Medicine ^ Univ. Washington Sch. Med. ^ Univ. of Washington
+        Sch. of Medicine</affilname></affiliation><affiliation><affilname>University
+        of Kentucky College of Medicine | University of Kentucky College of Medicine
+        ^ Univ. of Kentucky Coll. of Medicine ^ Univ. Kentucky Coll. Med.</affilname></affiliation><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:1542320666" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=1542320666"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=1542320666"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:1542320666</prism:url><dc:identifier>SCOPUS_ID:1542320666</dc:identifier><dc:title>Diet,
+        nutrition and the prevention of cancer</dc:title><dc:creator>Key, T.J.</dc:creator><prism:publicationName>Public
+        Health Nutrition</prism:publicationName><prism:issn>13689800</prism:issn><prism:volume>7</prism:volume><prism:issueIdentifier>1
+        A</prism:issueIdentifier><prism:pageRange>187-200</prism:pageRange><prism:coverDate>2004-03-16</prism:coverDate><prism:doi>10.1079/PHN2003588</prism:doi><citedby-count>196</citedby-count><affiliation><affilname>University
+        of Oxford | University of Oxford ^ Oxford University</affilname></affiliation><affiliation><affilname>National
+        Cancer Institute | National Cancer Institute ^ NIH</affilname></affiliation><affiliation><affilname>Harvard
+        School of Public Health | Harvard School of Public Health</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:80055117035" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=80055117035"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=80055117035"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:80055117035</prism:url><dc:identifier>SCOPUS_ID:80055117035</dc:identifier><dc:title>Common
+        breast cancer susceptibility alleles are associated with tumour subtypes in
+        BRCA1 and BRCA2 mutation carriers: results from the Consortium of Investigators
+        of Modifiers of BRCA1/2</dc:title><dc:creator>Mulligan, A.M.</dc:creator><prism:publicationName>Breast
+        Cancer Research</prism:publicationName><prism:issn>14655411</prism:issn><prism:eIssn>1465542X</prism:eIssn><prism:volume>13</prism:volume><prism:issueIdentifier>6</prism:issueIdentifier><prism:coverDate>2011-11-02</prism:coverDate><prism:doi>10.1186/bcr3052</prism:doi><citedby-count>5</citedby-count><affiliation><affilname>University
+        of Toronto | University of Toronto</affilname></affiliation><affiliation><affilname>Mayo
+        Clinic | Mayo Clinic</affilname></affiliation><affiliation><affilname>University
+        of Cambridge | University of Cambridge</affilname></affiliation><affiliation><affilname>University
+        of Pennsylvania, School of Medicine | University of Pennsylvania School of
+        Medicine ^ Univ. of Pennsylvania Sch. of Med. ^ Univ. Pennsylvania Sch. Med.</affilname></affiliation><affiliation><affilname>University
+        of Southampton | University of Southampton</affilname></affiliation><affiliation><affilname>Helsinki
+        University Central Hospital | Helsinki University Central Hospital ^ Helsinki
+        University Hospital</affilname></affiliation><affiliation><affilname>Keck
+        School of Medicine of USC | University of Southern California School of Medicine
+        ^ University of Southern California ^ Univ. South. California Sch. Med.</affilname></affiliation><affiliation><affilname>Memorial
+        Sloan-Kettering Cancer Center | Memorial Sloan-Kettering Cancer Center ^ Mem.
+        Sloan-Kettering Cancer Center</affilname></affiliation><affiliation><affilname>National
+        Cancer Institute | National Cancer Institute ^ NIH</affilname></affiliation><affiliation><affilname>Queensland
+        Institute of Medical Research | Queensland Institute of Medical Research ^
+        Queensland Inst. of Medical Research</affilname></affiliation><affiliation><affilname>Uniklinik
+        Köln</affilname></affiliation><affiliation><affilname>CHU de Lyon | Clin.
+        Dermatol. ^ Hospices Civils de Lyon</affilname></affiliation><affiliation><affilname>Universite
+        Claude Bernard Lyon 1</affilname></affiliation><affiliation><affilname>Vilnius
+        University Hospital | Vilnius University Hospital</affilname></affiliation><affiliation><affilname>Rigshospitalet
+        | Rigshospitalet ^ Rigshosp.</affilname></affiliation><affiliation><affilname>Copenhagen
+        University Hospital | Copenhagen University Hospital ^ University Hospital
+        ^ University Hospital of Copenhagen</affilname></affiliation><affiliation><affilname>Centro
+        Nacional de Investigaciones Oncológicas | Spanish National Cancer Centre (CNIO)
+        ^ Centro Nacional de Investigaciones Oncológicas</affilname></affiliation><affiliation><affilname>Universidad
+        de Valladolid | Universidad de Valladolid ^ University of Valladolid</affilname></affiliation><affiliation><affilname>Hospital
+        Clinico Universitario Lozano Blesa | Hospital Clinico Universitario ^ Hospital
+        Clínico Universitario Lozano Blesa ^ Hospital Clínico Universitario</affilname></affiliation><affiliation><affilname>Demokritos
+        National Centre for Scientific Research</affilname></affiliation><affiliation><affilname>Centro
+        Nacional de Investigaciones Oncológicas | Spanish National Cancer Centre (CNIO)
+        ^ Centro Nacional de Investigaciones Oncológicas</affilname></affiliation><affiliation><affilname>Fondazione
+        IRCCS Istituto Nazionale dei Tumori, Milan | Istituto Nazionale Tumori ^ Istituto
+        Nazionale per lo Studio e la Cura dei Tumori ^ National Cancer Institute</affilname></affiliation><affiliation><affilname>Istituto
+        Europeo di Oncologia | European Institute of Oncology</affilname></affiliation><affiliation><affilname>Centro
+        Di Riferimento Oncologico Aviano | Centro di Riferimento Oncologico</affilname></affiliation><affiliation><affilname>Università
+        degli Studi di Torino | Università di Torino ^ University of Turin ^ University
+        of Torino</affilname></affiliation><affiliation><affilname>Università degli
+        Studi di Firenze | University of Florence ^ Università di Firenze</affilname></affiliation><affiliation><affilname>Università
+        degli Studi di Roma La Sapienza</affilname></affiliation><affiliation><affilname>Istituto
+        Nazionale Tumori Regina Elena | Regina Elena Cancer Institute ^ Istituto Regina
+        Elena</affilname></affiliation><affiliation><affilname>Istituto Europeo di
+        Oncologia | European Institute of Oncology</affilname></affiliation><affiliation><affilname>German
+        Cancer Research Center | German Cancer Research Center ^ Deutsches Krebsforschungszentrum</affilname></affiliation><affiliation><affilname>The
+        Netherlands Cancer Institute | Netherlands Cancer Institute ^ The Netherlands
+        Cancer Institute</affilname></affiliation><affiliation><affilname>VU University
+        Medical Center | VU University Medical Center ^ Free University Hospital</affilname></affiliation><affiliation><affilname>Leiden
+        University Medical Center - LUMC | Leiden University Medical Center ^ University
+        Hospital ^ Leiden University Medical Centre ^ University Hospital Leiden</affilname></affiliation><affiliation><affilname>University
+        Hospital Maastricht | University Hospital Maastricht</affilname></affiliation><affiliation><affilname>Radboud
+        University Nijmegen Medical Centre | University Hospital Nijmegen ^ Radboud
+        University Nijmegen Medical Centre</affilname></affiliation><affiliation><affilname>Radboud
+        University Nijmegen Medical Centre | University Hospital Nijmegen ^ Radboud
+        University Nijmegen Medical Centre</affilname></affiliation><affiliation><affilname>Erasmus
         University Rotterdam | Erasmus University ^ Erasmus University Rotterdam ^
-        Erasmus Univ.</affilname></affiliation><affiliation><affilname>APE bv | APE
-        bv</affilname></affiliation><affiliation><affilname>Maastricht University
-        | Maastricht University ^ University of Limburg ^ University of Maastricht</affilname></affiliation><affiliation><affilname>University
-        of Amsterdam | University of Amsterdam</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84862275725" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84862275725"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84862275725"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84862275725</prism:url><dc:identifier>SCOPUS_ID:84862275725</dc:identifier><dc:title>MicroRNAs:
-        Synthesis, gene regulation and osteoblast differentiation</dc:title><dc:creator>Vimalraj,
-        S.</dc:creator><prism:publicationName>Current Issues in Molecular Biology</prism:publicationName><prism:issn>14673037</prism:issn><prism:volume>15</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>7-18</prism:pageRange><prism:coverDate>2013-01-01</prism:coverDate><citedby-count>0</citedby-count><affiliation><affilname>SRM
-        University | SRM University</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84860599292" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84860599292"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84860599292"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84860599292</prism:url><dc:identifier>SCOPUS_ID:84860599292</dc:identifier><dc:title>Chemical
-        composition and evaluation of antioxidant and antimicrobial activities of
-        Tunisian Thymelaea hirsuta with special reference to its mode of action</dc:title><dc:creator>Trigui,
-        M.</dc:creator><prism:publicationName>Industrial Crops and Products</prism:publicationName><prism:issn>09266690</prism:issn><prism:volume>41</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>150-157</prism:pageRange><prism:coverDate>2013-01-01</prism:coverDate><prism:doi>10.1016/j.indcrop.2012.04.011</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>University
-        of Sfax | ^ University of Sfax</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861674658" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861674658"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861674658"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84861674658</prism:url><dc:identifier>SCOPUS_ID:84861674658</dc:identifier><dc:title>Extraction,
-        identification and quantitative HPLC analysis of flavonoids from sarang semut
-        (Myrmecodia pendan)</dc:title><dc:creator>Engida, A.M.</dc:creator><prism:publicationName>Industrial
-        Crops and Products</prism:publicationName><prism:issn>09266690</prism:issn><prism:volume>41</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>392-396</prism:pageRange><prism:coverDate>2013-01-01</prism:coverDate><prism:doi>10.1016/j.indcrop.2012.04.043</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>National
-        Taiwan University of Science and Technology | National Taiwan University of
-        Science and Technology ^ Natl. Taiwan Univ. Sci. and Technol. ^ Natl. Taiwan
-        Univ. of Sci./Technol.</affilname></affiliation><affiliation><affilname>Widya
-        Mandala Surabaya Catholic University | Widya Mandala Surabaya Catholic University
-        ^ Widya Mandala Catholic University</affilname></affiliation><affiliation><affilname>Can
-        Tho University | Cantho University ^ Can Tho University</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861475394" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861475394"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861475394"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84861475394</prism:url><dc:identifier>SCOPUS_ID:84861475394</dc:identifier><dc:title>Analysis
-        and evaluation of essential oil components of cinnamon barks using GC-MS and
-        FTIR spectroscopy</dc:title><dc:creator>Li, Y.-Q.</dc:creator><prism:publicationName>Industrial
-        Crops and Products</prism:publicationName><prism:issn>09266690</prism:issn><prism:volume>41</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>269-278</prism:pageRange><prism:coverDate>2013-01-01</prism:coverDate><prism:doi>10.1016/j.indcrop.2012.04.056</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>South
-        China Agricultural University | South China Agricultural University</affilname></affiliation><affiliation><affilname>Guangdong
-        Key Laboratory for Innovative Development and Utilization of Forest Plant
-        Germplasm | Guangdong Key Laboratory for Innovative Development and Utilization
-        of Forest Plant Germplasm</affilname></affiliation><affiliation><affilname>State
-        Key Laboratory for Conservation and Utilization of Subtropical Agro-bioresources
-        | State Key Laboratory for Conservation and Utilization of Subtropical Agro-bioresources</affilname></affiliation><affiliation><affilname>Guangxi
-        Institute of Botany, Chinese Academy of Sciences | Guangxi Institute of Botany</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:80052858353" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=80052858353"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=80052858353"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:80052858353</prism:url><dc:identifier>SCOPUS_ID:80052858353</dc:identifier><dc:title>Preventive
-        care: Underused even when free. Is there something else at work?</dc:title><dc:creator>Carrieri,
-        V.</dc:creator><prism:publicationName>Applied Economics</prism:publicationName><prism:issn>00036846</prism:issn><prism:eIssn>14664283</prism:eIssn><prism:volume>45</prism:volume><prism:issueIdentifier>2</prism:issueIdentifier><prism:pageRange>239-253</prism:pageRange><prism:coverDate>2013-01-01</prism:coverDate><prism:doi>10.1080/00036846.2011.597729</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Università
-        di Salerno | Università di Salerno ^ University of Salerno</affilname></affiliation><affiliation><affilname>University
-        of Chicago | University of Chicago</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84860275854" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84860275854"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84860275854"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84860275854</prism:url><dc:identifier>SCOPUS_ID:84860275854</dc:identifier><dc:title>Antifungal
-        activity and detailed chemical characterization of Cistus ladanifer phenolic
-        extracts</dc:title><dc:creator>Barros, L.</dc:creator><prism:publicationName>Industrial
-        Crops and Products</prism:publicationName><prism:issn>09266690</prism:issn><prism:volume>41</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>41-45</prism:pageRange><prism:coverDate>2013-01-01</prism:coverDate><prism:doi>10.1016/j.indcrop.2012.03.038</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Escola
-        Superior Agrária Bragança | Instituto Politécnico de Bragança ^ Escola Superior
-        Agrária ^ Escola Superior Agrária de Bragança</affilname></affiliation><affiliation><affilname>Universidad
-        de Salamanca | Universidad de Salamanca ^ University of Salamanca</affilname></affiliation><affiliation><affilname>Universidade
-        do Minho | University of Minho ^ Universidade do Minho</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861717568" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861717568"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861717568"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84861717568</prism:url><dc:identifier>SCOPUS_ID:84861717568</dc:identifier><dc:title>Cultivation
-        of Pleurotus citrinopileatus on handmade paper and cardboard industrial wastes</dc:title><dc:creator>Kulshreshtha,
-        S.</dc:creator><prism:publicationName>Industrial Crops and Products</prism:publicationName><prism:issn>09266690</prism:issn><prism:volume>41</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>340-346</prism:pageRange><prism:coverDate>2013-01-01</prism:coverDate><prism:doi>10.1016/j.indcrop.2012.04.053</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>University
-        of Rajasthan | University of Rajasthan</affilname></affiliation><affiliation><affilname>International
-        College for Girls | International College for Girls</affilname></affiliation><affiliation><affilname>Jiwaji
-        University | Jiwaji University</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84860682106" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84860682106"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84860682106"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84860682106</prism:url><dc:identifier>SCOPUS_ID:84860682106</dc:identifier><dc:title>Composition
-        of ethanolic extracts of wood and bark from Acer saccharum and Betula alleghaniensis
-        trees of different vigor classes</dc:title><dc:creator>St-Pierre, F.</dc:creator><prism:publicationName>Industrial
-        Crops and Products</prism:publicationName><prism:issn>09266690</prism:issn><prism:volume>41</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>179-187</prism:pageRange><prism:coverDate>2013-01-01</prism:coverDate><prism:doi>10.1016/j.indcrop.2012.04.027</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Université
-        Laval | Université Laval ^ Laval University ^ Universite Laval</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861696433" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861696433"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861696433"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84861696433</prism:url><dc:identifier>SCOPUS_ID:84861696433</dc:identifier><dc:title>Artemisinin
-        concentration and antioxidant capacity of Artemisia annua distillation byproduct</dc:title><dc:creator>Ferreira,
-        J.F.S.</dc:creator><prism:publicationName>Industrial Crops and Products</prism:publicationName><prism:issn>09266690</prism:issn><prism:volume>41</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>294-298</prism:pageRange><prism:coverDate>2013-01-01</prism:coverDate><prism:doi>10.1016/j.indcrop.2012.05.005</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>USDA
-        ARS Appalachian Farming Systems Research Center | USDA-ARS ^ Agricultural
-        Research Service ^ U.S. Department of Agriculture</affilname></affiliation><affiliation><affilname>University
-        of Wyoming | University of Wyoming ^ Univ of Wyoming</affilname></affiliation><affiliation><affilname>USDA
-        ARS Salinity Laboratory | USDA-ARS ^ USDA</affilname></affiliation><affiliation><affilname>USDA
-        ARS National Soil Erosion Research Laboratory | USDA-ARS ^ USDA Agricultural
-        Research Service</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84860684988" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84860684988"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84860684988"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84860684988</prism:url><dc:identifier>SCOPUS_ID:84860684988</dc:identifier><dc:title>Allium
-        roseum L. volatile compounds profile and antioxydant activity for chemotype
-        discrimination - Case study of the wild plant of Sfax (Tunisia)</dc:title><dc:creator>Zouari,
-        S.</dc:creator><prism:publicationName>Industrial Crops and Products</prism:publicationName><prism:issn>09266690</prism:issn><prism:volume>41</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>172-178</prism:pageRange><prism:coverDate>2013-01-01</prism:coverDate><prism:doi>10.1016/j.indcrop.2012.04.020</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>UR
-        Study and Management of Urban and Coastal Environments | UR Study and Management
-        of Urban and Coastal Environments</affilname></affiliation><affiliation><affilname>Institute
-        of Arid Areas | Institute of Arid Areas ^ Institute of the Arid Areas</affilname></affiliation><affiliation><affilname>University
-        of Sfax | ^ University of Sfax</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84860304242" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84860304242"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84860304242"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84860304242</prism:url><dc:identifier>SCOPUS_ID:84860304242</dc:identifier><dc:title>Hidden
-        treasure of the nature: PAs. The effects of grape seeds on free formaldehyde
-        of leather</dc:title><dc:creator>Bayramoĝlu, E.E.</dc:creator><prism:publicationName>Industrial
-        Crops and Products</prism:publicationName><prism:issn>09266690</prism:issn><prism:volume>41</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>53-56</prism:pageRange><prism:coverDate>2013-01-01</prism:coverDate><prism:doi>10.1016/j.indcrop.2012.03.040</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Ege
-        University Faculty of Engineering | Ege University ^ University of Ege</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:80052650211" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=80052650211"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=80052650211"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:80052650211</prism:url><dc:identifier>SCOPUS_ID:80052650211</dc:identifier><dc:title>Understanding
-        how experts rate cigars: A ''havanometric'' analysis</dc:title><dc:creator>Vaillant,
-        N.G.</dc:creator><prism:publicationName>Applied Economics</prism:publicationName><prism:issn>00036846</prism:issn><prism:eIssn>14664283</prism:eIssn><prism:volume>45</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>99-109</prism:pageRange><prism:coverDate>2013-01-01</prism:coverDate><prism:doi>10.1080/00036846.2011.595691</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Universite
-        Catholique de Lille | Université Catholique de Lille ^ Universite Catholique
-        de Lille ^ Univ. Catholique de Lille</affilname></affiliation><affiliation><affilname>Universite
-        de Nantes | Université de Nantes</affilname></affiliation><affiliation><affilname>INED
-        Institut National d'' Études Démographiques | INED ^ Institut National d''Études
-        Démographiques</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84856162462" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84856162462"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84856162462"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84856162462</prism:url><dc:identifier>SCOPUS_ID:84856162462</dc:identifier><dc:title>Remote
-        sensing image processing</dc:title><dc:creator>Camps-Valls, G.</dc:creator><prism:publicationName>Synthesis
-        Lectures on Image, Video, and Multimedia Processing</prism:publicationName><prism:issn>15598136</prism:issn><prism:eIssn>15598144</prism:eIssn><prism:volume>12</prism:volume><prism:pageRange>1-194</prism:pageRange><prism:coverDate>2012-12-18</prism:coverDate><citedby-count>0</citedby-count><affiliation><affilname>Universitat
-        de Valencia | Universidad de Valencia ^ Universitat de València ^ University
-        of Valencia</affilname></affiliation><prism:aggregationType>Book Series</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84857997256" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84857997256"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84857997256"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84857997256</prism:url><dc:identifier>SCOPUS_ID:84857997256</dc:identifier><dc:title>Methylation
-        of the KEAP1 gene promoter region in human colorectal cancer</dc:title><dc:creator>Hanada,
-        N.</dc:creator><prism:publicationName>BMC Cancer</prism:publicationName><prism:issn>14712407</prism:issn><prism:volume>12</prism:volume><prism:coverDate>2012-12-13</prism:coverDate><prism:doi>10.1186/1471-2407-12-66</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Hirosaki
-        University School of Medicine | Hirosaki University School of Medicine ^ Hirosaki
-        Univ. School of Medicine</affilname></affiliation><affiliation><affilname>Hirosaki
-        University School of Medicine | Hirosaki University School of Medicine ^ Hirosaki
-        Univ. School of Medicine</affilname></affiliation><affiliation><affilname>Hirosaki
-        University School of Medicine | Hirosaki University School of Medicine ^ Hirosaki
-        Univ. School of Medicine</affilname></affiliation><affiliation><affilname>Hirosaki
-        University School of Medicine | Hirosaki University School of Medicine ^ Hirosaki
-        Univ. School of Medicine</affilname></affiliation><affiliation><affilname>China
-        Medical University Shenyang | China Medical University</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84858779332" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84858779332"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84858779332"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84858779332</prism:url><dc:identifier>SCOPUS_ID:84858779332</dc:identifier><dc:title>Breaking
-        the cycle in Maryland: Oral health policy change in the face of tragedy</dc:title><dc:creator>Thuku,
-        N.M.</dc:creator><prism:publicationName>Journal of Public Health Dentistry</prism:publicationName><prism:issn>00224006</prism:issn><prism:eIssn>17527325</prism:eIssn><prism:volume>72</prism:volume><prism:issueIdentifier>SUPPL.1</prism:issueIdentifier><prism:pageRange>S7-S13</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><prism:doi>10.1111/j.1752-7325.2012.00328.x</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>DHMH
-        | Maryland Department of Health and Mental Hygiene</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84857349679" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84857349679"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84857349679"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84857349679</prism:url><dc:identifier>SCOPUS_ID:84857349679</dc:identifier><dc:title>Nano-sized
-        albumin-copolymer micelles for efficient doxorubicin delivery</dc:title><dc:creator>Wu,
-        Y.</dc:creator><prism:publicationName>Biointerphases</prism:publicationName><prism:issn>19348630</prism:issn><prism:eIssn>15594106</prism:eIssn><prism:volume>7</prism:volume><prism:issueIdentifier>1-4</prism:issueIdentifier><prism:coverDate>2012-12-01</prism:coverDate><prism:doi>10.1007/s13758-011-0005-7</prism:doi><citedby-count>1</citedby-count><affiliation><affilname>Institute
-        of Organic Chemistry III | Institute of Organic Chemistry III</affilname></affiliation><affiliation><affilname>National
-        University of Singapore | National University of Singapore</affilname></affiliation><affiliation><affilname>Duke-NUS
-        Graduate Medical School Singapore | Duke-NUS Graduate Medical School ^ Duke-NUS
-        Graduate Medical School Singapore</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84862596356" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84862596356"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84862596356"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84862596356</prism:url><dc:identifier>SCOPUS_ID:84862596356</dc:identifier><dc:title>Staying
-        coherent after kent: From optical communications to biomedical optics</dc:title><dc:creator>Sampson,
-        D.D.</dc:creator><prism:publicationName>Photonic Sensors</prism:publicationName><prism:issn>16749251</prism:issn><prism:eIssn>21907439</prism:eIssn><prism:volume>1</prism:volume><prism:issueIdentifier>4</prism:issueIdentifier><prism:pageRange>323-350</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><prism:doi>10.1007/s13320-011-0043-2</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>University
-        of Western Australia | University of Western Australia</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861907871" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861907871"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861907871"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84861907871</prism:url><dc:identifier>SCOPUS_ID:84861907871</dc:identifier><dc:title>Consider
-        the squirrel: Freaks, vermin, and value in the ruin(s) of nature</dc:title><dc:creator>Holm,
-        N.</dc:creator><prism:publicationName>Cultural Critique</prism:publicationName><prism:issn>08824371</prism:issn><prism:eIssn>15345203</prism:eIssn><prism:volume>80</prism:volume><prism:pageRange>56-95</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><prism:doi>10.1353/cul.2012.0005</prism:doi><citedby-count>0</citedby-count><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84862233340" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84862233340"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84862233340"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84862233340</prism:url><dc:identifier>SCOPUS_ID:84862233340</dc:identifier><dc:title>Drug
-        repurposing from an academic perspective</dc:title><dc:creator>Oprea, T.I.</dc:creator><prism:publicationName>Drug
-        Discovery Today: Therapeutic Strategies</prism:publicationName><prism:issn>17406773</prism:issn><prism:volume>8</prism:volume><prism:issueIdentifier>3-4</prism:issueIdentifier><prism:pageRange>61-69</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><prism:doi>10.1016/j.ddstr.2011.10.002</prism:doi><citedby-count>1</citedby-count><affiliation><affilname>University
-        of New Mexico School of Medicine | University of New Mexico School of Medicine
-        ^ University of New Mexico ^ Univ. New Mexico Sch. Med.</affilname></affiliation><affiliation><affilname>University
-        of New Mexico School of Medicine | University of New Mexico School of Medicine
-        ^ University of New Mexico ^ Univ. New Mexico Sch. Med.</affilname></affiliation><affiliation><affilname>University
-        of New Mexico | University of New Mexico ^ Univ of New Mexico</affilname></affiliation><affiliation><affilname>Danmarks
-        Tekniske Universitet | Technical University of Denmark ^ Technical Univ of
-        Denmark</affilname></affiliation><affiliation><affilname>University of New
-        Mexico School of Medicine | University of New Mexico School of Medicine ^
-        University of New Mexico ^ Univ. New Mexico Sch. Med.</affilname></affiliation><affiliation><affilname>Carnegie
-        Mellon University | Carnegie Mellon University ^ Carnegie Mellon Univ ^ Carnegie-Mellon
-        University</affilname></affiliation><affiliation><affilname>University of
-        New Mexico | University of New Mexico ^ Univ of New Mexico</affilname></affiliation><affiliation><affilname>University
-        of Florida | University of Florida</affilname></affiliation><affiliation><affilname>University
-        of New Mexico | University of New Mexico ^ Univ of New Mexico</affilname></affiliation><affiliation><affilname>University
-        of New Mexico School of Medicine | University of New Mexico School of Medicine
-        ^ University of New Mexico ^ Univ. New Mexico Sch. Med.</affilname></affiliation><affiliation><affilname>Conrad
-        Prebys Center for Chemical Genomics | Conrad Prebys Center for Chemical Genomics</affilname></affiliation><affiliation><affilname>University
-        of New Mexico School of Medicine | University of New Mexico School of Medicine
-        ^ University of New Mexico ^ Univ. New Mexico Sch. Med.</affilname></affiliation><affiliation><affilname>University
-        of New Mexico School of Medicine | University of New Mexico School of Medicine
-        ^ University of New Mexico ^ Univ. New Mexico Sch. Med.</affilname></affiliation><affiliation><affilname>University
-        of New Mexico | University of New Mexico ^ Univ of New Mexico</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861054566" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861054566"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861054566"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84861054566</prism:url><dc:identifier>SCOPUS_ID:84861054566</dc:identifier><dc:title>Global
-        health governance at a crossroads: Trademark protection v. tobacco control
-        in international investment law</dc:title><dc:creator>Vadi, V.S.</dc:creator><prism:publicationName>Stanford
-        Journal of International Law</prism:publicationName><prism:issn>07315082</prism:issn><prism:volume>48</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>93-130</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><citedby-count>0</citedby-count><affiliation><affilname>Maastricht
-        University | Maastricht University ^ University of Limburg ^ University of
-        Maastricht</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84859104399" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84859104399"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84859104399"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84859104399</prism:url><dc:identifier>SCOPUS_ID:84859104399</dc:identifier><dc:title>Patients''
-        attitudes toward screening for medical conditions in a dental setting</dc:title><dc:creator>Greenberg,
-        B.L.</dc:creator><prism:publicationName>Journal of Public Health Dentistry</prism:publicationName><prism:issn>00224006</prism:issn><prism:eIssn>17527325</prism:eIssn><prism:volume>72</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>28-35</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><prism:doi>10.1111/j.1752-7325.2011.00280.x</prism:doi><citedby-count>1</citedby-count><affiliation><affilname>UMDNJ
-        New Jersey Dental School | University of Medicine and Dentistry of New Jersey
-        ^ New Jersey Dental School ^ UMDNJ-New Jersey Dental School</affilname></affiliation><affiliation><affilname>University
-        at Buffalo State University of New York | State University of New York at
-        Buffalo ^ State University of New York ^ University at Buffalo</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861948996" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861948996"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861948996"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84861948996</prism:url><dc:identifier>SCOPUS_ID:84861948996</dc:identifier><dc:title>Onset
-        of nonlinearity in thermostatted active particles models for complex systems</dc:title><dc:creator>Bianca,
-        C.</dc:creator><prism:publicationName>Nonlinear Analysis: Real World Applications</prism:publicationName><prism:issn>14681218</prism:issn><prism:volume>13</prism:volume><prism:issueIdentifier>6</prism:issueIdentifier><prism:pageRange>2593-2608</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><prism:doi>10.1016/j.nonrwa.2012.03.005</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Politecnico
-        di Torino | Politecnico di Torino</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84858687120" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84858687120"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84858687120"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84858687120</prism:url><dc:identifier>SCOPUS_ID:84858687120</dc:identifier><dc:title>Effects
-        of saffron (Crocus sativus L.) aqueous extract on in vitro maturation, fertilization
-        and embryo development of mouse oocytes</dc:title><dc:creator>Tavana, S.</dc:creator><prism:publicationName>Cell
-        Journal</prism:publicationName><prism:issn>22285806</prism:issn><prism:eIssn>22285814</prism:eIssn><prism:volume>13</prism:volume><prism:issueIdentifier>4</prism:issueIdentifier><prism:pageRange>259-264</prism:pageRange><prism:coverDate>2012-12-01</prism:coverDate><citedby-count>0</citedby-count><affiliation><affilname>Royan
-        Institute | Royan Institute</affilname></affiliation><affiliation><affilname>Tarbiat
-        Moallem University | Teacher Training University ^ Tarbiat Moallem University</affilname></affiliation><affiliation><affilname>Baqiyatallah
-        Medical Sciences University | Baqiyatallah University of Medical Sciences
-        ^ Baqiyatallah Medical Sciences University</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry></feed>'
+        Erasmus Univ.</affilname></affiliation><affiliation><affilname>Erasmus University
+        Rotterdam | Erasmus University ^ Erasmus University Rotterdam ^ Erasmus Univ.</affilname></affiliation><affiliation><affilname>University
+        Medical Center Utrecht | University Medical Center Utrecht ^ University Hospital
+        Utrecht</affilname></affiliation><affiliation><affilname>Academic Medical
+        Centre, University of Amsterdam | University of Amsterdam ^ Academic Medical
+        Center ^ Academic Medical Centre</affilname></affiliation><affiliation><affilname>Queen
+        Mary, University of London | ^ University of London ^ Queen Mary University
+        of London</affilname></affiliation><affiliation><affilname>University of Manchester
+        | University of Manchester ^ UMIST</affilname></affiliation><affiliation><affilname>Royal
+        Marsden NHS Foundation Trust | Royal Marsden NHS Trust ^ Royal Marsden NHS
+        Foundation Trust</affilname></affiliation><affiliation><affilname>Guy''s and
+        St Thomas'' NHS Foundation Trust | Guy''s and St. Thomas'' Hospital</affilname></affiliation><affiliation><affilname>Yorkshire
+        Regional Genetics Service | Yorkshire Regional Genetics Service ^ Regional
+        Genetics Service</affilname></affiliation><affiliation><affilname>Yorkhill
+        Hospitals | Yorkhill Hospitals ^ Yorkhill ^ Yorkhill Hospital</affilname></affiliation><affiliation><affilname>Sheffield
+        Children''s Hospital | Sheffield Children''s Hospital ^ Children''s Hospital
+        ^ Child. Hosp.</affilname></affiliation><affiliation><affilname>St. Michael''s
+        Hospital | St. Michael''s Hospital ^ St Michael''s Hospital</affilname></affiliation><affiliation><affilname>Kennedy-Galton
+        Centre | Kennedy-Galton Centre ^ Kennedy Galton Centre</affilname></affiliation><affiliation><affilname>University
+        of Aberdeen | University of Aberdeen</affilname></affiliation><affiliation><affilname>Nottingham
+        University Hospitals NHS Trust | Nottingham City Hospital NHS Trust ^ Nottingham
+        University Hospitals NHS Trust</affilname></affiliation><affiliation><affilname>Liverpool
+        Women''s NHS Foundation Trust | Liverpool Women''s NHS Foundation Trust</affilname></affiliation><affiliation><affilname>University
+        Hospitals of Leicester NHS Trust | University Hospitals of Leicester ^ University
+        Hospitals of Leicester NHS Trust</affilname></affiliation><affiliation><affilname>Glan
+        Clwyd Hospital | Glan Clwyd Hospital</affilname></affiliation><affiliation><affilname>Singleton
+        Hospital | Singleton Hospital</affilname></affiliation><affiliation><affilname>University
+        of Kansas Medical Center | University of Kansas Medical Center ^ Univ. Kansas
+        Med. Cent.</affilname></affiliation><affiliation><affilname>Universität Leipzig
+        | University of Leipzig ^ Universität Leipzig</affilname></affiliation><affiliation><affilname>Klinikum
+        rechts der Isar | Technische Universität München</affilname></affiliation><affiliation><affilname>Ludwig-Maximilians-Universität
+        München | University of Munich</affilname></affiliation><affiliation><affilname>Universitätsklinikum
+        Schleswig-Holstein Campus Kiel | University Hospital Schleswig-Holstein</affilname></affiliation><affiliation><affilname>Uniklinik
+        Düsseldorf</affilname></affiliation><affiliation><affilname>Universitätsklinikum
+        Heidelberg</affilname></affiliation><affiliation><affilname>Universitätsklinikum
+        Ulm | Universitätsklinikum Ulm</affilname></affiliation><affiliation><affilname>Medizinische
+        Hochschule Hannover (MHH) | Medizinische Hochschule Hannover ^ Hannover Medical
+        School</affilname></affiliation><affiliation><affilname>Dresden University
+        Faculty of Medicine and University Hospital Carl Gustav Carus | Med. Akad.
+        Carl Gustav Carus</affilname></affiliation><affiliation><affilname>Westfälische
+        Wilhelms-Universität Münster | University of Münster ^ Universität Münster</affilname></affiliation><affiliation><affilname>Charite
+        - Universitätsmedizin Berlin</affilname></affiliation><affiliation><affilname>Julius-Maximilians-Universität
+        Würzburg | Universität Würzburg ^ University of Würzburg</affilname></affiliation><affiliation><affilname>Universität
+        Regensburg | Universität Regensburg ^ University of Regensburg</affilname></affiliation><affiliation><affilname>Universität
+        Leipzig | University of Leipzig ^ Universität Leipzig</affilname></affiliation><affiliation><affilname>Klinikum
+        und Fachbereich Medizin Johann Wolfgang Goethe-Universität Frankfurt am Main</affilname></affiliation><affiliation><affilname>Institute
+        of Cancer Research London | Institute of Cancer Research</affilname></affiliation><affiliation><affilname>Institut
+        Curie | Institut Curie</affilname></affiliation><affiliation><affilname>Hopital
+        Avicenne | Hôpital Avicenne ^ Hopital Avicenne</affilname></affiliation><affiliation><affilname>Centre
+        François Baclesse | Centre François Baclesse ^ Cent. Francois Baclesse ^ Centre
+        Francois Baclesse</affilname></affiliation><affiliation><affilname>Unité d''Oncogénétique
+        | Unité d''Oncogénétique ^ Unité d''Oncogénétique</affilname></affiliation><affiliation><affilname>Hopital
+        Bretonneau | CHU Bretonneau ^ Hôpital Bretonneau</affilname></affiliation><affiliation><affilname>CHU
+        Montpellier | CHU ^ CHU Montpellier ^ CHU de Montpellier</affilname></affiliation><affiliation><affilname>Centre
+        Hospitalier Universitaire de Saint Etienne | CHU de Saint-Etienne ^ CHU ^
+        CHU de Saint-Étienne</affilname></affiliation><affiliation><affilname>Université
+        de Bordeaux | Université de Bordeaux ^ université de Bordeaux</affilname></affiliation><affiliation><affilname>Institut
+        Curie | Institut Curie</affilname></affiliation><affiliation><affilname>Lombardi
+        Comprehensive Cancer Center | Georgetown University Medical Center ^ Georgetown
+        University</affilname></affiliation><affiliation><affilname>Hospital Clinico
+        San Carlos de Madrid | Hospital Clínico San Carlos ^ Hospital Universitario
+        San Carlos</affilname></affiliation><affiliation><affilname>Helsinki University
+        Central Hospital | Helsinki University Central Hospital ^ Helsinki University
+        Hospital</affilname></affiliation><affiliation><affilname>Hospital Duran i
+        Reynals | Hospital Duran i Reynals ^ Hospital Duran I Reynals</affilname></affiliation><affiliation><affilname>Landspitali
+        University Hospital | Landspitali University Hospital ^ University Hospital
+        ^ Landspitali-University Hospital</affilname></affiliation><affiliation><affilname>Centre
+        Hospitalier Universitaire de Québec | Centre Hospitalier Universitaire de
+        Québec ^ CHUQ ^ Ctr. Hosp. Univ. de Québec</affilname></affiliation><affiliation><affilname>IRCCS
+        Istituto Oncologico Veneto | IOV</affilname></affiliation><affiliation><affilname>IRCCS
+        Istituto Oncologico Veneto | IOV</affilname></affiliation><affiliation><affilname>Peter
+        Maccallum Cancer Centre | Peter MacCallum Cancer Institute ^ Peter MacCallum
+        Cancer Centre</affilname></affiliation><affiliation><affilname>Prince of Wales
+        Hospital | Prince of Wales Hospital</affilname></affiliation><affiliation><affilname>University
+        of Pennsylvania | University of Pennsylvania</affilname></affiliation><affiliation><affilname>University
+        of Chicago | University of Chicago</affilname></affiliation><affiliation><affilname>Creighton
+        University | Creighton University</affilname></affiliation><affiliation><affilname>University
+        of California, Los Angeles | University of California ^ UCLA</affilname></affiliation><affiliation><affilname>University
+        of Texas System | University of Texas</affilname></affiliation><affiliation><affilname>Mayo
+        Clinic | Mayo Clinic</affilname></affiliation><affiliation><affilname>Mayo
+        Clinic | Mayo Clinic</affilname></affiliation><affiliation><affilname>University
+        of Delaware | University of Delaware ^ Univ of Delaware</affilname></affiliation><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>Medizinische
+        Universitat Wien | Medical University of Vienna</affilname></affiliation><affiliation><affilname>N.N.
+        Petrov Research Institute of Oncology of the USSR Ministry of Health | N.N.
+        Petrov Res. Inst. Oncol.</affilname></affiliation><affiliation><affilname>Samuel
+        Lunenfeld Research Institute | Mount Sinai Hospital</affilname></affiliation><affiliation><affilname>Cancer
+        Care Ontario | ^ Cancer Care Ontario</affilname></affiliation><affiliation><affilname>Ohio
+        State University Comprehensive Cancer Center | Ohio State University ^ The
+        Ohio State University</affilname></affiliation><affiliation><affilname>Københavns
+        Universitet | University of Copenhagen</affilname></affiliation><affiliation><affilname>Odense
+        Universitetshospital | Odense University Hospital</affilname></affiliation><affiliation><affilname>Ârhus
+        Universitetshospital | Aarhus University Hospital</affilname></affiliation><affiliation><affilname>Vejle
+        Sygehus | Vejle Hospital ^ Vejle Sygehus ^ Vejle County Hospital</affilname></affiliation><affiliation><affilname>Azienda
+        Ospedaliera-Universitaria Pisana | Azienda Ospedaliera Pisana ^ Azienda Ospedaliera
+        Universitaria Pisana</affilname></affiliation><affiliation><affilname>Universitssjukhuset
+        i Lund | University Hospital ^ Lund University Hospital ^ Univ. Hosp.</affilname></affiliation><affiliation><affilname>Universitssjukhuset
+        i Lund | University Hospital ^ Lund University Hospital ^ Univ. Hosp.</affilname></affiliation><affiliation><affilname>Karolinska
+        University Hospital | ^ Karolinska Institute ^ Karolinska University Hospital
+        ^ Karolinska Institutet</affilname></affiliation><affiliation><affilname>Linköpings
+        universitet | Linköping University ^ Linkoping Univ</affilname></affiliation><affiliation><affilname>Sahlgrenska
+        Universitetssjukhuset | Sahlgrenska University Hospital</affilname></affiliation><affiliation><affilname>City
+        of Hope National Med Center | City of Hope National Medical Center ^</affilname></affiliation><affiliation><affilname>University
+        of California, San Francisco | University of California</affilname></affiliation><affiliation><affilname>University
+        of Cambridge | University of Cambridge</affilname></affiliation><affiliation><affilname>Roswell
+        Park Cancer Institute | Roswell Park Cancer Institute ^</affilname></affiliation><affiliation><affilname>Cedars-Sinai
+        Medical Center | Cedars-Sinai Medical Center</affilname></affiliation><affiliation><affilname>Cancer
+        Prevention Institute of California | Cancer Prevention Institute of California</affilname></affiliation><affiliation><affilname>Fox
+        Chase Cancer Center | Fox Chase Cancer Center</affilname></affiliation><affiliation><affilname>University
+        of Utah | University of Utah</affilname></affiliation><affiliation><affilname>University
+        of Melbourne | University of Melbourne</affilname></affiliation><affiliation><affilname>University
+        of Melbourne | University of Melbourne</affilname></affiliation><affiliation><affilname>Columbia
+        University in the City of New York | Columbia University</affilname></affiliation><affiliation><affilname>Dana-Farber
+        Cancer Institute | Dana-Farber Cancer Institute ^ Dana Farber Cancer Institute</affilname></affiliation><affiliation><affilname>University
+        of Utah School of Medicine | University of Utah School of Medicine ^ University
+        of Utah ^ Univ. of Utah School of Medicine ^ Univ. Utah Coll. Med.</affilname></affiliation><affiliation><affilname>Saint
+        Michael''s Hospital, Toronto | St. Michael''s Hospital ^ University of Toronto</affilname></affiliation><affiliation><affilname>State
+        Research Institute Innovative Medicine Center | State Research Institute Innovative
+        Medicine Center</affilname></affiliation><affiliation><affilname>Spanish Network
+        on Rare Diseases (CIBERER | Spanish Network on Rare Diseases (CIBERER ^ The
+        Spanish Network on Rare Diseases (CIBERER</affilname></affiliation><affiliation><affilname>Fondazione
+        IFOM Istituto Firc di Oncologia Molecolare | IFOM ^ FIRC Institute of Molecular
+        Oncology</affilname></affiliation><affiliation><affilname>Consortium for Genomics
+        Technology (Cogentech) | Consortium for Genomics Technology (Cogentech) ^
+        Cogentech-Consortium for Genomic Technologies ^ Cogentech Consortium for Genomic
+        Technologies ^ Consortium for Genomic Technologies (COGENTECH) ^ Consortium
+        for Genomic Technologies (Cogentech)</affilname></affiliation><affiliation><affilname>Centre
+        Hospitalier Sud-Francilien | Centre Hospitalier Sud-Francilien ^ Centre Hospitalier
+        Sud Francilien ^ Centre Hospitalier Gilles de Corbeil</affilname></affiliation><affiliation><affilname>Centre
+        Hospitalier Universitaire de Clermont-Ferrand | CHU ^ CHU de Clermont-Ferrand
+        ^ CHU Clermont-Ferrand</affilname></affiliation><affiliation><affilname>Universite
+        Paris Descartes | Université René Descartes</affilname></affiliation><affiliation><affilname>University
+        of Iceland | University of Iceland</affilname></affiliation><affiliation><affilname>Université
+        Laval | Université Laval ^ Laval University ^ Universite Laval</affilname></affiliation><affiliation><affilname>Cancer
+        Care Ontario | ^ Cancer Care Ontario</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:33845601666" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=33845601666"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=33845601666"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:33845601666</prism:url><dc:identifier>SCOPUS_ID:33845601666</dc:identifier><dc:title>Interpreting
+        cancer trends</dc:title><dc:creator>Ward, E.M.</dc:creator><prism:publicationName>Annals
+        of the New York Academy of Sciences</prism:publicationName><prism:issn>00778923</prism:issn><prism:eIssn>17496632</prism:eIssn><prism:volume>1076</prism:volume><prism:pageRange>29-53</prism:pageRange><prism:coverDate>2006-09-01</prism:coverDate><prism:doi>10.1196/annals.1371.048</prism:doi><citedby-count>26</citedby-count><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><prism:aggregationType>Book
+        Series</prism:aggregationType><subtype>cp</subtype></entry><entry><link href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861851519"
+        ref="self"/><link href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861851519"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861851519"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84861851519</prism:url><dc:identifier>SCOPUS_ID:84861851519</dc:identifier><dc:title>Cancer
+        chromosomal instability: Therapeutic and diagnostic challenges</dc:title><dc:creator>McGranahan,
+        N.</dc:creator><prism:publicationName>EMBO Reports</prism:publicationName><prism:issn>1469221X</prism:issn><prism:eIssn>14693178</prism:eIssn><prism:volume>13</prism:volume><prism:issueIdentifier>6</prism:issueIdentifier><prism:pageRange>528-538</prism:pageRange><prism:coverDate>2012-06-01</prism:coverDate><prism:doi>10.1038/embor.2012.61</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>CRUK
+        London Research Institute | CRUK London Research Institute ^ CR-UK London
+        Research Institute ^ CR UK London Research Institute ^ UK London Research
+        Institute</affilname></affiliation><affiliation><affilname>UCL | University
+        College London ^ ^ University College</affilname></affiliation><affiliation><affilname>UCL
+        | University College London ^ ^ University College</affilname></affiliation><affiliation><affilname>Fachhochschule
+        Münster - Abteilung Steinfurt | University of Applied Sciences</affilname></affiliation><affiliation><affilname>UCL
+        | University College London ^ ^ University College</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84859508813" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84859508813"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84859508813"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84859508813</prism:url><dc:identifier>SCOPUS_ID:84859508813</dc:identifier><dc:title>A
+        systematic review of large-scale surveys of cancer survivors conducted in
+        North America, 2000-2011</dc:title><dc:creator>Lerro, C.C.</dc:creator><prism:publicationName>Journal
+        of Cancer Survivorship</prism:publicationName><prism:issn>19322259</prism:issn><prism:eIssn>19322267</prism:eIssn><prism:volume>6</prism:volume><prism:issueIdentifier>2</prism:issueIdentifier><prism:pageRange>115-145</prism:pageRange><prism:coverDate>2012-06-01</prism:coverDate><prism:doi>10.1007/s11764-012-0214-1</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>Behavioral
+        Research Center | American Cancer Society</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:77953869515" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=77953869515"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=77953869515"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:77953869515</prism:url><dc:identifier>SCOPUS_ID:77953869515</dc:identifier><dc:title>Micro-RNAs
+        and breast cancer</dc:title><dc:creator>Le Quesne, J.</dc:creator><prism:publicationName>Molecular
+        Oncology</prism:publicationName><prism:issn>15747891</prism:issn><prism:volume>4</prism:volume><prism:issueIdentifier>3</prism:issueIdentifier><prism:pageRange>230-241</prism:pageRange><prism:coverDate>2010-06-01</prism:coverDate><prism:doi>10.1016/j.molonc.2010.04.009</prism:doi><citedby-count>12</citedby-count><affiliation><affilname>Cancer
+        Research UK | Imperial Cancer Research Fund ^ Cancer Research UK</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:77949726422" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=77949726422"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=77949726422"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:77949726422</prism:url><dc:identifier>SCOPUS_ID:77949726422</dc:identifier><dc:title>Declining
+        death rates reflect progress against cancer</dc:title><dc:creator>Jemal, A.</dc:creator><prism:publicationName>PLoS
+        ONE</prism:publicationName><prism:issn>19326203</prism:issn><prism:volume>5</prism:volume><prism:issueIdentifier>3</prism:issueIdentifier><prism:coverDate>2010-03-09</prism:coverDate><prism:doi>10.1371/journal.pone.0009584</prism:doi><citedby-count>29</citedby-count><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:57349182464" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=57349182464"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=57349182464"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:57349182464</prism:url><dc:identifier>SCOPUS_ID:57349182464</dc:identifier><dc:title>Annual
+        report to the nation on the status of cancer, 1975-2005, featuring trends
+        in lung cancer, tobacco use, and tobacco control</dc:title><dc:creator>Jemal,
+        A.</dc:creator><prism:publicationName>Journal of the National Cancer Institute</prism:publicationName><prism:issn>00278874</prism:issn><prism:eIssn>14602105</prism:eIssn><prism:volume>100</prism:volume><prism:issueIdentifier>23</prism:issueIdentifier><prism:pageRange>1672-1694</prism:pageRange><prism:coverDate>2008-12-01</prism:coverDate><prism:doi>10.1093/jnci/djn389</prism:doi><citedby-count>265</citedby-count><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>National
+        Center for Chronic Disease Prevention and Health Promotion | National Center
+        for Chronic Disease Prevention and Health Promotion ^ Centers for Dis. Contr.
+        and Prev.</affilname></affiliation><affiliation><affilname>National Center
+        for Health Statistics | National Center for Health Statistics ^ Natl. Center
+        for Health Statistics</affilname></affiliation><affiliation><affilname>National
+        Cancer Institute | National Cancer Institute ^ NIH</affilname></affiliation><affiliation><affilname>North
+        American Association of Central Cancer Registries | North American Association
+        of Central Cancer Registries ^ North American Association of Central Cancer
+        Registries, Inc.</affilname></affiliation><affiliation><affilname>LSU Health
+        Sciences Center - New Orleans | Louisiana State University Medical Center
+        ^ Louisiana State University Health Sciences Center ^ Louisiana State Univ.
+        Medical Center ^ Louisiana State Univ. Med. Cent. ^ LSU Medical Center</affilname></affiliation><affiliation><affilname>New
+        Jersey Department of Health and Senior Services | New Jersey Department of
+        Health and Senior Services ^ New Jersey Department of Health</affilname></affiliation><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:33846314031" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=33846314031"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=33846314031"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:33846314031</prism:url><dc:identifier>SCOPUS_ID:33846314031</dc:identifier><dc:title>The
+        rationale, design, and implementation of the American Cancer Society''s studies
+        of cancer survivors</dc:title><dc:creator>Smith, T.</dc:creator><prism:publicationName>Cancer</prism:publicationName><prism:issn>0008543X</prism:issn><prism:eIssn>10970142</prism:eIssn><prism:volume>109</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>1-12</prism:pageRange><prism:coverDate>2007-01-01</prism:coverDate><prism:doi>10.1002/cncr.22387</prism:doi><citedby-count>48</citedby-count><affiliation><affilname>Behavioral
+        Research Center | American Cancer Society</affilname></affiliation><affiliation><affilname>American
+        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>St.
+        Louis University | Saint Louis University ^ St. Louis University</affilname></affiliation><affiliation><affilname>New
+        York Medical College | New York Medical College ^ New York Med. Coll.</affilname></affiliation><affiliation><affilname>Behavioral
+        Research Center | American Cancer Society</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:46349086833" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=46349086833"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=46349086833"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:46349086833</prism:url><dc:identifier>SCOPUS_ID:46349086833</dc:identifier><dc:title>Association
+        between chromosomal instability and prognosis in colorectal cancer: A meta-analysis</dc:title><dc:creator>Walther,
+        A.</dc:creator><prism:publicationName>Gut</prism:publicationName><prism:issn>00175749</prism:issn><prism:volume>57</prism:volume><prism:issueIdentifier>7</prism:issueIdentifier><prism:pageRange>941-950</prism:pageRange><prism:coverDate>2008-07-01</prism:coverDate><prism:doi>10.1136/gut.2007.135004</prism:doi><citedby-count>70</citedby-count><affiliation><affilname>Cancer
+        Research UK | Imperial Cancer Research Fund ^ Cancer Research UK</affilname></affiliation><affiliation><affilname>Institute
+        of Cancer Research London | Institute of Cancer Research</affilname></affiliation><affiliation><affilname>Cancer
+        Research UK | Imperial Cancer Research Fund ^ Cancer Research UK</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
+        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:77953119642" ref="self"/><link
+        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=77953119642"
+        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=77953119642"
+        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:77953119642</prism:url><dc:identifier>SCOPUS_ID:77953119642</dc:identifier><dc:title>Breast
+        cancer cells can switch between estrogen receptor α and ErbB signaling and
+        combined treatment against both signaling pathways postpones development of
+        resistance</dc:title><dc:creator>Sonne-Hansen, K.</dc:creator><prism:publicationName>Breast
+        Cancer Research and Treatment</prism:publicationName><prism:issn>01676806</prism:issn><prism:eIssn>15737217</prism:eIssn><prism:volume>121</prism:volume><prism:issueIdentifier>3</prism:issueIdentifier><prism:pageRange>601-613</prism:pageRange><prism:coverDate>2010-06-01</prism:coverDate><prism:doi>10.1007/s10549-009-0506-y</prism:doi><citedby-count>6</citedby-count><affiliation><affilname>Kræftens
+        Bekæmpelse | Danish Cancer Society</affilname></affiliation><affiliation><affilname>Finsen
+        Institute | Finsen Inst. ^ The Finsen Institute ^ Finsen Institute</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry></feed>'
     http_version: 
-  recorded_at: Tue, 17 Jul 2012 20:56:12 GMT
+  recorded_at: Thu, 19 Jul 2012 14:14:10 GMT
 recorded_with: VCR 2.2.3

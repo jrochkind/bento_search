@@ -9,6 +9,7 @@ module BentoSearch
   # Required configuration: 
   # * api_key
   #               
+  # Defaults to 'relevance' sort, rather than scopus's default of date desc. 
   #
   # Uses the Scopus SciVerse REST API. You need to be a Scopus customer
   # to access. http://api.elsevier.com
@@ -158,14 +159,14 @@ module BentoSearch
     end
     
     def self.sort_definitions
-      # scopus &sort= values, not yet URI-escaped. 
-      # Scopus sorting is not working right, or we aren't using it right,
-      # something is weird. Sending "DUMMY" for relevance (which is supposed
-      # to be default) seems to at least get us relevance. 
+      # scopus &sort= values, not yet URI-escaped, later code will do that.  
+      #
+      # 'refeid' key is currently undocumented on Scopus site, but
+      # was given to me in email by scopus. 
       {
         "title_asc"     => {:implementation => "+itemtitle"},
         "date_desc"     => {:implementation => "-datesort,+auth"},
-        "relevance"     => {:implementation => "DUMMY" }, # default sort
+        "relevance"     => {:implementation => "refeid" }, 
         "author_asc"    => {:implementation => "+auth"},        
         "num_cite_desc" => {:implementation => "-numcitedby"}
       }
@@ -219,6 +220,9 @@ module BentoSearch
       
       query += "&start=#{args[:start]}" if args[:start]
       
+      # default to 'relevance' sort if not given, rather than scopus's
+      # default of date desc. 
+      args[:sort] ||= "relevance"
       if (defn = self.class.sort_definitions[args[:sort]]) &&
          ( value = defn[:implementation])
         query += "&sort=#{CGI.escape(value)}"
