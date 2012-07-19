@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.elsevier.com/content/search/index:SCOPUS?query=aldfjkadf%20lakdj%20zdfzzzz&sort=refeid
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Els-Apikey:
+      - DUMMY_API_KEY
+      X-Els-Resourceversion:
+      - XOCS
+      Accept:
+      - application/atom+xml
+  response:
+    status:
+      code: 400
+      message: !binary |-
+        QmFkIFJlcXVlc3Q=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        YXBpLmVsc2V2aWVyLmNvbSAgOTk5OQ==
+      !binary "WC1FbHMtU3RhdHVz":
+      - !binary |-
+        SU5WQUxJRF9JTlBVVChSZXN1bHQgc2V0IHdhcyBlbXB0eSBvciBTdGFydCB2
+        YWx1ZSBiZXlvbmQgcmVzdWx0IHNldCk=
+      !binary "WC1FbHMtUmVxaWQ=":
+      - !binary |-
+        MDAwMDAxMzZjNGQ4ODA5ZS02ZGE0ODM3
+      !binary "WC1FbHMtQXBpa2V5":
+      - !binary |-
+        RFVNTVlfQVBJX0tFWQ==
+      !binary "U2V0LUNvb2tpZQ==":
+      - !binary |-
+        SlNFU1NJT05JRD1GNzUyMTVBODRGODExOTQ5RjEwRjVGQzRCQ0ExOEU0RS5I
+        SlVQbEI5NTR1cThJeHpiSlluUVJnOyBEb21haW49YXBpLmVsc2V2aWVyLmNv
+        bTsgUGF0aD0vY29udGVudC9zZWFyY2g=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        dGV4dC94bWw7Y2hhcnNldD11dGYtOA==
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        MTc1
+      !binary "RGF0ZQ==":
+      - !binary |-
+        VGh1LCAxOSBKdWwgMjAxMiAxOTozNDoyNCBHTVQ=
+      !binary "WC1DbmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
+      !binary "WC1SZS1SZWY=":
+      - !binary |-
+        MSAtMjA3MTAwOTMy
+      !binary "UDNw":
+      - !binary |-
+        Q1A9IklEQyBEU1AgTEFXIEFETSBERVYgVEFJIFBTQSBQU0QgSVZBIElWRCBD
+        T04gSElTIFRFTCBPVVIgREVMIFNBTSBPVFIgSU5EIE9UQyI=
+    body:
+      encoding: US-ASCII
+      string: ! "<service-error>\n\t<status>\n\t\t<statusCode>INVALID_INPUT</statusCode>\n\t\t<statusText>Result
+        set was empty or Start value beyond result set</statusText>\n\t</status>\n</service-error>"
+    http_version: 
+  recorded_at: Thu, 19 Jul 2012 19:40:29 GMT
+recorded_with: VCR 2.2.3
