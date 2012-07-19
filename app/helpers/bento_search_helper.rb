@@ -64,6 +64,25 @@ module BentoSearchHelper
     end                          
   end
     
+  
+  ##
+  # More methods used by bento standard views, namespaced with bento_, sorry
+  # no great way to take logic out of views into helper methods without
+  # namespacey hack. 
+  #
+  # You can use these methods in your own custom views, you also should be
+  # able to over-ride them (including calling super) in local helpers to
+  # change behavior in standard views. 
+  #
+  ##
+  
+  def bento_abstract_truncate(str)
+    # if it's html safe, we can't truncate it, we don't have an HTML-aware
+    # truncation routine right now, that avoids leaving tags open etc. 
+    return str if str.html_safe?
     
+    truncate(str, :length => 280, :separator => " ")    
+  end
+  
   
 end

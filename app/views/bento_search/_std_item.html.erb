@@ -26,10 +26,16 @@
         <% end %>    
       </p>
     <% end %>      
-      
+          
     <% if item.published_in %>
       <p class="bento_item_row published_in">
         <span class="bento_value"><%= item.published_in %> </span>
+      </p>
+    <% end %>
+    
+    <% if item.abstract %>
+      <p class="bento_item_abstract">
+        <%= bento_abstract_truncate( item.abstract ) %>
       </p>
     <% end %>
     

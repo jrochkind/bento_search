@@ -59,7 +59,10 @@ module BentoSearch
     # * :conference_paper  # individual paper
     # * :conference_proceedings # collected proceedings
     # * :report # white paper or other report.
-    # * :book_item # section or exceprt from book. 
+    # * :book_item # section or exceprt from book.
+    #
+    # Note: We're re-thinking this, might allow uncontrolled
+    # in here instead. 
     attr_accessor :format    
     
     # year published. a ruby int
@@ -146,17 +149,18 @@ module BentoSearch
     # TODO: Should this be moved to a rails helper method? Not sure. 
     def published_in
       result_elements = []
+
+      unless year.blank?
+        # wrap year in a span so we can bold it. 
+        result_elements.push "<span class='year'>#{year}</span>"
+      end
       
-      result_elements.push(journal_title) unless journal_title.blank?
+      result_elements.push(journal_title) unless journal_title.blank?      
       
       if journal_title.blank? && ! publisher.blank?
         result_elements.push html_escape publisher
       end
       
-      unless year.blank?
-        # wrap year in a span so we can bold it. 
-        result_elements.push "<span class='year'>#{year}</span>"
-      end
       if (! volume.blank?) && (! issue.blank?)
         result_elements.push html_escape "#{volume}(#{issue})"
       else
