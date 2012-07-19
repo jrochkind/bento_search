@@ -87,7 +87,15 @@ class BentoSearch::MultiSearcher
     
     # call as start! with bang, to invoke async. 
     def start(*search_args)
-      @results = self.engine.search(*search_args)
+      begin
+        @results = self.engine.search(*search_args)
+      rescue Exception => e
+        warn e
+        # Make a fake results with caught exception. 
+        @results = BentoSearch::Results.new
+        @results.error ||= {}
+        @results.error["exception"] = e        
+      end
     end
     
     def results
