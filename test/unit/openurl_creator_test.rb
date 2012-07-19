@@ -22,7 +22,7 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
     
     assert_equal "article",      r.metadata["genre"]
     
-    assert_equal 2012,          r.metadata["date"]
+    assert_equal "2012",          r.metadata["date"]
     assert_equal "10",          r.metadata["volume"]
     assert_equal "1",           r.metadata["issue"]
     assert_equal "1",           r.metadata["spage"]
@@ -37,6 +37,25 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
     
     assert_equal "My Title: A Nice One",  r.metadata["atitle"]
         
+  end
+  
+  def test_numeric_conversion
+    item = BentoSearch::ResultItem.new(
+        :format => "Article",
+        :title => "My Title",
+        :subtitle => "A Nice One",
+        :year => 2012,
+        :volume => 10,
+        :issue => 1,
+        :start_page => 1,
+        :end_page => 100,        
+        :issn => "12345678",                              
+      )
+    
+    
+    r = BentoSearch::OpenurlCreator.new(item).to_openurl.referent
+    
+    assert_equal "1", r.metadata["issue"]
   end
   
   def test_create_book
@@ -57,7 +76,7 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
     assert_equal "My Book",         r.metadata["btitle"]
     assert_equal "Brothers, Inc.",  r.metadata["pub"]
     assert_equal "1234567X",        r.metadata["isbn"]
-    assert_equal 2012,              r.metadata["date"]
+    assert_equal "2012",              r.metadata["date"]
       
   end
   

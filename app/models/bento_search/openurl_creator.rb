@@ -47,11 +47,11 @@ module BentoSearch
         r.set_metadata("au", result_item.author_display(result_item.authors.first))
       end
 
-      r.set_metadata("date",    result_item.year)
-      r.set_metadata("volume",  result_item.volume)
-      r.set_metadata("issue",   result_item.issue)
-      r.set_metadata("spage",   result_item.start_page)
-      r.set_metadata("epage",   result_item.end_page)
+      r.set_metadata("date",    result_item.year.to_s)
+      r.set_metadata("volume",  result_item.volume.to_s)
+      r.set_metadata("issue",   result_item.issue.to_s)
+      r.set_metadata("spage",   result_item.start_page.to_s)
+      r.set_metadata("epage",   result_item.end_page.to_s)
       r.set_metadata("jtitle",  result_item.journal_title)
       r.set_metadata("issn",    result_item.issn)
       r.set_metadata("isbn",    result_item.isbn)
