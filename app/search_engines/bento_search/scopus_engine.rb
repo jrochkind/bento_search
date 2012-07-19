@@ -51,6 +51,7 @@ module BentoSearch
       xml, response, exception = nil, nil, nil
       
       url = scopus_url(args) 
+
       begin
         response = http_client.get( url , nil,
           # HTTP headers. 
@@ -67,13 +68,29 @@ module BentoSearch
           (! HTTP::Status.successful? response.status) ||
           xml.at_xpath("service-error")
           )
-        results.error ||= {}
-        results.error[:exception] = e
-        results.error[:status] = response.status if response
-        # keep from storing the entire possibly huge response as error
-        # but sometimes it's an error message. 
-        results.error[:error_info] = xml.at_xpath("service_error") if xml
-        return results
+      
+        # UGH. Scopus reports 0 hits as an error, not entirely distinguishable
+        # from an actual error. Oh well, we have to go with it. 
+        if ( 
+            (response.status == 400) &&
+            xml &&
+            (error_xml = xml.at_xpath("./service-error/status")) &&
+            (node_text(error_xml.at_xpath("./statusCode")) == "INVALID_INPUT") &&
+            (node_text(error_xml.at_xpath("./statusText")) == "Result set was empty or Start value beyond result set")
+          )
+          # PROBABLY 0 hit count, although could be something else I'm afraid. 
+          results.total_items = 0
+          return results
+        else
+          # real error              
+          results.error ||= {}
+          results.error[:exception] = e
+          results.error[:status] = response.status if response
+          # keep from storing the entire possibly huge response as error
+          # but sometimes it's an error message. 
+          results.error[:error_info] = xml.at_xpath("service_error") if xml
+          return results
+        end
       end                  
       
       results.total_items = node_text xml.at_xpath("//opensearch:totalResults", xml_ns)
