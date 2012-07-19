@@ -17,5 +17,9 @@ module BentoSearch
     # source may only be able to provide one big string, author_display
     attr_accessor :display
     
+    def empty?
+      first.blank? && last.blank? && middle.blank? && display.blank?
+    end
+    
   end
 end
