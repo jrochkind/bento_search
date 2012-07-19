@@ -31,7 +31,7 @@ class BentoSearchHelperTest < ActionView::TestCase
     
     response = HTML::Document.new(bento_search(results))
     
-    assert (no_results_div = response.find(:attributes => {:class => "bento_search_error"})), "has search_error div"
+    assert (no_results_div = response.find(:attributes => {:class => "bento_search_error alert alert-error"})), "has search_error div"
     
     assert no_results_div.match(Regexp.new I18n.translate("bento_search.search_error")), "has error message"
 
