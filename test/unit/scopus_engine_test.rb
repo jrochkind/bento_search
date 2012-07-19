@@ -103,12 +103,15 @@ class ScopusEngineTest < ActiveSupport::TestCase
   end
   
   test_with_cassette("zero results search", :scopus) do
-    results = nil
-    assert_nothing_raised {
-      results = @engine.search(:query => "aldfjkadf lakdj zdfzzzz")
-    }
+    results = @engine.search(:query => "aldfjkadf lakdj zdfzzzz")
     assert ! results.failed?, "results not marked failed"
     assert_equal 0, results.size
+  end
+  
+  test_with_cassette("escaped chars", :scopus) do
+    results = @engine.search(:query => "monkey:(brain)")
+    
+    assert ! results.failed?, "results not marked failed"
   end
     
     

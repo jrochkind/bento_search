@@ -147,6 +147,17 @@ module BentoSearch
       return results
     end
     
+    # The escaping rules are not entirely clear for the API. We know colons
+    # and parens are special chars. It's unclear how or if we can escape them,
+    # we'll just remove them. 
+    def escape_query(query)
+      # backslash escape doesn't seem to work
+      #query.gsub(/([\\\(\)\:])/) do |match|
+      #  "\\#{$1}"
+      #end
+      query.gsub(/([\\\(\)\:])/, ' ')      
+    end
+    
     
     def self.required_configuration
       ["api_key"]
@@ -225,7 +236,7 @@ module BentoSearch
     end
      
     def scopus_url(args)
-      query = args[:query]
+      query = escape_query args[:query]
       
       if args[:search_field]
         query = "#{args[:search_field]}(#{query})"
