@@ -89,7 +89,7 @@ module BentoSearchHelper
   def bento_item_title(item)
     content_tag("h4", :class => "bento_item_title") do
       safe_join([
-        link_to_unless( item.link.blank?, item.title, item.link ),
+        link_to_unless( item.link.blank?, item.complete_title, item.link ),
         if item.format
           content_tag("small", :class => "bento_item_about") do
             " (#{ t(item.format, :scope => [:bento_search, :format], :default => item.format.to_s.titleize) })"
