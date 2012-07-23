@@ -13,6 +13,11 @@ require 'summon/transport/headers'
 # http://api.summon.serialssolutions.com/help/api/search
 # http://api.summon.serialssolutions.com/help/api/search/fields
 #
+# An example user-facing Summon UI, useful for figuring out available
+# facets and facet values, or trying out searches:
+# http://ncsu.summon.serialssolutions.com/
+
+#
 # == Functionality notes
 #
 # * for pagination, underlying summon API only supports 'page', not 'start'
@@ -29,11 +34,15 @@ require 'summon/transport/headers'
 #     Value is a HASH, of keys and either single values or arrays
 #     of values. For instance, to exclude Newspaper Articles and Books
 #     from all search results, in config:
-#         :fixed_params => {"s.fvf" => ["ContentType,Newspaper Article,true", "ContentType,Book,true"]
+#         :fixed_params => 
+#           {"s.cmd" => ["addFacetValueFilters(ContentType,Web Resource:true,Reference:true,eBook:true)"]
 #     Note that values are NOT URI escaped in config, code will take care
 #     of that for you. You could also fix "s.role" to 'authenticated' using
 #     this mechanism, if you restrict all access to your app to authenticated
 #     affiliated users. 
+#     Note: We wanted to use this for content type facet exclusions, as
+#     per above. We could NOT get Summon "s.fvf" param to work right, had
+#     to use the s.cmd=addFacetValueFilter version. 
 #
 # == Custom search params
 #
@@ -56,10 +65,12 @@ class BentoSearch::SummonEngine
   extend HTTPClientPatch::IncludeClient
   include_http_client
   
+  @@hl_start_token = "$$BENTO_HL_START$$"
+  @@hl_end_token = "$$BENTO_HL_END$$"
+  
   def search_implementation(args)
-    uri, headers = construct_request(args) 
-    
-    
+    uri, headers = construct_request(args)
+
     results = BentoSearch::Results.new
     
     hash, response, exception = nil
@@ -82,11 +93,90 @@ class BentoSearch::SummonEngine
     results.total_items = hash["recordCount"]
     
     hash["documents"].each do |doc_hash|
-      results << doc_hash
+      item = BentoSearch::ResultItem.new
+      
+      item.title = first_if_present doc_hash["Title"]
+      item.subtitle = first_if_present doc_hash["Subtitle"] # TODO is this right?
+      
+      item.link = doc_hash["link"]
+      item.openurl_kev_co = doc_hash["openUrl"] # Summon conveniently gives us pre-made OpenURL
+      
+      item.journal_title  = first_if_present doc_hash["PublicationTitle"]
+      item.issn           = first_if_present doc_hash["ISSN"]
+      item.isbn           = first_if_present doc_hash["ISBN"]
+      item.doi            = first_if_present doc_hash["DOI"]
+            
+      item.start_page     = first_if_present doc_hash["StartPage"]
+      item.end_page       = first_if_present doc_hash["EndPage"]
+
+      if (pubdate = first_if_present doc_hash["PublicationDate_xml"])
+        item.year         = pubdate["year"] 
+      end
+      item.volume         = first_if_present doc_hash["Volume"]
+      item.issue          = first_if_present doc_hash["Issue"]
+      
+      if (pub = first_if_present doc_hash["Publisher_xml"])
+        item.publisher    = pub["name"]
+      end
+      
+      (doc_hash["Author_xml"] || []).each do |auth_hash|
+        a = BentoSearch::Author.new
+        
+        a.first           = name_normalize auth_hash["givenname"]
+        a.last            = name_normalize auth_hash["surname"]
+        a.middle          = name_normalize auth_hash["middlename"]
+        
+        a.display         = name_normalize auth_hash["fullname"]
+        
+        item.authors << a unless a.empty?
+      end
+      
+      item.format         = normalize_content_type( first_if_present doc_hash["ContentType"] )
+      #debugger
+      item.abstract       = first_if_present doc_hash["Abstract"]
+      #item.abstract        = first_if_present doc_hash["Snippet"]
+      
+      results << item
     end
     
     
     return results
+  end
+  
+  def first_if_present(array)
+    array ? array.first : nil
+  end
+  
+  
+  # Normalize Summon Content-Type to our standardized
+  # list. Note however that we're going to break our docs
+  # and pass through ones that can't be normalized as literals.
+  # rethinking docs on format. 
+  #
+  # This ends up losing useful distinctions Summon makes. 
+  def normalize_content_type(summon_type)
+    case summon_type
+    when "Journal Article", "Book Review", "Trade Publication Article" then "Article"
+    when "Audio Recording", "Music Recording" then "AudioObject"
+    when "Book", "eBook" then "Book"
+    when "Conference Proceedings" then :conference_paper
+    when "Dissertation" then :dissertation
+    when "Journal", "Newsletter" then :serial
+    when "Photograph" then "Photograph"
+    when "Video Recording" then "VideoObject"
+    else summon_type
+    end
+  end
+  
+  def name_normalize(str)
+    
+    return nil if str.blank?
+    
+    str = str.strip
+    
+    return nil if str.blank? || str =~ /^[,:.]*$/
+    
+    return str
   end
   
   
@@ -99,7 +189,8 @@ class BentoSearch::SummonEngine
     # are NOT URI-encoded yet. 
     query_params = Hash.new {|h, k| h[k] = [] }
     
-    # Add in fixed params from config, if any. 
+    # Add in fixed params from config, if any.
+    
     if configuration.fixed_params
       configuration.fixed_params.each_pair do |key, value|
         [value].flatten.each do |v|
@@ -130,6 +221,11 @@ class BentoSearch::SummonEngine
     if args[:auth] == true
       query_params['s.role'] = "authenticated"
     end
+    
+    if configuration.highlighting
+      #query_params['s.hs'] = @@hl_start_token
+      #query_params['s.he'] = @@hl_end_token
+    end
       
         
     headers = Summon::Transport::Headers.new(
@@ -151,6 +247,7 @@ class BentoSearch::SummonEngine
   
     return [uri, headers]
   end
+    
   
   # Escapes special chars for Summon. Not entirely clear what
   # we have to escape where (or double escape sometimes?), but
@@ -170,6 +267,40 @@ class BentoSearch::SummonEngine
       "\\#{$1}"
     end
   end
+  
+  # If summon has put snippet highlighting tokens
+  # in a field, we need to HTML escape the literal values,
+  # while still using the highlighting tokens to put
+  # HTML tags around highlighted terms.
+  require 'strscan'
+  def handle_highlighting(field)
+    return field if field.blank?
+    
+    start_regex = Regexp.new( Regexp.escape @@hl_start_token )
+    end_regex = Regexp.new( Regexp.escape @@hl_end_token ) 
+    
+    scanner = StringScanner.new(field)
+    
+    output = "".force_encoding(field.encoding)
+    while (! scanner.eos? )
+      if scanner.scan start_regex
+        highlighted = scanner.scan_until end_regex
+        
+        unless highlighted.nil?                  
+          highlighted = highlighted.sub(end_regex, '')
+          highlighted.gsub!( end_regex )
+          
+          
+          output += "<#{highlighted}>"
+        end
+          
+      else
+        output += scanner.getch
+      end
+    end
+    
+    return output
+  end
     
   def self.required_configuration
     [:access_id, :secret_key]
@@ -177,7 +308,8 @@ class BentoSearch::SummonEngine
   
   def self.default_configuration
     {
-      :base_url => "http://api.summon.serialssolutions.com/2.0.0/search"
+      :base_url => "http://api.summon.serialssolutions.com/2.0.0/search",
+      :highlighting => true
     }
   end
   
@@ -217,8 +349,9 @@ class BentoSearch::SummonEngine
         "OCLC"                => {:semantic => :oclcnum},
         "PublicationSeriesTitle" => {}
       }
-    end
-    
+  end
+  
+
   
   
 end

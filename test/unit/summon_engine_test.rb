@@ -116,23 +116,15 @@ class SummonEngineTest < ActiveSupport::TestCase
   end
     
   
-  def test_search
-    #pending "need sersol to fix account"
-    VCR.turned_off do 
-      WebMock.allow_net_connect!
-      
-      results = @engine.search("elephant_search")
+  test_with_cassette("search", :summon) do
+    results = @engine.search("elephants")
 
-      assert ! results.failed?
-      
-      assert_present results
-      
-      assert_present results.total_items
-      assert_not_equal 0, results.total_items
-      
-      
-      WebMock.disable_net_connect!
-    end
+    assert ! results.failed?
+    
+    assert_present results
+    
+    assert_present results.total_items
+    assert_not_equal 0, results.total_items
   end
   
 end
