@@ -137,6 +137,11 @@ class SummonEngineTest < ActiveSupport::TestCase
     
     assert_present results.total_items
     assert_not_equal 0, results.total_items
+    
+    first = results.first
+    
+    assert_present first.title
+    assert_present first.format_str
   end
   
   test_with_cassette("proper tags for snippets", :summon) do
