@@ -231,7 +231,7 @@ class BentoSearch::SummonEngine
     end
     
     if (args[:sort] &&
-        (defn = self.class.sort_definitions[args[:sort]]) &&
+        (defn = self.sort_definitions[args[:sort]]) &&
         (literal = defn[:implementation]))    
       query_params['s.sort'] =  literal
     end
@@ -322,13 +322,13 @@ class BentoSearch::SummonEngine
     }
   end
   
-  def self.max_per_page
+  def max_per_page
     200
   end
   
   # Summon actually only supports relevancy sort, and pub year asc or desc.
   # we just expose relevance and pub year desc here. 
-  def self.sort_definitions
+  def sort_definitions
     # implementation includes literal sersol value, but not yet
     # uri escaped, that'll happen at a later code point. 
     {
@@ -344,7 +344,7 @@ class BentoSearch::SummonEngine
   #
   # The AuthorCombined, TitleCombined, and SubjectCombined indexes
   # aren't even listed in the docs, but they are real. I think. 
-  def self.search_field_definitions
+  def search_field_definitions
       {
         "AuthorCombined"      => {:semantic => :author},
         "TitleCombined"       => {:semantic => :title},

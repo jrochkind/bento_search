@@ -15,11 +15,11 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
       parse_search_arguments(*args)
     end
     
-    def self.max_per_page
+    def max_per_page
       40
     end
     
-    def self.search_field_definitions
+    def search_field_definitions
       {
         "my_title" => {:semantic => :title},
         "my_author" => {:semantic => :author},
@@ -116,13 +116,13 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
   end
     
   def test_search_field_keys    
-    assert_equal ["my_title", "my_author", "my_other"], Dummy.search_keys
-    assert_equal [:title, :author], Dummy.semantic_search_keys
+    assert_equal ["my_title", "my_author", "my_other"], Dummy.new.search_keys
+    assert_equal [:title, :author], Dummy.new.semantic_search_keys
   end
   
   def test_semantic_search_map
     assert_equal( {:title => "my_title", :author => "my_author"}, 
-                  Dummy.semantic_search_map)
+      Dummy.new.semantic_search_map)
   end
   
   def test_translate_search_field_semantics

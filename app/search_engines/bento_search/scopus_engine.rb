@@ -164,11 +164,6 @@ module BentoSearch
       ["api_key"]
     end
     
-    # Max per-page is 200, as per http://www.developers.elsevier.com/devcms/content-apis, bottom of page. 
-    def self.max_per_page
-      200
-    end
-    
     def self.default_configuration
       { 
         :base_url => "http://api.elsevier.com/",
@@ -176,7 +171,12 @@ module BentoSearch
       }
     end
     
-    def self.search_field_definitions
+    # Max per-page is 200, as per http://www.developers.elsevier.com/devcms/content-apis, bottom of page. 
+    def max_per_page
+      200
+    end
+    
+    def search_field_definitions
       {
         "AUTH"        => {:semantic => :author},
         "TITLE"       => {:semantic => :title},
@@ -187,7 +187,7 @@ module BentoSearch
       }
     end
     
-    def self.sort_definitions
+    def sort_definitions
       # scopus &sort= values, not yet URI-escaped, later code will do that.  
       #
       # 'refeid' key is currently undocumented on Scopus site, but
@@ -202,7 +202,7 @@ module BentoSearch
     end
 
     
-    def self.default_per_page
+    def default_per_page
       25
     end
     
@@ -277,7 +277,7 @@ module BentoSearch
       # default to 'relevance' sort if not given, rather than scopus's
       # default of date desc. 
       args[:sort] ||= "relevance"
-      if (defn = self.class.sort_definitions[args[:sort]]) &&
+      if (defn = self.sort_definitions[args[:sort]]) &&
          ( value = defn[:implementation])
         query += "&sort=#{CGI.escape(value)}"
       end      

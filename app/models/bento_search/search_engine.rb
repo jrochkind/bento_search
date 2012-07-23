@@ -42,6 +42,8 @@ module BentoSearch
   module SearchEngine
     extend ActiveSupport::Concern
     
+    include Capabilities
+    
     included do
       attr_accessor :configuration      
     end
@@ -87,7 +89,7 @@ module BentoSearch
       
       # standard result metadata
       results.start = arguments[:start] || 0
-      results.per_page = arguments[:per_page] || self.class.default_per_page        
+      results.per_page = arguments[:per_page] || self.default_per_page        
       
       results.timing = (Time.now - start_t)
         
@@ -123,9 +125,9 @@ module BentoSearch
         raise ArgumentError.new("Can't supply both :page and :start")
       end
       if ( arguments[:per_page] && 
-           self.class.respond_to?(:max_per_page) && 
-           arguments[:per_page] > self.class.max_per_page)
-        raise ArgumentError.new("#{arguments[:per_page]} is more than maximum :per_page of #{self.class.max_per_page} for #{self.class}")
+           self.max_per_page && 
+           arguments[:per_page] > self.max_per_page)
+        raise ArgumentError.new("#{arguments[:per_page]} is more than maximum :per_page of #{self.max_per_page} for #{self.class}")
       end
    
       
@@ -145,7 +147,7 @@ module BentoSearch
       # translate semantic_search_field to search_field, or raise if
       # can't. 
       if semantic = arguments.delete(:semantic_search_field)
-        mapped = self.class.semantic_search_map[semantic]
+        mapped = self.semantic_search_map[semantic]
         unless mapped
           raise ArgumentError.new("#{self.class.name} does not know about :semantic_search_field #{semantic}")
         end
@@ -186,52 +188,14 @@ module BentoSearch
         {}
       end
       
-      # Over-ride with a HASH of available sorts. Each key is the string
-      # that will be passed in engine.search(...., :sort => key)
-      # The key combines a choice of sort field, ascending/descending,
-      # secondary sorts etc -- we combine this all with one key, because
-      # typical examined interfaces did same from a select menu. 
-      #
-      # Keys should where possible be _standard_ keys chosen from
-      # those listed in config/i18n/en:bento_search.sort_keys.*
-      # But if you need something not there, it can be custom to engine.
-      # Value of hash is for internal use by engine, it may be a convenient
-      # place to store implementation details. 
-      #
-      # For a particular engine, a sort not mentioned here will-- raise?
-      # be ignored? Not sure. 
-      def sort_definitions
-        {}
-      end
-      
-      # Default per-page, returns 10 by default,
-      # over-ride if different than 10
-      def default_per_page
-        10
-      end
-      
+            
       # Returns list of string internal search_field's that can
       # be supplied to search(:search_field => x)
       def search_keys        
         return search_field_definitions.keys
       end
       
-      # Returns list of symbol semantic_search_field that can be
-      # supplied to search(:semantic_search_field => x)
-      def semantic_search_keys  
-        semantic_search_map.keys
-      end
       
-      # returns a hash keyed by semantic search field symbol,
-      # value string internal search field key. 
-      def semantic_search_map                
-        # Hash[] conveniently takes an array of k-v pairs. 
-        return Hash[
-          search_field_definitions.collect do |field, defn|
-            [ defn[:semantic], field ] if defn && defn[:semantic]
-          end.compact        
-        ]
-      end
       
       # Over-ride returning a hash or Confstruct with 
       # any configuration values you want by default. 

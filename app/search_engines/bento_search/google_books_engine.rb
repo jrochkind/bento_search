@@ -105,7 +105,7 @@ module BentoSearch
       100
     end   
     
-    def self.search_field_definitions
+    def search_field_definitions
       { "intitle"     => {:semantic => :title},
         "inauthor"    => {:semantic => :author},
         "inpublisher" => {:semantic => :publisher},
@@ -114,7 +114,7 @@ module BentoSearch
       }      
     end
       
-    def self.sort_definitions
+    def sort_definitions
       {
         "relevance" => {:implementation => nil}, # default
         "date_desc" => {:implementation => "newest"}
@@ -150,7 +150,7 @@ module BentoSearch
       end
       
       if arguments[:sort] && 
-          (defn = self.class.sort_definitions[arguments[:sort]]) &&
+          (defn = sort_definitions[arguments[:sort]]) &&
           (value = defn[:implementation])
         query_url += "&sort=#{CGI.escape(value)}" 
       end
