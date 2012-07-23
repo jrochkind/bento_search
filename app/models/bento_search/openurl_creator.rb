@@ -22,7 +22,7 @@ module BentoSearch
       self.result_item = ri
     end
     
-    def to_openurl
+    def to_openurl      
       # If we have a pre-constructed KEV, just use it. 
       if result_item.openurl_kev_co
         return OpenURL::ContextObject.new_from_kev( result_item.openurl_kev_co )
@@ -57,10 +57,13 @@ module BentoSearch
       r.set_metadata("isbn",    result_item.isbn)
       r.set_metadata("pub",     result_item.publisher)
       
+      require 'debugger'
+      debugger if result_item.title =~ /Industry expert/
+      
       case result_item.format
       when "Book"
         r.set_metadata("btitle", result_item.complete_title)
-      when "Article"
+      when "Article", :conference_paper
         r.set_metadata("atitle", result_item.complete_title)
       else
         r.set_metadata("title", result_item.complete_title)
