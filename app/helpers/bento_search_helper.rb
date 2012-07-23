@@ -84,5 +84,39 @@ module BentoSearchHelper
     truncate(str, :length => 280, :separator => " ")    
   end
   
+  # Prepare a title in an H4, with formats in parens in a <small> (for
+  # bootstrap), linked, etc. 
+  def bento_item_title(item)
+    content_tag("h4", :class => "bento_item_title") do
+      safe_join([
+        link_to_unless( item.link.blank?, item.title, item.link ),
+        if item.format
+          content_tag("small", :class => "bento_item_about") do
+            " (#{ t(item.format, :scope => [:bento_search, :format], :default => item.format.to_s.titleize) })"
+          end
+        end
+      ], '')
+    end
+  end
+  
+  # first 3 authors, each in a <span>, using item.author_display, seperated by
+  # semi-colons. 
+  def bento_item_authors(item)
+    parts = []
+    
+    first_three = item.authors.slice(0,3) 
+        
+    first_three.each_with_index do |author, index|
+      parts << content_tag("span", :class => "bento_item_author") do
+          item.author_display(author)
+      end
+      if (index + 1) < first_three.length
+        parts << "; "
+      end      
+    end
+    
+    return safe_join(parts, "")
+  end
+  
   
 end
