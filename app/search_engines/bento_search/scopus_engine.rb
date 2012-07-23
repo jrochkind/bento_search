@@ -139,7 +139,8 @@ module BentoSearch
         # Format we're still trying to figure out how Scopus API
         # delivers it. Here is at at least one way.
         if (doctype = entry.at_xpath("atom:subtype", xml_ns))
-          item.format = doctype_map(doctype.text)
+          item.format     = doctype_to_format(doctype.text)
+          item.format_str = doctype_to_string(doctype.text) 
         end
         
       end
@@ -226,14 +227,39 @@ module BentoSearch
     # and delivered in the XML response as atom:subtype. 
     # Maps to our own internal formats as documented in ResultItem#format
     # Returns nil if can't map. 
-    def doctype_map(doctype)
+    def doctype_to_format(doctype)
       { "ar" => "Article",
         "ip" => "Article",
         "bk" => "Book",
         "bz" => "Article",
-        "re" => "Article" # most of what scopus labels 'Report' seem to be ordinary articles. 
+        "re" => "Article", # most of what scopus labels 'Report' seem to be ordinary articles.
+        "cr" => :conference_paper,
+        "re" => :report
       }[doctype.to_s]
     end
+    
+    # Maps Scopus doctype to human readable strings as documented by Scopus,
+    # does not map 1-1 to our controlled format. 
+    def doctype_to_string(doctype)
+      { "ar" => "Article",
+        "ab" => "Abstract Report",
+        "ip" => "Article in Press",
+        "bk" => "Book",
+        "bz" => "Business Article",
+        "cp" => "Conference Paper",
+        "cr" => "Conference Review",
+        "ed" => "Editorial",
+        "er" => "Erratum",
+        "le" => "Letter",
+        "no" => "Note",
+        "pr" => "Press Release",
+        "re" => "Report",
+        "sh" => "Short Survey"
+      }[doctype.to_s]
+    end
+      
+    
+    
      
     def scopus_url(args)
       query = escape_query args[:query]

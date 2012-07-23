@@ -87,10 +87,11 @@ module BentoSearchHelper
   # Prepare a title in an H4, with formats in parens in a <small> (for
   # bootstrap), linked, etc. 
   def bento_item_title(item)
+    require 'debugger'
     content_tag("h4", :class => "bento_item_title") do
       safe_join([
         link_to_unless( item.link.blank?, item.complete_title, item.link ),
-        if item.format
+        if item.format || item.format_str
           content_tag("small", :class => "bento_item_about") do
             " (" +
               if item.format_str
