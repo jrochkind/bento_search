@@ -47,6 +47,11 @@ require 'summon/transport/headers'
 #     Default true, ask SerSol for query-in-context highlighting in
 #     title and snippets field. If true you WILL get HTML with <b> tags
 #     in your titles.  
+# [snippets_as_abstract]
+#     Defaults true, if true and :highlighting is true, we'll put the
+#     query-in-context snippets in the 'abstract' field. Set :max_snippets
+#     for how many to possibly include (default 1). We may change this functionality
+#     later, this is a bit of hacky way to do it. 
 #
 # == Custom search params
 #
@@ -138,9 +143,15 @@ class BentoSearch::SummonEngine
       end
       
       item.format         = normalize_content_type( first_if_present doc_hash["ContentType"] )
-      #debugger
-      item.abstract       = first_if_present doc_hash["Abstract"]
-      #item.abstract        = first_if_present doc_hash["Snippet"]
+      
+      if ( configuration.highlighting && configuration.snippets_as_abstract &&
+        doc_hash["Snippet"] && doc_hash["Snippet"].length > 0 )
+      
+        item.abstract = handle_highlighting doc_hash["Snippet"].slice(0, configuration.max_snippets).join(" ")      
+      else
+        item.abstract       = first_if_present doc_hash["Abstract"]
+      end
+      
       
       results << item
     end
@@ -304,7 +315,9 @@ class BentoSearch::SummonEngine
   def self.default_configuration
     {
       :base_url => "http://api.summon.serialssolutions.com/2.0.0/search",
-      :highlighting => true
+      :highlighting => true,
+      :snippets_as_abstract => true,
+      :max_snippets => 1
     }
   end
   
