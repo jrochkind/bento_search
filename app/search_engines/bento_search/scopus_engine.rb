@@ -233,7 +233,7 @@ module BentoSearch
         "bk" => "Book",
         "bz" => "Article",
         "re" => "Article", # most of what scopus labels 'Report' seem to be ordinary articles.
-        "cr" => :conference_paper,
+        "cp" => :conference_paper,
         "re" => :report
       }[doctype.to_s]
     end
