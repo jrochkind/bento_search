@@ -43,6 +43,10 @@ require 'summon/transport/headers'
 #     Note: We wanted to use this for content type facet exclusions, as
 #     per above. We could NOT get Summon "s.fvf" param to work right, had
 #     to use the s.cmd=addFacetValueFilter version. 
+# [highlighting]
+#     Default true, ask SerSol for query-in-context highlighting in
+#     title and snippets field. If true you WILL get HTML with <b> tags
+#     in your titles.  
 #
 # == Custom search params
 #
@@ -227,6 +231,8 @@ class BentoSearch::SummonEngine
     if configuration.highlighting
       query_params['s.hs'] = @@hl_start_token
       query_params['s.he'] = @@hl_end_token
+    else 
+      query_params['s.hl'] = "false"
     end
       
         

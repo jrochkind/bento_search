@@ -107,6 +107,18 @@ class SummonEngineTest < ActiveSupport::TestCase
     
   end
   
+  def test_construct_no_highlighting
+    engine = BentoSearch::SummonEngine.new('access_id' => @@access_id, 
+      'secret_key' => @@secret_key,
+      'highlighting' => false)
+    
+    uri, headers = engine.construct_request(:query => "elephants")
+    
+    query_params = CGI.parse( URI.parse(uri).query )
+    
+    assert_include query_params['s.hl'], "false"
+  end
+  
   test_with_cassette("bad auth", :summon) do
     engine = BentoSearch::SummonEngine.new('access_id' => "bad_access_id", :secret_key => 'bad_secret_key')
     
