@@ -107,7 +107,7 @@ class BentoSearch::SummonEngine
       item = BentoSearch::ResultItem.new
       
       item.title = handle_highlighting( first_if_present doc_hash["Title"] )
-      item.subtitle = first_if_present doc_hash["Subtitle"] # TODO is this right?
+      item.subtitle = handle_highlighting( first_if_present doc_hash["Subtitle"] )# TODO is this right?
       
       item.link = doc_hash["link"]
       item.openurl_kev_co = doc_hash["openUrl"] # Summon conveniently gives us pre-made OpenURL

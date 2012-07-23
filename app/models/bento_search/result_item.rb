@@ -5,6 +5,7 @@ module BentoSearch
   # ANY field can be nil, clients should be aware.  
   class ResultItem
     include ERB::Util # for html_escape for our presentational stuff
+    include ActionView::Helpers::OutputSafetyHelper # for safe_join
     
     # Can initialize with a hash of key/values
     def initialize(args = {})
@@ -142,7 +143,7 @@ module BentoSearch
     def complete_title
       t = self.title
       if self.subtitle
-        t += ": #{self.subtitle}"
+        t = safe_join([t, ": ", self.subtitle], "")        
       end
       return t
     end
