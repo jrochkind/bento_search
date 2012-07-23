@@ -234,7 +234,7 @@ module BentoSearch
         "bz" => "Article",
         "re" => "Article", # most of what scopus labels 'Report' seem to be ordinary articles.
         "cp" => :conference_paper,
-        "re" => :report
+        "re" => "Article" # really 'report', but Scopus is unreliable here, most of these are actually articles. 
       }[doctype.to_s]
     end
     
@@ -253,7 +253,7 @@ module BentoSearch
         "le" => "Letter",
         "no" => "Note",
         "pr" => "Press Release",
-        "re" => "Report",
+        "re" => "Article", # Really 'report', but Scopus is unreliable here, most of these are actually articles. 
         "sh" => "Short Survey"
       }[doctype.to_s]
     end
