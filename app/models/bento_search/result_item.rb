@@ -37,6 +37,9 @@ module BentoSearch
     # * schema.org CreativeWork: 'url'
     attr_accessor :link
     
+    # normalized controlled vocab title, important this is supplied
+    # if possible for OpenURL generation and other features. 
+    #
     # schema.org 'type' that's a sub-type of CreativeWork. 
     # should hold a string that, when appended to "http://schema.org/"
     # is a valid schema.org type uri, that sub-types CreativeWork. Eg.
@@ -64,6 +67,11 @@ module BentoSearch
     # Note: We're re-thinking this, might allow uncontrolled
     # in here instead. 
     attr_accessor :format    
+    
+    # uncontrolled presumably english-language format string.
+    # if supplied will be used in display in place of controlled
+    # format. 
+    attr_accessor :format_str
     
     # year published. a ruby int
     # PART of:. 

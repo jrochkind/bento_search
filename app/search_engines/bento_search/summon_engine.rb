@@ -143,6 +143,9 @@ class BentoSearch::SummonEngine
       end
       
       item.format         = normalize_content_type( first_if_present doc_hash["ContentType"] )
+      if doc_hash["ContentType"]
+        item.format_str     = doc_hash["ContentType"].join(", ")
+      end
       
       if ( configuration.highlighting && configuration.snippets_as_abstract &&
         doc_hash["Snippet"] && doc_hash["Snippet"].length > 0 )
@@ -166,11 +169,9 @@ class BentoSearch::SummonEngine
   
   
   # Normalize Summon Content-Type to our standardized
-  # list. Note however that we're going to break our docs
-  # and pass through ones that can't be normalized as literals.
-  # rethinking docs on format. 
+  # list. 
   #
-  # This ends up losing useful distinctions Summon makes. 
+  # This ends up losing useful distinctions Summon makes, however. 
   def normalize_content_type(summon_type)
     case summon_type
     when "Journal Article", "Book Review", "Trade Publication Article" then "Article"
@@ -181,7 +182,7 @@ class BentoSearch::SummonEngine
     when "Journal", "Newsletter" then :serial
     when "Photograph" then "Photograph"
     when "Video Recording" then "VideoObject"
-    else summon_type
+    else nil
     end
   end
   

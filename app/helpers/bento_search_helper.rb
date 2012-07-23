@@ -92,7 +92,12 @@ module BentoSearchHelper
         link_to_unless( item.link.blank?, item.complete_title, item.link ),
         if item.format
           content_tag("small", :class => "bento_item_about") do
-            " (#{ t(item.format, :scope => [:bento_search, :format], :default => item.format.to_s.titleize) })"
+            " (" +
+              if item.format_str
+                item.format_str
+              else
+                t(item.format, :scope => [:bento_search, :format], :default => item.format.to_s.titleize)
+              end + ")"
           end
         end
       ], '')
