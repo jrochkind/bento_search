@@ -127,4 +127,15 @@ class SummonEngineTest < ActiveSupport::TestCase
     assert_not_equal 0, results.total_items
   end
   
+  test_with_cassette("proper tags for snippets", :summon) do
+    results = @engine.search("cancer")
+    
+    first = results.first
+    
+    assert_include first.title, '<b class="bento_search_snippet_highlight">' 
+    
+    assert first.title.html_safe?, "title is HTML safe"
+    
+  end
+  
 end

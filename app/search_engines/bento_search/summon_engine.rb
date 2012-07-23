@@ -65,6 +65,8 @@ class BentoSearch::SummonEngine
   extend HTTPClientPatch::IncludeClient
   include_http_client
   
+  include ActionView::Helpers::OutputSafetyHelper # for safe_join
+  
   @@hl_start_token = "$$BENTO_HL_START$$"
   @@hl_end_token = "$$BENTO_HL_END$$"
   
@@ -95,7 +97,7 @@ class BentoSearch::SummonEngine
     hash["documents"].each do |doc_hash|
       item = BentoSearch::ResultItem.new
       
-      item.title = first_if_present doc_hash["Title"]
+      item.title = handle_highlighting( first_if_present doc_hash["Title"] )
       item.subtitle = first_if_present doc_hash["Subtitle"] # TODO is this right?
       
       item.link = doc_hash["link"]
@@ -223,8 +225,8 @@ class BentoSearch::SummonEngine
     end
     
     if configuration.highlighting
-      #query_params['s.hs'] = @@hl_start_token
-      #query_params['s.he'] = @@hl_end_token
+      query_params['s.hs'] = @@hl_start_token
+      query_params['s.he'] = @@hl_end_token
     end
       
         
@@ -272,34 +274,21 @@ class BentoSearch::SummonEngine
   # in a field, we need to HTML escape the literal values,
   # while still using the highlighting tokens to put
   # HTML tags around highlighted terms.
-  require 'strscan'
-  def handle_highlighting(field)
-    return field if field.blank?
-    
-    start_regex = Regexp.new( Regexp.escape @@hl_start_token )
-    end_regex = Regexp.new( Regexp.escape @@hl_end_token ) 
-    
-    scanner = StringScanner.new(field)
-    
-    output = "".force_encoding(field.encoding)
-    while (! scanner.eos? )
-      if scanner.scan start_regex
-        highlighted = scanner.scan_until end_regex
-        
-        unless highlighted.nil?                  
-          highlighted = highlighted.sub(end_regex, '')
-          highlighted.gsub!( end_regex )
-          
-          
-          output += "<#{highlighted}>"
+  def handle_highlighting( str )
+    return str if str.blank? || ! configuration.highlighting
+            
+    parts = 
+      str.
+        split( %r{(#{Regexp.escape @@hl_start_token}|#{Regexp.escape @@hl_end_token})}  ).
+        collect do |substr|
+          case substr
+            when  @@hl_start_token then '<b class="bento_search_snippet_highlight">'.html_safe
+            when  @@hl_end_token then '</b>'.html_safe
+            else substr
+          end
         end
-          
-      else
-        output += scanner.getch
-      end
-    end
-    
-    return output
+        
+    return safe_join(parts, '')
   end
     
   def self.required_configuration
