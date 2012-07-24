@@ -76,12 +76,19 @@ class BentoSearch::EbscoHostEngine
     end    
   end
   
+  # it's unclear if ebsco API actually allows escaping of special chars,
+  # or what the special chars are. But we know parens are special, can't
+  # escape em, we'll just remove em (should not effect search). 
+  def ebsco_query_escape(txt)
+    txt.gsub(/[)(]/, ' ')
+  end
+  
   def query_url(args)
     
     url = 
       "#{configuration.base_url}/Search?prof=#{configuration.profile_id}&pwd=#{configuration.profile_password}"
     
-    url += "&query=#{CGI.escape(args[:query])}"
+    url += "&query=#{CGI.escape(ebsco_query_escape  args[:query]  )}"
     
     # startrec is 1-based for ebsco, not 0-based like for us. 
     url += "&startrec=#{args[:start] + 1}" if args[:start]

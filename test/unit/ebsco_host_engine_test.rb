@@ -54,6 +54,14 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     assert_equal ["date"], query_params["sort"]
   end
   
+  def test_removes_paren_literals
+    url = @engine.query_url(:query => "cancer)", :sort => "date_desc")
+    
+    query_params = CGI.parse( URI.parse(url).query )
+    
+    assert_equal ["cancer "], query_params["query"]
+  end
+  
   test_with_cassette("live search smoke test", :ebscohost) do
   
     results = @engine.search(:query => "cancer")
@@ -66,5 +74,5 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     assert_present first.title
     assert_present first.authors  
   end
-  
+    
 end
