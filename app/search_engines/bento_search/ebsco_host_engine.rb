@@ -42,6 +42,9 @@ class BentoSearch::EbscoHostEngine
   def search_implementation(args)
     url = query_url(args)
     
+    require 'debugger'
+    debugger
+
     results = BentoSearch::Results.new
     xml, response, exception = nil, nil, nil
     
@@ -85,6 +88,8 @@ class BentoSearch::EbscoHostEngine
     
     if xml_node.at_xpath("./bkinfo")
       "Book"
+    elsif xml_node.at_xpath("./dissinfo")
+      :dissertation
     elsif xml_node.at_xpath("./jinfo") && xml_node.at_xpath("./artinfo")
       "Article"
     elsif xml_node.at_xpath("./jinfo")
@@ -101,7 +106,12 @@ class BentoSearch::EbscoHostEngine
     [ 
       text_if_present( xml_node.at_xpath("./artinfo/pubtype") ),
       text_if_present( xml_node.at_xpath("./artinfo/doctype") )
-    ].compact.join(" ")
+    ].compact.join(": ")
+  end
+  
+  # pass in <rec> nokogiri, will determine best link
+  def get_link(xml)
+    text_if_present(xml.at_xpath("./pdfLink")) || text_if_present(xml.at_xpath("./plink") )
   end
   
   
@@ -138,10 +148,12 @@ class BentoSearch::EbscoHostEngine
   
   # pass in a nokogiri representing an EBSCO <rec> result,
   # we'll turn it into a BentoSearch::ResultItem. 
-  def item_from_xml(xml_rec)
+  def item_from_xml(xml_rec)        
     info = xml_rec.at_xpath("./header/controlInfo")
     
     item = BentoSearch::ResultItem.new
+    
+    item.link           = get_link(xml_rec)
     
     item.issn           = text_if_present info.at_xpath("./jinfo/issn") 
     item.journal_title  = text_if_present info.at_xpath("./jinfo/jtl")
@@ -172,6 +184,7 @@ class BentoSearch::EbscoHostEngine
     
     item.format         = sniff_format info
     item.format_str     = sniff_format_str info
+    
     
     return item
   end
