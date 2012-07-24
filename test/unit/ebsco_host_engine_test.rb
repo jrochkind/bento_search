@@ -73,6 +73,7 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     
     assert_present first.title
     assert_present first.authors  
+    assert_present first.year
   end
     
 end

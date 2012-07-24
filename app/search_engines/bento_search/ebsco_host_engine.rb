@@ -120,9 +120,10 @@ class BentoSearch::EbscoHostEngine
     # Might have multiple ISBN's in record, just take first for now
     item.isbn           = text_if_present info.at_xpath("./bkinfo/isbn")
     
+    item.year           = text_if_present info.at_xpath("./pubinfo/dt/@year")
     item.volume         = text_if_present info.at_xpath("./pubinfo/vid")
     item.issue          = text_if_present info.at_xpath("./pubinfo/iid")
-    #TODO year
+    
     
     item.title          = text_if_present info.at_xpath("./artinfo/tig/atl")
     item.start_page     = text_if_present info.at_xpath("./artinfo/ppf")
