@@ -1,5 +1,23 @@
+require 'nokogiri'
+
+require 'http_client_patch/include_client'
+require 'httpclient'
+
 # Right now for EbscoHost API (Ebsco Integration Toolkit/EIT), 
 # may be expanded or refactored for EDS too.
+#
+# == Required Configuration
+#
+# * profile_id
+# * profile_password
+# * databases: ARRAY of ebsco shortcodes of what databases to include in search. If you specify one you don't have access to, you get an error message from ebsco, alas. 
+#
+# == Note on configuration on EBSCO end
+#
+# If you log in to the 
+#
+#
+# == Vendor documentation 
 #
 # Vendor documentation is a bit scattered, main page:
 # * http://support.ebsco.com/eit/ws.php
@@ -10,11 +28,6 @@
 # * The 'info' service can be used to see what databases you have access to. 
 # * DTD of XML Response, hard to interpret but all we've got: http://support.ebsco.com/eit/docs/DTD_EIT_WS_searchResponse.zip
 #
-# == Required Configuration
-#
-# * profile_id
-# * profile_password
-# * databases: ARRAY of ebsco shortcodes of what databases to include in search. If you specify one you don't have access to, you get an error message from ebsco, alas. 
 #
 # 
 #
@@ -23,10 +36,75 @@
 class BentoSearch::EbscoHostEngine
   include BentoSearch::SearchEngine
   
-
+  extend HTTPClientPatch::IncludeClient
+  include_http_client
   
   def search_implementation(args)
+    url = query_url(args)
     
+    results = BentoSearch::Results.new
+    xml, response, exception = nil, nil, nil
+    
+    begin
+      response = http_client.get(url)
+      xml = Nokogiri::XML(response.body)
+    rescue TimeoutError, HTTPClient::ConfigurationError, HTTPClient::BadResponseError, Nokogiri::SyntaxError  => e
+        exception = e        
+    end
+    
+    # the namespaces they provide are weird and don't help and sometimes
+    # not clearly even legal. Remove em!
+    xml.remove_namespaces!
+    
+    results.total_items = xml.at_xpath("./searchResponse/Hits").text.to_i
+    
+    xml.xpath("./searchResponse/SearchResults/records/rec").each do |xml_rec|
+
+      info = xml_rec.at_xpath("./header/controlInfo")
+      
+      item = BentoSearch::ResultItem.new
+      
+      item.issn           = text_if_present info.at_xpath("./jinfo/issn") 
+      item.journal_title  = text_if_present info.at_xpath("./jinfo/jtl")
+      item.publisher      = text_if_present info.at_xpath("./pubinfo/pub")
+      # Might have multiple ISBN's in record, just take first for now
+      item.isbn           = text_if_present info.at_xpath("./bkinfo/isbn")
+      
+      item.volume         = text_if_present info.at_xpath("./pubinfo/vid")
+      item.issue          = text_if_present info.at_xpath("./pubinfo/iid")
+      #TODO year
+      
+      item.title          = text_if_present info.at_xpath("./artinfo/tig/atl")
+      item.start_page     = text_if_present info.at_xpath("./artinfo/ppf")
+      item.doi            = text_if_present info.at_xpath("./artinfo/ui[type=doi]")
+      
+      item.abstract       = text_if_present info.at_xpath("./artinfo/ab")
+      # EBSCO abstracts have an annoying habit of beginning with "Abstract:"
+      if item.abstract
+        item.abstract.gsub!(/^Abstract\: /, "")
+      end
+      
+      # authors, only get full display name from EBSCO. 
+      info.xpath("./artinfo/aug/au").each do |author|
+        a = BentoSearch::Author.new(:display => author.text)
+        item.authors << a
+      end
+           
+      results << item
+    end
+    
+    return results
+    
+  end
+  
+  # Pass in a nokogiri node, return node.text, or nil if
+  # arg was nil or node.text was blank?
+  def text_if_present(node)
+    if node.nil? || node.text.blank?
+      nil
+    else
+      node.text
+    end    
   end
   
   def query_url(args)

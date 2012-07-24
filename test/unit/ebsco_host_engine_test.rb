@@ -4,11 +4,21 @@ require 'uri'
 class EbscoHostEngineTest < ActiveSupport::TestCase
   extend TestWithCassette
   
+  @@profile_id = (ENV['EBSCOHOST_PROFILE'] || 'DUMMY_PROFILE')
+  @@profile_pwd = (ENV['EBSCOHOST_PWD'] || 'DUMMY_PWD')
+  @@dbs_to_test = (ENV['EBSCOHOST_TEST_DBS'] || %w{a9h awn} )
+  
+  VCR.configure do |c|
+    c.filter_sensitive_data("DUMMY_PROFILE", :ebscohost) { @@profile_id }
+    c.filter_sensitive_data("DUMMY_PWD", :ebscohost) { @@profile_pwd }
+  end
+  
+  
   def setup
     @engine = BentoSearch::EbscoHostEngine.new( 
-      :profile_id => "foo",
-      :profile_password => "foo",
-      :databases => %w{ab1, ab2, ab3}
+      :profile_id => @@profile_id,
+      :profile_password => @@profile_pwd,
+      :databases => @@dbs_to_test
       )
   end
   
@@ -42,6 +52,19 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     query_params = CGI.parse( URI.parse(url).query )
     
     assert_equal ["date"], query_params["sort"]
+  end
+  
+  test_with_cassette("live search smoke test", :ebscohost) do
+  
+    results = @engine.search(:query => "cancer")
+    
+    assert_present results
+    assert ! results.failed?
+    
+    first = results.first
+    
+    assert_present first.title
+    assert_present first.authors  
   end
   
 end
