@@ -59,38 +59,7 @@ class BentoSearch::EbscoHostEngine
     results.total_items = xml.at_xpath("./searchResponse/Hits").text.to_i
     
     xml.xpath("./searchResponse/SearchResults/records/rec").each do |xml_rec|
-
-      info = xml_rec.at_xpath("./header/controlInfo")
-      
-      item = BentoSearch::ResultItem.new
-      
-      item.issn           = text_if_present info.at_xpath("./jinfo/issn") 
-      item.journal_title  = text_if_present info.at_xpath("./jinfo/jtl")
-      item.publisher      = text_if_present info.at_xpath("./pubinfo/pub")
-      # Might have multiple ISBN's in record, just take first for now
-      item.isbn           = text_if_present info.at_xpath("./bkinfo/isbn")
-      
-      item.volume         = text_if_present info.at_xpath("./pubinfo/vid")
-      item.issue          = text_if_present info.at_xpath("./pubinfo/iid")
-      #TODO year
-      
-      item.title          = text_if_present info.at_xpath("./artinfo/tig/atl")
-      item.start_page     = text_if_present info.at_xpath("./artinfo/ppf")
-      item.doi            = text_if_present info.at_xpath("./artinfo/ui[type=doi]")
-      
-      item.abstract       = text_if_present info.at_xpath("./artinfo/ab")
-      # EBSCO abstracts have an annoying habit of beginning with "Abstract:"
-      if item.abstract
-        item.abstract.gsub!(/^Abstract\: /, "")
-      end
-      
-      # authors, only get full display name from EBSCO. 
-      info.xpath("./artinfo/aug/au").each do |author|
-        a = BentoSearch::Author.new(:display => author.text)
-        item.authors << a
-      end
-           
-      results << item
+      results << item_from_xml( xml_rec )
     end
     
     return results
@@ -129,6 +98,42 @@ class BentoSearch::EbscoHostEngine
     end    
     
     return url
+  end
+  
+  # pass in a nokogiri representing an EBSCO <rec> result,
+  # we'll turn it into a BentoSearch::ResultItem. 
+  def item_from_xml(xml_rec)
+    info = xml_rec.at_xpath("./header/controlInfo")
+    
+    item = BentoSearch::ResultItem.new
+    
+    item.issn           = text_if_present info.at_xpath("./jinfo/issn") 
+    item.journal_title  = text_if_present info.at_xpath("./jinfo/jtl")
+    item.publisher      = text_if_present info.at_xpath("./pubinfo/pub")
+    # Might have multiple ISBN's in record, just take first for now
+    item.isbn           = text_if_present info.at_xpath("./bkinfo/isbn")
+    
+    item.volume         = text_if_present info.at_xpath("./pubinfo/vid")
+    item.issue          = text_if_present info.at_xpath("./pubinfo/iid")
+    #TODO year
+    
+    item.title          = text_if_present info.at_xpath("./artinfo/tig/atl")
+    item.start_page     = text_if_present info.at_xpath("./artinfo/ppf")
+    item.doi            = text_if_present info.at_xpath("./artinfo/ui[type=doi]")
+    
+    item.abstract       = text_if_present info.at_xpath("./artinfo/ab")
+    # EBSCO abstracts have an annoying habit of beginning with "Abstract:"
+    if item.abstract
+      item.abstract.gsub!(/^Abstract\: /, "")
+    end
+    
+    # authors, only get full display name from EBSCO. 
+    info.xpath("./artinfo/aug/au").each do |author|
+      a = BentoSearch::Author.new(:display => author.text)
+      item.authors << a
+    end
+    
+    return item
   end
   
   # David Walker says pretty much only relevance and date are realiable
