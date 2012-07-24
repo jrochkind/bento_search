@@ -76,6 +76,35 @@ class BentoSearch::EbscoHostEngine
     end    
   end
   
+  # Figure out proper controlled format for an ebsco item. 
+  # EBSCOHost (not sure about EDS) publication/document type
+  # are totally unusable non-normalized vocabulary for controlled
+  # types, we'll try to guess from other metadata features.   
+  def sniff_format(xml_node)
+    return nil if xml_node.nil?
+    
+    if xml_node.at_xpath("./bkinfo")
+      "Book"
+    elsif xml_node.at_xpath("./jinfo") && xml_node.at_xpath("./artinfo")
+      "Article"
+    elsif xml_node.at_xpath("./jinfo")
+      :serial
+    else
+      nil
+    end    
+  end
+  
+  # Figure out uncontrolled literal string format to show to users.
+  # We're going to try combining Ebsco Publication Type and Document Type,
+  # when both are present. 
+  def sniff_format_str(xml_node)
+    [ 
+      text_if_present( xml_node.at_xpath("./artinfo/pubtype") ),
+      text_if_present( xml_node.at_xpath("./artinfo/doctype") )
+    ].compact.join(" ")
+  end
+  
+  
   # it's unclear if ebsco API actually allows escaping of special chars,
   # or what the special chars are. But we know parens are special, can't
   # escape em, we'll just remove em (should not effect search). 
@@ -140,6 +169,9 @@ class BentoSearch::EbscoHostEngine
       a = BentoSearch::Author.new(:display => author.text)
       item.authors << a
     end
+    
+    item.format         = sniff_format info
+    item.format_str     = sniff_format_str info
     
     return item
   end
