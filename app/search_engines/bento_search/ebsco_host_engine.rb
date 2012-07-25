@@ -39,6 +39,15 @@ class BentoSearch::EbscoHostEngine
   extend HTTPClientPatch::IncludeClient
   include_http_client
   
+  # Include some rails helpers, text_helper.trucate
+  def text_helper
+    @@truncate ||= begin
+      o = Object.new
+      o.extend ActionView::Helpers::TextHelper
+      o
+    end
+  end
+  
   def search_implementation(args)
     url = query_url(args)
     
@@ -68,6 +77,7 @@ class BentoSearch::EbscoHostEngine
     return results
     
   end
+  
   
   # Pass in a nokogiri node, return node.text, or nil if
   # arg was nil or node.text was blank?
@@ -163,8 +173,8 @@ class BentoSearch::EbscoHostEngine
     
     item.link           = get_link(xml_rec)
     
-    item.issn           = text_if_present info.at_xpath("./jinfo/issn") 
-    item.journal_title  = text_if_present info.at_xpath("./jinfo/jtl")
+    item.issn           = text_if_present info.at_xpath("./jinfo/issn")
+    item.journal_title  =  text_if_present(info.at_xpath("./jinfo/jtl"))
     item.publisher      = text_if_present info.at_xpath("./pubinfo/pub")
     # Might have multiple ISBN's in record, just take first for now
     item.isbn           = text_if_present info.at_xpath("./bkinfo/isbn")
@@ -173,8 +183,8 @@ class BentoSearch::EbscoHostEngine
     item.volume         = text_if_present info.at_xpath("./pubinfo/vid")
     item.issue          = text_if_present info.at_xpath("./pubinfo/iid")
     
-    
-    item.title          = text_if_present info.at_xpath("./artinfo/tig/atl")
+    # EBSCO sometimes has crazy long titles, truncate em.     
+    item.title          = text_helper.truncate( text_if_present( info.at_xpath("./artinfo/tig/atl") ), :length => 200)
     item.start_page     = text_if_present info.at_xpath("./artinfo/ppf")
     
     item.doi            = text_if_present info.at_xpath("./artinfo/ui[@type='doi']")
