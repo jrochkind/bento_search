@@ -78,5 +78,13 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     assert_present first.format
     assert_present first.format_str
   end
+  
+  test_with_cassette("get_info", :ebscohost) do
+    xml = @engine.get_info
+    
+    assert_present xml
+    
+    assert_present xml.xpath("./info/dbInfo/db")    
+  end
     
 end

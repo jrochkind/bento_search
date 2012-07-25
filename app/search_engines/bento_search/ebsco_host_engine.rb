@@ -42,8 +42,8 @@ class BentoSearch::EbscoHostEngine
   def search_implementation(args)
     url = query_url(args)
     
-    require 'debugger'
-    debugger
+    #require 'debugger'
+    #debugger
 
     results = BentoSearch::Results.new
     xml, response, exception = nil, nil, nil
@@ -168,7 +168,8 @@ class BentoSearch::EbscoHostEngine
     
     item.title          = text_if_present info.at_xpath("./artinfo/tig/atl")
     item.start_page     = text_if_present info.at_xpath("./artinfo/ppf")
-    item.doi            = text_if_present info.at_xpath("./artinfo/ui[type=doi]")
+    
+    item.doi            = text_if_present info.at_xpath("./artinfo/ui[@type='doi']")
     
     item.abstract       = text_if_present info.at_xpath("./artinfo/ab")
     # EBSCO abstracts have an annoying habit of beginning with "Abstract:"
@@ -187,6 +188,22 @@ class BentoSearch::EbscoHostEngine
     
     
     return item
+  end
+  
+  # This method is not used for normal searching, but can be used by
+  # other code to retrieve the results of the EBSCO API Info command, 
+  # using connection details configured in this engine. The Info command
+  # can tell you what databases your account is authorized to see.
+  # Returns the complete Nokogiri response, but WITH NAMESPACES REMOVED
+  def get_info
+    url = 
+      "#{configuration.base_url}/Info?prof=#{configuration.profile_id}&pwd=#{configuration.profile_password}"
+    
+    noko = Nokogiri::XML( http_client.get( url ).body )
+    
+    noko.remove_namespaces!
+    
+    return noko
   end
   
   # David Walker says pretty much only relevance and date are realiable
