@@ -1,0 +1,6 @@
+<%= options.global_name %> = []
+
+  <%-  @dbs.each do |db| -%>
+    <%= options.global_name %>.push( '<%= db["shortName"] %>' )  # <%= db["longName"] -%> 
+  <%- end -%>
+

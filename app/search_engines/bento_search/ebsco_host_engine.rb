@@ -12,10 +12,40 @@ require 'httpclient'
 # * profile_password
 # * databases: ARRAY of ebsco shortcodes of what databases to include in search. If you specify one you don't have access to, you get an error message from ebsco, alas. 
 #
-# == Note on configuration on EBSCO end
+# == Note on including databases
 #
-# If you log in to the 
+# Need to specifically configure all databases your institution licenses from
+# EBSCO that you want included in the search. You can't just say "all of them"
+# the api doesn't support that, and also more than 30 or 40 starts getting
+# horribly slow. If you include a db you do not have access to, EBSCO api
+# fatal errors. 
 #
+# You may want to make sure all your licensed databases are included
+# in your EIT profile. Log onto ebscoadmin, Customize Services, choose
+# EIT profile, choose 'databases' tag. 
+# 
+# === Download databases from EBSCO api
+#
+# We include a utility to download ALL activated databases for EIT profile
+# and generate a file putting them in a ruby array. You may want to use this
+# file as a starting point, and edit by hand:
+#
+# First configure your EBSCO search engine with bento_search, say under
+# key 'ebscohost'. 
+#
+# Then run:
+#    rails generate bento_search:pull_ebsco_dbs ebscohost
+#
+# assuming 'ebscohost' is the key you registered the EBSCO search engine. 
+#
+# This will create a file at ./config/ebsco_dbs.rb. You may want to hand
+# edit it. Then, in your bento search config, you can:
+#
+#    require "#{Rails.root}/config/ebsco_dbs.rb"
+#    BentoSearch.register_engine("ebscohost") do |conf|
+#       # ....
+#       conf.databases = $ebsco_dbs
+#    end
 #
 # == Vendor documentation 
 #
@@ -50,9 +80,6 @@ class BentoSearch::EbscoHostEngine
   
   def search_implementation(args)
     url = query_url(args)
-    
-    #require 'debugger'
-    #debugger
 
     results = BentoSearch::Results.new
     xml, response, exception = nil, nil, nil
@@ -200,6 +227,7 @@ class BentoSearch::EbscoHostEngine
       a = BentoSearch::Author.new(:display => author.text)
       item.authors << a
     end
+   
     
     item.format         = sniff_format info
     item.format_str     = sniff_format_str info
@@ -215,7 +243,7 @@ class BentoSearch::EbscoHostEngine
   # Returns the complete Nokogiri response, but WITH NAMESPACES REMOVED
   def get_info
     url = 
-      "#{configuration.base_url}/Info?prof=#{configuration.profile_id}&pwd=#{configuration.profile_password}"
+      "#{configuration.base_url}/Info?prof=#{configuration.profile_id}&pwd=#{configuration.profile_password}"    
     
     noko = Nokogiri::XML( http_client.get( url ).body )
     
