@@ -86,13 +86,13 @@ class BentoSearch::EbscoHostEngine
   def sniff_format(xml_node)
     return nil if xml_node.nil?
     
-    if xml_node.at_xpath("./bkinfo")
+    if xml_node.at_xpath("./bkinfo/*")
       "Book"
-    elsif xml_node.at_xpath("./dissinfo")
+    elsif xml_node.at_xpath("./dissinfo/*")
       :dissertation
-    elsif xml_node.at_xpath("./jinfo") && xml_node.at_xpath("./artinfo")
+    elsif xml_node.at_xpath("./jinfo/*") && xml_node.at_xpath("./artinfo/*")
       "Article"
-    elsif xml_node.at_xpath("./jinfo")
+    elsif xml_node.at_xpath("./jinfo/*")
       :serial
     else
       nil
@@ -102,11 +102,19 @@ class BentoSearch::EbscoHostEngine
   # Figure out uncontrolled literal string format to show to users.
   # We're going to try combining Ebsco Publication Type and Document Type,
   # when both are present. 
-  def sniff_format_str(xml_node)
-    [ 
-      text_if_present( xml_node.at_xpath("./artinfo/pubtype") ),
-      text_if_present( xml_node.at_xpath("./artinfo/doctype") )
-    ].compact.join(": ")
+  def sniff_format_str(xml_node)  
+    pubtype = text_if_present( xml_node.at_xpath("./artinfo/pubtype") )
+    doctype = text_if_present( xml_node.at_xpath("./artinfo/doctype") )
+    
+    components = []
+    components.push pubtype
+    components.push doctype unless doctype == pubtype
+    
+    components.compact!
+    
+    components = components.collect {|a| a.titlecase if a}
+    
+    return components.join(": ")
   end
   
   # pass in <rec> nokogiri, will determine best link
