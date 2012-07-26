@@ -71,12 +71,25 @@ class SearchEngineTest < ActiveSupport::TestCase
     end
       
     test "sets metadata on results" do
-      engine = @dummy_class.new(:id => "foo", :required => {:key => "required key"})
+      engine = MockEngine.new(:id => "foo")
       
       results = engine.search(:query => "cancer", :per_page => 20)
       
       assert_present results.search_args
       assert_equal "foo", results.engine_id
+      
+      pagination = results.pagination
+      assert_present pagination
+      
+      assert_equal 20, pagination.per_page
+      assert_equal 1, pagination.current_page
+      assert_equal 1, pagination.start_record
+      assert_equal 20, pagination.end_record
+      assert pagination.first_page?
+      
+      assert_present pagination.total_pages
+      assert_present pagination.count_records
+            
     end
 
 end
