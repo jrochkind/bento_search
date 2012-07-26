@@ -93,7 +93,7 @@ module BentoSearch
         end
       end                  
       
-      results.total_items = node_text xml.at_xpath("//opensearch:totalResults", xml_ns)
+      results.total_items = (node_text xml.at_xpath("//opensearch:totalResults", xml_ns)).to_i
       
       xml.xpath("//atom:entry", xml_ns).each do | entry |
 
