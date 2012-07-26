@@ -89,7 +89,10 @@ module BentoSearch
       
       # standard result metadata
       results.start = arguments[:start] || 0
-      results.per_page = arguments[:per_page] || self.default_per_page        
+      results.per_page = arguments[:per_page] || self.default_per_page
+      
+      results.search_args   = arguments
+      results.engine_id     = configuration.id
       
       results.timing = (Time.now - start_t)
         

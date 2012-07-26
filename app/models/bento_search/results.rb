@@ -33,6 +33,13 @@ module BentoSearch
     # time it took to do search, in seconds. 
     attr_accessor :timing
     
+    # search arguments as normalized by SearchEngine, not neccesarily
+    # directly as input. A hash. 
+    attr_accessor :search_args
+    # Registered id of engine used to create these results, 
+    # may be nil if used with an unregistered engine.
+    attr_accessor :engine_id
+    
     def failed?
       ! error.nil?
     end

@@ -70,5 +70,13 @@ class SearchEngineTest < ActiveSupport::TestCase
       assert_equal "one", engine.configuration.one
     end
       
+    test "sets metadata on results" do
+      engine = @dummy_class.new(:id => "foo", :required => {:key => "required key"})
+      
+      results = engine.search(:query => "cancer", :per_page => 20)
+      
+      assert_present results.search_args
+      assert_equal "foo", results.engine_id
+    end
 
 end
