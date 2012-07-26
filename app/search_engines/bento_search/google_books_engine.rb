@@ -94,14 +94,13 @@ module BentoSearch
     end
     
     
-    protected
     
     
     ###########
     # BentoBox::SearchEngine API
     ###########
     
-    def self.max_per_page
+    def max_per_page
       100
     end   
     
@@ -121,6 +120,8 @@ module BentoSearch
       }
     end
    
+    protected
+
     
     #############
     # Our own implementation code
