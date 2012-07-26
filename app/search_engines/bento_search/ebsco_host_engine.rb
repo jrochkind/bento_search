@@ -90,6 +90,25 @@ class BentoSearch::EbscoHostEngine
     rescue TimeoutError, HTTPClient::ConfigurationError, HTTPClient::BadResponseError, Nokogiri::SyntaxError  => e
         exception = e        
     end
+    # error handle
+    if ( response.nil? || 
+         xml.nil? || 
+         exception || 
+         (! HTTP::Status.successful? response.status) ||
+         (fault = xml.at_xpath("./Fault")))
+    
+         results.error ||= {}
+         results.error[:exception] = exception if exception
+         results.error[:status] = response.status if response
+         
+         if fault
+           results.error[:error_info] = text_if_present fault.at_xpath("./Message")
+         end
+            
+         return results
+    end
+             
+    
     
     # the namespaces they provide are weird and don't help and sometimes
     # not clearly even legal. Remove em!

@@ -15,11 +15,13 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
   
   
   def setup
-    @engine = BentoSearch::EbscoHostEngine.new( 
+    @config = {
       :profile_id => @@profile_id,
       :profile_password => @@profile_pwd,
       :databases => @@dbs_to_test
-      )
+    }
+    
+    @engine = BentoSearch::EbscoHostEngine.new( @config )             
   end
   
   
@@ -91,6 +93,31 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     assert_present xml
     
     assert_present xml.xpath("./info/dbInfo/db")    
+  end
+  
+  test_with_cassette("error bad password", :ebscohost) do    
+    error_engine = BentoSearch::EbscoHostEngine.new(
+      :profile_id       => "bad",
+      :profile_password => "bad",
+      :databases        => @@dbs_to_test
+      )
+    
+    results = error_engine.search(:query => "cancer")    
+    assert results.failed?    
+    assert_present results.error[:error_info]
+  end
+    
+    
+  test_with_cassette("error bad db", :ebscohost) do
+    error_engine = BentoSearch::EbscoHostEngine.new( 
+      :profile_id => @@profile_id,
+      :profile_password => @@profile_pwd,
+      :databases => ["bad", "does_not_exist"]
+    )
+    results = error_engine.search(:query => "cancer")    
+    assert results.failed?    
+    assert_present results.error[:error_info]        
+    
   end
     
 end
