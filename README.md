@@ -129,13 +129,20 @@ You can tell the search engine how many items you want per-page, and
 use _either_ `:start` (0-based item offset) or `:page` (1-based page
 offset) keys to paginate into the results. 
 
-    google_books_engine.search("my query", :per_page => 20, :start => 40)
-    google_books_engine.search("my query", :per_page => 20, :page => 2) # means same as above
+    results = google_books_engine.search("my query", :per_page => 20, :start => 40)
+    results = google_books_engine.search("my query", :per_page => 20, :page => 2) # means same as above
     
-An engine advertises it's maximum and default per-page values. 
+An engine instance advertises it's maximum and default per-page values. 
 
-    BentoSearch::GoogleBooksEngine.max_per_page
-    BentoSearch::GoogleBooksEngine.default_per_age
+    google_books_engine.max_per_page
+    google_books_engine.default_per_age
+    
+For help creating your UI, you can ask a BentoSearch::Results for
+`results.pagination`, which returns a BentoSearch::Results::Pagination
+object which should be suitable for passing to kaminari `paginate`, or
+else have convenient methods for roll your own pagination UI.
+
+    <%= paginate results.pagination %>
     
 ### Concurrent searching
 

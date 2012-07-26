@@ -7,6 +7,13 @@
 # from Results#pagination
 class BentoSearch::Results::Pagination
   
+  # first arg is results.total_items, second is result
+  # of normalized_args from searchresults. 
+  #
+  # We don't do the page/start normalization calc here,
+  # we count on them both being passed in, already calculated
+  # by normalize_arguments in SearchResults. Expect :page, 0-based
+  # :start, and :per_page
   def initialize(total, normalized_args)
     @total_count = total
     @per_page = normalized_args[:per_page] || 10
