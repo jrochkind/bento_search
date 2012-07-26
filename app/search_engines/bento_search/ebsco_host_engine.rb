@@ -80,7 +80,7 @@ class BentoSearch::EbscoHostEngine
   
   def search_implementation(args)
     url = query_url(args)
-
+    
     results = BentoSearch::Results.new
     xml, response, exception = nil, nil, nil
     
@@ -167,12 +167,40 @@ class BentoSearch::EbscoHostEngine
     txt.gsub(/[)(]/, ' ')
   end
   
+  # Actually turn the user's query into an EBSCO "AND" boolean query,
+  # seems only way to get decent results where terms can match cross-fields
+  # at the moment, for EIT. We'll see for EDS. 
+  def ebsco_query_prepare(txt)
+    # use string split with regex cleverly to split into space
+    # seperated terms and phrases, keeping phrases as unit. 
+    terms = txt.split %r{[[:space:]]+|("[^"]+")}
+
+    # Remove parens in non-phrase-quoted terms
+    terms = terms.collect do |t| 
+      (t =~ /^\".*\"$/) ? t : ebsco_query_escape(t)      
+    end
+    
+    # Remove boolean operators if they are bare not in a phrase, they'll
+    # make things weird. In phrase quotes they are okay. 
+    # Remove empty strings. Remove terms that are solely punctuation
+    # without any letters. 
+    terms.delete_if do |term|
+      ( 
+        term.blank? || 
+        ["AND", "OR", "NOT"].include?(term) ||
+        term =~ /\A[^[[:alnum:]]]+\Z/
+      )
+    end
+    
+    terms.join(" AND ")    
+  end
+  
   def query_url(args)
     
     url = 
       "#{configuration.base_url}/Search?prof=#{configuration.profile_id}&pwd=#{configuration.profile_password}"
     
-    url += "&query=#{CGI.escape(ebsco_query_escape  args[:query]  )}"
+    url += "&query=#{CGI.escape(ebsco_query_prepare  args[:query]  )}"
     
     # startrec is 1-based for ebsco, not 0-based like for us. 
     url += "&startrec=#{args[:start] + 1}" if args[:start]
@@ -199,7 +227,7 @@ class BentoSearch::EbscoHostEngine
     item = BentoSearch::ResultItem.new
     
     item.link           = get_link(xml_rec)
-    
+
     item.issn           = text_if_present info.at_xpath("./jinfo/issn")
     item.journal_title  =  text_if_present(info.at_xpath("./jinfo/jtl"))
     item.publisher      = text_if_present info.at_xpath("./pubinfo/pub")

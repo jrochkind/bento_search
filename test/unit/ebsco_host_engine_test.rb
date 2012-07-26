@@ -54,6 +54,12 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     assert_equal ["date"], query_params["sort"]
   end
   
+  def test_prepare_query
+    query = @engine.ebsco_query_prepare('one :. ; two "three four" AND NOT OR five')
+    
+    assert_equal 'one AND two AND "three four" AND five', query
+  end
+  
   def test_removes_paren_literals
     url = @engine.query_url(:query => "cancer)", :sort => "date_desc")
     
