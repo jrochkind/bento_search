@@ -116,6 +116,13 @@ bento_search.sort_keys).
 
     google_books_engine.search("my query", :sort => "date_desc")
     
+For help creating your UI, you can use built-in helper method:
+
+    bento_sort_options(engine)
+    #=> returns a Hash suitable as a second argument for rails
+    # select_tag helper, with sort options and labels from I18n. 
+        
+    
 ### Pagination
 
 You can tell the search engine how many items you want per-page, and 

@@ -13,4 +13,8 @@ class MockEngine
       {:num_results => 10, :link => "http://example.org"}
     end
     
+    def sort_definitions
+      configuration.sort_definitions || {}
+    end
+    
 end

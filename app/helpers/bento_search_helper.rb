@@ -123,5 +123,16 @@ module BentoSearchHelper
     return safe_join(parts, "")
   end
   
+  # returns a hash of label => key suitable for passing to rails
+  # options_for_select. (Yes, it works backwards from how you'd expect). 
+  # Label is looked up using I18n, at bento_search.sort_keys.*
+  def bento_sort_hash_for(engine)
+    Hash[ 
+      engine.sort_definitions.keys.collect do |key|
+        [I18n.translate(key, :scope => "bento_search.sort_keys"), key]
+      end        
+    ]    
+  end
+  
   
 end

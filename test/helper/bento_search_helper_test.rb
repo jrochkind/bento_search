@@ -104,6 +104,22 @@ class BentoSearchHelperTest < ActionView::TestCase
   end
     
     
+  def test_sort_hash_for
+    tested_keys = %w{title_asc date_desc relevance author_asc}
+    
+    sort_definitions = {}
+    tested_keys.each {|k| sort_definitions[k] = {}}
+    
+    engine = MockEngine.new(:sort_definitions => sort_definitions)
+
+    hash = bento_sort_hash_for(engine)
+    
+    assert_present hash
+    
+    tested_keys.each do |key|
+      assert_equal key, hash[ I18n.translate(key, :scope => "bento_search.sort_keys") ]
+    end            
+  end
 
   
 end
