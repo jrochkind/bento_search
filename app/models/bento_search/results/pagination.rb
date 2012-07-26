@@ -15,7 +15,7 @@ class BentoSearch::Results::Pagination
   # by normalize_arguments in SearchResults. Expect :page, 0-based
   # :start, and :per_page
   def initialize(total, normalized_args)
-    @total_count = total
+    @total_count = total || 0
     @per_page = normalized_args[:per_page] || 10
     @current_page = normalized_args[:page]  || 1
     @start_record = (normalized_args[:start] || 0) + 1 
@@ -37,6 +37,8 @@ class BentoSearch::Results::Pagination
     [start_record + per_page - 1, count_records].min
   end
   
+  # If nil is passed in, will normalize to 0 so things doing math
+  # comparisons won't raise. 
   def count_records
     @total_count
   end

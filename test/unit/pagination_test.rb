@@ -42,8 +42,18 @@ class PaginationTest < ActiveSupport::TestCase
     assert_equal 10, pag.total_pages
     assert_equal 10, pag.per_page
   end
+  
+  def test_empty_args
+    pag = Pagination.new(nil, {})
     
-    
+    assert_equal 1, pag.current_page
+    assert_equal 0, pag.start_record
+    assert_equal 0, pag.end_record
+    assert pag.first_page?
+    assert pag.last_page?
+    assert_equal 0, pag.count_records
+    assert_equal 0, pag.total_pages
+  end
   
   
 end
