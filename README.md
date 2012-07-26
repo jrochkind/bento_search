@@ -139,10 +139,11 @@ An engine instance advertises it's maximum and default per-page values.
     
 For help creating your UI, you can ask a BentoSearch::Results for
 `results.pagination`, which returns a BentoSearch::Results::Pagination
-object which should be suitable for passing to kaminari `paginate`, or
-else have convenient methods for roll your own pagination UI.
+object which should be suitable for passing to [kaminari](https://github.com/amatsuda/kaminari)
+`paginate`, or else have convenient methods for roll your own pagination UI. 
+Kaminari's paginate method:
 
-    <%= paginate results.pagination %>
+    <%= paginate results.pagination %> 
     
 ### Concurrent searching
 
