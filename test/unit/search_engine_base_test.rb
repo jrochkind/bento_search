@@ -117,11 +117,11 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
     
   def test_search_field_keys    
     assert_equal ["my_title", "my_author", "my_other"], Dummy.new.search_keys
-    assert_equal [:title, :author], Dummy.new.semantic_search_keys
+    assert_equal ["title", "author"], Dummy.new.semantic_search_keys
   end
   
   def test_semantic_search_map
-    assert_equal( {:title => "my_title", :author => "my_author"}, 
+    assert_equal( {"title" => "my_title", "author" => "my_author"}, 
       Dummy.new.semantic_search_map)
   end
   
@@ -136,6 +136,25 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
     assert_raise(ArgumentError, "Raises for undefined semantic_search_field") do
       d.test_parse(:query => "query", :semantic_search_field => :subject)
     end
+  end
+  
+  def test_semantic_blank_ignored
+    d = Dummy.new
+    
+    args1 = d.test_parse(:query => "query", :semantic_search_field => nil)
+    args2 = d.test_parse(:query => "query", :semantic_search_field => nil)
+    
+    assert_nil args1[:search_field]
+    assert_nil args2[:search_field]
+  end
+  
+  def test_semantic_string_or_symbol
+    d = Dummy.new
+    
+    args1 = d.test_parse(:query => "query", :semantic_search_field => :title)
+    args2 = d.test_parse(:query => "query", :semantic_search_field => "title")
+    
+    assert_equal args1, args2    
   end
   
   def test_converts_sort_to_string

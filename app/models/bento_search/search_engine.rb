@@ -146,8 +146,9 @@ module BentoSearch
       
       # translate semantic_search_field to search_field, or raise if
       # can't. 
-      if semantic = arguments.delete(:semantic_search_field)
-        mapped = self.semantic_search_map[semantic]
+      if (semantic = arguments.delete(:semantic_search_field)) && ! semantic.blank?
+        
+        mapped = self.semantic_search_map[semantic.to_s]
         unless mapped
           raise ArgumentError.new("#{self.class.name} does not know about :semantic_search_field #{semantic}")
         end

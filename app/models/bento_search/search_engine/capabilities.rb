@@ -62,7 +62,7 @@ module BentoSearch::SearchEngine::Capabilities
         # Hash[] conveniently takes an array of k-v pairs. 
         return Hash[
           search_field_definitions.collect do |field, defn|
-            [ defn[:semantic], field ] if defn && defn[:semantic]
+            [ defn[:semantic].to_s, field ] if defn && defn[:semantic]
           end.compact        
         ]
       end
