@@ -38,6 +38,9 @@ module BentoSearch
   # * http://www.developers.elsevier.com/devcms/content-api-metadata-request
   #
   # Support: Integration@scopus.com
+  #
+  # TODO: Mention to Scopus: Only one author?
+  # Paging of 50 gets an error, but docs say I should be able to request 200. q
   # 
   class ScopusEngine
     include BentoSearch::SearchEngine
@@ -63,6 +66,8 @@ module BentoSearch
       rescue TimeoutError, HTTPClient::ConfigurationError, HTTPClient::BadResponseError, Nokogiri::SyntaxError  => e
         exception = e        
       end
+      
+      
       # handle errors
       if (response.nil? || xml.nil? || exception || 
           (! HTTP::Status.successful? response.status) ||
