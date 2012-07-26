@@ -219,7 +219,14 @@ class BentoSearch::EbscoHostEngine
     url = 
       "#{configuration.base_url}/Search?prof=#{configuration.profile_id}&pwd=#{configuration.profile_password}"
     
-    url += "&query=#{CGI.escape(ebsco_query_prepare  args[:query]  )}"
+    query = ebsco_query_prepare  args[:query]  
+    
+    # wrap in (FI $query) if fielded search
+    if args[:search_field]
+      query = "(#{args[:search_field]} #{query})"
+    end
+    
+    url += "&query=#{CGI.escape query}"
     
     # startrec is 1-based for ebsco, not 0-based like for us. 
     url += "&startrec=#{args[:start] + 1}" if args[:start]
@@ -306,6 +313,16 @@ class BentoSearch::EbscoHostEngine
       "relevance" => {:implementation => "relevance"},
       "date_desc" => {:implementation => "date"}
     }      
+  end
+  
+  def search_field_definitions
+    {
+      "AU"    => {:semantic => :author},
+      "TI"    => {:semantic => :title},
+      "SU"    => {:semantic => :subject},
+      "IS"    => {:semantic => :issn},
+      "IB"    => {:semantic => :isbn}
+    }
   end
   
   def max_per_page

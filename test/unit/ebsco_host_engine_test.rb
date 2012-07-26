@@ -56,6 +56,14 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     assert_equal ["date"], query_params["sort"]
   end
   
+  def fielded_construction
+    url = @engine.query_url(:query => "cancer", :search_field => "SU")
+    
+    query_params = CGI.parse( URI.parse(url).query )
+    
+    assert_equal ["(SU cancer)"], query_params["query"]
+  end
+  
   def test_prepare_query
     query = @engine.ebsco_query_prepare('one :. ; two "three four" AND NOT OR five')
     
