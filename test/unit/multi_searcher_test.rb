@@ -22,7 +22,9 @@ class MultiSearcherTest < ActiveSupport::TestCase
   
   def test_multisearch
     searcher = BentoSearch::MultiSearcher.new(:one, :two, :three)
-    searcher.start("cancer")
+    start_returnval = searcher.start("cancer")
+    
+    assert_same searcher, start_returnval
     
     results = searcher.results
     

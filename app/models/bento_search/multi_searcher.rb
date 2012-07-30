@@ -45,12 +45,14 @@ class BentoSearch::MultiSearcher
     @engines << engine
   end
   
+  # Starts all searches, returns self so you can chain method calls if you like. 
   def start(*search_args)
     @engines.each do |engine|
       a = Actor.new(engine)
       @actors << a
       a.start! *search_args
-    end          
+    end    
+    return self
   end
   
   # Call after #start. Blocks until each included engine is finished
