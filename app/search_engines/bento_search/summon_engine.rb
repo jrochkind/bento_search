@@ -52,6 +52,12 @@ require 'summon/transport/headers'
 #     query-in-context snippets in the 'abstract' field. Set :max_snippets
 #     for how many to possibly include (default 1). We may change this functionality
 #     later, this is a bit of hacky way to do it. 
+# [use_summon_openurl] default false. If true, will use OpenURL kev context
+#     object passed back by summon to generate openurls, instead of creating
+#     one ourself from individual data elements. summon openurl is decent,
+#     but currently includes highlighting tags in title elements. Also note
+#     it includes DC-type openurls, which we don't currently generate ourselves. 
+#
 #
 # == Custom search params
 #
@@ -113,7 +119,10 @@ class BentoSearch::SummonEngine
       item.custom_data["raw_subtitle"] = handle_highlighting( first_if_present(doc_hash["Subtitle"]), :strip => true )
       
       item.link = doc_hash["link"]
-      item.openurl_kev_co = doc_hash["openUrl"] # Summon conveniently gives us pre-made OpenURL
+      
+      if configuration.use_summon_openurl      
+        item.openurl_kev_co = doc_hash["openUrl"] # Summon conveniently gives us pre-made OpenURL
+      end
       
       item.journal_title  = first_if_present doc_hash["PublicationTitle"]
       item.issn           = first_if_present doc_hash["ISSN"]
@@ -328,7 +337,8 @@ class BentoSearch::SummonEngine
       :base_url => "http://api.summon.serialssolutions.com/2.0.0/search",
       :highlighting => true,
       :snippets_as_abstract => true,
-      :max_snippets => 1
+      :max_snippets => 1,
+      :use_summon_openurl => false
     }
   end
   
