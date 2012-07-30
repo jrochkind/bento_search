@@ -167,6 +167,7 @@ class BentoSearch::SummonEngine
         item.abstract       = first_if_present doc_hash["Abstract"]
       end
       
+      item.extend( SummonOpenurlOverride )
       
       results << item
     end
@@ -380,7 +381,18 @@ class BentoSearch::SummonEngine
       }
   end
   
-
+  # Module that we extend our ResultItems with, to over-ride 
+  # to_openurl to use a dup of ourselves with title/subtitle
+  # set to raw ones without highlighting markup. 
+  module SummonOpenurlOverride
+    def to_openurl
+      dup = self.dup
+      dup.title = self.custom_data["raw_title"]
+      dup.subtitle = self.custom_data["raw_subtitle"]
+      
+      dup.to_openurl
+    end      
+  end
   
   
 end
