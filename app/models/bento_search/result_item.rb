@@ -15,6 +15,8 @@ module BentoSearch
       
       self.authors ||= []
       self.other_links ||= []
+      
+      self.custom_data ||= {}
     end
     
     # Array (possibly empty) of BentoSearch::Link objects
@@ -110,6 +112,10 @@ module BentoSearch
     # An array (order matters) of BentoSearch::Author objects
     # add authors to it with results.authors << Author
     attr_accessor :authors
+    
+    # engine-specific data not suitable for abstract API, usually
+    # for internal use. 
+    attr_accessor :custom_data
     
     
     # Returns a ruby OpenURL::ContextObject (NISO Z39.88).     
