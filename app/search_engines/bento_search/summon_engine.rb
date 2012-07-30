@@ -81,7 +81,7 @@ class BentoSearch::SummonEngine
   
   def search_implementation(args)
     uri, headers = construct_request(args)
-
+    
     results = BentoSearch::Results.new
     
     hash, response, exception = nil
@@ -107,7 +107,10 @@ class BentoSearch::SummonEngine
       item = BentoSearch::ResultItem.new
       
       item.title = handle_highlighting( first_if_present doc_hash["Title"] )
+      item.custom_data["raw_title"] = handle_highlighting( first_if_present(doc_hash["Title"]) , :strip => true)
+      
       item.subtitle = handle_highlighting( first_if_present doc_hash["Subtitle"] )# TODO is this right?
+      item.custom_data["raw_subtitle"] = handle_highlighting( first_if_present(doc_hash["Subtitle"]), :strip => true )
       
       item.link = doc_hash["link"]
       item.openurl_kev_co = doc_hash["openUrl"] # Summon conveniently gives us pre-made OpenURL
@@ -292,9 +295,16 @@ class BentoSearch::SummonEngine
   # in a field, we need to HTML escape the literal values,
   # while still using the highlighting tokens to put
   # HTML tags around highlighted terms.
-  def handle_highlighting( str )
+  def handle_highlighting( str, options = {} )
     return str if str.blank? || ! configuration.highlighting
-            
+
+    if options[:strip]
+      # Just strip em, don't need to replace em with HTML
+      str = str.gsub(Regexp.new(Regexp.escape @@hl_start_token), '')
+      str = str.gsub(Regexp.new(Regexp.escape @@hl_end_token), '')
+      return str
+    end
+    
     parts = 
       str.
         split( %r{(#{Regexp.escape @@hl_start_token}|#{Regexp.escape @@hl_end_token})}  ).
