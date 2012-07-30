@@ -1,5 +1,8 @@
 # BentoSearch
 
+[![Build Status](https://secure.travis-ci.org/jrochkind/bento_search.png)](http://travis-ci.org/jrochkind/bento_search)
+
+
 (**in progress*, not yet ready for use, mainly because we need more
 out of the box search engines supported). 
 
