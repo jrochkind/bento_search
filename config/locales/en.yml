@@ -3,6 +3,7 @@ en:
     ajax_loading: "Loading..."
     no_results: "No results found."
     search_error: "Sorry! An error occured and results could not be retrieved."
+    missing_title: "[Title Missing]"
     format:
       # Schema.org formats
       Article: Article

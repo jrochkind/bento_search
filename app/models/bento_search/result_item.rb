@@ -151,6 +151,11 @@ module BentoSearch
       if self.subtitle
         t = safe_join([t, ": ", self.subtitle], "")        
       end
+      
+      if t.blank?
+        t = I18n.translate("bento_search.missing_title")
+      end
+      
       return t
     end
     

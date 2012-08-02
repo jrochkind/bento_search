@@ -30,6 +30,10 @@ class ResultItemDisplayTest < ActiveSupport::TestCase
     assert_equal "Johnson", str
     
   end
+  
+  test "Missing title" do
+    assert_equal I18n.translate("bento_search.missing_title"), ResultItem.new.complete_title
+  end
     
   
 end
