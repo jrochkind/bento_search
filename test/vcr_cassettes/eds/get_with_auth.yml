@@ -26,20 +26,20 @@ http_interactions:
       Server:
       - Microsoft-IIS/7.5
       X-Dynatrace:
-      - PT=14325;PA=-436361037;PS=-760194407
+      - PT=14349;PA=-436361037;PS=-760194407
       Dynatrace:
-      - PT=14325;PA=-436361037;PS=-760194407
+      - PT=14349;PA=-436361037;PS=-760194407
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
       - ASP.NET
       Date:
-      - Thu, 02 Aug 2012 18:54:53 GMT
+      - Thu, 02 Aug 2012 19:47:26 GMT
     body:
       encoding: US-ASCII
-      string: ! '{"AuthToken":"7318c730-cec7-4f98-9817-91af27dad816","AuthTimeout":"1800"}'
+      string: ! '{"AuthToken":"d7ebc874-c6e5-440e-af32-099c15d62504","AuthTimeout":"1800"}'
     http_version: 
-  recorded_at: Thu, 02 Aug 2012 18:54:54 GMT
+  recorded_at: Thu, 02 Aug 2012 19:47:26 GMT
 - request:
     method: get
     uri: http://eds-api.ebscohost.com/edsapi/rest/createsession?guest=y&profile=edsapi
@@ -48,9 +48,9 @@ http_interactions:
       string: ''
     headers:
       X-Authenticationtoken:
-      - 7318c730-cec7-4f98-9817-91af27dad816
+      - d7ebc874-c6e5-440e-af32-099c15d62504
       Accept:
-      - application/json
+      - application/xml
   response:
     status:
       code: 200
@@ -62,10 +62,10 @@ http_interactions:
         cHJpdmF0ZQ==
       !binary "Q29udGVudC1MZW5ndGg=":
       - !binary |-
-        MTAw
+        Mjc5
       !binary "Q29udGVudC1UeXBl":
       - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+        YXBwbGljYXRpb24veG1sOyBjaGFyc2V0PXV0Zi04
       !binary "U2VydmVy":
       - !binary |-
         TWljcm9zb2Z0LUlJUy83LjU=
@@ -77,12 +77,13 @@ http_interactions:
         QVNQLk5FVA==
       !binary "RGF0ZQ==":
       - !binary |-
-        VGh1LCAwMiBBdWcgMjAxMiAxODo1NDo1NCBHTVQ=
+        VGh1LCAwMiBBdWcgMjAxMiAxOTo0NzoyNyBHTVQ=
     body:
       encoding: US-ASCII
-      string: ! '{"SessionToken":"ab7ae10c-e6e9-4c49-8ae8-efe72d420090.HqqSUN3bA+NLTe+xyQ9hxIF2I0+T33wggh5RY1m5rAA="}'
+      string: <CreateSessionResponseMessage xmlns="http://epnet.com/webservices/EbscoApi/Contracts"
+        xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><SessionToken>c8369733-11b2-4997-b730-b64a89216c17.K2wO/4zD1xUjO/DA0YajFQ/765ieeTuKCZ3diFVBui4=</SessionToken></CreateSessionResponseMessage>
     http_version: 
-  recorded_at: Thu, 02 Aug 2012 18:54:55 GMT
+  recorded_at: Thu, 02 Aug 2012 19:47:27 GMT
 - request:
     method: get
     uri: http://eds-api.ebscohost.com/edsapi/rest/info
@@ -91,11 +92,11 @@ http_interactions:
       string: ''
     headers:
       X-Authenticationtoken:
-      - 7318c730-cec7-4f98-9817-91af27dad816
+      - d7ebc874-c6e5-440e-af32-099c15d62504
       Accept:
-      - application/json
+      - application/xml
       X-Sessiontoken:
-      - ab7ae10c-e6e9-4c49-8ae8-efe72d420090.HqqSUN3bA+NLTe+xyQ9hxIF2I0+T33wggh5RY1m5rAA=
+      - c8369733-11b2-4997-b730-b64a89216c17.K2wO/4zD1xUjO/DA0YajFQ/765ieeTuKCZ3diFVBui4=
   response:
     status:
       code: 200
@@ -107,10 +108,10 @@ http_interactions:
         cHJpdmF0ZQ==
       !binary "Q29udGVudC1MZW5ndGg=":
       - !binary |-
-        NjM4MA==
+        MTA0NDE=
       !binary "Q29udGVudC1UeXBl":
       - !binary |-
-        YXBwbGljYXRpb24vSlNPTjsgY2hhcnNldD11dGYtOA==
+        YXBwbGljYXRpb24veG1sOyBjaGFyc2V0PXV0Zi04
       !binary "U2VydmVy":
       - !binary |-
         TWljcm9zb2Z0LUlJUy83LjU=
@@ -122,40 +123,102 @@ http_interactions:
         QVNQLk5FVA==
       !binary "RGF0ZQ==":
       - !binary |-
-        VGh1LCAwMiBBdWcgMjAxMiAxODo1NDo1NCBHTVQ=
+        VGh1LCAwMiBBdWcgMjAxMiAxOTo0NzoyOCBHTVQ=
     body:
       encoding: US-ASCII
-      string: ! '{"AvailableSearchCriteria":{"AvailableSorts":[{"Id":"date","Label":"Date
-        Descending","AddAction":"setsort(date)"},{"Id":"relevance","Label":"Relevance","AddAction":"setsort(relevance)"},{"Id":"date2","Label":"Date
-        Ascending","AddAction":"setsort(date2)"}],"AvailableSearchFields":[{"FieldCode":"TX","Label":"All
-        Text"},{"FieldCode":"AU","Label":"Author"},{"FieldCode":"TI","Label":"Title"},{"FieldCode":"SU","Label":"Subject
-        Terms"},{"FieldCode":"SO","Label":"Source"},{"FieldCode":"AB","Label":"Abstract"},{"FieldCode":"IS","Label":"ISSN"},{"FieldCode":"IB","Label":"ISBN"}],"AvailableExpanders":[{"Id":"thesaurus","Label":"Apply
-        related words","AddAction":"addexpander(thesaurus)"},{"Id":"fulltext","Label":"Also
-        search within the full text of the articles","AddAction":"addexpander(fulltext)"}],"AvailableLimiters":[{"Id":"FT","Label":"Full
-        Text","Type":"select","AddAction":"addlimiter(FT:value)","LimiterValues":null},{"Id":"TI","Label":"Title","Type":"text","AddAction":"addlimiter(TI:value)","LimiterValues":null},{"Id":"RV","Label":"Peer
-        Reviewed","Type":"select","AddAction":"addlimiter(RV:value)","LimiterValues":null},{"Id":"SO","Label":"Journal
-        Name","Type":"text","AddAction":"addlimiter(SO:value)","LimiterValues":null},{"Id":"AU","Label":"Author","Type":"text","AddAction":"addlimiter(AU:value)","LimiterValues":null},{"Id":"DT1","Label":"Date
-        Published from","Type":"ymrange","AddAction":"addlimiter(DT1:value)","LimiterValues":null},{"Id":"FT1","Label":"Available
-        in Library Collection","Type":"select","AddAction":"addlimiter(FT1:value)","LimiterValues":null},{"Id":"LA99","Label":"Language","Type":"multiselectvalue","AddAction":null,"LimiterValues":[{"Value":"Catalan","AddAction":"addlimiter(LA99:Catalan)","LimiterValues":null},{"Value":"Chinese","AddAction":"addlimiter(LA99:Chinese)","LimiterValues":null},{"Value":"Croatian","AddAction":"addlimiter(LA99:Croatian)","LimiterValues":null},{"Value":"Dutch\/Flemish","AddAction":"addlimiter(LA99:Dutch\/Flemish)","LimiterValues":null},{"Value":"English","AddAction":"addlimiter(LA99:English)","LimiterValues":null},{"Value":"French","AddAction":"addlimiter(LA99:French)","LimiterValues":null},{"Value":"German","AddAction":"addlimiter(LA99:German)","LimiterValues":null},{"Value":"Italian","AddAction":"addlimiter(LA99:Italian)","LimiterValues":null},{"Value":"Lithuanian","AddAction":"addlimiter(LA99:Lithuanian)","LimiterValues":null},{"Value":"Portuguese","AddAction":"addlimiter(LA99:Portuguese)","LimiterValues":null},{"Value":"Romanian","AddAction":"addlimiter(LA99:Romanian)","LimiterValues":null},{"Value":"Russian","AddAction":"addlimiter(LA99:Russian)","LimiterValues":null},{"Value":"Spanish","AddAction":"addlimiter(LA99:Spanish)","LimiterValues":null},{"Value":"Turkish","AddAction":"addlimiter(LA99:Turkish)","LimiterValues":null},{"Value":"Bosnian","AddAction":"addlimiter(LA99:Bosnian)","LimiterValues":null},{"Value":"Czech","AddAction":"addlimiter(LA99:Czech)","LimiterValues":null},{"Value":"Finnish","AddAction":"addlimiter(LA99:Finnish)","LimiterValues":null},{"Value":"Hungarian","AddAction":"addlimiter(LA99:Hungarian)","LimiterValues":null},{"Value":"Latvian","AddAction":"addlimiter(LA99:Latvian)","LimiterValues":null},{"Value":"Norwegian","AddAction":"addlimiter(LA99:Norwegian)","LimiterValues":null},{"Value":"Polish","AddAction":"addlimiter(LA99:Polish)","LimiterValues":null},{"Value":"Slovak","AddAction":"addlimiter(LA99:Slovak)","LimiterValues":null},{"Value":"Slovenian","AddAction":"addlimiter(LA99:Slovenian)","LimiterValues":null},{"Value":"Serbian","AddAction":"addlimiter(LA99:Serbian)","LimiterValues":null},{"Value":"Ukrainian","AddAction":"addlimiter(LA99:Ukrainian)","LimiterValues":null},{"Value":"Afrikaans","AddAction":"addlimiter(LA99:Afrikaans)","LimiterValues":null},{"Value":"Japanese","AddAction":"addlimiter(LA99:Japanese)","LimiterValues":null},{"Value":"Persian","AddAction":"addlimiter(LA99:Persian)","LimiterValues":null},{"Value":"Swahili","AddAction":"addlimiter(LA99:Swahili)","LimiterValues":null},{"Value":"Swedish","AddAction":"addlimiter(LA99:Swedish)","LimiterValues":null},{"Value":"Arabic","AddAction":"addlimiter(LA99:Arabic)","LimiterValues":null},{"Value":"Azerbaijani","AddAction":"addlimiter(LA99:Azerbaijani)","LimiterValues":null},{"Value":"Basque","AddAction":"addlimiter(LA99:Basque)","LimiterValues":null},{"Value":"Bulgarian","AddAction":"addlimiter(LA99:Bulgarian)","LimiterValues":null},{"Value":"Danish","AddAction":"addlimiter(LA99:Danish)","LimiterValues":null},{"Value":"Greek","AddAction":"addlimiter(LA99:Greek)","LimiterValues":null},{"Value":"Hebrew","AddAction":"addlimiter(LA99:Hebrew)","LimiterValues":null},{"Value":"Hindi","AddAction":"addlimiter(LA99:Hindi)","LimiterValues":null},{"Value":"Icelandic","AddAction":"addlimiter(LA99:Icelandic)","LimiterValues":null},{"Value":"Indonesian","AddAction":"addlimiter(LA99:Indonesian)","LimiterValues":null},{"Value":"Korean","AddAction":"addlimiter(LA99:Korean)","LimiterValues":null},{"Value":"Latin","AddAction":"addlimiter(LA99:Latin)","LimiterValues":null},{"Value":"Malay","AddAction":"addlimiter(LA99:Malay)","LimiterValues":null},{"Value":"Serbo-Croatian","AddAction":"addlimiter(LA99:Serbo-Croatian)","LimiterValues":null},{"Value":"Urdu","AddAction":"addlimiter(LA99:Urdu)","LimiterValues":null},{"Value":"Dutch","AddAction":"addlimiter(LA99:Dutch)","LimiterValues":null},{"Value":"Welsh","AddAction":"addlimiter(LA99:Welsh)","LimiterValues":null},{"Value":"Greek,
-        Modern","AddAction":"addlimiter(LA99:Greek\\, Modern)","LimiterValues":null},{"Value":"Aragonese","AddAction":"addlimiter(LA99:Aragonese)","LimiterValues":null},{"Value":"Breton","AddAction":"addlimiter(LA99:Breton)","LimiterValues":null},{"Value":"Catalan;
-        Valencian","AddAction":"addlimiter(LA99:Catalan; Valencian)","LimiterValues":null},{"Value":"Dutch;
-        Flemish","AddAction":"addlimiter(LA99:Dutch; Flemish)","LimiterValues":null},{"Value":"Galician","AddAction":"addlimiter(LA99:Galician)","LimiterValues":null},{"Value":"Slavic
-        languages","AddAction":"addlimiter(LA99:Slavic languages)","LimiterValues":null},{"Value":"Spanish;
-        Castilian","AddAction":"addlimiter(LA99:Spanish; Castilian)","LimiterValues":null},{"Value":"Greek,
-        Ancient","AddAction":"addlimiter(LA99:Greek\\, Ancient)","LimiterValues":null},{"Value":"Occitan","AddAction":"addlimiter(LA99:Occitan)","LimiterValues":null}]}]}}'
+      string: <InfoResponseMessage xmlns="http://epnet.com/webservices/EbscoApi/Contracts"
+        xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><AvailableSearchCriteria><AvailableSorts><AvailableSort><Id>date</Id><Label>Date
+        Descending</Label><AddAction>setsort(date)</AddAction></AvailableSort><AvailableSort><Id>relevance</Id><Label>Relevance</Label><AddAction>setsort(relevance)</AddAction></AvailableSort><AvailableSort><Id>date2</Id><Label>Date
+        Ascending</Label><AddAction>setsort(date2)</AddAction></AvailableSort></AvailableSorts><AvailableSearchFields><AvailableSearchField><FieldCode>TX</FieldCode><Label>All
+        Text</Label></AvailableSearchField><AvailableSearchField><FieldCode>AU</FieldCode><Label>Author</Label></AvailableSearchField><AvailableSearchField><FieldCode>TI</FieldCode><Label>Title</Label></AvailableSearchField><AvailableSearchField><FieldCode>SU</FieldCode><Label>Subject
+        Terms</Label></AvailableSearchField><AvailableSearchField><FieldCode>SO</FieldCode><Label>Source</Label></AvailableSearchField><AvailableSearchField><FieldCode>AB</FieldCode><Label>Abstract</Label></AvailableSearchField><AvailableSearchField><FieldCode>IS</FieldCode><Label>ISSN</Label></AvailableSearchField><AvailableSearchField><FieldCode>IB</FieldCode><Label>ISBN</Label></AvailableSearchField></AvailableSearchFields><AvailableExpanders><AvailableExpander><Id>thesaurus</Id><Label>Apply
+        related words</Label><AddAction>addexpander(thesaurus)</AddAction></AvailableExpander><AvailableExpander><Id>fulltext</Id><Label>Also
+        search within the full text of the articles</Label><AddAction>addexpander(fulltext)</AddAction></AvailableExpander></AvailableExpanders><AvailableLimiters><AvailableLimiter><Id>FT</Id><Label>Full
+        Text</Label><Type>select</Type><AddAction>addlimiter(FT:value)</AddAction><LimiterValues
+        i:nil="true"/></AvailableLimiter><AvailableLimiter><Id>TI</Id><Label>Title</Label><Type>text</Type><AddAction>addlimiter(TI:value)</AddAction><LimiterValues
+        i:nil="true"/></AvailableLimiter><AvailableLimiter><Id>RV</Id><Label>Peer
+        Reviewed</Label><Type>select</Type><AddAction>addlimiter(RV:value)</AddAction><LimiterValues
+        i:nil="true"/></AvailableLimiter><AvailableLimiter><Id>SO</Id><Label>Journal
+        Name</Label><Type>text</Type><AddAction>addlimiter(SO:value)</AddAction><LimiterValues
+        i:nil="true"/></AvailableLimiter><AvailableLimiter><Id>AU</Id><Label>Author</Label><Type>text</Type><AddAction>addlimiter(AU:value)</AddAction><LimiterValues
+        i:nil="true"/></AvailableLimiter><AvailableLimiter><Id>DT1</Id><Label>Date
+        Published from</Label><Type>ymrange</Type><AddAction>addlimiter(DT1:value)</AddAction><LimiterValues
+        i:nil="true"/></AvailableLimiter><AvailableLimiter><Id>FT1</Id><Label>Available
+        in Library Collection</Label><Type>select</Type><AddAction>addlimiter(FT1:value)</AddAction><LimiterValues
+        i:nil="true"/></AvailableLimiter><AvailableLimiter><Id>LA99</Id><Label>Language</Label><Type>multiselectvalue</Type><AddAction
+        i:nil="true"/><LimiterValues><LimiterValue><Value>Catalan</Value><AddAction>addlimiter(LA99:Catalan)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Chinese</Value><AddAction>addlimiter(LA99:Chinese)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Croatian</Value><AddAction>addlimiter(LA99:Croatian)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Dutch/Flemish</Value><AddAction>addlimiter(LA99:Dutch/Flemish)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>English</Value><AddAction>addlimiter(LA99:English)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>French</Value><AddAction>addlimiter(LA99:French)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>German</Value><AddAction>addlimiter(LA99:German)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Italian</Value><AddAction>addlimiter(LA99:Italian)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Lithuanian</Value><AddAction>addlimiter(LA99:Lithuanian)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Portuguese</Value><AddAction>addlimiter(LA99:Portuguese)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Romanian</Value><AddAction>addlimiter(LA99:Romanian)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Russian</Value><AddAction>addlimiter(LA99:Russian)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Spanish</Value><AddAction>addlimiter(LA99:Spanish)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Turkish</Value><AddAction>addlimiter(LA99:Turkish)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Bosnian</Value><AddAction>addlimiter(LA99:Bosnian)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Czech</Value><AddAction>addlimiter(LA99:Czech)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Finnish</Value><AddAction>addlimiter(LA99:Finnish)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Hungarian</Value><AddAction>addlimiter(LA99:Hungarian)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Latvian</Value><AddAction>addlimiter(LA99:Latvian)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Norwegian</Value><AddAction>addlimiter(LA99:Norwegian)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Polish</Value><AddAction>addlimiter(LA99:Polish)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Slovak</Value><AddAction>addlimiter(LA99:Slovak)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Slovenian</Value><AddAction>addlimiter(LA99:Slovenian)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Serbian</Value><AddAction>addlimiter(LA99:Serbian)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Ukrainian</Value><AddAction>addlimiter(LA99:Ukrainian)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Afrikaans</Value><AddAction>addlimiter(LA99:Afrikaans)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Japanese</Value><AddAction>addlimiter(LA99:Japanese)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Persian</Value><AddAction>addlimiter(LA99:Persian)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Swahili</Value><AddAction>addlimiter(LA99:Swahili)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Swedish</Value><AddAction>addlimiter(LA99:Swedish)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Arabic</Value><AddAction>addlimiter(LA99:Arabic)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Azerbaijani</Value><AddAction>addlimiter(LA99:Azerbaijani)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Basque</Value><AddAction>addlimiter(LA99:Basque)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Bulgarian</Value><AddAction>addlimiter(LA99:Bulgarian)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Danish</Value><AddAction>addlimiter(LA99:Danish)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Greek</Value><AddAction>addlimiter(LA99:Greek)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Hebrew</Value><AddAction>addlimiter(LA99:Hebrew)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Hindi</Value><AddAction>addlimiter(LA99:Hindi)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Icelandic</Value><AddAction>addlimiter(LA99:Icelandic)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Indonesian</Value><AddAction>addlimiter(LA99:Indonesian)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Korean</Value><AddAction>addlimiter(LA99:Korean)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Latin</Value><AddAction>addlimiter(LA99:Latin)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Malay</Value><AddAction>addlimiter(LA99:Malay)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Serbo-Croatian</Value><AddAction>addlimiter(LA99:Serbo-Croatian)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Urdu</Value><AddAction>addlimiter(LA99:Urdu)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Dutch</Value><AddAction>addlimiter(LA99:Dutch)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Welsh</Value><AddAction>addlimiter(LA99:Welsh)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Greek, Modern</Value><AddAction>addlimiter(LA99:Greek\,
+        Modern)</AddAction><LimiterValues i:nil="true"/></LimiterValue><LimiterValue><Value>Aragonese</Value><AddAction>addlimiter(LA99:Aragonese)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Breton</Value><AddAction>addlimiter(LA99:Breton)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Catalan; Valencian</Value><AddAction>addlimiter(LA99:Catalan;
+        Valencian)</AddAction><LimiterValues i:nil="true"/></LimiterValue><LimiterValue><Value>Dutch;
+        Flemish</Value><AddAction>addlimiter(LA99:Dutch; Flemish)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Galician</Value><AddAction>addlimiter(LA99:Galician)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Slavic languages</Value><AddAction>addlimiter(LA99:Slavic
+        languages)</AddAction><LimiterValues i:nil="true"/></LimiterValue><LimiterValue><Value>Spanish;
+        Castilian</Value><AddAction>addlimiter(LA99:Spanish; Castilian)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue><LimiterValue><Value>Greek, Ancient</Value><AddAction>addlimiter(LA99:Greek\,
+        Ancient)</AddAction><LimiterValues i:nil="true"/></LimiterValue><LimiterValue><Value>Occitan</Value><AddAction>addlimiter(LA99:Occitan)</AddAction><LimiterValues
+        i:nil="true"/></LimiterValue></LimiterValues></AvailableLimiter></AvailableLimiters></AvailableSearchCriteria></InfoResponseMessage>
     http_version: 
-  recorded_at: Thu, 02 Aug 2012 18:54:55 GMT
+  recorded_at: Thu, 02 Aug 2012 19:47:28 GMT
 - request:
     method: get
-    uri: http://eds-api.ebscohost.com/edsapi/rest/endsession?sessiontoken=ab7ae10c-e6e9-4c49-8ae8-efe72d420090.HqqSUN3bA+NLTe+xyQ9hxIF2I0+T33wggh5RY1m5rAA=
+    uri: http://eds-api.ebscohost.com/edsapi/rest/endsession?sessiontoken=c8369733-11b2-4997-b730-b64a89216c17.K2wO/4zD1xUjO/DA0YajFQ/765ieeTuKCZ3diFVBui4=
     body:
       encoding: US-ASCII
       string: ''
     headers:
       X-Authenticationtoken:
-      - 7318c730-cec7-4f98-9817-91af27dad816
+      - d7ebc874-c6e5-440e-af32-099c15d62504
       Accept:
-      - application/json
+      - application/xml
   response:
     status:
       code: 200
@@ -167,10 +230,10 @@ http_interactions:
         cHJpdmF0ZQ==
       !binary "Q29udGVudC1MZW5ndGg=":
       - !binary |-
-        MjA=
+        MTc5
       !binary "Q29udGVudC1UeXBl":
       - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+        YXBwbGljYXRpb24veG1sOyBjaGFyc2V0PXV0Zi04
       !binary "U2VydmVy":
       - !binary |-
         TWljcm9zb2Z0LUlJUy83LjU=
@@ -182,10 +245,11 @@ http_interactions:
         QVNQLk5FVA==
       !binary "RGF0ZQ==":
       - !binary |-
-        VGh1LCAwMiBBdWcgMjAxMiAxODo1NDo1NCBHTVQ=
+        VGh1LCAwMiBBdWcgMjAxMiAxOTo0NzoyOSBHTVQ=
     body:
       encoding: US-ASCII
-      string: ! '{"IsSuccessful":"y"}'
+      string: <EndSessionResponse xmlns="http://epnet.com/webservices/EbscoApi/Contracts"
+        xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><IsSuccessful>y</IsSuccessful></EndSessionResponse>
     http_version: 
-  recorded_at: Thu, 02 Aug 2012 18:54:55 GMT
+  recorded_at: Thu, 02 Aug 2012 19:47:30 GMT
 recorded_with: VCR 2.2.4

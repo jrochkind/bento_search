@@ -26,18 +26,18 @@ http_interactions:
       Server:
       - Microsoft-IIS/7.5
       X-Dynatrace:
-      - PT=14324;PA=-436361037;PS=-760194407
+      - PT=14348;PA=-436361037;PS=-760194407
       Dynatrace:
-      - PT=14324;PA=-436361037;PS=-760194407
+      - PT=14348;PA=-436361037;PS=-760194407
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
       - ASP.NET
       Date:
-      - Thu, 02 Aug 2012 18:54:53 GMT
+      - Thu, 02 Aug 2012 19:47:26 GMT
     body:
       encoding: US-ASCII
       string: ! '{"ErrorCode":1102,"Reason":"Invalid Credentials.","AdditionalDetail":null}'
     http_version: 
-  recorded_at: Thu, 02 Aug 2012 18:54:53 GMT
+  recorded_at: Thu, 02 Aug 2012 19:47:26 GMT
 recorded_with: VCR 2.2.4

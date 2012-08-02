@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 require 'nokogiri'
-require 'multi_json'
 require 'httpclient'
 require 'http_client_patch/include_client'
 
@@ -51,6 +50,17 @@ class BentoSearch::EdsEngine
     %w{user_id password profile}
   end
   
+  
+  def search_implementation(args)
+    query = "AND,#{args[:query]}"
+    
+    url = "#{configuration.base_url}search?query=#{CGI.escape query}"
+    
+    get_with_auth(url)
+    
+  end
+  
+  
   # Wraps calls to the EDS api with CreateSession and EndSession requests
   # to EDS. Will pass sessionID in yield from block.
   #
@@ -69,23 +79,33 @@ class BentoSearch::EdsEngine
     
             
     create_url = "#{configuration.base_url}createsession?profile=#{configuration.profile}&guest=#{auth ? 'n' : 'y'}"    
-    response_hash = get_with_auth(create_url)    
+    response_xml = get_with_auth(create_url)    
     
-    unless response_hash && response_hash.has_key?("SessionToken")  
+    session_token = nil
+    unless response_xml && (session_token = at_xpath_text(response_xml, "//SessionToken"))  
       e = EdsCommException.new("Could not get SessionToken")      
     end
-        
-    session_token = response_hash["SessionToken"]
-    
+                
     begin    
       block.yield(session_token)
     ensure      
       if auth_token && session_token   
         end_url = "#{configuration.base_url}endsession?sessiontoken=#{CGI.escape session_token}"
-        response_hash = get_with_auth(end_url)        
+        response_xml = get_with_auth(end_url)        
       end
     end
     
+  end
+  
+  # if the xpath responds, return #text of it, else nil. 
+  def at_xpath_text(noko, xpath)
+    node = noko.at_xpath(xpath)
+    
+    if node.nil?
+      return node
+    else
+      return node.text
+    end
   end
   
   # Give it a url pointing at EDS API.
@@ -93,7 +113,7 @@ class BentoSearch::EdsEngine
   # It will 
   # * Make a GET request
   # * with memo-ized auth token added to headers
-  # * for JSON
+  # * for XML, with all namespaces removed!
   # * Parse JSON into a hash and return hash
   # * Try ONCE more to get if EBSCO says bad auth token
   # * Raise an EdsCommException if can't auth after second try,
@@ -105,26 +125,28 @@ class BentoSearch::EdsEngine
     end
     
     response = nil
-    response_hash = nil
+    response_xml = nil
     caught_exception = nil
                 
     begin
-      headers = {AuthHeader => auth_token, 'Accept' => 'application/json'}
+      headers = {AuthHeader => auth_token, 'Accept' => 'application/xml'}
       headers[SessionTokenHeader] = session_token if session_token
       response = http_client.get(url, nil, headers)
-      response_hash = MultiJson.load(response.body)
+      response_xml = Nokogiri::XML(response.body)
+      response_xml.remove_namespaces!
       
-      if response_hash["ErrorNumber"] == "104" || response_hash["ErrorDescription"] == "Auth Token Invalid"
+      if (at_xpath_text(response_xml, "//ErrorNumber") == "104") || (at_xpath_text(response_xml, "//ErrorDescription") == "Auth Token Invalid")
         # bad auth, try again just ONCE
         headers[AuthHeader] = self.class.remembered_auth = get_auth_token
         response = http_client.get(url, nil, headers)
-        response_hash = MultiJson.load(response.body)        
+        response_xml = Nokogiri::XML(response.body)
+        response_xml.remove_namespaces!        
       end            
-    rescue MultiJson::DecodeError => e
+    rescue TimeoutError, HTTPClient::ConfigurationError, HTTPClient::BadResponseError, Nokogiri::SyntaxError => e
       caught_exception = e
     end
     
-    if response.nil? || response_hash.nil? || caught_exception ||  (! HTTP::Status.successful? response.status)
+    if response.nil? || response_xml.nil? || caught_exception ||  (! HTTP::Status.successful? response.status)
       require 'debugger'
       debugger
       exception = EdsCommException.new("Error fetching URL: #{caught_exception.message if caught_exception} : #{url}")
@@ -135,7 +157,7 @@ class BentoSearch::EdsEngine
       raise exception
     end
         
-    return response_hash
+    return response_xml
   end
   
   

@@ -54,9 +54,9 @@ class EdsEngineTest < ActiveSupport::TestCase
       response = @engine.get_with_auth(url, session_token)
       
       assert_present response
-      assert_kind_of Hash, response
+      assert_kind_of Nokogiri::XML::Document, response
       
-      assert_blank response["ErrorNumber"], "no error report in result"            
+      assert_nil response.at_xpath("//ErrorNumber"), "no error report in result"             
     end      
   end
   
@@ -68,12 +68,29 @@ class EdsEngineTest < ActiveSupport::TestCase
         response = @engine.get_with_auth(url, session_token)
         
         assert_present response
-        assert_kind_of Hash, response
+        assert_kind_of Nokogiri::XML::Document, response
         
-        assert_blank response["ErrorNumber"], "no error report in result"
+        assert_nil response.at_xpath("//ErrorNumber"), "no error report in result"             
       end        
       
       BentoSearch::EdsEngine.remembered_auth = nil
+  end
+  
+  def nothing
+    VCR.turned_off do
+      query = "AND,cancer"
+      url = "#{@engine.configuration.base_url}search?query=#{CGI.escape query}"
+      
+      response = nil
+      @engine.with_session do |session_token|
+        response = @engine.get_with_auth(url, session_token)
+      end
+          
+      
+      require 'debugger'
+      debugger
+      1+1
+    end
   end
   
   
