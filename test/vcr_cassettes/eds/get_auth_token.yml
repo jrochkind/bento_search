@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://eds-api.ebscohost.com/authservice/rest/uidauth
+    body:
+      encoding: UTF-8
+      string: ! "      {\n        \"UserId\":\"DUMMY_USER_ID\",\n        \"Password\":\"DUMMY_PWD\"\n
+        \     }\n"
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '73'
+      Content-Type:
+      - application/JSON; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      X-Dynatrace:
+      - PT=14323;PA=-436361037;PS=-760194407
+      Dynatrace:
+      - PT=14323;PA=-436361037;PS=-760194407
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 02 Aug 2012 18:54:53 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '{"AuthToken":"9c14b737-f15c-4554-9d70-17eb167641ce","AuthTimeout":"1800"}'
+    http_version: 
+  recorded_at: Thu, 02 Aug 2012 18:54:53 GMT
+recorded_with: VCR 2.2.4
