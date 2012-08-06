@@ -48,6 +48,8 @@ require 'http_client_patch/include_client'
 # Title and abstract data seems to be HTML with tags and character entities and
 # escaped special chars. We're trusting it and passing it on as html_safe. 
 #
+# Paging can only happen on even pages, with 'page' rather than 'start'. But
+# you can pass in 'start' to bento_search, it'll be converted to closest page. 
 #
 # == Authenticated Users
 #
@@ -122,6 +124,23 @@ class BentoSearch::EdsEngine
     end
   end
   
+  def construct_search_url(args)
+    query = "AND,#{args[:query]}"
+    url = "#{configuration.base_url}search?view=detailed&query=#{CGI.escape query}"
+    url += "&highlight=#{configuration.highlighting ? 'y' : 'n' }"
+    
+    if args[:per_page]
+      url += "&resultsperpage=#{args[:per_page]}"
+    end
+    if args[:page]
+      url += "&pagenumber=#{args[:page]}"
+    end
+    
+    
+    return url
+  end
+  
+  
   
   def search_implementation(args)
     results = BentoSearch::Results.new
@@ -129,10 +148,9 @@ class BentoSearch::EdsEngine
     end_user_auth = authenticated_end_user? args
     
     begin
-      query = "AND,#{args[:query]}"
       with_session(end_user_auth) do |session_token|
                         
-        url = "#{configuration.base_url}search?view=detailed&query=#{CGI.escape query}&highlight=#{configuration.highlighting ? 'y' : 'n' }"
+        url = construct_search_url(args)
                 
         response = get_with_auth(url, session_token)
         
