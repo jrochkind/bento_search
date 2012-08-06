@@ -149,12 +149,12 @@ class SummonEngineTest < ActiveSupport::TestCase
     
     first = results.first
     
-    assert_include first.title, '<b class="bento_search_snippet_highlight">' 
+    assert_include first.title, '<b class="bento_search_highlight">' 
     
     assert first.title.html_safe?, "title is HTML safe"
     
     assert_present first.custom_data['raw_title']
-    assert_not_include first.custom_data['raw_title'], '<b class="bento_search_snippet_highlight">'
+    assert_not_include first.custom_data['raw_title'], '<b class="bento_search_highlight">'
     
   end
   
