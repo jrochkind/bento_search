@@ -13,13 +13,13 @@ http_interactions:
       message: OK
     headers:
       Expires:
-      - Tue, 22 May 2012 14:53:16 GMT
+      - Mon, 06 Aug 2012 15:27:13 GMT
       Date:
-      - Tue, 22 May 2012 14:53:16 GMT
+      - Mon, 06 Aug 2012 15:27:13 GMT
       Cache-Control:
       - private, max-age=0, must-revalidate, no-transform
       Etag:
-      - ! '"qNsoPKOLdfqhG5WG78YlLVVbcbo/hx0CoSymZwkdaMZhe8OIQxfeSEE"'
+      - ! '"scy4Nkp2VpLNZ5k9N-okuvp-sNk/CP512FXi4xF9QCMgzMJuwIlyqA4"'
       Content-Type:
       - application/json; charset=UTF-8
       X-Content-Type-Options:
@@ -34,528 +34,669 @@ http_interactions:
       - chunked
     body:
       encoding: UTF-8
-      string: ! "{\n \"kind\": \"books#volumes\",\n \"totalItems\": 1055,\n \"items\":
-        [\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"8K9rAAAAMAAJ\",\n   \"etag\":
-        \"CqMABBJPklA\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/8K9rAAAAMAAJ\",\n
-        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"a manual
-        for practitioners\",\n    \"authors\": [\n     \"American Cancer Society.
-        Massachusetts Division\"\n    ],\n    \"publishedDate\": \"1968\",\n    \"industryIdentifiers\":
-        [\n     {\n      \"type\": \"OTHER\",\n      \"identifier\": \"UOM:39015003806745\"\n
-        \    }\n    ],\n    \"pageCount\": 408,\n    \"printType\": \"BOOK\",\n    \"categories\":
-        [\n     \"Health & Fitness\"\n    ],\n    \"contentVersion\": \"preview-1.0.0\",\n
-        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks6.books.google.com/books?id=8K9rAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks6.books.google.com/books?id=8K9rAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=8K9rAAAAMAAJ&q=cancer&dq=cancer&cd=41&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=8K9rAAAAMAAJ&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=8K9rAAAAMAAJ\"\n
+      string: ! "{\n \"kind\": \"books#volumes\",\n \"totalItems\": 1745,\n \"items\":
+        [\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"h-eNUzElkP8C\",\n   \"etag\":
+        \"hV0HRegqWao\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/h-eNUzElkP8C\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer Control\",\n    \"subtitle\":
+        \"Knowledge Into Action : WHO Guide for Effective Programmes. Policy and advocacy\",\n
+        \   \"authors\": [\n     \"World Health Organization\"\n    ],\n    \"publishedDate\":
+        \"2008\",\n    \"description\": \"More than 70% of all cancer deaths occur
+        in low- and middle-income countries, where resources available for prevention,
+        diagnosis and treatment of cancer are limited or nonexistent. Yet cancer is
+        to a large extent avoidable. Over 40% of all cancers can be prevented. Some
+        of the most common cancers are curable if detected early and treated. Even
+        with late cancer, the suffering of patients can be relieved with good palliative
+        care. Cancer Control: Knowledge into Action, WHO Guide for Effective Programsis
+        a series of six modules offering guidance on all important aspects of effective
+        cancer control planning and implementation. This sixth module on Policy and
+        Advocacy shows decision makers and program managers how to advocate for policy
+        development and effective program implementation of cancer control.\",\n    \"industryIdentifiers\":
+        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"9241547529\"\n
+        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9789241547529\"\n
+        \    }\n    ],\n    \"pageCount\": 48,\n    \"printType\": \"BOOK\",\n    \"contentVersion\":
+        \"0.1.1.0.preview.2\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks2.books.google.com/books?id=h-eNUzElkP8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks2.books.google.com/books?id=h-eNUzElkP8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=h-eNUzElkP8C&printsec=frontcover&dq=cancer&hl=&cd=41&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=h-eNUzElkP8C&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer_Control.html?hl=&id=h-eNUzElkP8C\"\n
         \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
         \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"NO_PAGES\",\n    \"embeddable\": false,\n
+        \"US\",\n    \"viewability\": \"ALL_PAGES\",\n    \"embeddable\": true,\n
         \   \"publicDomain\": false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n
-        \   \"epub\": {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=8K9rAAAAMAAJ&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"NONE\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
-        \  \"id\": \"SI5J2zKEGsUC\",\n   \"etag\": \"8ehif+o1s68\",\n   \"selfLink\":
-        \"https://www.googleapis.com/books/v1/volumes/SI5J2zKEGsUC\",\n   \"volumeInfo\":
-        {\n    \"title\": \"Cancer\",\n    \"authors\": [\n     \"Paula Taylor\"\n
-        \   ],\n    \"publishedDate\": \"1978-12-01\",\n    \"description\": \"Describes
-        character traits and attitudes reputedly possessed by individuals born under
-        the sun sign Cancer.\",\n    \"industryIdentifiers\": [\n     {\n      \"type\":
-        \"ISBN_10\",\n      \"identifier\": \"0871916444\"\n     },\n     {\n      \"type\":
-        \"ISBN_13\",\n      \"identifier\": \"9780871916440\"\n     }\n    ],\n    \"pageCount\":
-        47,\n    \"printType\": \"BOOK\",\n    \"categories\": [\n     \"Body, Mind
-        & Spirit\"\n    ],\n    \"contentVersion\": \"preview-1.0.0\",\n    \"imageLinks\":
-        {\n     \"smallThumbnail\": \"http://bks8.books.google.com/books?id=SI5J2zKEGsUC&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks8.books.google.com/books?id=SI5J2zKEGsUC&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=SI5J2zKEGsUC&q=cancer&dq=cancer&cd=42&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=SI5J2zKEGsUC&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=SI5J2zKEGsUC\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"NO_PAGES\",\n    \"embeddable\": false,\n
-        \   \"publicDomain\": false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n
-        \   \"epub\": {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=SI5J2zKEGsUC&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"NONE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"Describes character traits and attitudes reputedly possessed by individuals
-        born under the sun sign Cancer.\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
-        \  \"id\": \"ziIVM1gE60kC\",\n   \"etag\": \"5FwilEJm+cI\",\n   \"selfLink\":
-        \"https://www.googleapis.com/books/v1/volumes/ziIVM1gE60kC\",\n   \"volumeInfo\":
-        {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"between glycolysis and
-        physical constraint\",\n    \"authors\": [\n     \"Laurent Schwartz\"\n    ],\n
-        \   \"publisher\": \"Springer Verlag\",\n    \"publishedDate\": \"2004-05-14\",\n
-        \   \"description\": \"Cancer Although considerable effort has gone into the
-        research of common cancers - lung, bowel, ovarian, cervical, and prostate
-        cancer - there have not been many breakthroughs in therapeutic advances. Why
-        this is the case and how we might break out of this impasse are issues explored
-        in this book. The author offers a new perspective on the study of cancer,
-        challenging many established beliefs and venturing into the areas of mathematics,
-        physics, and chemistry. This book will appeal to all cancer specialists, clinicians,
-        and researchers interested in a fresh view of this subject. Book jacket.\",\n
-        \   \"industryIdentifiers\": [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\":
-        \"3540204962\"\n     },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\":
-        \"9783540204961\"\n     }\n    ],\n    \"pageCount\": 150,\n    \"printType\":
-        \"BOOK\",\n    \"categories\": [\n     \"Medical\"\n    ],\n    \"contentVersion\":
-        \"preview-1.0.0\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks2.books.google.com/books?id=ziIVM1gE60kC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks2.books.google.com/books?id=ziIVM1gE60kC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=ziIVM1gE60kC&pg=PA1&dq=cancer&cd=43&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=ziIVM1gE60kC&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=ziIVM1gE60kC\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
-        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
-        {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        true,\n     \"acsTokenLink\": \"http://books.google.com/books/download/Cancer-sample-pdf.acsm?id=ziIVM1gE60kC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
-        \   },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=ziIVM1gE60kC&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"epub\": {\n     \"isAvailable\": true,\n     \"acsTokenLink\": \"http://books.google.com/books/download/Cancer_Control-sample-epub.acsm?id=h-eNUzElkP8C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": false\n    },\n    \"webReaderLink\":
+        \"http://books.google.com/books/reader?id=h-eNUzElkP8C&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
         \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"This book will appeal to all cancer specialists, clinicians, and researchers
-        interested in a fresh view of this subject. Book jacket.\"\n   }\n  },\n  {\n
-        \  \"kind\": \"books#volume\",\n   \"id\": \"RBtQAAAAIAAJ\",\n   \"etag\":
-        \"cqUZzlzp4PU\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/RBtQAAAAIAAJ\",\n
-        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"diagnosis,
-        treatment, and prognosis\",\n    \"authors\": [\n     \"Lauren Vedder Ackerman\",\n
-        \    \"Juan A. Del Regato\"\n    ],\n    \"publishedDate\": \"1947\",\n    \"industryIdentifiers\":
-        [\n     {\n      \"type\": \"OTHER\",\n      \"identifier\": \"UCAL:B224136\"\n
-        \    }\n    ],\n    \"pageCount\": 1115,\n    \"printType\": \"BOOK\",\n    \"categories\":
-        [\n     \"Medical\"\n    ],\n    \"contentVersion\": \"0.1.0.0.preview.0\",\n
-        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks4.books.google.com/books?id=RBtQAAAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks4.books.google.com/books?id=RBtQAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=RBtQAAAAIAAJ&q=cancer&dq=cancer&cd=44&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=RBtQAAAAIAAJ&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=RBtQAAAAIAAJ\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"NO_PAGES\",\n    \"embeddable\": false,\n
-        \   \"publicDomain\": false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n
-        \   \"epub\": {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=RBtQAAAAIAAJ&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"NONE\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
-        \  \"id\": \"ILoRAQAAMAAJ\",\n   \"etag\": \"n6bHPSoSif4\",\n   \"selfLink\":
-        \"https://www.googleapis.com/books/v1/volumes/ILoRAQAAMAAJ\",\n   \"volumeInfo\":
-        {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"Cancer Progress\",\n    \"authors\":
-        [\n     \"Ronald William Raven\"\n    ],\n    \"publishedDate\": \"1960\",\n
-        \   \"industryIdentifiers\": [\n     {\n      \"type\": \"OTHER\",\n      \"identifier\":
-        \"CHI:12874761\"\n     }\n    ],\n    \"pageCount\": 242,\n    \"printType\":
-        \"BOOK\",\n    \"categories\": [\n     \"Medical\"\n    ],\n    \"contentVersion\":
-        \"preview-1.0.0\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks6.books.google.com/books?id=ILoRAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks6.books.google.com/books?id=ILoRAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=ILoRAQAAMAAJ&q=cancer&dq=cancer&cd=45&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=ILoRAQAAMAAJ&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=ILoRAQAAMAAJ\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"NO_PAGES\",\n    \"embeddable\": false,\n
-        \   \"publicDomain\": false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n
-        \   \"epub\": {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=ILoRAQAAMAAJ&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"NONE\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
-        \  \"id\": \"vPGZAAAAIAAJ\",\n   \"etag\": \"SJeGosueico\",\n   \"selfLink\":
-        \"https://www.googleapis.com/books/v1/volumes/vPGZAAAAIAAJ\",\n   \"volumeInfo\":
-        {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"in four parts, comprising
-        international contributions to the study of cancer in honor of James Ewing\",\n
-        \   \"authors\": [\n     \"James Ewing\"\n    ],\n    \"publishedDate\": \"1931\",\n
-        \   \"industryIdentifiers\": [\n     {\n      \"type\": \"OTHER\",\n      \"identifier\":
-        \"UCAL:B4425565\"\n     }\n    ],\n    \"pageCount\": 484,\n    \"printType\":
-        \"BOOK\",\n    \"categories\": [\n     \"Medical\"\n    ],\n    \"contentVersion\":
-        \"preview-1.0.0\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks9.books.google.com/books?id=vPGZAAAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks9.books.google.com/books?id=vPGZAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=vPGZAAAAIAAJ&q=cancer&dq=cancer&cd=46&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=vPGZAAAAIAAJ&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=vPGZAAAAIAAJ\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"NO_PAGES\",\n    \"embeddable\": false,\n
-        \   \"publicDomain\": false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n
-        \   \"epub\": {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=vPGZAAAAIAAJ&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"NONE\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
-        \  \"id\": \"1NdQJxleTIQC\",\n   \"etag\": \"bNsSjgiV6T0\",\n   \"selfLink\":
-        \"https://www.googleapis.com/books/v1/volumes/1NdQJxleTIQC\",\n   \"volumeInfo\":
-        {\n    \"title\": \"Cancer\",\n    \"authors\": [\n     \"Lisa Yount\"\n    ],\n
-        \   \"publisher\": \"Greenhaven Pr\",\n    \"publishedDate\": \"2000-12-31\",\n
-        \   \"description\": \"Presents essays discussing cancer, including causes,
-        prevention, detection, treatment, and cures\",\n    \"industryIdentifiers\":
-        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"0737701617\"\n
-        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9780737701616\"\n
-        \    }\n    ],\n    \"pageCount\": 190,\n    \"printType\": \"BOOK\",\n    \"contentVersion\":
-        \"preview-1.0.0\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks1.books.google.com/books?id=1NdQJxleTIQC&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks1.books.google.com/books?id=1NdQJxleTIQC&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=1NdQJxleTIQC&q=cancer&dq=cancer&cd=47&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=1NdQJxleTIQC&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=1NdQJxleTIQC\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"NO_PAGES\",\n    \"embeddable\": false,\n
-        \   \"publicDomain\": false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n
-        \   \"epub\": {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=1NdQJxleTIQC&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"NONE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"Presents essays discussing cancer, including causes, prevention, detection,
-        treatment, and cures\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
-        \  \"id\": \"m4k1AQAAIAAJ\",\n   \"etag\": \"DHWR2VgP6A4\",\n   \"selfLink\":
-        \"https://www.googleapis.com/books/v1/volumes/m4k1AQAAIAAJ\",\n   \"volumeInfo\":
-        {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"the great darkness...which
-        engulfs 135,000 lives per year. It is partially penetrated by radium, X-ray,
-        and surgery, but only a new light from the scientific laboratory could dispel
-        it entirely. Yet U. S. endowments for cancer research total only $5,000,000,
-        their incomes only $200,000\",\n    \"authors\": [\n     \"Fortune\"\n    ],\n
-        \   \"publishedDate\": \"1937\",\n    \"industryIdentifiers\": [\n     {\n
-        \     \"type\": \"OTHER\",\n      \"identifier\": \"UCAL:$B675832\"\n     }\n
-        \   ],\n    \"pageCount\": 80,\n    \"printType\": \"BOOK\",\n    \"categories\":
-        [\n     \"Medical\"\n    ],\n    \"contentVersion\": \"preview-1.0.0\",\n
-        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks6.books.google.com/books?id=m4k1AQAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks6.books.google.com/books?id=m4k1AQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=m4k1AQAAIAAJ&q=cancer&dq=cancer&cd=48&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=m4k1AQAAIAAJ&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=m4k1AQAAIAAJ\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"NO_PAGES\",\n    \"embeddable\": false,\n
-        \   \"publicDomain\": false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n
-        \   \"epub\": {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=m4k1AQAAIAAJ&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"NONE\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
-        \  \"id\": \"lDMQAQAAMAAJ\",\n   \"etag\": \"imT2g0Dkx04\",\n   \"selfLink\":
-        \"https://www.googleapis.com/books/v1/volumes/lDMQAQAAMAAJ\",\n   \"volumeInfo\":
-        {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"pathophysiology, etiology,
-        and management : selected readings\",\n    \"authors\": [\n     \"Louise C.
-        Kruse\",\n     \"Jean L. Reese\",\n     \"Laura K. Hart\"\n    ],\n    \"publishedDate\":
-        \"1979-05\",\n    \"industryIdentifiers\": [\n     {\n      \"type\": \"OTHER\",\n
-        \     \"identifier\": \"UOM:49015000377706\"\n     }\n    ],\n    \"pageCount\":
-        483,\n    \"printType\": \"BOOK\",\n    \"categories\": [\n     \"Medical\"\n
-        \   ],\n    \"contentVersion\": \"preview-1.0.0\",\n    \"imageLinks\": {\n
-        \    \"smallThumbnail\": \"http://bks0.books.google.com/books?id=lDMQAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks0.books.google.com/books?id=lDMQAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=lDMQAQAAMAAJ&q=cancer&dq=cancer&cd=49&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=lDMQAQAAMAAJ&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=lDMQAQAAMAAJ\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"NO_PAGES\",\n    \"embeddable\": false,\n
-        \   \"publicDomain\": false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n
-        \   \"epub\": {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=lDMQAQAAMAAJ&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"NONE\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
-        \  \"id\": \"n__a1sG0EF4C\",\n   \"etag\": \"VEQCSBuYJFg\",\n   \"selfLink\":
-        \"https://www.googleapis.com/books/v1/volumes/n__a1sG0EF4C\",\n   \"volumeInfo\":
-        {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"From Mechanisms to Therapeutic
-        Approaches\",\n    \"authors\": [\n     \"Robert A. Meyers\"\n    ],\n    \"publisher\":
-        \"Vch Verlagsgesellschaft Mbh\",\n    \"publishedDate\": \"2007\",\n    \"description\":
-        \"With an editorial board containing 12 Nobel laureates, this invaluable collection
-        of high-quality articles on cancer biology is taken from the highly acclaimed
-        R.A. Meyer's Encyclopedia of Molecular Cell Biology and Molecular Medicine.
-        Clearly divided into three main sections, this handbook covers a wide range
-        of topics from molecular mechanisms and organ specific cancers to diagnostic
-        and therapeutic approaches. The articles are uniformly structured for ease
-        of use and carefully designed to aid readers of all levels of expertise. To
-        this end, each chapter includes a glossary of the most important keywords,
-        a concise summary of the article and comprehensive literature references.
-        This title is a ready reference for molecular and cell biologists, cancer
-        researchers, oncologists, pharmacologists, as well as for those working in
-        the pharmaceutical and biotechnological industries.\",\n    \"industryIdentifiers\":
-        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"3527317686\"\n
-        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9783527317684\"\n
-        \    }\n    ],\n    \"pageCount\": 478,\n    \"printType\": \"BOOK\",\n    \"contentVersion\":
-        \"preview-1.0.0\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks5.books.google.com/books?id=n__a1sG0EF4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks5.books.google.com/books?id=n__a1sG0EF4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=n__a1sG0EF4C&pg=PA3&dq=cancer&cd=50&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=n__a1sG0EF4C&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=n__a1sG0EF4C\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
-        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
-        {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=n__a1sG0EF4C&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"With an editorial board containing 12 Nobel laureates, this invaluable collection
-        of high-quality articles on cancer biology is taken from the highly acclaimed
-        R.A. Meyer&#39;s Encyclopedia of Molecular Cell Biology and Molecular Medicine.\"\n
-        \  }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"aCtgVt0NFjQC\",\n
-        \  \"etag\": \"iDNqnkFKYAk\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/aCtgVt0NFjQC\",\n
-        \  \"volumeInfo\": {\n    \"title\": \"Cancer Prevention\",\n    \"subtitle\":
-        \"The Causes and Prevention of Cancer\",\n    \"authors\": [\n     \"Graham
-        A. Colditz\",\n     \"David John Hunter\"\n    ],\n    \"publisher\": \"Springer\",\n
-        \   \"publishedDate\": \"2000-11-01\",\n    \"description\": \"This volume,
-        the first in the new series Cancer Prevention - Cancer Causes, is derived
-        from the 1st and 2nd Reports of the Harvard Center for Cancer Prevention published
-        in Cancer Causes and Control, 1996; 7(Suppl 1) and 1997; 8(Suppl 2), respectively.
-        In this volume we expand on materials to summarize the evidence on causes
-        of cancer and to set forth a series of strategies to promote the prevention
-        of cancer. Cancer Prevention - Cancer Causes is designed to provide a comprehensive
-        overview of what we know about cancer risk in the United States (and other
-        established market economies) and the preventive measures we can take to reduce
-        the burden of cancer. In the first half of this volume, we review the causes
-        of human cancer considering a wide range of potential sources of risk such
-        as smoking, diet, sedentary lifestyle, occupational factors, viruses, and
-        alcohol. We conclude that cancer is indeed preventable. Over 50 percent of
-        cancers could be prevented if we could implement what we already know about
-        the causes of cancer. In the second half of this volume, we summarize research
-        on prevention programs, public education campaigns, and social policy measures
-        for preventing cancer. Working in schools, health clinics, and workplaces
-        as well as through the mass media and in the political arena, social scientists
-        and health educators are designing innovative and effective health promotion
-        programs to help people quit smoking, eat more healthily, and exercise more.\",\n
-        \   \"industryIdentifiers\": [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\":
-        \"0792366034\"\n     },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\":
-        \"9780792366034\"\n     }\n    ],\n    \"pageCount\": 364,\n    \"printType\":
-        \"BOOK\",\n    \"contentVersion\": \"0.0.1.0.preview.3\",\n    \"imageLinks\":
-        {\n     \"smallThumbnail\": \"http://bks0.books.google.com/books?id=aCtgVt0NFjQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks0.books.google.com/books?id=aCtgVt0NFjQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=aCtgVt0NFjQC&printsec=frontcover&dq=cancer&cd=51&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=aCtgVt0NFjQC&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer_Prevention.html?id=aCtgVt0NFjQC\"\n
+        \"Cancer Control: Knowledge into Action, WHO Guide for Effective Programsis
+        a series of six modules offering guidance on all important aspects of effective
+        cancer control planning and implementation.\"\n   }\n  },\n  {\n   \"kind\":
+        \"books#volume\",\n   \"id\": \"KL5ppEaiXikC\",\n   \"etag\": \"t5ztkmM9gxo\",\n
+        \  \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/KL5ppEaiXikC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer Diagnosed: What Now?\",\n    \"authors\":
+        [\n     \"Dr Willem Serfontein\"\n    ],\n    \"publisher\": \"Xlibris Corporation\",\n
+        \   \"publishedDate\": \"2011-01-11\",\n    \"industryIdentifiers\": [\n     {\n
+        \     \"type\": \"ISBN_10\",\n      \"identifier\": \"1456850733\"\n     },\n
+        \    {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9781456850739\"\n
+        \    }\n    ],\n    \"pageCount\": 392,\n    \"printType\": \"BOOK\",\n    \"contentVersion\":
+        \"0.1.0.0.preview.3\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks9.books.google.com/books?id=KL5ppEaiXikC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks9.books.google.com/books?id=KL5ppEaiXikC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=KL5ppEaiXikC&printsec=frontcover&dq=cancer&hl=&cd=42&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=KL5ppEaiXikC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer_Diagnosed_What_Now.html?hl=&id=KL5ppEaiXikC\"\n
         \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
         \"FOR_SALE\",\n    \"isEbook\": true,\n    \"listPrice\": {\n     \"amount\":
-        219.0,\n     \"currencyCode\": \"USD\"\n    },\n    \"retailPrice\": {\n     \"amount\":
-        175.2,\n     \"currencyCode\": \"USD\"\n    },\n    \"buyLink\": \"http://books.google.com/books?id=aCtgVt0NFjQC&dq=cancer&buy=&source=gbs_api\"\n
+        3.99,\n     \"currencyCode\": \"USD\"\n    },\n    \"retailPrice\": {\n     \"amount\":
+        3.03,\n     \"currencyCode\": \"USD\"\n    },\n    \"buyLink\": \"http://books.google.com/books?id=KL5ppEaiXikC&dq=cancer&hl=&buy=&source=gbs_api\"\n
         \  },\n   \"accessInfo\": {\n    \"country\": \"US\",\n    \"viewability\":
         \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\": false,\n    \"textToSpeechPermission\":
         \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\": {\n     \"isAvailable\": true,\n
-        \    \"acsTokenLink\": \"http://books.google.com/books/download/Cancer_Prevention-sample-epub.acsm?id=aCtgVt0NFjQC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \    \"acsTokenLink\": \"http://books.google.com/books/download/Cancer_Diagnosed_What_Now-sample-epub.acsm?id=KL5ppEaiXikC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
         \   },\n    \"pdf\": {\n     \"isAvailable\": true,\n     \"acsTokenLink\":
-        \"http://books.google.com/books/download/Cancer_Prevention-sample-pdf.acsm?id=aCtgVt0NFjQC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
-        \   },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=aCtgVt0NFjQC&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \"http://books.google.com/books/download/Cancer_Diagnosed_What_Now-sample-pdf.acsm?id=KL5ppEaiXikC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=KL5ppEaiXikC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
+        \  \"id\": \"Ut0o3gwHRekC\",\n   \"etag\": \"d3Bnd4FArHo\",\n   \"selfLink\":
+        \"https://www.googleapis.com/books/v1/volumes/Ut0o3gwHRekC\",\n   \"volumeInfo\":
+        {\n    \"title\": \"The Breast Cancer Wars\",\n    \"subtitle\": \"Hope, Fear,
+        and the Pursuit of a Cure in Twentieth-Century America\",\n    \"authors\":
+        [\n     \"Barron H. Lerner\"\n    ],\n    \"publisher\": \"Oxford University
+        Press, USA\",\n    \"publishedDate\": \"2001-05-31\",\n    \"description\":
+        \"The author brilliantly chronicles the various campaigns waged against breast
+        cancer and its effects on women during the last century.\",\n    \"industryIdentifiers\":
+        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"0195142616\"\n
+        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9780195142617\"\n
+        \    }\n    ],\n    \"pageCount\": 383,\n    \"printType\": \"BOOK\",\n    \"contentVersion\":
+        \"0.1.1.0.preview.3\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks5.books.google.com/books?id=Ut0o3gwHRekC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks5.books.google.com/books?id=Ut0o3gwHRekC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=Ut0o3gwHRekC&printsec=frontcover&dq=cancer&hl=&cd=43&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=Ut0o3gwHRekC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/The_Breast_Cancer_Wars.html?hl=&id=Ut0o3gwHRekC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"FOR_SALE\",\n    \"isEbook\": true,\n    \"listPrice\": {\n     \"amount\":
+        22.95,\n     \"currencyCode\": \"USD\"\n    },\n    \"retailPrice\": {\n     \"amount\":
+        13.77,\n     \"currencyCode\": \"USD\"\n    },\n    \"buyLink\": \"http://books.google.com/books?id=Ut0o3gwHRekC&dq=cancer&hl=&buy=&source=gbs_api\"\n
+        \  },\n   \"accessInfo\": {\n    \"country\": \"US\",\n    \"viewability\":
+        \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\": false,\n    \"textToSpeechPermission\":
+        \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\": {\n     \"isAvailable\": true,\n
+        \    \"acsTokenLink\": \"http://books.google.com/books/download/The_Breast_Cancer_Wars-sample-epub.acsm?id=Ut0o3gwHRekC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": true,\n     \"acsTokenLink\":
+        \"http://books.google.com/books/download/The_Breast_Cancer_Wars-sample-pdf.acsm?id=Ut0o3gwHRekC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=Ut0o3gwHRekC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
         \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"This volume, the first in the new series Cancer Prevention - Cancer Causes,
-        is derived from the 1st and 2nd Reports of the Harvard Center for Cancer Prevention
-        published in Cancer Causes and Control, 1996; 7(Suppl 1) and 1997; 8(Suppl
-        2), ...\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"zmIXRr2dzzMC\",\n
-        \  \"etag\": \"Wc7iw+scn+k\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/zmIXRr2dzzMC\",\n
-        \  \"volumeInfo\": {\n    \"title\": \"Cancer Ward\",\n    \"authors\": [\n
-        \    \"Aleksandr Isaevich Solzhenit︠s︡yn\"\n    ],\n    \"publisher\": \"Noonday
-        Press\",\n    \"publishedDate\": \"1991-11-01\",\n    \"description\": \"The
-        cancer ward of a Soviet hospital becomes a microcosm of life itself as an
-        array of uniquely Russian characters face the fact of death yet struggle to
-        fulfill their human hopes and needs\",\n    \"industryIdentifiers\": [\n     {\n
-        \     \"type\": \"ISBN_10\",\n      \"identifier\": \"0374511993\"\n     },\n
-        \    {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9780374511999\"\n
-        \    }\n    ],\n    \"pageCount\": 560,\n    \"printType\": \"BOOK\",\n    \"averageRating\":
-        4.0,\n    \"ratingsCount\": 122,\n    \"contentVersion\": \"preview-1.0.0\",\n
-        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks0.books.google.com/books?id=zmIXRr2dzzMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks0.books.google.com/books?id=zmIXRr2dzzMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=zmIXRr2dzzMC&printsec=frontcover&dq=cancer&cd=52&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=zmIXRr2dzzMC&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer_Ward.html?id=zmIXRr2dzzMC\"\n
+        \"The author brilliantly chronicles the various campaigns waged against breast
+        cancer and its effects on women during the last century.\"\n   }\n  },\n  {\n
+        \  \"kind\": \"books#volume\",\n   \"id\": \"tY2pzPVRu5wC\",\n   \"etag\":
+        \"C4jul9MgC2Y\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/tY2pzPVRu5wC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Homoeopathy in Cancer Treatment\",\n
+        \   \"authors\": [\n     \"R. K. Roy\"\n    ],\n    \"publisher\": \"B Jain
+        Pub Pvt Limited\",\n    \"publishedDate\": \"2003-01-01\",\n    \"description\":
+        \"The author has put forward several thought-provoking ideas of his own which
+        could be useful in the field of cancer therapy. His approaches of analysing
+        and understanding malignancy, its remedies and their applications from various
+        angle are innvative.\",\n    \"industryIdentifiers\": [\n     {\n      \"type\":
+        \"ISBN_10\",\n      \"identifier\": \"8170218322\"\n     },\n     {\n      \"type\":
+        \"ISBN_13\",\n      \"identifier\": \"9788170218326\"\n     }\n    ],\n    \"pageCount\":
+        252,\n    \"printType\": \"BOOK\",\n    \"contentVersion\": \"0.0.1.0.preview.0\",\n
+        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks8.books.google.com/books?id=tY2pzPVRu5wC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks8.books.google.com/books?id=tY2pzPVRu5wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=tY2pzPVRu5wC&printsec=frontcover&dq=cancer&hl=&cd=44&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=tY2pzPVRu5wC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Homoeopathy_in_Cancer_Treatment.html?hl=&id=tY2pzPVRu5wC\"\n
         \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
         \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
         \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
         false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
         {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=zmIXRr2dzzMC&printsec=frontcover&output=reader&source=gbs_api\",\n
+        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=tY2pzPVRu5wC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
         \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"The cancer ward of a Soviet hospital becomes a microcosm of life itself
-        as an array of uniquely Russian characters face the fact of death yet struggle
-        to fulfill their human hopes and needs Cancer Ward - a largely autobiographical
-        account ...\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\":
-        \"YIlrAAAAMAAJ\",\n   \"etag\": \"uNcu4W8Z8zE\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/YIlrAAAAMAAJ\",\n
-        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"how
-        worthwhile is non-curative treatment?\",\n    \"authors\": [\n     \"Teresa
-        Tate\"\n    ],\n    \"publisher\": \"Springer Verlag\",\n    \"publishedDate\":
-        \"1998\",\n    \"description\": \"The majority of patients present with extensive
-        cancer and, as a result, most of these have to be treated with 'non-curative'
-        intent. This major and difficult problem has not been previously tackled and
-        this book asks questions such as how does non-curative intent relate to good
-        quality and quantity of life and how effective is this treatment at relieving
-        symptoms? The result is a review of non-curative surgery, radiotherapy and
-        chemotherapy which are all discussed as they relate to the different types
-        and locations of tumours. This book is aimed not just at specialist oncologists
-        but at all those who are involved in the treatment of cancer. Postgraduate
-        students and those new to the area of oncology will find the book a worthwhile
-        review of treatment undertaken with purely palliative intent.\",\n    \"industryIdentifiers\":
-        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"3540760830\"\n
-        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9783540760832\"\n
-        \    }\n    ],\n    \"pageCount\": 310,\n    \"printType\": \"BOOK\",\n    \"categories\":
-        [\n     \"Medical\"\n    ],\n    \"contentVersion\": \"preview-1.0.0\",\n
-        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks7.books.google.com/books?id=YIlrAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks7.books.google.com/books?id=YIlrAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=YIlrAAAAMAAJ&q=cancer&dq=cancer&cd=53&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=YIlrAAAAMAAJ&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=YIlrAAAAMAAJ\"\n
+        \"The author has put forward several thought-provoking ideas of his own which
+        could be useful in the field of cancer therapy.\"\n   }\n  },\n  {\n   \"kind\":
+        \"books#volume\",\n   \"id\": \"onsYAx-Ouc4C\",\n   \"etag\": \"UhDM873wNUw\",\n
+        \  \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/onsYAx-Ouc4C\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Early Detection and Prevention of Colorectal
+        Cancer\",\n    \"authors\": [\n     \"Karen E. Kim\"\n    ],\n    \"publisher\":
+        \"Slack Incorporated\",\n    \"publishedDate\": \"2009-05-15\",\n    \"description\":
+        \"Colorectal cancer is the third most common malignancy in the United States
+        and the third leading cause of cancer mortality in both men and women. As
+        gastroenterologists and primary care physicians are faced with patients with
+        colorectal cancer, the future road to decreasing these numbers begins with
+        increased knowledge and awareness of the effects that biology, genetics, environment,
+        and lifestyle have on the disease. In Early Detection and Prevention of Colorectal
+        Cancer, Dr. Karen Kim and her esteemed contributors take a comprehensive look
+        into the world of colorectal cancer and the ways that today’s physician can
+        positively impact the patient’s outcome. Unique Features Include: · Novel
+        screening modalities · Disparities in colorectal cancer · Latest information
+        on genetic testing for colorectal cancer · Screening algorithms for average
+        and high risk patients · Economics of screening and prevention Some Chapter
+        Topics Include: · Colonic carcinogenesis · Environmental factors and colorectal
+        cancer · Chemoprevention of colorectal cancer · Biomarkers and colorectal
+        cancer · Health policy and colorectal cancer prevention With cutting-edge
+        technology and information, Early Detection and Prevention of Colorectal Cancer
+        should be in the hands of all gastroenterologists, primary care physicians,
+        and those in training. Only by understanding the biology and genetics of this
+        disease, and the effects that environment and lifestyle have on it, can gastroenterologists
+        truly make a difference with the treatment of their patients.\",\n    \"industryIdentifiers\":
+        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"1556428375\"\n
+        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9781556428371\"\n
+        \    }\n    ],\n    \"pageCount\": 255,\n    \"printType\": \"BOOK\",\n    \"contentVersion\":
+        \"0.0.1.0.preview.1\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks8.books.google.com/books?id=onsYAx-Ouc4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks8.books.google.com/books?id=onsYAx-Ouc4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=onsYAx-Ouc4C&printsec=frontcover&dq=cancer&hl=&cd=45&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=onsYAx-Ouc4C&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Early_Detection_and_Prevention_of_Colore.html?hl=&id=onsYAx-Ouc4C\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"FOR_SALE\",\n    \"isEbook\": true,\n    \"listPrice\": {\n     \"amount\":
+        89.96,\n     \"currencyCode\": \"USD\"\n    },\n    \"retailPrice\": {\n     \"amount\":
+        70.17,\n     \"currencyCode\": \"USD\"\n    },\n    \"buyLink\": \"http://books.google.com/books?id=onsYAx-Ouc4C&dq=cancer&hl=&buy=&source=gbs_api\"\n
+        \  },\n   \"accessInfo\": {\n    \"country\": \"US\",\n    \"viewability\":
+        \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\": false,\n    \"textToSpeechPermission\":
+        \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\": {\n     \"isAvailable\": false\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": true,\n     \"acsTokenLink\":
+        \"http://books.google.com/books/download/Early_Detection_and_Prevention_of_Colore-sample-pdf.acsm?id=onsYAx-Ouc4C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=onsYAx-Ouc4C&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"In Early Detection and Prevention of Colorectal Cancer, Dr. Karen Kim and
+        her esteemed contributors take a comprehensive look into the world of colorectal
+        cancer and the ways that today’s physician can positively impact the patient’s
+        ...\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"xivjxWNAdiYC\",\n
+        \  \"etag\": \"MqAFa4sAX8o\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/xivjxWNAdiYC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Lung Cancer And Mesothelioma\",\n    \"authors\":
+        [\n     \"Howard Gutman\"\n    ],\n    \"publisher\": \"Howard Gutman\",\n
+        \   \"publishedDate\": \"2004-10-29\",\n    \"industryIdentifiers\": [\n     {\n
+        \     \"type\": \"ISBN_10\",\n      \"identifier\": \"141342001X\"\n     },\n
+        \    {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9781413420012\"\n
+        \    }\n    ],\n    \"pageCount\": 482,\n    \"printType\": \"BOOK\",\n    \"contentVersion\":
+        \"preview-1.0.0\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks8.books.google.com/books?id=xivjxWNAdiYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks8.books.google.com/books?id=xivjxWNAdiYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=xivjxWNAdiYC&printsec=frontcover&dq=cancer&hl=&cd=46&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=xivjxWNAdiYC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Lung_Cancer_And_Mesothelioma.html?hl=&id=xivjxWNAdiYC\"\n
         \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
         \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"NO_PAGES\",\n    \"embeddable\": false,\n
-        \   \"publicDomain\": false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n
-        \   \"epub\": {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=YIlrAAAAMAAJ&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"NONE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"This book is aimed not just at specialist oncologists but at all those who
-        are involved in the treatment of cancer.\"\n   }\n  },\n  {\n   \"kind\":
-        \"books#volume\",\n   \"id\": \"FRBxTuaDTUUC\",\n   \"etag\": \"+V6dyaYYKw0\",\n
-        \  \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/FRBxTuaDTUUC\",\n
-        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"new
-        light on its causes, detection, treatments, cures, and the brilliant promise
-        of today's research\",\n    \"authors\": [\n     \"Beka Doherty\"\n    ],\n
-        \   \"publishedDate\": \"1949\",\n    \"industryIdentifiers\": [\n     {\n
-        \     \"type\": \"OTHER\",\n      \"identifier\": \"MINN:31951D00467691B\"\n
-        \    }\n    ],\n    \"pageCount\": 327,\n    \"printType\": \"BOOK\",\n    \"categories\":
-        [\n     \"Medical\"\n    ],\n    \"contentVersion\": \"preview-1.0.0\",\n
-        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks0.books.google.com/books?id=FRBxTuaDTUUC&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks0.books.google.com/books?id=FRBxTuaDTUUC&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=FRBxTuaDTUUC&q=cancer&dq=cancer&cd=54&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=FRBxTuaDTUUC&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=FRBxTuaDTUUC\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"NO_PAGES\",\n    \"embeddable\": false,\n
-        \   \"publicDomain\": false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n
-        \   \"epub\": {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=FRBxTuaDTUUC&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"NONE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"Decision A ny hospital, at night, is a setting for drama. It has its own
-        silence\\u003cbr\\u003e  , a silence like neither the silence of a church
-        nor the silence of a library. \\u003cbr\\u003e  Its corridors are empty of
-        people, its telephones still.\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
-        \  \"id\": \"YYlrAAAAMAAJ\",\n   \"etag\": \"GSNNERvHixw\",\n   \"selfLink\":
-        \"https://www.googleapis.com/books/v1/volumes/YYlrAAAAMAAJ\",\n   \"volumeInfo\":
-        {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"palliative care\",\n    \"authors\":
-        [\n     \"Robert Dunlop\"\n    ],\n    \"publisher\": \"Springer Verlag\",\n
-        \   \"publishedDate\": \"1998\",\n    \"description\": \"This is an introduction
-        to the principles and practices of caring for those with cancer. Topics include:
-        history of the hospice movement, psychosocial care, symptom control, spiritual
-        care, multidisciplinary teamwork, assessing the quality of life in palliative
-        care, and ethics and legal issues. Healthcare professionals will find this
-        book useful for the daily management of both cancer patients and their families.\",\n
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
+        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=xivjxWNAdiYC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
+        \  \"id\": \"I9sO_TiIh4UC\",\n   \"etag\": \"jUz1ZGvABcM\",\n   \"selfLink\":
+        \"https://www.googleapis.com/books/v1/volumes/I9sO_TiIh4UC\",\n   \"volumeInfo\":
+        {\n    \"title\": \"Breast cancer\",\n    \"subtitle\": \"society shapes an
+        epidemic\",\n    \"authors\": [\n     \"Anne S. Kasper\",\n     \"Susan J.
+        Ferguson\"\n    ],\n    \"publisher\": \"Palgrave Macmillan\",\n    \"publishedDate\":
+        \"2001-12-25\",\n    \"description\": \"Breast Cancer: Society Shapes an Epidemic
+        provides an innovative look at the social and political contexts of breast
+        cancer and examines how this illness has become a social problem. This is
+        not a book about breast cancer as a biological disease, its diagnosis and
+        treatment, or the latest research to cure it. Rather, it looks at how economics,
+        politics, gender, social class, and race-ethnicity have deeply influenced
+        the science behind breast cancer research, spurred the growth of a breast
+        cancer industry, generated media portrayals of women with the disease, and
+        defined and influenced women’s experiences with breast cancer. The contributors
+        address the social construction of breast cancer as an illness and as an area
+        of scientific controversy, advocacy, and public policy. Chapters on the history
+        of breast cancer, the health care system, the environment, and the marketing
+        of breast cancer, among others, tease apart the complex social forces that
+        have shaped our collective and individual responses to breast cancer.\",\n
         \   \"industryIdentifiers\": [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\":
-        \"3540199748\"\n     },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\":
-        \"9783540199748\"\n     }\n    ],\n    \"pageCount\": 181,\n    \"printType\":
-        \"BOOK\",\n    \"contentVersion\": \"preview-1.0.0\",\n    \"imageLinks\":
-        {\n     \"smallThumbnail\": \"http://bks3.books.google.com/books?id=YYlrAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks3.books.google.com/books?id=YYlrAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=YYlrAAAAMAAJ&q=cancer&dq=cancer&cd=55&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=YYlrAAAAMAAJ&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=YYlrAAAAMAAJ\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"NO_PAGES\",\n    \"embeddable\": false,\n
-        \   \"publicDomain\": false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n
-        \   \"epub\": {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=YYlrAAAAMAAJ&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"NONE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"This is an introduction to the principles and practices of caring for those
-        with cancer.\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\":
-        \"IqrieIU-lqsC\",\n   \"etag\": \"mTOnYfQUfl8\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/IqrieIU-lqsC\",\n
-        \  \"volumeInfo\": {\n    \"title\": \"The cancer book\",\n    \"subtitle\":
-        \"a guide to understanding the causes, prevention, and treatment of cancer\",\n
-        \   \"authors\": [\n     \"Geoffrey M. Cooper\"\n    ],\n    \"publisher\":
-        \"Jones & Bartlett Learning\",\n    \"publishedDate\": \"1993-04-01\",\n    \"description\":
-        \"Written in non-technical language, this book helps the reader understand
-        the basic nature and causes of cancer, as well as the principles underlying
-        current strategies for cancer prevention and treatment. By presenting an overview
-        and perspective of both the basic and practical aspects of cancer, including
-        the background needed to understand continuing advances in the field. The
-        book is fascinating reading and an ideal book for everyone interested in the
-        subject.\",\n    \"industryIdentifiers\": [\n     {\n      \"type\": \"ISBN_10\",\n
-        \     \"identifier\": \"0867207701\"\n     },\n     {\n      \"type\": \"ISBN_13\",\n
-        \     \"identifier\": \"9780867207705\"\n     }\n    ],\n    \"pageCount\":
-        236,\n    \"printType\": \"BOOK\",\n    \"categories\": [\n     \"Medical\"\n
-        \   ],\n    \"contentVersion\": \"preview-1.0.0\",\n    \"imageLinks\": {\n
-        \    \"smallThumbnail\": \"http://bks8.books.google.com/books?id=IqrieIU-lqsC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks8.books.google.com/books?id=IqrieIU-lqsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=IqrieIU-lqsC&printsec=frontcover&dq=cancer&cd=56&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=IqrieIU-lqsC&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/The_cancer_book.html?id=IqrieIU-lqsC\"\n
+        \"0312294514\"\n     },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\":
+        \"9780312294519\"\n     }\n    ],\n    \"pageCount\": 388,\n    \"printType\":
+        \"BOOK\",\n    \"categories\": [\n     \"Health & Fitness\"\n    ],\n    \"averageRating\":
+        4.0,\n    \"ratingsCount\": 1,\n    \"contentVersion\": \"preview-1.0.0\",\n
+        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks3.books.google.com/books?id=I9sO_TiIh4UC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks3.books.google.com/books?id=I9sO_TiIh4UC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=I9sO_TiIh4UC&printsec=frontcover&dq=cancer&hl=&cd=47&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=I9sO_TiIh4UC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Breast_cancer.html?hl=&id=I9sO_TiIh4UC\"\n
         \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
         \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
         \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
         false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
         {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=IqrieIU-lqsC&printsec=frontcover&output=reader&source=gbs_api\",\n
+        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=I9sO_TiIh4UC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
         \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"The book is fascinating reading and an ideal book for everyone interested
-        in the subject. The Cancer Book was written to provide the general reader
-        with a straightforward guide to understanding one of our most devastating
-        health problems.\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\":
-        \"VQ4DaAEACAAJ\",\n   \"etag\": \"iBXNMnhnniU\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/VQ4DaAEACAAJ\",\n
-        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"why
-        we're still dying to know the truth\",\n    \"authors\": [\n     \"Phillip
-        Day\"\n    ],\n    \"publishedDate\": \"2009\",\n    \"industryIdentifiers\":
-        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"0953501248\"\n
-        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9780953501243\"\n
-        \    }\n    ],\n    \"pageCount\": 269,\n    \"printType\": \"BOOK\",\n    \"averageRating\":
-        5.0,\n    \"ratingsCount\": 1,\n    \"contentVersion\": \"preview-1.0.0\",\n
-        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks6.books.google.com/books?id=VQ4DaAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks6.books.google.com/books?id=VQ4DaAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=VQ4DaAEACAAJ&dq=cancer&cd=57&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=VQ4DaAEACAAJ&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=VQ4DaAEACAAJ\"\n
+        \"This is not a book about breast cancer as a biological disease, its diagnosis
+        and treatment, or the latest research to cure it.\"\n   }\n  },\n  {\n   \"kind\":
+        \"books#volume\",\n   \"id\": \"tFLWob5o7OQC\",\n   \"etag\": \"5YQTkPkWnbA\",\n
+        \  \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/tFLWob5o7OQC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"The Biology and Treatment of Cancer\",\n
+        \   \"subtitle\": \"Understanding Cancer\",\n    \"authors\": [\n     \"Arthur
+        B. Pardee\",\n     \"Gary S. Stein\"\n    ],\n    \"publisher\": \"Wiley-Blackwell\",\n
+        \   \"publishedDate\": \"2011-09-20\",\n    \"description\": \"Offers a broad
+        audience a concise presentation of the most up-to-date knowledge about the
+        biology and treatment of cancerFull coverage of cancer prevention and controlClear,
+        thorough discussion of current and possible future therapiesEdited by two
+        of the most eminent and widely recognized scholars of cancer research and
+        therapeutics in the world, with contributions from top researchers and clinicians
+        from across North America\",\n    \"industryIdentifiers\": [\n     {\n      \"type\":
+        \"ISBN_10\",\n      \"identifier\": \"1118208455\"\n     },\n     {\n      \"type\":
+        \"ISBN_13\",\n      \"identifier\": \"9781118208458\"\n     }\n    ],\n    \"pageCount\":
+        287,\n    \"printType\": \"BOOK\",\n    \"categories\": [\n     \"Medical\"\n
+        \   ],\n    \"contentVersion\": \"0.2.1.0.preview.3\",\n    \"imageLinks\":
+        {\n     \"smallThumbnail\": \"http://bks0.books.google.com/books?id=tFLWob5o7OQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks0.books.google.com/books?id=tFLWob5o7OQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=tFLWob5o7OQC&printsec=frontcover&dq=cancer&hl=&cd=48&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=tFLWob5o7OQC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/The_Biology_and_Treatment_of_Cancer.html?hl=&id=tFLWob5o7OQC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"FOR_SALE\",\n    \"isEbook\": true,\n    \"listPrice\": {\n     \"amount\":
+        69.99,\n     \"currencyCode\": \"USD\"\n    },\n    \"retailPrice\": {\n     \"amount\":
+        69.99,\n     \"currencyCode\": \"USD\"\n    },\n    \"buyLink\": \"http://books.google.com/books?id=tFLWob5o7OQC&dq=cancer&hl=&buy=&source=gbs_api\"\n
+        \  },\n   \"accessInfo\": {\n    \"country\": \"US\",\n    \"viewability\":
+        \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\": false,\n    \"textToSpeechPermission\":
+        \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\": {\n     \"isAvailable\": true,\n
+        \    \"acsTokenLink\": \"http://books.google.com/books/download/The_Biology_and_Treatment_of_Cancer-sample-epub.acsm?id=tFLWob5o7OQC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": true,\n     \"acsTokenLink\":
+        \"http://books.google.com/books/download/The_Biology_and_Treatment_of_Cancer-sample-pdf.acsm?id=tFLWob5o7OQC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=tFLWob5o7OQC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"&quot; --Hector F. DeLuca, PhD, University of Wisconsin-Madison Edited by
+        two of the most eminent and widely recognized scholars in the field, and with
+        contributions from top researchers and clinicians from across North America,
+        this book offers ...\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
+        \  \"id\": \"dy2s5ZoUgngC\",\n   \"etag\": \"Rq+YKy7f6FY\",\n   \"selfLink\":
+        \"https://www.googleapis.com/books/v1/volumes/dy2s5ZoUgngC\",\n   \"volumeInfo\":
+        {\n    \"title\": \"Diabetes and Cancer\",\n    \"subtitle\": \"Epidemiological
+        Evidence and Molecular Links\",\n    \"authors\": [\n     \"Kurt S. Zänker\"\n
+        \   ],\n    \"publisher\": \"S Karger Ag\",\n    \"publishedDate\": \"2008\",\n
+        \   \"description\": \"The interdisciplinary work revealing varied roles in
+        biological processes of chronic diseases has led to a new field of research
+        concerning common molecular and clinical features of chronic diseases. Epidemiological
+        literature suggests an association between the history of metabolic syndrome/diabetes
+        mellitus type 2 and the risk of developing a variety of cancers.This book,
+        at the forefront of experimental and clinical research, is the first to highlight
+        the common molecular links between these two diseases. These tight links indicate
+        a complex interdependency between both diseases on a cellular and hormonal
+        basis, which is influenced by a variety of aspects (e.g. nutritional, social
+        and neuro-immunological factors). Special attention has been given to the
+        fundamental role of the switch from oxidative phosphorylation to glycolysis
+        of cancer cells - the Warburg effect.Offering insights into the interdisciplinary
+        approaches of tomorrow, this publication will encourage endocrinologists,
+        oncologists, diabetologists, general practitioners, diabetic nurses and students
+        of life sciences working separately on various aspects of diabetes and cancer
+        to come together and combine therapies and strategies.\",\n    \"industryIdentifiers\":
+        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"380558640X\"\n
+        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9783805586405\"\n
+        \    }\n    ],\n    \"pageCount\": 148,\n    \"printType\": \"BOOK\",\n    \"categories\":
+        [\n     \"Medical\"\n    ],\n    \"averageRating\": 2.0,\n    \"ratingsCount\":
+        1,\n    \"contentVersion\": \"0.1.0.0.preview.0\",\n    \"imageLinks\": {\n
+        \    \"smallThumbnail\": \"http://bks6.books.google.com/books?id=dy2s5ZoUgngC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks6.books.google.com/books?id=dy2s5ZoUgngC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=dy2s5ZoUgngC&printsec=frontcover&dq=cancer&hl=&cd=49&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=dy2s5ZoUgngC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Diabetes_and_Cancer.html?hl=&id=dy2s5ZoUgngC\"\n
         \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
         \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"NO_PAGES\",\n    \"embeddable\": false,\n
-        \   \"publicDomain\": false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n
-        \   \"epub\": {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=VQ4DaAEACAAJ&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"NONE\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
-        \  \"id\": \"MDcFrZO-c1oC\",\n   \"etag\": \"5vAIYftXNMY\",\n   \"selfLink\":
-        \"https://www.googleapis.com/books/v1/volumes/MDcFrZO-c1oC\",\n   \"volumeInfo\":
-        {\n    \"title\": \"Cancer\",\n    \"authors\": [\n     \"Julia Parker\",\n
-        \    \"Derek Parker\"\n    ],\n    \"publisher\": \"DK Publishing (Dorling
-        Kindersley)\",\n    \"publishedDate\": \"1996-11-01\",\n    \"description\":
-        \"Smooth out the course of true love with these beautiful and innovative pocket
-        guides to the influence of Mars and Venus. Find out how these key planets
-        affect your love life, your sex life -- even your erogenous zones!\",\n    \"industryIdentifiers\":
-        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"0789410923\"\n
-        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9780789410924\"\n
-        \    }\n    ],\n    \"pageCount\": 64,\n    \"printType\": \"BOOK\",\n    \"contentVersion\":
-        \"0.0.1.0.preview.0\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks6.books.google.com/books?id=MDcFrZO-c1oC&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks6.books.google.com/books?id=MDcFrZO-c1oC&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=MDcFrZO-c1oC&q=cancer&dq=cancer&cd=58&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=MDcFrZO-c1oC&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=MDcFrZO-c1oC\"\n
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
+        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=dy2s5ZoUgngC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"Epidemiological literature suggests an association between the history of
+        metabolic syndrome/diabetes mellitus type 2 and the risk of developing a variety
+        of cancers.This book, at the forefront of experimental and clinical research,
+        is the ...\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\":
+        \"pPgvzuVQYpYC\",\n   \"etag\": \"Hwvd3Yk1MfA\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/pPgvzuVQYpYC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Uterine Cancer\",\n    \"authors\":
+        [\n     \"Arlan F. Fuller\",\n     \"Michael V. Seiden\",\n     \"Robert Henry
+        Young\"\n    ],\n    \"publisher\": \"Pmph USA Limited\",\n    \"publishedDate\":
+        \"2004\",\n    \"description\": \"Three Harvard Medical School educators and
+        clinicians - specialists in gynecology, oncology, and pathology - edited this
+        multidisciplinary monograph. The editors offer the reader a comprehensive
+        overview of the most frequently diagnosed gynecologic malignancy: endometrial
+        carcinoma, as well as a collection of mesenchymal tumors. With more than 150
+        illustrations - including clinical photos, intraoperative photos, radiographs,
+        sonograms, photomicrographs, and explanatory tables and graphs - Uterine Cancers
+        also serves as your pictorial guide to these serious gynecologic problems.\",\n
+        \   \"industryIdentifiers\": [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\":
+        \"1550091638\"\n     },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\":
+        \"9781550091632\"\n     }\n    ],\n    \"pageCount\": 230,\n    \"printType\":
+        \"BOOK\",\n    \"categories\": [\n     \"Medical\"\n    ],\n    \"contentVersion\":
+        \"1.0.0.0.preview.1\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks0.books.google.com/books?id=pPgvzuVQYpYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks0.books.google.com/books?id=pPgvzuVQYpYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=pPgvzuVQYpYC&printsec=frontcover&dq=cancer&hl=&cd=50&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=pPgvzuVQYpYC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Uterine_Cancer.html?hl=&id=pPgvzuVQYpYC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"FOR_SALE\",\n    \"isEbook\": true,\n    \"listPrice\": {\n     \"amount\":
+        108.76,\n     \"currencyCode\": \"USD\"\n    },\n    \"retailPrice\": {\n
+        \    \"amount\": 87.01,\n     \"currencyCode\": \"USD\"\n    },\n    \"buyLink\":
+        \"http://books.google.com/books?id=pPgvzuVQYpYC&dq=cancer&hl=&buy=&source=gbs_api\"\n
+        \  },\n   \"accessInfo\": {\n    \"country\": \"US\",\n    \"viewability\":
+        \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\": false,\n    \"textToSpeechPermission\":
+        \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\": {\n     \"isAvailable\": false\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": true,\n     \"acsTokenLink\":
+        \"http://books.google.com/books/download/Uterine_Cancer-sample-pdf.acsm?id=pPgvzuVQYpYC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=pPgvzuVQYpYC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"Three Harvard Medical School educators and clinicians - specialists in gynecology,
+        oncology, and pathology - edited this multidisciplinary monograph.\"\n   }\n
+        \ },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"AfU2uRIqokUC\",\n
+        \  \"etag\": \"JEtoJe6M8AM\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/AfU2uRIqokUC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Viruses And Liver Cancer\",\n    \"authors\":
+        [\n     \"Edward Tabor\"\n    ],\n    \"publisher\": \"Elsevier Science\",\n
+        \   \"publishedDate\": \"2002-06-18\",\n    \"description\": \"Hepatocellular
+        carcinoma (HCC) is one of the most important complications of chronic viral
+        hepatitis. It usually results in a fatal outcome if not discovered in its
+        earliest stages. Its close association with the hepatitis B and C viruses
+        makes it one of the first human cancers for which there is strong evidence
+        of a viral cause. For this reason it provides a model for studying viral carcinogenesis
+        in humans. In some countries, HCC is one of the most common tumors of adult
+        men. In addition, there is evidence that the incidence of this cancer has
+        doubled in the past 15 to 20 years in many countries, and the incidence has
+        doubled every 20 years for the past half century in Japan. In some studies,
+        the increase has been shown to be due primarily to cases associated with HCV
+        infection. Molecular studies of HCC show that mutations in oncogenes, in various
+        cellular repair pathways, and in tumor suppressor genes together appear to
+        contribute to the development of this cancer. In HCCs associated with hepatitis
+        B virus, the virus itself can interact with tumor suppressor proteins and
+        other cellular signals in ways that probably permit HCC to develop even when
+        there are no mutations in the genes for these signals. This work discusses
+        the latest concepts in molecular biology and the study of HCC which have led
+        to dramatic breakthroughs in our understanding of how it develops.\",\n    \"industryIdentifiers\":
+        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"0444505806\"\n
+        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9780444505804\"\n
+        \    }\n    ],\n    \"pageCount\": 176,\n    \"printType\": \"BOOK\",\n    \"categories\":
+        [\n     \"Medical\"\n    ],\n    \"contentVersion\": \"0.0.1.0.preview.2\",\n
+        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks9.books.google.com/books?id=AfU2uRIqokUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks9.books.google.com/books?id=AfU2uRIqokUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=AfU2uRIqokUC&printsec=frontcover&dq=cancer&hl=&cd=51&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=AfU2uRIqokUC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Viruses_And_Liver_Cancer.html?hl=&id=AfU2uRIqokUC\"\n
         \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
         \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"NO_PAGES\",\n    \"embeddable\": false,\n
-        \   \"publicDomain\": false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n
-        \   \"epub\": {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=MDcFrZO-c1oC&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"NONE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"Smooth out the course of true love with these beautiful and innovative pocket
-        guides to the influence of Mars and Venus. Find out how these key planets
-        affect your love life, your sex life -- even your erogenous zones!\"\n   }\n
-        \ },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"INt8N4d70JUC\",\n
-        \  \"etag\": \"34M0FOeTzdk\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/INt8N4d70JUC\",\n
-        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"a guide
-        for patients and their families\",\n    \"authors\": [\n     \"Chris Williams\",\n
-        \    \"Sue Williams\"\n    ],\n    \"publisher\": \"John Wiley & Sons Inc\",\n
-        \   \"publishedDate\": \"1986-08\",\n    \"industryIdentifiers\": [\n     {\n
-        \     \"type\": \"ISBN_10\",\n      \"identifier\": \"0471910171\"\n     },\n
-        \    {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9780471910176\"\n
-        \    }\n    ],\n    \"pageCount\": 341,\n    \"printType\": \"BOOK\",\n    \"categories\":
-        [\n     \"Health & Fitness\"\n    ],\n    \"contentVersion\": \"preview-1.0.0\",\n
-        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks0.books.google.com/books?id=INt8N4d70JUC&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks0.books.google.com/books?id=INt8N4d70JUC&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=INt8N4d70JUC&q=cancer&dq=cancer&cd=59&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=INt8N4d70JUC&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=INt8N4d70JUC\"\n
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": true,\n     \"acsTokenLink\": \"http://books.google.com/books/download/Viruses_And_Liver_Cancer-sample-epub.acsm?id=AfU2uRIqokUC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": false\n    },\n    \"webReaderLink\":
+        \"http://books.google.com/books/reader?id=AfU2uRIqokUC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"This work discusses the latest concepts in molecular biology and the study
+        of HCC which have led to dramatic breakthroughs in our understanding of how
+        it develops.\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\":
+        \"gJbl3hfAvZAC\",\n   \"etag\": \"0cjTR06uhdM\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/gJbl3hfAvZAC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Selected Topics in Cancer Modeling\",\n
+        \   \"subtitle\": \"Genesis, Evolution, Immune Competition, and Therapy\",\n
+        \   \"authors\": [\n     \"Nicola Bellomo\",\n     \"Elena de Angelis\"\n
+        \   ],\n    \"publisher\": \"Birkhäuser Boston\",\n    \"publishedDate\":
+        \"2008-09-25\",\n    \"description\": \"This collection of selected chapters
+        offers a comprehensive overview of state-of-the-art mathematical methods and
+        tools for modeling and analyzing cancer phenomena. Topics covered include
+        stochastic evolutionary models of cancer initiation and progression, tumor
+        cords and their response to anticancer agents, and immune competition in tumor
+        progression and prevention. The complexity of modeling living matter requires
+        the development of new mathematical methods and ideas. This volume, written
+        by first-rate researchers in the field of mathematical biology, is one of
+        the first steps in that direction.\",\n    \"industryIdentifiers\": [\n     {\n
+        \     \"type\": \"ISBN_10\",\n      \"identifier\": \"0817647120\"\n     },\n
+        \    {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9780817647124\"\n
+        \    }\n    ],\n    \"pageCount\": 473,\n    \"printType\": \"BOOK\",\n    \"contentVersion\":
+        \"preview-1.0.0\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks6.books.google.com/books?id=gJbl3hfAvZAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks6.books.google.com/books?id=gJbl3hfAvZAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=gJbl3hfAvZAC&printsec=frontcover&dq=cancer&hl=&cd=52&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=gJbl3hfAvZAC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Selected_Topics_in_Cancer_Modeling.html?hl=&id=gJbl3hfAvZAC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"FOR_SALE\",\n    \"isEbook\": true,\n    \"listPrice\": {\n     \"amount\":
+        129.0,\n     \"currencyCode\": \"USD\"\n    },\n    \"retailPrice\": {\n     \"amount\":
+        99.0,\n     \"currencyCode\": \"USD\"\n    },\n    \"buyLink\": \"http://books.google.com/books?id=gJbl3hfAvZAC&dq=cancer&hl=&buy=&source=gbs_api\"\n
+        \  },\n   \"accessInfo\": {\n    \"country\": \"US\",\n    \"viewability\":
+        \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\": false,\n    \"textToSpeechPermission\":
+        \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\": {\n     \"isAvailable\": false\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": true,\n     \"acsTokenLink\":
+        \"http://books.google.com/books/download/Selected_Topics_in_Cancer_Modeling-sample-pdf.acsm?id=gJbl3hfAvZAC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=gJbl3hfAvZAC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"This collection of selected chapters is written by first-rate researchers
+        in the field of mathematical biology.\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
+        \  \"id\": \"Zjgz0IQAXLMC\",\n   \"etag\": \"KzuQW+7ewxk\",\n   \"selfLink\":
+        \"https://www.googleapis.com/books/v1/volumes/Zjgz0IQAXLMC\",\n   \"volumeInfo\":
+        {\n    \"title\": \"The Complete Cancer Cleanse\",\n    \"subtitle\": \"A
+        Proven Program to Detoxify and Renew Body, Mind, and Spirit\",\n    \"authors\":
+        [\n     \"Cherie Calbom\",\n     \"John Calbom\",\n     \"Michael Mahaffey\"\n
+        \   ],\n    \"publisher\": \"Nelson Books\",\n    \"publishedDate\": \"2007-01-02\",\n
+        \   \"description\": \"Cherie Calbom, \\\"The Juice Lady,\\\" therapist John
+        Calbom, and Michael Mahaffey, a twenty-year cancer survivor, present a unique,
+        multi-disciplinary approach to fighting cancer.\",\n    \"industryIdentifiers\":
+        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"0785288635\"\n
+        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9780785288633\"\n
+        \    }\n    ],\n    \"pageCount\": 345,\n    \"printType\": \"BOOK\",\n    \"categories\":
+        [\n     \"Medical\"\n    ],\n    \"averageRating\": 5.0,\n    \"ratingsCount\":
+        2,\n    \"contentVersion\": \"0.1.0.0.preview.2\",\n    \"imageLinks\": {\n
+        \    \"smallThumbnail\": \"http://bks7.books.google.com/books?id=Zjgz0IQAXLMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks7.books.google.com/books?id=Zjgz0IQAXLMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=Zjgz0IQAXLMC&printsec=frontcover&dq=cancer&hl=&cd=53&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=Zjgz0IQAXLMC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/The_Complete_Cancer_Cleanse.html?hl=&id=Zjgz0IQAXLMC\"\n
         \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
         \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"NO_PAGES\",\n    \"embeddable\": false,\n
-        \   \"publicDomain\": false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n
-        \   \"epub\": {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=INt8N4d70JUC&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"NONE\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
-        \  \"id\": \"Qdolupk0QeQC\",\n   \"etag\": \"GDpGiXe75CM\",\n   \"selfLink\":
-        \"https://www.googleapis.com/books/v1/volumes/Qdolupk0QeQC\",\n   \"volumeInfo\":
-        {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"post-graduate lectures,
-        delivered under the auspices of the Fellowship of Medicine\",\n    \"authors\":
-        [\n     \"Fellowship of Medicine and Post-Graduate Medical Association\"\n
-        \   ],\n    \"publishedDate\": \"1925\",\n    \"industryIdentifiers\": [\n
-        \    {\n      \"type\": \"OTHER\",\n      \"identifier\": \"UOM:39015062324853\"\n
-        \    }\n    ],\n    \"pageCount\": 186,\n    \"printType\": \"BOOK\",\n    \"categories\":
-        [\n     \"Medical\"\n    ],\n    \"contentVersion\": \"preview-1.0.0\",\n
-        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks1.books.google.com/books?id=Qdolupk0QeQC&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks1.books.google.com/books?id=Qdolupk0QeQC&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=Qdolupk0QeQC&q=cancer&dq=cancer&cd=60&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=Qdolupk0QeQC&dq=cancer&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?id=Qdolupk0QeQC\"\n
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": true,\n     \"acsTokenLink\": \"http://books.google.com/books/download/The_Complete_Cancer_Cleanse-sample-epub.acsm?id=Zjgz0IQAXLMC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": false\n    },\n    \"webReaderLink\":
+        \"http://books.google.com/books/reader?id=Zjgz0IQAXLMC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"Cherie Calbom, &quot;The Juice Lady,&quot; therapist John Calbom, and Michael
+        Mahaffey, a twenty-year cancer survivor, present a unique, multi-disciplinary
+        approach to fighting cancer.\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
+        \  \"id\": \"ObIaHaielsoC\",\n   \"etag\": \"1/eO/946Sy8\",\n   \"selfLink\":
+        \"https://www.googleapis.com/books/v1/volumes/ObIaHaielsoC\",\n   \"volumeInfo\":
+        {\n    \"title\": \"Apoptosis, Senescence and Cancer\",\n    \"authors\":
+        [\n     \"David A. Gewirtz\",\n     \"Shawn E. Holt\",\n     \"Steven Grant\"\n
+        \   ],\n    \"publisher\": \"Humana Press\",\n    \"publishedDate\": \"2007-12-17\",\n
+        \   \"description\": \"This book provides insight into established practices
+        and research into apoptosis and senescence. The volume thoroughly examines
+        novel and emerging techniques and research in the fields of cell death pathways,
+        senescence growth arrest, drugs and resistance, DNA damage response, and other
+        topics that still hold mysteries for researchers. In total, this volume provides
+        basic scientists and clinicians with a deeper and more complete understanding
+        of the cellular responses of malignancies which may determine the effectiveness
+        of treatment, both in the initial stages of the disease as well as in disease
+        recurrence.\",\n    \"industryIdentifiers\": [\n     {\n      \"type\": \"ISBN_10\",\n
+        \     \"identifier\": \"1588295273\"\n     },\n     {\n      \"type\": \"ISBN_13\",\n
+        \     \"identifier\": \"9781588295279\"\n     }\n    ],\n    \"pageCount\":
+        599,\n    \"printType\": \"BOOK\",\n    \"contentVersion\": \"preview-1.0.0\",\n
+        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks8.books.google.com/books?id=ObIaHaielsoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks8.books.google.com/books?id=ObIaHaielsoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=ObIaHaielsoC&printsec=frontcover&dq=cancer&hl=&cd=54&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=ObIaHaielsoC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Apoptosis_Senescence_and_Cancer.html?hl=&id=ObIaHaielsoC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"FOR_SALE\",\n    \"isEbook\": true,\n    \"listPrice\": {\n     \"amount\":
+        169.0,\n     \"currencyCode\": \"USD\"\n    },\n    \"retailPrice\": {\n     \"amount\":
+        135.2,\n     \"currencyCode\": \"USD\"\n    },\n    \"buyLink\": \"http://books.google.com/books?id=ObIaHaielsoC&dq=cancer&hl=&buy=&source=gbs_api\"\n
+        \  },\n   \"accessInfo\": {\n    \"country\": \"US\",\n    \"viewability\":
+        \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\": false,\n    \"textToSpeechPermission\":
+        \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\": {\n     \"isAvailable\": false\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": true,\n     \"acsTokenLink\":
+        \"http://books.google.com/books/download/Apoptosis_Senescence_and_Cancer-sample-pdf.acsm?id=ObIaHaielsoC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=ObIaHaielsoC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"In total, this volume provides basic scientists and clinicians with a deeper
+        and more complete understanding of the cellular responses of malignancies
+        which may determine the effectiveness of treatment, both in the initial stages
+        of the ...\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\":
+        \"nvMZ0IY6NSAC\",\n   \"etag\": \"TXlNzkn23Og\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/nvMZ0IY6NSAC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Breast Cancer, a Heterogeneous Disease
+        Entity\",\n    \"subtitle\": \"The Very Early Stages\",\n    \"authors\":
+        [\n     \"Zsuzsanna Kahán\"\n    ],\n    \"publisher\": \"Springer Verlag\",\n
+        \   \"publishedDate\": \"2011-03-07\",\n    \"description\": \"Aimed at raising
+        awareness of the need for a fresh approach to tackling breast cancer, this
+        volume is founded on data collected on early breast cancer over the past two
+        decades and includes contributions from experts in all the fields involved
+        in treatment.\",\n    \"industryIdentifiers\": [\n     {\n      \"type\":
+        \"ISBN_10\",\n      \"identifier\": \"9400704887\"\n     },\n     {\n      \"type\":
+        \"ISBN_13\",\n      \"identifier\": \"9789400704886\"\n     }\n    ],\n    \"pageCount\":
+        313,\n    \"printType\": \"BOOK\",\n    \"categories\": [\n     \"Medical\"\n
+        \   ],\n    \"contentVersion\": \"0.0.2.0.preview.3\",\n    \"imageLinks\":
+        {\n     \"smallThumbnail\": \"http://bks2.books.google.com/books?id=nvMZ0IY6NSAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks2.books.google.com/books?id=nvMZ0IY6NSAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=nvMZ0IY6NSAC&printsec=frontcover&dq=cancer&hl=&cd=55&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=nvMZ0IY6NSAC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Breast_Cancer_a_Heterogeneous_Disease_En.html?hl=&id=nvMZ0IY6NSAC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"FOR_SALE\",\n    \"isEbook\": true,\n    \"listPrice\": {\n     \"amount\":
+        209.0,\n     \"currencyCode\": \"USD\"\n    },\n    \"retailPrice\": {\n     \"amount\":
+        167.2,\n     \"currencyCode\": \"USD\"\n    },\n    \"buyLink\": \"http://books.google.com/books?id=nvMZ0IY6NSAC&dq=cancer&hl=&buy=&source=gbs_api\"\n
+        \  },\n   \"accessInfo\": {\n    \"country\": \"US\",\n    \"viewability\":
+        \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\": false,\n    \"textToSpeechPermission\":
+        \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\": {\n     \"isAvailable\": true,\n
+        \    \"acsTokenLink\": \"http://books.google.com/books/download/Breast_Cancer_a_Heterogeneous_Disease_En-sample-epub.acsm?id=nvMZ0IY6NSAC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": true,\n     \"acsTokenLink\":
+        \"http://books.google.com/books/download/Breast_Cancer_a_Heterogeneous_Disease_En-sample-pdf.acsm?id=nvMZ0IY6NSAC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=nvMZ0IY6NSAC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"Aimed at raising awareness of the need for a fresh approach to tackling
+        breast cancer, this volume is founded on data collected on early breast cancer
+        over the past two decades and includes contributions from experts in all the
+        fields ...\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\":
+        \"-Em3jb360iUC\",\n   \"etag\": \"xwwS9EgNB+M\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/-Em3jb360iUC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer Care\",\n    \"subtitle\": \"Prevention,
+        Treatment and Palliation\",\n    \"authors\": [\n     \"Jill David\"\n    ],\n
+        \   \"publisher\": \"Nelson Thornes\",\n    \"publishedDate\": \"1995\",\n
+        \   \"description\": \"Main subjects which are addressed include: Health promotion:
+        Screening for cancer. Surgery, chemotherapy, biological and hormonal therapy
+        and radiotherapy. Palliative care, continuing care and rehabilitation.\",\n
+        \   \"industryIdentifiers\": [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\":
+        \"0412554305\"\n     },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\":
+        \"9780412554308\"\n     }\n    ],\n    \"pageCount\": 433,\n    \"printType\":
+        \"BOOK\",\n    \"contentVersion\": \"1.1.1.0.preview.0\",\n    \"imageLinks\":
+        {\n     \"smallThumbnail\": \"http://bks8.books.google.com/books?id=-Em3jb360iUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks8.books.google.com/books?id=-Em3jb360iUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=-Em3jb360iUC&printsec=frontcover&dq=cancer&hl=&cd=56&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=-Em3jb360iUC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer_Care.html?hl=&id=-Em3jb360iUC\"\n
         \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
         \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"NO_PAGES\",\n    \"embeddable\": false,\n
-        \   \"publicDomain\": false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n
-        \   \"epub\": {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=Qdolupk0QeQC&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"NONE\"\n   }\n  }\n ]\n}\n"
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
+        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=-Em3jb360iUC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"Main subjects which are addressed include: Health promotion: Screening for
+        cancer. Surgery, chemotherapy, biological and hormonal therapy and radiotherapy.
+        Palliative care, continuing care and rehabilitation.\"\n   }\n  },\n  {\n
+        \  \"kind\": \"books#volume\",\n   \"id\": \"WfwIXyUXP0IC\",\n   \"etag\":
+        \"1wWH9s69Ipo\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/WfwIXyUXP0IC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Breast Cancer\",\n    \"subtitle\":
+        \"Collaborative Management\",\n    \"authors\": [\n     \"Jay Kenneth Harness\"\n
+        \   ],\n    \"publisher\": \"CRC Press\",\n    \"publishedDate\": \"1988-04-01\",\n
+        \   \"description\": \"Prominent specialists champion the view that contemporary
+        management of breast, or any, cancer requires the partnership of physicians,
+        nurses, social workers, and all others whose special training and talents
+        should be integrated for treating the whole patient. Here is the book that
+        sets forth the rationale for this nationwide emerging concept and the means
+        for accomplishing it. Dealing with total care of the whole patient, this new
+        classic text is written by and for surgeons, radiation oncologists, medical
+        oncologist, pathologists, radiologists, nurses, social workers, and others
+        involved with the care and management of the patient with breast cancer.\",\n
+        \   \"industryIdentifiers\": [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\":
+        \"0873711068\"\n     },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\":
+        \"9780873711067\"\n     }\n    ],\n    \"pageCount\": 390,\n    \"printType\":
+        \"BOOK\",\n    \"contentVersion\": \"0.0.1.0.preview.0\",\n    \"imageLinks\":
+        {\n     \"smallThumbnail\": \"http://bks5.books.google.com/books?id=WfwIXyUXP0IC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks5.books.google.com/books?id=WfwIXyUXP0IC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=WfwIXyUXP0IC&printsec=frontcover&dq=cancer&hl=&cd=57&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=WfwIXyUXP0IC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Breast_Cancer.html?hl=&id=WfwIXyUXP0IC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
+        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=WfwIXyUXP0IC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"Dealing with total care of the whole patient, this new classic text is written
+        by and for surgeons, radiation oncologists, medical oncologist, pathologists,
+        radiologists, nurses, social workers, and others involved with the care and
+        ...\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"EXhI9_NtGmUC\",\n
+        \  \"etag\": \"0ovsuDdNz4Y\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/EXhI9_NtGmUC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer Epigenetics\",\n    \"subtitle\":
+        \"Biomolecular Therapeutics in Human Cancer\",\n    \"authors\": [\n     \"Antonio
+        Giordano\"\n    ],\n    \"publisher\": \"Wiley-Blackwell\",\n    \"publishedDate\":
+        \"2011-08-23\",\n    \"description\": \"\\\"Biomolecular Therapeutics for
+        Human Cancer is the only resource to focus on biomolecular approaches to cancer
+        therapy. Its presentation of the latest research in cancer biology reflects
+        the interdisciplinary nature of the field and aims to facilitate collaboration
+        between the basic, translational, and clinical sciences\\\"--Provided by publisher.\",\n
+        \   \"industryIdentifiers\": [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\":
+        \"0471710962\"\n     },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\":
+        \"9780471710967\"\n     }\n    ],\n    \"pageCount\": 436,\n    \"printType\":
+        \"BOOK\",\n    \"categories\": [\n     \"Medical\"\n    ],\n    \"contentVersion\":
+        \"0.4.4.0.preview.3\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks3.books.google.com/books?id=EXhI9_NtGmUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks3.books.google.com/books?id=EXhI9_NtGmUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=EXhI9_NtGmUC&printsec=frontcover&dq=cancer&hl=&cd=58&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=EXhI9_NtGmUC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer_Epigenetics.html?hl=&id=EXhI9_NtGmUC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"FOR_SALE\",\n    \"isEbook\": true,\n    \"listPrice\": {\n     \"amount\":
+        119.99,\n     \"currencyCode\": \"USD\"\n    },\n    \"retailPrice\": {\n
+        \    \"amount\": 119.99,\n     \"currencyCode\": \"USD\"\n    },\n    \"buyLink\":
+        \"http://books.google.com/books?id=EXhI9_NtGmUC&dq=cancer&hl=&buy=&source=gbs_api\"\n
+        \  },\n   \"accessInfo\": {\n    \"country\": \"US\",\n    \"viewability\":
+        \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\": false,\n    \"textToSpeechPermission\":
+        \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\": {\n     \"isAvailable\": true,\n
+        \    \"acsTokenLink\": \"http://books.google.com/books/download/Cancer_Epigenetics-sample-epub.acsm?id=EXhI9_NtGmUC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": true,\n     \"acsTokenLink\":
+        \"http://books.google.com/books/download/Cancer_Epigenetics-sample-pdf.acsm?id=EXhI9_NtGmUC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=EXhI9_NtGmUC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"This volume is divided into five sections: Epigenetics and cell cycle Epigenetics
+        and cell development, senescence and differentiation Epigenetics and gene
+        transcription Epigenetics and cancer Epigenetics and anticancer drug development
+        and ...\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"EShBPBgt_TgC\",\n
+        \  \"etag\": \"0VxVjIdjHJ4\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/EShBPBgt_TgC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Breast Cancer\",\n    \"subtitle\":
+        \"Real Questions, Real Answers\",\n    \"authors\": [\n     \"David Chan\"\n
+        \   ],\n    \"publisher\": \"Da Capo Press\",\n    \"publishedDate\": \"2006-01-02\",\n
+        \   \"description\": \"A comprehensive and up-to-date guide to the numerous
+        aspects of breast cancer, from its diagnosis and treatments to its therapies
+        and the complex emotional factors associated with the disease, is organized
+        in a question-and-answer format for easy reference and is complemented by
+        a glossary of terms and an appendix of resources.\",\n    \"industryIdentifiers\":
+        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"156924314X\"\n
+        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9781569243145\"\n
+        \    }\n    ],\n    \"pageCount\": 264,\n    \"printType\": \"BOOK\",\n    \"averageRating\":
+        4.5,\n    \"ratingsCount\": 3,\n    \"contentVersion\": \"1.0.0.0.preview.0\",\n
+        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks1.books.google.com/books?id=EShBPBgt_TgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks1.books.google.com/books?id=EShBPBgt_TgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=EShBPBgt_TgC&printsec=frontcover&dq=cancer&hl=&cd=59&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=EShBPBgt_TgC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Breast_Cancer.html?hl=&id=EShBPBgt_TgC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
+        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=EShBPBgt_TgC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"A comprehensive and up-to-date guide to the numerous aspects of breast cancer,
+        from its diagnosis and treatments to its therapies and the complex emotional
+        factors associated with the disease, is organized in a question-and-answer
+        format ...\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\":
+        \"L7GGVLdRLyIC\",\n   \"etag\": \"ehMbIe48cqc\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/L7GGVLdRLyIC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Bone Cancer\",\n    \"subtitle\": \"Current
+        and Emerging Trends in Detection and Treatment\",\n    \"authors\": [\n     \"Heather
+        Hasan\"\n    ],\n    \"publisher\": \"The Rosen Publishing Group\",\n    \"publishedDate\":
+        \"2009-01-01\",\n    \"description\": \"A discussion of bone cancer and treatments
+        for it.\",\n    \"industryIdentifiers\": [\n     {\n      \"type\": \"ISBN_10\",\n
+        \     \"identifier\": \"1435850106\"\n     },\n     {\n      \"type\": \"ISBN_13\",\n
+        \     \"identifier\": \"9781435850101\"\n     }\n    ],\n    \"pageCount\":
+        64,\n    \"printType\": \"BOOK\",\n    \"categories\": [\n     \"Medical\"\n
+        \   ],\n    \"contentVersion\": \"0.0.1.0.preview.2\",\n    \"imageLinks\":
+        {\n     \"smallThumbnail\": \"http://bks3.books.google.com/books?id=L7GGVLdRLyIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks3.books.google.com/books?id=L7GGVLdRLyIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=L7GGVLdRLyIC&printsec=frontcover&dq=cancer&hl=&cd=60&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=L7GGVLdRLyIC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Bone_Cancer.html?hl=&id=L7GGVLdRLyIC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": true,\n     \"acsTokenLink\": \"http://books.google.com/books/download/Bone_Cancer-sample-epub.acsm?id=L7GGVLdRLyIC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": false\n    },\n    \"webReaderLink\":
+        \"http://books.google.com/books/reader?id=L7GGVLdRLyIC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"A discussion of bone cancer and treatments for it.\"\n   }\n  }\n ]\n}\n"
     http_version: 
-  recorded_at: Tue, 22 May 2012 14:53:16 GMT
-recorded_with: VCR 2.1.1
+  recorded_at: Mon, 06 Aug 2012 15:27:13 GMT
+recorded_with: VCR 2.2.4

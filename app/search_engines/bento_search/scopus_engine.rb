@@ -206,11 +206,7 @@ module BentoSearch
       }
     end
 
-    
-    def default_per_page
-      25
-    end
-    
+            
     protected
     
     # returns nil if passed in nil, otherwise

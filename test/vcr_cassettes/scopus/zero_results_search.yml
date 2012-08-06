@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.elsevier.com/content/search/index:SCOPUS?query=aldfjkadf%20lakdj%20zdfzzzz&sort=refeid
+    uri: http://api.elsevier.com/content/search/index:SCOPUS?count=10&query=aldfjkadf%20lakdj%20zdfzzzz&sort=refeid
     body:
       encoding: US-ASCII
       string: ''
@@ -13,6 +13,8 @@ http_interactions:
       - XOCS
       Accept:
       - application/atom+xml
+      Cookie:
+      - JSESSIONID=FC9EA38206AB6BFD7D48F6B1ED186E57.KLCIns3Dy2n2GJ9KNkUA
   response:
     status:
       code: 400
@@ -28,14 +30,14 @@ http_interactions:
         YWx1ZSBiZXlvbmQgcmVzdWx0IHNldCk=
       !binary "WC1FbHMtUmVxaWQ=":
       - !binary |-
-        MDAwMDAxMzZjNGQ4ODA5ZS02ZGE0ODM3
+        MDAwMDAxMzhmYjRkMGIyYi01NjVmNg==
       !binary "WC1FbHMtQXBpa2V5":
       - !binary |-
         RFVNTVlfQVBJX0tFWQ==
       !binary "U2V0LUNvb2tpZQ==":
       - !binary |-
-        SlNFU1NJT05JRD1GNzUyMTVBODRGODExOTQ5RjEwRjVGQzRCQ0ExOEU0RS5I
-        SlVQbEI5NTR1cThJeHpiSlluUVJnOyBEb21haW49YXBpLmVsc2V2aWVyLmNv
+        SlNFU1NJT05JRD0zRjNEOTkyOTBEMTZFMTU2QUQxRkI2RkMwRjBCOTA3Ri4y
+        VWlvdmVvMVhNU0tyTDZlU2FJTk1ROyBEb21haW49YXBpLmVsc2V2aWVyLmNv
         bTsgUGF0aD0vY29udGVudC9zZWFyY2g=
       !binary "Q29udGVudC1UeXBl":
       - !binary |-
@@ -45,13 +47,13 @@ http_interactions:
         MTc1
       !binary "RGF0ZQ==":
       - !binary |-
-        VGh1LCAxOSBKdWwgMjAxMiAxOTozNDoyNCBHTVQ=
+        TW9uLCAwNiBBdWcgMjAxMiAxNToyNzoxNiBHTVQ=
       !binary "WC1DbmVjdGlvbg==":
       - !binary |-
         Y2xvc2U=
       !binary "WC1SZS1SZWY=":
       - !binary |-
-        MSAtMjA3MTAwOTMy
+        MSAtMjA5NDcyNDU1MQ==
       !binary "UDNw":
       - !binary |-
         Q1A9IklEQyBEU1AgTEFXIEFETSBERVYgVEFJIFBTQSBQU0QgSVZBIElWRCBD
@@ -61,5 +63,5 @@ http_interactions:
       string: ! "<service-error>\n\t<status>\n\t\t<statusCode>INVALID_INPUT</statusCode>\n\t\t<statusText>Result
         set was empty or Start value beyond result set</statusText>\n\t</status>\n</service-error>"
     http_version: 
-  recorded_at: Thu, 19 Jul 2012 19:40:29 GMT
-recorded_with: VCR 2.2.3
+  recorded_at: Mon, 06 Aug 2012 15:27:16 GMT
+recorded_with: VCR 2.2.4

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://eit.DUMMY_PWDhost.com/Services/SearchService.asmx/Search?db=does_not_exist&prof=DUMMY_PROFILE&pwd=DUMMY_PWD&query=cancer&sort=relevance
+    uri: http://eit.DUMMY_PWDhost.com/Services/SearchService.asmx/Search?db=does_not_exist&numrec=10&prof=DUMMY_PROFILE&pwd=DUMMY_PWD&query=cancer&sort=relevance
     body:
       encoding: US-ASCII
       string: ''

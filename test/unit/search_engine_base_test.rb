@@ -35,7 +35,7 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
     
     args = d.test_parse("query")
     
-    assert_equal( {:query => "query"}, args )        
+    assert_equal( {:query => "query", :per_page => BentoSearch::SearchEngine::DefaultPerPage }, args )        
   end
   
   def test_two_arg
@@ -43,17 +43,10 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
     
     args = d.test_parse("query", :arg => "1")
     
-    assert_equal( {:query => "query", :arg => "1"}, args )
+    assert_equal( {:query => "query", :arg => "1", :per_page => BentoSearch::SearchEngine::DefaultPerPage }, args )
   end
   
-  def test_illegal_pagination_args
-    d = Dummy.new
-    # can't do start and page both
-    assert_raise(ArgumentError) {  d.test_parse("query", :page => 4, :start => 40, :per_page => 20)  }
-    # start or page need per_page
-    assert_raise(ArgumentError) { d.test_parse("query", :page => 4) }
-    assert_raise(ArgumentError) { d.test_parse("query", :start => 40) }    
-  end
+     
   
   def test_convert_page_to_start
     d = Dummy.new
@@ -106,7 +99,7 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
     
     assert ! (args.has_key? :page)
     assert ! (args.has_key? :start)
-    assert ! (args.has_key? :per_page)    
+    assert  (args.has_key? :per_page) # default per page always provided    
   end
   
   def test_enforce_max_per_page

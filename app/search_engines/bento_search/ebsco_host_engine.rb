@@ -338,7 +338,8 @@ class BentoSearch::EbscoHostEngine
   def self.default_configuration
     {
       # /Search
-      :base_url => "http://eit.ebscohost.com/Services/SearchService.asmx"    
+      :base_url => "http://eit.ebscohost.com/Services/SearchService.asmx",
+      :databases => []
     }
   end
   

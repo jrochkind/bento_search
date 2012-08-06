@@ -40,6 +40,8 @@ module BentoSearch
   #  users. 
   #
   module SearchEngine
+    DefaultPerPage = 10
+    
     extend ActiveSupport::Concern
     
     include Capabilities
@@ -89,7 +91,7 @@ module BentoSearch
       
       # standard result metadata
       results.start = arguments[:start] || 0
-      results.per_page = arguments[:per_page] || self.default_per_page
+      results.per_page = arguments[:per_page]
       
       results.search_args   = arguments
       results.engine_id     = configuration.id
@@ -119,11 +121,9 @@ module BentoSearch
         arguments.delete(key) if arguments[key].blank?
         arguments[key] = arguments[key].to_i if arguments[key]
       end   
+      arguments[:per_page] ||= DefaultPerPage
       
-      # illegal arguments
-      if (arguments[:start] || arguments[:page]) && ! arguments[:per_page]
-        raise ArgumentError.new("Must supply :per_page if supplying :start or :page")
-      end
+      # illegal arguments      
       if (arguments[:start] && arguments[:page])
         raise ArgumentError.new("Can't supply both :page and :start")
       end

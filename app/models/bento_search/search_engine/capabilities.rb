@@ -32,13 +32,7 @@ module BentoSearch::SearchEngine::Capabilities
       def sort_definitions
         {}
       end
-      
-      # Default per-page, returns 10 by default,
-      # over-ride if different than 10
-      def default_per_page
-        10
-      end
-      
+                  
       # Override to return int max per-page. 
       def max_per_page
         nil

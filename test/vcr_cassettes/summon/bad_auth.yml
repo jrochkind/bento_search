@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.summon.serialssolutions.com/2.0.0/search?s.he=$$BENTO_HL_END$$&s.hs=$$BENTO_HL_START$$&s.q=elephants
+    uri: http://api.summon.serialssolutions.com/2.0.0/search?s.he=$$BENTO_HL_END$$&s.hs=$$BENTO_HL_START$$&s.ps=10&s.q=elephants
     body:
       encoding: US-ASCII
       string: ''
@@ -12,9 +12,9 @@ http_interactions:
       Accept:
       - application/json
       X-Summon-Date:
-      - Mon, 23 Jul 2012 15:23:20 GMT
+      - Mon, 06 Aug 2012 15:13:32 GMT
       Authorization:
-      - Summon bad_access_id;G8vrc9tIWwyoqPqeUs2nUw9XhXc=
+      - Summon bad_access_id;zEFKYSwR7I7eAJ7a235qivVSf5w=
       Host:
       - api.summon.serialssolutions.com:80
   response:
@@ -31,7 +31,7 @@ http_interactions:
         SUFEMQ==
       !binary "RGF0ZQ==":
       - !binary |-
-        TW9uLCAyMyBKdWwgMjAxMiAxNToyMzoyMCBHTVQ=
+        TW9uLCAwNiBBdWcgMjAxMiAxNToxMzozMSBHTVQ=
       !binary "Q29udGVudC1MZW5ndGg=":
       - !binary |-
         MTA2NQ==
@@ -50,5 +50,5 @@ http_interactions:
         <u>This request requires HTTP authentication (Invalid ID, secret key or client
         hash).</u></p><HR size="1" noshade="noshade"><h3>Apache Tomcat/6.0.20</h3></body></html>'
     http_version: 
-  recorded_at: Mon, 23 Jul 2012 15:23:20 GMT
-recorded_with: VCR 2.2.3
+  recorded_at: Mon, 06 Aug 2012 15:13:32 GMT
+recorded_with: VCR 2.2.4
