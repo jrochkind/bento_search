@@ -1,3 +1,5 @@
+require 'test_helper'
+
 require 'cgi'
 require 'uri'
 
@@ -121,7 +123,8 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
       :profile_id => @@profile_id,
       :profile_password => @@profile_pwd,
       :databases => ["bad", "does_not_exist"]
-    )
+    )    
+    
     results = error_engine.search(:query => "cancer")    
     assert results.failed?    
     assert_present results.error[:error_info]        
