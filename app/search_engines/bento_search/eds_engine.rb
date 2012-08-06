@@ -2,6 +2,7 @@
 
 require 'nokogiri'
 require 'httpclient'
+require 'multi_json'
 require 'http_client_patch/include_client'
 
 
@@ -12,6 +13,53 @@ require 'http_client_patch/include_client'
 #
 # user_id, password: As given be EBSCO for access to EDS API (may be an admin account in ebscoadmin? Not sure). 
 # profile: As given by EBSCO, might be "edsapi"?
+#
+# == Highlighting
+#
+# EDS has a query-in-context highlighting feature. It is used by defualt, set 
+# config 'highlighting' to false to disable. 
+# If turned on, you may get <b class="bento_search_highlight"> tags
+# in title and abstract output if it's on, marked html_safe.  
+#
+# If highlighting is on, since the abstract will be marked html safe, the
+# view layer won't be able to safely truncate it. In fact, it's very hard
+# to do here too, but we do it anyway, by default to approx configuration
+# truncate_highlighted num of chars (default 280). Set to nil if you don't
+# want this. 
+#
+# == Technical Notes and Difficulties
+#
+# This API is enormously difficult to work with. Also the response is very odd
+# to deal with and missing some key elements. We quite possibly got something
+# wrong or non-optimal in this implementation, but we did our best. 
+#
+# Auth issues may make this slow -- you need to spend a (not too speedy) HTTP
+# request making a session for every new end-user -- as we have no way to keep
+# track of end-users, we do it on every request in this implementation. 
+#
+# Responses don't include much metadata -- we don't actually have journal title,
+# volume, issue, etc.  We probably _could_ parse it out of the OpenURL that's
+# there depending on your profile configuration, but we're not right now.
+# Instead we're using the chunk of user-displayable citation/reference it does
+# give us (which is very difficult to parse into something usable already),
+# and a custom Decorator to display that instead of normalized citation
+# made from individual elements. 
+#
+# Title and abstract data seems to be HTML with tags and character entities and
+# escaped special chars. We're trusting it and passing it on as html_safe. 
+#
+#
+# == Authenticated Users
+#
+# EDS allows searches by unauthenticated users, but the results come back with 
+# weird blank hits. In such a case, the BentoSearch adapter will return
+# records with virtually no metadata, but a title e
+# (I18n at bento_search.eds.record_not_available ). Also no abstracts
+# are available from unauth search. 
+#
+# By default the engine will search as 'guest' unauth user. But config
+# 'auth' key to true to force all searches to auth (if you are protecting your
+# app) or pass :auth => true as param into #search method.  
 #
 # == EDS docs:
 # 
@@ -24,7 +72,7 @@ class BentoSearch::EdsEngine
   
   extend HTTPClientPatch::IncludeClient
   include_http_client
-  
+    
   AuthHeader          = "x-authenticationToken"
   SessionTokenHeader  = "x-sessionToken"
 
@@ -45,21 +93,112 @@ class BentoSearch::EdsEngine
     end
   end
   
+  # an object that includes some Rails helper modules for
+  # text handling. 
+  def helper
+    unless @helper
+      @helper = Object.new
+      @helper.extend ActionView::Helpers::TextHelper # for truncate
+      @helper.extend ActionView::Helpers::OutputSafetyHelper # for safe_join
+    end
+    return @helper
+  end
+  
   
   def self.required_configuration
     %w{user_id password profile}
   end
   
+  # From config or args, args over-ride config
+  def authenticated_end_user?(args)    
+    config = configuration.auth ? true : false
+    arg = args[:auth]
+    if ! arg.nil?
+      arg ? true : false
+    elsif ! config.nil?
+      config ? true : false
+    else
+      false
+    end
+  end
+  
   
   def search_implementation(args)
-    query = "AND,#{args[:query]}"
+    results = BentoSearch::Results.new
     
-    url = "#{configuration.base_url}search?query=#{CGI.escape query}"
+    end_user_auth = authenticated_end_user? args
     
-    get_with_auth(url)
+    begin
+      query = "AND,#{args[:query]}"
+      with_session(end_user_auth) do |session_token|
+                        
+        url = "#{configuration.base_url}search?view=detailed&query=#{CGI.escape query}&highlight=#{configuration.highlighting ? 'y' : 'n' }"
+                
+        response = get_with_auth(url, session_token)
+        
+        results = BentoSearch::Results.new
+        
+        if (hits_node = at_xpath_text(response, "./SearchResponseMessageGet/SearchResult/Statistics/TotalHits"))          
+          results.total_items = hits_node.to_i
+        end
+        
+        response.xpath("./SearchResponseMessageGet/SearchResult/Data/Records/Record").each do |record_xml|
+          item = BentoSearch::ResultItem.new
+          
+          item.title = prepare_eds_payload( element_by_group(record_xml, "Ti"), true )
+          if item.title.nil? && ! end_user_auth
+            item.title = I18n.translate("bento_search.eds.record_not_available")
+          end
+          
+          item.abstract = prepare_eds_payload( element_by_group(record_xml, "Ab"), true )
+
+          # Believe it or not, the authors are encoded as an escaped
+          # XML-ish payload, that we need to parse again and get the
+          # actual authors out of. WTF. Thanks for handling fragments
+          # nokogiri. 
+          author_mess = element_by_group(record_xml, "Au")
+          author_xml = Nokogiri::XML::fragment(author_mess)
+          author_xml.xpath(".//searchLink").each do |author_node|
+            item.authors << BentoSearch::Author.new(:display => author_node.text)
+          end
+          
+          # We have a single blob of human-readable citation, that's also
+          # littered with XML-ish tags we need to deal with. We'll save
+          # it in a custom location, and use a custom Decorator to display
+          # it. Sorry it's way too hard for us to preserve <highlight>
+          # tags in this mess, they will be lost. Probably don't
+          # need highlighting in source anyhow. 
+          citation_mess = element_by_group(record_xml, "Src")
+          citation_txt = Nokogiri::XML::fragment(citation_mess).text
+          # But strip off some "count of references" often on the end
+          # which are confusing and useless. 
+          item.custom_data["citation_blob"] = citation_txt.gsub(/ref +\d+ +ref\.$/, '')           
+                              
+          item.extend CitationMessDecorator
+          
+          results << item
+        end        
+      end
+      
+      return results      
+    rescue EdsCommException => e
+      results.error ||= {}
+      results.error[:exception] = e
+      results.error[:http_status] = e.http_status
+      results.error[:http_body] = e.http_body
+      return results
+    end
     
   end
   
+  # Difficult to get individual elements out of an EDS XML <Record>
+  # response, requires weird xpath, so we do it for you. 
+  # element_by_group(nokogiri_element, "Ti")
+  #
+  # Returns string or nil
+  def element_by_group(noko, group)
+    at_xpath_text(noko, "./Items/Item[child::Group[text()='#{group}']]/Data")
+  end
   
   # Wraps calls to the EDS api with CreateSession and EndSession requests
   # to EDS. Will pass sessionID in yield from block.
@@ -108,6 +247,72 @@ class BentoSearch::EdsEngine
     end
   end
   
+  # If EDS has put highlighting tags
+  # in a field, we need to HTML escape the literal values,
+  # while still using the highlighting tokens to put
+  # HTML tags around highlighted terms.
+  #
+  # Second param, if to assume EDS literals are safe HTML, as they
+  # seem to be. 
+  def prepare_eds_payload(str, html_safe = false)
+    return str if str.blank?
+    
+    unless configuration.highlighting
+      str = str.html_safe if html_safe  
+      return str
+    end
+        
+    parts = 
+    str.split(%r{(</?highlight>)}).collect do |substr|
+      case substr
+      when "<highlight>" then "<b class='bento_search_highlight'>".html_safe
+      when "</highlight>" then "</b>".html_safe
+      # Yes, EDS gives us HTML in the literals, we're choosing to trust it. 
+      else substr.html_safe
+      end
+    end
+    
+    
+    
+    
+    
+    # Crazy ass method to truncate without getting in the middle of our
+    # html tags. This is wacky hacky, yeah. 
+    if configuration.truncate_highlighted
+      remainingLength = configuration.truncate_highlighted
+      in_tag = false
+      elipses_added = false
+      
+      truncated_parts = []
+      parts.each do |substr|
+        if remainingLength <=0 && ! in_tag
+          truncated_parts << "..."
+          break
+        end
+        
+        if substr =~ /^<b.*\>$/
+          truncated_parts << substr
+          in_tag = true
+        elsif substr == "</b>"
+          truncated_parts << substr
+          in_tag = false
+        elsif ((remainingLength - substr.length) > 0) || in_tag
+          truncated_parts << substr
+        else
+          truncated_parts << helper.truncate(substr, :length => remainingLength, :separator  => ' ')
+          break
+        end
+        
+        remainingLength = remainingLength - substr.length
+      end
+      
+      parts = truncated_parts
+    end
+
+    
+    return helper.safe_join(parts, '')        
+  end
+  
   # Give it a url pointing at EDS API.
   # Second arg must be a session_token if EDS request requires one. 
   # It will 
@@ -147,8 +352,6 @@ class BentoSearch::EdsEngine
     end
     
     if response.nil? || response_xml.nil? || caught_exception ||  (! HTTP::Status.successful? response.status)
-      require 'debugger'
-      debugger
       exception = EdsCommException.new("Error fetching URL: #{caught_exception.message if caught_exception} : #{url}")
       if response
         exception.http_body = response.body
@@ -201,7 +404,9 @@ class BentoSearch::EdsEngine
   def self.default_configuration
     {
       :auth_url => 'https://eds-api.ebscohost.com/authservice/rest/uidauth',
-      :base_url => "http://eds-api.ebscohost.com/edsapi/rest/"
+      :base_url => "http://eds-api.ebscohost.com/edsapi/rest/",
+      :highlighting => true,
+      :truncate_highlighted => 280
     }
   end
   
@@ -218,5 +423,15 @@ class BentoSearch::EdsEngine
     end
   end
   
+  
+  # A built-in decorator alwasy applied, that over-rides
+  # the ResultItem#published_in display method to use our mess blob
+  # of human readable citation, since we don't have individual elements
+  # to create it from in a normalized way. 
+  module CitationMessDecorator
+    def published_in
+      custom_data["citation_blob"]
+    end
+  end
   
 end

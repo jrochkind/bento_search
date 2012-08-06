@@ -21,3 +21,5 @@ en:
       relevance: "relevance"
       author_asc: "author"
       num_cite_desc: "citation count"
+    eds:
+      record_not_available: "Record Not Available -- log in to see full results"

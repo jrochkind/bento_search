@@ -16,7 +16,7 @@ class EdsEngineTest < ActiveSupport::TestCase
   end
 
   def setup
-    @engine = BentoSearch::EdsEngine.new(:user_id => @@user_id, :password => @@password, :profile => @@profile)
+    @engine = BentoSearch::EdsEngine.new(:user_id => @@user_id, :password => @@password, :profile => @@profile, :auth => true)
   end
   
   test_with_cassette("get_auth_token failure", :eds, :match_requests_on => [:method, :uri, :headers, :body]) do
@@ -76,20 +76,24 @@ class EdsEngineTest < ActiveSupport::TestCase
       BentoSearch::EdsEngine.remembered_auth = nil
   end
   
-  def nothing
+  test("basic search smoke test") do
     VCR.turned_off do
-      query = "AND,cancer"
-      url = "#{@engine.configuration.base_url}search?query=#{CGI.escape query}"
+      results = @engine.search("cancer")    
       
-      response = nil
-      @engine.with_session do |session_token|
-        response = @engine.get_with_auth(url, session_token)
-      end
-          
+      assert_present results
       
-      require 'debugger'
-      debugger
-      1+1
+      assert_present results.total_items
+      
+      first = results.first
+
+      assert_present first.title
+      assert first.title.html_safe? # yeah, for now we use EDS html
+      
+      assert_present first.abstract
+      assert_present first.abstract.html_safe?
+      
+      assert_present first.custom_data["citation_blob"]
+      
     end
   end
   
