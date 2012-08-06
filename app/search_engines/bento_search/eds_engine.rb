@@ -136,6 +136,13 @@ class BentoSearch::EdsEngine
       url += "&pagenumber=#{args[:page]}"
     end
     
+    if args[:sort]
+      if (defn = self.sort_definitions[args[:sort]]) &&
+           (value = defn[:implementation] )
+        url += "&sort=#{CGI.escape value}"
+      end
+    end
+    
     
     return url
   end
@@ -425,6 +432,14 @@ class BentoSearch::EdsEngine
       :base_url => "http://eds-api.ebscohost.com/edsapi/rest/",
       :highlighting => true,
       :truncate_highlighted => 280
+    }
+  end
+  
+  def sort_definitions       
+    {        
+      "date_desc"     => {:implementation => "date"},
+      "relevance"     => {:implementation => "relevance" }
+      #       "date_asc"      => {:implementaiton => "date2"}
     }
   end
   
