@@ -125,7 +125,12 @@ class BentoSearch::EdsEngine
   end
   
   def construct_search_url(args)
-    query = "AND,#{args[:query]}"
+    query = "AND,"
+    if args[:search_field]
+      query += "#{args[:search_field]}:"
+    end
+    query += args[:query]    
+    
     url = "#{configuration.base_url}search?view=detailed&query=#{CGI.escape query}"
     url += "&highlight=#{configuration.highlighting ? 'y' : 'n' }"
     
@@ -440,6 +445,19 @@ class BentoSearch::EdsEngine
       "date_desc"     => {:implementation => "date"},
       "relevance"     => {:implementation => "relevance" }
       #       "date_asc"      => {:implementaiton => "date2"}
+    }
+  end
+  
+  def search_field_definitions
+    {
+      "TX" => {:semantic => :all},
+      "AU" => {:semantic => :author},
+      "TI" => {:semantic => :title},
+      "SU" => {:semantic => :subject},
+      "SO" => {}, # source, journal name
+      "AB" => {}, # abstract
+      "IS" => {:semantic => :issn},
+      "IB" => {:semantic => :isbn},
     }
   end
   
