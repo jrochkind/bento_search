@@ -1,7 +1,5 @@
 require 'test_helper'
 
-# Need to tell VCR to match on headers and body too because of the super
-# annoying way EDS does auth. 
 class EdsEngineTest < ActiveSupport::TestCase
   extend TestWithCassette
   
@@ -16,10 +14,16 @@ class EdsEngineTest < ActiveSupport::TestCase
   end
 
   def setup
+    # Class-level remembered auth token messes up our VCR-recording,
+    # since one test will try to use an auth token fetched by a different
+    # test. For testing, blank out the cache before each test. 
+    BentoSearch::EdsEngine.remembered_auth = nil
+
+    
     @engine = BentoSearch::EdsEngine.new(:user_id => @@user_id, :password => @@password, :profile => @@profile, :auth => true)
   end
   
-  test_with_cassette("get_auth_token failure", :eds, :match_requests_on => [:method, :uri, :headers, :body]) do
+  test_with_cassette("get_auth_token failure", :eds) do
     engine = BentoSearch::EdsEngine.new(:user_id => "bad", :password => "bad", :profile => "bad")
     exception = assert_raise(BentoSearch::EdsEngine::EdsCommException) do
       token = engine.get_auth_token
@@ -29,7 +33,7 @@ class EdsEngineTest < ActiveSupport::TestCase
     assert_present exception.http_body    
   end
   
-  test_with_cassette("get_auth_token", :eds, :match_requests_on => [:method, :uri, :headers, :body]) do
+  test_with_cassette("get_auth_token", :eds) do
     token = @engine.get_auth_token
     
     assert_present token
@@ -44,7 +48,7 @@ class EdsEngineTest < ActiveSupport::TestCase
   #  end      
   #end
   
-  test_with_cassette("get_with_auth", :eds, :match_requests_on => [:method, :uri, :headers, :body]) do
+  test_with_cassette("get_with_auth", :eds) do
     @engine.with_session do |session_token|
       assert_present session_token
       
@@ -60,7 +64,7 @@ class EdsEngineTest < ActiveSupport::TestCase
     end      
   end
   
-  test_with_cassette("get_with_auth recovers from bad auth", :eds, :match_requests_on => [:method, :uri, :headers, :body]) do
+  test_with_cassette("get_with_auth recovers from bad auth", :eds) do
       @engine.with_session do |session_token|
         BentoSearch::EdsEngine.remembered_auth = "BAD"
         
@@ -76,8 +80,7 @@ class EdsEngineTest < ActiveSupport::TestCase
       BentoSearch::EdsEngine.remembered_auth = nil
   end
   
-  test("basic search smoke test") do
-    VCR.turned_off do
+  test_with_cassette("basic search smoke test", :eds) do
       results = @engine.search("cancer")    
       
       assert_present results
@@ -92,9 +95,7 @@ class EdsEngineTest < ActiveSupport::TestCase
       assert_present first.abstract
       assert_present first.abstract.html_safe?
       
-      assert_present first.custom_data["citation_blob"]
-      
-    end
+      assert_present first.custom_data["citation_blob"]      
   end
   
   
