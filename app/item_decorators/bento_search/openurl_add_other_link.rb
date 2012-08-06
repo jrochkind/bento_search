@@ -12,13 +12,18 @@ module BentoSearch::OpenurlAddOtherLink
     base_url = options[:base_url]
     extra_query = options[:extra_query] || ""
     link_name = options[:link_name] || "Find It"
+    # overwrite: if true, overwrite previously existing other_links, if
+    # false add on to previously existing. 
+    overwrite = options.has_key?(:overwrite) ? options[:overwrite] : false    
+    
     Module.new do
       
       define_method :other_links do
+        start = overwrite ? [] : super()
         if (ou = to_openurl)
-          super() + [BentoSearch::Link.new(:url => "#{base_url}?#{ou.kev}#{extra_query}", :label => link_name)]
+          start + [BentoSearch::Link.new(:url => "#{base_url}?#{ou.kev}#{extra_query}", :label => link_name)]
         else
-          super()
+          start
         end        
       end
       
