@@ -61,6 +61,8 @@ require 'http_client_patch/include_client'
 # and a custom Decorator to display that instead of normalized citation
 # made from individual elements. 
 #
+# EBSCO says they plan to improve some of these issues in a September 2012 release. 
+#
 # Title and abstract data seems to be HTML with tags and character entities and
 # escaped special chars. We're trusting it and passing it on as html_safe. 
 #
