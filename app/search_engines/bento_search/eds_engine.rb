@@ -27,6 +27,22 @@ require 'http_client_patch/include_client'
 # truncate_highlighted num of chars (default 280). Set to nil if you don't
 # want this. 
 #
+# == Linking
+#
+# The link to record in EBSCO interface delivered as "PLink" will be listed
+# as record main link. 
+#
+# Any links listed under <CustomLinks> will be listed as other_links, using
+# configured name provided by EBSCO for CustomLink.
+#
+# EDS Response does not have sufficient metadata for us to generate an OpenURL
+# ourselves. However, in our testing, the first/only CustomLink was OFTEN
+# an OpenURL (when it was present at all). If configuration.assume_first_custom_link_openurl is
+# true (as is default), it will be used to create an OpenURL link. However, in
+# our testing, many records don't have this at all. 
+#
+# As always, you can customize links and other_links with Item Decorators. 
+#
 # == Technical Notes and Difficulties
 #
 # This API is enormously difficult to work with. Also the response is very odd
@@ -132,6 +148,9 @@ class BentoSearch::EdsEngine
     query += args[:query]    
     
     url = "#{configuration.base_url}search?view=detailed&query=#{CGI.escape query}"
+    
+    url += "&searchmode=#{CGI.escape configuration.search_mode}"
+    
     url += "&highlight=#{configuration.highlighting ? 'y' : 'n' }"
     
     if args[:per_page]
@@ -191,6 +210,35 @@ class BentoSearch::EdsEngine
           author_xml.xpath(".//searchLink").each do |author_node|
             item.authors << BentoSearch::Author.new(:display => author_node.text)
           end
+          
+          
+          # PLink is main inward facing EBSCO link, put it as
+          # main link. 
+          if direct_link = record_xml.at_xpath("./PLink")
+              item.link = direct_link.text
+          end
+          
+          # Other links may be found in CustomLinks, it seems like usually
+          # there will be at least one, hopefully the first one is the OpenURL?
+          record_xml.xpath("./CustomLinks/CustomLink").each do |custom_link|
+            item.other_links << BentoSearch::Link.new(
+              :url => custom_link.at_xpath("./Url").text,
+              :label => custom_link.at_xpath("./Name").text
+              )
+          end
+          
+          if (configuration.assume_first_custom_link_openurl &&
+            (first = record_xml.xpath "./CustomLinks/CustomLink" ) &&
+            (node = first.at_xpath "./Url" )
+          )
+          
+            openurl = node.text
+            
+            index = openurl.index('?')
+            item.openurl_kev_co = openurl.slice index..(openurl.length) if index            
+          end
+
+          
           
           # We have a single blob of human-readable citation, that's also
           # littered with XML-ish tags we need to deal with. We'll save
@@ -366,12 +414,18 @@ class BentoSearch::EdsEngine
     begin
       headers = {AuthHeader => auth_token, 'Accept' => 'application/xml'}
       headers[SessionTokenHeader] = session_token if session_token
+      
+      s_time = Time.now
       response = http_client.get(url, nil, headers)
+      Rails.logger.debug("EDS timing GET: #{Time.now - s_time}:#{url}")
+      
       response_xml = Nokogiri::XML(response.body)
       response_xml.remove_namespaces!
       
       if (at_xpath_text(response_xml, "//ErrorNumber") == "104") || (at_xpath_text(response_xml, "//ErrorDescription") == "Auth Token Invalid")
         # bad auth, try again just ONCE
+        Rails.logger.debug("EDS auth failed, getting auth again")
+        
         headers[AuthHeader] = self.class.remembered_auth = get_auth_token
         response = http_client.get(url, nil, headers)
         response_xml = Nokogiri::XML(response.body)
@@ -411,9 +465,10 @@ class BentoSearch::EdsEngine
       }
     EOS
     
-    
+    s_time = Time.now
     response = http_client.post(configuration.auth_url, body, {'Accept' => "application/json", "Content-type" => "application/json"})
-        
+    Rails.logger.debug("EDS timing AUTH: #{Time.now - s_time}s")    
+    
     unless HTTP::Status.successful? response.status
       raise EdsCommException.new("Could not get auth", response.status, response.body)
     end
@@ -436,7 +491,9 @@ class BentoSearch::EdsEngine
       :auth_url => 'https://eds-api.ebscohost.com/authservice/rest/uidauth',
       :base_url => "http://eds-api.ebscohost.com/edsapi/rest/",
       :highlighting => true,
-      :truncate_highlighted => 280
+      :truncate_highlighted => 280,
+      :assume_first_custom_link_openurl => true,
+      :search_mode => 'all' # any | bool | all | smart ; http://support.epnet.com/knowledge_base/detail.php?topic=996&id=1288&page=1
     }
   end
   
