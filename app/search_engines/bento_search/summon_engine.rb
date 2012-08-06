@@ -320,7 +320,7 @@ class BentoSearch::SummonEngine
         split( %r{(#{Regexp.escape @@hl_start_token}|#{Regexp.escape @@hl_end_token})}  ).
         collect do |substr|
           case substr
-            when  @@hl_start_token then '<b class="bento_search_snippet_highlight">'.html_safe
+            when  @@hl_start_token then '<b class="bento_search_highlight">'.html_safe
             when  @@hl_end_token then '</b>'.html_safe
             else substr
           end
