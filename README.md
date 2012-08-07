@@ -135,10 +135,11 @@ offset) keys to paginate into the results.
     results = google_books_engine.search("my query", :per_page => 20, :start => 40)
     results = google_books_engine.search("my query", :per_page => 20, :page => 2) # means same as above
     
-An engine instance advertises it's maximum and default per-page values. 
+An engine instance advertises it's maximum per-page values. 
 
     google_books_engine.max_per_page
-    google_books_engine.default_per_age
+    
+bento_search fixes the default per_page at 10.     
     
 For help creating your UI, you can ask a BentoSearch::Results for
 `results.pagination`, which returns a BentoSearch::Results::Pagination
