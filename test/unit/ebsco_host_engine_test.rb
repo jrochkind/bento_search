@@ -11,8 +11,8 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
   @@dbs_to_test = (ENV['EBSCOHOST_TEST_DBS'] || %w{a9h awn} )
   
   VCR.configure do |c|
-    c.filter_sensitive_data("DUMMY_PROFILE", :ebscohost) { @@profile_id }
-    c.filter_sensitive_data("DUMMY_PWD", :ebscohost) { @@profile_pwd }
+    c.filter_sensitive_data("prof=DUMMY_PROFILE", :ebscohost) { "prof=#{@@profile_id}" }
+    c.filter_sensitive_data("pwd=DUMMY_PWD", :ebscohost) { "pwd=#{@@profile_pwd}" }
   end
   
   

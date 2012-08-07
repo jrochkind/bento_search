@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://eit.DUMMY_PWDhost.com/Services/SearchService.asmx/Info?prof=DUMMY_PROFILE&pwd=DUMMY_PWD
+    uri: http://eit.ebscohost.com/Services/SearchService.asmx/Info?prof=DUMMY_PROFILE&pwd=DUMMY_PWD
     body:
       encoding: US-ASCII
       string: ''
