@@ -90,7 +90,7 @@ module BentoSearchHelper
     content_tag("h4", :class => "bento_item_title") do
       safe_join([
         link_to_unless( item.link.blank?, item.complete_title, item.link ),
-        if item.format || item.format_str
+        if item.format.present? || item.format_str.present?
           content_tag("small", :class => "bento_item_about") do
             " (" +
               if item.format_str
