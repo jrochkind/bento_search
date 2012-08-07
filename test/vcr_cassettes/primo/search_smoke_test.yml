@@ -1,0 +1,1112 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://EXAMPLE.ORG:80/PrimoWebServices/xservice/search/brief?bulkSize=10&institution=DUMMY_INSTITUTION&loc=adaptor,primo_central_multiple_fe&onCampus=false&query=any,contains,globalization%20from%20below
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        QXBhY2hlLUNveW90ZS8xLjE=
+      !binary "WC1Qb3dlcmVkLUJ5":
+      - !binary |-
+        U2VydmxldCAyLjU7IEpCb3NzLTUuMC9KQm9zc1dlYi0yLjE=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        dGV4dC94bWw7Y2hhcnNldD1VVEYtOA==
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "RGF0ZQ==":
+      - !binary |-
+        VHVlLCAwNyBBdWcgMjAxMiAxNzo1Mzo1NSBHTVQ=
+    body:
+      encoding: UTF-8
+      string: ! "<sear:SEGMENTS xmlns:prim=\"http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib\"
+        xmlns:sear=\"http://www.exlibrisgroup.com/xsd/jaguar/search\">\n  <sear:JAGROOT>\n
+        \   <sear:RESULT>\n      <sear:QUERYTRANSFORMS/>\n      <sear:FACETLIST ACCURATE_COUNTERS=\"true\">\n
+        \       <sear:FACET COUNT=\"20\" NAME=\"creator\">\n          <sear:FACET_VALUES
+        VALUE=\"1\" KEY=\"Watson, H. A.\"/>\n          <sear:FACET_VALUES VALUE=\"3\"
+        KEY=\"Carr, Barry\"/>\n          <sear:FACET_VALUES VALUE=\"5\" KEY=\"Smith,
+        J.\"/>\n          <sear:FACET_VALUES VALUE=\"2\" KEY=\"Tubajon, Gina\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"3\" KEY=\"Smith, Brendan\"/>\n          <sear:FACET_VALUES
+        VALUE=\"6\" KEY=\"Costello, Tim\"/>\n          <sear:FACET_VALUES VALUE=\"5\"
+        KEY=\"Turner, Terisa E.\"/>\n          <sear:FACET_VALUES VALUE=\"1\" KEY=\"
+        Jung Mee Mha\"/>\n          <sear:FACET_VALUES VALUE=\"2\" KEY=\"Chase-dunn,
+        Christopher\"/>\n          <sear:FACET_VALUES VALUE=\"1\" KEY=\"Clegg, Stewart\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"7\" KEY=\"Brecher, Jeremy\"/>\n          <sear:FACET_VALUES
+        VALUE=\"7\" KEY=\"Brownhill, Leigh S.\"/>\n          <sear:FACET_VALUES VALUE=\"3\"
+        KEY=\"Ribeiro, Gustavo Lins\"/>\n          <sear:FACET_VALUES VALUE=\"1\"
+        KEY=\"Waalkers, S.\"/>\n          <sear:FACET_VALUES VALUE=\"1\" KEY=\"Schoonmaker,
+        Sara\"/>\n          <sear:FACET_VALUES VALUE=\"3\" KEY=\"Dufour, Pascale\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"2\" KEY=\"Zaman, Habiba\"/>\n          <sear:FACET_VALUES
+        VALUE=\"1\" KEY=\"Cooper, Catherine R.\"/>\n          <sear:FACET_VALUES VALUE=\"1\"
+        KEY=\"Terhorst, P.\"/>\n          <sear:FACET_VALUES VALUE=\"1\" KEY=\"Kume,
+        Ikuo\"/>\n        </sear:FACET>\n        <sear:FACET COUNT=\"1\" NAME=\"lcc\">\n
+        \         <sear:FACET_VALUES VALUE=\"16\" KEY=\"H - Social sciences.\"/>\n
+        \       </sear:FACET>\n        <sear:FACET COUNT=\"13\" NAME=\"lang\">\n          <sear:FACET_VALUES
+        VALUE=\"1\" KEY=\"lit\"/>\n          <sear:FACET_VALUES VALUE=\"17\" KEY=\"한국어\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"120\" KEY=\"ger\"/>\n          <sear:FACET_VALUES
+        VALUE=\"14\" KEY=\"por\"/>\n          <sear:FACET_VALUES VALUE=\"1\" KEY=\"tur\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"44\" KEY=\"fre\"/>\n          <sear:FACET_VALUES
+        VALUE=\"1\" KEY=\"heb\"/>\n          <sear:FACET_VALUES VALUE=\"3\" KEY=\"kor\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"11\" KEY=\"chi\"/>\n          <sear:FACET_VALUES
+        VALUE=\"1\" KEY=\"rus\"/>\n          <sear:FACET_VALUES VALUE=\"1\" KEY=\"jpn\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"53177\" KEY=\"eng\"/>\n          <sear:FACET_VALUES
+        VALUE=\"117\" KEY=\"spa\"/>\n        </sear:FACET>\n        <sear:FACET COUNT=\"12\"
+        NAME=\"rtype\">\n          <sear:FACET_VALUES VALUE=\"5890\" KEY=\"books\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"3048\" KEY=\"reviews\"/>\n          <sear:FACET_VALUES
+        VALUE=\"1793\" KEY=\"reference_entrys\"/>\n          <sear:FACET_VALUES VALUE=\"2\"
+        KEY=\"journals\"/>\n          <sear:FACET_VALUES VALUE=\"26\" KEY=\"other\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"61359\" KEY=\"articles\"/>\n          <sear:FACET_VALUES
+        VALUE=\"55\" KEY=\"Dissertations\"/>\n          <sear:FACET_VALUES VALUE=\"2274\"
+        KEY=\"text_resources\"/>\n          <sear:FACET_VALUES VALUE=\"390\" KEY=\"conference_proceedings\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"11\" KEY=\"websites\"/>\n          <sear:FACET_VALUES
+        VALUE=\"66\" KEY=\"media\"/>\n          <sear:FACET_VALUES VALUE=\"12320\"
+        KEY=\"newspaper_articles\"/>\n        </sear:FACET>\n        <sear:FACET COUNT=\"19\"
+        NAME=\"topic\">\n          <sear:FACET_VALUES VALUE=\"5769\" KEY=\" Introduction\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"123\" KEY=\"Latinamericanstudies\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"578\" KEY=\"International Economic Relations\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"4898\" KEY=\" International Trade Law\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"906\" KEY=\"Civil Rights Law\"/>\n          <sear:FACET_VALUES
+        VALUE=\"889\" KEY=\"Economic Development\"/>\n          <sear:FACET_VALUES
+        VALUE=\"161\" KEY=\"Transnationalism\"/>\n          <sear:FACET_VALUES VALUE=\"125\"
+        KEY=\"Social Movements\"/>\n          <sear:FACET_VALUES VALUE=\"2\" KEY=\"라푸라푸
+        유출사고\"/>\n          <sear:FACET_VALUES VALUE=\"756\" KEY=\" Organizations\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"2611\" KEY=\" Criminal Law &amp; Procedure\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"292\" KEY=\"Foreign Countries\"/>\n          <sear:FACET_VALUES
+        VALUE=\"83\" KEY=\"Internationalism\"/>\n          <sear:FACET_VALUES VALUE=\"3759\"
+        KEY=\" International\"/>\n          <sear:FACET_VALUES VALUE=\"3421\" KEY=\"
+        Globalization\"/>\n          <sear:FACET_VALUES VALUE=\"135\" KEY=\" Economically\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"34\" KEY=\"Anti-globalization Movement\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"145\" KEY=\"Feminism\"/>\n          <sear:FACET_VALUES
+        VALUE=\"10\" KEY=\" globalization from below\"/>\n        </sear:FACET>\n
+        \       <sear:FACET COUNT=\"2\" NAME=\"tlevel\">\n          <sear:FACET_VALUES
+        VALUE=\"71901\" KEY=\"online_resources\"/>\n          <sear:FACET_VALUES VALUE=\"48608\"
+        KEY=\"peer_reviewed\"/>\n        </sear:FACET>\n        <sear:FACET COUNT=\"10\"
+        NAME=\"pfilter\">\n          <sear:FACET_VALUES VALUE=\"5901\" KEY=\"books\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"3048\" KEY=\"reviews\"/>\n          <sear:FACET_VALUES
+        VALUE=\"1793\" KEY=\"reference_entrys\"/>\n          <sear:FACET_VALUES VALUE=\"2\"
+        KEY=\"journals\"/>\n          <sear:FACET_VALUES VALUE=\"63469\" KEY=\"articles\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"55\" KEY=\"Dissertations\"/>\n          <sear:FACET_VALUES
+        VALUE=\"66\" KEY=\"audio_video\"/>\n          <sear:FACET_VALUES VALUE=\"390\"
+        KEY=\"conference_proceedings\"/>\n          <sear:FACET_VALUES VALUE=\"11\"
+        KEY=\"websites\"/>\n          <sear:FACET_VALUES VALUE=\"12320\" KEY=\"newspaper_articles\"/>\n
+        \       </sear:FACET>\n        <sear:FACET COUNT=\"53\" NAME=\"creationdate\">\n
+        \         <sear:FACET_VALUES VALUE=\"7969\" KEY=\"2008\"/>\n          <sear:FACET_VALUES
+        VALUE=\"7938\" KEY=\"2009\"/>\n          <sear:FACET_VALUES VALUE=\"7120\"
+        KEY=\"2006\"/>\n          <sear:FACET_VALUES VALUE=\"7481\" KEY=\"2007\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"5486\" KEY=\"2004\"/>\n          <sear:FACET_VALUES
+        VALUE=\"6286\" KEY=\"2005\"/>\n          <sear:FACET_VALUES VALUE=\"4259\"
+        KEY=\"2002\"/>\n          <sear:FACET_VALUES VALUE=\"4915\" KEY=\"2003\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"1\" KEY=\"1930\"/>\n          <sear:FACET_VALUES
+        VALUE=\"3\" KEY=\"1970\"/>\n          <sear:FACET_VALUES VALUE=\"1\" KEY=\"1971\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"2\" KEY=\"1973\"/>\n          <sear:FACET_VALUES
+        VALUE=\"4\" KEY=\"1974\"/>\n          <sear:FACET_VALUES VALUE=\"3\" KEY=\"1975\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"2\" KEY=\"1976\"/>\n          <sear:FACET_VALUES
+        VALUE=\"3669\" KEY=\"2012\"/>\n          <sear:FACET_VALUES VALUE=\"2\" KEY=\"1977\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"6674\" KEY=\"2011\"/>\n          <sear:FACET_VALUES
+        VALUE=\"8\" KEY=\"1978\"/>\n          <sear:FACET_VALUES VALUE=\"7780\" KEY=\"2010\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"6\" KEY=\"1979\"/>\n          <sear:FACET_VALUES
+        VALUE=\"196\" KEY=\"1990\"/>\n          <sear:FACET_VALUES VALUE=\"2\" KEY=\"1940\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"1\" KEY=\"500\"/>\n          <sear:FACET_VALUES
+        VALUE=\"10\" KEY=\"1982\"/>\n          <sear:FACET_VALUES VALUE=\"10\" KEY=\"1983\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"3\" KEY=\"1980\"/>\n          <sear:FACET_VALUES
+        VALUE=\"4\" KEY=\"1981\"/>\n          <sear:FACET_VALUES VALUE=\"46\" KEY=\"1986\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"52\" KEY=\"1987\"/>\n          <sear:FACET_VALUES
+        VALUE=\"10\" KEY=\"1984\"/>\n          <sear:FACET_VALUES VALUE=\"18\" KEY=\"1985\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"62\" KEY=\"1988\"/>\n          <sear:FACET_VALUES
+        VALUE=\"125\" KEY=\"1989\"/>\n          <sear:FACET_VALUES VALUE=\"1\" KEY=\"1959\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"1\" KEY=\"1957\"/>\n          <sear:FACET_VALUES
+        VALUE=\"1\" KEY=\"1952\"/>\n          <sear:FACET_VALUES VALUE=\"647\" KEY=\"1995\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"865\" KEY=\"1996\"/>\n          <sear:FACET_VALUES
+        VALUE=\"1136\" KEY=\"1997\"/>\n          <sear:FACET_VALUES VALUE=\"1546\"
+        KEY=\"1998\"/>\n          <sear:FACET_VALUES VALUE=\"217\" KEY=\"1991\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"250\" KEY=\"1992\"/>\n          <sear:FACET_VALUES
+        VALUE=\"367\" KEY=\"1993\"/>\n          <sear:FACET_VALUES VALUE=\"503\" KEY=\"1994\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"2086\" KEY=\"1999\"/>\n          <sear:FACET_VALUES
+        VALUE=\"1\" KEY=\"1966\"/>\n          <sear:FACET_VALUES VALUE=\"1\" KEY=\"1969\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"1\" KEY=\"1968\"/>\n          <sear:FACET_VALUES
+        VALUE=\"1\" KEY=\"1963\"/>\n          <sear:FACET_VALUES VALUE=\"1\" KEY=\"1964\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"3692\" KEY=\"2001\"/>\n          <sear:FACET_VALUES
+        VALUE=\"3359\" KEY=\"2000\"/>\n        </sear:FACET>\n        <sear:FACET
+        COUNT=\"20\" NAME=\"domain\">\n          <sear:FACET_VALUES VALUE=\"11\" KEY=\"HathiTrust
+        Digital Library\"/>\n          <sear:FACET_VALUES VALUE=\"4\" KEY=\"NARCIS
+        (Royal Netherlands Academy of Arts and Sciences)\"/>\n          <sear:FACET_VALUES
+        VALUE=\"94\" KEY=\"ebrary Books\"/>\n          <sear:FACET_VALUES VALUE=\"18\"
+        KEY=\"DBpia Articles\"/>\n          <sear:FACET_VALUES VALUE=\"17\" KEY=\"Wiley
+        Online Library\"/>\n          <sear:FACET_VALUES VALUE=\"514\" KEY=\"ERIC
+        (U.S. Dept. of Education)\"/>\n          <sear:FACET_VALUES VALUE=\"10123\"
+        KEY=\"SciVerse ScienceDirect (Elsevier)\"/>\n          <sear:FACET_VALUES
+        VALUE=\"3025\" KEY=\"Arts &amp; Sciences (JSTOR)\"/>\n          <sear:FACET_VALUES
+        VALUE=\"1851\" KEY=\"Duke University Press Journals Online\"/>\n          <sear:FACET_VALUES
+        VALUE=\"1648\" KEY=\"Oxford Journals (Oxford University Press)\"/>\n          <sear:FACET_VALUES
+        VALUE=\"970\" KEY=\"SciVerse ScienceDirect Books (Elsevier)\"/>\n          <sear:FACET_VALUES
+        VALUE=\"150\" KEY=\"Informa - Taylor &amp; Francis (CrossRef)\"/>\n          <sear:FACET_VALUES
+        VALUE=\"47\" KEY=\"Ebook Library (EBL) (Ebooks Corp.)\"/>\n          <sear:FACET_VALUES
+        VALUE=\"1\" KEY=\"CLEO Revues.org (CrossRef)\"/>\n          <sear:FACET_VALUES
+        VALUE=\"9406\" KEY=\"Academic Law Reviews (LexisNexis)\"/>\n          <sear:FACET_VALUES
+        VALUE=\"1173\" KEY=\"University of Chicago Press Journals\"/>\n          <sear:FACET_VALUES
+        VALUE=\"304\" KEY=\"Sage Publications (CrossRef)\"/>\n          <sear:FACET_VALUES
+        VALUE=\"8\" KEY=\"KISS (Korean studies Information Service System)\"/>\n          <sear:FACET_VALUES
+        VALUE=\"2860\" KEY=\"Cambridge Journals Online (Cambridge University Press)\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"38284\" KEY=\"OneFile (GALE)\"/>\n        </sear:FACET>\n
+        \       <sear:FACET COUNT=\"20\" NAME=\"jtitle\">\n          <sear:FACET_VALUES
+        VALUE=\"2\" KEY=\"공간과 사회\"/>\n          <sear:FACET_VALUES VALUE=\"89\" KEY=\"Journal
+        Of Banking And Finance\"/>\n          <sear:FACET_VALUES VALUE=\"2\" KEY=\"Canadian
+        Journal of Development Studies\"/>\n          <sear:FACET_VALUES VALUE=\"102\"
+        KEY=\"Journal of World Business\"/>\n          <sear:FACET_VALUES VALUE=\"2\"
+        KEY=\"Area\"/>\n          <sear:FACET_VALUES VALUE=\"70\" KEY=\"Public Culture\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"343\" KEY=\"The New York Times\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"42\" KEY=\"International Labor And Working-class
+        History\"/>\n          <sear:FACET_VALUES VALUE=\"4\" KEY=\"International
+        Social Science Journal\"/>\n          <sear:FACET_VALUES VALUE=\"1\" KEY=\"한국언어문화\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"1\" KEY=\"Educational Theory\"/>\n          <sear:FACET_VALUES
+        VALUE=\"28\" KEY=\"Refugee Survey Quarterly\"/>\n          <sear:FACET_VALUES
+        VALUE=\"1\" KEY=\"Economy And Society\"/>\n          <sear:FACET_VALUES VALUE=\"21\"
+        KEY=\"UNB - United News of Bangladesh\"/>\n          <sear:FACET_VALUES VALUE=\"2\"
+        KEY=\"Canadian Journal Of Development Studies/revue Canadienne D'études Du
+        Développement\"/>\n          <sear:FACET_VALUES VALUE=\"1\" KEY=\"담론201\"/>\n
+        \         <sear:FACET_VALUES VALUE=\"97\" KEY=\"Annals Of The American Academy
+        Of Political And Social Science\"/>\n          <sear:FACET_VALUES VALUE=\"2\"
+        KEY=\"Contemporary Sociology: A Journal Of Reviews\"/>\n          <sear:FACET_VALUES
+        VALUE=\"1\" KEY=\"로컬리티 인문학\"/>\n          <sear:FACET_VALUES VALUE=\"3\" KEY=\"International
+        Journal of Urban and Regional Research\"/>\n        </sear:FACET>\n      </sear:FACETLIST>\n
+        \     <sear:DOCSET TOTAL_TIME=\"680\" LASTHIT=\"9\" FIRSTHIT=\"0\" TOTALHITS=\"85613\"
+        HIT_TIME=\"529\">\n        <sear:DOC LOCAL=\"false\" SEARCH_ENGINE_TYPE=\"Primo
+        Central Search Engine\" SEARCH_ENGINE=\"PrimoCentralThirdNode\" NO=\"1\" RANK=\"0.07413188\"
+        ID=\"184765259\">\n          <prim:PrimoNMBib>\n            <prim:record>\n
+        \             <prim:control>\n                <prim:sourcerecordid>S1090-9516(10)00042-8</prim:sourcerecordid>\n
+        \               <prim:sourceid>sciversesciencedirect_elsevier</prim:sourceid>\n
+        \               <prim:recordid>TN_sciversesciencedirect_elsevierS1090-9516(10)00042-8</prim:recordid>\n
+        \               <prim:sourcesystem>Other</prim:sourcesystem>\n              </prim:control>\n
+        \             <prim:display>\n                <prim:type>article</prim:type>\n
+        \               <prim:title>Multilingual organizations as ‘linguascapes’:
+        Negotiating the position of English through discursive practices</prim:title>\n
+        \               <prim:creator>Steyaert, Chris ; Ostendorp, Anja ; Gaibrois,
+        Claudine</prim:creator>\n                <prim:ispartof>Journal of World Business,
+        2011, Vol.46(3), pp.270-278</prim:ispartof>\n                <prim:identifier>&lt;b>ISSN:
+        &lt;/b>1090-9516 ; &lt;b>DOI: &lt;/b>10.1016/j.jwb.2010.07.003</prim:identifier>\n
+        \               <prim:subject>Negotiated multilingualism ; Discourse analysis
+        ; Linguascape ; Englishization ; Globalization from below</prim:subject>\n
+        \               <prim:description>To address the complexity of multilingual
+        communication, this paper applies a discursive approach to analyze how people
+        account for the ways that specific languages are used in multilingual companies.
+        Through our discourse analysis, we identify six different ways of accounting
+        for language use. Further, we map the various tensions between these accounts
+        through which we can understand how the rise of English alters the discursive
+        negotiation in two different organizational contexts. Inspired by Appadurai's
+        understanding of “globalization from below”, we suggest the term linguascape
+        to conceptualize how the flow of languages that cross a specific organizational
+        space is discursively mediated.</prim:description>\n                <prim:language>eng</prim:language>\n
+        \               <prim:source>SciVerse ScienceDirect Journals</prim:source>\n
+        \               <prim:lds50>peer_reviewed</prim:lds50>\n                <prim:version>3</prim:version>\n
+        \             </prim:display>\n              <prim:links>\n                <prim:openurl>$$Topenurl_article</prim:openurl>\n
+        \               <prim:backlink>$$Uhttp://dx.doi.org/10.1016/j.jwb.2010.07.003$$EView_record_in_SciVerse_ScienceDirect
+        _Journals_(Elsevier)</prim:backlink>\n                <prim:openurlfulltext>$$Topenurlfull_article</prim:openurlfulltext>\n
+        \             </prim:links>\n              <prim:search>\n                <prim:creatorcontrib>Steyaert,
+        Chris</prim:creatorcontrib>\n                <prim:creatorcontrib>Ostendorp,
+        Anja</prim:creatorcontrib>\n                <prim:creatorcontrib>Gaibrois,
+        Claudine</prim:creatorcontrib>\n                <prim:title>Multilingual organizations
+        as ‘linguascapes’: Negotiating the position of English through discursive
+        practices</prim:title>\n                <prim:description>To address the complexity
+        of multilingual communication, this paper applies a discursive approach to
+        analyze how people account for the ways that specific languages are used in
+        multilingual companies. Through our discourse analysis, we identify six different
+        ways of accounting for language use. Further, we map the various tensions
+        between these accounts through which we can understand how the rise of English
+        alters the discursive negotiation in two different organizational contexts.
+        Inspired by Appadurai's understanding of “globalization from below”, we suggest
+        the term linguascape to conceptualize how the flow of languages that cross
+        a specific organizational space is discursively mediated.</prim:description>\n
+        \               <prim:subject>Negotiated Multilingualism</prim:subject>\n
+        \               <prim:subject>Discourse Analysis</prim:subject>\n                <prim:subject>Linguascape</prim:subject>\n
+        \               <prim:subject>Englishization</prim:subject>\n                <prim:subject>Globalization
+        From Below</prim:subject>\n                <prim:general>English</prim:general>\n
+        \               <prim:general>10.1016/j.jwb.2010.07.003</prim:general>\n                <prim:general>SciVerse
+        ScienceDirect Journals</prim:general>\n                <prim:sourceid>sciversesciencedirect_elsevier</prim:sourceid>\n
+        \               <prim:recordid>sciversesciencedirect_elsevierS1090-9516(10)00042-8</prim:recordid>\n
+        \               <prim:issn>10909516</prim:issn>\n                <prim:issn>1090-9516</prim:issn>\n
+        \               <prim:rsrctype>article</prim:rsrctype>\n                <prim:creationdate>2011</prim:creationdate>\n
+        \               <prim:addtitle>Journal of World Business</prim:addtitle>\n
+        \               <prim:searchscope>sciversesciencedirect_elsevier</prim:searchscope>\n
+        \               <prim:searchscope>elsevier_sciencedirect</prim:searchscope>\n
+        \               <prim:scope>sciversesciencedirect_elsevier</prim:scope>\n
+        \               <prim:scope>elsevier_sciencedirect</prim:scope>\n              </prim:search>\n
+        \             <prim:sort>\n                <prim:title>Multilingual organizations
+        as ‘linguascapes’: Negotiating the position of English through discursive
+        practices</prim:title>\n                <prim:author>Steyaert, Chris ; Ostendorp,
+        Anja ; Gaibrois, Claudine</prim:author>\n                <prim:creationdate>20110000</prim:creationdate>\n
+        \             </prim:sort>\n              <prim:facets>\n                <prim:language>eng</prim:language>\n
+        \               <prim:creationdate>2011</prim:creationdate>\n                <prim:topic>Negotiated
+        Multilingualism</prim:topic>\n                <prim:topic>Discourse Analysis</prim:topic>\n
+        \               <prim:topic>Linguascape</prim:topic>\n                <prim:topic>Englishization</prim:topic>\n
+        \               <prim:topic>Globalization From Below</prim:topic>\n                <prim:collection>ScienceDirect
+        (Elsevier)</prim:collection>\n                <prim:collection>SciVerse ScienceDirect
+        (Elsevier)</prim:collection>\n                <prim:prefilter>articles</prim:prefilter>\n
+        \               <prim:rsrctype>articles</prim:rsrctype>\n                <prim:creatorcontrib>Steyaert,
+        Chris</prim:creatorcontrib>\n                <prim:creatorcontrib>Ostendorp,
+        Anja</prim:creatorcontrib>\n                <prim:creatorcontrib>Gaibrois,
+        Claudine</prim:creatorcontrib>\n                <prim:jtitle>Journal Of World
+        Business</prim:jtitle>\n                <prim:toplevel>peer_reviewed</prim:toplevel>\n
+        \               <prim:frbrgroupid>8038343634252234115</prim:frbrgroupid>\n
+        \               <prim:frbrtype>5</prim:frbrtype>\n              </prim:facets>\n
+        \             <prim:frbr>\n                <prim:t>2</prim:t>\n                <prim:k1>2011</prim:k1>\n
+        \               <prim:k2>10909516</prim:k2>\n                <prim:k3>10.1016/j.jwb.2010.07.003</prim:k3>\n
+        \               <prim:k4>46</prim:k4>\n                <prim:k5>3</prim:k5>\n
+        \               <prim:k6>270</prim:k6>\n                <prim:k7>journal of
+        world business</prim:k7>\n                <prim:k8>multilingual organizations
+        as ‘linguascapes’ negotiating the position of english through discursive practices</prim:k8>\n
+        \               <prim:k9>multilingualorganizatices</prim:k9>\n                <prim:k12>multilingualorganizations</prim:k12>\n
+        \               <prim:k15>chrissteyaert</prim:k15>\n                <prim:k16>steyaertchris</prim:k16>\n
+        \             </prim:frbr>\n              <prim:delivery>\n                <prim:delcategory>Remote
+        Search Resource</prim:delcategory>\n                <prim:fulltext>fulltext</prim:fulltext>\n
+        \             </prim:delivery>\n              <prim:ranking>\n                <prim:booster1>1</prim:booster1>\n
+        \               <prim:booster2>1</prim:booster2>\n                <prim:pcg_type>publisher</prim:pcg_type>\n
+        \             </prim:ranking>\n              <prim:addata>\n                <prim:aulast>Steyaert</prim:aulast>\n
+        \               <prim:aufirst>Chris</prim:aufirst>\n                <prim:au>Steyaert,
+        Chris</prim:au>\n                <prim:au>Ostendorp, Anja</prim:au>\n                <prim:au>Gaibrois,
+        Claudine</prim:au>\n                <prim:atitle>Multilingual organizations
+        as ‘linguascapes’: Negotiating the position of English through discursive
+        practices</prim:atitle>\n                <prim:jtitle>Journal of World Business</prim:jtitle>\n
+        \               <prim:date>2011</prim:date>\n                <prim:risdate>2011</prim:risdate>\n
+        \               <prim:volume>46</prim:volume>\n                <prim:issue>3</prim:issue>\n
+        \               <prim:spage>270</prim:spage>\n                <prim:epage>278</prim:epage>\n
+        \               <prim:pages>270-278</prim:pages>\n                <prim:issn>1090-9516</prim:issn>\n
+        \               <prim:genre>article</prim:genre>\n                <prim:ristype>JOUR</prim:ristype>\n
+        \               <prim:abstract>To address the complexity of multilingual communication,
+        this paper applies a discursive approach to analyze how people account for
+        the ways that specific languages are used in multilingual companies. Through
+        our discourse analysis, we identify six different ways of accounting for language
+        use. Further, we map the various tensions between these accounts through which
+        we can understand how the rise of English alters the discursive negotiation
+        in two different organizational contexts. Inspired by Appadurai's understanding
+        of “globalization from below”, we suggest the term linguascape to conceptualize
+        how the flow of languages that cross a specific organizational space is discursively
+        mediated.</prim:abstract>\n                <prim:doi>10.1016/j.jwb.2010.07.003</prim:doi>\n
+        \             </prim:addata>\n            </prim:record>\n          </prim:PrimoNMBib>\n
+        \         <sear:GETIT GetIt2=\"http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-07T12%3A53%3A55IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&amp;rft.jtitle=Journal%20of%20World%20Business&amp;rft.btitle=&amp;rft.aulast=Steyaert&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Steyaert%2C%20Chris&amp;rft.aucorp=&amp;rft.date=2011&amp;rft.volume=46&amp;rft.issue=3&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=270&amp;rft.epage=278&amp;rft.pages=270-278&amp;rft.artnum=&amp;rft.issn=1090-9516&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.1016/j.jwb.2010.07.003&amp;rft.eisbn=&amp;rft_dat=&lt;sciversesciencedirect_elsevier>S1090-9516(10)00042-8&lt;/sciversesciencedirect_elsevier>&amp;rft_id=info:oai/>\"
+        GetIt1=\"http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-07T12%3A53%3A55IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&amp;rft.jtitle=Journal%20of%20World%20Business&amp;rft.btitle=&amp;rft.aulast=Steyaert&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Steyaert%2C%20Chris&amp;rft.aucorp=&amp;rft.date=2011&amp;rft.volume=46&amp;rft.issue=3&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=270&amp;rft.epage=278&amp;rft.pages=270-278&amp;rft.artnum=&amp;rft.issn=1090-9516&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.1016/j.jwb.2010.07.003&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;svc.fulltext=yes&amp;rft.eisbn=&amp;rft_dat=&lt;sciversesciencedirect_elsevier>S1090-9516(10)00042-8&lt;/sciversesciencedirect_elsevier>&amp;rft_id=info:oai/>\"
+        deliveryCategory=\"Remote Search Resource\"/>\n          <sear:LINKS>\n            <sear:openurl><![CDATA[http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-07T12%3A53%3A55IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&rft_val_fmt=info:ofi/fmt:kev:mtx:&rft.genre=article&rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&rft.jtitle=Journal%20of%20World%20Business&rft.btitle=&rft.aulast=Steyaert&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Steyaert%2C%20Chris&rft.aucorp=&rft.date=2011&rft.volume=46&rft.issue=3&rft.part=&rft.quarter=&rft.ssn=&rft.spage=270&rft.epage=278&rft.pages=270-278&rft.artnum=&rft.issn=1090-9516&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/10.1016/j.jwb.2010.07.003&rft.eisbn=&rft_dat=<sciversesciencedirect_elsevier>S1090-9516(10)00042-8</sciversesciencedirect_elsevier>&rft_id=info:oai/>]]></sear:openurl>\n
+        \           <sear:backlink>http://dx.doi.org/10.1016/j.jwb.2010.07.003</sear:backlink>\n
+        \           <sear:thumbnail/>\n            <sear:openurlfulltext><![CDATA[http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-07T12%3A53%3A55IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&rft_val_fmt=info:ofi/fmt:kev:mtx:&rft.genre=article&rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&rft.jtitle=Journal%20of%20World%20Business&rft.btitle=&rft.aulast=Steyaert&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Steyaert%2C%20Chris&rft.aucorp=&rft.date=2011&rft.volume=46&rft.issue=3&rft.part=&rft.quarter=&rft.ssn=&rft.spage=270&rft.epage=278&rft.pages=270-278&rft.artnum=&rft.issn=1090-9516&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/10.1016/j.jwb.2010.07.003&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft.eisbn=&rft_dat=<sciversesciencedirect_elsevier>S1090-9516(10)00042-8</sciversesciencedirect_elsevier>&rft_id=info:oai/>]]></sear:openurlfulltext>\n
+        \         </sear:LINKS>\n        </sear:DOC>\n        <sear:DOC LOCAL=\"false\"
+        SEARCH_ENGINE_TYPE=\"Primo Central Search Engine\" SEARCH_ENGINE=\"PrimoCentralThirdNode\"
+        NO=\"2\" RANK=\"0.046819586\" ID=\"211789680\">\n          <PrimoNMBib xmlns=\"http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib\">\n
+        \           <record>\n              <control>\n                <sourcerecordid>581Annals48</sourcerecordid>\n
+        \               <sourceid>lexisnexis_lawreviews</sourceid>\n                <recordid>TN_lexisnexis_lawreviews581Annals48</recordid>\n
+        \               <sourcesystem>Other</sourcesystem>\n              </control>\n
+        \             <display>\n                <type>article</type>\n                <title>Globalization
+        from Below: Toward a Collectively Rational and Democratic Global Commonwealth</title>\n
+        \               <creator>Christopher Chase-Dunn</creator>\n                <ispartof>581
+        Annals 48 (2002)</ispartof>\n                <identifier>&lt;b>ISSN: &lt;/b>0002-7162
+        ; &lt;b>EISSN: &lt;/b>1552-3349</identifier>\n                <subject>Sociopolitical;
+        \ Opportunities;  Institutional;  Transnational;  International;  Semiperiphery;
+        \ Institutions;  Intermediate;  Economically;  Hierarchical; Governments</subject>\n
+        \               <description>THE world-systems perspective is a historical
+        and structural theoretical framework that analyzes national societies as parts
+        of a larger stratified sociopolitical and economic system (Shannon 1996).
+        The focus is on the structural features of the larger system itself. It is
+        a world economy with a hierarchical division of labor for the production of
+        different kinds of goods. There are economically and militarily powerful countries
+        in the core, dependent, and dominated regions in the periphery, and a middle
+        sector of countries (the semiperiphery) in which states have intermediate
+        levels of economic and political/military power. The world market includes
+        both international trade and all the national economies, so the world-system
+        is the whole system, not just international relations. Local, regional, national,
+        international, transnational, and global networks of interaction constitute
+        the world-system. This set of nested and overlapping networks of human interaction
+        is itself located in the biosphere and the physical regimes of the planet
+        Earth, the solar system, our galaxy, and the larger processes and structures
+        of the physical universe. The world-systems perspective is both materialist
+        and institutional. It analyzes the evolution of human institutions while taking
+        account of the constraints and opportunities posed by physics, biology, and
+        the natural environment (Chase-Dunn and Hall 1997). WORLD-SYSTEMS PERSPECTIVE
+        The modern world-system is a global set of interaction networks that include
+        all the national societies. But world-systems have not always been global.
+        The modern world-system originated out of an expanding multicore Afro-Eurasian
+        world-system in which the Europeans rose ...</description>\n                <source>Academic
+        Law Reviews (LexisNexis®)</source>\n                <lds50>peer_reviewed</lds50>\n
+        \             </display>\n              <links>\n                <openurl>$$Topenurl_article</openurl>\n
+        \               <linktorsrc>$$Uhttp://www.lexisnexis.com/hottopics/lnacademic/?verb=sr&amp;csi=7327&amp;sr=cite(581+Annals+48)$$EView_record_in_LexisNexis&amp;#174;(subscribers_only)</linktorsrc>\n
+        \               <openurlfulltext>$$Topenurlfull_article</openurlfulltext>\n
+        \             </links>\n              <search>\n                <creatorcontrib>Christopher
+        Chase-Dunn</creatorcontrib>\n                <title>Globalization from Below:
+        Toward a Collectively Rational and Democratic Global Commonwealth</title>\n
+        \               <description>THE world-systems perspective is a historical
+        and structural theoretical framework that analyzes national societies as parts
+        of a larger stratified sociopolitical and economic system (Shannon 1996).
+        The focus is on the structural features of the larger system itself. It is
+        a world economy with a hierarchical division of labor for the production of
+        different kinds of goods. There are economically and militarily powerful countries
+        in the core, dependent, and dominated regions in the periphery, and a middle
+        sector of countries (the semiperiphery) in which states have intermediate
+        levels of economic and political/military power. The world market includes
+        both international trade and all the national economies, so the world-system
+        is the whole system, not just international relations. Local, regional, national,
+        international, transnational, and global networks of interaction constitute
+        the world-system. This set of nested and overlapping networks of human interaction
+        is itself located in the biosphere and the physical regimes of the planet
+        Earth, the solar system, our galaxy, and the larger processes and structures
+        of the physical universe. The world-systems perspective is both materialist
+        and institutional. It analyzes the evolution of human institutions while taking
+        account of the constraints and opportunities posed by physics, biology, and
+        the natural environment (Chase-Dunn and Hall 1997). WORLD-SYSTEMS PERSPECTIVE
+        The modern world-system is a global set of interaction networks that include
+        all the national societies. But world-systems have not always been global.
+        The modern world-system originated out of an expanding multicore Afro-Eurasian
+        world-system in which the Europeans rose ...</description>\n                <subject>Sociopolitical</subject>\n
+        \               <subject>Opportunities</subject>\n                <subject>Institutional</subject>\n
+        \               <subject>Transnational</subject>\n                <subject>International</subject>\n
+        \               <subject>Semiperiphery</subject>\n                <subject>Institutions</subject>\n
+        \               <subject>Intermediate</subject>\n                <subject>Economically</subject>\n
+        \               <subject>Hierarchical</subject>\n                <subject>Governments</subject>\n
+        \               <sourceid>lexisnexis_lawreviews</sourceid>\n                <recordid>lexisnexis_lawreviews581Annals48</recordid>\n
+        \               <issn>0002-7162</issn>\n                <issn>00027162</issn>\n
+        \               <issn>1552-3349</issn>\n                <issn>15523349</issn>\n
+        \               <rsrctype>article</rsrctype>\n                <creationdate>2002</creationdate>\n
+        \               <addtitle>Annals</addtitle>\n                <addtitle>Annals
+        of the American Academy of Political and Social Science</addtitle>\n                <searchscope>lexisnexis_lawreviews</searchscope>\n
+        \               <searchscope>lexisnexis_alawr</searchscope>\n                <scope>lexisnexis_lawreviews</scope>\n
+        \               <scope>lexisnexis_alawr</scope>\n              </search>\n
+        \             <sort>\n                <title>Globalization from Below: Toward
+        a Collectively Rational and Democratic Global Commonwealth</title>\n                <author>Christopher
+        Chase-Dunn</author>\n                <creationdate>20020501</creationdate>\n
+        \             </sort>\n              <facets>\n                <creationdate>2002</creationdate>\n
+        \               <topic>Sociopolitical</topic>\n                <topic>Opportunities</topic>\n
+        \               <topic>Institutional</topic>\n                <topic>Transnational</topic>\n
+        \               <topic>International</topic>\n                <topic>Semiperiphery</topic>\n
+        \               <topic>Institutions</topic>\n                <topic>Intermediate</topic>\n
+        \               <topic>Economically</topic>\n                <topic>Hierarchical</topic>\n
+        \               <topic>Governments</topic>\n                <collection>Academic
+        Law Reviews (LexisNexis)</collection>\n                <prefilter>articles</prefilter>\n
+        \               <rsrctype>articles</rsrctype>\n                <creatorcontrib>By
+        Christopher Chase-Dunn</creatorcontrib>\n                <jtitle>Annals Of
+        The American Academy Of Political And Social Science</jtitle>\n                <toplevel>peer_reviewed</toplevel>\n
+        \               <frbrgroupid>558362689</frbrgroupid>\n                <frbrtype>6</frbrtype>\n
+        \             </facets>\n              <frbr>\n                <t>2</t>\n
+        \               <k1>2002</k1>\n                <k2>00027162</k2>\n                <k2>15523349</k2>\n
+        \               <k4>581</k4>\n                <k6>48</k6>\n                <k7>annals
+        of the american academy of political social science</k7>\n                <k8>globalization
+        from below toward collectively rational democratic global commonwealth</k8>\n
+        \               <k9>globalizationfrombelealth</k9>\n                <k12>globalizationfrombelowtow</k12>\n
+        \               <k15>bychristopherchasedunn</k15>\n                <k16>bychristopherchasedunn</k16>\n
+        \             </frbr>\n              <delivery>\n                <delcategory>Remote
+        Search Resource</delcategory>\n                <fulltext>fulltext</fulltext>\n
+        \             </delivery>\n              <ranking>\n                <booster1>1</booster1>\n
+        \               <booster2>1</booster2>\n                <pcg_type>aggregator</pcg_type>\n
+        \             </ranking>\n              <addata>\n                <au>By Christopher
+        Chase-Dunn</au>\n                <atitle>Globalization from Below: Toward
+        a Collectively Rational and Democratic Global Commonwealth</atitle>\n                <jtitle>Annals
+        of the American Academy of Political and Social Science</jtitle>\n                <date>20020501</date>\n
+        \               <risdate>20020501</risdate>\n                <volume>581</volume>\n
+        \               <spage>48</spage>\n                <epage>172</epage>\n                <issn>0002-7162</issn>\n
+        \               <eissn>1552-3349</eissn>\n                <genre>article</genre>\n
+        \               <ristype>JOUR</ristype>\n                <abstract>THE world-systems
+        perspective is a historical and structural theoretical framework that analyzes
+        national societies as parts of a larger stratified sociopolitical and economic
+        system (Shannon 1996). The focus is on the structural features of the larger
+        system itself. It is a world economy with a hierarchical division of labor
+        for the production of different kinds of goods. There are economically and
+        militarily powerful countries in the core, dependent, and dominated regions
+        in the periphery, and a middle sector of countries (the semiperiphery) in
+        which states have intermediate levels of economic and political/military power.
+        The world market includes both international trade and all the national economies,
+        so the world-system is the whole system, not just international relations.
+        Local, regional, national, international, transnational, and global networks
+        of interaction constitute the world-system. This set of nested and overlapping
+        networks of human interaction is itself located in the biosphere and the physical
+        regimes of the planet Earth, the solar system, our galaxy, and the larger
+        processes and structures of the physical universe. The world-systems perspective
+        is both materialist and institutional. It analyzes the evolution of human
+        institutions while taking account of the constraints and opportunities posed
+        by physics, biology, and the natural environment (Chase-Dunn and Hall 1997).
+        WORLD-SYSTEMS PERSPECTIVE The modern world-system is a global set of interaction
+        networks that include all the national societies. But world-systems have not
+        always been global. The modern world-system originated out of an expanding
+        multicore Afro-Eurasian world-system in which the Europeans rose ...</abstract>\n
+        \             </addata>\n            </record>\n          </PrimoNMBib>\n
+        \         <sear:GETIT GetIt2=\"http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-07T12%3A53%3A55IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&amp;rft.jtitle=Journal%20of%20World%20Business&amp;rft.btitle=&amp;rft.aulast=Steyaert&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Steyaert%2C%20Chris&amp;rft.aucorp=&amp;rft.date=2011&amp;rft.volume=46&amp;rft.issue=3&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=270&amp;rft.epage=278&amp;rft.pages=270-278&amp;rft.artnum=&amp;rft.issn=1090-9516&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.1016/j.jwb.2010.07.003&amp;rft.eisbn=&amp;rft_dat=&lt;sciversesciencedirect_elsevier>S1090-9516(10)00042-8&lt;/sciversesciencedirect_elsevier>&amp;rft_id=info:oai/>\"
+        GetIt1=\"http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-07T12%3A53%3A55IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&amp;rft.jtitle=Journal%20of%20World%20Business&amp;rft.btitle=&amp;rft.aulast=Steyaert&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Steyaert%2C%20Chris&amp;rft.aucorp=&amp;rft.date=2011&amp;rft.volume=46&amp;rft.issue=3&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=270&amp;rft.epage=278&amp;rft.pages=270-278&amp;rft.artnum=&amp;rft.issn=1090-9516&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.1016/j.jwb.2010.07.003&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;svc.fulltext=yes&amp;rft.eisbn=&amp;rft_dat=&lt;sciversesciencedirect_elsevier>S1090-9516(10)00042-8&lt;/sciversesciencedirect_elsevier>&amp;rft_id=info:oai/>\"
+        deliveryCategory=\"Remote Search Resource\"/>\n          <sear:LINKS>\n            <sear:openurl><![CDATA[http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-07T12%3A53%3A55IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-lexisnexis_lawreviews&rft_val_fmt=info:ofi/fmt:kev:mtx:&rft.genre=article&rft.atitle=Globalization%20from%20Below:%20Toward%20a%20Collectively%20Rational%20and%20Democratic%20Global%20Commonwealth&rft.jtitle=Annals%20of%20the%20American%20Academy%20of%20Political%20and%20Social%20Science&rft.btitle=&rft.aulast=&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=By%20Christopher%20Chase-Dunn&rft.aucorp=&rft.date=20020501&rft.volume=581&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=48&rft.epage=172&rft.pages=&rft.artnum=&rft.issn=0002-7162&rft.eissn=1552-3349&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.eisbn=&rft_dat=<lexisnexis_lawreviews>581Annals48</lexisnexis_lawreviews>&rft_id=info:oai/>]]></sear:openurl>\n
+        \           <sear:linktorsrc>http://www.lexisnexis.com/hottopics/lnacademic/?verb=sr&amp;csi=7327&amp;sr=cite(581+Annals+48)</sear:linktorsrc>\n
+        \           <sear:thumbnail/>\n            <sear:openurlfulltext><![CDATA[http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-07T12%3A53%3A55IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-lexisnexis_lawreviews&rft_val_fmt=info:ofi/fmt:kev:mtx:&rft.genre=article&rft.atitle=Globalization%20from%20Below:%20Toward%20a%20Collectively%20Rational%20and%20Democratic%20Global%20Commonwealth&rft.jtitle=Annals%20of%20the%20American%20Academy%20of%20Political%20and%20Social%20Science&rft.btitle=&rft.aulast=&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=By%20Christopher%20Chase-Dunn&rft.aucorp=&rft.date=20020501&rft.volume=581&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=48&rft.epage=172&rft.pages=&rft.artnum=&rft.issn=0002-7162&rft.eissn=1552-3349&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft.eisbn=&rft_dat=<lexisnexis_lawreviews>581Annals48</lexisnexis_lawreviews>&rft_id=info:oai/>]]></sear:openurlfulltext>\n
+        \         </sear:LINKS>\n        </sear:DOC>\n        <sear:DOC LOCAL=\"false\"
+        SEARCH_ENGINE_TYPE=\"Primo Central Search Engine\" SEARCH_ENGINE=\"PrimoCentralThirdNode\"
+        NO=\"3\" RANK=\"0.035256714\" ID=\"172452148\">\n          <PrimoNMBib xmlns=\"http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib\">\n
+        \           <record>\n              <control>\n                <sourcerecordid>67161994</sourcerecordid>\n
+        \               <sourceid>gale_ofa</sourceid>\n                <recordid>TN_gale_ofa67161994</recordid>\n
+        \               <sourceformat>XML</sourceformat>\n                <sourcesystem>Other</sourcesystem>\n
+        \             </control>\n              <display>\n                <type>article</type>\n
+        \               <title>Globalization From Below : INTERNATIONAL SOLIDARITY
+        IS THE KEY TO CONSOLIDATING THE LEGACY OF SEATTLE.(grassroots social movements)</title>\n
+        \               <creator>Brecher, Jeremy ; Costello, Tim ; Smith, Brendan</creator>\n
+        \               <ispartof>The Nation, Dec 4, 2000, Vol.271(18), p.19</ispartof>\n
+        \               <identifier>&lt;b>ISSN: &lt;/b>0027-8378</identifier>\n                <subject>International
+        Economic Relations -- Social Aspects ; Activists -- Behavior ; Environmentalism
+        -- Political Aspects ; Social Movements -- Political Aspects ; Feminism --
+        Political Aspects ; Labor Movement -- Political Aspects</subject>\n                <source>Cengage
+        Learning, Inc.</source>\n                <version>1</version>\n              </display>\n
+        \             <links>\n                <openurl>$$Topenurl_article</openurl>\n
+        \               <openurlfulltext>$$Topenurlfull_article</openurlfulltext>\n
+        \             </links>\n              <search>\n                <creatorcontrib>Brecher,
+        Jeremy</creatorcontrib>\n                <creatorcontrib>Costello, Tim</creatorcontrib>\n
+        \               <creatorcontrib>Smith, Brendan</creatorcontrib>\n                <title>Globalization
+        From Below : INTERNATIONAL SOLIDARITY IS THE KEY TO CONSOLIDATING THE LEGACY
+        OF SEATTLE.(grassroots social movements)</title>\n                <subject>International
+        economic relations--Social aspects</subject>\n                <subject>Activists--Behavior</subject>\n
+        \               <subject>Environmentalism--Political aspects</subject>\n                <subject>Social
+        movements--Political aspects</subject>\n                <subject>Feminism--Political
+        aspects</subject>\n                <subject>Labor movement--Political aspects</subject>\n
+        \               <subject>00WOR</subject>\n                <subject>World</subject>\n
+        \               <subject>Demonstrations and protests</subject>\n                <subject>International
+        Monetary Fund</subject>\n                <subject>World Trade Organization</subject>\n
+        \               <general>The Nation Company L.P.</general>\n                <general>Cengage
+        Learning, Inc.</general>\n                <sourceid>gale_ofa</sourceid>\n
+        \               <recordid>gale_ofa67161994</recordid>\n                <issn>0027-8378</issn>\n
+        \               <issn>00278378</issn>\n                <rsrctype>article</rsrctype>\n
+        \               <creationdate>2000</creationdate>\n                <recordtype>article</recordtype>\n
+        \               <addtitle>The Nation</addtitle>\n                <searchscope>OneFile</searchscope>\n
+        \               <scope>OneFile</scope>\n              </search>\n              <sort>\n
+        \               <title>Globalization From Below : INTERNATIONAL SOLIDARITY
+        IS THE KEY TO CONSOLIDATING THE LEGACY OF SEATTLE.(grassroots social movements)</title>\n
+        \               <author>Brecher, Jeremy ; Costello, Tim ; Smith, Brendan</author>\n
+        \               <creationdate>20001204</creationdate>\n              </sort>\n
+        \             <facets>\n                <creationdate>2000</creationdate>\n
+        \               <topic>International Economic Relations–Social Aspects</topic>\n
+        \               <topic>Activists–Behavior</topic>\n                <topic>Environmentalism–Political
+        Aspects</topic>\n                <topic>Social Movements–Political Aspects</topic>\n
+        \               <topic>Feminism–Political Aspects</topic>\n                <topic>Labor
+        Movement–Political Aspects</topic>\n                <collection>OneFile (GALE)</collection>\n
+        \               <prefilter>articles</prefilter>\n                <rsrctype>articles</rsrctype>\n
+        \               <creatorcontrib>Brecher, Jeremy</creatorcontrib>\n                <creatorcontrib>Costello,
+        Tim</creatorcontrib>\n                <creatorcontrib>Smith, Brendan</creatorcontrib>\n
+        \               <jtitle>The Nation</jtitle>\n                <frbrgroupid>6516380186211662130</frbrgroupid>\n
+        \               <frbrtype>5</frbrtype>\n              </facets>\n              <frbr>\n
+        \               <t>2</t>\n                <k1>2000</k1>\n                <k2>00278378</k2>\n
+        \               <k4>271</k4>\n                <k5>18</k5>\n                <k6>19</k6>\n
+        \               <k7>nation</k7>\n                <k8>globalization from below
+        international solidarity is the key to consolidating the legacy of seattle</k8>\n
+        \               <k9>globalizationfrombelattle</k9>\n                <k12>globalizationfrombelowint</k12>\n
+        \               <k15>jeremybrecher</k15>\n                <k16>brecherjeremy</k16>\n
+        \             </frbr>\n              <delivery>\n                <delcategory>Remote
+        Search Resource</delcategory>\n                <fulltext>fulltext</fulltext>\n
+        \             </delivery>\n              <ranking>\n                <booster1>1</booster1>\n
+        \               <booster2>1</booster2>\n                <pcg_type>aggregator</pcg_type>\n
+        \             </ranking>\n              <addata>\n                <au>Brecher,
+        Jeremy</au>\n                <au>Costello, Tim</au>\n                <au>Smith,
+        Brendan</au>\n                <atitle>Globalization From Below : INTERNATIONAL
+        SOLIDARITY IS THE KEY TO CONSOLIDATING THE LEGACY OF SEATTLE.(grassroots social
+        movements)</atitle>\n                <jtitle>The Nation</jtitle>\n                <date>20001204</date>\n
+        \               <risdate>20001204</risdate>\n                <volume>271</volume>\n
+        \               <issue>18</issue>\n                <spage>19</spage>\n                <issn>0027-8378</issn>\n
+        \               <genre>article</genre>\n                <ristype>JOUR</ristype>\n
+        \               <pub>The Nation Company L.P.</pub>\n                <lad01>gale_ofa</lad01>\n
+        \             </addata>\n            </record>\n          </PrimoNMBib>\n
+        \         <sear:GETIT GetIt2=\"http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-07T12%3A53%3A55IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&amp;rft.jtitle=Journal%20of%20World%20Business&amp;rft.btitle=&amp;rft.aulast=Steyaert&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Steyaert%2C%20Chris&amp;rft.aucorp=&amp;rft.date=2011&amp;rft.volume=46&amp;rft.issue=3&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=270&amp;rft.epage=278&amp;rft.pages=270-278&amp;rft.artnum=&amp;rft.issn=1090-9516&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.1016/j.jwb.2010.07.003&amp;rft.eisbn=&amp;rft_dat=&lt;sciversesciencedirect_elsevier>S1090-9516(10)00042-8&lt;/sciversesciencedirect_elsevier>&amp;rft_id=info:oai/>\"
+        GetIt1=\"http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-07T12%3A53%3A55IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&amp;rft.jtitle=Journal%20of%20World%20Business&amp;rft.btitle=&amp;rft.aulast=Steyaert&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Steyaert%2C%20Chris&amp;rft.aucorp=&amp;rft.date=2011&amp;rft.volume=46&amp;rft.issue=3&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=270&amp;rft.epage=278&amp;rft.pages=270-278&amp;rft.artnum=&amp;rft.issn=1090-9516&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.1016/j.jwb.2010.07.003&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;svc.fulltext=yes&amp;rft.eisbn=&amp;rft_dat=&lt;sciversesciencedirect_elsevier>S1090-9516(10)00042-8&lt;/sciversesciencedirect_elsevier>&amp;rft_id=info:oai/>\"
+        deliveryCategory=\"Remote Search Resource\"/>\n          <sear:LINKS>\n            <sear:openurl><![CDATA[http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-07T12%3A53%3A55IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-gale_ofa&rft_val_fmt=info:ofi/fmt:kev:mtx:&rft.genre=article&rft.atitle=Globalization%20From%20Below%20:%20INTERNATIONAL%20SOLIDARITY%20IS%20THE%20KEY%20TO%20CONSOLIDATING%20THE%20LEGACY%20OF%20SEATTLE.(grassroots%20social%20movements)&rft.jtitle=The%20Nation&rft.btitle=&rft.aulast=&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Brecher%2C%20Jeremy&rft.aucorp=&rft.date=20001204&rft.volume=271&rft.issue=18&rft.part=&rft.quarter=&rft.ssn=&rft.spage=19&rft.epage=&rft.pages=&rft.artnum=&rft.issn=0027-8378&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.eisbn=&rft_dat=<gale_ofa>67161994</gale_ofa>&rft_id=info:oai/>]]></sear:openurl>\n
+        \           <sear:thumbnail/>\n            <sear:openurlfulltext><![CDATA[http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-07T12%3A53%3A55IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-gale_ofa&rft_val_fmt=info:ofi/fmt:kev:mtx:&rft.genre=article&rft.atitle=Globalization%20From%20Below%20:%20INTERNATIONAL%20SOLIDARITY%20IS%20THE%20KEY%20TO%20CONSOLIDATING%20THE%20LEGACY%20OF%20SEATTLE.(grassroots%20social%20movements)&rft.jtitle=The%20Nation&rft.btitle=&rft.aulast=&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Brecher%2C%20Jeremy&rft.aucorp=&rft.date=20001204&rft.volume=271&rft.issue=18&rft.part=&rft.quarter=&rft.ssn=&rft.spage=19&rft.epage=&rft.pages=&rft.artnum=&rft.issn=0027-8378&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft.eisbn=&rft_dat=<gale_ofa>67161994</gale_ofa>&rft_id=info:oai/>]]></sear:openurlfulltext>\n
+        \         </sear:LINKS>\n        </sear:DOC>\n        <sear:DOC LOCAL=\"false\"
+        SEARCH_ENGINE_TYPE=\"Primo Central Search Engine\" SEARCH_ENGINE=\"PrimoCentralThirdNode\"
+        NO=\"4\" RANK=\"0.03283568\" ID=\"299297826\">\n          <PrimoNMBib xmlns=\"http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib\">\n
+        \           <record>\n              <control>\n                <sourcerecordid>10.1086/518061</sourcerecordid>\n
+        \               <sourceid>ucp</sourceid>\n                <recordid>TN_ucp10.1086/518061</recordid>\n
+        \               <sourceformat>XML</sourceformat>\n                <sourcesystem>Other</sourcesystem>\n
+        \             </control>\n              <display>\n                <type>article</type>\n
+        \               <title>Globalization from Below: Transnational Activists and
+        Protest Networks (Book-Review)</title>\n                <creator>Myers, DanielJ</creator>\n
+        \               <ispartof>American Journal of Sociology, Vol.112(5), p.1572-1573</ispartof>\n
+        \               <identifier><![CDATA[<b>ISSN: </b>0002-9602 ; <b>E-ISSN: </b>1537-5390
+        ; <b>DOI: </b>10.1086/518061]]></identifier>\n                <source>University
+        of Chicago Press Journals</source>\n                <lds50>peer_reviewed</lds50>\n
+        \             </display>\n              <links>\n                <openurl>$$Topenurl_article</openurl>\n
+        \               <openurlfulltext>$$Topenurlfull_article</openurlfulltext>\n
+        \             </links>\n              <search>\n                <creatorcontrib>Myers,
+        DanielJ</creatorcontrib>\n                <title>Globalization from Below:
+        Transnational Activists and Protest Networks (Book-Review)</title>\n                <general>10.1086/518061</general>\n
+        \               <sourceid>ucp</sourceid>\n                <recordid>ucp10.1086/518061</recordid>\n
+        \               <issn>0002-9602</issn>\n                <issn>1537-5390</issn>\n
+        \               <rsrctype>article</rsrctype>\n                <creationdate>2007</creationdate>\n
+        \               <addtitle>American Journal of Sociology</addtitle>\n                <searchscope>ucp</searchscope>\n
+        \               <searchscope>University of Chicago Press Journals</searchscope>\n
+        \               <scope>ucp</scope>\n                <scope>University of Chicago
+        Press Journals</scope>\n              </search>\n              <sort>\n                <title>Globalization
+        from Below: Transnational Activists and Protest Networks (Book-Review)</title>\n
+        \               <author>Myers, DanielJ</author>\n                <creationdate>20070300</creationdate>\n
+        \             </sort>\n              <facets>\n                <creationdate>2007</creationdate>\n
+        \               <collection>University of Chicago Press Journals</collection>\n
+        \               <prefilter>articles</prefilter>\n                <rsrctype>articles</rsrctype>\n
+        \               <creatorcontrib>Myers, DanielJ.</creatorcontrib>\n                <jtitle>American
+        Journal of Sociology</jtitle>\n                <toplevel>peer_reviewed</toplevel>\n
+        \               <frbrgroupid>266517745</frbrgroupid>\n                <frbrtype>6</frbrtype>\n
+        \             </facets>\n              <frbr>\n                <t>2</t>\n
+        \               <k1>2007</k1>\n                <k2>00029602</k2>\n                <k2>15375390</k2>\n
+        \               <k3>10.1086/518061</k3>\n                <k4>112</k4>\n                <k5>5</k5>\n
+        \               <k6>1572</k6>\n                <k7>american journal of sociology</k7>\n
+        \               <k15>danieljmyers</k15>\n                <k16>myersdanielj</k16>\n
+        \             </frbr>\n              <delivery>\n                <delcategory>Remote
+        Search Resource</delcategory>\n                <fulltext>no_fulltext</fulltext>\n
+        \             </delivery>\n              <ranking>\n                <booster1>1</booster1>\n
+        \               <booster2>1</booster2>\n                <pcg_type>publisher</pcg_type>\n
+        \             </ranking>\n              <addata>\n                <aulast>Myers</aulast>\n
+        \               <aufirst>DanielJ.</aufirst>\n                <au>Myers, DanielJ.</au>\n
+        \               <jtitle>American Journal of Sociology</jtitle>\n                <date>200703</date>\n
+        \               <volume>112</volume>\n                <issue>5</issue>\n                <spage>1572</spage>\n
+        \               <epage>1573</epage>\n                <issn>0002-9602</issn>\n
+        \               <eissn>1537-5390</eissn>\n                <format>journal</format>\n
+        \               <genre>article</genre>\n                <ristype>JOUR</ristype>\n
+        \               <pub>The University of Chicago Press</pub>\n                <doi>10.1086/518061</doi>\n
+        \             </addata>\n            </record>\n          </PrimoNMBib>\n
+        \         <sear:GETIT GetIt2=\"http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-07T12%3A53%3A55IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&amp;rft.jtitle=Journal%20of%20World%20Business&amp;rft.btitle=&amp;rft.aulast=Steyaert&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Steyaert%2C%20Chris&amp;rft.aucorp=&amp;rft.date=2011&amp;rft.volume=46&amp;rft.issue=3&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=270&amp;rft.epage=278&amp;rft.pages=270-278&amp;rft.artnum=&amp;rft.issn=1090-9516&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.1016/j.jwb.2010.07.003&amp;rft.eisbn=&amp;rft_dat=&lt;sciversesciencedirect_elsevier>S1090-9516(10)00042-8&lt;/sciversesciencedirect_elsevier>&amp;rft_id=info:oai/>\"
+        GetIt1=\"http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-07T12%3A53%3A55IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&amp;rft.jtitle=Journal%20of%20World%20Business&amp;rft.btitle=&amp;rft.aulast=Steyaert&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Steyaert%2C%20Chris&amp;rft.aucorp=&amp;rft.date=2011&amp;rft.volume=46&amp;rft.issue=3&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=270&amp;rft.epage=278&amp;rft.pages=270-278&amp;rft.artnum=&amp;rft.issn=1090-9516&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.1016/j.jwb.2010.07.003&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;svc.fulltext=yes&amp;rft.eisbn=&amp;rft_dat=&lt;sciversesciencedirect_elsevier>S1090-9516(10)00042-8&lt;/sciversesciencedirect_elsevier>&amp;rft_id=info:oai/>\"
+        deliveryCategory=\"Remote Search Resource\"/>\n          <sear:LINKS>\n            <sear:openurl><![CDATA[http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-07T12%3A53%3A55IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-ucp&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=&rft.jtitle=American%20Journal%20of%20Sociology&rft.btitle=&rft.aulast=Myers&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Myers%2C%20DanielJ.&rft.aucorp=&rft.date=200703&rft.volume=112&rft.issue=5&rft.part=&rft.quarter=&rft.ssn=&rft.spage=1572&rft.epage=1573&rft.pages=&rft.artnum=&rft.issn=0002-9602&rft.eissn=1537-5390&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/10.1086/518061&rft.eisbn=&rft_dat=<ucp>10.1086/518061</ucp>&rft_id=info:oai/>]]></sear:openurl>\n
+        \           <sear:thumbnail/>\n            <sear:openurlfulltext><![CDATA[http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-07T12%3A53%3A55IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-ucp&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=&rft.jtitle=American%20Journal%20of%20Sociology&rft.btitle=&rft.aulast=Myers&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Myers%2C%20DanielJ.&rft.aucorp=&rft.date=200703&rft.volume=112&rft.issue=5&rft.part=&rft.quarter=&rft.ssn=&rft.spage=1572&rft.epage=1573&rft.pages=&rft.artnum=&rft.issn=0002-9602&rft.eissn=1537-5390&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/10.1086/518061&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft.eisbn=&rft_dat=<ucp>10.1086/518061</ucp>&rft_id=info:oai/>]]></sear:openurlfulltext>\n
+        \         </sear:LINKS>\n        </sear:DOC>\n        <sear:DOC LOCAL=\"false\"
+        SEARCH_ENGINE_TYPE=\"Primo Central Search Engine\" SEARCH_ENGINE=\"PrimoCentralThirdNode\"
+        NO=\"5\" RANK=\"0.027729224\" ID=\"218042679\">\n          <PrimoNMBib xmlns=\"http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib\">\n
+        \           <record>\n              <control>\n                <sourcerecordid>10.1177/009430610603600252</sourcerecordid>\n
+        \               <sourceid>crossref</sourceid>\n                <recordid>TN_crossref10.1177/009430610603600252</recordid>\n
+        \               <sourceformat>XML</sourceformat>\n                <sourcesystem>Other</sourcesystem>\n
+        \             </control>\n              <display>\n                <type>article</type>\n
+        \               <title>Product Review: Globalization from Below: Transnational
+        Activists and Protest Networks</title>\n                <creator>Smith, J.</creator>\n
+        \               <ispartof>Contemporary Sociology: A Journal of Reviews, 2007,
+        Vol.36(2), pp.191-192</ispartof>\n                <identifier>&lt;b>ISSN:&lt;/b>
+        0094-3061 ; &lt;b>DOI:&lt;/b> http://dx.doi.org/10.1177/009430610603600252</identifier>\n
+        \               <language>eng</language>\n                <source>Sage Publications
+        (via CrossRef)</source>\n                <lds50>peer_reviewed</lds50>\n              </display>\n
+        \             <links>\n                <openurl>$$Topenurl_article</openurl>\n
+        \               <openurlfulltext>$$Topenurlfull_article</openurlfulltext>\n
+        \               <addlink>$$Uhttp://fe.p.prod.primo.saas.exlibrisgroup.com:1701/primo_library/libweb/aboutCrossref.html$$DView
+        CrossRef copyright notice</addlink>\n              </links>\n              <search>\n
+        \               <creatorcontrib>Smith, J.</creatorcontrib>\n                <title>Product
+        Review: Globalization from Below: Transnational Activists and Protest Networks</title>\n
+        \               <general>English</general>\n                <general>10.1177/009430610603600252</general>\n
+        \               <sourceid>crossref</sourceid>\n                <recordid>crossref10.1177/009430610603600252</recordid>\n
+        \               <issn>0094-3061</issn>\n                <issn>00943061</issn>\n
+        \               <rsrctype>article</rsrctype>\n                <creationdate>2007</creationdate>\n
+        \               <addtitle>Contemporary Sociology: A Journal of Reviews</addtitle>\n
+        \               <searchscope>crossref_sp</searchscope>\n                <searchscope>CrossRef</searchscope>\n
+        \               <searchscope>Crossref</searchscope>\n                <searchscope>crossref</searchscope>\n
+        \               <scope>crossref_sp</scope>\n                <scope>CrossRef</scope>\n
+        \               <scope>Crossref</scope>\n                <scope>crossref</scope>\n
+        \             </search>\n              <sort>\n                <title>Product
+        Review: Globalization from Below: Transnational Activists and Protest Networks</title>\n
+        \               <author>Smith, J.</author>\n                <creationdate>20070301</creationdate>\n
+        \             </sort>\n              <facets>\n                <language>eng</language>\n
+        \               <creationdate>2007</creationdate>\n                <collection>Sage
+        Publications (CrossRef)</collection>\n                <prefilter>articles</prefilter>\n
+        \               <rsrctype>articles</rsrctype>\n                <creatorcontrib>Smith,
+        J.</creatorcontrib>\n                <jtitle>Contemporary Sociology: A Journal
+        Of Reviews</jtitle>\n                <toplevel>peer_reviewed</toplevel>\n
+        \               <frbrgroupid>330710846</frbrgroupid>\n                <frbrtype>6</frbrtype>\n
+        \             </facets>\n              <frbr>\n                <t>2</t>\n
+        \               <k1>2007</k1>\n                <k2>00943061</k2>\n                <k3>10.1177/009430610603600252</k3>\n
+        \               <k4>36</k4>\n                <k5>2</k5>\n                <k6>191</k6>\n
+        \               <k7>contemporary sociology journal of reviews</k7>\n                <k8>product
+        review globalization from below transnational activists protest networks</k8>\n
+        \               <k9>productreviewglobaliworks</k9>\n                <k12>productreviewglobalizatio</k12>\n
+        \               <k15>jsmith</k15>\n                <k16>smithj</k16>\n              </frbr>\n
+        \             <delivery>\n                <delcategory>Remote Search Resource</delcategory>\n
+        \               <fulltext>fulltext</fulltext>\n              </delivery>\n
+        \             <ranking>\n                <booster1>1</booster1>\n                <booster2>1</booster2>\n
+        \               <pcg_type>aggregator_crossref</pcg_type>\n              </ranking>\n
+        \             <addata>\n                <aulast>Smith</aulast>\n                <aufirst>J.</aufirst>\n
+        \               <au>Smith, J.</au>\n                <atitle>Product Review:
+        Globalization from Below: Transnational Activists and Protest Networks</atitle>\n
+        \               <jtitle>Contemporary Sociology: A Journal of Reviews</jtitle>\n
+        \               <date>20070301</date>\n                <risdate>20070301</risdate>\n
+        \               <volume>36</volume>\n                <issue>2</issue>\n                <spage>191</spage>\n
+        \               <epage>192</epage>\n                <issn>0094-3061</issn>\n
+        \               <eissn>0094-3061</eissn>\n                <genre>article</genre>\n
+        \               <ristype>JOUR</ristype>\n                <doi>10.1177/009430610603600252</doi>\n
+        \             </addata>\n            </record>\n          </PrimoNMBib>\n
+        \         <sear:GETIT GetIt2=\"http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-07T12%3A53%3A55IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&amp;rft.jtitle=Journal%20of%20World%20Business&amp;rft.btitle=&amp;rft.aulast=Steyaert&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Steyaert%2C%20Chris&amp;rft.aucorp=&amp;rft.date=2011&amp;rft.volume=46&amp;rft.issue=3&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=270&amp;rft.epage=278&amp;rft.pages=270-278&amp;rft.artnum=&amp;rft.issn=1090-9516&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.1016/j.jwb.2010.07.003&amp;rft.eisbn=&amp;rft_dat=&lt;sciversesciencedirect_elsevier>S1090-9516(10)00042-8&lt;/sciversesciencedirect_elsevier>&amp;rft_id=info:oai/>\"
+        GetIt1=\"http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-07T12%3A53%3A55IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&amp;rft.jtitle=Journal%20of%20World%20Business&amp;rft.btitle=&amp;rft.aulast=Steyaert&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Steyaert%2C%20Chris&amp;rft.aucorp=&amp;rft.date=2011&amp;rft.volume=46&amp;rft.issue=3&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=270&amp;rft.epage=278&amp;rft.pages=270-278&amp;rft.artnum=&amp;rft.issn=1090-9516&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.1016/j.jwb.2010.07.003&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;svc.fulltext=yes&amp;rft.eisbn=&amp;rft_dat=&lt;sciversesciencedirect_elsevier>S1090-9516(10)00042-8&lt;/sciversesciencedirect_elsevier>&amp;rft_id=info:oai/>\"
+        deliveryCategory=\"Remote Search Resource\"/>\n          <sear:LINKS>\n            <sear:openurl><![CDATA[http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-07T12%3A53%3A55IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-crossref&rft_val_fmt=info:ofi/fmt:kev:mtx:&rft.genre=article&rft.atitle=Product%20Review:%20Globalization%20from%20Below:%20Transnational%20Activists%20and%20Protest%20Networks&rft.jtitle=Contemporary%20Sociology:%20A%20Journal%20of%20Reviews&rft.btitle=&rft.aulast=Smith&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Smith%2C%20J.&rft.aucorp=&rft.date=20070301&rft.volume=36&rft.issue=2&rft.part=&rft.quarter=&rft.ssn=&rft.spage=191&rft.epage=192&rft.pages=&rft.artnum=&rft.issn=0094-3061&rft.eissn=0094-3061&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/10.1177/009430610603600252&rft.eisbn=&rft_dat=<crossref>10.1177/009430610603600252</crossref>&rft_id=info:oai/>]]></sear:openurl>\n
+        \           <sear:thumbnail/>\n            <sear:openurlfulltext><![CDATA[http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-07T12%3A53%3A55IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-crossref&rft_val_fmt=info:ofi/fmt:kev:mtx:&rft.genre=article&rft.atitle=Product%20Review:%20Globalization%20from%20Below:%20Transnational%20Activists%20and%20Protest%20Networks&rft.jtitle=Contemporary%20Sociology:%20A%20Journal%20of%20Reviews&rft.btitle=&rft.aulast=Smith&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Smith%2C%20J.&rft.aucorp=&rft.date=20070301&rft.volume=36&rft.issue=2&rft.part=&rft.quarter=&rft.ssn=&rft.spage=191&rft.epage=192&rft.pages=&rft.artnum=&rft.issn=0094-3061&rft.eissn=0094-3061&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/10.1177/009430610603600252&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft.eisbn=&rft_dat=<crossref>10.1177/009430610603600252</crossref>&rft_id=info:oai/>]]></sear:openurlfulltext>\n
+        \           <sear:addlink>http://fe.p.prod.primo.saas.exlibrisgroup.com:1701/primo_library/libweb/aboutCrossref.html</sear:addlink>\n
+        \         </sear:LINKS>\n        </sear:DOC>\n        <sear:DOC LOCAL=\"false\"
+        SEARCH_ENGINE_TYPE=\"Primo Central Search Engine\" SEARCH_ENGINE=\"PrimoCentralThirdNode\"
+        NO=\"6\" RANK=\"0.027729223\" ID=\"184910815\">\n          <PrimoNMBib xmlns=\"http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib\">\n
+        \           <record>\n              <control>\n                <sourcerecordid>10.1177/009430610703600252</sourcerecordid>\n
+        \               <sourceid>crossref</sourceid>\n                <recordid>TN_crossref10.1177/009430610703600252</recordid>\n
+        \               <sourceformat>XML</sourceformat>\n                <sourcesystem>Other</sourcesystem>\n
+        \             </control>\n              <display>\n                <type>article</type>\n
+        \               <title>Globalization from Below: Transnational Activists and
+        Protest Networks</title>\n                <creator>Smith, J.</creator>\n                <ispartof>Contemporary
+        Sociology: A Journal of Reviews, 2007, Vol.36(2), pp.191-192</ispartof>\n
+        \               <identifier>&lt;b>ISSN:&lt;/b> 0094-3061 ; &lt;b>DOI:&lt;/b>
+        http://dx.doi.org/10.1177/009430610703600252</identifier>\n                <language>eng</language>\n
+        \               <source>Sage Publications (via CrossRef)</source>\n                <lds50>peer_reviewed</lds50>\n
+        \               <version>2</version>\n              </display>\n              <links>\n
+        \               <openurl>$$Topenurl_article</openurl>\n                <openurlfulltext>$$Topenurlfull_article</openurlfulltext>\n
+        \               <addlink>$$Uhttp://fe.p.prod.primo.saas.exlibrisgroup.com:1701/primo_library/libweb/aboutCrossref.html$$DView
+        CrossRef copyright notice</addlink>\n              </links>\n              <search>\n
+        \               <creatorcontrib>Smith, J.</creatorcontrib>\n                <title>Globalization
+        from Below: Transnational Activists and Protest Networks</title>\n                <general>English</general>\n
+        \               <general>10.1177/009430610703600252</general>\n                <sourceid>crossref</sourceid>\n
+        \               <recordid>crossref10.1177/009430610703600252</recordid>\n
+        \               <issn>0094-3061</issn>\n                <issn>00943061</issn>\n
+        \               <rsrctype>article</rsrctype>\n                <creationdate>2007</creationdate>\n
+        \               <addtitle>Contemporary Sociology: A Journal of Reviews</addtitle>\n
+        \               <searchscope>crossref_sp</searchscope>\n                <searchscope>CrossRef</searchscope>\n
+        \               <searchscope>Crossref</searchscope>\n                <searchscope>crossref</searchscope>\n
+        \               <scope>crossref_sp</scope>\n                <scope>CrossRef</scope>\n
+        \               <scope>Crossref</scope>\n                <scope>crossref</scope>\n
+        \             </search>\n              <sort>\n                <title>Globalization
+        from Below: Transnational Activists and Protest Networks</title>\n                <author>Smith,
+        J.</author>\n                <creationdate>20070301</creationdate>\n              </sort>\n
+        \             <facets>\n                <language>eng</language>\n                <creationdate>2007</creationdate>\n
+        \               <collection>Sage Publications (CrossRef)</collection>\n                <prefilter>articles</prefilter>\n
+        \               <rsrctype>articles</rsrctype>\n                <creatorcontrib>Smith,
+        J.</creatorcontrib>\n                <jtitle>Contemporary Sociology: A Journal
+        Of Reviews</jtitle>\n                <toplevel>peer_reviewed</toplevel>\n
+        \               <frbrgroupid>8392744814617276471</frbrgroupid>\n                <frbrtype>5</frbrtype>\n
+        \             </facets>\n              <frbr>\n                <t>2</t>\n
+        \               <k1>2007</k1>\n                <k2>00943061</k2>\n                <k3>10.1177/009430610703600252</k3>\n
+        \               <k4>36</k4>\n                <k5>2</k5>\n                <k6>191</k6>\n
+        \               <k7>contemporary sociology journal of reviews</k7>\n                <k8>globalization
+        from below transnational activists protest networks</k8>\n                <k9>globalizationfrombelworks</k9>\n
+        \               <k12>globalizationfrombelowtra</k12>\n                <k15>jsmith</k15>\n
+        \               <k16>smithj</k16>\n              </frbr>\n              <delivery>\n
+        \               <delcategory>Remote Search Resource</delcategory>\n                <fulltext>fulltext</fulltext>\n
+        \             </delivery>\n              <ranking>\n                <booster1>1</booster1>\n
+        \               <booster2>1</booster2>\n                <pcg_type>aggregator_crossref</pcg_type>\n
+        \             </ranking>\n              <addata>\n                <aulast>Smith</aulast>\n
+        \               <aufirst>J.</aufirst>\n                <au>Smith, J.</au>\n
+        \               <atitle>Globalization from Below: Transnational Activists
+        and Protest Networks</atitle>\n                <jtitle>Contemporary Sociology:
+        A Journal of Reviews</jtitle>\n                <date>20070301</date>\n                <risdate>20070301</risdate>\n
+        \               <volume>36</volume>\n                <issue>2</issue>\n                <spage>191</spage>\n
+        \               <epage>192</epage>\n                <issn>0094-3061</issn>\n
+        \               <eissn>0094-3061</eissn>\n                <genre>article</genre>\n
+        \               <ristype>JOUR</ristype>\n                <doi>10.1177/009430610703600252</doi>\n
+        \             </addata>\n            </record>\n          </PrimoNMBib>\n
+        \         <sear:GETIT GetIt2=\"http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-07T12%3A53%3A55IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&amp;rft.jtitle=Journal%20of%20World%20Business&amp;rft.btitle=&amp;rft.aulast=Steyaert&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Steyaert%2C%20Chris&amp;rft.aucorp=&amp;rft.date=2011&amp;rft.volume=46&amp;rft.issue=3&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=270&amp;rft.epage=278&amp;rft.pages=270-278&amp;rft.artnum=&amp;rft.issn=1090-9516&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.1016/j.jwb.2010.07.003&amp;rft.eisbn=&amp;rft_dat=&lt;sciversesciencedirect_elsevier>S1090-9516(10)00042-8&lt;/sciversesciencedirect_elsevier>&amp;rft_id=info:oai/>\"
+        GetIt1=\"http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-07T12%3A53%3A55IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&amp;rft.jtitle=Journal%20of%20World%20Business&amp;rft.btitle=&amp;rft.aulast=Steyaert&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Steyaert%2C%20Chris&amp;rft.aucorp=&amp;rft.date=2011&amp;rft.volume=46&amp;rft.issue=3&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=270&amp;rft.epage=278&amp;rft.pages=270-278&amp;rft.artnum=&amp;rft.issn=1090-9516&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.1016/j.jwb.2010.07.003&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;svc.fulltext=yes&amp;rft.eisbn=&amp;rft_dat=&lt;sciversesciencedirect_elsevier>S1090-9516(10)00042-8&lt;/sciversesciencedirect_elsevier>&amp;rft_id=info:oai/>\"
+        deliveryCategory=\"Remote Search Resource\"/>\n          <sear:LINKS>\n            <sear:openurl><![CDATA[http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-07T12%3A53%3A55IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-crossref&rft_val_fmt=info:ofi/fmt:kev:mtx:&rft.genre=article&rft.atitle=Globalization%20from%20Below:%20Transnational%20Activists%20and%20Protest%20Networks&rft.jtitle=Contemporary%20Sociology:%20A%20Journal%20of%20Reviews&rft.btitle=&rft.aulast=Smith&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Smith%2C%20J.&rft.aucorp=&rft.date=20070301&rft.volume=36&rft.issue=2&rft.part=&rft.quarter=&rft.ssn=&rft.spage=191&rft.epage=192&rft.pages=&rft.artnum=&rft.issn=0094-3061&rft.eissn=0094-3061&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/10.1177/009430610703600252&rft.eisbn=&rft_dat=<crossref>10.1177/009430610703600252</crossref>&rft_id=info:oai/>]]></sear:openurl>\n
+        \           <sear:thumbnail/>\n            <sear:openurlfulltext><![CDATA[http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-07T12%3A53%3A55IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-crossref&rft_val_fmt=info:ofi/fmt:kev:mtx:&rft.genre=article&rft.atitle=Globalization%20from%20Below:%20Transnational%20Activists%20and%20Protest%20Networks&rft.jtitle=Contemporary%20Sociology:%20A%20Journal%20of%20Reviews&rft.btitle=&rft.aulast=Smith&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Smith%2C%20J.&rft.aucorp=&rft.date=20070301&rft.volume=36&rft.issue=2&rft.part=&rft.quarter=&rft.ssn=&rft.spage=191&rft.epage=192&rft.pages=&rft.artnum=&rft.issn=0094-3061&rft.eissn=0094-3061&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/10.1177/009430610703600252&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft.eisbn=&rft_dat=<crossref>10.1177/009430610703600252</crossref>&rft_id=info:oai/>]]></sear:openurlfulltext>\n
+        \           <sear:addlink>http://fe.p.prod.primo.saas.exlibrisgroup.com:1701/primo_library/libweb/aboutCrossref.html</sear:addlink>\n
+        \         </sear:LINKS>\n        </sear:DOC>\n        <sear:DOC LOCAL=\"false\"
+        SEARCH_ENGINE_TYPE=\"Primo Central Search Engine\" SEARCH_ENGINE=\"PrimoCentralThirdNode\"
+        NO=\"7\" RANK=\"0.023111328\" ID=\"234765749\">\n          <PrimoNMBib xmlns=\"http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib\">\n
+        \           <record>\n              <control>\n                <sourcerecordid>10.1093/rsq/hdq006</sourcerecordid>\n
+        \               <sourceid>oxford</sourceid>\n                <recordid>TN_oxford10.1093/rsq/hdq006</recordid>\n
+        \               <sourceformat>XML</sourceformat>\n                <sourcesystem>Other</sourcesystem>\n
+        \             </control>\n              <display>\n                <type>article</type>\n
+        \               <title>Transnational Criminal Law as a Governance Strategy
+        in the Global Labour Market: Criminalizing Globalization from Below</title>\n
+        \               <creator>Guilfoyle, Douglas</creator>\n                <ispartof>Refugee
+        Survey Quarterly, 2010, Vol. 29(1), pp.185-205</ispartof>\n                <identifier><![CDATA[<b>ISSN:
+        </b>1020-4067 ; <b>E-ISSN: </b>1471-695X ; <b>DOI: </b>10.1093/rsq/hdq006]]></identifier>\n
+        \               <description>This article examines the consequence of treating
+        irregular labour migration as a criminal law issue, rather than one of trade
+        or development. If States are increasingly committed to the free movement
+        of goods and skilled workers, why is the movement of unskilled workers a crime?
+        Adopting an economic analysis, it is clear that irregular migrants provide
+        labour-receiving States with a pool of workers who are cheap to employ, easy
+        to fire, and who are effectively unable or unwilling to invoke employment
+        rights. That is, migrant workers can be a significant source of cheap and
+        rightless labour. Furthermore, this may be viewed not as a market distortion
+        but a highly regulated part of the ordinary functioning of destination economies.
+        The economic benefits of irregular migrants result from their status: a status
+        regulated and perpetuated by law. High- and medium-income States may become
+        structurally dependent upon this externalized “ghetto” of low-cost foreign
+        labour, thus profiting from irregular migration while denouncing it. This
+        article argues that, if irregular migration economically benefits destination
+        States and is driven both by lack of development in labour-sending States
+        and migrants’ opportunity to remit money home, then the answer must lie in
+        expanded systems of “regular” labour migration closely linked to development
+        policy. Policy approaches must consider not only a trade/migrant–labour nexus
+        but a trade/migrant–labour/development nexus. The article concludes by advocating
+        that a set of principles of sustainable return is in the self-interest of
+        labour-receiving States and outlining the content and utility of such principles.
+        While the article aims to provide a theoretical account in an outline form
+        that is adaptable to a variety of situations, it uses the example of African
+        irregular migration into Spain and Spanish/EU responses to illustrate the
+        argument.</description>\n                <source>Oxford University Press</source>\n
+        \               <lds50>peer_reviewed</lds50>\n              </display>\n              <links>\n
+        \               <openurl>$$Topenurl_article</openurl>\n                <openurlfulltext>$$Topenurlfull_article</openurlfulltext>\n
+        \             </links>\n              <search>\n                <creatorcontrib>Guilfoyle,
+        Douglas</creatorcontrib>\n                <title>Transnational Criminal Law
+        as a Governance Strategy in the Global Labour Market: Criminalizing Globalization
+        from Below</title>\n                <description>This article examines the
+        consequence of treating irregular labour migration as a criminal law issue,
+        rather than one of trade or development. If States are increasingly committed
+        to the free movement of goods and skilled workers, why is the movement of
+        unskilled workers a crime? Adopting an economic analysis, it is clear that
+        irregular migrants provide labour-receiving States with a pool of workers
+        who are cheap to employ, easy to fire, and who are effectively unable or unwilling
+        to invoke employment rights. That is, migrant workers can be a significant
+        source of cheap and rightless labour. Furthermore, this may be viewed not
+        as a market distortion but a highly regulated part of the ordinary functioning
+        of destination economies. The economic benefits of irregular migrants result
+        from their status: a status regulated and perpetuated by law. High- and medium-income
+        States may become structurally dependent upon this externalized “ghetto” of
+        low-cost foreign labour, thus profiting from irregular migration while denouncing
+        it. This article argues that, if irregular migration economically benefits
+        destination States and is driven both by lack of development in labour-sending
+        States and migrants’ opportunity to remit money home, then the answer must
+        lie in expanded systems of “regular” labour migration closely linked to development
+        policy. Policy approaches must consider not only a trade/migrant–labour nexus
+        but a trade/migrant–labour/development nexus. The article concludes by advocating
+        that a set of principles of sustainable return is in the self-interest of
+        labour-receiving States and outlining the content and utility of such principles.
+        While the article aims to provide a theoretical account in an outline form
+        that is adaptable to a variety of situations, it uses the example of African
+        irregular migration into Spain and Spanish/EU responses to illustrate the
+        argument.</description>\n                <general>hdq006</general>\n                <general>10.1093/rsq/hdq006</general>\n
+        \               <general>Oxford Journals</general>\n                <sourceid>oxford</sourceid>\n
+        \               <recordid>oxford10.1093/rsq/hdq006</recordid>\n                <issn>1020-4067</issn>\n
+        \               <issn>10204067</issn>\n                <issn>1471-695X</issn>\n
+        \               <issn>1471695X</issn>\n                <rsrctype>article</rsrctype>\n
+        \               <creationdate>2010</creationdate>\n                <addtitle>Refugee
+        Survey Quarterly</addtitle>\n                <searchscope>oxford</searchscope>\n
+        \               <scope>oxford</scope>\n              </search>\n              <sort>\n
+        \               <title>Transnational Criminal Law as a Governance Strategy
+        in the Global Labour Market: Criminalizing Globalization from Below</title>\n
+        \               <author>Guilfoyle, Douglas</author>\n                <creationdate>20100800</creationdate>\n
+        \             </sort>\n              <facets>\n                <creationdate>2010</creationdate>\n
+        \               <collection>Oxford Journals (Oxford University Press)</collection>\n
+        \               <prefilter>articles</prefilter>\n                <rsrctype>articles</rsrctype>\n
+        \               <creatorcontrib>Guilfoyle, Douglas</creatorcontrib>\n                <jtitle>Refugee
+        Survey Quarterly</jtitle>\n                <toplevel>peer_reviewed</toplevel>\n
+        \               <frbrgroupid>513970567</frbrgroupid>\n                <frbrtype>6</frbrtype>\n
+        \             </facets>\n              <frbr>\n                <t>2</t>\n
+        \               <k1>2010</k1>\n                <k2>10204067</k2>\n                <k2>1471695X</k2>\n
+        \               <k3>10.1093/rsq/hdq006</k3>\n                <k4>29</k4>\n
+        \               <k5>1</k5>\n                <k6>185</k6>\n                <k7>refugee
+        survey quarterly</k7>\n                <k8>transnational criminal law as governance
+        strategy in the global labour market criminalizing globalization from below</k8>\n
+        \               <k9>transnationalcriminabelow</k9>\n                <k12>transnationalcriminallawa</k12>\n
+        \               <k15>douglasguilfoyle</k15>\n                <k16>guilfoyledouglas</k16>\n
+        \             </frbr>\n              <delivery>\n                <delcategory>Remote
+        Search Resource</delcategory>\n                <fulltext>fulltext</fulltext>\n
+        \             </delivery>\n              <ranking>\n                <booster1>1</booster1>\n
+        \               <booster2>1</booster2>\n                <pcg_type>publisher</pcg_type>\n
+        \             </ranking>\n              <addata>\n                <aulast>Guilfoyle</aulast>\n
+        \               <aufirst>Douglas</aufirst>\n                <au>Guilfoyle,
+        Douglas</au>\n                <atitle>Transnational Criminal Law as a Governance
+        Strategy in the Global Labour Market: Criminalizing Globalization from Below</atitle>\n
+        \               <jtitle>Refugee Survey Quarterly</jtitle>\n                <date>201008</date>\n
+        \               <risdate>201008</risdate>\n                <volume>29</volume>\n
+        \               <issue>1</issue>\n                <spage>185</spage>\n                <epage>205</epage>\n
+        \               <pages>185-205</pages>\n                <issn>1020-4067</issn>\n
+        \               <eissn>1471-695X</eissn>\n                <format>journal</format>\n
+        \               <genre>article</genre>\n                <ristype>JOUR</ristype>\n
+        \               <abstract>This article examines the consequence of treating
+        irregular labour migration as a criminal law issue, rather than one of trade
+        or development. If States are increasingly committed to the free movement
+        of goods and skilled workers, why is the movement of unskilled workers a crime?
+        Adopting an economic analysis, it is clear that irregular migrants provide
+        labour-receiving States with a pool of workers who are cheap to employ, easy
+        to fire, and who are effectively unable or unwilling to invoke employment
+        rights. That is, migrant workers can be a significant source of cheap and
+        rightless labour. Furthermore, this may be viewed not as a market distortion
+        but a highly regulated part of the ordinary functioning of destination economies.
+        The economic benefits of irregular migrants result from their status: a status
+        regulated and perpetuated by law. High- and medium-income States may become
+        structurally dependent upon this externalized “ghetto” of low-cost foreign
+        labour, thus profiting from irregular migration while denouncing it. This
+        article argues that, if irregular migration economically benefits destination
+        States and is driven both by lack of development in labour-sending States
+        and migrants’ opportunity to remit money home, then the answer must lie in
+        expanded systems of “regular” labour migration closely linked to development
+        policy. Policy approaches must consider not only a trade/migrant–labour nexus
+        but a trade/migrant–labour/development nexus. The article concludes by advocating
+        that a set of principles of sustainable return is in the self-interest of
+        labour-receiving States and outlining the content and utility of such principles.
+        While the article aims to provide a theoretical account in an outline form
+        that is adaptable to a variety of situations, it uses the example of African
+        irregular migration into Spain and Spanish/EU responses to illustrate the
+        argument.</abstract>\n                <pub>Oxford University Press</pub>\n
+        \               <doi>10.1093/rsq/hdq006</doi>\n              </addata>\n            </record>\n
+        \         </PrimoNMBib>\n          <sear:GETIT GetIt2=\"http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-07T12%3A53%3A55IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&amp;rft.jtitle=Journal%20of%20World%20Business&amp;rft.btitle=&amp;rft.aulast=Steyaert&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Steyaert%2C%20Chris&amp;rft.aucorp=&amp;rft.date=2011&amp;rft.volume=46&amp;rft.issue=3&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=270&amp;rft.epage=278&amp;rft.pages=270-278&amp;rft.artnum=&amp;rft.issn=1090-9516&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.1016/j.jwb.2010.07.003&amp;rft.eisbn=&amp;rft_dat=&lt;sciversesciencedirect_elsevier>S1090-9516(10)00042-8&lt;/sciversesciencedirect_elsevier>&amp;rft_id=info:oai/>\"
+        GetIt1=\"http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-07T12%3A53%3A55IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&amp;rft.jtitle=Journal%20of%20World%20Business&amp;rft.btitle=&amp;rft.aulast=Steyaert&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Steyaert%2C%20Chris&amp;rft.aucorp=&amp;rft.date=2011&amp;rft.volume=46&amp;rft.issue=3&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=270&amp;rft.epage=278&amp;rft.pages=270-278&amp;rft.artnum=&amp;rft.issn=1090-9516&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.1016/j.jwb.2010.07.003&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;svc.fulltext=yes&amp;rft.eisbn=&amp;rft_dat=&lt;sciversesciencedirect_elsevier>S1090-9516(10)00042-8&lt;/sciversesciencedirect_elsevier>&amp;rft_id=info:oai/>\"
+        deliveryCategory=\"Remote Search Resource\"/>\n          <sear:LINKS>\n            <sear:openurl><![CDATA[http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-07T12%3A53%3A55IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-oxford&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Transnational%20Criminal%20Law%20as%20a%20Governance%20Strategy%20in%20the%20Global%20Labour%20Market:%20Criminalizing%20Globalization%20from%20Below&rft.jtitle=Refugee%20Survey%20Quarterly&rft.btitle=&rft.aulast=Guilfoyle&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Guilfoyle%2C%20Douglas&rft.aucorp=&rft.date=201008&rft.volume=29&rft.issue=1&rft.part=&rft.quarter=&rft.ssn=&rft.spage=185&rft.epage=205&rft.pages=185-205&rft.artnum=&rft.issn=1020-4067&rft.eissn=1471-695X&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/10.1093/rsq/hdq006&rft.eisbn=&rft_dat=<oxford>10.1093/rsq/hdq006</oxford>&rft_id=info:oai/>]]></sear:openurl>\n
+        \           <sear:thumbnail/>\n            <sear:openurlfulltext><![CDATA[http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-07T12%3A53%3A55IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-oxford&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Transnational%20Criminal%20Law%20as%20a%20Governance%20Strategy%20in%20the%20Global%20Labour%20Market:%20Criminalizing%20Globalization%20from%20Below&rft.jtitle=Refugee%20Survey%20Quarterly&rft.btitle=&rft.aulast=Guilfoyle&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Guilfoyle%2C%20Douglas&rft.aucorp=&rft.date=201008&rft.volume=29&rft.issue=1&rft.part=&rft.quarter=&rft.ssn=&rft.spage=185&rft.epage=205&rft.pages=185-205&rft.artnum=&rft.issn=1020-4067&rft.eissn=1471-695X&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/10.1093/rsq/hdq006&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft.eisbn=&rft_dat=<oxford>10.1093/rsq/hdq006</oxford>&rft_id=info:oai/>]]></sear:openurlfulltext>\n
+        \         </sear:LINKS>\n        </sear:DOC>\n        <sear:DOC LOCAL=\"false\"
+        SEARCH_ENGINE_TYPE=\"Primo Central Search Engine\" SEARCH_ENGINE=\"PrimoCentralThirdNode\"
+        NO=\"8\" RANK=\"0.022642773\" ID=\"81405091\">\n          <PrimoNMBib xmlns=\"http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib\">\n
+        \           <record>\n              <control>\n                <sourcerecordid>10.1111/j.1468-2427.2005.00630.x</sourcerecordid>\n
+        \               <sourceid>wj</sourceid>\n                <recordid>TN_wj10.1111/j.1468-2427.2005.00630.x</recordid>\n
+        \               <sourcesystem>Other</sourcesystem>\n              </control>\n
+        \             <display>\n                <type>article</type>\n                <title>Globalization
+        from Below: The Ranking of Global Immigrant Cities</title>\n                <creator>Benton‐short,
+        Lisa ; Price, Marie D. ; Friedman, Samantha</creator>\n                <ispartof>International
+        Journal of Urban and Regional Research, 2005, Vol.29(4), pp.945-959</ispartof>\n
+        \               <identifier><![CDATA[<b>ISSN: </b>0309-1317 ; <b>E-ISSN: </b>1468-2427
+        ; <b>DOI: </b>10.1111/j.1468-2427.2005.00630.x]]></identifier>\n                <description>Immigration
+        to major cities is an important dimension of cultural globalization, one that
+        has been largely ignored in the global cities literature. Rates of immigration
+        to major world cities are an important indicator of global city status and
+        should be included in determining urban hierarchy indexes. Our study considers
+        immigration in more than 100 metropolitan areas, using data from national
+        censuses from more than 50 countries. We rank major cities of immigration
+        and compare them to well‐known global city hierarchies. Using immigration
+        data, we create an urban immigrant index. The index considers four factors
+        of immigration: (1) the percentage of foreign‐born, (2) the total number of
+        foreign‐born, (3) the diversity of the foreign‐born stock, and (4) whether
+        immigrants are from neighboring countries or non‐neighboring countries. This
+        is the first time that an international urban immigrant data set and index
+        have been created. The study explains the empirical challenge of acquiring
+        comparable international metropolitan data and the limits of this research.
+        Some of the cities that rank highly in the index are commonly cited as world
+        cities (London, New York and Frankfurt); others such as Toronto, Amsterdam
+        and Dubai seldom appear so highly ranked. L’Immigration vers les grandes villes
+        est une dimension importante de la mondialisation culturelle, dimension largement
+        ignorée dans la littérature sur les villes planétaires. Les taux d’immigration
+        vers les grandes villes mondiales sont un indicateur significatif du statut
+        de ville planétaire et devraient être pris en compte pour établir des répertoires
+        de hiérarchie urbaine. Cette étude, qui couvre l’immigration dans plus de
+        cent zones métropolitaines, utilise les données de recensements nationaux
+        provenant de plus de 50 pays. Elle classe les principales villes d’immigration
+        et les compare aux hiérarchies de villes planétaires reconnues. A partir des
+        données sur l’immigration, est créé un répertoire des immigrants urbains,
+        lequel se réfère à quatre facteurs d’immigration: (1) le pourcentage néà l’étranger,
+        (2) l’effectif total néà l’étranger, (3) la diversité de la population née
+        à l’étranger et (4) si les migrants viennent de pays voisins ou non. C’est
+        la première fois qu’un fichier de données et un répertoire d’immigrants urbains
+        internationaux sont créés. L’étude expose le défi empirique pour récupérer
+        des données métropolitaines internationales comparables, ainsi que les limites
+        de cette recherche. Certaines des villes placées en tête du répertoire sont
+        fréquemment citées comme villes mondiales (Londres, New York et Frankfort),
+        d’autres comme Toronto, Amsterdam et Dubaï apparaissent rarement à ce niveau
+        de classement.</description>\n                <source>John Wiley &amp; Sons,
+        Inc.</source>\n                <lds50>peer_reviewed</lds50>\n                <version>3</version>\n
+        \             </display>\n              <links>\n                <openurl>$$Topenurl_article</openurl>\n
+        \               <openurlfulltext>$$Topenurlfull_article</openurlfulltext>\n
+        \             </links>\n              <search>\n                <creatorcontrib>Benton‐short,
+        Lisa</creatorcontrib>\n                <creatorcontrib>Price, Marie D.</creatorcontrib>\n
+        \               <creatorcontrib>Friedman, Samantha</creatorcontrib>\n                <title>Globalization
+        from Below: The Ranking of Global Immigrant Cities</title>\n                <description>Immigration
+        to major cities is an important dimension of cultural globalization, one that
+        has been largely ignored in the global cities literature. Rates of immigration
+        to major world cities are an important indicator of global city status and
+        should be included in determining urban hierarchy indexes. Our study considers
+        immigration in more than 100 metropolitan areas, using data from national
+        censuses from more than 50 countries. We rank major cities of immigration
+        and compare them to well‐known global city hierarchies. Using immigration
+        data, we create an urban immigrant index. The index considers four factors
+        of immigration: (1) the percentage of foreign‐born, (2) the total number of
+        foreign‐born, (3) the diversity of the foreign‐born stock, and (4) whether
+        immigrants are from neighboring countries or non‐neighboring countries. This
+        is the first time that an international urban immigrant data set and index
+        have been created. The study explains the empirical challenge of acquiring
+        comparable international metropolitan data and the limits of this research.
+        Some of the cities that rank highly in the index are commonly cited as world
+        cities (London, New York and Frankfurt); others such as Toronto, Amsterdam
+        and Dubai seldom appear so highly ranked. L’Immigration vers les grandes villes
+        est une dimension importante de la mondialisation culturelle, dimension largement
+        ignorée dans la littérature sur les villes planétaires. Les taux d’immigration
+        vers les grandes villes mondiales sont un indicateur significatif du statut
+        de ville planétaire et devraient être pris en compte pour établir des répertoires
+        de hiérarchie urbaine. Cette étude, qui couvre l’immigration dans plus de
+        cent zones métropolitaines, utilise les données de recensements nationaux
+        provenant de plus de 50 pays. Elle classe les principales villes d’immigration
+        et les compare aux hiérarchies de villes planétaires reconnues. A partir des
+        données sur l’immigration, est créé un répertoire des immigrants urbains,
+        lequel se réfère à quatre facteurs d’immigration: (1) le pourcentage néà l’étranger,
+        (2) l’effectif total néà l’étranger, (3) la diversité de la population née
+        à l’étranger et (4) si les migrants viennent de pays voisins ou non. C’est
+        la première fois qu’un fichier de données et un répertoire d’immigrants urbains
+        internationaux sont créés. L’étude expose le défi empirique pour récupérer
+        des données métropolitaines internationales comparables, ainsi que les limites
+        de cette recherche. Certaines des villes placées en tête du répertoire sont
+        fréquemment citées comme villes mondiales (Londres, New York et Frankfort),
+        d’autres comme Toronto, Amsterdam et Dubaï apparaissent rarement à ce niveau
+        de classement.</description>\n                <general>Blackwell Publishing
+        Ltd.</general>\n                <general>10.1111/j.1468-2427.2005.00630.x</general>\n
+        \               <general>Wiley Online Library</general>\n                <sourceid>wj</sourceid>\n
+        \               <recordid>wj10.1111/j.1468-2427.2005.00630.x</recordid>\n
+        \               <issn>0309-1317</issn>\n                <issn>03091317</issn>\n
+        \               <issn>1468-2427</issn>\n                <issn>14682427</issn>\n
+        \               <rsrctype>article</rsrctype>\n                <creationdate>2005</creationdate>\n
+        \               <addtitle>International Journal of Urban and Regional Research</addtitle>\n
+        \               <searchscope>wj</searchscope>\n                <searchscope>wiley</searchscope>\n
+        \               <scope>wj</scope>\n                <scope>wiley</scope>\n
+        \             </search>\n              <sort>\n                <title>Globalization
+        from Below: The Ranking of Global Immigrant Cities</title>\n                <author>Benton‐short,
+        Lisa ; Price, Marie D. ; Friedman, Samantha</author>\n                <creationdate>20051200</creationdate>\n
+        \             </sort>\n              <facets>\n                <creationdate>2005</creationdate>\n
+        \               <collection>Wiley Online Library</collection>\n                <prefilter>articles</prefilter>\n
+        \               <rsrctype>articles</rsrctype>\n                <creatorcontrib>Benton‐short,
+        Lisa</creatorcontrib>\n                <creatorcontrib>Price, Marie D.</creatorcontrib>\n
+        \               <creatorcontrib>Friedman, Samantha</creatorcontrib>\n                <jtitle>International
+        Journal of Urban and Regional Research</jtitle>\n                <toplevel>peer_reviewed</toplevel>\n
+        \               <frbrgroupid>5601034458896755094</frbrgroupid>\n                <frbrtype>5</frbrtype>\n
+        \             </facets>\n              <frbr>\n                <t>2</t>\n
+        \               <k1>2005</k1>\n                <k2>03091317</k2>\n                <k2>14682427</k2>\n
+        \               <k3>10.1111/j.1468-2427.2005.00630.x</k3>\n                <k4>29</k4>\n
+        \               <k5>4</k5>\n                <k6>945</k6>\n                <k7>international
+        journal of urban regional research</k7>\n                <k8>globalization
+        from below the ranking of global immigrant cities</k8>\n                <k9>globalizationfrombelities</k9>\n
+        \               <k12>globalizationfrombelowthe</k12>\n                <k15>lisabenton‐short</k15>\n
+        \               <k16>benton‐shortlisa</k16>\n              </frbr>\n              <delivery>\n
+        \               <delcategory>Remote Search Resource</delcategory>\n                <fulltext>fulltext</fulltext>\n
+        \             </delivery>\n              <ranking>\n                <booster1>1</booster1>\n
+        \               <booster2>1</booster2>\n                <pcg_type>publisher</pcg_type>\n
+        \             </ranking>\n              <addata>\n                <aulast>BENTON‐SHORT</aulast>\n
+        \               <aulast>PRICE</aulast>\n                <aulast>FRIEDMAN</aulast>\n
+        \               <aufirst>LISA</aufirst>\n                <aufirst>MARIE D.</aufirst>\n
+        \               <aufirst>SAMANTHA</aufirst>\n                <au>Benton‐short,
+        Lisa</au>\n                <au>Price, Marie D.</au>\n                <au>Friedman,
+        Samantha</au>\n                <atitle>Globalization from Below: The Ranking
+        of Global Immigrant Cities</atitle>\n                <jtitle>International
+        Journal of Urban and Regional Research</jtitle>\n                <date>200512</date>\n
+        \               <risdate>200512</risdate>\n                <volume>29</volume>\n
+        \               <issue>4</issue>\n                <spage>945</spage>\n                <epage>959</epage>\n
+        \               <issn>0309-1317</issn>\n                <eissn>1468-2427</eissn>\n
+        \               <genre>article</genre>\n                <ristype>JOUR</ristype>\n
+        \               <abstract>Immigration to major cities is an important dimension
+        of cultural globalization, one that has been largely ignored in the global
+        cities literature. Rates of immigration to major world cities are an important
+        indicator of global city status and should be included in determining urban
+        hierarchy indexes. Our study considers immigration in more than 100 metropolitan
+        areas, using data from national censuses from more than 50 countries. We rank
+        major cities of immigration and compare them to well‐known global city hierarchies.
+        Using immigration data, we create an urban immigrant index. The index considers
+        four factors of immigration: (1) the percentage of foreign‐born, (2) the total
+        number of foreign‐born, (3) the diversity of the foreign‐born stock, and (4)
+        whether immigrants are from neighboring countries or non‐neighboring countries.
+        This is the first time that an international urban immigrant data set and
+        index have been created. The study explains the empirical challenge of acquiring
+        comparable international metropolitan data and the limits of this research.
+        Some of the cities that rank highly in the index are commonly cited as world
+        cities (London, New York and Frankfurt); others such as Toronto, Amsterdam
+        and Dubai seldom appear so highly ranked. L’Immigration vers les grandes villes
+        est une dimension importante de la mondialisation culturelle, dimension largement
+        ignorée dans la littérature sur les villes planétaires. Les taux d’immigration
+        vers les grandes villes mondiales sont un indicateur significatif du statut
+        de ville planétaire et devraient être pris en compte pour établir des répertoires
+        de hiérarchie urbaine. Cette étude, qui couvre l’immigration dans plus de
+        cent zones métropolitaines, utilise les données de recensements nationaux
+        provenant de plus de 50 pays. Elle classe les principales villes d’immigration
+        et les compare aux hiérarchies de villes planétaires reconnues. A partir des
+        données sur l’immigration, est créé un répertoire des immigrants urbains,
+        lequel se réfère à quatre facteurs d’immigration: (1) le pourcentage néà l’étranger,
+        (2) l’effectif total néà l’étranger, (3) la diversité de la population née
+        à l’étranger et (4) si les migrants viennent de pays voisins ou non. C’est
+        la première fois qu’un fichier de données et un répertoire d’immigrants urbains
+        internationaux sont créés. L’étude expose le défi empirique pour récupérer
+        des données métropolitaines internationales comparables, ainsi que les limites
+        de cette recherche. Certaines des villes placées en tête du répertoire sont
+        fréquemment citées comme villes mondiales (Londres, New York et Frankfort),
+        d’autres comme Toronto, Amsterdam et Dubaï apparaissent rarement à ce niveau
+        de classement.</abstract>\n                <cop>Oxford, UK and Malden, USA</cop>\n
+        \               <pub>Blackwell Publishing Ltd.</pub>\n                <doi>10.1111/j.1468-2427.2005.00630.x</doi>\n
+        \             </addata>\n            </record>\n          </PrimoNMBib>\n
+        \         <sear:GETIT GetIt2=\"http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-07T12%3A53%3A55IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&amp;rft.jtitle=Journal%20of%20World%20Business&amp;rft.btitle=&amp;rft.aulast=Steyaert&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Steyaert%2C%20Chris&amp;rft.aucorp=&amp;rft.date=2011&amp;rft.volume=46&amp;rft.issue=3&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=270&amp;rft.epage=278&amp;rft.pages=270-278&amp;rft.artnum=&amp;rft.issn=1090-9516&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.1016/j.jwb.2010.07.003&amp;rft.eisbn=&amp;rft_dat=&lt;sciversesciencedirect_elsevier>S1090-9516(10)00042-8&lt;/sciversesciencedirect_elsevier>&amp;rft_id=info:oai/>\"
+        GetIt1=\"http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-07T12%3A53%3A55IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&amp;rft.jtitle=Journal%20of%20World%20Business&amp;rft.btitle=&amp;rft.aulast=Steyaert&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Steyaert%2C%20Chris&amp;rft.aucorp=&amp;rft.date=2011&amp;rft.volume=46&amp;rft.issue=3&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=270&amp;rft.epage=278&amp;rft.pages=270-278&amp;rft.artnum=&amp;rft.issn=1090-9516&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.1016/j.jwb.2010.07.003&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;svc.fulltext=yes&amp;rft.eisbn=&amp;rft_dat=&lt;sciversesciencedirect_elsevier>S1090-9516(10)00042-8&lt;/sciversesciencedirect_elsevier>&amp;rft_id=info:oai/>\"
+        deliveryCategory=\"Remote Search Resource\"/>\n          <sear:LINKS>\n            <sear:openurl><![CDATA[http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-07T12%3A53%3A55IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-wj&rft_val_fmt=info:ofi/fmt:kev:mtx:&rft.genre=article&rft.atitle=Globalization%20from%20Below:%20The%20Ranking%20of%20Global%20Immigrant%20Cities&rft.jtitle=International%20Journal%20of%20Urban%20and%20Regional%20Research&rft.btitle=&rft.aulast=BENTON‐SHORT&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Benton‐short%2C%20Lisa&rft.aucorp=&rft.date=200512&rft.volume=29&rft.issue=4&rft.part=&rft.quarter=&rft.ssn=&rft.spage=945&rft.epage=959&rft.pages=&rft.artnum=&rft.issn=0309-1317&rft.eissn=1468-2427&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/10.1111/j.1468-2427.2005.00630.x&rft.eisbn=&rft_dat=<wj>10.1111/j.1468-2427.2005.00630.x</wj>&rft_id=info:oai/>]]></sear:openurl>\n
+        \           <sear:thumbnail/>\n            <sear:openurlfulltext><![CDATA[http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-07T12%3A53%3A55IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-wj&rft_val_fmt=info:ofi/fmt:kev:mtx:&rft.genre=article&rft.atitle=Globalization%20from%20Below:%20The%20Ranking%20of%20Global%20Immigrant%20Cities&rft.jtitle=International%20Journal%20of%20Urban%20and%20Regional%20Research&rft.btitle=&rft.aulast=BENTON‐SHORT&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Benton‐short%2C%20Lisa&rft.aucorp=&rft.date=200512&rft.volume=29&rft.issue=4&rft.part=&rft.quarter=&rft.ssn=&rft.spage=945&rft.epage=959&rft.pages=&rft.artnum=&rft.issn=0309-1317&rft.eissn=1468-2427&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/10.1111/j.1468-2427.2005.00630.x&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft.eisbn=&rft_dat=<wj>10.1111/j.1468-2427.2005.00630.x</wj>&rft_id=info:oai/>]]></sear:openurlfulltext>\n
+        \         </sear:LINKS>\n        </sear:DOC>\n        <sear:DOC LOCAL=\"false\"
+        SEARCH_ENGINE_TYPE=\"Primo Central Search Engine\" SEARCH_ENGINE=\"PrimoCentralThirdNode\"
+        NO=\"9\" RANK=\"0.022344036\" ID=\"226953889\">\n          <PrimoNMBib xmlns=\"http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib\">\n
+        \           <record>\n              <control>\n                <sourcerecordid>10.2307/1049706</sourcerecordid>\n
+        \               <sourceid>jstor</sourceid>\n                <recordid>TN_jstor10.2307/1049706</recordid>\n
+        \               <sourceformat>XML</sourceformat>\n                <sourcesystem>Other</sourcesystem>\n
+        \             </control>\n              <display>\n                <type>article</type>\n
+        \               <title>Globalization from below: Toward a Collectively Rational
+        and Democratic Global Commonwealth</title>\n                <creator>Chase-dunn,
+        Christopher</creator>\n                <ispartof>Annals of the American Academy
+        of Political and Social Science, 2002, Vol.581(), pp.48-61</ispartof>\n                <identifier>&lt;b>ISSN:&lt;/b>
+        00027162</identifier>\n                <subject>Economics; Politicalscience;
+        Sociology</subject>\n                <description>This article presents a
+        model of the structures and processes of the modern world-system and proposes
+        a project to transform the system into a democratic and collectively rational
+        global commonwealth. Popular transnational social movements are challenging
+        the ideological hegemony of corporate capitalism. The global women's movement,
+        the labor movement, environmentalist movements, and indigenous movements are
+        attempting to form strong alliances that can challenge the domination of an
+        emerging transnational capitalist class. This article argues that new democratic
+        socialist states in the semiperiphery will be crucial allies and sources of
+        support for the antisystemic movements.</description>\n                <language>eng</language>\n
+        \               <source>JSTOR</source>\n                <lds50>peer_reviewed</lds50>\n
+        \             </display>\n              <links>\n                <openurl>$$Topenurl_article</openurl>\n
+        \               <backlink>$$Uhttp://www.jstor.org/stable/10.2307/1049706?origin=api$$EView_this_record_in_JSTOR</backlink>\n
+        \               <openurlfulltext>$$Topenurlfull_article</openurlfulltext>\n
+        \             </links>\n              <search>\n                <creatorcontrib>Chase-Dunn,
+        Christopher</creatorcontrib>\n                <title>Globalization from below:
+        Toward a Collectively Rational and Democratic Global Commonwealth</title>\n
+        \               <description>This article presents a model of the structures
+        and processes of the modern world-system and proposes a project to transform
+        the system into a democratic and collectively rational global commonwealth.
+        Popular transnational social movements are challenging the ideological hegemony
+        of corporate capitalism. The global women's movement, the labor movement,
+        environmentalist movements, and indigenous movements are attempting to form
+        strong alliances that can challenge the domination of an emerging transnational
+        capitalist class. This article argues that new democratic socialist states
+        in the semiperiphery will be crucial allies and sources of support for the
+        antisystemic movements.</description>\n                <subject>economics</subject>\n
+        \               <subject>politicalscience</subject>\n                <subject>sociology</subject>\n
+        \               <general>10.2307/1049706</general>\n                <general>English</general>\n
+        \               <general>JSOTR</general>\n                <sourceid>jstor</sourceid>\n
+        \               <recordid>jstor10.2307/1049706</recordid>\n                <issn>0002-7162</issn>\n
+        \               <issn>00027162</issn>\n                <rsrctype>article</rsrctype>\n
+        \               <creationdate>2002</creationdate>\n                <recordtype>article</recordtype>\n
+        \               <addtitle>Annals of the American Academy of Political and
+        Social Science</addtitle>\n                <searchscope>jstor</searchscope>\n
+        \               <searchscope>jstor_asc7</searchscope>\n                <scope>jstor</scope>\n
+        \               <scope>jstor_asc7</scope>\n              </search>\n              <sort>\n
+        \               <title>Globalization from below: Toward a Collectively Rational
+        and Democratic Global Commonwealth</title>\n                <author>Chase-Dunn,
+        Christopher</author>\n                <creationdate>20020501</creationdate>\n
+        \             </sort>\n              <facets>\n                <language>eng</language>\n
+        \               <creationdate>2002</creationdate>\n                <topic>Economics</topic>\n
+        \               <topic>Politicalscience</topic>\n                <topic>Sociology</topic>\n
+        \               <collection>Arts &amp; Sciences (JSTOR)</collection>\n                <prefilter>articles</prefilter>\n
+        \               <rsrctype>articles</rsrctype>\n                <creatorcontrib>Chase-dunn,
+        Christopher</creatorcontrib>\n                <jtitle>Annals Of The American
+        Academy Of Political And Social Science</jtitle>\n                <toplevel>peer_reviewed</toplevel>\n
+        \               <frbrgroupid>174407987</frbrgroupid>\n                <frbrtype>6</frbrtype>\n
+        \             </facets>\n              <frbr>\n                <t>2</t>\n
+        \               <k1>2002</k1>\n                <k2>00027162</k2>\n                <k4>581</k4>\n
+        \               <k6>48</k6>\n                <k7>annals of the american academy
+        of political social science</k7>\n                <k8>globalization from below
+        toward collectively rational democratic global commonwealth</k8>\n                <k9>globalizationfrombelealth</k9>\n
+        \               <k12>globalizationfrombelowtow</k12>\n                <k15>christopherchasedunn</k15>\n
+        \               <k16>chasedunnchristopher</k16>\n              </frbr>\n              <delivery>\n
+        \               <delcategory>Remote Search Resource</delcategory>\n                <fulltext>fulltext</fulltext>\n
+        \             </delivery>\n              <ranking>\n                <booster1>1</booster1>\n
+        \               <booster2>1</booster2>\n                <pcg_type>aggregator</pcg_type>\n
+        \             </ranking>\n              <addata>\n                <aulast>Chase-Dunn</aulast>\n
+        \               <aufirst>Christopher</aufirst>\n                <au>Chase-Dunn,
+        Christopher</au>\n                <atitle>Globalization from below: Toward
+        a Collectively Rational and Democratic Global Commonwealth</atitle>\n                <jtitle>Annals
+        of the American Academy of Political and Social Science</jtitle>\n                <volume>581</volume>\n
+        \               <spage>48</spage>\n                <epage>61</epage>\n                <pages>48-61</pages>\n
+        \               <issn>00027162</issn>\n                <genre>article</genre>\n
+        \               <ristype>JOUR</ristype>\n                <abstract>This article
+        presents a model of the structures and processes of the modern world-system
+        and proposes a project to transform the system into a democratic and collectively
+        rational global commonwealth. Popular transnational social movements are challenging
+        the ideological hegemony of corporate capitalism. The global women's movement,
+        the labor movement, environmentalist movements, and indigenous movements are
+        attempting to form strong alliances that can challenge the domination of an
+        emerging transnational capitalist class. This article argues that new democratic
+        socialist states in the semiperiphery will be crucial allies and sources of
+        support for the antisystemic movements.</abstract>\n                <pub>American
+        Academy of Political and Social Science;Sage Publications, Inc.</pub>\n                <url>http://www.jstor.org/stable/10.2307/1049706?origin=api</url>\n
+        \               <lad02>20020501</lad02>\n                <date>20020501</date>\n
+        \               <risdate>20020501</risdate>\n              </addata>\n            </record>\n
+        \         </PrimoNMBib>\n          <sear:GETIT GetIt2=\"http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-07T12%3A53%3A55IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&amp;rft.jtitle=Journal%20of%20World%20Business&amp;rft.btitle=&amp;rft.aulast=Steyaert&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Steyaert%2C%20Chris&amp;rft.aucorp=&amp;rft.date=2011&amp;rft.volume=46&amp;rft.issue=3&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=270&amp;rft.epage=278&amp;rft.pages=270-278&amp;rft.artnum=&amp;rft.issn=1090-9516&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.1016/j.jwb.2010.07.003&amp;rft.eisbn=&amp;rft_dat=&lt;sciversesciencedirect_elsevier>S1090-9516(10)00042-8&lt;/sciversesciencedirect_elsevier>&amp;rft_id=info:oai/>\"
+        GetIt1=\"http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-07T12%3A53%3A55IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-sciversesciencedirect_elsevier&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Multilingual%20organizations%20as%20‘linguascapes’:%20Negotiating%20the%20position%20of%20English%20through%20discursive%20practices&amp;rft.jtitle=Journal%20of%20World%20Business&amp;rft.btitle=&amp;rft.aulast=Steyaert&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Steyaert%2C%20Chris&amp;rft.aucorp=&amp;rft.date=2011&amp;rft.volume=46&amp;rft.issue=3&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=270&amp;rft.epage=278&amp;rft.pages=270-278&amp;rft.artnum=&amp;rft.issn=1090-9516&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.1016/j.jwb.2010.07.003&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;svc.fulltext=yes&amp;rft.eisbn=&amp;rft_dat=&lt;sciversesciencedirect_elsevier>S1090-9516(10)00042-8&lt;/sciversesciencedirect_elsevier>&amp;rft_id=info:oai/>\"
+        deliveryCategory=\"Remote Search Resource\"/>\n          <sear:LINKS>\n            <sear:openurl><![CDATA[http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-07T12%3A53%3A55IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-jstor&rft_val_fmt=info:ofi/fmt:kev:mtx:&rft.genre=article&rft.atitle=Globalization%20from%20below:%20Toward%20a%20Collectively%20Rational%20and%20Democratic%20Global%20Commonwealth&rft.jtitle=Annals%20of%20the%20American%20Academy%20of%20Political%20and%20Social%20Science&rft.btitle=&rft.aulast=Chase-Dunn&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Chase-Dunn%2C%20Christopher&rft.aucorp=&rft.date=20020501&rft.volume=581&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=48&rft.epage=61&rft.pages=48-61&rft.artnum=&rft.issn=00027162&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.eisbn=&rft_dat=<jstor>10.2307/1049706</jstor>&rft_id=info:oai/>]]></sear:openurl>\n
+        \           <sear:backlink>http://www.jstor.org/stable/10.2307/1049706?origin=api</sear:backlink>\n
+        \           <sear:thumbnail/>\n            <sear:openurlfulltext><![CDATA[http://sfx-demo.exlibrisgroup.com:3210/primo_demo?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-07T12%3A53%3A55IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-jstor&rft_val_fmt=info:ofi/fmt:kev:mtx:&rft.genre=article&rft.atitle=Globalization%20from%20below:%20Toward%20a%20Collectively%20Rational%20and%20Democratic%20Global%20Commonwealth&rft.jtitle=Annals%20of%20the%20American%20Academy%20of%20Political%20and%20Social%20Science&rft.btitle=&rft.aulast=Chase-Dunn&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Chase-Dunn%2C%20Christopher&rft.aucorp=&rft.date=20020501&rft.volume=581&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=48&rft.epage=61&rft.pages=48-61&rft.artnum=&rft.issn=00027162&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft.eisbn=&rft_dat=<jstor>10.2307/1049706</jstor>&rft_id=info:oai/>]]></sear:openurlfulltext>\n
+        \         </sear:LINKS>\n        </sear:DOC>\n      </sear:DOCSET>\n    </sear:RESULT>\n
+        \   <sear:searchToken>0</sear:searchToken>\n  </sear:JAGROOT>\n</sear:SEGMENTS>\n"
+    http_version: 
+  recorded_at: Tue, 07 Aug 2012 17:53:55 GMT
+recorded_with: VCR 2.2.4
