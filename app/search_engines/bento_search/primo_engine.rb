@@ -172,7 +172,8 @@ class BentoSearch::PrimoEngine
     url += "&onCampus=#{ authenticated_end_user?(args) ? 'true' : 'false'}"
     
     
-    query = "any,contains,#{prepared_query args[:query]}"
+    field = args[:search_field].present? ? args[:search_field] : "any"     
+    query = "#{field},contains,#{prepared_query args[:query]}"
     
     url += "&query=#{CGI.escape query}"
     
@@ -184,9 +185,9 @@ class BentoSearch::PrimoEngine
     # others are avail too, this is not exhaustive. 
     {
       "creator"   => {:semantic => :author},
-      "title"     => {:semantic => :title}
-      "sub"       => {:semantic => :subject}      
-      "isbn"      => {:semantic => :isbn}
+      "title"     => {:semantic => :title},
+      "sub"       => {:semantic => :subject},      
+      "isbn"      => {:semantic => :isbn},
       "issn"      => {:semantic => :issn}
     }
   end
