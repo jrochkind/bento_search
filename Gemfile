@@ -15,5 +15,8 @@ gem "jquery-rails"
 
 gem 'debugger', :platform => :mri_19
 
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+gem "sqlite3", :platform => [:ruby, :mswin, :mingw]
+
+# for JRuby
+
+gem "jdbc-sqlite3", :platform => :jruby
