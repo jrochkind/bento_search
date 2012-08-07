@@ -27,8 +27,9 @@ class PrimoEngineTest < ActiveSupport::TestCase
     
     # not every result has every field, but at time we recorded
     # with VCR, this result for this search did. Sorry, a bit fragile. 
-    %w{title authors volume issue start_page end_page journal_title issn doi publisher abstract}.each do |attr|
-      assert_present first.send(attr), "has #{attr}"
+    # publisher
+    %w{format_str format title authors volume issue start_page end_page journal_title issn doi abstract}.each do |attr|
+      assert_present first.send(attr), "must have #{attr}"
     end
     
   end

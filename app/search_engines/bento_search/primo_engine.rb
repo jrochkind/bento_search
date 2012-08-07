@@ -59,11 +59,12 @@ class BentoSearch::PrimoEngine
       item.title      = text_at_xpath(doc_xml, "./PrimoNMBib/record/display/title")
       item.abstract   = text_at_xpath(doc_xml, "./PrimoNMBib/record/addata/abstract") 
       
+
       doc_xml.xpath("./PrimoNMBib/record/facets/creatorcontrib").each do |author_node|
         item.authors << BentoSearch::Author.new(:display => author_node.text)
       end
-      
-      
+
+            
       item.journal_title  = text_at_xpath(doc_xml, "./PrimoNMBib/record/addata/jtitle")
       # check btitle for book chapters, the book they are in. 
       if item.journal_title.blank? && doc_xml.at_xpath("./PrimoNMBib/record/display/ispartof")
@@ -83,6 +84,15 @@ class BentoSearch::PrimoEngine
         item.year = date[0,4] # first four chars
       end
       
+      if fmt_str = text_at_xpath(doc_xml, "./PrimoNMBib/record/search/rsrctype")
+        # 'article', 'book_chapter'. abuse rails to turn into nice titlelized english. 
+        item.format_str     = fmt_str.titleize
+        
+        item.format         = map_format fmt_str
+      end
+      
+      
+      
       #TODO formats, highlighting
       
       results << item
@@ -90,6 +100,20 @@ class BentoSearch::PrimoEngine
     
     
     return results
+  end
+  
+  # Try to map from primocentral's 'rsrctype' to our own internal
+  # taxonomy of formats
+  #
+  # Need docs on what the complete Primo vocabulary here is, we're
+  # just guessing from what we see. 
+  def map_format(str)    
+    case str
+    when "article", "newspaper_article", "review"        
+      then "Article"
+    when "book"           then "Book"
+    when "dissertation"   then :dissertation
+    end    
   end
   
   # Returns the text() at the xpath, if the xpath is non-nil
