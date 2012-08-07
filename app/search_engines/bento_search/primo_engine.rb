@@ -27,6 +27,10 @@ require 'httpclient'
 #         access. Default false. Alternately, you can pass in an 
 #         :auth => true/false to 'search', which will override config. 
 #         PC has limited access for non-auth users. 
+#
+# == Vendor docs
+#
+# http://www.exlibrisgroup.org/display/PrimoOI/Brief+Search
 
 class BentoSearch::PrimoEngine
   include BentoSearch::SearchEngine
@@ -52,10 +56,10 @@ class BentoSearch::PrimoEngine
       # variant formats. We try to pick out the best to take things from,
       # but we're guessing, it's under-documented.
       
-      item.title      = text_at_xpath(doc_xml, "./PrimoNMBib/record/search/title")
-      item.abstract   = text_at_xpath(doc_xml, "./PrimoNMBib/record/search/description") 
+      item.title      = text_at_xpath(doc_xml, "./PrimoNMBib/record/display/title")
+      item.abstract   = text_at_xpath(doc_xml, "./PrimoNMBib/record/addata/abstract") 
       
-      doc_xml.xpath("./PrimoNMBib/record/search/creatorcontrib").each do |author_node|
+      doc_xml.xpath("./PrimoNMBib/record/facets/creatorcontrib").each do |author_node|
         item.authors << BentoSearch::Author.new(:display => author_node.text)
       end
       
