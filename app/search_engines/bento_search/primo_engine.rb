@@ -27,6 +27,8 @@ require 'httpclient'
 #         access. Default false. Alternately, you can pass in an 
 #         :auth => true/false to 'search', which will override config. 
 #         PC has limited access for non-auth users. 
+# [:lang] Primo lang query param. "Hints input languages to search engine for language recognition. "
+#         For now hardcoded into config, not settable per request.default 'eng' 
 #
 # == Vendor docs
 #
@@ -152,6 +154,8 @@ class BentoSearch::PrimoEngine
     url += "?institution=#{configuration.institution}"
     url += "&loc=#{CGI.escape configuration.loc}"
     
+    url += "&lang=#{CGI.escape configuration.lang}"
+    
     url += "&bulkSize=#{args[:per_page]}" if args[:per_page]
     # primo indx is 1-based record index, our :start is 0-based.
     url += "&indx=#{args[:start] + 1}" if args[:start]
@@ -176,6 +180,17 @@ class BentoSearch::PrimoEngine
   end
   
   
+  def search_field_definitions
+    # others are avail too, this is not exhaustive. 
+    {
+      "creator"   => {:semantic => :author},
+      "title"     => {:semantic => :title}
+      "sub"       => {:semantic => :subject}      
+      "isbn"      => {:semantic => :isbn}
+      "issn"      => {:semantic => :issn}
+    }
+  end
+  
   def sort_definitions
     { 
       "title_asc"       => {:implementation => "stitle"},
@@ -193,7 +208,9 @@ class BentoSearch::PrimoEngine
   
   def self.default_configuration
     {
-      :loc => 'adaptor,primo_central_multiple_fe'
+      :loc => 'adaptor,primo_central_multiple_fe',
+      # "eng" or "fre" or "ger" (Code for the representation of name of language conform to ISO-639) 
+      :lang => "eng"
     }
   end
   
