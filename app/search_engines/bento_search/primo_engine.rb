@@ -29,6 +29,11 @@ require 'httpclient'
 #         PC has limited access for non-auth users. 
 # [:lang] Primo lang query param. "Hints input languages to search engine for language recognition. "
 #         For now hardcoded into config, not settable per request.default 'eng' 
+# [:fixed_params]  Extra url query params to add on to every search request. 
+#               Can be used to hard-code certain limits, such as:
+#               {"query_exc" => ["facet_rtype,exact,books", "something_else"]}
+#               Note neither key nor values are uri encoded, we'll take
+#               care of that for you. value can be array or single string.
 #
 # == Vendor docs
 #
@@ -177,6 +182,13 @@ class BentoSearch::PrimoEngine
     
     url += "&query=#{CGI.escape query}"
     
+    configuration.fixed_params.each_pair do |key, value|
+      [value].flatten.each do |v|
+        url += "&#{CGI.escape key.to_s}=#{CGI.escape v.to_s}"
+      end
+    end
+    
+    
     return url
   end
   
@@ -211,7 +223,8 @@ class BentoSearch::PrimoEngine
     {
       :loc => 'adaptor,primo_central_multiple_fe',
       # "eng" or "fre" or "ger" (Code for the representation of name of language conform to ISO-639) 
-      :lang => "eng"
+      :lang => "eng",
+      :fixed_params => {}
     }
   end
   
