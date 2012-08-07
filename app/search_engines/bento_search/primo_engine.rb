@@ -63,8 +63,14 @@ class BentoSearch::PrimoEngine
         item.authors << BentoSearch::Author.new(:display => author_node.text)
       end
       
-      item.journal_title  = text_at_xpath doc_xml, "./PrimoNMBib/record/addata/jtitle"
-      item.publisher      = text_at_xpath doc_xml, "./PrimoNMBib/record/addata/pub"
+      
+      item.journal_title  = text_at_xpath(doc_xml, "./PrimoNMBib/record/addata/jtitle")
+      # check btitle for book chapters, the book they are in. 
+      if item.journal_title.blank? && doc_xml.at_xpath("./PrimoNMBib/record/display/ispartof")
+        item.journal_title = text_at_xpath(doc_xml, "./PrimoNMBib/record/addata/btitle")
+      end
+      
+      item.publisher      = text_at_xpath doc_xml, "./PrimoNMBib/record/display/publisher"
       item.volume         = text_at_xpath doc_xml, "./PrimoNMBib/record/addata/volume"
       item.issue          = text_at_xpath doc_xml, "./PrimoNMBib/record/addata/issue"
       item.start_page     = text_at_xpath doc_xml, "./PrimoNMBib/record/addata/spage"
@@ -73,7 +79,7 @@ class BentoSearch::PrimoEngine
       item.issn           = text_at_xpath doc_xml, "./PrimoNMBib/record/addata/issn"
       item.isbn           = text_at_xpath doc_xml, "./PrimoNMBib/record/addata/isbn"
       
-      if (date = text_at_xpath doc_xml, "./PrimoNMBib/record/addata/date")
+      if (date = text_at_xpath doc_xml, "./PrimoNMBib/record/search/creationdate")
         item.year = date[0,4] # first four chars
       end
       
@@ -125,6 +131,15 @@ class BentoSearch::PrimoEngine
     url += "&bulkSize=#{args[:per_page]}" if args[:per_page]
     # primo indx is 1-based record index, our :start is 0-based.
     url += "&indx=#{args[:start] + 1}" if args[:start]
+    
+
+    
+    if (defn = self.sort_definitions[ args[:sort] ]) &&
+        (value = defn[:implementation])
+      
+      url += "&sortField=#{CGI.escape value}"      
+    end
+    
   
     url += "&onCampus=#{ authenticated_end_user?(args) ? 'true' : 'false'}"
     
@@ -136,6 +151,17 @@ class BentoSearch::PrimoEngine
     return url
   end
   
+  
+  def sort_definitions
+    { 
+      "title_asc"       => {:implementation => "stitle"},
+      "date_desc"       => {:implementation => "scdate"},
+      "author_asc"      => {:implementation => "screator"},
+      # As far as I can tell, what they call 'popularity'
+      # is really relevance, with popularity boosting. 
+      "relevance"       => {:implementation => "popularity"}
+    }
+  end
   
   def self.required_configuration
     [:host_port, :institution]
