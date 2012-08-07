@@ -13,7 +13,7 @@ Rails3 and tested only under ruby 1.9.3.
 * It is focused on use cases for academic libraries, but may be useful in generic
 cases too. Initially, engine adapters are planned to be provided for: 
 Google Books, Scopus, SerialSolutions Summon, Ex Libris Primo, 
-and EBSCO Discovery Service. (Possibly ThomsonReuters Web of Knowledge). Most
+EBSCO Discovery Service, and EBSCO traditional 'EIT' api. Most
 of these search engines require a vendor license to use. 
 
 * bento_search could be considered building blocks for a type of 'federated
@@ -121,9 +121,9 @@ bento_search.sort_keys).
     
 For help creating your UI, you can use built-in helper method:
 
-    bento_sort_options(engine)
-    #=> returns a Hash suitable as a second argument for rails
-    # select_tag helper, with sort options and labels from I18n. 
+    bento_sort_hash_for(engine)
+    #=> returns a Hash suitable as first argument for rails
+    # options_for_select helper, with sort options and labels from I18n. 
         
     
 ### Pagination
@@ -135,10 +135,11 @@ offset) keys to paginate into the results.
     results = google_books_engine.search("my query", :per_page => 20, :start => 40)
     results = google_books_engine.search("my query", :per_page => 20, :page => 2) # means same as above
     
-An engine instance advertises it's maximum and default per-page values. 
+An engine instance advertises it's maximum per-page values. 
 
     google_books_engine.max_per_page
-    google_books_engine.default_per_age
+    
+bento_search fixes the default per_page at 10.     
     
 For help creating your UI, you can ask a BentoSearch::Results for
 `results.pagination`, which returns a BentoSearch::Results::Pagination
