@@ -121,9 +121,9 @@ bento_search.sort_keys).
     
 For help creating your UI, you can use built-in helper method:
 
-    bento_sort_options(engine)
-    #=> returns a Hash suitable as a second argument for rails
-    # select_tag helper, with sort options and labels from I18n. 
+    bento_sort_hash_for(engine)
+    #=> returns a Hash suitable as first argument for rails
+    # options_for_select helper, with sort options and labels from I18n. 
         
     
 ### Pagination
