@@ -96,6 +96,8 @@ class EdsEngineTest < ActiveSupport::TestCase
       assert_present first.abstract.html_safe?
       
       assert_present first.custom_data["citation_blob"]      
+      
+      assert_present first.format_str
   end
   
   

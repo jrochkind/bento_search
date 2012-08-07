@@ -240,6 +240,11 @@ class BentoSearch::EdsEngine
             item.openurl_kev_co = openurl.slice index..(openurl.length) if index            
           end
 
+          # Format. 
+          item.format_str = at_xpath_text record_xml, "./Header/PubType"
+          # Can't find a list of possible PubTypes to see what's there to try
+          # and map to our internal controlled vocab. oh wells. 
+          
           
           
           # We have a single blob of human-readable citation, that's also
