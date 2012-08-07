@@ -157,7 +157,7 @@ class BentoSearch::EbscoHostEngine
   
   # Figure out uncontrolled literal string format to show to users.
   # We're going to try combining Ebsco Publication Type and Document Type,
-  # when both are present. 
+  # when both are present. Then a few hard-coded special transformations. 
   def sniff_format_str(xml_node)  
     pubtype = text_if_present( xml_node.at_xpath("./artinfo/pubtype") )
     doctype = text_if_present( xml_node.at_xpath("./artinfo/doctype") )
@@ -169,6 +169,16 @@ class BentoSearch::EbscoHostEngine
     components.compact!
     
     components = components.collect {|a| a.titlecase if a}
+    components.uniq! # no need to have the same thing twice
+    
+    # some hard-coded cases for better user-displayable string
+    if components.first == "Academic Journal" && components.last == "Article"
+      return "Journal Article"
+    elsif components.first == "Periodical" && components.length > 1
+      return components.last
+    end
+    
+    
     
     return components.join(": ")
   end
