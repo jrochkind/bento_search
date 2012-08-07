@@ -123,6 +123,8 @@ class BentoSearch::PrimoEngine
     url += "&loc=#{CGI.escape configuration.loc}"
     
     url += "&bulkSize=#{args[:per_page]}" if args[:per_page]
+    # primo indx is 1-based record index, our :start is 0-based.
+    url += "&indx=#{args[:start] + 1}" if args[:start]
   
     url += "&onCampus=#{ authenticated_end_user?(args) ? 'true' : 'false'}"
     
