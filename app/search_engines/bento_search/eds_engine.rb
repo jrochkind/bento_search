@@ -36,10 +36,13 @@ require 'http_client_patch/include_client'
 # configured name provided by EBSCO for CustomLink.
 #
 # EDS Response does not have sufficient metadata for us to generate an OpenURL
-# ourselves. However, in our testing, the first/only CustomLink was OFTEN
-# an OpenURL (when it was present at all). If configuration.assume_first_custom_link_openurl is
+# ourselves. However, in our testing, the first/only CustomLink was an
+# an OpenURL. If configuration.assume_first_custom_link_openurl is
 # true (as is default), it will be used to create an OpenURL link. However, in
-# our testing, many records don't have this at all. 
+# our testing, many records don't have this at all. **Note** Ask EBSCO support
+# to configure your profile so OpenURLs are ALWAYS included for all records, not
+# just records with no EBSCO fulltext, to ensure bento_search can get the
+# openurl. 
 #
 # As always, you can customize links and other_links with Item Decorators. 
 #
@@ -149,7 +152,7 @@ class BentoSearch::EdsEngine
     end
     # Can't have any commas in query, it turns out, although
     # this is not documented. 
-    query += args[:query].gsub("/\,/", " ")
+    query += args[:query].gsub("/\,/", "")
     
     url = "#{configuration.base_url}search?view=detailed&query=#{CGI.escape query}"
     
