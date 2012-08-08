@@ -19,9 +19,37 @@ class EdsEngineTest < ActiveSupport::TestCase
     # test. For testing, blank out the cache before each test. 
     BentoSearch::EdsEngine.remembered_auth = nil
 
-    
-    @engine = BentoSearch::EdsEngine.new(:user_id => @@user_id, :password => @@password, :profile => @@profile, :auth => true)
+    @config = {:user_id => @@user_id, :password => @@password, :profile => @@profile, :auth => true}
+    @engine = BentoSearch::EdsEngine.new(@config)
   end
+  
+  test "only_source_types config" do
+    engine = BentoSearch::EdsEngine.new( @config.merge(:only_source_types => [
+      "Academic Journals", "Magazines"
+      ]))
+    
+    url = engine.construct_search_url(:query => "cancer", :per_page => 10)
+    
+    query_params = CGI.parse( URI.parse(url).query )
+    
+    # should be
+    # facetfilter=1,SourceType:Academic Journals,SourceType:Magazines
+    # but with value query encoded
+    
+    assert_equal 1, query_params["facetfilter"].length
+    
+    facetfilter = query_params["facetfilter"].first
+    
+    parts = facetfilter.split(",")
+    
+    assert_equal 3, parts.length
+    
+    assert_equal "1", parts.first
+    
+    assert_include parts, "SourceType:Academic Journals"
+    assert_include parts, "SourceType:Magazines"        
+  end
+
   
   test_with_cassette("get_auth_token failure", :eds) do
     engine = BentoSearch::EdsEngine.new(:user_id => "bad", :password => "bad", :profile => "bad")

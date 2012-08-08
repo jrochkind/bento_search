@@ -84,12 +84,19 @@ require 'http_client_patch/include_client'
 # 'auth' key to true to force all searches to auth (if you are protecting your
 # app) or pass :auth => true as param into #search method.  
 #
+# == Source Types
+# # What the EBSCO 'source types' mean: http://suprpot.ebsco.com/knowledge_base/detail.php?id=5382
+#
+# But "Dissertations" not "Dissertations/Theses". "Music Scores" not "Music Score". 
+
+#
 # == EDS docs:
 # 
 # * Console App to demo requests: https://eds-api.ebscohost.com/Console   
 # * EDS Wiki: http://edswiki.ebscohost.com/EDS_API_Documentation
 # * You'll need to request an account to the EDS wiki, see: http://support.ebsco.com/knowledge_base/detail.php?id=5990
 # 
+
 class BentoSearch::EdsEngine
   include BentoSearch::SearchEngine
   
@@ -172,6 +179,11 @@ class BentoSearch::EdsEngine
            (value = defn[:implementation] )
         url += "&sort=#{CGI.escape value}"
       end
+    end
+    
+    if configuration.only_source_types.present?
+      # facetfilter=1,SourceType:Research Starters,SourceType:Books
+      url += "&facetfilter=" + CGI.escape("1," + configuration.only_source_types.collect {|t| "SourceType:#{t}"}.join(","))
     end
     
     
