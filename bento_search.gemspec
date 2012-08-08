@@ -7,11 +7,9 @@ require "bento_search/version"
 Gem::Specification.new do |s|
   s.name        = "bento_search"
   s.version     = BentoSearch::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of BentoSearch."
-  s.description = "TODO: Description of BentoSearch."
+  s.authors     = ["Jonathan Rochkind"]
+  s.homepage    = "http://github.com/jrochkind/bento_search"
+  s.summary     = "An abstraction/normalization layer for querying and displaying results for external search engines, in Ruby on Rails."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
