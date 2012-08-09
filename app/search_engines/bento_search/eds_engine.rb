@@ -45,6 +45,9 @@ require 'http_client_patch/include_client'
 # openurl. http://support.ebsco.com/knowledge_base/detail.php?id=1111 (May
 # have to ask EBSCO support for help, it's confusing!). 
 #
+# TODO: May have to add configuration code to pull the OpenURL link out by
+# it's configured name or label, not assume first one is it. 
+#
 # As always, you can customize links and other_links with Item Decorators. 
 #
 # == Technical Notes and Difficulties
