@@ -66,10 +66,10 @@ module BentoSearch
       # global defaults?
       self.configuration[:item_decorators] ||= []
             
-      # check for required keys
+      # check for required keys -- have to be present, and not nil
       if self.class.required_configuration
         self.class.required_configuration.each do |required_key|          
-          if self.configuration.lookup!(required_key.to_s, "**NOT_FOUND**") == "**NOT_FOUND**"
+          if ["**NOT_FOUND**", nil].include? self.configuration.lookup!(required_key.to_s, "**NOT_FOUND**")
             raise ArgumentError.new("#{self.class.name} requires configuration key #{required_key}")
           end
         end

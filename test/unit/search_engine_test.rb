@@ -3,40 +3,46 @@ require 'test_helper'
 
 
 class SearchEngineTest < ActiveSupport::TestCase
-  
-    def setup
-      @dummy_class = Class.new do
-        include BentoSearch::SearchEngine
-        
+
+    test "takes configuration" do
+      conf = Confstruct::Configuration.new( :foo => "foo", :bar => "bar", :top => {:next => "required key"} )
+      engine = MockEngine.new(conf)
+      
+      assert_not_nil engine.configuration
+      assert_equal "foo", engine.configuration.foo
+      assert_equal "bar", engine.configuration.bar
+      assert_equal "required key", engine.configuration.top.next
+    end
+    
+
+    
+
+    
+    test "nested required config key" do
+      requires_class = Class.new(MockEngine) do
         def self.required_configuration
           ["required.key"]
         end
-        
-        def search_implementation(arguments)
-          #no-op for now
-          BentoSearch::Results.new
-        end
-        
       end
-    end
-  
-
-    test "takes configuration" do
-      conf = Confstruct::Configuration.new( :foo => "foo", :bar => "bar", :required => {:key => "required key"} )
-      engine = @dummy_class.new(conf)
-      
-      assert_not_nil engine.configuration
-      assert_equal engine.configuration.foo, "foo"
-      assert_equal engine.configuration.bar, "bar"      
-    end
-    
-    test "required configuration keys" do
-      conf = Confstruct::Configuration.new( :foo => "foo", :bar => "bar" )
+            
       assert_raise ArgumentError do
-        @dummy_class.new(conf)
+        requires_class.new
       end      
+      
+      assert_raise ArgumentError do
+        requires_class.new(:requires => {})
+      end
+      
+      assert_raise ArgumentError do
+        requires_class.new(:required => {:key => nil})
+      end
+      
+      assert_nothing_raised do
+        requires_class.new(:required => {:key => "foo"})
+      end
+      
     end
-    
+     
     test "merges default configuration" do
       @dummy_class = Class.new do
         include BentoSearch::SearchEngine
