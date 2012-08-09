@@ -159,7 +159,7 @@ class BentoSearch::EdsEngine
     end
     # Can't have any commas in query, it turns out, although
     # this is not documented. 
-    query += args[:query].gsub("/\,/", "")
+    query += args[:query].gsub(",", " ")
     
     url = "#{configuration.base_url}search?view=detailed&query=#{CGI.escape query}"
     

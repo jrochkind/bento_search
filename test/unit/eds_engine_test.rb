@@ -23,6 +23,18 @@ class EdsEngineTest < ActiveSupport::TestCase
     @engine = BentoSearch::EdsEngine.new(@config)
   end
   
+  test "construct simple search, with comma escaping" do
+    url = @engine.construct_search_url(:query => "foo, bar,baz")
+    
+    query_params = CGI.parse( URI.parse(url).query )
+
+    assert_equal ["all"], query_params["searchmode"]
+    
+    assert_equal ["detailed"], query_params["view"]
+    
+    assert_equal ["AND,foo  bar baz"], query_params["query"]   
+  end
+  
   test "only_source_types config" do
     engine = BentoSearch::EdsEngine.new( @config.merge(:only_source_types => [
       "Academic Journals", "Magazines"
