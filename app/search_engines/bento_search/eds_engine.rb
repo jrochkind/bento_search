@@ -214,6 +214,7 @@ class BentoSearch::EdsEngine
           item = BentoSearch::ResultItem.new
           
           item.title = prepare_eds_payload( element_by_group(record_xml, "Ti"), true )
+          
           if item.title.nil? && ! end_user_auth
             item.title = I18n.translate("bento_search.eds.record_not_available")
           end
@@ -225,9 +226,16 @@ class BentoSearch::EdsEngine
           # actual authors out of. WTF. Thanks for handling fragments
           # nokogiri. 
           author_mess = element_by_group(record_xml, "Au")
+          # only SOMETIMES does it have XML tags, other times it's straight text.
+          # ARGH.           
           author_xml = Nokogiri::XML::fragment(author_mess)
-          author_xml.xpath(".//searchLink").each do |author_node|
-            item.authors << BentoSearch::Author.new(:display => author_node.text)
+          searchLinks = author_xml.xpath(".//searchLink")
+          if searchLinks.size > 0
+            author_xml.xpath(".//searchLink").each do |author_node|
+              item.authors << BentoSearch::Author.new(:display => author_node.text)
+            end
+          else
+            item.authors << BentoSearch::Author.new(:display => author_xml.text)
           end
           
           
@@ -271,10 +279,17 @@ class BentoSearch::EdsEngine
           # tags in this mess, they will be lost. Probably don't
           # need highlighting in source anyhow. 
           citation_mess = element_by_group(record_xml, "Src")
-          citation_txt = Nokogiri::XML::fragment(citation_mess).text
-          # But strip off some "count of references" often on the end
-          # which are confusing and useless. 
-          item.custom_data["citation_blob"] = citation_txt.gsub(/ref +\d+ +ref\.$/, '')           
+          # Argh, but sometimes it's in SrcInfo _without_ tags instead
+          if citation_mess          
+            citation_txt = Nokogiri::XML::fragment(citation_mess).text
+            # But strip off some "count of references" often on the end
+            # which are confusing and useless. 
+            item.custom_data["citation_blob"] = citation_txt.gsub(/ref +\d+ +ref\.$/, '')
+          else
+            # try another location
+            item.custom_data["citation_blob"] = element_by_group(record_xml, "SrcInfo")
+          end
+          
                               
           item.extend CitationMessDecorator
           
