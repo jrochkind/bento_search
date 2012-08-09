@@ -12,6 +12,9 @@ require 'summon/transport/headers'
 # Docs: 
 # http://api.summon.serialssolutions.com/help/api/search
 # http://api.summon.serialssolutions.com/help/api/search/fields
+# 
+# Can try out searches and see XML results with an auth login in their
+# interface: http://api.summon.serialssolutions.com/help/api/search/example?s.q=query
 #
 # An example user-facing Summon UI, useful for figuring out available
 # facets and facet values, or trying out searches:
