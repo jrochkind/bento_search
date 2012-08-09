@@ -172,7 +172,7 @@ class BentoSearch::EbscoHostEngine
     components.uniq! # no need to have the same thing twice
     
     # some hard-coded cases for better user-displayable string
-    if components.first == "Academic Journal" && components.last == "Article"
+    if ["Academic Journal", "Journal"].include?(components.first) && ["Article", "Journal Article"].include?(components.last)
       return "Journal Article"
     elsif components.first == "Periodical" && components.length > 1
       return components.last
