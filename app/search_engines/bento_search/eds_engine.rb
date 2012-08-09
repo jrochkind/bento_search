@@ -39,10 +39,11 @@ require 'http_client_patch/include_client'
 # ourselves. However, in our testing, the first/only CustomLink was an
 # an OpenURL. If configuration.assume_first_custom_link_openurl is
 # true (as is default), it will be used to create an OpenURL link. However, in
-# our testing, many records don't have this at all. **Note** Ask EBSCO support
+# our testing, many records don't have this at all. **Note** You want 
 # to configure your profile so OpenURLs are ALWAYS included for all records, not
 # just records with no EBSCO fulltext, to ensure bento_search can get the
-# openurl. 
+# openurl. http://support.ebsco.com/knowledge_base/detail.php?id=1111 (May
+# have to ask EBSCO support for help, it's confusing!). 
 #
 # As always, you can customize links and other_links with Item Decorators. 
 #
@@ -201,7 +202,9 @@ class BentoSearch::EdsEngine
       with_session(end_user_auth) do |session_token|
                         
         url = construct_search_url(args)
-                
+             
+        
+        
         response = get_with_auth(url, session_token)
         
         results = BentoSearch::Results.new
