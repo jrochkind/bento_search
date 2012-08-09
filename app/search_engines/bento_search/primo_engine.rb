@@ -3,7 +3,9 @@ require 'nokogiri'
 
 require 'http_client_patch/include_client'
 require 'httpclient'
-
+#
+# TODO: Better error handling after API request, inc HTTP status. 
+#
 # ExLibris Primo Central. 
 #
 # written/tested with PrimoCentral aggregated index only, but probably
@@ -46,6 +48,7 @@ class BentoSearch::PrimoEngine
   include_http_client
   
   def search_implementation(args)
+    
     url = construct_query(args)
     
     response = http_client.get(url)
@@ -54,7 +57,7 @@ class BentoSearch::PrimoEngine
     response_xml.remove_namespaces!
     
     results = BentoSearch::Results.new
-    
+        
     results.total_items = response_xml.at_xpath("./SEGMENTS/JAGROOT/RESULT/DOCSET")["TOTALHITS"].to_i
 
     response_xml.xpath("./SEGMENTS/JAGROOT/RESULT/DOCSET/DOC").each do |doc_xml|
@@ -180,7 +183,10 @@ class BentoSearch::PrimoEngine
     field = args[:search_field].present? ? args[:search_field] : "any"     
     query = "#{field},contains,#{prepared_query args[:query]}"
     
-    url += "&query=#{CGI.escape query}"
+    # Primo seems to have problems with colons in query, even
+    # though docs don't say it should
+    #safe_query = query.gsub(":", " ")
+    url += "&query=#{CGI.escape query.gsub(":", " ")}"
     
     configuration.fixed_params.each_pair do |key, value|
       [value].flatten.each do |v|
