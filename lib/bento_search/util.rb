@@ -26,7 +26,7 @@ module BentoSearch::Util
   # [:enabled]  default true, if pass in false this method will
   #             just return input str doing nothing to it. Can be
   #             useful to embed this logic for calling code. 
-  def self.handle_snippet_tags(str, options = {})
+  def self.handle_highlight_tags(str, options = {})
     unless options.has_key?(:start_tag) && options.has_key?(:end_tag) 
       raise ArgumentError.new("Need :start_tag and :end_tag")
     end
