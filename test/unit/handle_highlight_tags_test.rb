@@ -5,7 +5,7 @@ require 'test_helper'
 class HandleSnippetTagsTest < ActiveSupport::TestCase
   
   def test_basic
-    result = BentoSearch::Util.handle_snippet_tags(   
+    result = BentoSearch::Util.handle_highlight_tags(   
       "one two <x> three four </x> five <x>six</x> seven",
       :start_tag => '<x>',
       :end_tag => '</x>'
@@ -19,7 +19,7 @@ class HandleSnippetTagsTest < ActiveSupport::TestCase
   end
   
   def test_strip
-    result = BentoSearch::Util.handle_snippet_tags(   
+    result = BentoSearch::Util.handle_highlight_tags(   
       "one two <x> three four </x> five <x>six</x> seven",
       :start_tag => '<x>',
       :end_tag => '</x>',
@@ -31,7 +31,7 @@ class HandleSnippetTagsTest < ActiveSupport::TestCase
   end
   
   def test_html_escapes
-    result = BentoSearch::Util.handle_snippet_tags(   
+    result = BentoSearch::Util.handle_highlight_tags(   
       "<one> & two <x>three</x> four",
       :start_tag => '<x>',
       :end_tag => '</x>',     
@@ -42,7 +42,7 @@ class HandleSnippetTagsTest < ActiveSupport::TestCase
   end
   
   def test_html_safe_source
-    result = BentoSearch::Util.handle_snippet_tags(   
+    result = BentoSearch::Util.handle_highlight_tags(   
       "<i>x &amp; y</i> <x>three</x> four",
       :start_tag => '<x>',
       :end_tag => '</x>',
@@ -57,7 +57,7 @@ class HandleSnippetTagsTest < ActiveSupport::TestCase
   def test_enabled_option
     # enabled=false ignores it entirely
     str  = "one two <x> three four </x> five <x>six</x> seven" 
-    result = BentoSearch::Util.handle_snippet_tags(   
+    result = BentoSearch::Util.handle_highlight_tags(   
       str,
       :start_tag => '<x>',
       :end_tag => '</x>',
