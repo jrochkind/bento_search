@@ -1,0 +1,22 @@
+/* some suggested styles for bento search results. You can
+   include this in your asset pipeline with `require bento_search/suggested_styles`,
+   or just use this as documentation for suggestions to implement yourself. */
+   
+   
+/* year in bold in citations */
+.bento_item_row.published_in .year {
+  font-weight: bold;
+}
+
+/* highlighted element in title is already in a <b> tag, but
+   title is likely to be bold already. italisize it too. */   
+.bento_item_title b.bento_search_highlight {
+  font-style: italic;
+}
+
+/* center the ajax_wait spinner */
+.bento_search_ajax_wait {
+  text-align: center;
+  margin: 2em;
+}
+
