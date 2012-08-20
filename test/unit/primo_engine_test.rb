@@ -45,5 +45,18 @@ class PrimoEngineTest < ActiveSupport::TestCase
     end
     
   end
+
+  # test of highlighting assumes if search for 'cancer', then
+  # that word will be in title of first hit.   
+  test_with_cassette("proper tags for snippets", :primo) do
+    results = @engine.search("cancer")
+    
+    first = results.first
+    
+    assert first.title.html_safe?, "title is HTML safe"
+    
+    assert_include first.title, '<b class="bento_search_highlight">' 
+    
+  end
   
 end
