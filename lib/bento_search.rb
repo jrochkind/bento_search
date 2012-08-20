@@ -1,6 +1,9 @@
+require 'confstruct'
+
 require "bento_search/engine"
 require 'bento_search/routes'
-require 'confstruct'
+
+require 'bento_search/util'
 
 # ugh, sorry:
 require File.dirname(__FILE__) + '/../app/models/bento_search/registrar'
