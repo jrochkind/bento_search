@@ -159,7 +159,7 @@ class BentoSearch::PrimoEngine
   # section of API response, as they may have snippet tags. 
   def handle_highlight_tags(str)        
     
-    str = BentoSearch::Util.handle_snippet_tags(
+    str = BentoSearch::Util.handle_highlight_tags(
       str,
       :start_tag => @@highlight_start,
       :end_tag => @@highlight_end,
