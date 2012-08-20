@@ -15,6 +15,18 @@ class PrimoEngineTest < ActiveSupport::TestCase
     @engine = BentoSearch::PrimoEngine.new(:host_port => @@host_port, :institution => @@institution)
   end
   
+  test("sort params") do
+    url = @engine.construct_query(:query => "cancer", :sort => "title_asc")    
+    query_params = CGI.parse( URI.parse(url).query )    
+    assert_equal ["stitle"], query_params["sortField"]
+    
+    # for 'relevance', no sortField should be passed to primo api
+    
+    url = @engine.construct_query(:query => "cancer", :sort => "relevance")
+    query_params = CGI.parse( URI.parse(url).query )    
+    assert ! query_params.has_key?("sortField"), "for relevance sort, no sortField should be passed to primo api"
+  end
+  
   
   test_with_cassette("search smoke test", :primo) do    
     results = @engine.search_implementation(:query => "globalization from below", :per_page => 10)

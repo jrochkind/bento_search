@@ -215,9 +215,13 @@ class BentoSearch::PrimoEngine
       "title_asc"       => {:implementation => "stitle"},
       "date_desc"       => {:implementation => "scdate"},
       "author_asc"      => {:implementation => "screator"},
-      # As far as I can tell, what they call 'popularity'
-      # is really relevance, with popularity boosting. 
-      "relevance"       => {:implementation => "popularity"}
+      # not clear if popularity is truly different than relevance
+      # or not. 
+      "popularity"      => {:implementation => "popularity"},
+      # according to EL, you get 'relevance' results by default,
+      # by passing no 'sort' param. I don't think there's a value
+      # you can actually pass, just have to pass none. 
+      "relevance"       => {}
     }
   end
   
