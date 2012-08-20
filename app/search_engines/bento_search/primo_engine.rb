@@ -36,6 +36,19 @@ require 'httpclient'
 #               {"query_exc" => ["facet_rtype,exact,books", "something_else"]}
 #               Note neither key nor values are uri encoded, we'll take
 #               care of that for you. value can be array or single string.
+# [:highlighting] default 'true'. If true, ask primo for query-in-context in
+#                 some fields. If true, you WILL get html_safe content in
+#                 some fields, with standardized <b class='bento_search_highlight'> tags.
+# [:snippets_as_abstract]
+#     Defaults true, if true and :highlighting is true, we'll put the
+#     query-in-context snippets in the 'abstract' field if it's present and it's
+#     NOT just the title field repeated (can be hard to tell). 
+#     either way it will be in results as custom_data["snippet"]. 
+# [:max_snippets]
+#     Default 1. How many snippets to include in snippet display, for use
+#     with snippets_as_abstract. Primo API packs them all together in one
+#     element seperated by "...", so we need to kind of hack it to seperate.
+#     Set to nil to use entire primo supplied snippets field. 
 #
 # == Vendor docs
 #
@@ -47,10 +60,13 @@ class BentoSearch::PrimoEngine
   extend HTTPClientPatch::IncludeClient
   include_http_client
   
+  @@highlight_start = '<span class="searchword">'
+  @@highlight_end = '</span>'
+  
   def search_implementation(args)
     
     url = construct_query(args)
-    
+
     response = http_client.get(url)
     response_xml = Nokogiri::XML response.body
     # namespaces really do nobody any good
@@ -66,9 +82,22 @@ class BentoSearch::PrimoEngine
       # variant formats. We try to pick out the best to take things from,
       # but we're guessing, it's under-documented.
       
-      item.title      = text_at_xpath(doc_xml, "./PrimoNMBib/record/display/title")
-      item.abstract   = text_at_xpath(doc_xml, "./PrimoNMBib/record/addata/abstract") 
+      item.title      = handle_highlight_tags text_at_xpath(doc_xml, "./PrimoNMBib/record/display/title")        
       
+      item.custom_data["snippet"] = handle_snippet_value text_at_xpath(doc_xml, "./PrimoNMBib/record/display/snippet")
+      
+      # If we have a snippet that is not just the title, and we've been configured
+      # to use it instead of the abstract, then do so. 
+      # there's an empty snippet tag even if no snippet, have to check for children.
+      if ( configuration.highlighting && configuration.snippets_as_abstract &&
+          (snippet_el = doc_xml.at_xpath("./PrimoNMBib/record/display/snippet/text()")) &&
+          ! (doc_xml.at_xpath("./PrimoNMBib/record/display/snippetfield/text()").to_s == "title")
+        )
+        item.abstract = item.custom_data["snippet"]
+      else
+        item.abstract   = text_at_xpath(doc_xml, "./PrimoNMBib/record/addata/abstract")
+      end
+                  
 
       doc_xml.xpath("./PrimoNMBib/record/facets/creatorcontrib").each do |author_node|
         item.authors << BentoSearch::Author.new(:display => author_node.text)
@@ -81,7 +110,7 @@ class BentoSearch::PrimoEngine
         item.journal_title = text_at_xpath(doc_xml, "./PrimoNMBib/record/addata/btitle")
       end
       
-      item.publisher      = text_at_xpath doc_xml, "./PrimoNMBib/record/display/publisher"
+      item.publisher      = handle_highlight_tags text_at_xpath(doc_xml, "./PrimoNMBib/record/display/publisher")
       item.volume         = text_at_xpath doc_xml, "./PrimoNMBib/record/addata/volume"
       item.issue          = text_at_xpath doc_xml, "./PrimoNMBib/record/addata/issue"
       item.start_page     = text_at_xpath doc_xml, "./PrimoNMBib/record/addata/spage"
@@ -100,16 +129,43 @@ class BentoSearch::PrimoEngine
         
         item.format         = map_format fmt_str
       end
-      
-      
-      
-      #TODO formats, highlighting
+                  
+      #TODO highlighting
       
       results << item
     end
     
     
     return results
+  end
+  
+  # enforce configuration.max_snippets, add elipses on the end
+  def handle_snippet_value(str)
+    if configuration.max_snippets && str.present?
+      str = str.split("...").slice(0, configuration.max_snippets).join("\u2026")
+    end
+    
+    # primo doesn't put elipses tags on ends of snippet usually, which is
+    # confusing. let's add them ourselves.     
+    str = "\u2026#{str}\u2026"
+    
+    return handle_highlight_tags str    
+  end
+  
+  # replace Primo API's snippet highlighting tags with our own, with
+  # proper attention to html_safe. See BentoSearch::Util method. 
+  #
+  # generally needs to be called on any values that come from 'display'
+  # section of API response, as they may have snippet tags. 
+  def handle_highlight_tags(str)        
+    
+    str = BentoSearch::Util.handle_snippet_tags(
+      str,
+      :start_tag => @@highlight_start,
+      :end_tag => @@highlight_end,
+      :enabled => configuration.highlighting
+    )
+             
   end
   
   # Try to map from primocentral's 'rsrctype' to our own internal
@@ -188,6 +244,8 @@ class BentoSearch::PrimoEngine
     #safe_query = query.gsub(":", " ")
     url += "&query=#{CGI.escape query.gsub(":", " ")}"
     
+    url += "&highlight=true" if configuration.highlighting
+    
     configuration.fixed_params.each_pair do |key, value|
       [value].flatten.each do |v|
         url += "&#{CGI.escape key.to_s}=#{CGI.escape v.to_s}"
@@ -234,7 +292,10 @@ class BentoSearch::PrimoEngine
       :loc => 'adaptor,primo_central_multiple_fe',
       # "eng" or "fre" or "ger" (Code for the representation of name of language conform to ISO-639) 
       :lang => "eng",
-      :fixed_params => {}
+      :fixed_params => {},
+      :highlighting => true,
+      :snippets_as_abstract => true,
+      :max_snippets => 1
     }
   end
   
