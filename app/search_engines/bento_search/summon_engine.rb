@@ -315,27 +315,13 @@ class BentoSearch::SummonEngine
   # while still using the highlighting tokens to put
   # HTML tags around highlighted terms.
   def handle_highlighting( str, options = {} )
-    return str if str.blank? || ! configuration.highlighting
-
-    if options[:strip]
-      # Just strip em, don't need to replace em with HTML
-      str = str.gsub(Regexp.new(Regexp.escape @@hl_start_token), '')
-      str = str.gsub(Regexp.new(Regexp.escape @@hl_end_token), '')
-      return str
-    end
-    
-    parts = 
-      str.
-        split( %r{(#{Regexp.escape @@hl_start_token}|#{Regexp.escape @@hl_end_token})}  ).
-        collect do |substr|
-          case substr
-            when  @@hl_start_token then '<b class="bento_search_highlight">'.html_safe
-            when  @@hl_end_token then '</b>'.html_safe
-            else substr
-          end
-        end
-        
-    return safe_join(parts, '')
+    BentoSearch::Util.handle_highlight_tags(
+      str,
+      :start_tag => @@hl_start_token,
+      :end_tag => @@hl_end_token,
+      :enabled => configuration.highlighting,
+      :strip => options[:strip]
+      )          
   end
     
   def self.required_configuration
