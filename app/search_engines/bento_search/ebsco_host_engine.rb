@@ -58,6 +58,8 @@ require 'httpclient'
 # * The 'info' service can be used to see what databases you have access to. 
 # * DTD of XML Response, hard to interpret but all we've got: http://support.ebsco.com/eit/docs/DTD_EIT_WS_searchResponse.zip
 #
+#  Hard to find docs page on embedding EBSCO limiters (like peer reviewed only "RV Y") in search query: 
+#     http://eit.ebscohost.com/Pages/MethodDescription.aspx?service=~/Services/SearchService.asmx&method=Info
 #
 # 
 #
