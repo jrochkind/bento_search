@@ -60,6 +60,8 @@ require 'summon/transport/headers'
 #     one ourself from individual data elements. summon openurl is decent,
 #     but currently includes highlighting tags in title elements. Also note
 #     it includes DC-type openurls, which we don't currently generate ourselves. 
+# [lang]  Sent to summon as "s.l" param, see http://api.summon.serialssolutions.com/help/api/search/parameters/language
+#         default nil. You may want to set to "en". 
 #
 #
 # == Custom search params
@@ -261,6 +263,10 @@ class BentoSearch::SummonEngine
       query_params['s.he'] = @@hl_end_token
     else 
       query_params['s.hl'] = "false"
+    end
+    
+    if configuration.lang
+      query_params["s.l"] = configuration.lang
     end
       
         

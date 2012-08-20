@@ -20,8 +20,11 @@ class SummonEngineTest < ActiveSupport::TestCase
   end
   
   def setup
-    @engine = BentoSearch::SummonEngine.new('access_id' => @@access_id, 
-      'secret_key' => @@secret_key)
+    @config = {
+      'access_id' => @@access_id, 
+      'secret_key' => @@secret_key
+    }
+    @engine = BentoSearch::SummonEngine.new(@config)
   end
   
   def test_request_construction 
@@ -38,6 +41,16 @@ class SummonEngineTest < ActiveSupport::TestCase
     assert_present uri
     query_params = CGI.parse( URI.parse(uri).query )
     assert_present query_params["s.q"]        
+  end
+  
+  def test_request_construction_with_lang
+    engine = BentoSearch::SummonEngine.new(@config.merge(:lang => 'en'))
+    
+    uri, headers = engine.construct_request(:query => "cancer")
+    
+    assert_present uri
+    query_params = CGI.parse( URI.parse(uri).query )
+    assert_equal ["en"], query_params["s.l"]        
   end
   
   def test_summon_escape
