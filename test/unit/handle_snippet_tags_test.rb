@@ -54,5 +54,18 @@ class HandleSnippetTagsTest < ActiveSupport::TestCase
     assert_equal "<i>x &amp; y</i> <b class=\"bento_search_highlight\">three</b> four", result
   end
   
+  def test_enabled_option
+    # enabled=false ignores it entirely
+    str  = "one two <x> three four </x> five <x>six</x> seven" 
+    result = BentoSearch::Util.handle_snippet_tags(   
+      str,
+      :start_tag => '<x>',
+      :end_tag => '</x>',
+      :enabled => false
+      )
+  
+    assert ! result.html_safe?, "result is not html safe"
+    assert_equal str, result
+  end
   
 end

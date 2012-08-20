@@ -22,20 +22,25 @@ module BentoSearch::Util
   #
   # [:html_safe_source] default false. If true, assume source is already
   #                     html safe and does not need to be escaped. 
+  #
+  # [:enabled]  default true, if pass in false this method will
+  #             just return input str doing nothing to it. Can be
+  #             useful to embed this logic for calling code. 
   def self.handle_snippet_tags(str, options = {})
     unless options.has_key?(:start_tag) && options.has_key?(:end_tag) 
       raise ArgumentError.new("Need :start_tag and :end_tag")
     end
-    
+            
     options.reverse_merge!(
       :output_start_tag => '<b class="bento_search_highlight">',
-      :output_end_tag => '</b>'
+      :output_end_tag => '</b>',
+      :enabled => true
       )
         
     
     
     # Need to do nothing for empty string
-    return str if str.blank?
+    return str if str.blank? || (! options[:enabled])
     
     if options[:strip]
       # Just strip em, don't need to replace em with HTML
