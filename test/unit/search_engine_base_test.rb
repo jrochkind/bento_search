@@ -163,6 +163,7 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
     results = d.search("foo")
     
     assert_not_nil results.timing
+    assert_not_nil results.timing_ms    
   end
     
   def test_passes_arbitrary_keys
