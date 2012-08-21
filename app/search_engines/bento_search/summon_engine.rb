@@ -128,7 +128,7 @@ class BentoSearch::SummonEngine
       if configuration.use_summon_openurl      
         item.openurl_kev_co = doc_hash["openUrl"] # Summon conveniently gives us pre-made OpenURL
       end
-      
+            
       item.journal_title  = first_if_present doc_hash["PublicationTitle"]
       item.issn           = first_if_present doc_hash["ISSN"]
       item.isbn           = first_if_present doc_hash["ISBN"]
@@ -145,6 +145,11 @@ class BentoSearch::SummonEngine
       
       if (pub = first_if_present doc_hash["Publisher_xml"])
         item.publisher    = pub["name"]
+      end
+      # if it's a dissertation, put the school in the 'publisher' field.
+      # if we don't have one otherwise. 
+      if (! item.publisher) && (school = first_if_present doc_hash["DissertationSchool_xml"])
+        item.publisher    = school["name"]
       end
       
       (doc_hash["Author_xml"] || []).each do |auth_hash|
