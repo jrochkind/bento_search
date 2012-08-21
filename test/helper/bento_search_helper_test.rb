@@ -3,6 +3,7 @@ require 'test_helper'
 class BentoSearchHelperTest < ActionView::TestCase
   include BentoSearchHelper
   
+  MockEngine = BentoSearch::MockEngine
   
   def teardown
     BentoSearch.reset_engine_registrations!

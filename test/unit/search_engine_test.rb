@@ -3,7 +3,8 @@ require 'test_helper'
 
 
 class SearchEngineTest < ActiveSupport::TestCase
-
+  MockEngine = BentoSearch::MockEngine
+  
     test "takes configuration" do
       conf = Confstruct::Configuration.new( :foo => "foo", :bar => "bar", :top => {:next => "required key"} )
       engine = MockEngine.new(conf)

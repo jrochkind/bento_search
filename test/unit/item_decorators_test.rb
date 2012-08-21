@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class LinkDecoratorsTest < ActiveSupport::TestCase
+  MockEngine = BentoSearch::MockEngine
+  
   # simple decorator that replaces main link
   module Decorator
     def link
