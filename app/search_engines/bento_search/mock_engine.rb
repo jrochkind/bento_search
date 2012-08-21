@@ -10,6 +10,8 @@
 # [:link]             link to give to each item in results
 # [:error]            set to an error value hash and results returned
 #                     will all be failed? with that error hash. 
+# [:timing]           in seconds, fill out the results as if they took
+#                     this long. 
 class BentoSearch::MockEngine
     include BentoSearch::SearchEngine
     
@@ -28,11 +30,18 @@ class BentoSearch::MockEngine
       return results
     end    
     
+    def search(*args)
+      results = super(*args)
+      results.timing = configuration.timing if configuration.timing
+      return results
+    end
+    
     def self.default_configuration
       { :num_results => nil,
         :total_items => 1000, 
         :link => "http://example.org",
-        :error => nil}
+        :error => nil,
+        :timing => nil}
     end
     
     def sort_definitions
