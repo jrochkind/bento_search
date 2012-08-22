@@ -105,8 +105,8 @@ field type names:
 This will raise if an engine doesn't support that semantic search field. 
 You can find out what fields a particular engine supports.
 
-    BentoSearch::GoogleBooksEngine.search_keys # => internal keys
-    BentoSearch::GoogleBooksEngine.semantic_search_keys 
+    google_books_engine.search_keys # => internal keys
+    google_books_engine.semantic_search_keys 
 
 You can also provide all arguments in a single hash when it's convenient
 to do so:
@@ -117,7 +117,7 @@ to do so:
 
 An engine advertises what sort types it supports:
 
-    BentoSearch::GoogleBooksEngine.sort_keys
+    google_books_engine.sort_keys
    
 An array of sort identifiers, where possible
 chosen from a standard list of semantics. (See list in config/i18n/en.yml,
