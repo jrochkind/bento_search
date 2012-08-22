@@ -42,6 +42,7 @@ BentoSearch::SearchEngine. http://rubydoc.info/gems/bento_search/frames/
 
 An example app using BentoSearch and showing it's features is
 available at http://github.com/jrochkind/sample_megasearch
+There is a short screencast showing that sample app in action here: http://screencast.com/t/JLS0lclrBZU
 
 ## Usage Examples
 
