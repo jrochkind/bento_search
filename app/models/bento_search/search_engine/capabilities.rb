@@ -1,4 +1,3 @@
-
 # Methods that describe a search engine's capabilities,
 # mixed into SearchEngine. Individual engine implementations
 # will often over-ride some or all of these methods. 
@@ -24,6 +23,7 @@ module BentoSearch::SearchEngine::Capabilities
       # Keys should where possible be _standard_ keys chosen from
       # those listed in config/i18n/en:bento_search.sort_keys.*
       # But if you need something not there, it can be custom to engine.
+      # (or we can add it there?). 
       # Value of hash is for internal use by engine, it may be a convenient
       # place to store implementation details. 
       #
