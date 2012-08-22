@@ -180,7 +180,7 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
       include BentoSearch::SearchEngine
       
       def search_implementation(args)
-        raise Exception.new("I am a horrible engine")
+        raise TimeoutError.new("I am a horrible engine")
       end
     end
     

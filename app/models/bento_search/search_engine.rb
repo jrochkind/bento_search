@@ -2,6 +2,10 @@ require 'active_support/concern'
 require 'active_support/core_ext/module/delegation'
 require 'confstruct'
 
+# just so we can catch their exceptions:
+require 'httpclient'
+require 'multi_json'
+require 'nokogiri'
 
 module BentoSearch
   # Module mix-in for bento_search search engines. 
@@ -41,7 +45,15 @@ module BentoSearch
   #
   module SearchEngine
     DefaultPerPage = 10
-    AutoCatchExceptions = [Exception]
+    
+    # Can't rescue everything, or we eat VCR/webmock errors, and lots
+    # of other errors we don't want to eat either, making
+    # development really confusing.  Perhaps could set this
+    # to be something diff in production and dev?
+    AutoCatchExceptions = [TimeoutError, HTTPClient::TimeoutError, 
+            HTTPClient::ConfigurationError, HTTPClient::BadResponseError,
+            MultiJson::DecodeError, Nokogiri::SyntaxError]
+    
     
     extend ActiveSupport::Concern
     
@@ -101,10 +113,11 @@ module BentoSearch
         
       return results
     rescue *AutoCatchExceptions => e
-      # Uncaught exception, log and turn into failed Results object. 
-      # in addition to catching bugs in engine adapters, this is intentionally
-      # here as a convenience so engine adapters don't have to do all of their
-      # own error handling, they can just intentionally raise.  
+      # Uncaught exception, log and turn into failed Results object. We
+      # only catch certain types of exceptions, or it makes dev really
+      # confusing eating exceptions. This is intentionally a convenience
+      # to allow search engine implementations to just raise the exception
+      # and we'll turn it into a proper error. 
       cleaned_backtrace = Rails.backtrace_cleaner.clean(e.backtrace)
       log_msg = "BentoSearch::SearchEngine failed results: #{e.inspect}\n    #{cleaned_backtrace.join("\n    ")}"
       Rails.logger.error log_msg
