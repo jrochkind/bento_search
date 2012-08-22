@@ -117,9 +117,9 @@ to do so:
 
 An engine advertises what sort types it supports:
 
-    BentoSearch::GoogleBooksEngine.sort_definitions
+    BentoSearch::GoogleBooksEngine.sort_keys
    
-That returns a hash, where the keys are sort identifiers, where possible
+An array of sort identifiers, where possible
 chosen from a standard list of semantics. (See list in config/i18n/en.yml,
 bento_search.sort_keys). 
 
