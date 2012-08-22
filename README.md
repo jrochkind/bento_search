@@ -37,8 +37,13 @@ code in your app that needs to be rewritten. As well as letting you get
 started quick without reinventing the wheel and figuring out poorly
 documented vendor API's yourself. 
 
+See code-level api documentation for more details, especially at
+BentoSearch::SearchEngine.
 
-## Usage
+An example app using BentoSearch and showing it's features is
+available at http://github.com/jrochkind/sample_megasearch
+
+## Usage Examples
 
 ### Instantiate an engine, and search
 
@@ -245,8 +250,8 @@ be used to add them.
        conf.item_decorators = [ SomeModule, OtherModule]
     end
 
-See BentoSearch::Item for more information on decorators, and BentoSearch::Link
-on links. 
+See BentoSearch::Link for more info on links. (TODO: Better docs/examples
+on decorators). 
 
 ## Planned Features
 

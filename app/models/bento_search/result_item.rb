@@ -3,6 +3,11 @@ module BentoSearch
   # with common data fields. Usually held in a BentoSearch::Results object.
   #
   # ANY field can be nil, clients should be aware.  
+  #
+  # Each item has a field for one main link as string url, at #link (which may be nil),
+  # as well as array of possibly additional links (with labels and metadata)
+  # under #other_links.  #other_links is an array of BentoSearch::Link 
+  # objects. 
   class ResultItem
     include ERB::Util # for html_escape for our presentational stuff
     include ActionView::Helpers::OutputSafetyHelper # for safe_join

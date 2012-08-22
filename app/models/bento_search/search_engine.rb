@@ -12,36 +12,100 @@ module BentoSearch
   #
   # ==Using a SearchEngine 
   #
-  # * init/config
-  # * search
-  #   * pagination, with max per_page
-  #   * search fields, with semantics. ask for supported search fields. 
+  # See a whole bunch more examples in the project README.
   #
-  # == Standard config
-  #  * item_decorators : Array of Modules that will be decorated. See Decorators section. 
+  # You can initialize a search engine with configuration (some engines
+  # have required configuration):
+  #
+  #      engine = SomeSearchEngine.new(:config_key => 'foo')
+  #
+  # Or, it can be convenient (and is required for some features) to store
+  # a search engine with configuration in a global registry:
+  #
+  #      BentoSearch.register_engine("some_searcher") do |config|
+  #         config.engine = "SomeSearchEngine"
+  #         config.config_key = "foo"
+  #      end
+  #      # instantiates a new engine with registered config:
+  #      engine = BentoSearch.get_engine("some_searcher")
+  #
+  #  You can then use the #search method, which returns an instance of
+  #  of BentoSearch::Results
+  #
+  #  results = engine.search("query")
+  # 
+  #  See more docs under #search, as well as project README.  
+  #
+  # == Standard configuration variables. 
+  # 
+  # Some engines require their own engine-specific configuration for api keys
+  # and such, and offer their own engine-specific configuration for engine-specific
+  # features. 
+  #
+  # An additional semi-standard configuration variable, some engines take
+  # an `:auth => true` to tell the engine to assume that all access is by
+  # authenticated local users who should be given elevated access to results.  
+  #
+  # Additional standard configuration keys that are implemented by the bento_search
+  # framework:
+  #
+  #  [item_decorators]
+  #      Array of Modules that will be decorated on to each individual search
+  #      BentoSearch::ResultItem. These can be used to, via configuration, change
+  #      the links associated with items, change certain item behaviors, or massage
+  #      item metadata. (Needs more documentation). 
+  #      
   #
   # == Implementing a SearchEngine
   #
-  # `include BentoSearch::SearchEngine`
+  # Implmeneting a new SearchEngine is relatively straightforward -- you are
+  # generally only responsible for the parts specific to your search engine:
+  # receiving a query, making a call to the external search engine, and
+  # translating it's result to standard a BentoSearch::Results full of
+  # BentoSearch::ResultItems. 
   #
-  #  a SearchEngine's state should not be search-specific, but
-  #  is configuration specific. Don't store anything specific
-  #  to a specific search in iVars. 
+  # Start out by simply including the search engine module:
   #
-  #  Do implement `#search(*args)`
+  # class MyEngine
+  #   include BentoSearch::SearchEngine
+  # end
+  #
+  # Next, at a minimum, you need to implement a #search_implementation
+  # method, which takes a _normalized_ hash of search instructions as input
+  # (see documentation at #normalized_search_arguments), and returns
+  # BentoSearch::Results item.
+  #
+  # The Results object should have #total_items set with total hitcount, and
+  # contain BentoSearch::ResultItem objects for each hit in the current page. 
+  # See individual class documentation for more info. 
+  #
+  # That's about the extent of your responsibilities. If the search failed
+  # for some reason due to an error, you should return a Results object
+  # with it's #error object set, so it will be `failed?`.  The framework
+  # will take care of this for you for certain uncaught exceptions you allow
+  # to rise out of #search_implementation (timeouts, HTTPClient timeouts,
+  # nokogiri and MultiJson parse errors). 
+  #
+  # A SearchEngine object can be re-used for multiple searches, possibly
+  # under concurrent multi-threading. Do not store search-specific state
+  # in the search object. but you can store configuration-specific state there
+  # of course. 
   # 
-  #  Do use HTTPClient, if possible, for http searches, 
-  #  using a class-level HTTPClient to maintain persistent connections. 
+  # Recommend use of HTTPClient, if possible, for http searches. Especially
+  # using a class-level HTTPClient instance, to re-use persistent http
+  # connections accross searches (can be esp important if you need to contact
+  # external search api via https/ssl).
   #
-  #  Other options:
-  #  * implement a class-level `self.required_configuration' returning
-  #    an array of config keys or dot keypaths, and it'll raise on init
-  #    if those config's weren't supplied. 
-  #  * max per page
-  #  * search fields
+  # If you have required configuration keys, you can register that with 
+  # class-level required_configuration_keys method. 
   #
-  #  Some engines support `:auth => true` for elevated access to affiliated
-  #  users. 
+  # You can also advertise max per-page value by overriding max_per_page. 
+  #
+  # If you support fielded searching, you should over-ride 
+  # #search_field_definitions; if you support sorting, you should
+  # override #sort_definitions. See BentoSearch::SearchEngine::Capabilities
+  # module for documentation. 
+  # 
   #
   module SearchEngine
     DefaultPerPage = 10
@@ -84,9 +148,49 @@ module BentoSearch
       
     end
     
-    # Calls individual engine #search_implementation.
-    # first normalizes arguments, also adds on standard metadata
-    # to results. 
+    
+    # Method used to actually get results from a search engine.  
+    #
+    # When implementing a search engine, you do not override this #search
+    # method, but instead override #search_implementation. #search will
+    # call your specific #search_implementation, first normalizing the query
+    # arguments, and then normalizing and adding standard metadata to your return value.      
+    #
+    #  Most engines support pagination, sorting, and searching in a specific
+    #  field. 
+    #
+    #      # 1-based page index
+    #      engine.search("query", :per_page => 20, :page => 5)
+    #      # or use 0-based per-record index, engines that don't
+    #      # support this will round to nearest page. 
+    #      engine.search("query", :start => 20)
+    #
+    #  You can ask an engine what search fields it supports with engine.search_keys
+    #      engine.search("query", :search_field => "engine_search_field_name")
+    #
+    #  There are also normalized 'semantic' names you can use accross engines
+    #  (if they support them): :title, :author, :subject, maybe more. 
+    #
+    #      engine.search("query", :semantic_search_field => :title)
+    #
+    #  Ask an engine what semantic field names it supports with `engine.semantic_search_keys`
+    #
+    #  Ask an engine what sort fields it supports with `engine.sort_keys`. See
+    #  list of standard sort keys in I18n file at ./config/locales/en.yml, in
+    #  `en.bento_search.sort_keys`. 
+    #
+    #      engine.search("query", :sort => "some_sort_key")
+    #
+    #  Some engines support additional arguments to 'search', see individual
+    #  engine documentation. For instance, some engines support `:auth => true`
+    #  to give the user elevated search privileges when you have an authenticated
+    #  local user. 
+    #
+    # Query as first arg is just a convenience, you can also use a single hash
+    # argument. 
+    #
+    #      engine.search(:query => "query", :per_page => 20, :page => 4)
+    #
     def search(*arguments)
       start_t = Time.now
       
@@ -123,7 +227,22 @@ module BentoSearch
     end
         
 
-    
+    # Take the arguments passed into #search, which can be flexibly given
+    # in several ways, and normalize to an expected single hash that
+    # will be passed to an engine's #search_implementation. The output
+    # of this method is a single hash, and is what a #search_implementation
+    # can expect to receive as an argument, with keys: 
+    #
+    # [:query]        the query
+    # [:per_page]     will _always_ be present, using the default per_page if
+    #                 none given by caller
+    # [:start, :page] both :start and :page will _always_ be present, regardless
+    #                 of which the caller used. They will both be integers, even if strings passed in.
+    # [:search_field] A search field from the engine's #search_field_definitions, as string.  
+    #                 Even if the caller used :semantic_search_field, it'll be normalized
+    #                 to the actual local search_field key on output. 
+    # [:sort]         Sort key. 
+    #
     def normalized_search_arguments(*orig_arguments)
       arguments = {}
       
