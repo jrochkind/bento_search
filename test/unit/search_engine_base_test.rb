@@ -175,5 +175,25 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
     
   end
   
+  def test_rescues_exceptions
+    horrible_engine = Class.new do
+      include BentoSearch::SearchEngine
+      
+      def search_implementation(args)
+        raise Exception.new("I am a horrible engine")
+      end
+    end
+    
+    engine = horrible_engine.new
+    
+    results =  engine.search("cancer") 
+    
+    assert_not_nil results
+    assert results.failed?, "results marked failed"
+    assert_not_nil results.error[:exception], "results.error has exception"
+    
+    assert_equal "I am a horrible engine", results.error[:exception].message, "results.error has right exception"    
+  end
+  
 end
 

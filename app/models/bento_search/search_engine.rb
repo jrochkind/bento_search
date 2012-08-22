@@ -41,6 +41,7 @@ module BentoSearch
   #
   module SearchEngine
     DefaultPerPage = 10
+    AutoCatchExceptions = [Exception]
     
     extend ActiveSupport::Concern
     
@@ -99,6 +100,19 @@ module BentoSearch
       results.timing = (Time.now - start_t)
         
       return results
+    rescue *AutoCatchExceptions => e
+      # Uncaught exception, log and turn into failed Results object. 
+      # in addition to catching bugs in engine adapters, this is intentionally
+      # here as a convenience so engine adapters don't have to do all of their
+      # own error handling, they can just intentionally raise.  
+      cleaned_backtrace = Rails.backtrace_cleaner.clean(e.backtrace)
+      log_msg = "BentoSearch::SearchEngine failed results: #{e.inspect}\n    #{cleaned_backtrace.join("\n    ")}"
+      Rails.logger.error log_msg
+      
+      failed = BentoSearch::Results.new
+      failed.error ||= {}
+      failed.error[:exception] = e
+      return failed
     end
         
 
