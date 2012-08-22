@@ -2,9 +2,9 @@
 
 [![Build Status](https://secure.travis-ci.org/jrochkind/bento_search.png)](http://travis-ci.org/jrochkind/bento_search)
 
-
-(**in progress*, not yet ready for use, mainly because we need more
-out of the box search engines supported). 
+(Fairly robust and stable at this point, but still pre-1.0 release, may
+be some breaking api changes before 1.0, but probably not too many, it's
+looking pretty good). 
 
 bento_search provides an abstraction/normalization layer for querying and 
 displaying results for external search engines, in Ruby on Rails. Requires
@@ -38,7 +38,7 @@ started quick without reinventing the wheel and figuring out poorly
 documented vendor API's yourself. 
 
 See code-level api documentation for more details, especially at
-BentoSearch::SearchEngine.
+BentoSearch::SearchEngine. http://rubydoc.info/gems/bento_search/frames/
 
 An example app using BentoSearch and showing it's features is
 available at http://github.com/jrochkind/sample_megasearch
@@ -294,8 +294,9 @@ To re-generate cached responses, delete the relevant files in
 variable with your own API keys to re-run tests without cached response
 like this. 
 
-Also note `./test/support/mock_engine.rb`, a simple mock/dummy SearchEngine
-implementation that can be used in other tests. 
+Also note `BentoSearch::MockEngine`, a simple mock/dummy SearchEngine
+implementation that can be used in other tests, including in client
+software where convenient. 
 
 Pull requests welcome.  Pull requests with additional search engine implementations
 welcome. See more info on writing a BentoSearch::SearchEngine in the inline
