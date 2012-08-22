@@ -46,13 +46,7 @@ module BentoSearch
   module SearchEngine
     DefaultPerPage = 10
     
-    # Can't rescue everything, or we eat VCR/webmock errors, and lots
-    # of other errors we don't want to eat either, making
-    # development really confusing.  Perhaps could set this
-    # to be something diff in production and dev?
-    AutoCatchExceptions = [TimeoutError, HTTPClient::TimeoutError, 
-            HTTPClient::ConfigurationError, HTTPClient::BadResponseError,
-            MultiJson::DecodeError, Nokogiri::SyntaxError]
+
     
     
     extend ActiveSupport::Concern
@@ -112,7 +106,7 @@ module BentoSearch
       results.timing = (Time.now - start_t)
         
       return results
-    rescue *AutoCatchExceptions => e
+    rescue *auto_rescue_exceptions => e
       # Uncaught exception, log and turn into failed Results object. We
       # only catch certain types of exceptions, or it makes dev really
       # confusing eating exceptions. This is intentionally a convenience
@@ -190,7 +184,7 @@ module BentoSearch
     alias_method :parse_search_arguments, :normalized_search_arguments
     
     
-
+    
    
     
     protected
@@ -202,6 +196,23 @@ module BentoSearch
           result.extend decorator
         end
       end
+    end
+    
+    # What exceptions should our #search wrapper rescue and turn
+    # into failed results instead of fatal errors? 
+    #
+    # Can't rescue everything, or we eat VCR/webmock errors, and lots
+    # of other errors we don't want to eat either, making
+    # development really confusing.  Perhaps could set this
+    # to be something diff in production and dev?
+    #
+    # This default list is probably useful already, but individual
+    # engines can override if it's convenient for their own error
+    # handling. 
+    def auto_rescue_exceptions
+      [TimeoutError, HTTPClient::TimeoutError, 
+            HTTPClient::ConfigurationError, HTTPClient::BadResponseError,
+            MultiJson::DecodeError, Nokogiri::SyntaxError]
     end
     
     
