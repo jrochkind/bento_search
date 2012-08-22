@@ -29,7 +29,7 @@ module BentoSearch
         
     def search_implementation(arguments)            
       query_url = args_to_search_url(arguments)
-
+      
       results = Results.new
 
       begin
@@ -66,7 +66,7 @@ module BentoSearch
       results.total_items = json["totalItems"]
 
       
-      json["items"].each do |j_item|
+      (json["items"] || []).each do |j_item|
         j_item = j_item["volumeInfo"] if j_item["volumeInfo"]
 
         item = ResultItem.new

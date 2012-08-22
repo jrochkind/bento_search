@@ -66,6 +66,14 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
     assert_not_nil results.error[:error_info]            
   end
   
+  test_with_cassette("empty results", :gbs) do
+    results = @engine.search '"mongy frongy alkdjf mzytladf"'
+    
+    assert ! results.failed?
+    assert_equal 0, results.total_items
+  end
+
+  
   
   def test_sort_construction
     url = @engine.send(:args_to_search_url, :query => "cancer", :sort => "date_desc")
