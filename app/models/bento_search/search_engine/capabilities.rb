@@ -32,6 +32,12 @@ module BentoSearch::SearchEngine::Capabilities
       def sort_definitions
         {}
       end
+      
+      # convenience to get just the sort keys, which is what client
+      # cares about. 
+      def sort_keys
+        sort_definitions.keys
+      end
                   
       # Override to return int max per-page. 
       def max_per_page
