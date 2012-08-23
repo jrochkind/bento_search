@@ -85,7 +85,7 @@ class BentoSearch::EbscoHostEngine
     
     results = BentoSearch::Results.new
     xml, response, exception = nil, nil, nil
-    
+
     begin
       response = http_client.get(url)
       xml = Nokogiri::XML(response.body)
@@ -173,11 +173,18 @@ class BentoSearch::EbscoHostEngine
     components = components.collect {|a| a.titlecase if a}
     components.uniq! # no need to have the same thing twice
     
-    # some hard-coded cases for better user-displayable string
+    # some hard-coded cases for better user-displayable string, and other
+    # normalization. 
     if ["Academic Journal", "Journal"].include?(components.first) && ["Article", "Journal Article"].include?(components.last)
       return "Journal Article"
     elsif components.first == "Periodical" && components.length > 1
       return components.last
+    elsif components[0].include? components[1]
+      # last is strict substring, don't need it
+      return components[0]
+    elsif components[1].include? components[0]
+      # first is strict substring, don't need it
+      return components[1]
     end
     
     
@@ -267,8 +274,15 @@ class BentoSearch::EbscoHostEngine
     item.link           = get_link(xml_rec)
 
     item.issn           = text_if_present info.at_xpath("./jinfo/issn")
-    item.journal_title  =  text_if_present(info.at_xpath("./jinfo/jtl"))
+    item.journal_title  = text_if_present(info.at_xpath("./jinfo/jtl"))
     item.publisher      = text_if_present info.at_xpath("./pubinfo/pub")
+    # if no publisher, but a dissertation institution, use that
+    # as publisher. 
+    unless item.publisher
+      item.publisher    = text_if_present info.at_xpath("./dissinfo/dissinst")
+    end
+    
+    
     # Might have multiple ISBN's in record, just take first for now
     item.isbn           = text_if_present info.at_xpath("./bkinfo/isbn")
     
