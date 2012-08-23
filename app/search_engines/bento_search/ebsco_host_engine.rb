@@ -172,19 +172,19 @@ class BentoSearch::EbscoHostEngine
     
     components = components.collect {|a| a.titlecase if a}
     components.uniq! # no need to have the same thing twice
-    
+
     # some hard-coded cases for better user-displayable string, and other
     # normalization. 
     if ["Academic Journal", "Journal"].include?(components.first) && ["Article", "Journal Article"].include?(components.last)
       return "Journal Article"
     elsif components.first == "Periodical" && components.length > 1
       return components.last
-    elsif components[0].include? components[1]
+    elsif components.size == 2 && components.first.include?(components.last)
       # last is strict substring, don't need it
-      return components[0]
-    elsif components[1].include? components[0]
+      return components.first
+    elsif components.size == 2 && components.last.include?(components.first)
       # first is strict substring, don't need it
-      return components[1]
+      return components.last
     end
     
     
