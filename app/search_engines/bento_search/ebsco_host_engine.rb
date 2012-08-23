@@ -312,6 +312,9 @@ class BentoSearch::EbscoHostEngine
     item.format         = sniff_format info
     item.format_str     = sniff_format_str info
     
+    # Totally unreliable, seems to report english for everything?
+    # item.language_str   = text_if_present info.at_xpath("./language")
+    
     
     return item
   end

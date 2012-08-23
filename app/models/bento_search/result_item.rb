@@ -81,6 +81,10 @@ module BentoSearch
     # format. 
     attr_accessor :format_str
     
+    # Language of materials: Uncontrolled presumably english-langauge label
+    # We may add controlled field later. 
+    attr_accessor :language_str
+    
     # year published. a ruby int
     # PART of:. 
     # * schema.org CreativeWork "datePublished", year portion

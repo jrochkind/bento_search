@@ -169,6 +169,8 @@ class BentoSearch::SummonEngine
         item.format_str     = doc_hash["ContentType"].join(", ")
       end
       
+      item.language_str   = first_if_present doc_hash["Language"]
+      
       if ( configuration.highlighting && configuration.snippets_as_abstract &&
         doc_hash["Snippet"] && doc_hash["Snippet"].length > 0 )
       
