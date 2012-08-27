@@ -1,3 +1,5 @@
+require 'test_helper'
+
 class OpenurlCreatorTest < ActiveSupport::TestCase
   
   def test_create_article
@@ -80,7 +82,7 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
       
   end
   
-  def create_hardcoded_kev
+  def test_create_hardcoded_kev
     item = BentoSearch::ResultItem.new(
       :format => "Book",
       :title => "Something",
@@ -89,13 +91,13 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
     
     r = BentoSearch::OpenurlCreator.new(item).to_openurl.referent
     
-    assert_equal  "article",    r.format
+    assert_equal  "journal",    r.format
     assert_equal  "Foo Bar",    r.metadata["title"]
     assert_equal  "Smith",      r.metadata["au"]
 
   end
   
-  def result_item_to_openurl
+  def test_result_item_to_openurl
     item = BentoSearch::ResultItem.new(
       :format => "Book",
       :title => "Something",
@@ -106,6 +108,20 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
     
     assert_kind_of OpenURL::ContextObject, openurl
   end
+  
+  def test_strip_tags     
+    item = BentoSearch::ResultItem.new(      
+      :title => "<b>My Title</b>".html_safe,
+      :year => 2012,
+      :isbn => "XXXX",                        
+      )
+    
+    openurl = item.to_openurl
+    
+    assert_equal "My Title", openurl.referent.metadata["title"]
+  end
+  
+  
   
   
 end

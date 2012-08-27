@@ -16,6 +16,8 @@ module BentoSearch
   # In some cases nil can be returned, if no reasonable OpenURL can
   # be created from the ResultItem. 
   class OpenurlCreator
+    include ActionView::Helpers::SanitizeHelper # for strip_tags
+    
     attr_accessor :result_item
     
     def initialize(ri)
@@ -42,9 +44,9 @@ module BentoSearch
       r.set_metadata("genre", self.genre)
       
       if result_item.authors.length > 0
-        r.set_metadata("aufirst", result_item.authors.first.first)
-        r.set_metadata("aulast", result_item.authors.first.last)
-        r.set_metadata("au", result_item.author_display(result_item.authors.first))
+        r.set_metadata("aufirst", ensure_no_tags(result_item.authors.first.first))
+        r.set_metadata("aulast", ensure_no_tags(result_item.authors.first.last))
+        r.set_metadata("au", result_item.author_display(ensure_no_tags result_item.authors.first))
       end
 
       r.set_metadata("date",    result_item.year.to_s)
@@ -52,18 +54,18 @@ module BentoSearch
       r.set_metadata("issue",   result_item.issue.to_s)
       r.set_metadata("spage",   result_item.start_page.to_s)
       r.set_metadata("epage",   result_item.end_page.to_s)
-      r.set_metadata("jtitle",  result_item.journal_title)
+      r.set_metadata("jtitle",  ensure_no_tags(result_item.journal_title))
       r.set_metadata("issn",    result_item.issn)
       r.set_metadata("isbn",    result_item.isbn)
-      r.set_metadata("pub",     result_item.publisher)
+      r.set_metadata("pub",     ensure_no_tags(result_item.publisher))
       
       case result_item.format
       when "Book"
-        r.set_metadata("btitle", result_item.complete_title)
+        r.set_metadata("btitle", ensure_no_tags(result_item.complete_title))
       when "Article", :conference_paper
-        r.set_metadata("atitle", result_item.complete_title)
+        r.set_metadata("atitle", ensure_no_tags(result_item.complete_title))
       else
-        r.set_metadata("title", result_item.complete_title)
+        r.set_metadata("title", ensure_no_tags(result_item.complete_title))
       end
       
       return context_object
@@ -123,6 +125,14 @@ module BentoSearch
       end
     end
     
+    
+    # If the input is not marked html_safe?, just return it. Otherwise
+    # strip html tags from it.
+    def ensure_no_tags(str)
+      return str unless str.html_safe?
+      
+      strip_tags(str)      
+    end
     
   end
 end
