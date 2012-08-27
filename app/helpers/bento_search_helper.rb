@@ -55,7 +55,7 @@ module BentoSearchHelper
       if results.failed?
         render :partial => "bento_search/search_error", :locals => {:results => results}
       elsif results.length > 0      
-        render :partial => "bento_search/std_item", :collection => results
+        render :partial => "bento_search/std_item", :collection => results, :as => :item
       else
         content_tag(:div, :class=> "bento_search_no_results") do
           I18n.translate("bento_search.no_results")

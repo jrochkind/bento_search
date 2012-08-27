@@ -1,8 +1,7 @@
-<% #  must pass in local 'item' OR 'std_item' (as used by rails collection
-   #   rendering) that's a BentoSearch::ResultItem 
-     
-  item = local_assigns[:item] || local_assigns[:std_item]
-
+<% #  must pass in local 'item' that's a BentoSearch::ResultItem
+   #
+   # Custom partials meant to take this place of this one should
+   # use same convention, local 'item'. 
 %>
 
 <div class="bento_item">
