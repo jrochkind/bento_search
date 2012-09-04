@@ -62,6 +62,7 @@ module BentoSearch
           "X-ELS-ResourceVersion" => "XOCS",
           "Accept" => "application/atom+xml"}
         )
+
         xml = Nokogiri::XML(response.body)
       rescue TimeoutError, HTTPClient::ConfigurationError, HTTPClient::BadResponseError, Nokogiri::SyntaxError  => e
         exception = e        
@@ -81,7 +82,7 @@ module BentoSearch
             xml &&
             (error_xml = xml.at_xpath("./service-error/status")) &&
             (node_text(error_xml.at_xpath("./statusCode")) == "INVALID_INPUT") &&
-            (node_text(error_xml.at_xpath("./statusText")) == "Result set was empty or Start value beyond result set")
+            (node_text(error_xml.at_xpath("./statusText")).starts_with? "Result set was empty")
           )
           # PROBABLY 0 hit count, although could be something else I'm afraid. 
           results.total_items = 0
