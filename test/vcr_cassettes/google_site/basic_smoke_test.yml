@@ -1,0 +1,256 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/customsearch/v1?cx=DUMMY_CX&key=DUMMY_API_KEY&q=books
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Tue, 04 Sep 2012 21:37:03 GMT
+      Date:
+      - Tue, 04 Sep 2012 21:37:03 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - ! '"LXj_4NvXMsBuBj8xNRXBhULBOPo/SRDT2ED6fuKI-msX4TNCU0CdHkI"'
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: ! "{\n \"kind\": \"customsearch#search\",\n \"url\": {\n  \"type\":
+        \"application/json\",\n  \"template\": \"https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json\"\n
+        },\n \"queries\": {\n  \"nextPage\": [\n   {\n    \"title\": \"Google Custom
+        Search - books\",\n    \"totalResults\": \"6970\",\n    \"searchTerms\": \"books\",\n
+        \   \"count\": 10,\n    \"startIndex\": 11,\n    \"inputEncoding\": \"utf8\",\n
+        \   \"outputEncoding\": \"utf8\",\n    \"safe\": \"off\",\n    \"cx\": \"DUMMY_CX\"\n
+        \  }\n  ],\n  \"request\": [\n   {\n    \"title\": \"Google Custom Search
+        - books\",\n    \"totalResults\": \"6970\",\n    \"searchTerms\": \"books\",\n
+        \   \"count\": 10,\n    \"startIndex\": 1,\n    \"inputEncoding\": \"utf8\",\n
+        \   \"outputEncoding\": \"utf8\",\n    \"safe\": \"off\",\n    \"cx\": \"DUMMY_CX\"\n
+        \  }\n  ]\n },\n \"context\": {\n  \"title\": \"JHU Libraries test\"\n },\n
+        \"searchInformation\": {\n  \"searchTime\": 0.133447,\n  \"formattedSearchTime\":
+        \"0.13\",\n  \"totalResults\": \"6970\",\n  \"formattedTotalResults\": \"6,970\"\n
+        },\n \"items\": [\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\":
+        \"Rare Books and Manuscripts\",\n   \"htmlTitle\": \"Rare \\u003cb\\u003eBooks\\u003c/b\\u003e
+        and Manuscripts\",\n   \"link\": \"http://www.library.jhu.edu/collections/specialcollections/index.html\",\n
+        \  \"displayLink\": \"www.library.jhu.edu\",\n   \"snippet\": \"Main page
+        for the Special Collections Department of Archives, Manuscripts and   Rare
+        Books.\",\n   \"htmlSnippet\": \"Main page for the Special Collections Department
+        of Archives, Manuscripts and \\u003cbr\\u003e  Rare \\u003cb\\u003eBooks\\u003c/b\\u003e.\",\n
+        \  \"cacheId\": \"2KLFAzsCxMsJ\",\n   \"formattedUrl\": \"www.library.jhu.edu/collections/specialcollections/index.html\",\n
+        \  \"htmlFormattedUrl\": \"www.library.jhu.edu/collections/specialcollections/index.html\",\n
+        \  \"pagemap\": {\n    \"cse_image\": [\n     {\n      \"src\": \"http://old.library.jhu.edu/sebin/t/t/gpl_library_smaller.jpg\"\n
+        \    }\n    ],\n    \"cse_thumbnail\": [\n     {\n      \"width\": \"200\",\n
+        \     \"height\": \"252\",\n      \"src\": \"https://encrypted-tbn0.google.com/images?q=tbn:ANd9GcTgARgvj5T5jta3XN9ZLZzd30pqVZetCQ-JM-AHnXp_BEvMvJjA6WiYJjSB\"\n
+        \    }\n    ],\n    \"metatags\": [\n     {\n      \"author\": \"Holly Callahan\",\n
+        \     \"date\": \"2011-11-28T16:17:48-04:00\",\n      \"title\": \"Home\"\n
+        \    }\n    ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\":
+        \"JHSearch: Safari Books Online\",\n   \"htmlTitle\": \"JHSearch: Safari \\u003cb\\u003eBooks\\u003c/b\\u003e
+        Online\",\n   \"link\": \"http://jhsearch.library.jhu.edu/databases/database/JHU03821\",\n
+        \  \"displayLink\": \"jhsearch.library.jhu.edu\",\n   \"snippet\": \"Safari
+        Books Online is a joint venture of O'Reilly Media and The Pearson   Technology
+        Group that compiles the best technology books from the leading   authors ...\",\n
+        \  \"htmlSnippet\": \"Safari \\u003cb\\u003eBooks\\u003c/b\\u003e Online is
+        a joint venture of O&#39;Reilly Media and The Pearson \\u003cbr\\u003e  Technology
+        Group that compiles the best technology \\u003cb\\u003ebooks\\u003c/b\\u003e
+        from the leading \\u003cbr\\u003e  authors \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"cacheId\": \"xQzMfZhyB-EJ\",\n   \"formattedUrl\": \"jhsearch.library.jhu.edu/databases/database/JHU03821\",\n
+        \  \"htmlFormattedUrl\": \"jhsearch.library.jhu.edu/databases/database/JHU03821\"\n
+        \ },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\": \"Peabody
+        Library - Special Collections & Archives - Library Guides at ...\",\n   \"htmlTitle\":
+        \"Peabody Library - Special Collections &amp; Archives - Library Guides at
+        \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"link\": \"http://www.library.jhu.edu/collections/specialcollections/rarebooks/peabody/\",\n
+        \  \"displayLink\": \"www.library.jhu.edu\",\n   \"snippet\": \"Aug 22, 2012
+        ... How to Request MaterialsRare Books and Manuscripts Polices · How-To: A
+        \  History of Instruction (Archibald) · Book FestivalFlower Mart ...\",\n
+        \  \"htmlSnippet\": \"Aug 22, 2012 \\u003cb\\u003e...\\u003c/b\\u003e How
+        to Request MaterialsRare \\u003cb\\u003eBooks\\u003c/b\\u003e and Manuscripts
+        Polices &middot; How-To: A \\u003cbr\\u003e  History of Instruction (Archibald)
+        &middot; \\u003cb\\u003eBook\\u003c/b\\u003e FestivalFlower Mart \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"formattedUrl\": \"www.library.jhu.edu/collections/specialcollections/rarebooks/peabody/\",\n
+        \  \"htmlFormattedUrl\": \"www.library.jhu.edu/collections/specialcollections/rare\\u003cb\\u003ebooks\\u003c/b\\u003e/peabody/\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Heidi
+        Herr, Chella Vaidyanathan, Jordon Steele\",\n      \"copyright\": \"Copyright
+        Johns Hopkins University 2012\",\n      \"dc.title\": \"Library Guides. Special
+        Collections & Archives. Peabody Library.\",\n      \"dc.creator\": \"Heidi
+        Herr, Chella Vaidyanathan, Jordon Steele\",\n      \"dc.subject\": \"Peabody
+        Library Special Collections & Archives Library Guides\",\n      \"dc.description\":
+        \"Information about the exquisite Peabody Library\",\n      \"dc.publisher\":
+        \"Johns Hopkins University Sheridan Libraries\",\n      \"dc.rights\": \"Copyright
+        Johns Hopkins University 2012\",\n      \"dc.language\": \"en\",\n      \"dc.identifier\":
+        \"http://guides.library.jhu.edu/specialcollections\",\n      \"dc.date.created\":
+        \"Aug 25, 2011\",\n      \"dc.date.modified\": \"Aug 22, 2012\",\n      \"dc.unused\":
+        \"Contributor, Date, Type, Format, Source, Relation, Coverage\",\n      \"y_key\":
+        \"65baedbaee9038f3\"\n     }\n    ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n
+        \  \"title\": \"Out of Copyright Books\",\n   \"htmlTitle\": \"Out of Copyright
+        \\u003cb\\u003eBooks\\u003c/b\\u003e\",\n   \"link\": \"https://jscholarship.library.jhu.edu/handle/1774.2/59\",\n
+        \  \"displayLink\": \"jscholarship.library.jhu.edu\",\n   \"snippet\": \"This
+        collection contains content captured during preservation reformatting of   materials
+        from the physical collection. There is usually a bibliographic record in   the
+        ...\",\n   \"htmlSnippet\": \"This collection contains content captured during
+        preservation reformatting of \\u003cbr\\u003e  materials from the physical
+        collection. There is usually a bibliographic record in \\u003cbr\\u003e  the
+        \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"cacheId\": \"SK7ab5EIgAAJ\",\n
+        \  \"formattedUrl\": \"https://jscholarship.library.jhu.edu/handle/1774.2/59\",\n
+        \  \"htmlFormattedUrl\": \"https://jscholarship.library.jhu.edu/handle/1774.2/59\",\n
+        \  \"pagemap\": {\n    \"cse_image\": [\n     {\n      \"src\": \"https://jscholarship.library.jhu.edu/themes/Golden/logo.png\"\n
+        \    }\n    ],\n    \"cse_thumbnail\": [\n     {\n      \"width\": \"101\",\n
+        \     \"height\": \"98\",\n      \"src\": \"https://encrypted-tbn2.google.com/images?q=tbn:ANd9GcTEyucbV5j6Fw-ZfWJxayVmiWAg9JunzletDcmf0gi22lrYi-ZsgvDV2A\"\n
+        \    }\n    ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\":
+        \"Books - German Language and Literature - Library Guides at Johns ...\",\n
+        \  \"htmlTitle\": \"\\u003cb\\u003eBooks\\u003c/b\\u003e - German Language
+        and Literature - Library Guides at Johns \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"link\": \"http://guides.library.jhu.edu/content.php?pid=25138&sid=181188\",\n
+        \  \"displayLink\": \"guides.library.jhu.edu\",\n   \"snippet\": \"Aug 8,
+        2012 ... This is the \\\"Books\\\" page of the \\\"German Language and Literature\\\"
+        guide.   Alternate Page for Screenreader Users Skip to Page Navigation ...\",\n
+        \  \"htmlSnippet\": \"Aug 8, 2012 \\u003cb\\u003e...\\u003c/b\\u003e This
+        is the &quot;\\u003cb\\u003eBooks\\u003c/b\\u003e&quot; page of the &quot;German
+        Language and Literature&quot; guide. \\u003cbr\\u003e  Alternate Page for
+        Screenreader Users Skip to Page Navigation \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"formattedUrl\": \"guides.library.jhu.edu/content.php?pid=25138&sid=181188\",\n
+        \  \"htmlFormattedUrl\": \"guides.library.jhu.edu/content.php?pid=25138&amp;sid=181188\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Sue Waterman\",\n
+        \     \"copyright\": \"Copyright Johns Hopkins University 2012\",\n      \"dc.title\":
+        \"Library Guides. German Language and Literature. Books.\",\n      \"dc.creator\":
+        \"Sue Waterman\",\n      \"dc.subject\": \"Books German Language and Literature
+        Library Guides\",\n      \"dc.description\": \"Resources, both online and
+        elsewhere, for the German language and literature.\",\n      \"dc.publisher\":
+        \"Johns Hopkins University Sheridan Libraries\",\n      \"dc.rights\": \"Copyright
+        Johns Hopkins University 2012\",\n      \"dc.language\": \"en\",\n      \"dc.identifier\":
+        \"http://guides.library.jhu.edu/german\",\n      \"dc.date.created\": \"Nov
+        6, 2008\",\n      \"dc.date.modified\": \"Aug 8, 2012\",\n      \"dc.unused\":
+        \"Contributor, Date, Type, Format, Source, Relation, Coverage\",\n      \"y_key\":
+        \"65baedbaee9038f3\"\n     }\n    ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n
+        \  \"title\": \"Books - French Language and Literature - Library Guides at
+        Johns ...\",\n   \"htmlTitle\": \"\\u003cb\\u003eBooks\\u003c/b\\u003e - French
+        Language and Literature - Library Guides at Johns \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"link\": \"http://guides.library.jhu.edu/content.php?pid=22748&sid=165198\",\n
+        \  \"displayLink\": \"guides.library.jhu.edu\",\n   \"snippet\": \"Aug 2,
+        2012 ... This is the \\\"Books\\\" page of the \\\"French Language and Literature\\\"
+        guide. Alternate   Page for Screenreader Users Skip to Page Navigation ...\",\n
+        \  \"htmlSnippet\": \"Aug 2, 2012 \\u003cb\\u003e...\\u003c/b\\u003e This
+        is the &quot;\\u003cb\\u003eBooks\\u003c/b\\u003e&quot; page of the &quot;French
+        Language and Literature&quot; guide. Alternate \\u003cbr\\u003e  Page for
+        Screenreader Users Skip to Page Navigation \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"formattedUrl\": \"guides.library.jhu.edu/content.php?pid=22748&sid=165198\",\n
+        \  \"htmlFormattedUrl\": \"guides.library.jhu.edu/content.php?pid=22748&amp;sid=165198\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Sue Waterman\",\n
+        \     \"copyright\": \"Copyright Johns Hopkins University 2012\",\n      \"dc.title\":
+        \"Library Guides. French Language and Literature. Books.\",\n      \"dc.creator\":
+        \"Sue Waterman\",\n      \"dc.subject\": \"Books French Language and Literature
+        Library Guides\",\n      \"dc.description\": \"Resources, both online and
+        elsewhere, for the French language and literature.\",\n      \"dc.publisher\":
+        \"Johns Hopkins University Sheridan Libraries\",\n      \"dc.rights\": \"Copyright
+        Johns Hopkins University 2012\",\n      \"dc.language\": \"en\",\n      \"dc.identifier\":
+        \"http://guides.library.jhu.edu/french\",\n      \"dc.date.created\": \"Nov
+        5, 2008\",\n      \"dc.date.modified\": \"Aug 2, 2012\",\n      \"dc.unused\":
+        \"Contributor, Date, Type, Format, Source, Relation, Coverage\",\n      \"y_key\":
+        \"65baedbaee9038f3\"\n     }\n    ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n
+        \  \"title\": \"Home: Intro to E-Books - E-Books - Library Guides at Johns
+        Hopkins ...\",\n   \"htmlTitle\": \"Home: Intro to E-\\u003cb\\u003eBooks\\u003c/b\\u003e
+        - E-\\u003cb\\u003eBooks\\u003c/b\\u003e - Library Guides at Johns Hopkins
+        \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"link\": \"http://guides.library.jhu.edu/ebooks\",\n
+        \  \"displayLink\": \"guides.library.jhu.edu\",\n   \"snippet\": \"Aug 14,
+        2012 ... How to find electronic books and resources in the library's catalog.\",\n
+        \  \"htmlSnippet\": \"Aug 14, 2012 \\u003cb\\u003e...\\u003c/b\\u003e How
+        to find electronic \\u003cb\\u003ebooks\\u003c/b\\u003e and resources in the
+        library&#39;s catalog.\",\n   \"formattedUrl\": \"guides.library.jhu.edu/ebooks\",\n
+        \  \"htmlFormattedUrl\": \"guides.library.jhu.edu/e\\u003cb\\u003ebooks\\u003c/b\\u003e\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Sue Vazakas\",\n
+        \     \"copyright\": \"Copyright Johns Hopkins University 2012\",\n      \"dc.title\":
+        \"Library Guides. E-Books. Home: Intro to E-Books.\",\n      \"dc.creator\":
+        \"Sue Vazakas\",\n      \"dc.subject\": \"Home: Intro to E-Books E-Books Library
+        Guides\",\n      \"dc.description\": \"How to find electronic books and resources
+        in the library's catalog.\",\n      \"dc.publisher\": \"Johns Hopkins University
+        Sheridan Libraries\",\n      \"dc.rights\": \"Copyright Johns Hopkins University
+        2012\",\n      \"dc.language\": \"en\",\n      \"dc.identifier\": \"http://guides.library.jhu.edu/ebooks\",\n
+        \     \"dc.date.created\": \"May 9, 2011\",\n      \"dc.date.modified\": \"Aug
+        14, 2012\",\n      \"dc.unused\": \"Contributor, Date, Type, Format, Source,
+        Relation, Coverage\",\n      \"y_key\": \"65baedbaee9038f3\"\n     }\n    ]\n
+        \  }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\": \"Finding
+        Books in the JHU Libraries\",\n   \"htmlTitle\": \"Finding \\u003cb\\u003eBooks\\u003c/b\\u003e
+        in the JHU Libraries\",\n   \"link\": \"http://old.library.jhu.edu/researchhelp/general/books.html\",\n
+        \  \"displayLink\": \"old.library.jhu.edu\",\n   \"snippet\": \"Find books
+        that are owned by one of the JHU Libraries. Search the JHU Libraries   Catalog
+        for books that are owned by Johns Hopkins, as well as for videos, ...\",\n
+        \  \"htmlSnippet\": \"Find \\u003cb\\u003ebooks\\u003c/b\\u003e that are owned
+        by one of the JHU Libraries. Search the JHU Libraries \\u003cbr\\u003e  Catalog
+        for \\u003cb\\u003ebooks\\u003c/b\\u003e that are owned by Johns Hopkins,
+        as well as for videos, \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"cacheId\":
+        \"76s2xASMLHsJ\",\n   \"formattedUrl\": \"old.library.jhu.edu/researchhelp/general/books.html\",\n
+        \  \"htmlFormattedUrl\": \"old.library.jhu.edu/researchhelp/general/\\u003cb\\u003ebooks\\u003c/b\\u003e.html\",\n
+        \  \"pagemap\": {\n    \"cse_image\": [\n     {\n      \"src\": \"http://old.library.jhu.edu/sebin/m/t/book.gif\"\n
+        \    }\n    ],\n    \"cse_thumbnail\": [\n     {\n      \"width\": \"104\",\n
+        \     \"height\": \"68\",\n      \"src\": \"https://encrypted-tbn3.google.com/images?q=tbn:ANd9GcQVuOwr0XQBCzyzOcqWnAHsX2dZINnIoj2z5fKfWRSfXP7j2cY80oTp\"\n
+        \    }\n    ],\n    \"metatags\": [\n     {\n      \"author\": \"Andrea Bartelstein\",\n
+        \     \"date\": \"2005-03-01T16:28:07-04:00\",\n      \"dc.creator\": \"Andrea
+        Bartelstein\",\n      \"title\": \"Finding Books in the JHU Libraries\",\n
+        \     \"dc.title\": \"Finding Books in Education and Counseling\",\n      \"dc.keyword\":
+        \"education counseling counselling research help finding books\"\n     }\n
+        \   ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\":
+        \"3. Downloading E-books - E-Books - Library Guides at Johns ...\",\n   \"htmlTitle\":
+        \"3. Downloading E-\\u003cb\\u003ebooks\\u003c/b\\u003e - E-\\u003cb\\u003eBooks\\u003c/b\\u003e
+        - Library Guides at Johns \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"link\":
+        \"http://guides.library.jhu.edu/content.php?pid=156837&sid=1723518\",\n   \"displayLink\":
+        \"guides.library.jhu.edu\",\n   \"snippet\": \"Aug 14, 2012 ... How to find
+        electronic books and resources in the library's catalog.\",\n   \"htmlSnippet\":
+        \"Aug 14, 2012 \\u003cb\\u003e...\\u003c/b\\u003e How to find electronic \\u003cb\\u003ebooks\\u003c/b\\u003e
+        and resources in the library&#39;s catalog.\",\n   \"formattedUrl\": \"guides.library.jhu.edu/content.php?pid=156837&sid=1723518\",\n
+        \  \"htmlFormattedUrl\": \"guides.library.jhu.edu/content.php?pid=156837&amp;sid=1723518\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Sue Vazakas\",\n
+        \     \"copyright\": \"Copyright Johns Hopkins University 2012\",\n      \"dc.title\":
+        \"Library Guides. E-Books. 3. Downloading E-books.\",\n      \"dc.creator\":
+        \"Sue Vazakas\",\n      \"dc.subject\": \"3. Downloading E-books E-Books Library
+        Guides\",\n      \"dc.description\": \"How to find electronic books and resources
+        in the library's catalog.\",\n      \"dc.publisher\": \"Johns Hopkins University
+        Sheridan Libraries\",\n      \"dc.rights\": \"Copyright Johns Hopkins University
+        2012\",\n      \"dc.language\": \"en\",\n      \"dc.identifier\": \"http://guides.library.jhu.edu/ebooks\",\n
+        \     \"dc.date.created\": \"May 9, 2011\",\n      \"dc.date.modified\": \"Aug
+        14, 2012\",\n      \"dc.unused\": \"Contributor, Date, Type, Format, Source,
+        Relation, Coverage\",\n      \"y_key\": \"65baedbaee9038f3\"\n     }\n    ]\n
+        \  }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\": \"Books
+        - Italian Language and Literature - Library Guides at Johns ...\",\n   \"htmlTitle\":
+        \"\\u003cb\\u003eBooks\\u003c/b\\u003e - Italian Language and Literature -
+        Library Guides at Johns \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"link\":
+        \"http://guides.library.jhu.edu/content.php?pid=25794&sid=186218\",\n   \"displayLink\":
+        \"guides.library.jhu.edu\",\n   \"snippet\": \"Aug 15, 2012 ... This is the
+        \\\"Books\\\" page of the \\\"Italian Language and Literature\\\" guide. Alternate
+        \  Page for Screenreader Users Skip to Page Navigation ...\",\n   \"htmlSnippet\":
+        \"Aug 15, 2012 \\u003cb\\u003e...\\u003c/b\\u003e This is the &quot;\\u003cb\\u003eBooks\\u003c/b\\u003e&quot;
+        page of the &quot;Italian Language and Literature&quot; guide. Alternate \\u003cbr\\u003e
+        \ Page for Screenreader Users Skip to Page Navigation \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"formattedUrl\": \"guides.library.jhu.edu/content.php?pid=25794&sid=186218\",\n
+        \  \"htmlFormattedUrl\": \"guides.library.jhu.edu/content.php?pid=25794&amp;sid=186218\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Sue Waterman\",\n
+        \     \"copyright\": \"Copyright Johns Hopkins University 2012\",\n      \"dc.title\":
+        \"Library Guides. Italian Language and Literature. Books.\",\n      \"dc.creator\":
+        \"Sue Waterman\",\n      \"dc.subject\": \"Books Italian Language and Literature
+        Library Guides\",\n      \"dc.description\": \"Resources, in all formats,
+        for the study of Italian literature and language\",\n      \"dc.publisher\":
+        \"Johns Hopkins University Sheridan Libraries\",\n      \"dc.rights\": \"Copyright
+        Johns Hopkins University 2012\",\n      \"dc.language\": \"en\",\n      \"dc.identifier\":
+        \"http://guides.library.jhu.edu/italian\",\n      \"dc.date.created\": \"Nov
+        11, 2008\",\n      \"dc.date.modified\": \"Aug 15, 2012\",\n      \"dc.unused\":
+        \"Contributor, Date, Type, Format, Source, Relation, Coverage\",\n      \"y_key\":
+        \"65baedbaee9038f3\"\n     }\n    ]\n   }\n  }\n ]\n}\n"
+    http_version: 
+  recorded_at: Tue, 04 Sep 2012 21:37:03 GMT
+recorded_with: VCR 2.2.4
