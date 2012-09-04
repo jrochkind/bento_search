@@ -144,12 +144,13 @@ class BentoSearch::EbscoHostEngine
   def sniff_format(xml_node)
     return nil if xml_node.nil?
     
-    if xml_node.at_xpath("./bkinfo/*")
+
+    if xml_node.at_xpath("./jinfo/*") && xml_node.at_xpath("./artinfo/*")
+      "Article"
+    elsif xml_node.at_xpath("./bkinfo/*")
       "Book"
     elsif xml_node.at_xpath("./dissinfo/*")
       :dissertation
-    elsif xml_node.at_xpath("./jinfo/*") && xml_node.at_xpath("./artinfo/*")
-      "Article"
     elsif xml_node.at_xpath("./jinfo/*")
       :serial
     else
@@ -274,6 +275,7 @@ class BentoSearch::EbscoHostEngine
     item.link           = get_link(xml_rec)
 
     item.issn           = text_if_present info.at_xpath("./jinfo/issn")
+
     item.journal_title  = text_if_present(info.at_xpath("./jinfo/jtl"))
     item.publisher      = text_if_present info.at_xpath("./pubinfo/pub")
     # if no publisher, but a dissertation institution, use that
