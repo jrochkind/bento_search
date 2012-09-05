@@ -16,10 +16,11 @@ en:
       serial: Magazine or Journal
       dissertation: Dissertation or Thesis
     sort_keys:
-      title_asc: "title" 
-      date_desc: "publication date" 
-      relevance: "relevance"
-      author_asc: "author"
+      title_asc:    "title" 
+      date_desc:    "publication date" 
+      date_asc:     "publication date, oldest first"
+      relevance:    "relevance"
+      author_asc:   "author"
       num_cite_desc: "citation count"
     eds:
       record_not_available: "Record Not Available -- log in to see full results"
