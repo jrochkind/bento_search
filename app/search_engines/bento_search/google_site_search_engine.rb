@@ -4,10 +4,8 @@ require 'multi_json'
 require 'http_client_patch/include_client'
 require 'httpclient'
 
-# Under construction. TODO: Disable OpenURL (use a disabled_openurl attribute in item?)
-#                           rename journal_title to source_title with alias. 
-#             * sample_megasearch show no sort/field if none avail. 
-#             * add standard sorting. https://developers.google.com/custom-search/docs/structured_data#page_dates
+# Under construction. TODO: 
+#                           rename journal_title to source_title with alias.  
 #
 # An adapter for Google Site Search/Google Custom Search 
 #
@@ -36,6 +34,7 @@ require 'httpclient'
 # * no search fields supported at present. may possibly add later after more
 #   investigation, google api may support both standard intitle etc, as well
 #   as custom attributes added in microdata to your pages. 
+# * ResultItem's will be set to have no OpenURLs, since no useful ones can be constructed. 
 #
 # == Required config params
 # [:api_key]  api_key from google, get from Google API Console
@@ -84,6 +83,9 @@ class BentoSearch::GoogleSiteSearchEngine
       end
       
       item.link             = json_item["link"]
+      
+      # we won't bother generating openurls for google hits, not useful
+      item.openurl_disabled = true
       
       results << item
     end
