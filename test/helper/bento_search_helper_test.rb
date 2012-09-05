@@ -121,6 +121,22 @@ class BentoSearchHelperTest < ActionView::TestCase
       assert_equal key, hash[ I18n.translate(key, :scope => "bento_search.sort_keys") ]
     end            
   end
+  
+  def test_sort_hash_for_no_i18n
+    # If there's no 18n key available, use reasonable humanized approximation 
+    
+    engine = MockEngine.new(:sort_definitions => {"no_key_test" => {}})
+    
+    hash = bento_sort_hash_for(engine)
+            
+    assert_present hash
+    
+    key = hash.key("no_key_test")
+      
+    assert_no_match /translation missing/, key
+    
+    assert_equal "No Key Test", key
+  end
 
   
 end

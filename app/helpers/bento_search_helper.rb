@@ -126,10 +126,13 @@ module BentoSearchHelper
   # returns a hash of label => key suitable for passing to rails
   # options_for_select. (Yes, it works backwards from how you'd expect). 
   # Label is looked up using I18n, at bento_search.sort_keys.*
+  #
+  # If no i18n is found, titleized version of key itself is used as somewhat
+  # reasonable default. 
   def bento_sort_hash_for(engine)
     Hash[ 
       engine.sort_definitions.keys.collect do |key|
-        [I18n.translate(key, :scope => "bento_search.sort_keys"), key]
+        [I18n.translate(key, :scope => "bento_search.sort_keys", :default => key.titleize), key]
       end        
     ]    
   end
