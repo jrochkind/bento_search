@@ -24,6 +24,10 @@ module BentoSearch
       self.custom_data ||= {}
     end
     
+    # If set to true, item will refuse to generate an openurl,
+    # returning nil from #to_openurl or #openurl_kev
+    attr_accessor :openurl_disabled 
+    
     # Array (possibly empty) of BentoSearch::Link objects
     # representing additional links. Often SearchEngine's themselves
     # won't include any of these, but Decorators will be used
@@ -129,6 +133,8 @@ module BentoSearch
     
     # Returns a ruby OpenURL::ContextObject (NISO Z39.88).     
     def to_openurl
+      return nil if openurl_disabled
+      
       BentoSearch::OpenurlCreator.new(self).to_openurl
     end
     

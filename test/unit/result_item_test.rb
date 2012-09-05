@@ -27,9 +27,17 @@ class ResultItemTest < ActiveSupport::TestCase
     assert_equal "new", dup.title
     assert_equal "original", r.title
     
-    assert_not_same dup, r
+    assert_not_same dup, r        
+  end
+  
+  def test_openurl_disabled
+    r = ResultItem.new(:title => "original")
     
+    assert_present r.to_openurl
     
+    r.openurl_disabled = true
+    
+    assert_nil r.to_openurl    
   end
   
   
