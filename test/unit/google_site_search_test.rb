@@ -58,6 +58,14 @@ class GoogleSiteSearchTest < ActiveSupport::TestCase
     assert_equal 91, pagination.start_record    
   end
   
+  test("sort query construction") do
+    url = @engine.send(:construct_query, {:query => "books", :sort => "date_desc"})
+    
+    query_params = CGI.parse( URI.parse(url).query )
+    
+    assert_equal ["date"], query_params["sort"]
+  end
+  
   test_with_cassette("basic smoke test", :google_site) do    
     results = @engine.search("books")
     

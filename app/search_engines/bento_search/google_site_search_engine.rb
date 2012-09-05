@@ -26,13 +26,13 @@ require 'httpclient'
 #   it'll just give you the last page google will let you have. pagintion object
 #   in result set will be appropriate for page you actually got though. 
 # * 'abstract' field always filled out with relevant snippets from google api.  
-# * Google API actually returns 'meta' information (from HTML meta tags and microdata?)
-#   but we're not currently using it. 
+# * Google API supports custom 'structured data' in your web pages (from microdata and meta tags?)
+#   for custom sorting and limiting and maybe field searching -- but this code
+#   does not currently support that. it could be added as custom config in some way. 
 # * The URL in display form is put in ResultItem#journal_title (ie source_title).
 #   That should result in it rendering in a reasonable place with standard display
 #   templates. 
-# * no alternate sorts supported at present. Google api actually supports sort
-#   by custom embedded metadata, but we don't support at present.  
+# * Sort: only relevance and date_desc. Custom sorts based on structured data not supported.   
 # * no search fields supported at present. may possibly add later after more
 #   investigation, google api may support both standard intitle etc, as well
 #   as custom attributes added in microdata to your pages. 
@@ -108,6 +108,19 @@ class BentoSearch::GoogleSiteSearchEngine
     }
   end
   
+  # Google supports relevance, and date sorting. Other kinds of
+  # sorts not generally present. Can be with custom structured data,
+  # but we don't support that. We currently do date sorts as hard sorts,
+  # but could be changed to be biases instead. See:
+  # https://developers.google.com/custom-search/docs/structured_data#page_dates
+  def sort_definitions
+    { 
+      "relevance" => {},
+      "date_desc" => {:implementation => "date"},
+      "date_asc"  => {:implementation => "date:a"}
+    }    
+  end
+  
   protected
   
   # create the URL to the google API based on normalized search args
@@ -138,6 +151,10 @@ class BentoSearch::GoogleSiteSearchEngine
         
           
       url += "&start=#{start}"
+    end
+    
+    if (sort = args[:sort])  &&  (value = sort_definitions[sort].try {|h| h[:implementation]})    
+      url += "&sort=#{CGI.escape value}"
     end
     
     return url
