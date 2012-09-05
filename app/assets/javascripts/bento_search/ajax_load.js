@@ -4,7 +4,16 @@ var BentoSearch = BentoSearch || {}
 // Will AJAX load bento search results inside that node.
 BentoSearch.ajax_load = function(node) {
   div = $(node);
-  // from html5 data-bento-ajax-url
+  
+
+  // We find the "waiting"/spinner section already rendered,
+  // and show it. We experimented with generating the spinner/waiting
+  // purely in JS, instead of rendering a hidden one server-side. But
+  // it was too weird and unreliable to do that, sorry.   
+  div.find(".bento_search_ajax_loading").show();
+  
+  
+  // Now load the actual external content from html5 data-bento-ajax-url
   $.ajax({
       url: div.data("bentoAjaxUrl"), 
       success: function(response, status, xhr) {
@@ -15,6 +24,8 @@ BentoSearch.ajax_load = function(node) {
         div.html(msg + xhr.status + " " + xhr.statusText + ", " + status);
       }
   });
+ 
+  
 }
 
 jQuery(document).ready(function($) {

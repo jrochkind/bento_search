@@ -42,11 +42,24 @@ module BentoSearchHelper
 
     if (!results && load_mode == :ajax_auto)
       raise ArgumentError.new("`:load => :ajax` requires a registered engine with an id") unless engine.configuration.id
-      content_tag(:div, :"data-bento-search-load" => "ajax_auto", :class => "bento_search_ajax_wait",
-        :"data-bento-ajax-url" => to_bento_search_url( {:engine_id => engine.configuration.id}.merge(options) )) do
-        image_tag("bento_search/large_loader.gif", :alt => I18n.translate("bento_search.ajax_loading")) +
-        content_tag("noscript") do
-          "Can not load results without javascript"
+      content_tag(:div,
+        :class => "bento_search_ajax_wait",
+        :"data-bento-search-load" => "ajax_auto", 
+        :"data-bento-ajax-url"    => to_bento_search_url( {:engine_id => engine.configuration.id}.merge(options) )) do
+      
+      # An initially hidden div with loading msg/spinner that will be shown
+      # by js on ajax load
+      content_tag(:div, 
+        :class => "bento_search_ajax_loading", 
+        :style => "display:none") do
+      
+          image_tag("bento_search/large_loader.gif", 
+            :alt => I18n.translate("bento_search.ajax_loading"),            
+          ) +
+          content_tag("noscript") do
+            "Can not load results without javascript"
+          end
+          
         end
       end
     else
