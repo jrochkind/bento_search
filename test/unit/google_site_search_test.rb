@@ -110,4 +110,13 @@ class GoogleSiteSearchTest < ActiveSupport::TestCase
     assert ! first.journal_title.html_safe?        
   end
   
+  test_with_cassette("empty result set", :google_site) do
+    results = nil
+    assert_nothing_raised { results = @engine.search('"adfa lakjdr xavier aldkfj 92323kjadf"') }
+    
+    assert ! results.failed?
+    
+    assert results.empty?    
+  end
+  
 end

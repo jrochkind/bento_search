@@ -67,7 +67,7 @@ class BentoSearch::GoogleSiteSearchEngine
     
     results.total_items =  json["searchInformation"]["totalResults"].to_i
     
-    json["items"].each do |json_item|
+    (json["items"] || []).each do |json_item|
       item = BentoSearch::ResultItem.new
       
       if configuration.highlighting
