@@ -100,11 +100,34 @@ class BentoSearchHelperTest < ActionView::TestCase
     query = CGI.parse(url.query.gsub("&amp;", "&")) # gsub weirdness of HTML::Tag
     assert_equal ["QUERY"], query["query"]
     assert_empty query["load"]
-        
-    assert div.find(:tag => "noscript"), "has <noscript> tag"
     
-    assert (img = div.find(:tag => "img")), "Has spinner gif"
+    # hidden loading msg
+    loading_msg = div.find(:attributes => {:class => "bento_search_ajax_loading"})
+    assert_present loading_msg, "bento_search_ajax_loading present"
+    assert_match /display\:none/, loading_msg["style"], "loading has CSS style hidden"
+        
+    assert loading_msg.find(:tag => "noscript"), "has <noscript> tag"
+    
+    assert (img = loading_msg.find(:tag => "img")), "Has spinner gif"
     assert_equal I18n.translate("bento_search.ajax_loading"), img.attributes["alt"]
+  end
+  
+  def test_ajax_triggered_load
+    BentoSearch.register_engine("test_engine") do |conf|
+      conf.engine = "MockEngine"
+    end
+    
+    results = bento_search("test_engine", :query => "QUERY", :load => :ajax_triggered)
+    results = HTML::Document.new(results)
+
+    div = results.find(:attributes => {:class => "bento_search_ajax_wait"})
+    assert div, "produces div.bento_search_ajax_wait"
+    assert_equal "ajax_triggered", div["data-bento-search-load"], "has data-bento-search-load attribute"
+
+    # hidden loading msg
+    loading_msg = div.find(:attributes => {:class => "bento_search_ajax_loading"})
+    assert_present loading_msg, "bento_search_ajax_loading present"
+    assert_match /display\:none/, loading_msg["style"], "loading has CSS style hidden"
   end
     
     

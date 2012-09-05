@@ -40,11 +40,11 @@ module BentoSearchHelper
       
     end
 
-    if (!results && load_mode == :ajax_auto)
+    if (!results && [:ajax_auto, :ajax_triggered].include?(load_mode))
       raise ArgumentError.new("`:load => :ajax` requires a registered engine with an id") unless engine.configuration.id
       content_tag(:div,
         :class => "bento_search_ajax_wait",
-        :"data-bento-search-load" => "ajax_auto", 
+        :"data-bento-search-load" => load_mode.to_s, 
         :"data-bento-ajax-url"    => to_bento_search_url( {:engine_id => engine.configuration.id}.merge(options) )) do
       
       # An initially hidden div with loading msg/spinner that will be shown
