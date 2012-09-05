@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.googleapis.com/customsearch/v1?cx=DUMMY_CX&key=DUMMY_API_KEY&q=books
+    uri: https://www.googleapis.com/customsearch/v1?cx=DUMMY_CX&key=DUMMY_API_KEY&num=10&q=books
     body:
       encoding: US-ASCII
       string: ''
@@ -15,18 +15,18 @@ http_interactions:
     headers:
       !binary "RXhwaXJlcw==":
       - !binary |-
-        VHVlLCAwNCBTZXAgMjAxMiAyMTozNzowMyBHTVQ=
+        V2VkLCAwNSBTZXAgMjAxMiAxNjoxNzo0OSBHTVQ=
       !binary "RGF0ZQ==":
       - !binary |-
-        VHVlLCAwNCBTZXAgMjAxMiAyMTozNzowMyBHTVQ=
+        V2VkLCAwNSBTZXAgMjAxMiAxNjoxNzo0OSBHTVQ=
       !binary "Q2FjaGUtQ29udHJvbA==":
       - !binary |-
         cHJpdmF0ZSwgbWF4LWFnZT0wLCBtdXN0LXJldmFsaWRhdGUsIG5vLXRyYW5z
         Zm9ybQ==
       !binary "RXRhZw==":
       - !binary |-
-        IkxYal80TnZYTXNCdUJqOHhOUlhCaFVMQk9Qby9lWHdaZ0I3dF95eG00a2dV
-        ZnEweEtiSjlYS00i
+        IkxYal80TnZYTXNCdUJqOHhOUlhCaFVMQk9Qby9yS2pzcEUtbVZPT0R4NVc3
+        NDc0MWZtWS1tRE0i
       !binary "Q29udGVudC1UeXBl":
       - !binary |-
         YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD1VVEYtOA==
@@ -50,16 +50,16 @@ http_interactions:
       string: ! "{\n \"kind\": \"customsearch#search\",\n \"url\": {\n  \"type\":
         \"application/json\",\n  \"template\": \"https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json\"\n
         },\n \"queries\": {\n  \"nextPage\": [\n   {\n    \"title\": \"Google Custom
-        Search - books\",\n    \"totalResults\": \"6970\",\n    \"searchTerms\": \"books\",\n
+        Search - books\",\n    \"totalResults\": \"6950\",\n    \"searchTerms\": \"books\",\n
         \   \"count\": 10,\n    \"startIndex\": 11,\n    \"inputEncoding\": \"utf8\",\n
         \   \"outputEncoding\": \"utf8\",\n    \"safe\": \"off\",\n    \"cx\": \"DUMMY_CX\"\n
         \  }\n  ],\n  \"request\": [\n   {\n    \"title\": \"Google Custom Search
-        - books\",\n    \"totalResults\": \"6970\",\n    \"searchTerms\": \"books\",\n
+        - books\",\n    \"totalResults\": \"6950\",\n    \"searchTerms\": \"books\",\n
         \   \"count\": 10,\n    \"startIndex\": 1,\n    \"inputEncoding\": \"utf8\",\n
         \   \"outputEncoding\": \"utf8\",\n    \"safe\": \"off\",\n    \"cx\": \"DUMMY_CX\"\n
         \  }\n  ]\n },\n \"context\": {\n  \"title\": \"JHU Libraries test\"\n },\n
-        \"searchInformation\": {\n  \"searchTime\": 0.11058,\n  \"formattedSearchTime\":
-        \"0.11\",\n  \"totalResults\": \"6970\",\n  \"formattedTotalResults\": \"6,970\"\n
+        \"searchInformation\": {\n  \"searchTime\": 0.218317,\n  \"formattedSearchTime\":
+        \"0.22\",\n  \"totalResults\": \"6950\",\n  \"formattedTotalResults\": \"6,950\"\n
         },\n \"items\": [\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\":
         \"Rare Books and Manuscripts\",\n   \"htmlTitle\": \"Rare \\u003cb\\u003eBooks\\u003c/b\\u003e
         and Manuscripts\",\n   \"link\": \"http://www.library.jhu.edu/collections/specialcollections/index.html\",\n
@@ -112,6 +112,30 @@ http_interactions:
         \"Aug 25, 2011\",\n      \"dc.date.modified\": \"Aug 22, 2012\",\n      \"dc.unused\":
         \"Contributor, Date, Type, Format, Source, Relation, Coverage\",\n      \"y_key\":
         \"65baedbaee9038f3\"\n     }\n    ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n
+        \  \"title\": \"Books - German Language and Literature - Library Guides at
+        Johns ...\",\n   \"htmlTitle\": \"\\u003cb\\u003eBooks\\u003c/b\\u003e - German
+        Language and Literature - Library Guides at Johns \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"link\": \"http://guides.library.jhu.edu/content.php?pid=25138&sid=181188\",\n
+        \  \"displayLink\": \"guides.library.jhu.edu\",\n   \"snippet\": \"Aug 8,
+        2012 ... Arbeitsgemeinschaft Sammlung Deutscher Drucke: 6 libraries are reconstructing
+        \  a national bibliography that will cover the German prints from ...\",\n
+        \  \"htmlSnippet\": \"Aug 8, 2012 \\u003cb\\u003e...\\u003c/b\\u003e Arbeitsgemeinschaft
+        Sammlung Deutscher Drucke: 6 libraries are reconstructing \\u003cbr\\u003e
+        \ a national bibliography that will cover the German prints from \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"formattedUrl\": \"guides.library.jhu.edu/content.php?pid=25138&sid=181188\",\n
+        \  \"htmlFormattedUrl\": \"guides.library.jhu.edu/content.php?pid=25138&amp;sid=181188\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Sue Waterman\",\n
+        \     \"copyright\": \"Copyright Johns Hopkins University 2012\",\n      \"dc.title\":
+        \"Library Guides. German Language and Literature. Books.\",\n      \"dc.creator\":
+        \"Sue Waterman\",\n      \"dc.subject\": \"Books German Language and Literature
+        Library Guides\",\n      \"dc.description\": \"Resources, both online and
+        elsewhere, for the German language and literature.\",\n      \"dc.publisher\":
+        \"Johns Hopkins University Sheridan Libraries\",\n      \"dc.rights\": \"Copyright
+        Johns Hopkins University 2012\",\n      \"dc.language\": \"en\",\n      \"dc.identifier\":
+        \"http://guides.library.jhu.edu/german\",\n      \"dc.date.created\": \"Nov
+        6, 2008\",\n      \"dc.date.modified\": \"Aug 8, 2012\",\n      \"dc.unused\":
+        \"Contributor, Date, Type, Format, Source, Relation, Coverage\",\n      \"y_key\":
+        \"65baedbaee9038f3\"\n     }\n    ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n
         \  \"title\": \"Out of Copyright Books\",\n   \"htmlTitle\": \"Out of Copyright
         \\u003cb\\u003eBooks\\u003c/b\\u003e\",\n   \"link\": \"https://jscholarship.library.jhu.edu/handle/1774.2/59\",\n
         \  \"displayLink\": \"jscholarship.library.jhu.edu\",\n   \"snippet\": \"This
@@ -127,42 +151,16 @@ http_interactions:
         \    }\n    ],\n    \"cse_thumbnail\": [\n     {\n      \"width\": \"101\",\n
         \     \"height\": \"98\",\n      \"src\": \"https://encrypted-tbn2.google.com/images?q=tbn:ANd9GcTEyucbV5j6Fw-ZfWJxayVmiWAg9JunzletDcmf0gi22lrYi-ZsgvDV2A\"\n
         \    }\n    ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\":
-        \"Books - German Language and Literature - Library Guides at Johns ...\",\n
-        \  \"htmlTitle\": \"\\u003cb\\u003eBooks\\u003c/b\\u003e - German Language
+        \"Books - French Language and Literature - Library Guides at Johns ...\",\n
+        \  \"htmlTitle\": \"\\u003cb\\u003eBooks\\u003c/b\\u003e - French Language
         and Literature - Library Guides at Johns \\u003cb\\u003e...\\u003c/b\\u003e\",\n
-        \  \"link\": \"http://guides.library.jhu.edu/content.php?pid=25138&sid=181188\",\n
-        \  \"displayLink\": \"guides.library.jhu.edu\",\n   \"snippet\": \"Aug 8,
-        2012 ... This is the \\\"Books\\\" page of the \\\"German Language and Literature\\\"
-        guide.   Alternate Page for Screenreader Users Skip to Page Navigation ...\",\n
-        \  \"htmlSnippet\": \"Aug 8, 2012 \\u003cb\\u003e...\\u003c/b\\u003e This
-        is the &quot;\\u003cb\\u003eBooks\\u003c/b\\u003e&quot; page of the &quot;German
-        Language and Literature&quot; guide. \\u003cbr\\u003e  Alternate Page for
-        Screenreader Users Skip to Page Navigation \\u003cb\\u003e...\\u003c/b\\u003e\",\n
-        \  \"formattedUrl\": \"guides.library.jhu.edu/content.php?pid=25138&sid=181188\",\n
-        \  \"htmlFormattedUrl\": \"guides.library.jhu.edu/content.php?pid=25138&amp;sid=181188\",\n
-        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Sue Waterman\",\n
-        \     \"copyright\": \"Copyright Johns Hopkins University 2012\",\n      \"dc.title\":
-        \"Library Guides. German Language and Literature. Books.\",\n      \"dc.creator\":
-        \"Sue Waterman\",\n      \"dc.subject\": \"Books German Language and Literature
-        Library Guides\",\n      \"dc.description\": \"Resources, both online and
-        elsewhere, for the German language and literature.\",\n      \"dc.publisher\":
-        \"Johns Hopkins University Sheridan Libraries\",\n      \"dc.rights\": \"Copyright
-        Johns Hopkins University 2012\",\n      \"dc.language\": \"en\",\n      \"dc.identifier\":
-        \"http://guides.library.jhu.edu/german\",\n      \"dc.date.created\": \"Nov
-        6, 2008\",\n      \"dc.date.modified\": \"Aug 8, 2012\",\n      \"dc.unused\":
-        \"Contributor, Date, Type, Format, Source, Relation, Coverage\",\n      \"y_key\":
-        \"65baedbaee9038f3\"\n     }\n    ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n
-        \  \"title\": \"Books - French Language and Literature - Library Guides at
-        Johns ...\",\n   \"htmlTitle\": \"\\u003cb\\u003eBooks\\u003c/b\\u003e - French
-        Language and Literature - Library Guides at Johns \\u003cb\\u003e...\\u003c/b\\u003e\",\n
         \  \"link\": \"http://guides.library.jhu.edu/content.php?pid=22748&sid=165198\",\n
         \  \"displayLink\": \"guides.library.jhu.edu\",\n   \"snippet\": \"Aug 2,
-        2012 ... This is the \\\"Books\\\" page of the \\\"French Language and Literature\\\"
-        guide. Alternate   Page for Screenreader Users Skip to Page Navigation ...\",\n
-        \  \"htmlSnippet\": \"Aug 2, 2012 \\u003cb\\u003e...\\u003c/b\\u003e This
-        is the &quot;\\u003cb\\u003eBooks\\u003c/b\\u003e&quot; page of the &quot;French
-        Language and Literature&quot; guide. Alternate \\u003cbr\\u003e  Page for
-        Screenreader Users Skip to Page Navigation \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        2012 ... Checking out, Renewing, Recalling BooksComputing in the libraryConnecting
+        \  from off-campusFind an article onlineFind Films and DVD'sHow ...\",\n   \"htmlSnippet\":
+        \"Aug 2, 2012 \\u003cb\\u003e...\\u003c/b\\u003e Checking out, Renewing, Recalling
+        \\u003cb\\u003eBooks\\u003c/b\\u003eComputing in the libraryConnecting \\u003cbr\\u003e
+        \ from off-campusFind an article onlineFind Films and DVD&#39;sHow \\u003cb\\u003e...\\u003c/b\\u003e\",\n
         \  \"formattedUrl\": \"guides.library.jhu.edu/content.php?pid=22748&sid=165198\",\n
         \  \"htmlFormattedUrl\": \"guides.library.jhu.edu/content.php?pid=22748&amp;sid=165198\",\n
         \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Sue Waterman\",\n
@@ -244,12 +242,12 @@ http_interactions:
         \"\\u003cb\\u003eBooks\\u003c/b\\u003e - Italian Language and Literature -
         Library Guides at Johns \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"link\":
         \"http://guides.library.jhu.edu/content.php?pid=25794&sid=186218\",\n   \"displayLink\":
-        \"guides.library.jhu.edu\",\n   \"snippet\": \"Aug 15, 2012 ... This is the
-        \\\"Books\\\" page of the \\\"Italian Language and Literature\\\" guide. Alternate
-        \  Page for Screenreader Users Skip to Page Navigation ...\",\n   \"htmlSnippet\":
-        \"Aug 15, 2012 \\u003cb\\u003e...\\u003c/b\\u003e This is the &quot;\\u003cb\\u003eBooks\\u003c/b\\u003e&quot;
-        page of the &quot;Italian Language and Literature&quot; guide. Alternate \\u003cbr\\u003e
-        \ Page for Screenreader Users Skip to Page Navigation \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \"guides.library.jhu.edu\",\n   \"snippet\": \"Aug 15, 2012 ... Checking out,
+        Renewing, Recalling BooksComputing in the libraryConnecting   from off-campusFind
+        an article onlineFind Films and DVD'sHow ...\",\n   \"htmlSnippet\": \"Aug
+        15, 2012 \\u003cb\\u003e...\\u003c/b\\u003e Checking out, Renewing, Recalling
+        \\u003cb\\u003eBooks\\u003c/b\\u003eComputing in the libraryConnecting \\u003cbr\\u003e
+        \ from off-campusFind an article onlineFind Films and DVD&#39;sHow \\u003cb\\u003e...\\u003c/b\\u003e\",\n
         \  \"formattedUrl\": \"guides.library.jhu.edu/content.php?pid=25794&sid=186218\",\n
         \  \"htmlFormattedUrl\": \"guides.library.jhu.edu/content.php?pid=25794&amp;sid=186218\",\n
         \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Sue Waterman\",\n
@@ -265,5 +263,5 @@ http_interactions:
         \"Contributor, Date, Type, Format, Source, Relation, Coverage\",\n      \"y_key\":
         \"65baedbaee9038f3\"\n     }\n    ]\n   }\n  }\n ]\n}\n"
     http_version: 
-  recorded_at: Tue, 04 Sep 2012 21:37:03 GMT
+  recorded_at: Wed, 05 Sep 2012 16:17:49 GMT
 recorded_with: VCR 2.2.4

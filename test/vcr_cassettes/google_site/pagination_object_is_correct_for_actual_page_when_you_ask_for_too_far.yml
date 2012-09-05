@@ -1,0 +1,260 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/customsearch/v1?cx=DUMMY_CX&key=DUMMY_API_KEY&num=10&q=books&start=91
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Wed, 05 Sep 2012 16:30:42 GMT
+      Date:
+      - Wed, 05 Sep 2012 16:30:42 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - ! '"LXj_4NvXMsBuBj8xNRXBhULBOPo/PikLW9g7DZv2YHDYBSJUd6MygKI"'
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! "{\n \"kind\": \"customsearch#search\",\n \"url\": {\n  \"type\":
+        \"application/json\",\n  \"template\": \"https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json\"\n
+        },\n \"queries\": {\n  \"nextPage\": [\n   {\n    \"title\": \"Google Custom
+        Search - books\",\n    \"totalResults\": \"6960\",\n    \"searchTerms\": \"books\",\n
+        \   \"count\": 10,\n    \"startIndex\": 101,\n    \"inputEncoding\": \"utf8\",\n
+        \   \"outputEncoding\": \"utf8\",\n    \"safe\": \"off\",\n    \"cx\": \"DUMMY_CX\"\n
+        \  }\n  ],\n  \"request\": [\n   {\n    \"title\": \"Google Custom Search
+        - books\",\n    \"totalResults\": \"6960\",\n    \"searchTerms\": \"books\",\n
+        \   \"count\": 10,\n    \"startIndex\": 91,\n    \"inputEncoding\": \"utf8\",\n
+        \   \"outputEncoding\": \"utf8\",\n    \"safe\": \"off\",\n    \"cx\": \"DUMMY_CX\"\n
+        \  }\n  ],\n  \"previousPage\": [\n   {\n    \"title\": \"Google Custom Search
+        - books\",\n    \"totalResults\": \"6960\",\n    \"searchTerms\": \"books\",\n
+        \   \"count\": 10,\n    \"startIndex\": 81,\n    \"inputEncoding\": \"utf8\",\n
+        \   \"outputEncoding\": \"utf8\",\n    \"safe\": \"off\",\n    \"cx\": \"DUMMY_CX\"\n
+        \  }\n  ]\n },\n \"context\": {\n  \"title\": \"JHU Libraries test\"\n },\n
+        \"searchInformation\": {\n  \"searchTime\": 0.386795,\n  \"formattedSearchTime\":
+        \"0.39\",\n  \"totalResults\": \"6960\",\n  \"formattedTotalResults\": \"6,960\"\n
+        },\n \"items\": [\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\":
+        \"FlowerMart: Where Old Books & Lemon Sticks Collide | The ...\",\n   \"htmlTitle\":
+        \"FlowerMart: Where Old \\u003cb\\u003eBooks\\u003c/b\\u003e &amp; Lemon Sticks
+        Collide | The \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"link\": \"http://blogs.library.jhu.edu/wordpress/2012/05/flowermart-where-old-books-lemon-sticks-collide/\",\n
+        \  \"displayLink\": \"blogs.library.jhu.edu\",\n   \"snippet\": \"May 3, 2012
+        ... You see, the lemon sticks are supposed to be consumed before you look
+        at the   rare books, silly! Anyway, are you looking for some weekend ...\",\n
+        \  \"htmlSnippet\": \"May 3, 2012 \\u003cb\\u003e...\\u003c/b\\u003e You see,
+        the lemon sticks are supposed to be consumed before you look at the \\u003cbr\\u003e
+        \ rare \\u003cb\\u003ebooks\\u003c/b\\u003e, silly! Anyway, are you looking
+        for some weekend \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"cacheId\": \"P4QLi1giMUkJ\",\n
+        \  \"formattedUrl\": \"blogs.library.jhu.edu/.../flowermart-where-old-books-lemon-sticks-collide/\",\n
+        \  \"htmlFormattedUrl\": \"blogs.library.jhu.edu/.../flowermart-where-old-\\u003cb\\u003ebooks\\u003c/b\\u003e-lemon-sticks-collide/\",\n
+        \  \"pagemap\": {\n    \"cse_image\": [\n     {\n      \"src\": \"http://blogs.library.jhu.edu/wordpress/wp-content/uploads/2012/05/Flowermart2012.jpg\"\n
+        \    }\n    ],\n    \"cse_thumbnail\": [\n     {\n      \"width\": \"212\",\n
+        \     \"height\": \"238\",\n      \"src\": \"https://encrypted-tbn1.google.com/images?q=tbn:ANd9GcReJZ_ionOwZzrRWHpSi3SiRAdvTVeQT4QuHkv1_I873CTKm7pqO1v_ucg\"\n
+        \    }\n    ],\n    \"metatags\": [\n     {\n      \"viewport\": \"width=device-width,
+        initial-scale=1, maximum-scale=1\"\n     }\n    ]\n   }\n  },\n  {\n   \"kind\":
+        \"customsearch#result\",\n   \"title\": \"Antiquities - Rare Books + Manuscripts:
+        Africa, Asia + Oceania ...\",\n   \"htmlTitle\": \"Antiquities - Rare \\u003cb\\u003eBooks\\u003c/b\\u003e
+        + Manuscripts: Africa, Asia + Oceania \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"link\": \"http://guides.library.jhu.edu/rarebooks_nonwestern\",\n   \"displayLink\":
+        \"guides.library.jhu.edu\",\n   \"snippet\": \"Feb 17, 2012 ... This is the
+        \\\"Antiquities\\\" page of the \\\"Rare Books + Manuscripts: Africa, Asia
+        +   Oceania\\\" guide. Alternate Page for Screenreader Users ...\",\n   \"htmlSnippet\":
+        \"Feb 17, 2012 \\u003cb\\u003e...\\u003c/b\\u003e This is the &quot;Antiquities&quot;
+        page of the &quot;Rare \\u003cb\\u003eBooks\\u003c/b\\u003e + Manuscripts:
+        Africa, Asia + \\u003cbr\\u003e  Oceania&quot; guide. Alternate Page for Screenreader
+        Users \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"formattedUrl\": \"guides.library.jhu.edu/rarebooks_nonwestern\",\n
+        \  \"htmlFormattedUrl\": \"guides.library.jhu.edu/rare\\u003cb\\u003ebooks\\u003c/b\\u003e_nonwestern\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Margaret
+        Burri\",\n      \"copyright\": \"Copyright Johns Hopkins University 2012\",\n
+        \     \"dc.title\": \"Library Guides. Rare Books + Manuscripts: Africa, Asia
+        + Oceania. Antiquities.\",\n      \"dc.creator\": \"Margaret Burri\",\n      \"dc.subject\":
+        \"Antiquities Rare Books + Manuscripts: Africa, Asia + Oceania Library Guides\",\n
+        \     \"dc.description\": \"Library Guides. Rare Books + Manuscripts: Africa,
+        Asia + Oceania. Antiquities.\",\n      \"dc.publisher\": \"Johns Hopkins University
+        Sheridan Libraries\",\n      \"dc.rights\": \"Copyright Johns Hopkins University
+        2012\",\n      \"dc.language\": \"en\",\n      \"dc.identifier\": \"http://guides.library.jhu.edu/rarebooks_nonwestern\",\n
+        \     \"dc.date.created\": \"Mar 26, 2009\",\n      \"dc.date.modified\":
+        \"Feb 17, 2012\",\n      \"dc.unused\": \"Contributor, Date, Type, Format,
+        Source, Relation, Coverage\",\n      \"y_key\": \"65baedbaee9038f3\"\n     }\n
+        \   ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\":
+        \"Citing Sources - E-Books - Library Guides at Johns Hopkins University\",\n
+        \  \"htmlTitle\": \"Citing Sources - E-\\u003cb\\u003eBooks\\u003c/b\\u003e
+        - Library Guides at Johns Hopkins University\",\n   \"link\": \"http://guides.library.jhu.edu/content.php?pid=156837&sid=1720327\",\n
+        \  \"displayLink\": \"guides.library.jhu.edu\",\n   \"snippet\": \"Aug 14,
+        2012 ... How to find electronic books and resources in the library's catalog.
+        How to cite e-  books.\",\n   \"htmlSnippet\": \"Aug 14, 2012 \\u003cb\\u003e...\\u003c/b\\u003e
+        How to find electronic \\u003cb\\u003ebooks\\u003c/b\\u003e and resources
+        in the library&#39;s catalog. How to cite e-\\u003cbr\\u003e  \\u003cb\\u003ebooks\\u003c/b\\u003e.\",\n
+        \  \"formattedUrl\": \"guides.library.jhu.edu/content.php?pid=156837&sid=1720327\",\n
+        \  \"htmlFormattedUrl\": \"guides.library.jhu.edu/content.php?pid=156837&amp;sid=1720327\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Sue Vazakas\",\n
+        \     \"copyright\": \"Copyright Johns Hopkins University 2012\",\n      \"dc.title\":
+        \"Library Guides. E-Books. Citing Sources.\",\n      \"dc.creator\": \"Sue
+        Vazakas\",\n      \"dc.subject\": \"Citing Sources E-Books Library Guides\",\n
+        \     \"dc.description\": \"How to find electronic books and resources in
+        the library's catalog. How to cite e-books\",\n      \"dc.publisher\": \"Johns
+        Hopkins University Sheridan Libraries\",\n      \"dc.rights\": \"Copyright
+        Johns Hopkins University 2012\",\n      \"dc.language\": \"en\",\n      \"dc.identifier\":
+        \"http://guides.library.jhu.edu/ebooks\",\n      \"dc.date.created\": \"May
+        9, 2011\",\n      \"dc.date.modified\": \"Aug 14, 2012\",\n      \"dc.unused\":
+        \"Contributor, Date, Type, Format, Source, Relation, Coverage\",\n      \"y_key\":
+        \"65baedbaee9038f3\"\n     }\n    ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n
+        \  \"title\": \"Books and E-Books - Physics Course Guide Archive - Library
+        ...\",\n   \"htmlTitle\": \"\\u003cb\\u003eBooks\\u003c/b\\u003e and E-\\u003cb\\u003eBooks\\u003c/b\\u003e
+        - Physics Course Guide Archive - Library \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"link\": \"http://guides.library.jhu.edu/content.php?pid=362623&sid=2967195\",\n
+        \  \"displayLink\": \"guides.library.jhu.edu\",\n   \"snippet\": \"Aug 9,
+        2012 ... Library Guides. Physics Course Guide Archive. Books and E-Books.\",\n
+        \  \"htmlSnippet\": \"Aug 9, 2012 \\u003cb\\u003e...\\u003c/b\\u003e Library
+        Guides. Physics Course Guide Archive. \\u003cb\\u003eBooks\\u003c/b\\u003e
+        and E-\\u003cb\\u003eBooks\\u003c/b\\u003e.\",\n   \"formattedUrl\": \"guides.library.jhu.edu/content.php?pid=362623&sid=2967195\",\n
+        \  \"htmlFormattedUrl\": \"guides.library.jhu.edu/content.php?pid=362623&amp;sid=2967195\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Susan
+        Payne\",\n      \"copyright\": \"Copyright Johns Hopkins University 2012\",\n
+        \     \"dc.title\": \"Library Guides. Physics Course Guide Archive. Books
+        and E-Books.\",\n      \"dc.creator\": \"Susan Payne\",\n      \"dc.subject\":
+        \"Books and E-Books Physics Course Guide Archive Library Guides\",\n      \"dc.description\":
+        \"Library Guides. Physics Course Guide Archive. Books and E-Books.\",\n      \"dc.publisher\":
+        \"Johns Hopkins University Sheridan Libraries\",\n      \"dc.rights\": \"Copyright
+        Johns Hopkins University 2012\",\n      \"dc.language\": \"en\",\n      \"dc.identifier\":
+        \"http://guides.library.jhu.edu/content.php?pid=362623\",\n      \"dc.date.created\":
+        \"Aug 9, 2012\",\n      \"dc.date.modified\": \"Aug 9, 2012\",\n      \"dc.unused\":
+        \"Contributor, Date, Type, Format, Source, Relation, Coverage\",\n      \"y_key\":
+        \"65baedbaee9038f3\"\n     }\n    ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n
+        \  \"title\": \"Due Dates & Renewals\",\n   \"htmlTitle\": \"Due Dates &amp;
+        Renewals\",\n   \"link\": \"http://old.library.jhu.edu/services/ill/duedates.html\",\n
+        \  \"displayLink\": \"old.library.jhu.edu\",\n   \"snippet\": \"Books obtained
+        through ILS generally have loan periods between two weeks and   six weeks.
+        Loan periods are entirely at the discretion of the lending institutions, ...\",\n
+        \  \"htmlSnippet\": \"\\u003cb\\u003eBooks\\u003c/b\\u003e obtained through
+        ILS generally have loan periods between two weeks and \\u003cbr\\u003e  six
+        weeks. Loan periods are entirely at the discretion of the lending institutions,
+        \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"cacheId\": \"bLRIsXCPsWYJ\",\n
+        \  \"formattedUrl\": \"old.library.jhu.edu/services/ill/duedates.html\",\n
+        \  \"htmlFormattedUrl\": \"old.library.jhu.edu/services/ill/duedates.html\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Alessandro
+        Valente\",\n      \"date\": \"2007-07-05T11:04:06-04:00\",\n      \"title\":
+        \"Due Dates & Renewals\"\n     }\n    ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n
+        \  \"title\": \"Borrow reserve books - About SAIS Library - SAIS Research
+        Guides ...\",\n   \"htmlTitle\": \"Borrow reserve \\u003cb\\u003ebooks\\u003c/b\\u003e
+        - About SAIS Library - SAIS Research Guides \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"link\": \"http://libguides.sais-jhu.edu/content.php?pid=330302&sid=2703832\",\n
+        \  \"displayLink\": \"libguides.sais-jhu.edu\",\n   \"snippet\": \"Aug 29,
+        2012 ... Reserve books are books listed as required reading on syllabi, and
+        available for   three-hour (or overnight) loan. They are shelved behind the
+        ...\",\n   \"htmlSnippet\": \"Aug 29, 2012 \\u003cb\\u003e...\\u003c/b\\u003e
+        Reserve \\u003cb\\u003ebooks\\u003c/b\\u003e are \\u003cb\\u003ebooks\\u003c/b\\u003e
+        listed as required reading on syllabi, and available for \\u003cbr\\u003e
+        \ three-hour (or overnight) loan. They are shelved behind the \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"formattedUrl\": \"libguides.sais-jhu.edu/content.php?pid=330302&sid=2703832\",\n
+        \  \"htmlFormattedUrl\": \"libguides.sais-jhu.edu/content.php?pid=330302&amp;sid=2703832\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Linda
+        Carlson\",\n      \"copyright\": \"Copyright Johns Hopkins University 2012\",\n
+        \     \"dc.title\": \"SAIS Research Guides. About SAIS Library. Borrow reserve
+        books.\",\n      \"dc.creator\": \"Linda Carlson\",\n      \"dc.subject\":
+        \"Borrow reserve books About SAIS Library SAIS Research Guides\",\n      \"dc.description\":
+        \"SAIS Research Guides. About SAIS Library. Borrow reserve books.\",\n      \"dc.publisher\":
+        \"Johns Hopkins University Library\",\n      \"dc.rights\": \"Copyright Johns
+        Hopkins University 2012\",\n      \"dc.language\": \"en\",\n      \"dc.identifier\":
+        \"http://libguides.sais-jhu.edu/library\",\n      \"dc.date.created\": \"Jun
+        20, 2012\",\n      \"dc.date.modified\": \"Aug 29, 2012\",\n      \"dc.unused\":
+        \"Contributor, Date, Type, Format, Source, Relation, Coverage\"\n     }\n
+        \   ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\":
+        \"How Library of Congress Call Numbers Work\",\n   \"htmlTitle\": \"How Library
+        of Congress Call Numbers Work\",\n   \"link\": \"http://www.library.jhu.edu/researchhelp/general/lccallnumbers.pdf\",\n
+        \  \"displayLink\": \"www.library.jhu.edu\",\n   \"snippet\": \"All books
+        of the same first letter or letters are arranged numerically by the number
+        \  following the top letter or letters. All books of the same number are arranged
+        ...\",\n   \"htmlSnippet\": \"All \\u003cb\\u003ebooks\\u003c/b\\u003e of
+        the same first letter or letters are arranged numerically by the number \\u003cbr\\u003e
+        \ following the top letter or letters. All \\u003cb\\u003ebooks\\u003c/b\\u003e
+        of the same number are arranged \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"cacheId\":
+        \"5ynz0tNSHXIJ\",\n   \"mime\": \"application/pdf\",\n   \"fileFormat\": \"PDF/Adobe
+        Acrobat\",\n   \"formattedUrl\": \"www.library.jhu.edu/researchhelp/general/lccallnumbers.pdf\",\n
+        \  \"htmlFormattedUrl\": \"www.library.jhu.edu/researchhelp/general/lccallnumbers.pdf\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"producer\": \"Acrobat
+        Distiller 5.0 (Windows)\",\n      \"author\": \"jmjohnson\",\n      \"title\":
+        \"How Library of Congress Call Numbers Work\",\n      \"moddate\": \"D:20041006110749-03'00'\",\n
+        \     \"creationdate\": \"D:20041006110731-04'00'\",\n      \"creator\": \"Acrobat
+        PDFMaker 5.0 for PowerPoint\"\n     }\n    ]\n   }\n  },\n  {\n   \"kind\":
+        \"customsearch#result\",\n   \"title\": \"Banned Books Week | The Sheridan
+        Libraries Blog\",\n   \"htmlTitle\": \"Banned \\u003cb\\u003eBooks\\u003c/b\\u003e
+        Week | The Sheridan Libraries Blog\",\n   \"link\": \"http://blogs.library.jhu.edu/wordpress/2011/09/banned-books-week/\",\n
+        \  \"displayLink\": \"blogs.library.jhu.edu\",\n   \"snippet\": \"Sep 23,
+        2011 ... Almost 30 years old, Banned Books Week takes place the last week
+        in   September (September 24-October 1, 2011) and celebrates the freedom ...\",\n
+        \  \"htmlSnippet\": \"Sep 23, 2011 \\u003cb\\u003e...\\u003c/b\\u003e Almost
+        30 years old, Banned \\u003cb\\u003eBooks\\u003c/b\\u003e Week takes place
+        the last week in \\u003cbr\\u003e  September (September 24-October 1, 2011)
+        and celebrates the freedom \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"cacheId\":
+        \"P9YZJNn52LQJ\",\n   \"formattedUrl\": \"blogs.library.jhu.edu/wordpress/2011/09/banned-books-week/\",\n
+        \  \"htmlFormattedUrl\": \"blogs.library.jhu.edu/wordpress/2011/09/banned-\\u003cb\\u003ebooks\\u003c/b\\u003e-week/\",\n
+        \  \"pagemap\": {\n    \"cse_image\": [\n     {\n      \"src\": \"http://blogs.library.jhu.edu/wordpress/wp-content/uploads/2011/09/banned-books-flag.jpg\"\n
+        \    }\n    ],\n    \"cse_thumbnail\": [\n     {\n      \"width\": \"192\",\n
+        \     \"height\": \"100\",\n      \"src\": \"https://encrypted-tbn2.google.com/images?q=tbn:ANd9GcTzEyN13lJhi82QTBBzjVu9rypNPI5O0Sg-n1mr3-hkMPHYd6jC3sXnbuo\"\n
+        \    }\n    ],\n    \"metatags\": [\n     {\n      \"viewport\": \"width=device-width,
+        initial-scale=1, maximum-scale=1\"\n     }\n    ]\n   }\n  },\n  {\n   \"kind\":
+        \"customsearch#result\",\n   \"title\": \"Medium Rare Books? You Mean You
+        Eat Them? | The Sheridan ...\",\n   \"htmlTitle\": \"Medium Rare \\u003cb\\u003eBooks\\u003c/b\\u003e?
+        You Mean You Eat Them? | The Sheridan \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"link\": \"http://blogs.library.jhu.edu/wordpress/2011/10/medium-rare-books-you-mean-you-eat-them/\",\n
+        \  \"displayLink\": \"blogs.library.jhu.edu\",\n   \"snippet\": \"Oct 17,
+        2011 ... We all know what \\\"rare\\\" books are, right? Generally any book
+        produced before   1800, as well as books that have a particular value or,
+        well, ...\",\n   \"htmlSnippet\": \"Oct 17, 2011 \\u003cb\\u003e...\\u003c/b\\u003e
+        We all know what &quot;rare&quot; \\u003cb\\u003ebooks\\u003c/b\\u003e are,
+        right? Generally any \\u003cb\\u003ebook\\u003c/b\\u003e produced before \\u003cbr\\u003e
+        \ 1800, as well as \\u003cb\\u003ebooks\\u003c/b\\u003e that have a particular
+        value or, well, \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"cacheId\": \"kMrnfYXQGBwJ\",\n
+        \  \"formattedUrl\": \"blogs.library.jhu.edu/.../medium-rare-books-you-mean-you-eat-them/\",\n
+        \  \"htmlFormattedUrl\": \"blogs.library.jhu.edu/.../medium-rare-\\u003cb\\u003ebooks\\u003c/b\\u003e-you-mean-you-eat-them/\",\n
+        \  \"pagemap\": {\n    \"cse_image\": [\n     {\n      \"src\": \"http://blogs.library.jhu.edu/wordpress/wp-content/uploads/2011/09/bindings3.jpg\"\n
+        \    }\n    ],\n    \"cse_thumbnail\": [\n     {\n      \"width\": \"251\",\n
+        \     \"height\": \"162\",\n      \"src\": \"https://encrypted-tbn1.google.com/images?q=tbn:ANd9GcTwYozHM-XIj6k3fmIRWTAgkBABz1zfpjNgqH8inHTvYchjcYH9md-CXucF\"\n
+        \    }\n    ],\n    \"metatags\": [\n     {\n      \"viewport\": \"width=device-width,
+        initial-scale=1, maximum-scale=1\"\n     }\n    ]\n   }\n  },\n  {\n   \"kind\":
+        \"customsearch#result\",\n   \"title\": \"Natural History - Rare Books + Manuscripts:
+        History of Science ...\",\n   \"htmlTitle\": \"Natural History - Rare \\u003cb\\u003eBooks\\u003c/b\\u003e
+        + Manuscripts: History of Science \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"link\": \"http://guides.library.jhu.edu/content.php?pid=32171&sid=235429\",\n
+        \  \"displayLink\": \"guides.library.jhu.edu\",\n   \"snippet\": \"Feb 17,
+        2012 ... Ornithology. Thanks to the special interest of John Garrett, ornithology
+        is well-  represented in the collection at Evergreen. Garrett was a bird ...\",\n
+        \  \"htmlSnippet\": \"Feb 17, 2012 \\u003cb\\u003e...\\u003c/b\\u003e Ornithology.
+        Thanks to the special interest of John Garrett, ornithology is well-\\u003cbr\\u003e
+        \ represented in the collection at Evergreen. Garrett was a bird \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"formattedUrl\": \"guides.library.jhu.edu/content.php?pid=32171&sid=235429\",\n
+        \  \"htmlFormattedUrl\": \"guides.library.jhu.edu/content.php?pid=32171&amp;sid=235429\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Margaret
+        Burri\",\n      \"copyright\": \"Copyright Johns Hopkins University 2012\",\n
+        \     \"dc.title\": \"Library Guides. Rare Books + Manuscripts:  History of
+        Science. Natural History.\",\n      \"dc.creator\": \"Margaret Burri\",\n
+        \     \"dc.subject\": \"Natural History Rare Books + Manuscripts:  History
+        of Science Library Guides\",\n      \"dc.description\": \"History of Science
+        Collections at JHU\",\n      \"dc.publisher\": \"Johns Hopkins University
+        Sheridan Libraries\",\n      \"dc.rights\": \"Copyright Johns Hopkins University
+        2012\",\n      \"dc.language\": \"en\",\n      \"dc.identifier\": \"http://guides.library.jhu.edu/rarebooks_histsci\",\n
+        \     \"dc.date.created\": \"Mar 26, 2009\",\n      \"dc.date.modified\":
+        \"Feb 17, 2012\",\n      \"dc.unused\": \"Contributor, Date, Type, Format,
+        Source, Relation, Coverage\",\n      \"y_key\": \"65baedbaee9038f3\"\n     }\n
+        \   ]\n   }\n  }\n ]\n}\n"
+    http_version: 
+  recorded_at: Wed, 05 Sep 2012 16:30:42 GMT
+recorded_with: VCR 2.2.4

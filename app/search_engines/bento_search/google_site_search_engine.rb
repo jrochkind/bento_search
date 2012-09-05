@@ -6,6 +6,8 @@ require 'httpclient'
 
 # Under construction. TODO: Disable OpenURL (use a disabled_openurl attribute in item?)
 #                           rename journal_title to source_title with alias. 
+#             * sample_megasearch show no sort/field if none avail. 
+#             * add standard sorting. https://developers.google.com/custom-search/docs/structured_data#page_dates
 #
 # An adapter for Google Site Search/Google Custom Search 
 #
@@ -19,17 +21,21 @@ require 'httpclient'
 #
 # == Limitations
 #
-# * per-page is max 10, which makes it not too too useful. 
-# * And it seems you're only allowed to look at first 10 pages, so
-# max of 10 for page or 91 for start.
+# * per-page is max 10, which makes it not too too useful. If you ask for more, you'll get an exception.
+# * Google only lets you look at first 10 pages. If you ask for more, it won't raise,
+#   it'll just give you the last page google will let you have. pagintion object
+#   in result set will be appropriate for page you actually got though. 
 # * 'abstract' field always filled out with relevant snippets from google api.  
 # * Google API actually returns 'meta' information (from HTML meta tags and microdata?)
 #   but we're not currently using it. 
 # * The URL in display form is put in ResultItem#journal_title (ie source_title).
 #   That should result in it rendering in a reasonable place with standard display
 #   templates. 
-# * no alternate sorts supported
-# * no search fields supported at present (may possibly add later)
+# * no alternate sorts supported at present. Google api actually supports sort
+#   by custom embedded metadata, but we don't support at present.  
+# * no search fields supported at present. may possibly add later after more
+#   investigation, google api may support both standard intitle etc, as well
+#   as custom attributes added in microdata to your pages. 
 #
 # == Required config params
 # [:api_key]  api_key from google, get from Google API Console
@@ -49,8 +55,7 @@ class BentoSearch::GoogleSiteSearchEngine
   def search_implementation(args)
     results = BentoSearch::Results.new
     
-    url = "#{configuration.base_url}key=#{CGI.escape configuration.api_key}&cx=#{CGI.escape configuration.cx}"
-    url += "&q=#{CGI.escape args[:query]}"
+    url = construct_query(args)
     
     response = http_client.get(url)
     
@@ -86,6 +91,11 @@ class BentoSearch::GoogleSiteSearchEngine
     return results
   end
   
+  # yep, google gives us a 10 max per page. 
+  # also only lets us look at first 10 pages, sorry. 
+  def max_per_page
+    10
+  end
   
   def self.required_configuation
     [:api_key, :cx]
@@ -99,6 +109,39 @@ class BentoSearch::GoogleSiteSearchEngine
   end
   
   protected
+  
+  # create the URL to the google API based on normalized search args
+  #
+  # If you ask for pagination beyond what google will provide, it
+  # will give you the last page google will allow AND mutate the
+  # args hash passed in to match what you actually got!
+  def construct_query(args)
+    url = "#{configuration.base_url}key=#{CGI.escape configuration.api_key}&cx=#{CGI.escape configuration.cx}"
+    url += "&q=#{CGI.escape args[:query]}"
+    
+    
+    url += "&num=#{args[:per_page]}" if args[:per_page]
+    
+    # google 'start' is 1-based. Google won't let you paginate
+    # past ~10 pages (101 - num). We silently max out there without
+    # raising. 
+    if start = args[:start]
+      num   = args[:per_page] || 10
+      start = start + 1
+      
+      if start > (101 - num)
+        # illegal! fix. 
+        start         = (101 - num)
+        args[:start]  = (start - 1) # ours is zero based
+        args[:page]   = (args[:start] / num) + 1
+      end
+        
+          
+      url += "&start=#{start}"
+    end
+    
+    return url
+  end
   
   # normalization for strings returned by google as 'html' with query
   # in context highlighting. 

@@ -1,5 +1,8 @@
 require 'test_helper'
 
+require 'uri'
+require 'cgi'
+
 # To run these tests without VCR cassettes, need
 # ENV GOOGLE_SITE_SEARCH_KEY and GOOGLE_SITE_SEARCH_CX
 class GoogleSiteSearchTest < ActiveSupport::TestCase
@@ -16,6 +19,43 @@ class GoogleSiteSearchTest < ActiveSupport::TestCase
   setup do
     @config = {:api_key => @@api_key, :cx => @@cx}
     @engine = BentoSearch::GoogleSiteSearchEngine.new(@config)
+  end
+  
+  test("basic query construction") do
+    url = @engine.send(:construct_query, {:query => "hours policies"})
+    
+    query_params = CGI.parse( URI.parse(url).query )    
+
+    assert_equal ["hours policies"], query_params["q"]
+  end
+  
+  test("pagination construction") do    
+    url = @engine.send(:construct_query, {:query => "books", :per_page => 5, :start => 10})
+    
+    query_params = CGI.parse( URI.parse(url).query )
+    
+    assert_equal ["5"], query_params["num"]
+    assert_equal ["11"], query_params["start"]
+  end
+  
+  test("silently refuses to paginate too far") do
+    # google won't let you paginate past ~10 pages, (101 - num). We silently
+    # refuse
+    
+    url = @engine.send(:construct_query, {:query => "books", :start => 110})
+    
+    query_params = CGI.parse( URI.parse(url).query )
+    
+    assert_equal ["91"], query_params["start"]
+  end
+  
+  test_with_cassette("pagination object is correct for actual page when you ask for too far", :google_site) do
+    results = @engine.search("books", :start => 1000)
+    
+    pagination = results.pagination
+    
+    assert_equal 10, pagination.current_page
+    assert_equal 91, pagination.start_record    
   end
   
   test_with_cassette("basic smoke test", :google_site) do    
@@ -57,8 +97,6 @@ class GoogleSiteSearchTest < ActiveSupport::TestCase
     assert ! first.title.html_safe?    
     assert ! first.abstract.html_safe?
     assert ! first.journal_title.html_safe?        
-        
-    
   end
   
 end
