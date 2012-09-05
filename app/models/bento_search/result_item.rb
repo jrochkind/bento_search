@@ -101,7 +101,15 @@ module BentoSearch
     attr_accessor :start_page
     attr_accessor :end_page
     
-    attr_accessor :journal_title
+    # source_title is often used for journal_title (and aliased
+    # as #journal_title, although that may go away), but can
+    # also be used for other 'container' titles. Book title for
+    # a book chapter. Even web site or URL for a web page. 
+    attr_accessor :source_title
+    alias_method :journal_title, :source_title
+    alias_method :'journal_title=',  :'source_title='
+    
+    
     attr_accessor :issn
     attr_accessor :isbn
     
@@ -190,9 +198,9 @@ module BentoSearch
         result_elements.push "<span class='year'>#{year}</span>"
       end
       
-      result_elements.push(journal_title) unless journal_title.blank?      
+      result_elements.push(source_title) unless source_title.blank?      
       
-      if journal_title.blank? && ! publisher.blank?
+      if source_title.blank? && ! publisher.blank?
         result_elements.push html_escape publisher
       end
       

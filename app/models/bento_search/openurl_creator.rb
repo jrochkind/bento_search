@@ -54,7 +54,7 @@ module BentoSearch
       r.set_metadata("issue",   result_item.issue.to_s)
       r.set_metadata("spage",   result_item.start_page.to_s)
       r.set_metadata("epage",   result_item.end_page.to_s)
-      r.set_metadata("jtitle",  ensure_no_tags(result_item.journal_title))
+      r.set_metadata("jtitle",  ensure_no_tags(result_item.source_title))
       r.set_metadata("issn",    result_item.issn)
       r.set_metadata("isbn",    result_item.isbn)
       r.set_metadata("pub",     ensure_no_tags(result_item.publisher))

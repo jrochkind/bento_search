@@ -4,8 +4,6 @@ require 'multi_json'
 require 'http_client_patch/include_client'
 require 'httpclient'
 
-# Under construction. TODO: 
-#                           rename journal_title to source_title with alias.  
 #
 # An adapter for Google Site Search/Google Custom Search 
 #
@@ -27,7 +25,7 @@ require 'httpclient'
 # * Google API supports custom 'structured data' in your web pages (from microdata and meta tags?)
 #   for custom sorting and limiting and maybe field searching -- but this code
 #   does not currently support that. it could be added as custom config in some way. 
-# * The URL in display form is put in ResultItem#journal_title (ie source_title).
+# * The URL in display form is put in ResultItem#source_title
 #   That should result in it rendering in a reasonable place with standard display
 #   templates. 
 # * Sort: only relevance and date_desc. Custom sorts based on structured data not supported.   
@@ -75,11 +73,11 @@ class BentoSearch::GoogleSiteSearchEngine
       if configuration.highlighting
         item.title          = highlight_normalize json_item["htmlTitle"]
         item.abstract       = highlight_normalize json_item["htmlSnippet"]
-        item.journal_title  = highlight_normalize json_item["htmlFormattedUrl"]
+        item.source_title  = highlight_normalize json_item["htmlFormattedUrl"]
       else
         item.title          = json_item["title"]
         item.abstract       = json_item["snippet"]
-        item.journal_title  = json_item["formattedUrl"]
+        item.source_title  = json_item["formattedUrl"]
       end
       
       item.link             = json_item["link"]
