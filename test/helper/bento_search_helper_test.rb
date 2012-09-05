@@ -89,6 +89,7 @@ class BentoSearchHelperTest < ActionView::TestCase
     
     div = results.find(:attributes => {:class => "bento_search_ajax_wait"})
     assert div, "produces div.bento_search_ajax_wait"
+    assert_equal "ajax_auto", div["data-bento-search-load"], "has data-bento-search-load attribute"
     
     assert_present div.attributes["data-bento-ajax-url"]    
     url = URI.parse(div.attributes["data-bento-ajax-url"])    
