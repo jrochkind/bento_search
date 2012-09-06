@@ -89,6 +89,8 @@ class WorldcatSruDcEngineTest < ActiveSupport::TestCase
       
       assert_present first.abstract
       
+      assert_present first.link
+      
     end
   end
   

@@ -9,6 +9,9 @@ require 'httpclient'
 # Does require an API key, and requires OCLC membership/FirstSearch subscription
 # for access. 
 #
+# link is set to worldcat.org link. Change config link_base_url to, say,
+# link to a worldcat local instance. 
+#
 # == API Docs
 # * http://oclc.org/developer/documentation/worldcat-search-api/using-api
 # * http://oclc.org/developer/documentation/worldcat-search-api/sru
@@ -96,6 +99,7 @@ class BentoSearch::WorldcatSruDcEngine
       # lccn may also be in there if we wanted to keep it. 
       item.oclcnum        = first_text_if_present(record, "./recordIdentifier[not(@type)]")
       
+      item.link           = "#{configuration.linking_base_url}#{item.oclcnum}"
       
       
       results << item
@@ -199,7 +203,8 @@ class BentoSearch::WorldcatSruDcEngine
   
   def self.default_configuration
     {
-      :base_url => "http://www.worldcat.org/webservices/catalog/search/sru?"
+      :base_url => "http://www.worldcat.org/webservices/catalog/search/sru?",
+      :linking_base_url => "http://worldcat.org/oclc/"
     }
   end
   
