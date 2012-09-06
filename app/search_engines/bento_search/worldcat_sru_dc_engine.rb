@@ -26,6 +26,14 @@ require 'httpclient'
 # [frbrGrouping]   default nil, use worldcat default (which is 'on'). 
 #                  See http://oclc.org/developer/documentation/worldcat-search-api/parameters
 #                  for meaning of frbrGrouping. set to true or false. 
+# [auth]           default false. Set to true to assume all users are authenticated
+#                  and servicelevel=full for OCLC. 
+#
+# == Extra search args
+#
+# [auth]           default false. Set to true to assume all users are authenticated
+#                  and servicelevel=full for OCLC. Overrides config 'auth' value.  
+#
 class BentoSearch::WorldcatSruDcEngine
   include BentoSearch::SearchEngine
   
@@ -125,7 +133,14 @@ class BentoSearch::WorldcatSruDcEngine
     
     unless configuration.frbrGrouping.nil?
       value = configuration.frbrGrouping ? "on" : "off"
-      url += "frbrGrouping=#{value}"
+      url += "&frbrGrouping=#{value}"
+    end
+    
+    # service level? search arg over-rides config
+    auth = args[:auth]
+    auth = configuration.auth if auth.nil?
+    if auth
+      url += "&servicelevel=full"
     end
     
     return url
@@ -204,7 +219,8 @@ class BentoSearch::WorldcatSruDcEngine
   def self.default_configuration
     {
       :base_url => "http://www.worldcat.org/webservices/catalog/search/sru?",
-      :linking_base_url => "http://worldcat.org/oclc/"
+      :linking_base_url => "http://worldcat.org/oclc/",
+      :auth => false
     }
   end
   
