@@ -40,6 +40,14 @@ class WorldcatSruDcEngineTest < ActiveSupport::TestCase
     assert_equal ["21"],  query_hash["startRecord"]
   end
   
+  def test_construct_sort
+    url = @engine.construct_query_url(:query => "cancer", :sort => "date_desc")
+      
+    query_hash = CGI.parse(URI.parse(url).query)
+    
+    assert_present query_hash["sortKeys"]
+  end
+  
   def test_construct_cql
     # test proper escaping and such
     cql = @engine.construct_cql_query(:query => "alpha's beta \"one two\" thr\"ee")

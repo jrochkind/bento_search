@@ -104,6 +104,12 @@ class BentoSearch::WorldcatSruDcEngine
     url += "&startRecord=#{args[:start] + 1}" if args[:start]
     
     url += "&query=#{CGI.escape construct_cql_query(args)}"
+    
+    if (args[:sort]) && (value = sort_definitions[args[:sort]].try {|h| h[:implementation]})
+      url += "&sortKeys=#{CGI.escape value}"
+    end    
+    
+    return url
   end
   
   def first_text_if_present(node, xpath)
@@ -139,6 +145,18 @@ class BentoSearch::WorldcatSruDcEngine
       end.join(" AND ")    
   end
 
+  # date sort seems to work pretty terribly on worldcat. 
+  # Author, Title, and "Score" (don't know what that is) also
+  # avail on worldcat, asc and desc, but we aren't advertising here,
+  # cause, who needs em. 
+  def sort_definitions
+    {
+      "relevance" => {:implementation => "relevance"},
+      "date_desc" => {:implementation => "Date,,0"},   
+      "library_count_desc" => {:implementation => "Library Count,,0"}
+    }
+  end
+  
   def max_per_page
     100
   end
