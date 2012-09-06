@@ -80,7 +80,7 @@ class BentoSearch::WorldcatSruDcEngine
       # OCLC DC format gives us a bunch of jumbled 'description' elements
       # with any Marc 5xx. Sigh. We'll just concat em all and call it an
       # abstract, best we can do. 
-      item.abstract     = record.xpath("description").collect {|n| n.text}.join(" \n ")
+      item.abstract     = record.xpath("description").collect {|n| n.text}.join("... \n")
       
       # dc.identifier is a terrible smorgasbord of different identifiers,
       # with no way to tell for sure what's what other than pattern matching
