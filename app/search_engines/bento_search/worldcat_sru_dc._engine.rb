@@ -99,6 +99,10 @@ class BentoSearch::WorldcatSruDcEngine
     url += "&wskey=#{CGI.escape configuration.api_key}"
     url += "&recordSchema=#{CGI.escape 'info:srw/schema/1/dc'}"
     
+    # pagination, WorldCat 'start' is 1-based, ours is 0-based. 
+    url += "&maximumRecords=#{args[:per_page]}" if args[:per_page]
+    url += "&startRecord=#{args[:start] + 1}" if args[:start]
+    
     url += "&query=#{CGI.escape construct_cql_query(args)}"
   end
   
@@ -135,6 +139,10 @@ class BentoSearch::WorldcatSruDcEngine
       end.join(" AND ")    
   end
 
+  def max_per_page
+    100
+  end
+  
   def self.required_configuration
     [:api_key]
   end

@@ -31,6 +31,15 @@ class WorldcatSruDcEngineTest < ActiveSupport::TestCase
     assert_equal [@engine.construct_cql_query(:query => query)],   query_hash["query"]
   end
   
+  def test_construct_pagination
+    url = @engine.construct_query_url(:query => "cancer", :per_page => 20, :start => 20)
+    
+    query_hash = CGI.parse(URI.parse(url).query)
+    
+    assert_equal ["20"],  query_hash["maximumRecords"]
+    assert_equal ["21"],  query_hash["startRecord"]
+  end
+  
   def test_construct_cql
     # test proper escaping and such
     cql = @engine.construct_cql_query(:query => "alpha's beta \"one two\" thr\"ee")
