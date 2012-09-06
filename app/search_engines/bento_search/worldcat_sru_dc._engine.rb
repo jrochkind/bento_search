@@ -13,6 +13,14 @@ require 'httpclient'
 # * http://oclc.org/developer/documentation/worldcat-search-api/using-api
 # * http://oclc.org/developer/documentation/worldcat-search-api/sru
 # * http://oclc.org/developer/documentation/worldcat-search-api/parameters
+#
+# == Required configuration keys
+# * api_key
+#
+# == Optional configuration keys
+# [frbrGrouping]   default nil, use worldcat default (which is 'on'). 
+#                  See http://oclc.org/developer/documentation/worldcat-search-api/parameters
+#                  for meaning of frbrGrouping. set to true or false. 
 class BentoSearch::WorldcatSruDcEngine
   include BentoSearch::SearchEngine
   
@@ -108,6 +116,11 @@ class BentoSearch::WorldcatSruDcEngine
     if (args[:sort]) && (value = sort_definitions[args[:sort]].try {|h| h[:implementation]})
       url += "&sortKeys=#{CGI.escape value}"
     end    
+    
+    unless configuration.frbrGrouping.nil?
+      value = configuration.frbrGrouping ? "on" : "off"
+      url += "frbrGrouping=#{value}"
+    end
     
     return url
   end
