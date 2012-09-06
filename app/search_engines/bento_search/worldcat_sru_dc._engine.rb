@@ -40,10 +40,53 @@ class BentoSearch::WorldcatSruDcEngine
     results.total_items = xml.at_xpath("//numberOfRecords").try {|n| n.text.to_i }
     
     
-    (xml.xpath("/searchRetrieveResponse/records/record") || []).each do |record|
+    (xml.xpath("/searchRetrieveResponse/records/record/recordData/oclcdcs") || []).each do |record|
       item = BentoSearch::ResultItem.new
       
-      item.title        = first_text_if_present record, "./recordData/oclcdcs/title"
+      item.title        = first_text_if_present record, "title"
+      
+      # May have one (or more?) 'creator' and one or more 'contributor'. 
+      # We'll use just creators if we got em, else contributors. 
+      authors = record.xpath("./creator")
+      authors = record.xpath("./contributor") if authors.empty?
+      authors.each do |auth_node|
+        item.authors << BentoSearch::Author.new(:display => auth_node.text)
+      end
+      
+      
+      # date may have garbage in it, just take the first four digits
+      item.year         = record.at_xpath("date").try do |date_node|
+        date_node.text =~ /(\d{4})/ ? $1 : nil          
+      end
+      
+      # weird garbled from MARC format, best we have
+      item.format_str   = first_text_if_present(record, "format") || first_text_if_present(record, "type")
+      
+      item.publisher    = first_text_if_present record, "publisher"
+      
+      # OCLC DC format gives us a bunch of jumbled 'description' elements
+      # with any Marc 5xx. Sigh. We'll just concat em all and call it an
+      # abstract, best we can do. 
+      item.abstract     = record.xpath("description").collect {|n| n.text}.join(" \n ")
+      
+      # dc.identifier is a terrible smorgasbord of different identifiers,
+      # with no way to tell for sure what's what other than pattern matching
+      # of literals. sigh. 
+      if ( id = first_text_if_present(record, "identifier"))
+        possible_isxn = id.scan(/\d|X/).join('')
+        # we could test check digit validity, but we ain't
+        if possible_isxn.length == 10 || possible_isxn.length == 13
+          item.isbn = possible_isxn
+        elsif possible_isxn.length == 8
+          item.issn = possible_isxn
+        end
+      end
+      
+      # The recordIdentifier with no "xsi:type" attrib is an oclcnum. sigh. 
+      # lccn may also be in there if we wanted to keep it. 
+      item.oclcnum        = first_text_if_present(record, "./recordIdentifier[not(@type)]")
+      
+      
       
       results << item
     end

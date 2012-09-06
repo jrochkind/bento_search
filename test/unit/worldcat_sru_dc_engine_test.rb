@@ -3,6 +3,12 @@ require 'test_helper'
 require 'cgi'
 require 'uri'
 
+#
+#
+# Using the MARCXML response is way too much work, but the XML 'DC' response
+# is awfully stunted. We do what we can with it, but resulting metadata
+# is weird. 
+#
 class WorldcatSruDcEngineTest < ActiveSupport::TestCase
   extend TestWithCassette
 
@@ -52,6 +58,13 @@ class WorldcatSruDcEngineTest < ActiveSupport::TestCase
       first = results.first
       
       assert_present first.title
+      assert_present first.authors
+      assert_present first.publisher
+      assert_present first.oclcnum
+      
+      assert_present first.year
+      
+      assert_present first.abstract
       
     end
   end
