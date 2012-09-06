@@ -112,6 +112,7 @@ module BentoSearch
     
     attr_accessor :issn
     attr_accessor :isbn
+    attr_accessor :oclcnum # OCLC accession number, WorldCat. 
     
     attr_accessor :doi
     
