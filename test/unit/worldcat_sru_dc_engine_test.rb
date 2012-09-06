@@ -48,6 +48,12 @@ class WorldcatSruDcEngineTest < ActiveSupport::TestCase
     assert_present query_hash["sortKeys"]
   end
   
+  def test_construct_fielded_search
+    cql = @engine.construct_cql_query(:query => "cancer", :search_field => "srw.ti")
+    
+    assert_equal 'srw.ti = "cancer"', cql
+  end
+  
   def test_construct_cql
     # test proper escaping and such
     cql = @engine.construct_cql_query(:query => "alpha's beta \"one two\" thr\"ee")

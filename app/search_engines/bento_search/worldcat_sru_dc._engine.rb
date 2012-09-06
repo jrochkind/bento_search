@@ -13,6 +13,8 @@ require 'httpclient'
 # * http://oclc.org/developer/documentation/worldcat-search-api/using-api
 # * http://oclc.org/developer/documentation/worldcat-search-api/sru
 # * http://oclc.org/developer/documentation/worldcat-search-api/parameters
+# * http://oclc.org/developer/documentation/worldcat-search-api/service-levels
+# * http://oclc.org/developer/documentation/worldcat-search-api/complete-list-indexes
 #
 # == Required configuration keys
 # * api_key
@@ -134,7 +136,8 @@ class BentoSearch::WorldcatSruDcEngine
   #
   # returns CQL that is NOT uri escaped yet. 
   def construct_cql_query(args)
-    field = "srw.kw" # later be field specific from args please. 
+    # default is srw.kw, Keyword anywhere. 
+    field = args[:search_field] || "srw.kw" 
     
     # We need to split terms and phrases, so we can formulate
     # CQL with seperate clauses for each, bah. 
@@ -167,6 +170,22 @@ class BentoSearch::WorldcatSruDcEngine
       "relevance" => {:implementation => "relevance"},
       "date_desc" => {:implementation => "Date,,0"},   
       "library_count_desc" => {:implementation => "Library Count,,0"}
+    }
+  end
+  
+  # WorldCat offers more search fields than this, this is what we
+  # think is useful right now. Some WorldCat search fields are only
+  # available at 'full' service level, but we think all the ones
+  # we're listing now are available even at 'default' service level. 
+  def search_field_definitions
+    {
+      "srw.au"      => {:semantic => :author},
+      "srw.ti"      => {:semantic => :title},
+      "srw.su"      => {:semantic => :subject},
+      "srw.bn"      => {:semantic => :isbn},
+      # Oddly no ISSN index, all we get is 'number'
+      "srw.sn"      => {:semantic => :number},
+      "srw.no"      => {:semantic => :oclcnum}
     }
   end
   
