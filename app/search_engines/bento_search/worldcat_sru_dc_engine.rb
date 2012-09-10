@@ -109,6 +109,7 @@ class BentoSearch::WorldcatSruDcEngine
       
       item.link           = "#{configuration.linking_base_url}#{item.oclcnum}"
       
+      item.language_code  = first_text_if_present record, "./language[@type='http://purl.org/dc/terms/ISO639-2']"
       
       results << item
     end

@@ -111,6 +111,8 @@ class WorldcatSruDcEngineTest < ActiveSupport::TestCase
       
       assert_present first.link
       
+      assert_present first.language_code
+      
     end
   end
   
