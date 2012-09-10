@@ -84,6 +84,8 @@ module BentoSearch
                               "Book"
                             end    
                             
+        item.language_code  = j_item["language"]
+                            
         (j_item["authors"] || []).each do |author_name|
           item.authors << Author.new(:display => author_name)
         end

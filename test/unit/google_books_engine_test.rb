@@ -35,6 +35,7 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
     assert_not_empty first.abstract
     assert first.abstract.html_safe?
     
+    assert_present first.language_code
     
     assert_not_empty first.authors
     assert_not_empty first.authors.first.display
