@@ -104,7 +104,9 @@ module BentoSearch
     attr_writer :language_str
     def language_str
       @language_str || language_code.try do |code|
-        LanguageList::LanguageInfo.find(code).name
+        LanguageList::LanguageInfo.find(code).try do |lang_obj|
+          lang_obj.name
+        end
       end
     end
     

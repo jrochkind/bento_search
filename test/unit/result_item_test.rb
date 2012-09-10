@@ -61,4 +61,11 @@ class ResultItemTest < ActiveSupport::TestCase
     
   end
   
+  def test_bad_language_code
+    r = ResultItem.new(:title => "something", :language_code => "not_valid")
+    
+    assert_equal "not_valid", r.language_code
+    assert_nil r.language_str
+  end
+  
 end
