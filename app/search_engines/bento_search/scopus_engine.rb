@@ -42,6 +42,8 @@ module BentoSearch
   # TODO: Mention to Scopus: Only one author?
   # Paging of 50 gets an error, but docs say I should be able to request 200. q
   # 
+  # Scopus response does not seem to include language of hit, even though
+  # api allows you to restrict by language. ask scopus if we're missing something?
   class ScopusEngine
     include BentoSearch::SearchEngine
     
