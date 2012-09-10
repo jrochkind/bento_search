@@ -40,5 +40,25 @@ class ResultItemTest < ActiveSupport::TestCase
     assert_nil r.to_openurl    
   end
   
+  def test_language
+    r = ResultItem.new(:title => "something", :language_code => "en")    
+    assert_equal "en",      r.language_code
+    assert_equal "English", r.language_str
+    
+    r = ResultItem.new(:title => "something", :language_code => "eng")
+    assert_equal "eng",      r.language_code
+    assert_equal "English", r.language_str
+    
+    # language_str override
+    r = ResultItem.new(:title => "something", :language_code => "en", :language_str => "Weird English")
+    assert_equal "en",            r.language_code
+    assert_equal "Weird English", r.language_str
+    
+    # language_str only
+    r = ResultItem.new(:title => "something", :language_str => "English")
+    assert_nil r.language_code
+    assert_equal "English", r.language_str
+    
+  end
   
 end

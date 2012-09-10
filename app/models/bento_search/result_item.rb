@@ -1,3 +1,5 @@
+require 'language_list'
+
 module BentoSearch
   # Data object representing a single hit from a search, normalized
   # with common data fields. Usually held in a BentoSearch::Results object.
@@ -85,9 +87,26 @@ module BentoSearch
     # format. 
     attr_accessor :format_str
     
-    # Language of materials: Uncontrolled presumably english-langauge label
-    # We may add controlled field later. 
-    attr_accessor :language_str
+    # Language of materials. Producer can set language_code to an ISO 639-1 (two
+    # letter) or 639-3 (three letter) language code. If you do this, you don't
+    # need to set language_str, it'll be automatically looked up. (Providing
+    # language name in English at present, i18n later maybe). 
+    #
+    # Or, if you don't know the language code (or there isn't one?), you can set 
+    # language_str manually to a presumably english user-displayable string.
+    # Manually set language_str will over-ride display string calculated from
+    # language_code. 
+    # 
+    # Consumers can look at language_code or language_str regardless (although
+    # either or both may be nil). You can use language_list gem to normalize to a 
+    # 2- or 3-letter from language_code that could be either. 
+    attr_accessor :language_code
+    attr_writer :language_str
+    def language_str
+      @language_str || language_code.try do |code|
+        LanguageList::LanguageInfo.find(code).name
+      end
+    end
     
     # year published. a ruby int
     # PART of:. 
