@@ -5,6 +5,11 @@ var BentoSearch = BentoSearch || {}
 BentoSearch.ajax_load = function(node) {
   div = $(node);
   
+  if (div.length == 0) {
+    //we've got nothing
+    return
+  }
+  
 
   // We find the "waiting"/spinner section already rendered,
   // and show it. We experimented with generating the spinner/waiting
