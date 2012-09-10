@@ -79,6 +79,8 @@ require 'summon/transport/headers'
 # headers how summon wants it, see class at
 # https://github.com/summon/summon.rb/blob/master/lib/summon/transport/headers.rb
 #
+# Language provided only in language_str not language_code, all that API gives
+# us. We could try to reverse lookup from ISO code labels later if we want. 
 class BentoSearch::SummonEngine
   include BentoSearch::SearchEngine
   
