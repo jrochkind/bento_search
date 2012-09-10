@@ -53,7 +53,10 @@ require 'httpclient'
 # == Vendor docs
 #
 # http://www.exlibrisgroup.org/display/PrimoOI/Brief+Search
-
+#
+# == Notes
+#
+# Some but not all hits have language_codes provided by api. 
 class BentoSearch::PrimoEngine
   include BentoSearch::SearchEngine
   
@@ -118,6 +121,8 @@ class BentoSearch::PrimoEngine
       item.doi            = text_at_xpath doc_xml, "./PrimoNMBib/record/addata/doi"
       item.issn           = text_at_xpath doc_xml, "./PrimoNMBib/record/addata/issn"
       item.isbn           = text_at_xpath doc_xml, "./PrimoNMBib/record/addata/isbn"
+      
+      item.language_code  = text_at_xpath doc_xml, "./PrimoNMBib/record/display/language"
       
       if (date = text_at_xpath doc_xml, "./PrimoNMBib/record/search/creationdate")
         item.year = date[0,4] # first four chars
