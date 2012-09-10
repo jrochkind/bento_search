@@ -61,10 +61,10 @@ require 'httpclient'
 #  Hard to find docs page on embedding EBSCO limiters (like peer reviewed only "RV Y") in search query: 
 #     http://eit.ebscohost.com/Pages/MethodDescription.aspx?service=~/Services/SearchService.asmx&method=Info
 #
-# 
-#
-# TODO: David Walker tells us we need to configure in EBSCO to make default operator be 'and' instead of phrase search!
-# We Do need to do that to get reasonable results. 
+# == Limitations
+# We do set language of ResultItems based on what ebsco tells us, but ebsoc
+# seems to tell us 'english' for everything (maybe cause abstract is in
+# English?). Config variable to tell us to ignore language?
 class BentoSearch::EbscoHostEngine
   include BentoSearch::SearchEngine
   
@@ -314,8 +314,9 @@ class BentoSearch::EbscoHostEngine
     item.format         = sniff_format info
     item.format_str     = sniff_format_str info
     
-    # Totally unreliable, seems to report english for everything?
-    # item.language_str   = text_if_present info.at_xpath("./language")
+    # Totally unreliable, seems to report english for everything? Maybe
+    # because abstracts are in english? Nevertheless we include for now.
+    item.language_code   = text_if_present info.at_xpath("./language/@code")
     
     
     return item
