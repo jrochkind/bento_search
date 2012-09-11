@@ -69,13 +69,31 @@ class BentoSearch::PrimoEngine
   def search_implementation(args)
     
     url = construct_query(args)
+            
+    results = BentoSearch::Results.new
 
     response = http_client.get(url)
+    if response.status != 200
+      results.error ||= {}
+      results.error[:status] = response.status
+      results.error[:body] = response.body
+      return results
+    end
+      
+    
     response_xml = Nokogiri::XML response.body
     # namespaces really do nobody any good
     response_xml.remove_namespaces!
     
-    results = BentoSearch::Results.new
+    
+    require 'debugger'
+    debugger
+    if error = response_xml.at_xpath("./SEGMENTS/JAGROOT/RESULT/ERROR")
+      results.error ||= {}
+      results.error[:code]    = error["CODE"]
+      results.error[:message] = error["MESSAGE"]
+      return results
+    end
         
     results.total_items = response_xml.at_xpath("./SEGMENTS/JAGROOT/RESULT/DOCSET")["TOTALHITS"].to_i
 
