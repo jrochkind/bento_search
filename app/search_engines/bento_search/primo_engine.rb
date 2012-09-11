@@ -86,8 +86,6 @@ class BentoSearch::PrimoEngine
     response_xml.remove_namespaces!
     
     
-    require 'debugger'
-    debugger
     if error = response_xml.at_xpath("./SEGMENTS/JAGROOT/RESULT/ERROR")
       results.error ||= {}
       results.error[:code]    = error["CODE"]
