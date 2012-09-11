@@ -199,11 +199,15 @@ class BentoSearch::EbscoHostEngine
   end
   
   
-  # it's unclear if ebsco API actually allows escaping of special chars,
-  # or what the special chars are. But we know parens are special, can't
-  # escape em, we'll just remove em (should not effect search). 
+  # escape or replace special chars to ebsco 
   def ebsco_query_escape(txt)
-    txt.gsub(/[)(]/, ' ')
+    # it's unclear if ebsco API actually allows escaping of special chars,
+    # or what the special chars are. But we know parens are special, can't
+    # escape em, we'll just remove em (should not effect search).
+    
+    # undocumented but question mark seems to cause a problem for ebsco,
+    # even inside quoted phrases, not sure why. 
+    txt.gsub(/[)(\?]/, ' ')
   end
   
   # Actually turn the user's query into an EBSCO "AND" boolean query,
@@ -216,7 +220,7 @@ class BentoSearch::EbscoHostEngine
 
     # Remove parens in non-phrase-quoted terms
     terms = terms.collect do |t| 
-      (t =~ /^\".*\"$/) ? t : ebsco_query_escape(t)      
+      ebsco_query_escape(t)      
     end
     
     # Remove boolean operators if they are bare not in a phrase, they'll
@@ -241,6 +245,7 @@ class BentoSearch::EbscoHostEngine
     
     query = ebsco_query_prepare  args[:query]  
     
+    
     # wrap in (FI $query) if fielded search
     if args[:search_field]
       query = "(#{args[:search_field]} #{query})"
@@ -261,7 +266,7 @@ class BentoSearch::EbscoHostEngine
     configuration.databases.each do |db|
       url += "&db=#{db}"
     end    
-    
+
     return url
   end
   

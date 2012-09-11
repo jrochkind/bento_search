@@ -80,6 +80,18 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     assert_equal ["cancer "], query_params["query"]
   end
   
+  def test_removes_question_marks
+    # who knows why, ebsco doesn't like question marks even inside
+    # quoted phrases, some special char to ebsco. 
+    url = @engine.query_url(:query => "cancer?", :sort => "date_desc")    
+    query_params = CGI.parse( URI.parse(url).query )    
+    assert_equal ["cancer "], query_params["query"]
+    
+    url = @engine.query_url(:query => '"cancer?"', :sort => "date_desc")
+    query_params = CGI.parse( URI.parse(url).query )    
+    assert_equal ['"cancer "'], query_params["query"]
+  end
+  
   test_with_cassette("live search smoke test", :ebscohost) do
   
     results = @engine.search(:query => "cancer")
