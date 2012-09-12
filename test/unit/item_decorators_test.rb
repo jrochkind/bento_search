@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class LinkDecoratorsTest < ActiveSupport::TestCase
+class ItemDecoratorsTest < ActiveSupport::TestCase
   MockEngine = BentoSearch::MockEngine
   
   # simple decorator that replaces main link
@@ -33,6 +33,17 @@ class LinkDecoratorsTest < ActiveSupport::TestCase
       assert_equal "One",             result.other_links.first.label
       assert_equal "http://one.com",  result.other_links.first.url          
     end    
+  end
+  
+  test "decorator as string" do
+    @engine = MockEngine.new(:item_decorators => ["::ItemDecoratorsTest::Decorator"])
+    
+    results = @engine.search(:query => "Query")
+    
+    results.each do |result|
+      assert_kind_of Decorator, result
+    end
+
   end
   
   # Is it a good idea to have a decorator that mutates on 'extend'?

@@ -50,7 +50,8 @@ module BentoSearch
   # framework:
   #
   #  [item_decorators]
-  #      Array of Modules that will be decorated on to each individual search
+  #      Array of Modules (or strings specifying modules, helpful to keep
+  #      config serializable) that will be decorated on to each individual search
   #      BentoSearch::ResultItem. These can be used to, via configuration, change
   #      the links associated with items, change certain item behaviors, or massage
   #      item metadata. (Needs more documentation). 
@@ -309,9 +310,12 @@ module BentoSearch
     protected
     
     # Extend each result with each specified decorator module
+    # configuration.item_decorators is an array of either Module constants,
+    # or strings specifying module constants. 
     def decorate(results)      
       results.each do |result|
         configuration.item_decorators.each do |decorator|
+          decorator = (decorator.kind_of? Module) ? decorator : BentoSearch::Util.constantize(decorator)          
           result.extend decorator
         end
       end

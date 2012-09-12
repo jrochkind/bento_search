@@ -57,12 +57,8 @@ class BentoSearch::Registrar
   # Turn a string into a constant/class object, lexical lookup
   # within BentoSearch module. Can use whatever would be legal
   # in ruby, "A", "A::B", "::A::B" (force top-level lookup), etc. 
-  def constantize(klass_string)        
-    unless /\A(?:::)?([A-Z]\w*(?:::[A-Z]\w*)*)\z/ =~ klass_string
-      raise NameError, "#{klass_string.inspect} is not a valid constant name!"
-    end
-
-    BentoSearch.module_eval(klass_string, __FILE__, __LINE__)
+  def constantize(klass_string)     
+    BentoSearch::Util.constantize(klass_string)    
   end
   
 
