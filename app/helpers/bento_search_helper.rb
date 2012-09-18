@@ -145,7 +145,7 @@ module BentoSearchHelper
   def bento_sort_hash_for(engine)
     Hash[ 
       engine.sort_definitions.keys.collect do |key|
-        [I18n.translate(key, :scope => "bento_search.sort_keys", :default => key.titleize), key]
+        [I18n.translate(key.to_s, :scope => "bento_search.sort_keys", :default => key.to_s.titleize), key.to_s]
       end        
     ]    
   end
