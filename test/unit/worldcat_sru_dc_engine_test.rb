@@ -13,6 +13,10 @@ class WorldcatSruDcEngineTest < ActiveSupport::TestCase
   extend TestWithCassette
 
   @@api_key = ENV["WORLDCAT_API_KEY"] || "DUMMY_API_KEY"
+  
+  VCR.configure do |c|
+    c.filter_sensitive_data("DUMMY_API_KEY", :worldcat_sru_dc) { @@api_key }
+  end
 
   
   def setup
@@ -90,30 +94,27 @@ class WorldcatSruDcEngineTest < ActiveSupport::TestCase
     end        
   end
   
-  test("smoke test") do
-    VCR.turned_off do
-      results = @engine.search("cancer")
-      
-      assert_present results
-      
-      assert_present results.total_items
-      
-      first = results.first
-      
-      assert_present first.title
-      assert_present first.authors
-      assert_present first.publisher
-      assert_present first.oclcnum
-      
-      assert_present first.year
-      
-      assert_present first.abstract
-      
-      assert_present first.link
-      
-      assert_present first.language_code
-      
-    end
+  test_with_cassette("smoke test", :worldcat_sru_dc) do
+    results = @engine.search("anarchism")
+    
+    assert_present results
+    
+    assert_present results.total_items
+    
+    first = results.first
+    
+    assert_present first.title
+    assert_present first.authors
+    assert_present first.publisher
+    assert_present first.oclcnum
+    
+    assert_present first.year
+    
+    assert_present first.abstract
+    
+    assert_present first.link
+    
+    assert_present first.language_code      
   end
   
 end

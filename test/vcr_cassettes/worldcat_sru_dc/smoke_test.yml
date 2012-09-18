@@ -1,0 +1,628 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.worldcat.org/webservices/catalog/search/sru?maximumRecords=10&query=srw.kw%20=%20%22anarchism%22&recordSchema=info:srw/schema/1/dc&wskey=DUMMY_API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "RGF0ZQ==":
+      - !binary |-
+        VHVlLCAxOCBTZXAgMjAxMiAyMDo1Nzo0NSBHTVQ=
+      !binary "U2VydmVy":
+      - !binary |-
+        QXBhY2hl
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        dGV4dC94bWw7Y2hhcnNldD11dGYtOA==
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+        <?xml-stylesheet type="text/xsl" href="/webservices/catalog/xsl/searchRetrieveResponse.xsl"?>
+
+
+        <searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/" xmlns:oclcterms="http://purl.org/oclc/terms/"
+        xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+        <version>1.1</version>
+
+        <numberOfRecords>23588</numberOfRecords>
+
+        <records>
+
+        <record>
+
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+
+        <recordPacking>xml</recordPacking>
+
+        <recordData>
+
+        <oclcdcs>
+
+        <dc:contributor>Pennock, J. Roland (James Roland), 1906-1995.</dc:contributor>
+
+        <dc:contributor>Chapman, John W. (John William), 1923-</dc:contributor>
+
+        <dc:contributor>Paul Avrich Collection (Library of Congress)</dc:contributor>
+
+        <dc:date>1978</dc:date>
+
+        <dc:description>Includes index.</dc:description>
+
+        <dc:description>Anarchism and political philosophy : an introduction / Gerald
+        F. Gaus and John W. Chapman -- What is anarchism? / John P. Clark -- A contractarian
+        perspective on anarchy / James M. Buchanan -- Nozick''s anarchism / Eric Mack
+        -- Anarchism and world order / Richard A. Falk -- Anarchism and authority
+        / Richard T. De George -- Comments on "Anarchism and authority" / Richard
+        Wasserstrom -- Anarchism and skepticism / Rex Martin -- The anarchist justification
+        of authority / Alan Ritter -- Disrespect for law / Lester J. Mazor -- The
+        profoundest respect for law : Mazor''s Anarchy and the political association
+        / Lisa Newton -- Disrespect for law and the case for anarchy / Alan Wertheimer
+        -- Society without state / Murray N. Rothbard -- Some reflections on arbitrating
+        our way to anarchy / Chistopher D. Stone -- Anarchist justice / David Wieck
+        -- The dimensions of anarchy / Donald McIntosh -- Philosophical anarchism
+        revisited / Grenville Wall -- On the "Kantian" foundations of Robert Paul
+        Wolff''s anarchism / Partrick Riley -- Anarchism and violence / April Carter.</dc:description>
+
+        <dc:format>xlv, 375 p. ; 22 cm.</dc:format>
+
+        <dc:identifier>0814765726</dc:identifier>
+
+        <dc:identifier>9780814765722</dc:identifier>
+
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+
+        <dc:publisher>New York University Press</dc:publisher>
+
+        <dc:relation>Nomos ; 19</dc:relation>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Anarchism.</dc:subject>
+
+        <dc:title>Anarchism </dc:title>
+
+        <dc:type>Text</dc:type>
+
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">771213</oclcterms:recordCreationDate>
+
+        <oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">   77084158
+        </oclcterms:recordIdentifier>
+
+        <oclcterms:recordIdentifier>3540542</oclcterms:recordIdentifier>
+
+        </oclcdcs>
+
+        </recordData>
+
+        </record>
+
+        <record>
+
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+
+        <recordPacking>xml</recordPacking>
+
+        <recordData>
+
+        <oclcdcs>
+
+        <dc:contributor>Paul Avrich Collection (Library of Congress)</dc:contributor>
+
+        <dc:creator>Hoffman, Robert Louis, 1937-</dc:creator>
+
+        <dc:date>1970</dc:date>
+
+        <dc:description>[1st ed.]</dc:description>
+
+        <dc:description>What is government? / Pierre-Joseph Proudhon -- What is anarchism?
+        / Alexander Berkman -- The place of anarchism in the history of political
+        thought / Derry Novak -- Anarchism: what it really stands for / Emma Goldman
+        -- An anarchist''s view of democracy / Pierre-Joseph Proudhon -- Patriotism
+        and government / Leo Tolstoy -- Essentials of anarchism / David Thoreau Wieck
+        -- The impossibilities of anarchism / George Bernard Shaw -- The philosophical
+        anarchist / William Ernest Hocking -- Government and law / Bertrand Russell
+        -- Am estimate of anarchism''s role / James Joll -- The black flag of anarchism
+        / Paul Goodman.</dc:description>
+
+        <dc:format>165 p. 23 cm.</dc:format>
+
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+
+        <dc:publisher>Atherton Press</dc:publisher>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Anarchism.</dc:subject>
+
+        <dc:title>Anarchism.</dc:title>
+
+        <dc:type>Text</dc:type>
+
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">700824</oclcterms:recordCreationDate>
+
+        <oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">   71105604
+        </oclcterms:recordIdentifier>
+
+        <oclcterms:recordIdentifier>90131</oclcterms:recordIdentifier>
+
+        </oclcdcs>
+
+        </recordData>
+
+        </record>
+
+        <record>
+
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+
+        <recordPacking>xml</recordPacking>
+
+        <recordData>
+
+        <oclcdcs>
+
+        <dc:contributor>Paul Avrich Collection (Library of Congress)</dc:contributor>
+
+        <dc:creator>Sonn, Richard David.</dc:creator>
+
+        <dc:date>c1992</dc:date>
+
+        <dc:description>1. The Place of Anarchism -- 2. The Philosophy of Anarchism
+        -- 3. The Anarchist Movement -- 4. Case Study: Anarchism in Spain -- 5. Contemporary
+        Anarchism.</dc:description>
+
+        <dc:format>xv, 147 p. ; 23 cm.</dc:format>
+
+        <dc:identifier>0805786112 (cloth : alk. paper)</dc:identifier>
+
+        <dc:identifier>9780805786118 (cloth : alk. paper)</dc:identifier>
+
+        <dc:identifier>0805786368 (pbk. : alk. paper)</dc:identifier>
+
+        <dc:identifier>9780805786361 (pbk. : alk. paper)</dc:identifier>
+
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+
+        <dc:publisher>Twayne Publishers </dc:publisher>
+
+        <dc:publisher>Maxwell Macmillan Canada </dc:publisher>
+
+        <dc:publisher>Maxwell Macmillan International</dc:publisher>
+
+        <dc:relation>Twayne''s studies in intellectual and cultural history ; no.
+        4</dc:relation>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Anarchism--History.</dc:subject>
+
+        <dc:title>Anarchism </dc:title>
+
+        <dc:type>Text</dc:type>
+
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">920430</oclcterms:recordCreationDate>
+
+        <oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">   92016954
+        </oclcterms:recordIdentifier>
+
+        <oclcterms:recordIdentifier>25873821</oclcterms:recordIdentifier>
+
+        </oclcdcs>
+
+        </recordData>
+
+        </record>
+
+        <record>
+
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+
+        <recordPacking>xml</recordPacking>
+
+        <recordData>
+
+        <oclcdcs>
+
+        <dc:creator>Miller, David, 1946-</dc:creator>
+
+        <dc:date>1984</dc:date>
+
+        <dc:description>Includes index.</dc:description>
+
+        <dc:format>216 p. ; 23 cm.</dc:format>
+
+        <dc:identifier>0460100939</dc:identifier>
+
+        <dc:identifier>9780460100939</dc:identifier>
+
+        <dc:identifier>0460110934 (pbk.)</dc:identifier>
+
+        <dc:identifier>9780460110938 (pbk.)</dc:identifier>
+
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+
+        <dc:publisher>J.M. Dent</dc:publisher>
+
+        <dc:relation>Modern ideologies</dc:relation>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Anarchism.</dc:subject>
+
+        <dc:title>Anarchism </dc:title>
+
+        <dc:type>Text</dc:type>
+
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">840306</oclcterms:recordCreationDate>
+
+        <oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">   84129651
+        </oclcterms:recordIdentifier>
+
+        <oclcterms:recordIdentifier>10920428</oclcterms:recordIdentifier>
+
+        </oclcdcs>
+
+        </recordData>
+
+        </record>
+
+        <record>
+
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+
+        <recordPacking>xml</recordPacking>
+
+        <recordData>
+
+        <oclcdcs>
+
+        <dc:contributor>Byington, Steven T. (Steven Tracy), 1868-1957.</dc:contributor>
+
+        <dc:contributor>Anarchism Collection (Library of Congress)</dc:contributor>
+
+        <dc:contributor>Paul Avrich Collection (Library of Congress)</dc:contributor>
+
+        <dc:creator>Eltzbacher, Paul, 1868-1928.</dc:creator>
+
+        <dc:date>1908</dc:date>
+
+        <dc:description>Translation of: Der Anarchismus.</dc:description>
+
+        <dc:description>Publisher''s advertisement on p. [310].</dc:description>
+
+        <dc:description>Includes index.</dc:description>
+
+        <dc:description>Translator''s preface.--Books referred to by abbreviated titles.--The
+        problem.--Law, the state, property.--Godwin''s teaching.--Proudhon''s teaching.--Stirner''s
+        [pseud.] teaching.--Bakunin''s teaching.--Kropotkin''s teaching.--Tucker''s
+        teaching.--Tolstoi''s teaching.--The anarchistic teachings.--Anarchism and
+        its species.--Conclusion.--Index.</dc:description>
+
+        <dc:format>309, [1] p., [6] leaves of plates : ports. ; 18 cm.</dc:format>
+
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+
+        <dc:publisher>Benj. R. Tucker </dc:publisher>
+
+        <dc:publisher>A.C. Fifield</dc:publisher>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Anarchism.</dc:subject>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Anarchists.</dc:subject>
+
+        <dc:title>Anarchism </dc:title>
+
+        <dc:title>Anarchismus.</dc:title>
+
+        <dc:type>Text</dc:type>
+
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">810310</oclcterms:recordCreationDate>
+
+        <oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">   08005260
+        </oclcterms:recordIdentifier>
+
+        <oclcterms:recordIdentifier>1916707</oclcterms:recordIdentifier>
+
+        </oclcdcs>
+
+        </recordData>
+
+        </record>
+
+        <record>
+
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+
+        <recordPacking>xml</recordPacking>
+
+        <recordData>
+
+        <oclcdcs>
+
+        <dc:creator>Sheehan, Sean, 1951-</dc:creator>
+
+        <dc:date>2003</dc:date>
+
+        <dc:description>Global anarchism -- Anarchos -- Marx, Nietsche and anarchism
+        -- Attacking the state -- Subverting hierarchies -- The anarchist tension.</dc:description>
+
+        <dc:format>175 p. : ill. ; 21 cm.</dc:format>
+
+        <dc:identifier>1861891695</dc:identifier>
+
+        <dc:identifier>9781861891693</dc:identifier>
+
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+
+        <dc:publisher>Reaktion</dc:publisher>
+
+        <dc:relation>Review: "Anarchism is as much an attitude as it is a set of formulated
+        doctrines, and in this book Sean M. Sheehan provides a sure map to what anarchism
+        really means, describing its history through anecdote and dramatic event,
+        and offering explanations of the issues behind this ''movement,'' using examples
+        from around the world." "Anarchist thinking and influences emerge in many
+        different aspects of contemporary culture and history, and the author examines
+        instances in political thought and action, philosophy and the history of ideas
+        as well as in film and literary criticism. The tension between communist and
+        individualist anarchies as reflected in the work of Marx and Nietzsche is
+        explored and explained, as are the expressions of anarchist ideas found in
+        the writings of William Blake and Oscar Wilde, the libertarianism in relation
+        to sex and psychology that influenced Wilhelm Reich and the anarchist dimension
+        to art movements such as Dada and Surrealism."--BOOK JACKET.</dc:relation>
+
+        <dc:relation>FOCI</dc:relation>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Anarchism.</dc:subject>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Anarchism--History.</dc:subject>
+
+        <dc:title>Anarchism </dc:title>
+
+        <dc:type>Text</dc:type>
+
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">030818</oclcterms:recordCreationDate>
+
+        <oclcterms:recordIdentifier>51964957</oclcterms:recordIdentifier>
+
+        </oclcdcs>
+
+        </recordData>
+
+        </record>
+
+        <record>
+
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+
+        <recordPacking>xml</recordPacking>
+
+        <recordData>
+
+        <oclcdcs>
+
+        <dc:creator>Buckley, A. M., 1968-</dc:creator>
+
+        <dc:date>c2011</dc:date>
+
+        <dc:description>Explains anarchism, a society in which the state is considered
+        unnecessary and there is no authority, and provides examples of governments
+        run by this system.</dc:description>
+
+        <dc:description>What is government? -- What is anarchy? -- Early history of
+        anarchism -- The heday part one : anarchism and violence -- The heday part
+        two : anarchism and society -- Poetry, protest, and punks -- Anarchism and
+        revolution -- Anarchist economics -- Anarchism and art -- Forms of anarchism
+        -- Case studies -- An anarchist legacy -- Reality or Utopia -- Quick facts
+        -- Glossary.</dc:description>
+
+        <dc:format>160 p. : ill. (some col.) ; 23 cm.</dc:format>
+
+        <dc:identifier>9781617147883</dc:identifier>
+
+        <dc:identifier>1617147885</dc:identifier>
+
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+
+        <dc:publisher>ABDO Pub</dc:publisher>
+
+        <dc:relation>Exploring world governments</dc:relation>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Anarchism.</dc:subject>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Anarchism--History.</dc:subject>
+
+        <dc:title>Anarchism </dc:title>
+
+        <dc:type>Text</dc:type>
+
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">100930</oclcterms:recordCreationDate>
+
+        <oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">  2010039861</oclcterms:recordIdentifier>
+
+        <oclcterms:recordIdentifier>663953132</oclcterms:recordIdentifier>
+
+        </oclcdcs>
+
+        </recordData>
+
+        </record>
+
+        <record>
+
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+
+        <recordPacking>xml</recordPacking>
+
+        <recordData>
+
+        <oclcdcs>
+
+        <dc:creator>Labadie, Jo, 1850-1933.</dc:creator>
+
+        <dc:date>1932</dc:date>
+
+        <dc:description>Caption title: Anarchism and crime.</dc:description>
+
+        <dc:format>24 p., [1] leaf of plates : ill., port. ; 13 cm.</dc:format>
+
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+
+        <dc:publisher>The Labadie Shop</dc:publisher>
+
+        <dc:relation>Anarchism and crime.</dc:relation>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Anarchism.</dc:subject>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Anarchists.</dc:subject>
+
+        <dc:title>Anarchism </dc:title>
+
+        <dc:type>Text</dc:type>
+
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">811214</oclcterms:recordCreationDate>
+
+        <oclcterms:recordIdentifier>7993029</oclcterms:recordIdentifier>
+
+        </oclcdcs>
+
+        </recordData>
+
+        </record>
+
+        <record>
+
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+
+        <recordPacking>xml</recordPacking>
+
+        <recordData>
+
+        <oclcdcs>
+
+        <dc:creator>Ward, Colin, 1924-</dc:creator>
+
+        <dc:date>2004</dc:date>
+
+        <dc:format>141 p. : ill. ; 18 cm.</dc:format>
+
+        <dc:identifier>0192804774 (pbk.)</dc:identifier>
+
+        <dc:identifier>9780192804778 (pbk.)</dc:identifier>
+
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+
+        <dc:publisher>Oxford University Press</dc:publisher>
+
+        <dc:relation>Very short introduction 116</dc:relation>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Anarchism.</dc:subject>
+
+        <dc:title>Anarchism </dc:title>
+
+        <dc:type>Text</dc:type>
+
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">040525</oclcterms:recordCreationDate>
+
+        <oclcterms:recordIdentifier>56538912</oclcterms:recordIdentifier>
+
+        </oclcdcs>
+
+        </recordData>
+
+        </record>
+
+        <record>
+
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+
+        <recordPacking>xml</recordPacking>
+
+        <recordData>
+
+        <oclcdcs>
+
+        <dc:contributor>Chomsky, Noam.</dc:contributor>
+
+        <dc:contributor>Nelson, Wendy.</dc:contributor>
+
+        <dc:contributor>What''s Left.</dc:contributor>
+
+        <dc:creator>Chomsky, Noam.</dc:creator>
+
+        <dc:date>c1997</dc:date>
+
+        <dc:description>What''s left presents.</dc:description>
+
+        <dc:description>"During this gathering of journalists, Noam Chomsky fields
+        questions about anarchism, authority, and the prohibition of marijuana among
+        other things."--Container.</dc:description>
+
+        <dc:format>1 sound cassette (45 min.) : analog.</dc:format>
+
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+
+        <dc:publisher>What''s Left</dc:publisher>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam--Political
+        and social views.</dc:subject>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Anarchism.</dc:subject>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Authority.</dc:subject>
+
+        <dc:title>Anarchism</dc:title>
+
+        <dc:title>Noam Chomsky speaking on anarchism</dc:title>
+
+        <dc:title>Title on container spine: Noam Chomsky anarchism</dc:title>
+
+        <dc:type>Sound</dc:type>
+
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">010727</oclcterms:recordCreationDate>
+
+        <oclcterms:recordIdentifier>47661938</oclcterms:recordIdentifier>
+
+        </oclcdcs>
+
+        </recordData>
+
+        </record>
+
+        </records>
+
+        <nextRecordPosition>11</nextRecordPosition>
+
+        <resultSetIdleTime/>
+
+        <echoedSearchRetrieveRequest xmlns:srw="http://www.loc.gov/zing/srw/">
+
+        <version>1.1</version>
+
+        <query>srw.kw = "anarchism"</query>
+
+        <maximumRecords>10</maximumRecords>
+
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+
+        <recordPacking>xml</recordPacking>
+
+        <startRecord>1</startRecord>
+
+        <sortKeys>relevance</sortKeys>
+
+        <wskey>DUMMY_API_KEY</wskey>
+
+        </echoedSearchRetrieveRequest>
+
+        </searchRetrieveResponse>
+
+'
+    http_version: 
+  recorded_at: Tue, 18 Sep 2012 20:57:46 GMT
+recorded_with: VCR 2.2.5
