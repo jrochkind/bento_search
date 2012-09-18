@@ -15,9 +15,14 @@ class SearchEngineTest < ActiveSupport::TestCase
       assert_equal "required key", engine.configuration.top.next
     end
     
-
-    
-
+    test "nested configuration with hash" do
+      # possible bug in Confstruct make sure we're working around
+      # if needed. 
+      # https://github.com/mbklein/confstruct/issues/14
+      engine = MockEngine.new("top" => {"one" => "two"})
+      
+      assert_equal "two", engine.configuration.top.one       
+    end
     
     test "nested required config key" do
       requires_class = Class.new(MockEngine) do
@@ -41,7 +46,6 @@ class SearchEngineTest < ActiveSupport::TestCase
       assert_nothing_raised do
         requires_class.new(:required => {:key => "foo"})
       end
-      
     end
      
     test "merges default configuration" do
@@ -97,6 +101,19 @@ class SearchEngineTest < ActiveSupport::TestCase
       assert_present pagination.total_pages
       assert_present pagination.count_records
             
+    end
+    
+    
+    test "carries display configuration over to results" do
+      engine = MockEngine.new(:id => "foo", 
+        :for_display => {:foo => "bar", :nested => {"one" => "two"}}
+      )
+      
+      results = engine.search("foo")
+
+      assert_present  results.display_configuration
+      assert_present  results.display_configuration.foo      
+      assert_present  results.display_configuration.nested.one                  
     end
 
 end

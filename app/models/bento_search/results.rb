@@ -11,6 +11,10 @@ module BentoSearch
     attr_accessor :start
     # per_page setting, can be used for pagination. 
     attr_accessor :per_page
+    
+    # simply copied over from search engine configuration :display key,
+    # useful for making config available at display time in a DRY way. 
+    attr_accessor :display_configuration
 
     # If error is non-nil, it's an error condition with no real results.
     # error should be a hash with these (and possibly other) keys, although
