@@ -62,6 +62,22 @@ module BentoSearch
       assert_response 404
     end
     
+        
+    test "respects public_settable_search_args" do
+      get :search, {:engine_id => "mock", 
+          'query' => "query", 'sort' => "sort", 'per_page' => "15", 
+      'page' => "6", 'search_field' => "title", 'not_allowed' => "not allowed"}
+      
+      
+      search_args = assigns[:engine].last_args
+      
+      [:query, :sort, :per_page, :page, :search_field].each do |allowed_key|
+        assert search_args.has_key?(allowed_key)
+      end
+      assert ! search_args.has_key?(:not_allowed)
+      assert ! search_args.has_key?("not_allowed")
+    end
+    
     test "custom before filter" do
       # Okay, we're going to do a weird thing with a custom controller subclass
       # we can add a custom before filter like a local app might. 

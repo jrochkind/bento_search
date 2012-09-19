@@ -315,7 +315,15 @@ module BentoSearch
     alias_method :parse_search_arguments, :normalized_search_arguments
     
     
-    
+    # Used mainly/only by the AJAX results loading. 
+    # an array WHITELIST of attributes that can be sent as non-verified
+    # request params and used to execute a search. For instance, 'auth' is
+    # NOT on there, you can't trust a web request as to 'auth' status. 
+    # individual engines may over-ride, call super, and add additional
+    # engine-specific attributes. 
+    def public_settable_search_args
+      [:query, :search_field, :semantic_search_field, :sort, :page, :start, :per_page]
+    end
    
     
     protected

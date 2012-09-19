@@ -40,18 +40,18 @@ module BentoSearch
       
     # returns partial HTML results, suitable for
     # AJAX to insert into DOM. 
-    # arguments for engine.search are taken from URI request params.
-    # (TODO: Is this a security issue, do we need to whitelist em? )
-    def search                  
-      engine = BentoSearch.get_engine(params[:engine_id])
+    # arguments for engine.search are taken from URI request params, whitelisted
+    def search           
+      engine  =  BentoSearch.get_engine(params[:engine_id])
+      # put it in an iVar mainly for testing purposes. 
+      @engine = engine
 
       
       unless engine.configuration.allow_routable_results == true
         raise AccessDenied.new("engine needs to be registered with :allow_routable_results => true")
       end
 
-      @results         = engine.search(params.to_hash.symbolize_keys)
-      
+      @results         = engine.search safe_search_args(engine, params)
       # template name of a partial with 'yield' to use to wrap the results
       @partial_wrapper = @results.display_configuration.lookup!("ajax.wrapper_template")
       
@@ -63,6 +63,10 @@ module BentoSearch
 
     
     protected 
+    
+    def safe_search_args(engine, params)
+      params.to_hash.symbolize_keys.slice( *engine.public_settable_search_args )       
+    end
     
     def deny_access(exception)
       render :text => exception.message, :status => 403

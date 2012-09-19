@@ -15,7 +15,12 @@
 class BentoSearch::MockEngine
     include BentoSearch::SearchEngine
     
+    # used for testing what the engine received as args
+    attr_accessor :last_args
+    
     def search_implementation(args)
+      self.last_args = args
+      
       results = BentoSearch::Results.new
       
       if configuration.error
