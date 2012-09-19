@@ -106,7 +106,7 @@ class BentoSearchHelperTest < ActionView::TestCase
     assert_present loading_msg, "bento_search_ajax_loading present"
     assert_match /display\:none/, loading_msg["style"], "loading has CSS style hidden"
         
-    assert loading_msg.find(:tag => "noscript"), "has <noscript> tag"
+    assert div.find(:tag => "noscript"), "has <noscript> tag"
     
     assert (img = loading_msg.find(:tag => "img")), "Has spinner gif"
     assert_equal I18n.translate("bento_search.ajax_loading"), img.attributes["alt"]
