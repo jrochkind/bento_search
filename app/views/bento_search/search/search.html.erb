@@ -1,1 +1,15 @@
-<%= bento_search(@results) %>
+<%# sorry, we'd rather put this logic in the controller, but there's
+    no way to call a template-with-yield (aka partial layout) from controller,
+    grr. Could do it from a helper, but we want to minimize helpers that
+    pollute app's helper space. %>
+<% if @partial_wrapper %>
+  <%=   
+      render :layout => @partial_wrapper, :locals => {:results => @results} do 
+      
+        bento_search(@results)
+  
+      end
+  -%>
+<% else %>
+  <%=   bento_search(@results) %>
+<% end %>

@@ -50,9 +50,14 @@ module BentoSearch
         raise AccessDenied.new("engine needs to be registered with :allow_routable_results => true")
       end
 
-      @results = engine.search(params.to_hash.symbolize_keys)
+      @results         = engine.search(params.to_hash.symbolize_keys)
       
-      render :layout => false # partial HTML results     
+      # template name of a partial with 'yield' to use to wrap the results
+      @partial_wrapper = @results.display_configuration.lookup!("ajax.wrapper_template")
+      
+      # partial HTML results
+      render "bento_search/search/search", :layout => false 
+
     end
     
 

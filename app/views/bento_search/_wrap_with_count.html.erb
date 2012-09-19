@@ -1,0 +1,20 @@
+<%# An EXAMPLE of a partial layout you can use to wrap BentoSearch::Results,
+    for instance with ajax loading. Provided as an example, and for our
+    automated tests, you probably don't want to use this, but can use it
+    as a skeleton for your own. 
+    
+    With ajax feature, a BentoSearch::Results object will be passed in
+    to wrapper_layout under 'results' local. 
+-%>
+
+
+    <div class="my_bento_header">
+      Total Results: <%= results.total_items %>
+    </div>
+  
+    <div class="my_bento_list">
+      <%= yield %>
+    </div>
+
+
+

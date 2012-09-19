@@ -13,6 +13,17 @@ module BentoSearch
         # no allow_routable_results
       end
       
+      BentoSearch.register_engine("with_layout_config") do |config|
+        config.engine = "MockEngine"
+        
+        config.allow_routable_results = true
+        
+        config.for_display do |display|
+          display.ajax do |ajax|
+            ajax.wrapper_template = "bento_search/wrap_with_count"
+          end
+        end
+      end
     end
     
     def teardown     
@@ -25,6 +36,17 @@ module BentoSearch
       assert_response :success
       assert_not_nil assigns(:results)
       
+      assert_template "bento_search/search"
+    end
+    
+    test "custom layout config" do
+      get :search, {:engine_id => "with_layout_config", :query => "my search"}
+      
+      assert_response :success
+      
+      assert_not_nil assigns(:partial_wrapper)
+      
+      assert_template "bento_search/_wrap_with_count"
       assert_template "bento_search/search"
     end
     
@@ -74,6 +96,7 @@ module BentoSearch
       
     end
     
+
     
         
     
