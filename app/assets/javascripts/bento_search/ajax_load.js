@@ -2,7 +2,8 @@ var BentoSearch = BentoSearch || {}
 
 // Pass in a DOM node that has a data-ajax-url attribute. 
 // Will AJAX load bento search results inside that node.
-BentoSearch.ajax_load = function(node) {
+// optional second arg success callback function. 
+BentoSearch.ajax_load = function(node, success_callback) {
   div = $(node);
   
   if (div.length == 0) {
@@ -21,8 +22,11 @@ BentoSearch.ajax_load = function(node) {
   // Now load the actual external content from html5 data-bento-ajax-url
   $.ajax({
       url: div.data("bentoAjaxUrl"), 
-      success: function(response, status, xhr) {
-        div.replaceWith(response);   
+      success: function(response, status, xhr) {        
+        if (success_callback) {
+           success_callback.apply(div, response);
+        }
+        div.replaceWith(response);          
       },
       error: function(xhr, status, errorThrown) {
         var msg = "Sorry but there was an error: ";
