@@ -2,12 +2,14 @@ require 'test_helper'
 
 class PrimoEngineTest < ActiveSupport::TestCase
   extend TestWithCassette
-  
-  @@host_port   = (ENV['PRIMO_HOST_PORT'] || 'EXAMPLE.ORG:80' )
+ 
+  # dummy host needs to be in all lowercase, and not explicitly
+  # say '80' to work right with VCR 
+  @@host_port   = (ENV['PRIMO_HOST_PORT'] || 'example.org' )
   @@institution = (ENV['PRIMO_INSTITUTION'] || 'DUMMY_INSTITUTION')
   
   VCR.configure do |c|
-    c.filter_sensitive_data("EXAMPLE.ORG:80", :primo) { @@host_port }
+    c.filter_sensitive_data("example.org", :primo) { @@host_port }
     c.filter_sensitive_data("DUMMY_INSTITUTION", :primo) { @@institution }
   end
   

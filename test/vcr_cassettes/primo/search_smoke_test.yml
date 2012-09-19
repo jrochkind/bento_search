@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://EXAMPLE.ORG:80/PrimoWebServices/xservice/search/brief?bulkSize=10&highlight=true&institution=DUMMY_INSTITUTION&lang=eng&loc=adaptor,primo_central_multiple_fe&onCampus=false&query=any,contains,globalization%20from%20below
+    uri: http://example.org/PrimoWebServices/xservice/search/brief?bulkSize=10&highlight=true&institution=DUMMY_INSTITUTION&lang=eng&loc=adaptor,primo_central_multiple_fe&onCampus=false&query=any,contains,globalization%20from%20below
     body:
       encoding: US-ASCII
       string: ''
