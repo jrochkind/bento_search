@@ -352,27 +352,6 @@ module BentoSearch
     
     module ClassMethods
       
-      # If support fielded search, over-ride to specify fields
-      # supported. Returns a hash, key is engine-specific internal
-      # search field, value is nil or a hash of metadata about
-      # the search field, including semantic mapping. 
-      #
-      # def search_field_definitions
-      #  { "intitle" => {:semantic => :title}}
-      # end
-      def search_field_definitions
-        {}
-      end
-      
-            
-      # Returns list of string internal search_field's that can
-      # be supplied to search(:search_field => x)
-      def search_keys        
-        return search_field_definitions.keys
-      end
-      
-      
-      
       # Over-ride returning a hash or Confstruct with 
       # any configuration values you want by default. 
       # actual user-specified config values will be deep-merged
