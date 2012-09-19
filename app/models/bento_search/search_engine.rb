@@ -145,6 +145,7 @@ module BentoSearch
       
       # global defaults?
       self.configuration[:item_decorators] ||= []
+      self.configuration[:for_display] ||= {}
             
       # check for required keys -- have to be present, and not nil
       if self.class.required_configuration

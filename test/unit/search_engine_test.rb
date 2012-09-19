@@ -103,6 +103,12 @@ class SearchEngineTest < ActiveSupport::TestCase
             
     end
     
+    test "has empty :for_display config" do
+      engine = MockEngine.new
+      
+      assert_present engine.configuration.for_display
+    end
+    
     
     test "carries display configuration over to results" do
       engine = MockEngine.new(:id => "foo", 
