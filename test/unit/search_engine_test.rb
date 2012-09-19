@@ -106,7 +106,7 @@ class SearchEngineTest < ActiveSupport::TestCase
     test "has empty :for_display config" do
       engine = MockEngine.new
       
-      assert_present engine.configuration.for_display
+      assert_not_nil engine.configuration.for_display
     end
     
     
