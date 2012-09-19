@@ -49,17 +49,17 @@ module BentoSearchHelper
       
       # An initially hidden div with loading msg/spinner that will be shown
       # by js on ajax load
+      content_tag("noscript") do
+        I18n.t("bento_search.ajax_noscript")
+      end +
       content_tag(:div, 
         :class => "bento_search_ajax_loading", 
         :style => "display:none") do
       
           image_tag("bento_search/large_loader.gif", 
             :alt => I18n.translate("bento_search.ajax_loading"),            
-          ) +
-          content_tag("noscript") do
-            "Can not load results without javascript"
-          end
-          
+          ) 
+
         end
       end
     else

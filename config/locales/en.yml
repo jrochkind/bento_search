@@ -1,6 +1,7 @@
 en:
   bento_search:
     ajax_loading: "Loading..."
+    ajax_noscript: "Can not load results without javascript."
     no_results: "No results found."
     search_error: "Sorry! An error occured and results could not be retrieved."
     missing_title: "[Title Missing]"
