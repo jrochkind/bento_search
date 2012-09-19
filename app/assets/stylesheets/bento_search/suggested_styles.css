@@ -20,3 +20,12 @@
   margin: 2em;
 }
 
+/* we put title in an h4, but if it's a link too, it
+   doesn't really need to be bold, link style is already
+   visible enough. */ 
+.bento_item_title a {
+  font-weight: normal;
+}
+.bento_item_title a .bento_search_highlight {
+    font-style: inherit;
+}
