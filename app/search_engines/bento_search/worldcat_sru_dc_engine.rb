@@ -12,6 +12,13 @@ require 'httpclient'
 # link is set to worldcat.org link. Change config link_base_url to, say,
 # link to a worldcat local instance. 
 #
+# == Limitations
+# Worldcat SRU APU provides _very little_ usable data on format/type. We provide
+# some limited heuristics to try and clean up what IS there, but user-displayable
+# format_str may be weird sometimes (and is frequently 'Text'), and machine
+# readable semantic #format is often defaulted to "Book", which may not
+# always be right. 
+#
 # == API Docs
 # * http://oclc.org/developer/documentation/worldcat-search-api/using-api
 # * http://oclc.org/developer/documentation/worldcat-search-api/sru
@@ -81,7 +88,8 @@ class BentoSearch::WorldcatSruDcEngine
       end
       
       # weird garbled from MARC format, best we have
-      item.format_str   = first_text_if_present(record, "format") || first_text_if_present(record, "type")
+      (item.format, item.format_str) = format_heuristics(record)
+      
       
       item.publisher    = first_text_if_present record, "publisher"
       
@@ -147,9 +155,66 @@ class BentoSearch::WorldcatSruDcEngine
     return url
   end
   
+  # input is a nokogiri node for a recordData/oclcdcs representing a hit. (with
+  # namespaces stripped). 
+  # 
+  # output is [format, format_str], based on rough guess heuristics of what
+  # we can do, OCLC does not provide particularly useful data here for either
+  # user display passthrough OR semantics, this is inherently flawed but better
+  # than nothing. 
+  def format_heuristics(record_xml)
+    # default semantic format to "Book", it'll sometimes be wrong,
+    # but right more often than it's wrong when we lack sufficient
+    # info to know otherwise. 
+    format = "Book"
+    # user display string, default to none, unless we come up with something. 
+    format_str = nil         
+    
+    if xpath_contains(record_xml, "./subject", "--Periodicals")
+      # if a subject includes "--Periodicals", we're going to guess it's
+      # a serial/journal.
+      format = :serial
+      format_str = "Journal or Serial"
+    elsif record_xml.xpath("./type[text()='Image']").length > 0
+      # "Image" can mean video OR actual images, only thing we
+      # can do really for user-presentable format is use the terrible "./format",
+      # which will often tell the user more (along with a bunch of weird stuff). 
+      format_str = first_text_if_present(record_xml, "./format")
+    elsif record_xml.xpath("./type[text()='Sound']").length > 0
+      # No great thing to display to user to say what this really is,
+      # but at least we know it's Sound. 
+      format_str = first_text_if_present(record_xml, "./format") || "Sound"
+      format = "AudioObject"
+    elsif  record_xml.xpath("./description").find {|node| node.text =~ /^Thesis \([^)]+\)--/}
+      # yeah, to tag it as a dissertation we've got to heursitically regex
+      # a description value for looking like a thesis label. 
+      format = :dissertation
+      format_str = "Dissertation/Thesis"      
+    elsif (type = first_text_if_present(record_xml, "./type"))
+      # defaults, 
+      # If we have a type, titleize it to change things like MovingImage to
+      # 'Moving Image'. 
+      format_str = type.titleize
+    else 
+      # if we don't even have a 'type', use the 'format' if it's there, 
+      # even though it's gonna be weird. 
+      format_str = first_text_if_present(record, "format")      
+    end        
+    
+    return [format, format_str]
+    
+  end
+  
   def first_text_if_present(node, xpath)
     node.at_xpath(xpath).try {|n| n.text}
   end
+  
+  # if `node` has an `xpath` whose text() contains `text`.  
+  # uses some tricky xpath, may not work with unsuual xpath passed in
+  def xpath_contains(node, xpath, text)
+    node.xpath(xpath).xpath("./text()[contains(.,'#{text}')]").length > 0
+  end
+    
   
   # construct valid CQL for the API's "query" param, from search
   # args. Tricky because we need to split terms/phrases ourselves
