@@ -38,7 +38,7 @@ require 'httpclient'
 #
 # == Extra search args
 #
-# [auth]           default false. Set to true to assume all users are authenticated
+# [auth]           default false. Set to true to specify current user is authenticated
 #                  and servicelevel=full for OCLC. Overrides config 'auth' value.  
 #
 class BentoSearch::WorldcatSruDcEngine
