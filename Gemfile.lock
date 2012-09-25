@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bento_search (0.5.0)
+    bento_search (0.6.0)
       confstruct (>= 0.2.3, < 1.0)
       httpclient (~> 2.2.5)
       language_list
