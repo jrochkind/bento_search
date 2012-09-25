@@ -5,7 +5,7 @@ PATH
       confstruct (>= 0.2.3, < 1.0)
       httpclient (~> 2.2.5)
       language_list
-      multi_json (~> 1.3)
+      multi_json (>= 1.0.4, < 2.0)
       nokogiri
       openurl (>= 0.3.1, < 1.1)
       rails (~> 3.2.3)
