@@ -4,7 +4,7 @@ var BentoSearch = BentoSearch || {}
 // Will AJAX load bento search results inside that node.
 // optional second arg success callback function. 
 BentoSearch.ajax_load = function(node, success_callback) {
-  div = $(node);
+  var div = $(node);
   
   if (div.length == 0) {
     //we've got nothing
