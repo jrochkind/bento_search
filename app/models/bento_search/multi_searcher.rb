@@ -2,7 +2,8 @@ require 'celluloid'
 
 # Based on Celluloid, concurrently runs multiple searches in
 # seperate threads. You must include 'celluloid' gem dependency
-# into your local app to use this class. 
+# into your local app to use this class. Requires celluloid 0.12.0
+# or above (for new preferred async syntax). 
 #
 # I am not an expert at use of Celluloid, it's possible there's a better
 # way to do this all, but seems to work. 
@@ -50,7 +51,7 @@ class BentoSearch::MultiSearcher
     @engines.each do |engine|
       a = Actor.new(engine)
       @actors << a
-      a.start! *search_args
+      a.async.start *search_args
     end    
     return self
   end
@@ -88,7 +89,7 @@ class BentoSearch::MultiSearcher
       self.engine = a_engine
     end
     
-    # call as start! with bang, to invoke async. 
+    # call as .async.start, to invoke async. 
     def start(*search_args)
       begin
         @results = self.engine.search(*search_args)
