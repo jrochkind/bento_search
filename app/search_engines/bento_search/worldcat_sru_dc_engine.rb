@@ -157,7 +157,7 @@ class BentoSearch::WorldcatSruDcEngine
     # pagination, WorldCat 'start' is 1-based, ours is 0-based. Catch max.    
     if args[:start] && args[:start] > (MaxStartRecord-1)
       args[:start]  = MaxStartRecord - 1
-      args.delete(:page)
+      args[:page] = (args[:start] / (args[:per_page] || 10)) + 1
     end
     url += "&startRecord=#{args[:start] + 1}" if args[:start]
     
