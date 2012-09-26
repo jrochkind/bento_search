@@ -13,7 +13,7 @@ require 'celluloid'
 #     searcher = BentoBox::MultiSearcher.new(:gbs, :scopus)
 #
 # start the concurrent searches, params same as engine.search
-#     searcher.start( query_params )
+#     searcher.search( query_params )
 #
 # retrieve results, blocking until each is completed:
 #     searcher.results
@@ -25,7 +25,7 @@ require 'celluloid'
 # 
 # important to call results at some point after calling start, in order
 # to make sure Celluloid::Actors are properly terminated to avoid
-# resource leakage. 
+# resource leakage. May want to do it in an ensure block. 
 #
 # TODO: have a method that returns Futures instead of only supplying the blocking
 # results method? Several tricks, including making sure to properly terminate actors. 
@@ -46,7 +46,7 @@ class BentoSearch::MultiSearcher
   end
   
   # Starts all searches, returns self so you can chain method calls if you like. 
-  def start(*search_args)
+  def search(*search_args)
     @engines.each do |engine|
       a = Actor.new(engine)
       @actors << a
@@ -54,6 +54,7 @@ class BentoSearch::MultiSearcher
     end    
     return self
   end
+  alias_method :start, :search # backwards compat
   
   # Call after #start. Blocks until each included engine is finished
   # then returns a Hash keyed by engine registered id, value is a

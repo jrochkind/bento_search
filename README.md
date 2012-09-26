@@ -172,8 +172,8 @@ to help you do this easily. Say, in a controller:
     # constructor takes id's registered with BentoSearch.register_engine
     searcher = BentoSearch::MultiSearcher.new(:gbs, :scopus, :summon)
     
-    # Call 'start' with any parameters you would give to an_engine.search
-    searcher.start("my query", :semantic_search_field => :author, :sort => "title")
+    # Call 'search' with any parameters you would give to an_engine.search
+    searcher.search("my query", :semantic_search_field => :author, :sort => "title")
     
     # At this point, all searches are executing asynchronously in seperate threads.
     # To get the results, blocking until all complete:
