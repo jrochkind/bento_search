@@ -51,22 +51,35 @@ class BentoSearch::WorldcatSruDcEngine
     url = construct_query_url(args)
 
     results = BentoSearch::Results.new
-    
+
     response = http_client.get(url)
     
+    # check for http errors
     if response.status != 200
-      response.error ||= {}
-      response.error[:status] = response.status
-      response.error[:info] = response.body
-      response.error[:url] = url
+      results.error ||= {}
+      results.error[:status] = response.status
+      results.error[:info] = response.body
+      results.error[:url] = url
+      
+      return results    
     end
     
     xml = Nokogiri::XML(response.body)
     # namespaces only get in the way
     xml.remove_namespaces!
     
+    
     results.total_items = xml.at_xpath("//numberOfRecords").try {|n| n.text.to_i }
     
+    
+    # check for SRU fatal errors, no results AND a diagnostic message
+    # is a fatal error always, I think. 
+    if (results.total_items == 0 && 
+        error_xml = xml.at_xpath("./searchRetrieveResponse/diagnostics/diagnostic"))
+    
+      results.error ||= {}
+      results.error[:info] = error_xml.children.to_xml
+    end    
     
     (xml.xpath("/searchRetrieveResponse/records/record/recordData/oclcdcs") || []).each do |record|
       item = BentoSearch::ResultItem.new

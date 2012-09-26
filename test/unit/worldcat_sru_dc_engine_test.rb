@@ -117,4 +117,12 @@ class WorldcatSruDcEngineTest < ActiveSupport::TestCase
     assert_present first.language_code      
   end
   
+  test_with_cassette("catch sru error", :worldcat_sru_dc) do
+    # worldcat doesn't allow paging past 9999th record
+    results = @engine.search("cancer", :start => 10000)
+    
+    assert results.failed?
+    assert_present results.error[:info]    
+  end
+  
 end

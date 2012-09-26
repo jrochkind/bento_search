@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.worldcat.org/webservices/catalog/search/sru?maximumRecords=10&query=srw.kw%20=%20%22cancer%22&recordSchema=info:srw/schema/1/dc&startRecord=10001&wskey=DUMMY_API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "RGF0ZQ==":
+      - !binary |-
+        V2VkLCAyNiBTZXAgMjAxMiAyMTowNTo0MCBHTVQ=
+      !binary "U2VydmVy":
+      - !binary |-
+        QXBhY2hl
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        ODE3
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        dGV4dC94bWw7Y2hhcnNldD11dGYtOA==
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" ?><?xml-stylesheet type=\"text/xsl\" href=\"/webservices/catalog/xsl/searchRetrieveResponse.xsl\"?><searchRetrieveResponse
+        xmlns=\"http://www.loc.gov/zing/srw/\">\n<version>1.1</version>\n<numberOfRecords>0</numberOfRecords>\n<diagnostics><diagnostic
+        xmlns=\"http://www.loc.gov/zing/srw/diagnostic/\">\n  <uri>info:srw/diagnostic/1/61</uri>\n
+        \ <details>10001</details>\n  <message>First record position out of 10000
+        records range</message>\n  </diagnostic>\n</diagnostics>\n<echoedSearchRetrieveRequest>\n<maximumRecords>10</maximumRecords><query>srw.kw
+        = &quot;cancer&quot;</query><recordSchema>info:srw/schema/1/dc</recordSchema><startRecord>10001</startRecord><wskey>DUMMY_API_KEY</wskey></echoedSearchRetrieveRequest>\n</searchRetrieveResponse>\n"
+    http_version: 
+  recorded_at: Wed, 26 Sep 2012 21:05:40 GMT
+recorded_with: VCR 2.2.5
