@@ -94,6 +94,15 @@ class WorldcatSruDcEngineTest < ActiveSupport::TestCase
     end        
   end
   
+  test_with_cassette("max_out_pagination") do
+    #worldcat maxes out at start 9999, we silently correct
+    results = @engine.search("cancer", :start => 100000)
+    
+    assert         ! results.failed?
+    assert_present results
+    assert_equal   9999, results.pagination.start_record
+  end
+  
   test_with_cassette("smoke test", :worldcat_sru_dc) do
     results = @engine.search("anarchism")
     
@@ -117,12 +126,5 @@ class WorldcatSruDcEngineTest < ActiveSupport::TestCase
     assert_present first.language_code      
   end
   
-  test_with_cassette("catch sru error", :worldcat_sru_dc) do
-    # worldcat doesn't allow paging past 9999th record
-    results = @engine.search("cancer", :start => 10000)
-    
-    assert results.failed?
-    assert_present results.error[:info]    
-  end
   
 end

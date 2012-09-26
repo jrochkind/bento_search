@@ -1,0 +1,155 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.worldcat.org/webservices/catalog/search/sru?maximumRecords=10&query=srw.kw%20=%20%22cancer%22&recordSchema=info:srw/schema/1/dc&startRecord=9999&wskey=x6LycLe0om93dk2sMdK8h5kb1n1nuqyD1gSszhb50QfCbPKdSyNlhAjWsgflf1NMgnZzaIOsucb2vXli
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "RGF0ZQ==":
+      - !binary |-
+        V2VkLCAyNiBTZXAgMjAxMiAyMToxOTo0MyBHTVQ=
+      !binary "U2VydmVy":
+      - !binary |-
+        QXBhY2hl
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        Mjc0Ng==
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        dGV4dC94bWw7Y2hhcnNldD11dGYtOA==
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+        <?xml-stylesheet type="text/xsl" href="/webservices/catalog/xsl/searchRetrieveResponse.xsl"?>
+
+
+        <searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/" xmlns:oclcterms="http://purl.org/oclc/terms/"
+        xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+        <version>1.1</version>
+
+        <numberOfRecords>410602</numberOfRecords>
+
+        <records>
+
+        <record>
+
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+
+        <recordPacking>xml</recordPacking>
+
+        <recordData>
+
+        <oclcdcs>
+
+        <dc:date>1976</dc:date>
+
+        <dc:identifier>0340-7004</dc:identifier>
+
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+
+        <dc:publisher>Springer Verlag</dc:publisher>
+
+        <dc:title>Cancer immunology and immunotherapy.</dc:title>
+
+        <dc:type>Text</dc:type>
+
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">010507</oclcterms:recordCreationDate>
+
+        <oclcterms:recordIdentifier>301186271</oclcterms:recordIdentifier>
+
+        </oclcdcs>
+
+        </recordData>
+
+        </record>
+
+        <record>
+
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+
+        <recordPacking>xml</recordPacking>
+
+        <recordData>
+
+        <oclcdcs>
+
+        <dc:creator>Timms, Carol.</dc:creator>
+
+        <dc:date>c2007</dc:date>
+
+        <dc:format>213 p. : ill. ; 18 cm.</dc:format>
+
+        <dc:identifier>9780615234540 (spiral)</dc:identifier>
+
+        <dc:identifier>0615234542 (spiral)</dc:identifier>
+
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+
+        <dc:publisher>s.n.]</dc:publisher>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Breast--Cancer--Anecdotes.</dc:subject>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Cancer--Treatment.</dc:subject>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Breast--Cancer.</dc:subject>
+
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Breast--Cancer--Patients--United
+        States--Biography.</dc:subject>
+
+        <dc:title>Adventures in breast cancer </dc:title>
+
+        <dc:type>Text</dc:type>
+
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">090219</oclcterms:recordCreationDate>
+
+        <oclcterms:recordIdentifier>309925865</oclcterms:recordIdentifier>
+
+        </oclcdcs>
+
+        </recordData>
+
+        </record>
+
+        </records>
+
+        <nextRecordPosition>10001</nextRecordPosition>
+
+        <resultSetIdleTime/>
+
+        <echoedSearchRetrieveRequest xmlns:srw="http://www.loc.gov/zing/srw/">
+
+        <version>1.1</version>
+
+        <query>srw.kw = "cancer"</query>
+
+        <maximumRecords>2</maximumRecords>
+
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+
+        <recordPacking>xml</recordPacking>
+
+        <startRecord>9999</startRecord>
+
+        <sortKeys>relevance</sortKeys>
+
+        <wskey>x6LycLe0om93dk2sMdK8h5kb1n1nuqyD1gSszhb50QfCbPKdSyNlhAjWsgflf1NMgnZzaIOsucb2vXli</wskey>
+
+        </echoedSearchRetrieveRequest>
+
+        </searchRetrieveResponse>
+
+'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2012 21:19:49 GMT
+recorded_with: VCR 2.2.5

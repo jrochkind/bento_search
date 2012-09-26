@@ -19,6 +19,9 @@ require 'httpclient'
 # readable semantic #format is often defaulted to "Book", which may not
 # always be right. 
 #
+# WorldCat doesn't let you paginate past start_record 9999. If client asks,
+# this engine will silenly reset to 9999. 
+#
 # == API Docs
 # * http://oclc.org/developer/documentation/worldcat-search-api/using-api
 # * http://oclc.org/developer/documentation/worldcat-search-api/sru
@@ -46,6 +49,8 @@ class BentoSearch::WorldcatSruDcEngine
   
   extend HTTPClientPatch::IncludeClient
   include_http_client
+  
+  MaxStartRecord = 9999 # at least as of Sep 2012, worldcat errors if you ask for pagination beyond this
   
   def search_implementation(args)
     url = construct_query_url(args)
@@ -138,13 +143,22 @@ class BentoSearch::WorldcatSruDcEngine
     return results
   end
   
+  # Note, if pagination start record is beyond what we think is worldcat's
+  # max, it will silently reset to max, and mutate the args passed in
+  # so pagination appears to be at max too!
   def construct_query_url(args)
     url = configuration.base_url
     url += "&wskey=#{CGI.escape configuration.api_key}"
     url += "&recordSchema=#{CGI.escape 'info:srw/schema/1/dc'}"
     
-    # pagination, WorldCat 'start' is 1-based, ours is 0-based. 
+     
     url += "&maximumRecords=#{args[:per_page]}" if args[:per_page]
+    
+    # pagination, WorldCat 'start' is 1-based, ours is 0-based. Catch max.    
+    if args[:start] && args[:start] > (MaxStartRecord-1)
+      args[:start]  = MaxStartRecord - 1
+      args.delete(:page)
+    end
     url += "&startRecord=#{args[:start] + 1}" if args[:start]
     
     url += "&query=#{CGI.escape construct_cql_query(args)}"
