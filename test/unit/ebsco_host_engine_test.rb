@@ -67,9 +67,9 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
   end
   
   def test_prepare_query
-    query = @engine.ebsco_query_prepare('one :. ; two "three four" AND NOT OR five')
+    query = @engine.ebsco_query_prepare('one :. ; two "three four" and NOT OR five')
     
-    assert_equal 'one AND two AND "three four" AND five', query
+    assert_equal 'one AND two AND "three four" AND "and" AND "NOT" AND "OR" AND five', query
   end
   
   def test_removes_paren_literals

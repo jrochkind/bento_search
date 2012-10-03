@@ -207,7 +207,19 @@ class BentoSearch::EbscoHostEngine
     
     # undocumented but question mark seems to cause a problem for ebsco,
     # even inside quoted phrases, not sure why. 
-    txt.gsub(/[)(\?]/, ' ')
+    txt = txt.gsub(/[)(\?]/, ' ')
+    
+    # 'and' and 'or' need to be in phrase quotes to avoid being
+    # interpreted as boolean. For instance, when people just
+    # paste in a title: << A strategy for decreasing anxiety of ICU transfer patients and their families >>
+    # You'd think 'and' as boolean would still work there, but it resulted
+    # in zero hits unless quoted, I dunno. lowercase and uppercase and/or/not
+    # both cause observed weirdness. 
+    if ['and', 'or', 'not'].include?( txt.downcase )
+      txt = %Q{"#{txt}"}
+    end    
+    
+    return txt
   end
   
   # Actually turn the user's query into an EBSCO "AND" boolean query,
@@ -223,14 +235,12 @@ class BentoSearch::EbscoHostEngine
       ebsco_query_escape(t)      
     end
     
-    # Remove boolean operators if they are bare not in a phrase, they'll
-    # make things weird. In phrase quotes they are okay. 
+
     # Remove empty strings. Remove terms that are solely punctuation
     # without any letters. 
     terms.delete_if do |term|
       ( 
         term.blank? || 
-        ["AND", "OR", "NOT"].include?(term) ||
         term =~ /\A[^[[:alnum:]]]+\Z/
       )
     end
