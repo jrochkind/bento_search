@@ -11,9 +11,9 @@ displaying results for external search engines, in Ruby on Rails. Requires
 Rails3 and tested only under ruby 1.9.3. 
 
 * It is focused on use cases for academic libraries, but may be useful in generic
-cases too. Initially, engine adapters are planned to be provided for: 
+cases too. Initially, engine adapters are provided for: 
 Google Books, Scopus, SerialSolutions Summon, Ex Libris Primo, 
-EBSCO Discovery Service, EBSCO traditional 'EIT' api, Google Site Search.  Most
+EBSCO Discovery Service, EBSCO traditional 'EIT' api, Google Site Search, WorldCat Search.   Most
 of these search engines require a vendor license to use. 
 
 * bento_search could be considered building blocks for a type of 'federated
