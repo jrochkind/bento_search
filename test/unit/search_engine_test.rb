@@ -117,6 +117,11 @@ class SearchEngineTest < ActiveSupport::TestCase
       assert_present results.search_args
       assert_equal "test", results.engine_id
       
+      pagination = nil
+      assert_nothing_raised {  pagination = results.pagination  }
+      
+      assert_present pagination
+      assert_equal 0, pagination.count_records
       
     end
     
