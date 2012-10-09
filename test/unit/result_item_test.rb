@@ -34,10 +34,12 @@ class ResultItemTest < ActiveSupport::TestCase
     r = ResultItem.new(:title => "original")
     
     assert_present r.to_openurl
+    assert_present r.to_openurl_kev
     
     r.openurl_disabled = true
     
     assert_nil r.to_openurl    
+    assert_nil r.to_openurl_kev
   end
   
   def test_language
