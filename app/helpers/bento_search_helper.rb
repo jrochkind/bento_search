@@ -25,6 +25,7 @@ module BentoSearchHelper
   #     bento_results("google_books", :query => "cancer", :load => :ajax_auto)
   #  
   def bento_search(search_arg, options = {})
+    
     results = search_arg if search_arg.kind_of? BentoSearch::Results
     
     load_mode = options.delete(:load) 
@@ -35,6 +36,7 @@ module BentoSearchHelper
       engine = (if search_arg.kind_of? BentoSearch::SearchEngine
         search_arg
       else
+        raise ArgumentError.new("Need Results, engine, or registered engine_id as first argument to #bento_search") unless search_arg
         BentoSearch.get_engine(search_arg.to_s)
       end)
       
