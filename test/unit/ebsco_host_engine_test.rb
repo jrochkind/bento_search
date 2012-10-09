@@ -145,5 +145,25 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     assert_present results.error[:error_info]        
     
   end
+  
+  test_with_cassette("fulltext info", :ebscohost) do
+    # We count on SOME records from first 10 for this query having fulltext,
+    # if you need to re-record VCR cassette and this query doesn't work
+    # for that anymore, then pick a different query. 
+    results = @engine.search("cancer")
+    
+    results_with_fulltext = results.find_all {|r| r.custom_data["fulltext_formats"] }
+    
+    assert_present results_with_fulltext
+    
+    results_with_fulltext.each do |record|
+      array = record.custom_data["fulltext_formats"]
+      # it's an array
+      assert_kind_of Array, array
+      # who's only legal values are P, T, and C, the EBSCO vocab for formats. 
+      assert_equal array.length, array.find_all {|v| %w{P C T}.include?(v)}.length
+    end    
+    
+  end
     
 end

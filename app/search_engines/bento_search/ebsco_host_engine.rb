@@ -10,7 +10,23 @@ require 'httpclient'
 #
 # * profile_id
 # * profile_password
-# * databases: ARRAY of ebsco shortcodes of what databases to include in search. If you specify one you don't have access to, you get an error message from ebsco, alas. 
+# * databases: ARRAY of ebsco shortcodes of what databases to include in search. If you specify one you don't have access to, you get an error message from ebsco, alas.
+#
+# == Custom response data
+# 
+# Iff EBSCO API reports that fulltext is available for the hit, then 
+# result.custom_data["result_formats"] will be non-nil, and will be an array of
+# one or more of EBSCO's internal codes (P=PDF, T=HTML, C=HTML+Images). If
+# no fulltext is avail according to EBSCO API, result.custom_data["result_formats"]
+# will be nil. 
+#
+# You can use this to, for instance, hyperlink the displayed title directly
+# to record on EBSCO if and only if there's fulltext. 
+#
+# == Limitations
+# We do set language of ResultItems based on what ebsco tells us, but ebsoc
+# seems to tell us 'english' for everything (maybe cause abstract is in
+# English?). Config variable to tell us to ignore language?
 #
 # == Note on including databases
 #
@@ -63,11 +79,7 @@ require 'httpclient'
 #
 #  EBSCO searchable support portal has a section for the EIT api we use here:
 #     http://support.epnet.com/knowledge_base/search.php?keyword=&interface_id=1082&document_type=&page_function=search
-#
-# == Limitations
-# We do set language of ResultItems based on what ebsco tells us, but ebsoc
-# seems to tell us 'english' for everything (maybe cause abstract is in
-# English?). Config variable to tell us to ignore language?
+
 class BentoSearch::EbscoHostEngine
   include BentoSearch::SearchEngine
   
@@ -86,8 +98,6 @@ class BentoSearch::EbscoHostEngine
   def search_implementation(args)
     url = query_url(args)
     
-    require 'debugger'
-    debugger
     
     results = BentoSearch::Results.new
     xml, response, exception = nil, nil, nil
@@ -131,6 +141,19 @@ class BentoSearch::EbscoHostEngine
     
     return results
     
+  end
+  
+  # pass in nokogiri record xml for the records/rec node. 
+  # Returns nil if NO fulltext is avail on ebsco platform, 
+  # non-nil if fulltext is available. Non-nil value will
+  # actually be a non-empty ARRAY of internal EBSCO codes, P=PDF, T=HTML, C=HTML with images. 
+  # http://support.epnet.com/knowledge_base/detail.php?topic=996&id=3778&page=1
+  def fulltext_formats(record_xml)
+    fulltext_formats = record_xml.xpath("./header/controlInfo/artinfo/formats/fmt/@type").collect {|n| n.text }
+    
+    return nil if fulltext_formats.empty?
+    
+    return fulltext_formats    
   end
   
   
@@ -333,12 +356,15 @@ class BentoSearch::EbscoHostEngine
     end
    
     
-    item.format         = sniff_format info
-    item.format_str     = sniff_format_str info
+    item.format          = sniff_format info
+    item.format_str      = sniff_format_str info
     
     # Totally unreliable, seems to report english for everything? Maybe
     # because abstracts are in english? Nevertheless we include for now.
     item.language_code   = text_if_present info.at_xpath("./language/@code")
+    
+    # array of custom ebsco codes (or nil) for fulltext formats avail. 
+    item.custom_data["fulltext_formats"] = fulltext_formats xml_rec
     
     
     return item
