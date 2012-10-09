@@ -61,6 +61,9 @@ require 'httpclient'
 #  Hard to find docs page on embedding EBSCO limiters (like peer reviewed only "RV Y") in search query: 
 #     http://support.epnet.com/knowledge_base/detail.php?id=5397
 #
+#  EBSCO searchable support portal has a section for the EIT api we use here:
+#     http://support.epnet.com/knowledge_base/search.php?keyword=&interface_id=1082&document_type=&page_function=search
+#
 # == Limitations
 # We do set language of ResultItems based on what ebsco tells us, but ebsoc
 # seems to tell us 'english' for everything (maybe cause abstract is in
@@ -82,6 +85,9 @@ class BentoSearch::EbscoHostEngine
   
   def search_implementation(args)
     url = query_url(args)
+    
+    require 'debugger'
+    debugger
     
     results = BentoSearch::Results.new
     xml, response, exception = nil, nil, nil
