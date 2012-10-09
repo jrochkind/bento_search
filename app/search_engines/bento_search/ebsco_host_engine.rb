@@ -100,6 +100,7 @@ class BentoSearch::EbscoHostEngine
          (fault = xml.at_xpath("./Fault")))
     
          results.error ||= {}
+         results.error[:api_url] = url
          results.error[:exception] = exception if exception
          results.error[:status] = response.status if response
          
