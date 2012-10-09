@@ -21,7 +21,9 @@ require 'httpclient'
 # will be nil. 
 #
 # You can use this to, for instance, hyperlink the displayed title directly
-# to record on EBSCO if and only if there's fulltext. 
+# to record on EBSCO if and only if there's fulltext.  See 
+# app/item_decorators/bento_search/ebscohost/conditional_openurl_main_link for an example. 
+# 
 #
 # == Limitations
 # We do set language of ResultItems based on what ebsco tells us, but ebsoc
