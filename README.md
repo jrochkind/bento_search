@@ -189,8 +189,10 @@ in the main thread (like search a local store of some kind outside of
 bento_search)
 
 You will need to add the 'celluloid' gem to your app to use this feature, 
-BentoSearch doesn't automatically include the celluloid dependency right now
-(should it?). 
+BentoSearch doesn't automatically include the celluloid dependency. Note
+that Celluloid uses multi-threading in such a way that you might need
+to turn config.cache_classes=true even in development.
+ 
 
 For more info, see BentoSearch::MultiSearcher. 
 

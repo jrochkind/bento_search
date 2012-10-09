@@ -28,6 +28,11 @@ require 'celluloid'
 # to make sure Celluloid::Actors are properly terminated to avoid
 # resource leakage. May want to do it in an ensure block. 
 #
+# Note that celluloid uses multi-threading in such a way that you
+# may have to set config.cache_classes=true even in development
+# to avoid problems. Rails class reloading is not thread-safe.
+#
+#
 # TODO: have a method that returns Futures instead of only supplying the blocking
 # results method? Several tricks, including making sure to properly terminate actors. 
 class BentoSearch::MultiSearcher
