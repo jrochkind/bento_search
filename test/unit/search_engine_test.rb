@@ -109,6 +109,17 @@ class SearchEngineTest < ActiveSupport::TestCase
       assert_not_nil engine.configuration.for_display
     end
     
+    test "error results still filled out okay" do
+      engine = MockEngine.new(:error => {:msg => "forced error"}, :id => "test")
+      
+      results = engine.search("foo")
+      
+      assert_present results.search_args
+      assert_equal "test", results.engine_id
+      
+      
+    end
+    
     
     test "carries display configuration over to results" do
       engine = MockEngine.new(:id => "foo", 
