@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require 'nokogiri'
 
 require 'http_client_patch/include_client'
@@ -340,7 +342,7 @@ class BentoSearch::EbscoHostEngine
     item.issue          = text_if_present info.at_xpath("./pubinfo/iid")
     
     # EBSCO sometimes has crazy long titles, truncate em.     
-    item.title          = text_helper.truncate( text_if_present( info.at_xpath("./artinfo/tig/atl") ), :length => 200)
+    item.title          = text_helper.truncate( text_if_present( info.at_xpath("./artinfo/tig/atl") ), :length => 200, :separator => ' ', :omission => '…')
     item.start_page     = text_if_present info.at_xpath("./artinfo/ppf")
     
     item.doi            = text_if_present info.at_xpath("./artinfo/ui[@type='doi']")
