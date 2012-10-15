@@ -121,13 +121,7 @@ module BentoSearchHelper
     end
   end
     
-  def bento_abstract_truncate(str)
-    # if it's html safe, we can't truncate it, we don't have an HTML-aware
-    # truncation routine right now, that avoids leaving tags open etc. 
-    return str if str.html_safe?
-    
-    truncate(str, :length => 280, :separator => " ")    
-  end
+
   
   # Prepare a title in an H4, with formats in parens in a <small> (for
   # bootstrap), linked, etc. 
