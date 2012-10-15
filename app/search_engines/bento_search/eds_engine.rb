@@ -21,11 +21,6 @@ require 'http_client_patch/include_client'
 # If turned on, you may get <b class="bento_search_highlight"> tags
 # in title and abstract output if it's on, marked html_safe.  
 #
-# If highlighting is on, since the abstract will be marked html safe, the
-# view layer won't be able to safely truncate it. In fact, it's very hard
-# to do here too, but we do it anyway, by default to approx configuration
-# truncate_highlighted num of chars (default 280). Set to nil if you don't
-# want this. 
 #
 # == Linking
 #
@@ -394,45 +389,7 @@ class BentoSearch::EdsEngine
       else substr.html_safe
       end
     end
-    
-    
-    
-    
-    
-    # Crazy ass method to truncate without getting in the middle of our
-    # html tags. This is wacky hacky, yeah. 
-    if configuration.truncate_highlighted
-      remainingLength = configuration.truncate_highlighted
-      in_tag = false
-      elipses_added = false
-      
-      truncated_parts = []
-      parts.each do |substr|
-        if remainingLength <=0 && ! in_tag
-          truncated_parts << "..."
-          break
-        end
         
-        if substr =~ /^<b.*\>$/
-          truncated_parts << substr
-          in_tag = true
-        elsif substr == "</b>"
-          truncated_parts << substr
-          in_tag = false
-        elsif ((remainingLength - substr.length) > 0) || in_tag
-          truncated_parts << substr
-        else
-          truncated_parts << helper.truncate(substr, :length => remainingLength, :separator  => ' ')
-          break
-        end
-        
-        remainingLength = remainingLength - substr.length
-      end
-      
-      parts = truncated_parts
-    end
-
-    
     return helper.safe_join(parts, '')        
   end
   
