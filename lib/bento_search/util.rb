@@ -97,6 +97,8 @@ module BentoSearch::Util
   # Get back a Nokogiri node, call #inner_html on it to go back to a string 
   # (and you probably want to call .html_safe on the string you get back for use
   # in rails view)
+  #
+  # (In future consider using this gem instead of doing it ourselves? https://github.com/nono/HTML-Truncator )
   def self.nokogiri_truncate(node, max_length, omission = '…', seperator = nil)
         
     if node.kind_of?(::Nokogiri::XML::Text)   
