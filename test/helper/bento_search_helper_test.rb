@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 require 'test_helper'
 
 # this seems to work? Rails view testing is a mess. 
@@ -163,6 +165,9 @@ class BentoSearchHelperTest < ActionView::TestCase
     
     assert_equal "No Key Test", key
   end
+  
+
+    
 
   
 end

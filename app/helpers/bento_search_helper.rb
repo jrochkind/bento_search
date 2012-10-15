@@ -1,3 +1,7 @@
+# encoding: UTF-8
+
+require 'nokogiri'
+
 # Rails helper module provided by BentoSearch meant to be included
 # in host app's helpers. 
 module BentoSearchHelper
@@ -91,6 +95,32 @@ module BentoSearchHelper
   #
   ##
   
+  # Like rails truncate helper, and taking the same options, but html_safe.
+  # 
+  # If input string is NOT marked html_safe?, simply passes to rails truncate helper. 
+  # If a string IS marked html_safe?, uses nokogiri to parse it, and truncate 
+  # actual displayed text to max_length, while keeping html structure valid.
+  #
+  # Default omission marker is unicode elipsis
+  #
+  # :length option will also default to 280, what we think is a good
+  # length for abstract/snippet display
+  def bento_truncate(str, options = {})
+    options.reverse_merge!(:omission => "…", :length => 280)
+    
+    # works for non-html of course, but for html a quick check
+    # to avoid expensive nokogiri parse if the whole string, even
+    # with tags, is still less than max length. 
+    return str if str.length < options[:length]
+    
+    if str.html_safe? 
+      noko = Nokogiri::HTML::DocumentFragment.parse(str)
+      BentoSearch::Util.nokogiri_truncate(noko, options[:length], options[:omission], options[:seperator]).inner_html.html_safe
+    else
+      return truncate(str, options)
+    end
+  end
+    
   def bento_abstract_truncate(str)
     # if it's html safe, we can't truncate it, we don't have an HTML-aware
     # truncation routine right now, that avoids leaving tags open etc. 

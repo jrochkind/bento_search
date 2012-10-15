@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 # Some utiltiy methods exposed as global module methods. 
 module BentoSearch::Util
   extend ActionView::Helpers::OutputSafetyHelper # for safe_join
@@ -74,7 +76,65 @@ module BentoSearch::Util
     BentoSearch.module_eval(klass_string, __FILE__, __LINE__)
   end
   
-  
+  # An HTML-safe truncation using nokogiri, based off of:
+  # http://blog.madebydna.com/all/code/2010/06/04/ruby-helper-to-cleanly-truncate-html.html
+  #
+  # but without monkey-patching, and behavior more consistent with Rails
+  # truncate. 
+  #
+  # It's hard to get all the edge-cases right, we probably mis-calculate slightly
+  # on edge cases, and we aren't always able to strictly respect :seperator, sometimes
+  # breaking on tag boundaries instead. But this should be good enough for actual use
+  # cases, where those types of incorrect results are still good enough. 
+  #
+  # ruby 1.9 only, in 1.8.7 non-ascii won't be handled quite right. 
+  #
+  # Pass in a Nokogiri node, probably created with Nokogiri::HTML::DocumentFragment.parse(string)
+  #
+  # Might want to check length of your string to see if, even with HTML tags, it's
+  # still under limit, before parsing as nokogiri and passing in here -- for efficiency.
+  #
+  # Get back a Nokogiri node, call #inner_html on it to go back to a string 
+  # (and you probably want to call .html_safe on the string you get back for use
+  # in rails view)
+  def self.nokogiri_truncate(node, max_length, omission = '…', seperator = nil)
+        
+    if node.kind_of?(::Nokogiri::XML::Text)   
+      if node.content.length > max_length
+        allowable_endpoint = [0, max_length - omission.length].max
+        if seperator
+          allowable_endpoint = (node.content.rindex(seperator, allowable_endpoint) || allowable_endpoint)
+        end        
+        
+        ::Nokogiri::XML::Text.new(node.content.slice(0, allowable_endpoint) + omission, node.parent)
+      else
+        node.dup
+      end
+    else # DocumentFragment or Element
+      return node if node.inner_text.length <= max_length
+      
+      truncated_node = node.dup
+      truncated_node.children.remove
+      remaining_length = max_length 
+      
+      node.children.each do |child|
+        #require 'debugger'
+        #debugger
+        if remaining_length == 0
+          truncated_node.add_child ::Nokogiri::XML::Text.new(omission, truncated_node)
+          break
+        elsif remaining_length < 0          
+          break        
+        end
+        truncated_node.add_child nokogiri_truncate(child, remaining_length, omission, seperator)
+        # can end up less than 0 if the child was truncated to fit, that's
+        # fine: 
+        remaining_length = remaining_length - child.inner_text.length
+
+      end
+      truncated_node
+    end
     
+  end
     
 end
