@@ -150,9 +150,7 @@ class BentoSearch::PrimoEngine
         
         item.format         = map_format fmt_str
       end
-                  
-      #TODO highlighting
-      
+                        
       results << item
     end
     
