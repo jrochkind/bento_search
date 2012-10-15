@@ -84,12 +84,34 @@ module BentoSearch
                               "Book"
                             end    
                             
+
+                            
         item.language_code  = j_item["language"]
                             
         (j_item["authors"] || []).each do |author_name|
           item.authors << Author.new(:display => author_name)
         end
+        
+        # Find ISBN's, prefer ISBN-13
+        item.isbn           = (j_item["industryIdentifiers"] || []).find {|node| node["type"] == "ISBN_13"}.try {|node| node["identifier"]}
+        unless item.isbn
+          # Look for ISBN-10 okay
+          item.isbn         = (j_item["industryIdentifiers"] || []).find {|node| node["type"] == "ISBN_10"}.try {|node| node["identifier"]}
+        end
+        
+
+        # only VERY occasionally does a GBS hit have an OCLC number, but let's look
+        # just in case.
+        item.oclcnum        = (j_item["industryIdentifiers"] || []).
+          find {|node| node["type"] == "OTHER" && node["identifier"].starts_with?("OCLC:") }.
+          try do |node|
+            node =~ /OCLC:(.*)/ ? $1 : nil
+          end
+        
+        
+        
       end
+      
       
       
       return results

@@ -39,6 +39,10 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
     
     assert_not_empty first.authors
     assert_not_empty first.authors.first.display
+    
+    # assume at least one thing in the result set has an ISBN to test
+    # our ISBN-setting code. 
+    assert_present results.find {|r| r.isbn.present? }
   end
   
   test_with_cassette("pagination", :gbs) do
