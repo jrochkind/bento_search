@@ -45,23 +45,23 @@ class BentoSearchHelperTest < ActionView::TestCase
     assert_equal "12345<p>67890…</p>", html_output
   end
   
-  def test_truncate_html_with_seperator
+  def test_truncate_html_with_separator
     html_input = "12345<p>67 901234<b></p>".html_safe
-    html_output = bento_truncate(html_input, :length => 10, :seperator => ' ')
+    html_output = bento_truncate(html_input, :length => 10, :separator => ' ')
     assert_equal "12345<p>67…</p>", html_output
   end
   
-  def test_truncate_html_with_seperator_unavailable
+  def test_truncate_html_with_separator_unavailable
     html_input = "12345<p>678901234<b></p>".html_safe
-    html_output = bento_truncate(html_input, :length => 10, :seperator => ' ')
+    html_output = bento_truncate(html_input, :length => 10, :separator => ' ')
     assert_equal "12345<p>6789…</p>", html_output
   end
   
-  def test_truncate_html_with_boundary_seperator
+  def test_truncate_html_with_boundary_separator
     # known edge case we dont' handle, sorry. If this test
     # fails, that could be a good thing if you've fixed the edge case!
     html_input = "12345<p>6 8<b>90123456</b>7890</p>".html_safe
-    html_output = bento_truncate(html_input, :length => 10, :seperator => ' ')
+    html_output = bento_truncate(html_input, :length => 10, :separator => ' ')
     assert_equal "12345<p>6 8<b>9…</b></p>", html_output
   end
    

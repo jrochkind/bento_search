@@ -83,7 +83,7 @@ module BentoSearch::Util
   # truncate. 
   #
   # It's hard to get all the edge-cases right, we probably mis-calculate slightly
-  # on edge cases, and we aren't always able to strictly respect :seperator, sometimes
+  # on edge cases, and we aren't always able to strictly respect :separator, sometimes
   # breaking on tag boundaries instead. But this should be good enough for actual use
   # cases, where those types of incorrect results are still good enough. 
   #
@@ -99,13 +99,13 @@ module BentoSearch::Util
   # in rails view)
   #
   # (In future consider using this gem instead of doing it ourselves? https://github.com/nono/HTML-Truncator )
-  def self.nokogiri_truncate(node, max_length, omission = '…', seperator = nil)
+  def self.nokogiri_truncate(node, max_length, omission = '…', separator = nil)
         
     if node.kind_of?(::Nokogiri::XML::Text)   
       if node.content.length > max_length
         allowable_endpoint = [0, max_length - omission.length].max
-        if seperator
-          allowable_endpoint = (node.content.rindex(seperator, allowable_endpoint) || allowable_endpoint)
+        if separator
+          allowable_endpoint = (node.content.rindex(separator, allowable_endpoint) || allowable_endpoint)
         end        
         
         ::Nokogiri::XML::Text.new(node.content.slice(0, allowable_endpoint) + omission, node.parent)
@@ -128,7 +128,7 @@ module BentoSearch::Util
         elsif remaining_length < 0          
           break        
         end
-        truncated_node.add_child nokogiri_truncate(child, remaining_length, omission, seperator)
+        truncated_node.add_child nokogiri_truncate(child, remaining_length, omission, separator)
         # can end up less than 0 if the child was truncated to fit, that's
         # fine: 
         remaining_length = remaining_length - child.inner_text.length

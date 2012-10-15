@@ -106,7 +106,7 @@ module BentoSearchHelper
   # :length option will also default to 280, what we think is a good
   # length for abstract/snippet display
   def bento_truncate(str, options = {})
-    options.reverse_merge!(:omission => "…", :length => 280)
+    options.reverse_merge!(:omission => "…", :length => 280, :separator => ' ')       
     
     # works for non-html of course, but for html a quick check
     # to avoid expensive nokogiri parse if the whole string, even
@@ -115,7 +115,7 @@ module BentoSearchHelper
     
     if str.html_safe? 
       noko = Nokogiri::HTML::DocumentFragment.parse(str)
-      BentoSearch::Util.nokogiri_truncate(noko, options[:length], options[:omission], options[:seperator]).inner_html.html_safe
+      BentoSearch::Util.nokogiri_truncate(noko, options[:length], options[:omission], options[:separator]).inner_html.html_safe
     else
       return truncate(str, options)
     end
