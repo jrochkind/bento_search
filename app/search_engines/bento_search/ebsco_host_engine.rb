@@ -102,7 +102,6 @@ class BentoSearch::EbscoHostEngine
   def search_implementation(args)
     url = query_url(args)
     
-    
     results = BentoSearch::Results.new
     xml, response, exception = nil, nil, nil
 
@@ -341,8 +340,17 @@ class BentoSearch::EbscoHostEngine
     item.volume         = text_if_present info.at_xpath("./pubinfo/vid")
     item.issue          = text_if_present info.at_xpath("./pubinfo/iid")
     
-    # EBSCO sometimes has crazy long titles, truncate em.     
-    item.title          = text_helper.truncate( text_if_present( info.at_xpath("./artinfo/tig/atl") ), :length => 200, :separator => ' ', :omission => '…')
+    
+    item.title          = text_if_present info.at_xpath("./artinfo/tig/atl")
+    # sometimes title is bizarrely not present there, but in bkinfo instead
+    unless item.title
+      item.title        = text_if_present info.at_xpath("./bkinfo/btl")
+    end
+    # EBSCO sometimes has crazy long titles, truncate em.
+    if item.title.present?
+      item.title        = text_helper.truncate(item.title, :length => 200, :separator => ' ', :omission => '…')
+    end
+    
     item.start_page     = text_if_present info.at_xpath("./artinfo/ppf")
     
     item.doi            = text_if_present info.at_xpath("./artinfo/ui[@type='doi']")
