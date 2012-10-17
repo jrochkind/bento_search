@@ -2,6 +2,13 @@
     no way to call a template-with-yield (aka partial layout) from controller,
     grr. Could do it from a helper, but we want to minimize helpers that
     pollute app's helper space. %>
+    
+    
+<% unless @results.failed? %>
+  <%# html5 meta microdata, can be pulled out by js for ajax requests %> 
+  <%= tag("meta", :itemprop=>"total_items", :content => @results.total_items) %>
+<% end %>
+
 <% if @partial_wrapper %>
   <%=   
       render :layout => @partial_wrapper, :locals => {:results => @results} do 

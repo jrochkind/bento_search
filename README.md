@@ -232,7 +232,10 @@ ajax auto-load.
                      :load => :ajax_auto) %>
 
 
-
+(TODO: Document on-demand ajax loading, and 
+ html5 meta total_items embedded in response ) 
+                     
+                     
 ### Item Decorators, and Links
 
 You can configure Decorators, in the form of plain old ruby modules, to be

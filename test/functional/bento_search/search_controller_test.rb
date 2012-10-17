@@ -8,6 +8,12 @@ module BentoSearch
         config.allow_routable_results = true
       end
       
+      BentoSearch.register_engine("failed_response") do |config|
+        config.engine = "MockEngine"
+        config.allow_routable_results = true
+        config.error = {:message => "faked error"}
+      end
+      
       BentoSearch.register_engine("not_routable") do |config|
         config.engine = "MockEngine"
         # no allow_routable_results
@@ -37,7 +43,29 @@ module BentoSearch
       assert_not_nil assigns(:results)
       
       assert_template "bento_search/search"
+      
+      # meta tag with count
+      assert_tag(:tag => "meta", :attributes => {"itemprop" => "total_items", "content" => /^\d+$/ })
     end
+    
+    test "failed search" do
+      get :search, {:engine_id => "failed_response", :query => "my search"}
+      
+      # should this really be a success? Yes, I think so, we don't
+      # want to stop ajax from getting it, it'll just have an error
+      # message in the HTML. Should it maybe have an html5 meta microdata
+      # warning?
+      assert_response :success
+      
+      assert_template "bento_search/search"
+      assert_template "bento_search/_search_error"
+      
+      assert_no_tag(:tag => "meta", :attributes => {"itemprop" => "total_items"})
+    end
+    
+    
+    
+    
     
     test "custom layout config" do
       get :search, {:engine_id => "with_layout_config", :query => "my search"}
