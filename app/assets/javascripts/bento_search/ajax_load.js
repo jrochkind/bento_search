@@ -24,7 +24,7 @@ BentoSearch.ajax_load = function(node, success_callback) {
       url: div.data("bentoAjaxUrl"), 
       success: function(response, status, xhr) {        
         if (success_callback) {
-           success_callback.apply(div, response);
+          success_callback.apply(div, [response]);
         }
         div.replaceWith(response);          
       },
