@@ -72,12 +72,15 @@ module BentoSearchHelper
       results = engine.search(options) unless results
 
       if results.failed?
-        render :partial => "bento_search/search_error", :locals => {:results => results}
-      elsif results.length > 0      
-        render :partial => "bento_search/std_item", :collection => results, :as => :item
+        partial = (results.display_configuration.error_partial if results.display_configuration) || "bento_search/search_error"         
+        render :partial => partial, :locals => {:results => results}
+      elsif results.length > 0   
+        partial = (results.display_configuration.item_partial if results.display_configuration) || "bento_search/std_item"        
+        render :partial => partial, :collection => results, :as => :item, :locals => {:results => results}
       else
         content_tag(:div, :class=> "bento_search_no_results") do
-          I18n.translate("bento_search.no_results")
+          partial = (results.display_configuration.no_results_partial if results.display_configuration) || "bento_search/no_results"                   
+          render :partial => partial, :locals => {:results => results}
         end
       end
     end                          
