@@ -10,13 +10,42 @@ bento_search provides an abstraction/normalization layer for querying and
 displaying results for external search engines, in Ruby on Rails. Requires
 Rails3 and tested only under ruby 1.9.3. 
 
-* It is focused on use cases for academic libraries, but may be useful in generic
-cases too. Initially, engine adapters are provided for: 
-Google Books, Scopus, SerialSolutions Summon, Ex Libris Primo, 
-EBSCO Discovery Service, EBSCO traditional 'EIT' api, Google Site Search, WorldCat Search.   Most
-of these search engines require a vendor license to use. 
+### Goals: To help you
 
-* bento_search could be considered building blocks for a type of 'federated
+* Get up and running as quickly as possible with searching and displaying
+  results from a  third-party service. Solutions to idiosyncracies and
+  undocumented workarounds are encoded in a shared codebase, which abstracts
+  everything to a good, simple code API giving you building blocks to focus
+  on your needs, not the search service's problems. 
+* Let you switch out one search service for another in an already built
+  application with as little code rewriting as possible. Avoid vendor lock-in. 
+* Give you the harness to write adapters for new search services, without
+  having to rewrite common general functionality, just focus on the interface
+  with the new API you want to support. 
+
+bento_search is focused on use cases for academic libraries, which is mainly
+evidenced by the search engine adapters currently included, and by the
+generalized domain models including fields that matter in our domain (issn,
+vol/issue/page, etc). But it ought to be useful for more general basic use
+cases too (we include a google site search adapter for instance). 
+
+Adapters currently included in bento_search
+
+* Google Books (requires free api key)
+* Scopus (requires license)
+* Serial Solution Summon (requires license)
+* Ex Libris Primo (requires license)
+* EBSCO Discovery Service (requires license)
+* EBSCOHost 'traditional' API (requires license)
+* WorldCat Search (requires OCLC membership to get api key)
+* Google Site Search (requires sign-up for more than 100 searches/day)
+
+
+
+
+### Scope of functionality
+
+bento_search could be considered building blocks for a type of 'federated
 search' functionality, but it does not and will never support merging results
 from multiple engines into one result set. It is meant to support displaying the
 first few results from multiple engines on one page, "bento box" style (as
