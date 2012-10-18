@@ -22,11 +22,19 @@ BentoSearch.ajax_load = function(node, success_callback) {
   // Now load the actual external content from html5 data-bento-ajax-url
   $.ajax({
       url: div.data("bentoAjaxUrl"), 
-      success: function(response, status, xhr) {        
+      success: function(response, status, xhr) {
+        var do_replace = true;         
         if (success_callback) {
-          success_callback.apply(div, [response]);
+          // We need to make the response into a DOM so the callback
+          // can deal with it better. Wrapped in a div, so it makes
+          // jquery happy even if there isn't a single parent element. 
+          response = $("<div>" + response + "</div>");
+          
+          do_replace = success_callback.apply(div, [response]);                    
         }
-        div.replaceWith(response);          
+        if (do_replace != false) { 
+          div.replaceWith(response);
+        }          
       },
       error: function(xhr, status, errorThrown) {
         var msg = "Sorry but there was an error: ";
