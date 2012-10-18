@@ -12,14 +12,14 @@ Rails3 and tested only under ruby 1.9.3.
 
 ### Goals: To help you
 
-* Get up and running as quickly as possible with searching and displaying
+* **Get up and running as quickly as possible** with searching and displaying
   results from a  third-party service. Solutions to idiosyncracies and
   undocumented workarounds are encoded in a shared codebase, which abstracts
   everything to a good, simple code API giving you building blocks to focus
   on your needs, not the search service's problems. 
 * Let you switch out one search service for another in an already built
-  application with as little code rewriting as possible. Avoid vendor lock-in. 
-* Give you the harness to write adapters for new search services, without
+  application with as little code rewriting as possible. **Avoid vendor lock-in**. 
+* Give you the harness to **write adapters for new search services**, without
   having to rewrite common general functionality, just focus on the interface
   with the new API you want to support. 
 
@@ -54,17 +54,16 @@ uses.
 
 * bento_search provides abstract functionality for pagination, sorting, 
 and single-field-specified queries. Faceting, limiting, and 'advanced'
-multi-field searches are not yet supported, but planned. Not all
-search engine adapters support all features.  Search engine adapters can
+multi-field searches are not yet supported, but possibly will be built
+out in the future. 
+
+Not all search engine adapters support all features.  Search engine adapters can
 declare search fields and sort options with 'semantics', so you can for
 instance search or sort by 'title' across search engines without regard
 to internal engine-specific field names. 
 
 bento_search is designed to allow code to be written agnostic of the search
-provider, so you can switch out the search provider, minimizing dependent
-code in your app that needs to be rewritten. As well as letting you get
-started quick without reinventing the wheel and figuring out poorly
-documented vendor API's yourself. 
+provider, so you can switch out the search provider. 
 
 See code-level api documentation for more details, especially at
 BentoSearch::SearchEngine. http://rubydoc.info/gems/bento_search/frames/
