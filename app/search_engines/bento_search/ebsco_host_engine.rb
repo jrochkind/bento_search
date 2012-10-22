@@ -29,8 +29,8 @@ require 'httpclient'
 #
 # == Limitations
 # We do set language of ResultItems based on what ebsco tells us, but ebsoc
-# seems to tell us 'english' for everything (maybe cause abstract is in
-# English?). Config variable to tell us to ignore language?
+# seems to often leave out language or say 'english' for things that are not
+# (maybe cause abstract is in English?). Config variable to tell us to ignore language?
 #
 # == Note on including databases
 #
@@ -367,7 +367,6 @@ class BentoSearch::EbscoHostEngine
       item.authors << a
     end
    
-    
     item.format          = sniff_format info
     item.format_str      = sniff_format_str info
     
