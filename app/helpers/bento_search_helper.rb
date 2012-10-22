@@ -183,5 +183,43 @@ module BentoSearchHelper
     ]    
   end
   
+  # Returns a hash of label => key suitable for passing to rails
+  # options_for_select. ONLY includes fields with :semantics set at
+  # present. Key will be _semantic_ key name. 
+  # For engine-specific fields, you're on you're own, sorry!
+  #
+  # If first arg is an engine instance, will
+  # be search fields supported by that engine. If first arg is nil,
+  # will be any field in our i18n lists for search fields. 
+  #
+  # Can pass in options :only or :except to customize list. Values
+  # in :only and :except will match on internal field names OR
+  # semantic field names (hopefully this convenience ambiguity
+  # won't cause problems)
+  def bento_field_hash_for(engine, options = {})
+    if engine.nil?
+      hash = I18n.t("bento_search.search_fields").invert
+    else
+      hash = Hash[ engine.search_field_definitions.collect do |k, defn|
+        if defn[:semantic] && (label = I18n.t(defn[:semantic], :scope => "bento_search.search_fields")) 
+          [label,  defn[:semantic].to_s]
+        end
+      end]
+    end
+  
+    # :only/:except    
+    if options[:only]      
+      keys = [options[:only]].flatten.collect(&:to_s)
+      hash.delete_if {|key, value|  ! keys.include?(value) }  
+    end
+    
+    if options[:except]
+      keys = [options[:except]].flatten.collect(&:to_s)
+      hash.delete_if {|key, value|  keys.include?(value) }
+    end
+    
+    return hash
+  end
+  
   
 end

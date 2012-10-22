@@ -25,3 +25,13 @@ en:
       num_cite_desc: "citation count"
     eds:
       record_not_available: "Record Not Available -- log in to see full results"
+    search_fields:
+      # keyed by semantic key
+      title:        "Title"
+      author:       "Author"
+      subject:      "Subject"
+      issn:         "ISSN"
+      isbn:         "ISBN"
+      oclcnum:      "OCLCnum"
+      lccn:         "LCCN"
+      
