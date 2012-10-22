@@ -34,6 +34,16 @@ class ResultItemDisplayTest < ActiveSupport::TestCase
   test "Missing title" do
     assert_equal I18n.translate("bento_search.missing_title"), ResultItem.new.complete_title
   end
+  
+  test "language label nil if default" do
+    I18n.with_locale(:'en-GB') do
+      item = ResultItem.new(:language_code => 'en')      
+      assert_nil item.display_language
+      
+      item = ResultItem.new(:language_code => 'es')
+      assert_equal "Spanish", item.display_language      
+    end
+  end
     
   
 end

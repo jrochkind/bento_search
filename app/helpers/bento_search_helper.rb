@@ -128,18 +128,22 @@ module BentoSearchHelper
   
   # Prepare a title in an H4, with formats in parens in a <small> (for
   # bootstrap), linked, etc. 
+  #
+  # This is getting a bit complex for a helper method. Not sure the best
+  # way to refactor, into partials and helpers? Presenter methods on
+  # on item? Without pollutting helper namespace too much?
   def bento_item_title(item)
     content_tag("h4", :class => "bento_item_title") do
       safe_join([
         link_to_unless( item.link.blank?, item.complete_title, item.link ),
-        if item.format.present? || item.format_str.present?
+        if item.display_format
           content_tag("small", :class => "bento_item_about") do
-            " (" +
-              if item.format_str
-                item.format_str
-              else
-                t(item.format, :scope => [:bento_search, :format], :default => item.format.to_s.titleize)
-              end + ")"
+            arr = []
+            
+            arr << content_tag("span", item.display_format, :class => "bento_format") if item.display_format
+            arr << content_tag("span", "in #{item.display_language}", :class => "bento_language") if item.display_language
+            
+            " (".html_safe + safe_join(arr, " ") + ")".html_safe if arr
           end
         end
       ], '')

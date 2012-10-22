@@ -98,7 +98,8 @@ module BentoSearch
     # language_code. 
     # 
     # Consumers can look at language_code or language_str regardless (although
-    # either or both may be nil). You can use language_list gem to normalize to a 
+    # either or both may be nil). You can get a language_list gem obj from
+    # language_obj, and use to normalize to a 
     # 2- or 3-letter from language_code that could be either. 
     attr_accessor :language_code
     attr_writer :language_str
@@ -108,6 +109,13 @@ module BentoSearch
           lang_obj.name
         end
       end
+    end
+    # Returns a LanguageList gem language object, from #language_code,
+    # convenience
+    def language_obj
+      return nil unless self.language_code
+      
+      @language_obj ||= LanguageList::LanguageInfo.find( self.language_code )
     end
     
     # year published. a ruby int
@@ -253,6 +261,34 @@ module BentoSearch
       return nil if result_elements.empty?
       
       return result_elements.join(", ").html_safe
+    end
+    
+    # A display method, this is like #langauge_str, but will be nil if
+    # the language_code matches the current default locale, used
+    # for printing language only when not "English" normally. 
+    #
+    #(Sorry, will be 'Spanish' never 'Espa~nol", we don't
+    # have a data source for language names in other languages right now. )
+    def display_language
+      return nil unless self.language_code
+      
+      default = I18n.locale.try {|l| l.to_s.gsub(/\-.*$/, '')} || "en" 
+      
+      this_doc = self.language_obj.try(:iso_639_1)
+      
+      return nil if this_doc == default
+      
+      self.language_str
+    end
+    
+    # format string to display to user. Uses #format_str if present,
+    # otherwise finds an i18n label from #format. Returns nil if none
+    # available. 
+    def display_format      
+      value = self.format_str || 
+        I18n.t(self.format, :scope => [:bento_search, :format], :default => self.format.to_s.titleize)
+        
+      return value.blank? ? nil : value        
     end
     
   end
