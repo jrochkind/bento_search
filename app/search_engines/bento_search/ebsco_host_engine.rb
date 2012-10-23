@@ -337,6 +337,16 @@ class BentoSearch::EbscoHostEngine
     item.isbn           = text_if_present info.at_xpath("./bkinfo/isbn")
     
     item.year           = text_if_present info.at_xpath("./pubinfo/dt/@year")
+    # fill in complete publication_date too only if we've got it. 
+    if (item.year &&
+        month = text_if_present(info.at_xpath("./pubinfo/dt/@month")) &&
+        day = text_if_present(info.at_xpath("./pubinfo/dt/@day"))      
+      )
+      if (item.year.to_i != 0 && month.to_i != 0 && day.to_i != 0)
+        item.publication_date = Date.new(item.year.to_i, month.to_i, day.to_i)
+      end
+    end
+    
     item.volume         = text_if_present info.at_xpath("./pubinfo/vid")
     item.issue          = text_if_present info.at_xpath("./pubinfo/iid")
     

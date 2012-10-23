@@ -123,7 +123,11 @@ module BentoSearch
     # * schema.org CreativeWork "datePublished", year portion
     # * dcterms.issued, year portion
     # * prism:coverDate, year portion
+    #
+    # See also publication_date when you have a complete date
     attr_accessor :year
+    # ruby stdlib Date object. 
+    attr_accessor :publication_date
     
     attr_accessor :volume
     attr_accessor :issue

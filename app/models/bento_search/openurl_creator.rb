@@ -49,7 +49,13 @@ module BentoSearch
         r.set_metadata("au", result_item.author_display(ensure_no_tags result_item.authors.first))
       end
 
-      r.set_metadata("date",    result_item.year.to_s)
+      if result_item.publication_date
+        r.set_metadata("date", result_item.publication_date.iso8601)
+      else
+        r.set_metadata("date",    result_item.year.to_s)
+      end
+      
+      
       r.set_metadata("volume",  result_item.volume.to_s)
       r.set_metadata("issue",   result_item.issue.to_s)
       r.set_metadata("spage",   result_item.start_page.to_s)

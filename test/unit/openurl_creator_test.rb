@@ -122,6 +122,17 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
   end
   
   
+  def test_publication_date
+    item = BentoSearch::ResultItem.new(      
+      :title => "some title",
+      :year => 2012,
+      :publication_date => Date.new(2012, 5, 1)             
+      )
+    
+    openurl = item.to_openurl
+    
+    assert_equal "2012-05-01", openurl.referent.metadata["date"]     
+  end
   
   
 end
