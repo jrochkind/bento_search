@@ -185,6 +185,9 @@ module BentoSearch
     #
     #  Ask an engine what semantic field names it supports with `engine.semantic_search_keys`
     #
+    #  Unrecognized search fields will be ignored, unless you pass in 
+    #  :unrecognized_search_field => :raise (or do same in config). 
+    #
     #  Ask an engine what sort fields it supports with `engine.sort_keys`. See
     #  list of standard sort keys in I18n file at ./config/locales/en.yml, in
     #  `en.bento_search.sort_keys`. 
@@ -301,14 +304,17 @@ module BentoSearch
       
       # translate semantic_search_field to search_field, or raise if
       # can't. 
-      if (semantic = arguments.delete(:semantic_search_field)) && ! semantic.blank?
-        
+      if (semantic = arguments.delete(:semantic_search_field)) && ! semantic.blank?        
         mapped = self.semantic_search_map[semantic.to_s]
-        unless mapped
+        if config_arg(arguments, :unrecognized_search_field) == "raise" && ! mapped 
           raise ArgumentError.new("#{self.class.name} does not know about :semantic_search_field #{semantic}")
         end
         arguments[:search_field] = mapped
+      end      
+      if config_arg(arguments, :unrecognized_search_field) == "raise" && ! search_keys.include?(arguments[:search_field])
+        raise ArgumentError.new("#{self.class.name} does not know about :search_field #{arguments[:search_field]}")
       end
+        
               
       return arguments
     end
@@ -338,6 +344,21 @@ module BentoSearch
           result.extend decorator
         end
       end
+    end
+    
+    # get value of an arg that can be supplied in search args OR config,
+    # with search_args over-ridding config. Also normalizes value to_s
+    # (for symbols/strings). 
+    def config_arg(arguments, key, default = nil)
+      value = if arguments[key].present?
+        arguments[key]
+      else
+        configuration[key]
+      end
+      
+      value = value.to_s if value.kind_of? Symbol
+      
+      return value
     end
     
     # What exceptions should our #search wrapper rescue and turn

@@ -126,9 +126,32 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
     assert ! (args.has_key? :semantic_search_field), "translates semantic_search_field to search_field"
     assert_equal "my_title", args[:search_field]
     
-    assert_raise(ArgumentError, "Raises for undefined semantic_search_field") do
-      d.test_parse(:query => "query", :semantic_search_field => :subject)
+    assert_raise(ArgumentError, "Raises for undefined semantic_search_field when asked") do
+      d.test_parse(:query => "query", :semantic_search_field => :subject, :unrecognized_search_field => :raise)
     end
+    # without the :unrecognized_search_field => :raise, ignore
+    args = d.test_parse(:query => "query", :semantic_search_field => :subject)
+    assert_nil args[:search_field]    
+  end
+  
+  def test_unrecognized_search_field
+    d = Dummy.new
+    assert_raise(ArgumentError, "Raises for undefined search field when asked") do
+      d.test_parse(:query => "query", :search_field => "I_made_this_up", :unrecognized_search_field => "raise")
+    end
+    assert_nothing_raised do
+      d.test_parse(:query => "query", :search_field => "I_made_this_up")
+    end
+    
+    # combine config and args
+    engine = BentoSearch::MockEngine.new(:unrecognized_search_field => :raise)
+    assert_raise(ArgumentError, "Raises for undefined search field when asked") do
+      engine.normalized_search_arguments(:query => "query", :search_field => "I_made_this_up")
+    end
+    assert_nothing_raised do
+      engine.normalized_search_arguments(:query => "query", :search_field => "I_made_this_up", :unrecognized_search_field => :ignore)
+    end
+    
   end
   
   def test_semantic_blank_ignored

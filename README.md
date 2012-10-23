@@ -130,7 +130,6 @@ field type names:
 
     google_books_engine.search("smith", :semantic_earch_field => :title)
     
-This will raise if an engine doesn't support that semantic search field. 
 You can find out what fields a particular engine supports.
 
     google_books_engine.search_keys # => internal keys
@@ -140,6 +139,10 @@ You can also provide all arguments in a single hash when it's convenient
 to do so:
 
     google_books_engine.search(:query => "smith", :search_field => "inauthor")
+
+Search fields that are not recognized (semantic or internal) will normally
+be ignored, but set `:unrecognized_search_field => :raise` in configuration
+or search arg to get an ArgumentError instead. 
     
 ### Sorting
 
