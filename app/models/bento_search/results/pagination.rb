@@ -5,6 +5,9 @@
 #
 # You don't normally create one of these yourself, you get one returned
 # from Results#pagination
+#
+#
+#  <%= paginate @results.pagination %>
 class BentoSearch::Results::Pagination
   
   # first arg is results.total_items, second is result
@@ -12,8 +15,8 @@ class BentoSearch::Results::Pagination
   #
   # We don't do the page/start normalization calc here,
   # we count on them both being passed in, already calculated
-  # by normalize_arguments in SearchResults. Expect :page, 0-based
-  # :start, and :per_page
+  # by normalize_arguments in SearchResults. Expects :page, 0-based
+  # :start, and 1-based :per_page to all be passed in in initializer. 
   def initialize(total, normalized_args)
     normalized_args ||= {} # in some error cases, we end up with nil
     
@@ -44,6 +47,7 @@ class BentoSearch::Results::Pagination
   def count_records
     @total_count
   end
+  alias count count_records
   
   def total_pages
     (@total_count.to_f / @per_page).ceil
