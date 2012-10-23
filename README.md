@@ -134,6 +134,9 @@ You can find out what fields a particular engine supports.
 
     google_books_engine.search_keys # => internal keys
     google_books_engine.semantic_search_keys 
+    
+A helper method for generating an html select of search field options is
+available in bento_field_hash_for, check it out. 
 
 You can also provide all arguments in a single hash when it's convenient
 to do so:

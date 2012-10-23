@@ -186,6 +186,7 @@ module BentoSearch
     
     def search_field_definitions
       {
+        nil           => {:semantic => :general},
         "AUTH"        => {:semantic => :author},
         "TITLE"       => {:semantic => :title},
         # controlled and author-assigned keywords

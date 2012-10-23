@@ -166,6 +166,37 @@ class BentoSearchHelperTest < ActionView::TestCase
     assert_equal "No Key Test", key
   end
   
+  def test_field_hash_for
+    # generic
+    hash = bento_field_hash_for(nil)
+    
+    assert_equal I18n.t("bento_search.search_fields").invert, hash
+    
+    # specific engine
+    engine = MockEngine.new(:search_field_definitions => {
+        :mytitle => {:semantic => :title},
+        :myauthor => {:semantic => :author},
+        :myissn => {:semantic => :issn},
+        :mycustom => {}        
+    })    
+    hash = bento_field_hash_for(engine)
+    expected = { I18n.t("bento_search.search_fields.title") => 'title',
+      I18n.t("bento_search.search_fields.author") => 'author',
+      I18n.t("bento_search.search_fields.issn") => 'issn',    
+    }
+    assert_equal expected, hash
+    
+    # only
+    hash = bento_field_hash_for(engine, :only => :author)
+    assert_equal( {"Author" => "author"}, hash )
+    hash = bento_field_hash_for(engine, :only => ["author", "title"])
+    assert_equal( {"Title" => "title", "Author" => "author"}, hash )
+     
+    # except
+    
+    
+  end
+  
 
     
 

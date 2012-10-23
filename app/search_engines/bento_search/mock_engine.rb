@@ -53,4 +53,8 @@ class BentoSearch::MockEngine
       configuration.sort_definitions || {}
     end
     
+    def search_field_definitions
+      configuration.search_field_definitions || {}
+    end
+    
 end

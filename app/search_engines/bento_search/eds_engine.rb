@@ -509,7 +509,7 @@ class BentoSearch::EdsEngine
   
   def search_field_definitions
     {
-      "TX" => {:semantic => :all},
+      "TX" => {:semantic => :general},
       "AU" => {:semantic => :author},
       "TI" => {:semantic => :title},
       "SU" => {:semantic => :subject},

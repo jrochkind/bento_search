@@ -279,6 +279,7 @@ class BentoSearch::PrimoEngine
   def search_field_definitions
     # others are avail too, this is not exhaustive. 
     {
+      nil         => {:semantic => :general},
       "creator"   => {:semantic => :author},
       "title"     => {:semantic => :title},
       "sub"       => {:semantic => :subject},      

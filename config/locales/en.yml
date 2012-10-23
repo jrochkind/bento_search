@@ -28,6 +28,10 @@ en:
       record_not_available: "Record Not Available -- log in to see full results"
     search_fields:
       # keyed by semantic key
+      # 'general' is used for unconstrained search, not every
+      # engine actually makes this ALL/any field, depends on
+      # capabilities. 
+      general:	    "Any field" 
       title:        "Title"
       author:       "Author"
       subject:      "Subject"

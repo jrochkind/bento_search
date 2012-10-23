@@ -291,8 +291,9 @@ class BentoSearch::WorldcatSruDcEngine
   # we're listing now are available even at 'default' service level. 
   def search_field_definitions
     {
-      "srw.au"      => {:semantic => :author},
+      nil           => {:semantic => :general},
       "srw.ti"      => {:semantic => :title},
+      "srw.au"      => {:semantic => :author},
       "srw.su"      => {:semantic => :subject},
       "srw.bn"      => {:semantic => :isbn},
       # Oddly no ISSN index, all we get is 'number'
