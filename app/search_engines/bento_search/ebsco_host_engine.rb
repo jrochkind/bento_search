@@ -14,6 +14,16 @@ require 'httpclient'
 # * profile_password
 # * databases: ARRAY of ebsco shortcodes of what databases to include in search. If you specify one you don't have access to, you get an error message from ebsco, alas.
 #
+#
+# == Limits
+#
+# While waiting for a future bento_box generalized limit api, this engine
+# accepts custom search arguments to apply limits:
+#
+# [:peer_reviewed_only]   Set to boolean true or string 'true', to restrict
+#                         results to peer-reviewed only. (Or ask EBSCOHost
+#                         api to do so, what we get is what we get). 
+ 
 # == Custom response data
 # 
 # Iff EBSCO API reports that fulltext is available for the hit, then 
@@ -294,6 +304,11 @@ class BentoSearch::EbscoHostEngine
       query = "(#{args[:search_field]} #{query})"
     end
     
+    # peer-reviewed only?
+    if [true, "true"].include? args[:peer_reviewed_only]
+      query += " AND RV Y"
+    end
+    
     url += "&query=#{CGI.escape query}"
     
     # startrec is 1-based for ebsco, not 0-based like for us. 
@@ -407,6 +422,10 @@ class BentoSearch::EbscoHostEngine
     return noko
   end
   
+  def public_settable_search_args
+    super + [:peer_reviewed_only, :year_limit_start, :year_limit_end]
+  end
+  
   # David Walker says pretty much only relevance and date are realiable
   # in EBSCOhost cross-search. 
   def sort_definitions
@@ -415,7 +434,7 @@ class BentoSearch::EbscoHostEngine
       "date_desc" => {:implementation => "date"}
     }      
   end
-  
+    
   def search_field_definitions
     {
       "AU"    => {:semantic => :author},

@@ -66,6 +66,14 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     assert_equal ["(SU cancer)"], query_params["query"]
   end
   
+  def test_peer_review_limit_construction
+    url = @engine.query_url(:query => "cancer", :search_field => "SU", :peer_reviewed_only => true)
+    
+    query_params = CGI.parse( URI.parse(url).query )
+    
+    assert_equal ["(SU cancer) AND RV Y"], query_params["query"]
+  end
+  
   
   def test_prepare_query
     query = @engine.ebsco_query_prepare('one :. ; two "three four" and NOT OR five')
