@@ -437,6 +437,7 @@ class BentoSearch::EbscoHostEngine
     
   def search_field_definitions
     {
+      nil     => {:semantic => :general},
       "AU"    => {:semantic => :author},
       "TI"    => {:semantic => :title},
       "SU"    => {:semantic => :subject},
