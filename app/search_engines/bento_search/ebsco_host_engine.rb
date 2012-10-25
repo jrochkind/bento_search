@@ -23,7 +23,12 @@ require 'httpclient'
 # [:peer_reviewed_only]   Set to boolean true or string 'true', to restrict
 #                         results to peer-reviewed only. (Or ask EBSCOHost
 #                         api to do so, what we get is what we get). 
- 
+# [:pubyear_start]
+# [:pubyear_end]          Date range limiting, pass in custom search args,
+#                         one or both of pubyear_start and pubyear_end
+#                         #to_i will be called on it, so can be string. 
+#                         .search(:query => "foo", :pubyear_start => 2000)
+# 
 # == Custom response data
 # 
 # Iff EBSCO API reports that fulltext is available for the hit, then 
@@ -306,8 +311,19 @@ class BentoSearch::EbscoHostEngine
     
     # peer-reviewed only?
     if [true, "true"].include? args[:peer_reviewed_only]
-      query += " AND RV Y"
+      query += " AND (RV Y)"
     end
+    
+    if args[:pubyear_start] || args[:pubyear_end]
+      from = args[:pubyear_start].to_i 
+      from = nil if from == 0
+      
+      to = args[:pubyear_end].to_i 
+      to = nil if to == 0
+      
+      query += " AND (DT #{from}-#{to})"
+    end
+    
     
     url += "&query=#{CGI.escape query}"
     
@@ -423,7 +439,7 @@ class BentoSearch::EbscoHostEngine
   end
   
   def public_settable_search_args
-    super + [:peer_reviewed_only, :year_limit_start, :year_limit_end]
+    super + [:peer_reviewed_only, :pubyear_start, :pubyear_end]
   end
   
   # David Walker says pretty much only relevance and date are realiable

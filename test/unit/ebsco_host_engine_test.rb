@@ -71,7 +71,21 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     
     query_params = CGI.parse( URI.parse(url).query )
     
-    assert_equal ["(SU cancer) AND RV Y"], query_params["query"]
+    assert_equal ["(SU cancer) AND (RV Y)"], query_params["query"]
+  end
+  
+  def test_date_limit_construction
+    url = @engine.query_url(:query => "cancer", :pubyear_start => "1980", :pubyear_end => "1989")    
+    query_params = CGI.parse( URI.parse(url).query )    
+    
+    assert_equal ["cancer AND (DT 1980-1989)"], query_params["query"]
+    
+    # just one
+    url = @engine.query_url(:query => "cancer", :pubyear_start => "1980")
+    query_params = CGI.parse( URI.parse(url).query )    
+    
+    assert_equal ["cancer AND (DT 1980-)"], query_params["query"]    
+    
   end
   
   
