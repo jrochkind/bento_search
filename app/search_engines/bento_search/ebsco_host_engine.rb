@@ -195,6 +195,8 @@ class BentoSearch::EbscoHostEngine
 
     if xml_node.at_xpath("./jinfo/*") && xml_node.at_xpath("./artinfo/*")
       "Article"
+    elsif xml_node.at_xpath("./bkinfo") && xml_node.at_xpath("./chapinfo")
+      :book_item
     elsif xml_node.at_xpath("./bkinfo/*")
       "Book"
     elsif xml_node.at_xpath("./dissinfo/*")
@@ -354,8 +356,31 @@ class BentoSearch::EbscoHostEngine
     item.link           = get_link(xml_rec)
 
     item.issn           = text_if_present info.at_xpath("./jinfo/issn")
-
-    item.journal_title  = text_if_present(info.at_xpath("./jinfo/jtl"))
+    
+    # Dealing with titles is a bit crazy, while articles usually have atitles and
+    # jtitles, sometimes they have a btitle instead. A book will usually have
+    # both btitle and atitle, but sometimes just atitle. Book chapter, oh boy. 
+    
+    jtitle        = text_if_present(info.at_xpath("./jinfo/jtl"))
+    btitle        = text_if_present info.at_xpath("./bkinfo/btl")
+    atitle        = text_if_present info.at_xpath("./artinfo/tig/atl")
+    
+    if jtitle && atitle
+      item.title          = atitle
+      item.source_title   = jtitle
+    elsif btitle && atitle
+      item.title          = atitle
+      item.source_title   = btitle
+    else
+      item.title  = atitle || btitle
+    end    
+    # EBSCO sometimes has crazy long titles, truncate em.
+    if item.title.present?
+      item.title        = text_helper.truncate(item.title, :length => 200, :separator => ' ', :omission => '…')
+    end
+    
+    
+    
     item.publisher      = text_if_present info.at_xpath("./pubinfo/pub")
     # if no publisher, but a dissertation institution, use that
     # as publisher. 
@@ -382,15 +407,7 @@ class BentoSearch::EbscoHostEngine
     item.issue          = text_if_present info.at_xpath("./pubinfo/iid")
     
     
-    item.title          = text_if_present info.at_xpath("./artinfo/tig/atl")
-    # sometimes title is bizarrely not present there, but in bkinfo instead
-    unless item.title
-      item.title        = text_if_present info.at_xpath("./bkinfo/btl")
-    end
-    # EBSCO sometimes has crazy long titles, truncate em.
-    if item.title.present?
-      item.title        = text_helper.truncate(item.title, :length => 200, :separator => ' ', :omission => '…')
-    end
+    
     
     item.start_page     = text_if_present info.at_xpath("./artinfo/ppf")
     
