@@ -148,5 +148,22 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
     assert_equal '12345',openurl.referent.metadata["oclcnum"] 
   end
   
+  def test_book_chapter
+    item = BentoSearch::ResultItem.new(
+      :format => :book_item, 
+      :title => "A Chapter",
+      :source_title => "Containing Book",
+      :isbn => "1234567X"
+      )
+    
+    openurl = item.to_openurl
+    
+    assert_equal "book",      openurl.referent.format
+    assert_equal "bookitem",  openurl.referent.metadata["genre"]
+    assert_equal "A Chapter", openurl.referent.metadata["atitle"]
+    assert_equal "Containing Book", openurl.referent.metadata["btitle"]
+    
+  end
+  
   
 end

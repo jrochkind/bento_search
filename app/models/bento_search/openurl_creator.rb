@@ -72,9 +72,13 @@ module BentoSearch
       r.set_metadata("isbn",    result_item.isbn)
       r.set_metadata("pub",     ensure_no_tags(result_item.publisher))
       
+      
       case result_item.format
       when "Book"
         r.set_metadata("btitle", ensure_no_tags(result_item.complete_title))
+      when :book_item         
+        r.set_metadata("btitle", result_item.source_title)
+        r.set_metadata("atitle", result_item.title)                  
       when "Article", :conference_paper
         r.set_metadata("atitle", ensure_no_tags(result_item.complete_title))
       else
@@ -129,8 +133,8 @@ module BentoSearch
     # with much actual software, as a neutral default. 
     def format
       case result_item.format
-      when "Book"
-        "book"
+      when "Book", :book_item
+        "book"      
       when :dissertation
         "dissertation"
       else
