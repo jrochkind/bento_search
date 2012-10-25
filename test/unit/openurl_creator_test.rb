@@ -134,5 +134,19 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
     assert_equal "2012-05-01", openurl.referent.metadata["date"]     
   end
   
+  def test_oclcnum
+    item = BentoSearch::ResultItem.new(      
+      :title => "some title",
+      :oclcnum => "12345"                   
+      )
+    
+    openurl = item.to_openurl
+    
+    # The legal way:
+    assert_include openurl.referent.identifiers, 'info:oclcnum/12345'
+    # Not actually legal but common practice:
+    assert_equal '12345',openurl.referent.metadata["oclcnum"] 
+  end
+  
   
 end
