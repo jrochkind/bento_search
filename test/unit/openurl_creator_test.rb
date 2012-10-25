@@ -31,7 +31,7 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
     assert_equal "100",         r.metadata["epage"]
     assert_equal "Journal of Fakes", r.metadata["jtitle"]
     assert_equal "12345678",    r.metadata["issn"]
-    assert_include r.identifiers, "info:doi:XXXX"
+    assert_include r.identifiers, "info:doi/XXXX"
     
     assert_equal "John",        r.metadata["aufirst"]
     assert_equal "Smith",       r.metadata["aulast"]
