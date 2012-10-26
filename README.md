@@ -308,6 +308,10 @@ documented at ResultItem#format). As well as how well the #to_openurl routine
 handles all edge cases (OpenURL can be weird). As edge cases are discovered, they
 can be solved. 
 
+See `./app/item_decorators/bento_search/openurl_add_other_link.rb` for an example
+of using item decorators to add a link to your openurl resover to an item when
+displayed. 
+
 ## Planned Features
 
 I am trying to keep BentoSearch as simple as it can be to conveniently meet
