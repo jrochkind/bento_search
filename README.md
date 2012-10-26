@@ -119,6 +119,8 @@ a list of BentoSearch::Results in a standard way, using the bento_search
 helper method. 
 
     <%= bento_search(@results) %>
+
+See also the [Customizing Results Display wiki page](https://github.com/jrochkind/bento_search/wiki/Customizing-Results-Display). 
     
 ### Fielded searching.
 
