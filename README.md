@@ -236,39 +236,14 @@ For more info, see BentoSearch::MultiSearcher.
 BentoSearch provides some basic support for initially displaying a placeholder
 progress spinner, and having Javascript call back to get the actual results. 
 
-* **Setup Pre-requisites** 
-    * In your `./config/routes.rb`, you need `BentoSearch::Routes.new(self).draw` in order
-      to route to the ajax loader. 
-    * In your asset pipeline, you must have `//= require 'bento_search/ajax_load` 
-      to get JS for ajax loading. (or require 'bento_search' to get all bento_search JS)
-* **Note** that this is not a panacea for a very slow search engine -- if the
-search results take 20 seconds to come in, when the AJAX call back happens,
-your Rails process _will_ be blocked from serving any other requests for that 20
-seconds. In fact, that makes this feature of very limited applicability in general,
-think carefully about what this will do for you. 
-* **Beware** that there are some authorization considerations if your search
-engine is not publically configurable, see BentoSearch::SearchController
-for more details. 
+It's not a panacea for pathologically slow search results, and can be tricky
+for results that need access controls. But it can be useful
+in some situations, both for automatic on-page-load ajax loading, and triggered
+ajax loading. 
 
-You have have registered a configured engine globally, and given it the special
-`:allow_routable_results` key. 
+See the [wiki page](https://github.com/jrochkind/bento_search/wiki/AJAX-results-loading)
+for more info. 
 
-    BentoSearch.register_engine("gbs") do |conf|
-      conf.api_key = "x"
-      conf.allow_routable_results = true
-    end
-    
-Now you can use the `bento_search` helper method with the registered id
-and query, instead of with results as before, and with an option for
-ajax auto-load. 
-
-    <%= bento_search("gbs", :query => "my query", 
-                     :semantic_search_field => :title,
-                     :load => :ajax_auto) %>
-
-
-(TODO: Document on-demand ajax loading, and 
- html5 meta total_items embedded in response ) 
                      
                      
 ### Item Decorators, and Links
