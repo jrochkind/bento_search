@@ -293,6 +293,21 @@ be used to add them.
 See BentoSearch::Link for more info on links. (TODO: Better docs/examples
 on decorators). 
 
+## OpenURL and metadata
+
+Academic library uses often need openurl links from scholarly citations. One of
+the design goals of bento_search is to produce standardized normalized BentoSearch::ResultItem
+models, with sufficient semantics for translation to other formats. 
+
+See ResultItem#to_openurl_kev (string URL query encoding of OpenURL), and 
+ResultItem#to_openurl (a [ruby OpenURL gem](https://github.com/openurl/openurl) object). 
+
+Quality may vary, depending on how well the particular engine adapter captures semantics,
+especially the format/type of results (See bento_search's internal format/type vocabulary
+documented at ResultItem#format). As well as how well the #to_openurl routine
+handles all edge cases (OpenURL can be weird). As edge cases are discovered, they
+can be solved. 
+
 ## Planned Features
 
 I am trying to keep BentoSearch as simple as it can be to conveniently meet
