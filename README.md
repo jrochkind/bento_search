@@ -26,7 +26,8 @@ Rails3 and tested only under ruby 1.9.3.
 bento_search is focused on use cases for academic libraries, which is mainly
 evidenced by the search engine adapters currently included, and by the
 generalized domain models including fields that matter in our domain (issn,
-vol/issue/page, etc). But it ought to be useful for more general basic use
+vol/issue/page, etc), and some targetted functionality (OpenURL generation). 
+But it ought to be useful for more general basic use
 cases too (we include a google site search adapter for instance). 
 
 Adapters currently included in bento_search
