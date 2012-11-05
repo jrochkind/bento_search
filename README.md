@@ -26,7 +26,8 @@ Rails3 and tested only under ruby 1.9.3.
 bento_search is focused on use cases for academic libraries, which is mainly
 evidenced by the search engine adapters currently included, and by the
 generalized domain models including fields that matter in our domain (issn,
-vol/issue/page, etc). But it ought to be useful for more general basic use
+vol/issue/page, etc), and some targetted functionality (OpenURL generation). 
+But it ought to be useful for more general basic use
 cases too (we include a google site search adapter for instance). 
 
 Adapters currently included in bento_search
@@ -118,6 +119,8 @@ a list of BentoSearch::Results in a standard way, using the bento_search
 helper method. 
 
     <%= bento_search(@results) %>
+
+See also the [Customizing Results Display wiki page](https://github.com/jrochkind/bento_search/wiki/Customizing-Results-Display). 
     
 ### Fielded searching.
 
@@ -235,39 +238,14 @@ For more info, see BentoSearch::MultiSearcher.
 BentoSearch provides some basic support for initially displaying a placeholder
 progress spinner, and having Javascript call back to get the actual results. 
 
-* **Setup Pre-requisites** 
-    * In your `./config/routes.rb`, you need `BentoSearch::Routes.new(self).draw` in order
-      to route to the ajax loader. 
-    * In your asset pipeline, you must have `//= require 'bento_search/ajax_load` 
-      to get JS for ajax loading. (or require 'bento_search' to get all bento_search JS)
-* **Note** that this is not a panacea for a very slow search engine -- if the
-search results take 20 seconds to come in, when the AJAX call back happens,
-your Rails process _will_ be blocked from serving any other requests for that 20
-seconds. In fact, that makes this feature of very limited applicability in general,
-think carefully about what this will do for you. 
-* **Beware** that there are some authorization considerations if your search
-engine is not publically configurable, see BentoSearch::SearchController
-for more details. 
+It's not a panacea for pathologically slow search results, and can be tricky
+for results that need access controls. But it can be useful
+in some situations, both for automatic on-page-load ajax loading, and triggered
+ajax loading. 
 
-You have have registered a configured engine globally, and given it the special
-`:allow_routable_results` key. 
+See the [wiki page](https://github.com/jrochkind/bento_search/wiki/AJAX-results-loading)
+for more info. 
 
-    BentoSearch.register_engine("gbs") do |conf|
-      conf.api_key = "x"
-      conf.allow_routable_results = true
-    end
-    
-Now you can use the `bento_search` helper method with the registered id
-and query, instead of with results as before, and with an option for
-ajax auto-load. 
-
-    <%= bento_search("gbs", :query => "my query", 
-                     :semantic_search_field => :title,
-                     :load => :ajax_auto) %>
-
-
-(TODO: Document on-demand ajax loading, and 
- html5 meta total_items embedded in response ) 
                      
                      
 ### Item Decorators, and Links
@@ -292,6 +270,25 @@ be used to add them.
 
 See BentoSearch::Link for more info on links. (TODO: Better docs/examples
 on decorators). 
+
+## OpenURL and metadata
+
+Academic library uses often need openurl links from scholarly citations. One of
+the design goals of bento_search is to produce standardized normalized BentoSearch::ResultItem
+models, with sufficient semantics for translation to other formats. 
+
+See ResultItem#to_openurl_kev (string URL query encoding of OpenURL), and 
+ResultItem#to_openurl (a [ruby OpenURL gem](https://github.com/openurl/openurl) object). 
+
+Quality may vary, depending on how well the particular engine adapter captures semantics,
+especially the format/type of results (See bento_search's internal format/type vocabulary
+documented at ResultItem#format). As well as how well the #to_openurl routine
+handles all edge cases (OpenURL can be weird). As edge cases are discovered, they
+can be solved. 
+
+See `./app/item_decorators/bento_search/openurl_add_other_link.rb` for an example
+of using item decorators to add a link to your openurl resover to an item when
+displayed. 
 
 ## Planned Features
 
