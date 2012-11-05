@@ -39,11 +39,11 @@ module BentoSearch
       r.set_format( self.format )
       
       if result_item.doi
-        r.add_identifier("info:doi/#{CGI.escape result_item.doi}")
+        r.add_identifier("info:doi/#{result_item.doi}")
       end
       
       if result_item.oclcnum
-        r.add_identifier("info:oclcnum/#{CGI.escape result_item.oclcnum}")
+        r.add_identifier("info:oclcnum/#{result_item.oclcnum}")
         # and do the one that's not actually legal practice, but is common
         r.set_metadata("oclcnum", result_item.oclcnum)
       end

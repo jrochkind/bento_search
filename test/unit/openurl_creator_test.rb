@@ -165,5 +165,20 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
     
   end
   
+  def test_doi
+    item = BentoSearch::ResultItem.new(      
+      :title => "Sample",
+      :doi => "10.3305/nh.2012.27.5.5997"
+      )
+    
+    openurl = item.to_openurl
+    
+    assert openurl.referent.identifiers.find {|i| i == "info:doi/10.3305/nh.2012.27.5.5997" }
+    
+    kev = openurl.kev
+    
+    assert_include kev, "&rft_id=info%3Adoi%2F10.3305%2Fnh.2012.27.5.5997"        
+  end
+  
   
 end
