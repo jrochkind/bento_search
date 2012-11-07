@@ -104,7 +104,16 @@ module BentoSearch
         # if it exists. 
         item.link           = v_info["previewLink"] || v_info["canonicalVolumeLink"]        
         item.abstract       = sanitize v_info["description"]        
-        item.year           = get_year v_info["publishedDate"]         
+        item.year           = get_year v_info["publishedDate"]
+        # sometimes we have yyyy-mm, but we need a date to make a ruby Date,
+        # we'll just say the 1st. 
+        item.publication_date = case v_info["publishedDate"]
+          when /(\d\d\d\d)-(\d\d)/ then Date.parse "#{$1}-#{$2}-01"
+          when /(\d\d\d\d)-(\d\d)-(\d\d)/ then Date.parse v_info["published_date"]
+          else nil
+        end
+
+          
         item.format         = if v_info["printType"] == "MAGAZINE"
                               :serial
                             else
