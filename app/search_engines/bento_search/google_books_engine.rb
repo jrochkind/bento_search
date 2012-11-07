@@ -75,7 +75,9 @@ module BentoSearch
         item.title          = j_item["title"] 
         item.subtitle       = j_item["subtitle"] 
         item.publisher      = j_item["publisher"]
-        item.link           = j_item["canonicalVolumeLink"]        
+        # previewLink gives you your search results highlighted, preferable
+        # if it exists. 
+        item.link           = j_item["previewLink"] || j_item["canonicalVolumeLink"]        
         item.abstract       = sanitize j_item["description"]        
         item.year           = get_year j_item["publishedDate"]         
         item.format         = if j_item["printType"] == "MAGAZINE"
