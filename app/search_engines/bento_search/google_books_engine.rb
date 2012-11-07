@@ -16,6 +16,31 @@ module BentoSearch
   #
   # Configuration :api_key STRONGLY recommended, or google will severely
   # rate-limit you. 
+  #
+  # == Custom Data
+  # GBS API's "viewability" value is stored at item.custom_data[:viewability]
+  # PARTIAL, ALL_PAGES, NO_PAGES or UNKNOWN. 
+  # https://developers.google.com/books/docs/v1/reference/volumes#resource
+  #
+  # You may want to use the item decorators feature to replace the format string
+  # displayed by standard view template (mostly just "Book") with the viewability
+  # status:
+  #
+  # BentoSearch.register_engine("gbs") do |conf|
+  #  # ...
+  #  conf.item_decorators = [
+  #   Module.new do
+  #     def display_format
+  #       case custom_data[:viewability]
+  #       when "ALL_PAGES" then "Full view"
+  #       when "PARTIAL" then "Partial view"
+  #       else nil
+  #       end
+  #     end
+  #   end
+  #  ]
+  # end
+  # 
   class GoogleBooksEngine
     include BentoSearch::SearchEngine
     include ActionView::Helpers::SanitizeHelper
@@ -66,21 +91,21 @@ module BentoSearch
       results.total_items = json["totalItems"]
 
       
-      (json["items"] || []).each do |j_item|
-        j_item = j_item["volumeInfo"] if j_item["volumeInfo"]
+      (json["items"] || []).each do |item_response|
+        v_info = item_response["volumeInfo"] || {}
 
         item = ResultItem.new
         results << item
         
-        item.title          = j_item["title"] 
-        item.subtitle       = j_item["subtitle"] 
-        item.publisher      = j_item["publisher"]
+        item.title          = v_info["title"] 
+        item.subtitle       = v_info["subtitle"] 
+        item.publisher      = v_info["publisher"]
         # previewLink gives you your search results highlighted, preferable
         # if it exists. 
-        item.link           = j_item["previewLink"] || j_item["canonicalVolumeLink"]        
-        item.abstract       = sanitize j_item["description"]        
-        item.year           = get_year j_item["publishedDate"]         
-        item.format         = if j_item["printType"] == "MAGAZINE"
+        item.link           = v_info["previewLink"] || v_info["canonicalVolumeLink"]        
+        item.abstract       = sanitize v_info["description"]        
+        item.year           = get_year v_info["publishedDate"]         
+        item.format         = if v_info["printType"] == "MAGAZINE"
                               :serial
                             else
                               "Book"
@@ -88,30 +113,32 @@ module BentoSearch
                             
 
                             
-        item.language_code  = j_item["language"]
+        item.language_code  = v_info["language"]
                             
-        (j_item["authors"] || []).each do |author_name|
+        (v_info["authors"] || []).each do |author_name|
           item.authors << Author.new(:display => author_name)
         end
         
         # Find ISBN's, prefer ISBN-13
-        item.isbn           = (j_item["industryIdentifiers"] || []).find {|node| node["type"] == "ISBN_13"}.try {|node| node["identifier"]}
+        item.isbn           = (v_info["industryIdentifiers"] || []).find {|node| node["type"] == "ISBN_13"}.try {|node| node["identifier"]}
         unless item.isbn
           # Look for ISBN-10 okay
-          item.isbn         = (j_item["industryIdentifiers"] || []).find {|node| node["type"] == "ISBN_10"}.try {|node| node["identifier"]}
+          item.isbn         = (v_info["industryIdentifiers"] || []).find {|node| node["type"] == "ISBN_10"}.try {|node| node["identifier"]}
         end
         
 
         # only VERY occasionally does a GBS hit have an OCLC number, but let's look
         # just in case.
-        item.oclcnum        = (j_item["industryIdentifiers"] || []).
+        item.oclcnum        = (v_info["industryIdentifiers"] || []).
           find {|node| node["type"] == "OTHER" && node["identifier"].starts_with?("OCLC:") }.
           try do |node|
             node =~ /OCLC:(.*)/ ? $1 : nil
           end
-        
-        
-        
+                  
+        # save viewability status in custom_data. PARTIAL, ALL_PAGES, NO_PAGES or UNKNOWN. 
+        # https://developers.google.com/books/docs/v1/reference/volumes#resource
+        item.custom_data[:viewability] = item_response["accessInfo"].try {|h| h["viewability"]}
+          
       end
       
       
