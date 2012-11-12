@@ -27,22 +27,24 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
     
     assert_kind_of BentoSearch::ResultItem, first
     
-    assert_not_empty first.title
-    assert_not_empty first.publisher
-    assert_not_empty first.link
-    assert_not_empty first.format
-    assert_not_nil first.year
-    assert_not_empty first.abstract
-    assert first.abstract.html_safe?
+    assert_not_empty    first.title
+    assert_not_empty    first.publisher
+    assert_not_empty    first.link
+    assert_not_empty    first.format
+    assert_not_nil      first.year
+    assert_not_empty    first.abstract
+    assert              first.abstract.html_safe?
     
-    assert_present first.language_code
+    assert_present      first.language_code
     
-    assert_not_empty first.authors
-    assert_not_empty first.authors.first.display
+    assert_not_empty    first.authors
+    assert_not_empty    first.authors.first.display
     
     # assume at least one thing in the result set has an ISBN to test
     # our ISBN-setting code. 
-    assert_present results.find {|r| r.isbn.present? }
+    assert_present      results.find {|r| r.isbn.present? }
+    
+    assert_present      first.custom_data[:viewability]
   end
   
   test_with_cassette("pagination", :gbs) do
