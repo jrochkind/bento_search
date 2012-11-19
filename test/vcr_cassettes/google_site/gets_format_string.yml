@@ -1,0 +1,232 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/customsearch/v1?cx=DUMMY_CX&key=DUMMY_API_KEY&num=10&q=Adobe%20PDF
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Mon, 19 Nov 2012 22:28:22 GMT
+      Date:
+      - Mon, 19 Nov 2012 22:28:22 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - ! '"5n-ABuX6AxBQtv21jBFt-w_behM/xWVxFkcqkjg50VIXRJyKFTP4wto"'
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: ! "{\n \"kind\": \"customsearch#search\",\n \"url\": {\n  \"type\":
+        \"application/json\",\n  \"template\": \"https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json\"\n
+        },\n \"queries\": {\n  \"nextPage\": [\n   {\n    \"title\": \"Google Custom
+        Search - Adobe PDF\",\n    \"totalResults\": \"358\",\n    \"searchTerms\":
+        \"Adobe PDF\",\n    \"count\": 10,\n    \"startIndex\": 11,\n    \"inputEncoding\":
+        \"utf8\",\n    \"outputEncoding\": \"utf8\",\n    \"safe\": \"off\",\n    \"cx\":
+        \"DUMMY_CX\"\n   }\n  ],\n  \"request\": [\n   {\n    \"title\": \"Google
+        Custom Search - Adobe PDF\",\n    \"totalResults\": \"358\",\n    \"searchTerms\":
+        \"Adobe PDF\",\n    \"count\": 10,\n    \"startIndex\": 1,\n    \"inputEncoding\":
+        \"utf8\",\n    \"outputEncoding\": \"utf8\",\n    \"safe\": \"off\",\n    \"cx\":
+        \"DUMMY_CX\"\n   }\n  ]\n },\n \"context\": {\n  \"title\": \"JHU Libraries
+        test\"\n },\n \"searchInformation\": {\n  \"searchTime\": 0.091685,\n  \"formattedSearchTime\":
+        \"0.09\",\n  \"totalResults\": \"358\",\n  \"formattedTotalResults\": \"358\"\n
+        },\n \"items\": [\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\":
+        \"E-Readers - E-Books - Library Guides at Johns Hopkins University\",\n   \"htmlTitle\":
+        \"E-Readers - E-Books - Library Guides at Johns Hopkins University\",\n   \"link\":
+        \"http://guides.library.jhu.edu/content.php?pid=156837&sid=1328261\",\n   \"displayLink\":
+        \"guides.library.jhu.edu\",\n   \"snippet\": \"Adobe Reader software is the
+        global standard for electronic document sharing. It   is the only PDF file
+        viewer that can open and interact with all PDF documents ...\",\n   \"htmlSnippet\":
+        \"\\u003cb\\u003eAdobe\\u003c/b\\u003e Reader software is the global standard
+        for electronic document sharing. It \\u003cbr\\u003e  is the only \\u003cb\\u003ePDF\\u003c/b\\u003e
+        file viewer that can open and interact with all \\u003cb\\u003ePDF\\u003c/b\\u003e
+        documents \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"formattedUrl\": \"guides.library.jhu.edu/content.php?pid=156837&sid=1328261\",\n
+        \  \"htmlFormattedUrl\": \"guides.library.jhu.edu/content.php?pid=156837&amp;sid=1328261\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Sue Vazakas\",\n
+        \     \"copyright\": \"Copyright Johns Hopkins University 2012\",\n      \"dc.title\":
+        \"Library Guides. E-Books. E-Readers.\",\n      \"dc.creator\": \"Sue Vazakas\",\n
+        \     \"dc.subject\": \"E-Readers E-Books Library Guides\",\n      \"dc.description\":
+        \"How to find electronic books and resources in the library's catalog. E-books
+        are usually read on dedicated hardware devices known as e-Readers or e-book
+        devices\",\n      \"dc.publisher\": \"Johns Hopkins University Sheridan Libraries\",\n
+        \     \"dc.rights\": \"Copyright Johns Hopkins University 2012\",\n      \"dc.language\":
+        \"en\",\n      \"dc.identifier\": \"http://guides.library.jhu.edu/ebooks\",\n
+        \     \"dc.date.created\": \"May 9, 2011\",\n      \"dc.date.modified\": \"Nov
+        15, 2012\",\n      \"dc.unused\": \"Contributor, Date, Type, Format, Source,
+        Relation, Coverage\",\n      \"y_key\": \"65baedbaee9038f3\"\n     }\n    ]\n
+        \  }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\": \"Introduction
+        to Web Accessibility\",\n   \"htmlTitle\": \"Introduction to Web Accessibility\",\n
+        \  \"link\": \"http://ldp.library.jhu.edu/documents/welch_class.pdf\",\n   \"displayLink\":
+        \"ldp.library.jhu.edu\",\n   \"snippet\": \"a tagged Adobe PDF file from an
+        untagged PDF file. This allows a pdf document   to be read by a screen reader
+        for greater accessibility. PDF Tags are used to ...\",\n   \"htmlSnippet\":
+        \"a tagged \\u003cb\\u003eAdobe PDF\\u003c/b\\u003e file from an untagged
+        PDF file. This allows a pdf document \\u003cbr\\u003e  to be read by a screen
+        reader for greater accessibility. PDF Tags are used to \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"cacheId\": \"Svr2mu2ExfYJ\",\n   \"mime\": \"application/pdf\",\n   \"fileFormat\":
+        \"PDF/Adobe Acrobat\",\n   \"formattedUrl\": \"ldp.library.jhu.edu/documents/welch_class.pdf\",\n
+        \  \"htmlFormattedUrl\": \"ldp.library.jhu.edu/documents/welch_class.\\u003cb\\u003epdf\\u003c/b\\u003e\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"moddate\": \"D:20050804170729-04'00'\",\n
+        \     \"creationdate\": \"D:20050804165740-04'00'\",\n      \"title\": \"welch_class.ppt\",\n
+        \     \"creator\": \"PowerPoint\",\n      \"author\": \"System Administrator\",\n
+        \     \"producer\": \"Mac OS X 10.4.1 Quartz PDFContext\"\n     }\n    ]\n
+        \  }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\": \"an
+        archaeology of knowledge\",\n   \"htmlTitle\": \"an archaeology of knowledge\",\n
+        \  \"link\": \"https://jscholarship.library.jhu.edu/bitstream/handle/1774.2/36138/080912_QRR%20label.pdf\",\n
+        \  \"displayLink\": \"jscholarship.library.jhu.edu\",\n   \"snippet\": \"Aug
+        9, 2012 ... Mounting Hardware. Scale: Full. Color. White (semigloss) - Panel.
+        Dark Blue -   Text. Typeface. Adobe Garamond. Adobe Garamond Bold.\",\n   \"htmlSnippet\":
+        \"Aug 9, 2012 \\u003cb\\u003e...\\u003c/b\\u003e Mounting Hardware. Scale:
+        Full. Color. White (semigloss) - Panel. Dark Blue - \\u003cbr\\u003e  Text.
+        Typeface. \\u003cb\\u003eAdobe\\u003c/b\\u003e Garamond. \\u003cb\\u003eAdobe\\u003c/b\\u003e
+        Garamond Bold.\",\n   \"cacheId\": \"NlFbq6EZxYQJ\",\n   \"mime\": \"application/pdf\",\n
+        \  \"fileFormat\": \"PDF/Adobe Acrobat\",\n   \"formattedUrl\": \"https://jscholarship.library.jhu.edu/bitstream/.../080912_QRR%20label.pdf\",\n
+        \  \"htmlFormattedUrl\": \"https://jscholarship.library.jhu.edu/bitstream/.../080912_QRR%20label.\\u003cb\\u003epdf\\u003c/b\\u003e\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"creationdate\": \"D:20120809132032-04'00'\",\n
+        \     \"creator\": \"Adobe Illustrator CS5\",\n      \"moddate\": \"D:20120809132032-04'00'\",\n
+        \     \"producer\": \"Adobe PDF library 9.90\",\n      \"title\": \"080912_QRR
+        label\"\n     }\n    ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n
+        \  \"title\": \"Reserve Course Readings - Spring and Summer 2012\",\n   \"htmlTitle\":
+        \"Reserve Course Readings - Spring and Summer 2012\",\n   \"link\": \"http://reserves.library.jhu.edu/access/reserves/findit/articles/index.php\",\n
+        \  \"displayLink\": \"reserves.library.jhu.edu\",\n   \"snippet\": \"May 11,
+        2012 ... To access these materials, you will need a current version of Adobe's
+        Acrobat   Reader software. Macintosh users: The default Apple PDF reader ...\",\n
+        \  \"htmlSnippet\": \"May 11, 2012 \\u003cb\\u003e...\\u003c/b\\u003e To access
+        these materials, you will need a current version of \\u003cb\\u003eAdobe&#39;s\\u003c/b\\u003e
+        Acrobat \\u003cbr\\u003e  Reader software. Macintosh users: The default Apple
+        \\u003cb\\u003ePDF\\u003c/b\\u003e reader \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"cacheId\": \"-lOOb_87l3UJ\",\n   \"formattedUrl\": \"reserves.library.jhu.edu/access/reserves/findit/articles/index.php\",\n
+        \  \"htmlFormattedUrl\": \"reserves.library.jhu.edu/access/reserves/findit/articles/index.php\",\n
+        \  \"pagemap\": {\n    \"cse_image\": [\n     {\n      \"src\": \"http://www.library.jhu.edu/bin/v/r/8.jpg\"\n
+        \    }\n    ],\n    \"cse_thumbnail\": [\n     {\n      \"width\": \"90\",\n
+        \     \"height\": \"73\",\n      \"src\": \"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT4xkB6ir-E-ryjtD3bPCPLNRIYL1eIyQ-iMw6QqfaDP1qJlP39wSejJg\"\n
+        \    }\n    ],\n    \"metatags\": [\n     {\n      \"dc.identifier\": \"http://reserves.library.jhu.edu/access/reserves/findit/articles/index.php\",\n
+        \     \"dc.title\": \"Reserve Course Readings - Spring 2012\",\n      \"dc.subject\":
+        \"readings, article, reserve, required, list, syllabus\",\n      \"dc.date.created\":
+        \"2008-11-04\",\n      \"dc.creator\": \"Bolgiano, John\",\n      \"dc.publisher\":
+        \"Sheridan Libraries, The Johns Hopkins University\"\n     }\n    ]\n   }\n
+        \ },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\": \"Short Dysfunctional
+        Telomeres Impair Tumorigenesis in the INK4a 2 ...\",\n   \"htmlTitle\": \"Short
+        Dysfunctional Telomeres Impair Tumorigenesis in the INK4a 2 \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"link\": \"https://jscholarship.library.jhu.edu/bitstream/handle/1774.2/33670/Cell1999-3.pdf\",\n
+        \  \"displayLink\": \"jscholarship.library.jhu.edu\",\n   \"snippet\": \"overlaid
+        in Adobe Photoshop (Adobe Sys- tems, Mountain View ..... value and   then
+        by the number of planes restored in the PDF (Femino et al., 1998).\",\n   \"htmlSnippet\":
+        \"overlaid in \\u003cb\\u003eAdobe\\u003c/b\\u003e Photoshop (\\u003cb\\u003eAdobe\\u003c/b\\u003e
+        Sys- tems, Mountain View \\u003cb\\u003e.....\\u003c/b\\u003e value and \\u003cbr\\u003e
+        \ then by the number of planes restored in the \\u003cb\\u003ePDF\\u003c/b\\u003e
+        (Femino et al., 1998).\",\n   \"cacheId\": \"Lt6CvWe-Uw4J\",\n   \"mime\":
+        \"application/pdf\",\n   \"fileFormat\": \"PDF/Adobe Acrobat\",\n   \"formattedUrl\":
+        \"https://jscholarship.library.jhu.edu/bitstream/handle/1774.../Cell1999-3.pdf\",\n
+        \  \"htmlFormattedUrl\": \"https://jscholarship.library.jhu.edu/bitstream/handle/1774.../Cell1999-3.\\u003cb\\u003epdf\\u003c/b\\u003e\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"creationdate\": \"D:19990507131745\",\n
+        \     \"producer\": \"Acrobat Distiller Daemon 3.01 for Solaris 2.3 and later
+        (SPARC)\",\n      \"creator\": \"SYSTEM400 Rev 11.14\",\n      \"title\":
+        \"088538u010\",\n      \"moddate\": \"D:20030317115205+01'00'\"\n     }\n
+        \   ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\":
+        \"List of features required for compliance - Web Advisory Council ...\",\n
+        \  \"htmlTitle\": \"List of features required for compliance - Web Advisory
+        Council \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"link\": \"https://wiki.library.jhu.edu/display/WAC/List+of+features+required+for+compliance\",\n
+        \  \"displayLink\": \"wiki.library.jhu.edu\",\n   \"snippet\": \"Sep 7, 2007
+        ... To learn more about Adobe's efforts to enhance PDF access, please visit
+        Adobe's   Accessibility page: http://www.adobe.com/accessibility.\",\n   \"htmlSnippet\":
+        \"Sep 7, 2007 \\u003cb\\u003e...\\u003c/b\\u003e To learn more about \\u003cb\\u003eAdobe&#39;s\\u003c/b\\u003e
+        efforts to enhance \\u003cb\\u003ePDF\\u003c/b\\u003e access, please visit
+        \\u003cb\\u003eAdobe&#39;s\\u003c/b\\u003e \\u003cbr\\u003e  Accessibility
+        page: http://www.\\u003cb\\u003eadobe\\u003c/b\\u003e.com/accessibility.\",\n
+        \  \"cacheId\": \"B-KLGktiXO8J\",\n   \"formattedUrl\": \"https://wiki.library.jhu.edu/.../List+of+features+required+for+compliance\",\n
+        \  \"htmlFormattedUrl\": \"https://wiki.library.jhu.edu/.../List+of+features+required+for+compliance\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"confluence-space-key\":
+        \"WAC\",\n      \"confluence-request-time\": \"1352954763940\"\n     }\n    ]\n
+        \  }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\": \"d.
+        Printing - Bloomberg - Library Guides at Johns Hopkins University\",\n   \"htmlTitle\":
+        \"d. Printing - Bloomberg - Library Guides at Johns Hopkins University\",\n
+        \  \"link\": \"http://guides.library.jhu.edu/content.php?pid=36657&sid=772161\",\n
+        \  \"displayLink\": \"guides.library.jhu.edu\",\n   \"snippet\": \"Aug 24,
+        2012 ... Follow Bloomberg's prompts to download PDF documents, reports, and
+        user   guides. Choose the print command within the Adobe reader.\",\n   \"htmlSnippet\":
+        \"Aug 24, 2012 \\u003cb\\u003e...\\u003c/b\\u003e Follow Bloomberg&#39;s prompts
+        to download \\u003cb\\u003ePDF\\u003c/b\\u003e documents, reports, and user
+        \\u003cbr\\u003e  guides. Choose the print command within the \\u003cb\\u003eAdobe\\u003c/b\\u003e
+        reader.\",\n   \"formattedUrl\": \"guides.library.jhu.edu/content.php?pid=36657&sid=772161\",\n
+        \  \"htmlFormattedUrl\": \"guides.library.jhu.edu/content.php?pid=36657&amp;sid=772161\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Heather
+        Tapager\",\n      \"copyright\": \"Copyright Johns Hopkins University 2012\",\n
+        \     \"dc.title\": \"Library Guides. Bloomberg. d. Printing.\",\n      \"dc.creator\":
+        \"Heather Tapager\",\n      \"dc.subject\": \"d. Printing Bloomberg Library
+        Guides\",\n      \"dc.description\": \"A guide to using JHU's on-campus Bloomberg
+        terminals.\",\n      \"dc.publisher\": \"Johns Hopkins University Sheridan
+        Libraries\",\n      \"dc.rights\": \"Copyright Johns Hopkins University 2012\",\n
+        \     \"dc.language\": \"en\",\n      \"dc.identifier\": \"http://guides.library.jhu.edu/bloomberg\",\n
+        \     \"dc.date.created\": \"Apr 14, 2010\",\n      \"dc.date.modified\":
+        \"Aug 24, 2012\",\n      \"dc.unused\": \"Contributor, Date, Type, Format,
+        Source, Relation, Coverage\",\n      \"y_key\": \"65baedbaee9038f3\"\n     }\n
+        \   ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\":
+        \"Coding Reference:\",\n   \"htmlTitle\": \"Coding Reference:\",\n   \"link\":
+        \"https://jscholarship.library.jhu.edu/bitstream/handle/1774.2/36224/ARL_Assessment_handout_2012.pdf\",\n
+        \  \"displayLink\": \"jscholarship.library.jhu.edu\",\n   \"snippet\": \"Poster
+        and handouts created using Adobe InDesign and EightShapes Unify.   Ellen Keith.
+        Current Director of. Research & Access,. Chicago History. Museum ...\",\n
+        \  \"htmlSnippet\": \"Poster and handouts created using \\u003cb\\u003eAdobe\\u003c/b\\u003e
+        InDesign and EightShapes Unify. \\u003cbr\\u003e  Ellen Keith. Current Director
+        of. Research &amp; Access,. Chicago History. Museum \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"cacheId\": \"7_VnXAOna6oJ\",\n   \"mime\": \"application/pdf\",\n   \"fileFormat\":
+        \"PDF/Adobe Acrobat\",\n   \"formattedUrl\": \"https://jscholarship.library.jhu.edu/.../ARL_Assessment_handout_2012.pdf\",\n
+        \  \"htmlFormattedUrl\": \"https://jscholarship.library.jhu.edu/.../ARL_Assessment_handout_2012.\\u003cb\\u003epdf\\u003c/b\\u003e\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"akoenig7\",\n
+        \     \"creationdate\": \"D:20121026172031-04'00'\",\n      \"creator\": \"PScript5.dll
+        Version 5.2.2\",\n      \"moddate\": \"D:20121107104559-05'00'\",\n      \"producer\":
+        \"Acrobat Distiller 10.1.3 (Windows)\"\n     }\n    ]\n   }\n  },\n  {\n   \"kind\":
+        \"customsearch#result\",\n   \"title\": \"November 2007\",\n   \"htmlTitle\":
+        \"November 2007\",\n   \"link\": \"http://saislibrary.blogspot.com/2007_11_01_archive.html\",\n
+        \  \"displayLink\": \"saislibrary.blogspot.com\",\n   \"snippet\": \"Nov 1,
+        2007 ... Foxit Reader 2.2 for Windows is a .pdf reader similar to Adobe Reader,
+        except it's   got a couple of nifty features Adobe doesn't: Launches faster
+        ...\",\n   \"htmlSnippet\": \"Nov 1, 2007 \\u003cb\\u003e...\\u003c/b\\u003e
+        Foxit Reader 2.2 for Windows is a .\\u003cb\\u003epdf\\u003c/b\\u003e reader
+        similar to \\u003cb\\u003eAdobe\\u003c/b\\u003e Reader, except it&#39;s \\u003cbr\\u003e
+        \ got a couple of nifty features \\u003cb\\u003eAdobe\\u003c/b\\u003e doesn&#39;t:
+        Launches faster \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"cacheId\": \"jtO1C5ou780J\",\n
+        \  \"formattedUrl\": \"saislibrary.blogspot.com/2007_11_01_archive.html\",\n
+        \  \"htmlFormattedUrl\": \"saislibrary.blogspot.com/2007_11_01_archive.html\",\n
+        \  \"pagemap\": {\n    \"cse_image\": [\n     {\n      \"src\": \"http://128.220.183.18/Blogftp/uploaded_images/srcover_novdec07-785465.jpg\"\n
+        \    }\n    ],\n    \"cse_thumbnail\": [\n     {\n      \"width\": \"211\",\n
+        \     \"height\": \"134\",\n      \"src\": \"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQSSprYiGlaGX8kPxyWVQ3KwMKxONv-PbbPVlR07lRMV3AEYMVMDMtMHiid\"\n
+        \    }\n    ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\":
+        \"Process Overview Results Results Background Future Work\",\n   \"htmlTitle\":
+        \"Process Overview Results Results Background Future Work\",\n   \"link\":
+        \"https://jscholarship.library.jhu.edu/bitstream/handle/1774.2/35437/OffcampPoster.pdf\",\n
+        \  \"displayLink\": \"jscholarship.library.jhu.edu\",\n   \"snippet\": \"Embed
+        services into additional \\\"high impact\\\" courses. • Conduct virtual office
+        \  hours pilot using Adobe Connect. • Gauge success over time through continuous
+        ...\",\n   \"htmlSnippet\": \"Embed services into additional &quot;high impact&quot;
+        courses. • Conduct virtual office \\u003cbr\\u003e  hours pilot using \\u003cb\\u003eAdobe\\u003c/b\\u003e
+        Connect. • Gauge success over time through continuous \\u003cb\\u003e...\\u003c/b\\u003e\",\n
+        \  \"cacheId\": \"xC5AdxJwbeoJ\",\n   \"mime\": \"application/pdf\",\n   \"fileFormat\":
+        \"PDF/Adobe Acrobat\",\n   \"formattedUrl\": \"https://jscholarship.library.jhu.edu/bitstream/handle/.../OffcampPoster.pdf\",\n
+        \  \"htmlFormattedUrl\": \"https://jscholarship.library.jhu.edu/bitstream/handle/.../OffcampPoster.\\u003cb\\u003epdf\\u003c/b\\u003e\",\n
+        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"creationdate\": \"D:20100408153903-04'00'\",\n
+        \     \"author\": \"jcastal2\",\n      \"creator\": \"PScript5.dll Version
+        5.2.2\",\n      \"producer\": \"Acrobat Distiller 7.0.5 (Windows)\",\n      \"moddate\":
+        \"D:20100408153903-04'00'\",\n      \"title\": \"Microsoft PowerPoint - offcamp
+        posterfinal [Compatibility Mode]\"\n     }\n    ]\n   }\n  }\n ]\n}\n"
+    http_version: 
+  recorded_at: Mon, 19 Nov 2012 22:28:22 GMT
+recorded_with: VCR 2.2.5

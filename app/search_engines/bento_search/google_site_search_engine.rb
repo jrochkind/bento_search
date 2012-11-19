@@ -77,8 +77,10 @@ class BentoSearch::GoogleSiteSearchEngine
       else
         item.title          = json_item["title"]
         item.abstract       = json_item["snippet"]
-        item.source_title  = json_item["formattedUrl"]
+        item.source_title   = json_item["formattedUrl"]
       end
+            
+      item.format_str       = json_item["fileFormat"]
       
       item.link             = json_item["link"]
       

@@ -119,4 +119,13 @@ class GoogleSiteSearchTest < ActiveSupport::TestCase
     assert results.empty?    
   end
   
+  test_with_cassette("gets format string", :google_site) do
+    results = @engine.search("Adobe PDF")
+        
+    # assume at least one result had a PDF format, which it does
+    # in our current VCR capture. For a new one, find a search where
+    # it does. 
+    assert_present(results.find_all {|i| i.format_str =~ /PDF/ }, "At least one result has PDF in format_str")    
+  end
+  
 end
