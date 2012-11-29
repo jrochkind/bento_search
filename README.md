@@ -131,7 +131,7 @@ You can search by an internal engine-specific field name:
 Or, if the engine provides it, you can search by normalized semantic search
 field type names:
 
-    google_books_engine.search("smith", :semantic_earch_field => :title)
+    google_books_engine.search("smith", :semantic_search_field => :title)
     
 You can find out what fields a particular engine supports.
 
@@ -139,7 +139,7 @@ You can find out what fields a particular engine supports.
     google_books_engine.semantic_search_keys 
     
 A helper method for generating an html select of search field options is
-available in bento_field_hash_for, check it out. 
+available in `bento_field_hash_for`, check it out. 
 
 You can also provide all arguments in a single hash when it's convenient
 to do so:
@@ -157,16 +157,16 @@ An engine advertises what sort types it supports:
     google_books_engine.sort_keys
    
 An array of sort identifiers, where possible
-chosen from a standard list of semantics. (See list in config/i18n/en.yml,
-bento_search.sort_keys). 
+chosen from a standard list of semantics. (See list in `./config/i18n/en.yml`,
+`bento_search.sort_keys`). 
 
     google_books_engine.search("my query", :sort => "date_desc")
     
-For help creating your UI, you can use built-in helper method:
+For help creating your UI, you can use built-in helper method, perhaps with Rails helper
+options_for_select:
 
-    bento_sort_hash_for(engine)
-    #=> returns a Hash suitable as first argument for rails
-    # options_for_select helper, with sort options and labels from I18n. 
+    <%= options_for_select( bento_sort_hash_for(engine), params[:sort] ) %>
+    
         
     
 ### Pagination
