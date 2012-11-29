@@ -157,8 +157,8 @@ An engine advertises what sort types it supports:
     google_books_engine.sort_keys
    
 An array of sort identifiers, where possible
-chosen from a standard list of semantics. (See list in config/i18n/en.yml,
-bento_search.sort_keys). 
+chosen from a standard list of semantics. (See list in `./config/i18n/en.yml`,
+`bento_search.sort_keys`). 
 
     google_books_engine.search("my query", :sort => "date_desc")
     
