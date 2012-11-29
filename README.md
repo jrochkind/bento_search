@@ -162,11 +162,11 @@ chosen from a standard list of semantics. (See list in `./config/i18n/en.yml`,
 
     google_books_engine.search("my query", :sort => "date_desc")
     
-For help creating your UI, you can use built-in helper method:
+For help creating your UI, you can use built-in helper method, perhaps with Rails helper
+options_for_select:
 
-    bento_sort_hash_for(engine)
-    #=> returns a Hash suitable as first argument for rails
-    # options_for_select helper, with sort options and labels from I18n. 
+    <%= options_for_select( bento_sort_hash_for(engine), params[:sort] ) %>
+    
         
     
 ### Pagination
