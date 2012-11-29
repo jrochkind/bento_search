@@ -131,7 +131,7 @@ You can search by an internal engine-specific field name:
 Or, if the engine provides it, you can search by normalized semantic search
 field type names:
 
-    google_books_engine.search("smith", :semantic_earch_field => :title)
+    google_books_engine.search("smith", :semantic_search_field => :title)
     
 You can find out what fields a particular engine supports.
 
