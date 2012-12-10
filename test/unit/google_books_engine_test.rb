@@ -85,11 +85,11 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
   def test_sort_construction
     url = @engine.send(:args_to_search_url, :query => "cancer", :sort => "date_desc")
     
-    assert_match '&sort=newest', url
+    assert_match '&orderBy=newest', url
     
     url = @engine.send(:args_to_search_url, :query => "cancer", :sort => "relevance")
     
-    assert_not_match "&sort", url    
+    assert_not_match "&orderBy", url    
   end
   
   def test_fielded_search    

@@ -216,7 +216,7 @@ module BentoSearch
       if arguments[:sort] && 
           (defn = sort_definitions[arguments[:sort]]) &&
           (value = defn[:implementation])
-        query_url += "&sort=#{CGI.escape(value)}" 
+        query_url += "&orderBy=#{CGI.escape(value)}" 
       end
       
       
