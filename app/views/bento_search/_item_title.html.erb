@@ -1,0 +1,28 @@
+<%# 
+  # Prepare a title in an H4, with formats in parens in a <small> (for
+  # bootstrap), linked, etc.
+  #
+  # Pass in local `item` with BentoSearch::ResultItem (can use :as arg to
+  # Rails render). 
+  #  
+  # %>
+
+  <h4 class="bento_item_title">
+    <%= link_to_unless(item.link.blank?, item.complete_title, item.link) %>
+    
+    <% if item.display_format.present? || item.display_language.present? %>
+      <small class="bento_item_about">
+        
+        <% if item.display_format.present? %>
+          <span class="bento_format"><%= item.display_format %></span>
+        <% end %>
+        
+        <% if item.display_language.present? %>
+          <span class="bento_language">in <%= item.display_language %></span>
+        <% end %>
+      
+      </small>
+    <% end %>  
+  </h4>
+  
+

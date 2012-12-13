@@ -126,29 +126,13 @@ module BentoSearchHelper
     
 
   
-  # Prepare a title in an H4, with formats in parens in a <small> (for
-  # bootstrap), linked, etc. 
-  #
-  # This is getting a bit complex for a helper method. Not sure the best
-  # way to refactor, into partials and helpers? Presenter methods on
-  # on item? Without pollutting helper namespace too much?
+  # Deprecated, made more sense to put this in a partial. Just
+  # call partial directly:
+  #  <%= render :partial => "bento_search/item_title", :object => item, :as => 'item'  %>
   def bento_item_title(item)
-    content_tag("h4", :class => "bento_item_title") do
-      safe_join([
-        link_to_unless( item.link.blank?, item.complete_title, item.link ),
-        if item.display_format
-          content_tag("small", :class => "bento_item_about") do
-            arr = []
-            
-            arr << content_tag("span", item.display_format, :class => "bento_format") if item.display_format
-            arr << content_tag("span", "in #{item.display_language}", :class => "bento_language") if item.display_language
-            
-            " (".html_safe + safe_join(arr, " ") + ")".html_safe if arr
-          end
-        end
-      ], '')
-    end
+    render :partial => "bento_search/item_title", :object => item, :as => 'item'
   end
+  deprecate :bento_item_title
   
   # first 3 authors, each in a <span>, using item.author_display, seperated by
   # semi-colons. 

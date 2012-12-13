@@ -1,11 +1,17 @@
 <% #  must pass in local 'item' that's a BentoSearch::ResultItem
    #
+   # Note this will result in a variable `item_counter being available,
+   # with a 0-based counter. Under-documented Rails feature. Counter, however, 
+   # is of _current collection_ (not actual remote result index). See
+   # bento_item_index helper method. 
+   #
    # Custom partials meant to take this place of this one should
    # use same convention, local 'item'. 
 %>
 
+
 <div class="bento_item">
-  <%= bento_item_title(item) %>
+  <%= render :partial => "bento_search/item_title", :object => item, :as => 'item'  %>
     
   <div class="bento_item_body">
     
