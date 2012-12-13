@@ -228,6 +228,8 @@ class BentoSearch::EbscoHostEngine
     # normalization. 
     if ["Academic Journal", "Journal"].include?(components.first) && ["Article", "Journal Article"].include?(components.last)
       return "Journal Article"
+    elsif components.last == "Book: Monograph"
+      return "Book" # Book: Monograph what??
     elsif components.first == "Periodical" && components.length > 1
       return components.last
     elsif components.size == 2 && components.first.include?(components.last)
