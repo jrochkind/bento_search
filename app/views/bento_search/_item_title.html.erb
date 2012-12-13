@@ -4,24 +4,25 @@
   #
   # Pass in local `item` with BentoSearch::ResultItem (can use :as arg to
   # Rails render). 
+  #
+  # Optionally pass in a local "index" with result set index to display
+  # in front of title. 1. 2. etc. 
   #  
   # %>
-
   <h4 class="bento_item_title">
+    <% if local_assigns[:index] %>
+      <span class="bento_index"><%= index%>.</span>
+    <% end %>
+  
     <%= link_to_unless(item.link.blank?, item.complete_title, item.link) %>
     
     <% if item.display_format.present? || item.display_language.present? %>
+    
       <small class="bento_item_about">
-        
-        <% if item.display_format.present? %>
-          <span class="bento_format"><%= item.display_format %></span>
-        <% end %>
-        
-        <% if item.display_language.present? %>
-          <span class="bento_language">in <%= item.display_language %></span>
-        <% end %>
-      
+        <%# sorry, no whitespace so parens are flush %>
+        (<%- if item.display_format.present? -%><span class="bento_format"><%= item.display_format -%></span><%- end -%><%- if item.display_language.present? -%><span class="bento_language">in <%= item.display_language -%></span><%- end -%>)
       </small>
+      
     <% end %>  
   </h4>
   

@@ -12,6 +12,8 @@ class StdItemTest < ActionView::TestCase
       assert_select ".bento_item_title", item.title do 
         assert_select "a", false
       end
+            
+      
       # No author/title/etc rows, cause we don't have data
       assert_select ".bento_item_authors", false
       assert_select ".bento_item_key_meta", false
@@ -22,6 +24,16 @@ class StdItemTest < ActionView::TestCase
     
     # No other links in this test
     assert_select(".bento_item_other_links", 0)
+  end
+  
+  def test_has_counter_when_results_passed_in
+    results = BentoSearch::Results.new
+    results.start = 9
+    results << (item = BentoSearch::ResultItem.new(:title => "Some Title"))
+        
+    render :partial => "bento_search/std_item", :object => item, :as => "item", :locals => { :results => results, :item_counter => 5}
+    
+    assert_select ".bento_index", :text => "15."
   end
   
   def test_complete_article_item

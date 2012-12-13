@@ -134,6 +134,18 @@ module BentoSearchHelper
   end
   deprecate :bento_item_title
   
+  # pass in 0-based rails current collection counter and a BentoSearch::Results,
+  # calculates a user-displayable result set index label. 
+  #
+  # Only non-trivial thing is both inputs are allowed to be nil; if either
+  # is nil, nil is returned.  
+  def bento_item_counter(counter, results)
+    return nil if counter.nil? || results.nil? || results.start.nil?
+    
+    return counter + results.start + 1
+  end
+    
+  
   # first 3 authors, each in a <span>, using item.author_display, seperated by
   # semi-colons. 
   def bento_item_authors(item)
