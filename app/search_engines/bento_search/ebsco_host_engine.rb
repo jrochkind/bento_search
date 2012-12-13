@@ -431,8 +431,11 @@ class BentoSearch::EbscoHostEngine
     item.format_str      = sniff_format_str info
     
     # Totally unreliable, seems to report english for everything? Maybe
-    # because abstracts are in english? Nevertheless we include for now.
+    # because abstracts are in english? Nevertheless we include for now.    
     item.language_code   = text_if_present info.at_xpath("./language/@code")
+    # why does EBSCO return 'undetermined' sometimes? That might as well be
+    # not there, bah. 
+    item.language_code = nil if item.language_code == "und"
     
     # array of custom ebsco codes (or nil) for fulltext formats avail. 
     item.custom_data["fulltext_formats"] = fulltext_formats xml_rec
