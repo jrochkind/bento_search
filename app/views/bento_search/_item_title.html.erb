@@ -20,7 +20,7 @@
     
       <small class="bento_item_about">
         <%# sorry, no whitespace so parens are flush %>
-        (<%- if item.display_format.present? -%><span class="bento_format"><%= item.display_format -%></span><%- end -%><%- if item.display_language.present? -%><span class="bento_language">in <%= item.display_language -%></span><%- end -%>)
+        (<%- if item.display_format.present? -%><span class="bento_format"><%= item.display_format -%></span><%- end -%><%- if item.display_language.present? -%><span class="bento_language"> in <%= item.display_language -%></span><%- end -%>)
       </small>
       
     <% end %>  
