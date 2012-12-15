@@ -303,7 +303,6 @@ Probably:
   also may be supported by some engines that do not support facetting). 
 * Support for multi-field, multi-entry-box 'advanced search' UI's, in
   a normalized cross-engine way. 
-* More mindless support for displaying pagination UI with kaminari.
 
 Other needs or suggestions?
   
