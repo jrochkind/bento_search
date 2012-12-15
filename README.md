@@ -83,9 +83,11 @@ are a few standard keys (see BentoSearch::SearchEngine), and others that
 may be engine-specific. Some engine-specific keys (such as api auth keys) 
 may be required for certain engines. 
 
+~~~~ruby
     engine = BentoSearch::GoogleBooksEngine.new(:api_key => "my_gbs_api_key")
     results = engine.search("a query")
-    
+~~~~
+
 `results` are a BentoSearch::Results object, which acts like an array of
 BentoSearch::Item objects, along with some meta-information about the
 search itself (pagination keys, etc).  BentoSearch::Results and Item fields
@@ -102,16 +104,20 @@ required for certain functionality (like out-of-the-box AJAX loading).
 
 In an initializer in your app, like say `./config/initializers/bento_search.rb`:
 
+~~~~ruby
     BentoSearch.register_engine("gbs") do |conf|
        conf.engine = "BentoSearch::GoogleBooksEngine"
        conf.api_key = "my_google_api_key"
        # any other configuration
     end
+~~~~
     
 Then you can refer to it, for instance in a controller, by the id you registered:
 
+~~~~ruby
     @results = BentoSearch.get_engine("gbs").search("my query")
-    
+~~~~
+
 ### Display results
 
 You can of course write your own code to display a BentoSearch::Results object
@@ -119,7 +125,9 @@ however you like. But BentoSearch comes with a helper method for displaying
 a list of BentoSearch::Results in a standard way, using the bento_search
 helper method. 
 
+~~~~ruby
     <%= bento_search(@results) %>
+~~~~
 
 See also the [Customizing Results Display wiki page](https://github.com/jrochkind/bento_search/wiki/Customizing-Results-Display). 
     
@@ -127,25 +135,33 @@ See also the [Customizing Results Display wiki page](https://github.com/jrochkin
 
 You can search by an internal engine-specific field name:
 
+~~~~ruby
     google_books_engine.search("smith", :search_field => "inauthor")
-    
+~~~~
+
 Or, if the engine provides it, you can search by normalized semantic search
 field type names:
 
+~~~~ruby
     google_books_engine.search("smith", :semantic_search_field => :title)
-    
+~~~~
+
 You can find out what fields a particular engine supports.
 
+~~~~ruby
     google_books_engine.search_keys # => internal keys
     google_books_engine.semantic_search_keys 
-    
+~~~~
+
 A helper method for generating an html select of search field options is
 available in `bento_field_hash_for`, check it out. 
 
 You can also provide all arguments in a single hash when it's convenient
 to do so:
 
+~~~~ruby
     google_books_engine.search(:query => "smith", :search_field => "inauthor")
+~~~~
 
 Search fields that are not recognized (semantic or internal) will normally
 be ignored, but set `:unrecognized_search_field => :raise` in configuration
@@ -155,19 +171,24 @@ or search arg to get an ArgumentError instead.
 
 An engine advertises what sort types it supports:
 
+~~~~ruby
     google_books_engine.sort_keys
-   
+~~~~
+
 An array of sort identifiers, where possible
 chosen from a standard list of semantics. (See list in `./config/i18n/en.yml`,
 `bento_search.sort_keys`). 
 
+~~~~ruby
     google_books_engine.search("my query", :sort => "date_desc")
-    
+~~~~
+
 For help creating your UI, you can use built-in helper method, perhaps with Rails helper
 options_for_select:
 
+~~~~ruby
     <%= options_for_select( bento_sort_hash_for(engine), params[:sort] ) %>
-    
+~~~~    
         
     
 ### Pagination
@@ -176,13 +197,17 @@ You can tell the search engine how many items you want per-page, and
 use _either_ `:start` (0-based item offset) or `:page` (1-based page
 offset) keys to paginate into the results. 
 
+~~~~ruby
     results = google_books_engine.search("my query", :per_page => 20, :start => 40)
     results = google_books_engine.search("my query", :per_page => 20, :page => 2) # means same as above
-    
+~~~~
+
 An engine instance advertises it's maximum per-page values. 
 
+~~~~ruby
     google_books_engine.max_per_page
-    
+~~~~
+
 bento_search fixes the default per_page at 10.     
     
 For help creating your UI, you can ask a BentoSearch::Results for
@@ -191,8 +216,10 @@ object which should be suitable for passing to [kaminari](https://github.com/ama
 `paginate`, or else have convenient methods for roll your own pagination UI. 
 Kaminari's paginate method:
 
+~~~~ruby
     <%= paginate results.pagination %> 
-    
+~~~~
+
 ### Concurrent searching
 
 If you're going to search 2 or more search engines at once, you'll want to execute
