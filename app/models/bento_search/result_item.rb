@@ -237,11 +237,6 @@ module BentoSearch
     # TODO: Should this be moved to a rails helper method? Not sure. 
     def published_in
       result_elements = []
-
-      unless year.blank?
-        # wrap year in a span so we can bold it. 
-        result_elements.push "<span class='year'>#{year}</span>"
-      end
       
       result_elements.push(source_title) unless source_title.blank?      
       

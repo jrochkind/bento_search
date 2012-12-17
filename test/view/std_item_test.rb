@@ -15,7 +15,7 @@ class StdItemTest < ActionView::TestCase
             
       
       # No author/title/etc rows, cause we don't have data
-      assert_select ".bento_item_authors", false
+      assert_select ".authors", false
       assert_select ".bento_item_key_meta", false
       
       assert_select ".bento_item_row", false
@@ -40,12 +40,14 @@ class StdItemTest < ActionView::TestCase
     hash = {}
     hash[:title] = "Some Title"   
     hash[:link] = "http://example.org/1"
+    hash[:year] = "2001"
     hash[:journal_title] = "Journal of Invalid Results"
     hash[:volume] = "10"
     hash[:issue] = "1"
     hash[:start_page] = "101"
     hash[:end_page] = "120"
     hash[:format] = "MusicRecording"
+    hash[:abstract] = "This is an abstract."
     item = BentoSearch::ResultItem.new( hash )
     item.authors.push BentoSearch::Author.new(:display => "Smith, J.")
     
@@ -58,14 +60,17 @@ class StdItemTest < ActionView::TestCase
       
       # Make sure we have the items for complete citation
       
-
-      assert_select ".bento_item_authors"
-      assert_select ".bento_item_about" , 
-        Regexp.new(Regexp.escape( I18n.t(item.format, :scope => [:bento_search, :format])   ))
-        
+      assert_select ".bento_item_row.first_about" do
+        assert_select ".authors"
+        assert_select ".date"
+      end
       
-      assert_select ".bento_item_row"
-      assert_select ".published_in"
+      assert_select ".bento_item_row.abstract"
+      
+      assert_select ".bento_item_about" , 
+        Regexp.new(Regexp.escape( I18n.t(item.format, :scope => [:bento_search, :format])   ))        
+              
+      assert_select ".bento_item_row.second_about"      
     end              
     
   end

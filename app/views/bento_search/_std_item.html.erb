@@ -23,21 +23,29 @@
   <div class="bento_item_body">
     
     
-    <% if item.authors.length > 0 %>
-      <p class="bento_item_authors">  
-        <%= bento_item_authors(item) %>            
+    <% if item.authors.length > 0 || item.year.present? %>
+      <p class="bento_item_row first_about">
+        
+        <% if item.authors.length > 0 %>
+          <%= bento_item_authors(item) %>
+        <% end %>
+        
+        <% if item.year.present? %>
+          <span class="date"> — <%= item.year %> </span>
+        <% end %>
+              
       </p>
     <% end %>      
-          
-    <% if item.published_in %>
-      <p class="bento_item_row published_in">
-        <span class="bento_value"><%= item.published_in %> </span>
+                  
+    <% if item.abstract %>
+      <p class="bento_item_row abstract">
+        <%= bento_truncate( item.abstract ) %>
       </p>
     <% end %>
     
-    <% if item.abstract %>
-      <p class="bento_item_abstract">
-        <%= bento_truncate( item.abstract ) %>
+    <% if item.published_in %>
+      <p class="bento_item_row second_about">
+        <%= item.published_in %>
       </p>
     <% end %>
     

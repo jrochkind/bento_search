@@ -3,10 +3,6 @@
    or just use this as documentation for suggestions to implement yourself. */
    
    
-/* year in bold in citations */
-.bento_item_row.published_in .year {
-  font-weight: bold;
-}
 
 /* highlighted element in title is already in a <b> tag, but
    title is likely to be bold already. italisize it too. */   

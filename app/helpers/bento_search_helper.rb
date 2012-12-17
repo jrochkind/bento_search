@@ -154,12 +154,16 @@ module BentoSearchHelper
     first_three = item.authors.slice(0,3) 
         
     first_three.each_with_index do |author, index|
-      parts << content_tag("span", :class => "bento_item_author") do
+      parts << content_tag("span", :class => "authors") do
           item.author_display(author)
       end
       if (index + 1) < first_three.length
         parts << "; "
       end      
+    end
+    
+    if item.authors.length > 3
+      parts << I18n.t("bento_search.authors_et_al")
     end
     
     return safe_join(parts, "")
