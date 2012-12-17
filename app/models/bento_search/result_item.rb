@@ -238,19 +238,16 @@ module BentoSearch
     def published_in
       result_elements = []
       
-      result_elements.push(source_title) unless source_title.blank?      
+      result_elements.push("<span class='source_title'>#{html_escape source_title}</span>".html_safe) unless source_title.blank?      
       
       if source_title.blank? && ! publisher.blank?
         result_elements.push html_escape publisher
       end
       
-      if (! volume.blank?) && (! issue.blank?)
-        result_elements.push html_escape "#{volume}(#{issue})"
-      else
-        result_elements.push html_escape volume unless volume.blank?
-        result_elements.push html_escape issue unless issue.blank?
-      end
+      result_elements.push("#{I18n.t('bento_search.volume')} #{volume}") if volume.present?
       
+      result_elements.push("#{I18n.t('bento_search.issue')} #{issue}") if issue.present?
+            
       if (! start_page.blank?) && (! end_page.blank?)
         result_elements.push html_escape "pp. #{start_page}-#{end_page}"
       elsif ! start_page.blank?

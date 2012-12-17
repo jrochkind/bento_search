@@ -25,3 +25,7 @@
 .bento_item_title a .bento_search_highlight {
     font-style: inherit;
 }
+
+.bento_item_body .source_title {
+  font-style: italic;
+}
