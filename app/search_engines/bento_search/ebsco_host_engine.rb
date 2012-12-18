@@ -117,6 +117,8 @@ class BentoSearch::EbscoHostEngine
   def search_implementation(args)
     url = query_url(args)
     
+
+    
     results = BentoSearch::Results.new
     xml, response, exception = nil, nil, nil
 
@@ -192,11 +194,16 @@ class BentoSearch::EbscoHostEngine
   def sniff_format(xml_node)
     return nil if xml_node.nil?
     
-
     if xml_node.at_xpath("./jinfo/*") && xml_node.at_xpath("./artinfo/*")
       "Article"
     elsif xml_node.at_xpath("./bkinfo") && xml_node.at_xpath("./chapinfo")
       :book_item
+    elsif xml_node.at_xpath("./bkinfo/btl") && xml_node.at_xpath("./artinfo/tig/atl") &&
+        (text_if_present(xml_node.at_xpath "./bkinfo/btl") != text_if_present(xml_node.at_xpath "./artinfo/tig/atl"))
+      # pathological case of book_item, if it has a bkinfo and an artinfo
+      # but the titles in both sections MATCH, it's just a book. If they're
+      # differnet, it's a book section, bah@
+      :book_item        
     elsif xml_node.at_xpath("./bkinfo/*")
       "Book"
     elsif xml_node.at_xpath("./dissinfo/*")
@@ -444,8 +451,7 @@ class BentoSearch::EbscoHostEngine
     
     # array of custom ebsco codes (or nil) for fulltext formats avail. 
     item.custom_data["fulltext_formats"] = fulltext_formats xml_rec
-    
-    
+        
     return item
   end
   

@@ -208,6 +208,24 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
         
     assert_blank result.source_title
   end
+  
+  test_with_cassette("live pathological book_item example", :ebscohost) do
+    # this guy from RILM has really crappy metadata on EBSCO,
+    # but we still want to detect it as a book_item, not a book. 
+    
+    a = 'Heidegger and the management of the Haymarket Opera, 1713-1717'
+    
+    engine = BentoSearch::EbscoHostEngine.new( @config.merge(:databases => ["rih"]) )
+    results = engine.search('"Heidegger and the management of the Haymarket Opera, 1713-1717"')
+    result = results.first
+    
+    assert_equal :book_item, result.format
     
     
+    # for reasons I can't figure out, weird encoding in the hyphen makes us
+    # test start_with instead
+    assert result.title.starts_with?("Heidegger and the management of the Haymarket Opera, 1713")
+    assert result.source_title.starts_with?("Opera remade (1700")
+  end
+  
 end
