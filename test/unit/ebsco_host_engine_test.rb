@@ -188,5 +188,26 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     end    
     
   end
+  
+  test_with_cassette("live book example", :ebscohost) do    
+    # We keep adjusting the EBSCOHost heuristics for guessing format,
+    # and causing regressions, this test guards against them. 
+    
+    # This particular example from RILM is a book, but
+    # is getting listed as a book chapter, sort of. 
+    
+    engine = BentoSearch::EbscoHostEngine.new( @config.merge(:databases => ["rih"]) )  
+    
+    results = engine.search('"Funk: The music, the people, and the rhythm of the one"', :per_page => 1)
+    
+    result = results.first
+    
+    assert_equal "Book", result.format
+    assert_equal "St. Martin's Press", result.publisher
+    assert_equal "1996", result.year
+        
+    assert_blank result.source_title
+  end
+    
     
 end

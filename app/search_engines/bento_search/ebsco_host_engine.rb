@@ -116,7 +116,7 @@ class BentoSearch::EbscoHostEngine
   
   def search_implementation(args)
     url = query_url(args)
-    
+
     results = BentoSearch::Results.new
     xml, response, exception = nil, nil, nil
 
@@ -370,7 +370,9 @@ class BentoSearch::EbscoHostEngine
     if jtitle && atitle
       item.title          = atitle
       item.source_title   = jtitle
-    elsif btitle && atitle
+    elsif btitle && atitle && atitle != btitle
+      # for a book, sometimes there's an atitle block and a btitle block
+      # when they're identical, this ain't a book section, it's a book. 
       item.title          = atitle
       item.source_title   = btitle
     else

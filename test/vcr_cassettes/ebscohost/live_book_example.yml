@@ -1,0 +1,130 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://eit.ebscohost.com/Services/SearchService.asmx/Search?db=rih&numrec=1&prof=DUMMY_PROFILE&pwd=DUMMY_PWD&query=%22Funk:%20The%20music,%20the%20people,%20and%20the%20rhythm%20of%20the%20one%22&sort=relevance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        cHJpdmF0ZQ==
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        dGV4dC94bWw=
+      !binary "U2VydmVy":
+      - !binary |-
+        TWljcm9zb2Z0LUlJUy83LjU=
+      !binary "WC1Bc3BuZXQtVmVyc2lvbg==":
+      - !binary |-
+        NC4wLjMwMzE5
+      !binary "WC1Qb3dlcmVkLUJ5":
+      - !binary |-
+        QVNQLk5FVA==
+      !binary "RGF0ZQ==":
+      - !binary |-
+        VHVlLCAxOCBEZWMgMjAxMiAxNzozNDo0NSBHTVQ=
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        NzA2OQ==
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"?>\r\n<searchResponse xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
+        xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n  <Hits xmlns=\"http://epnet.com/webservices/SearchService/Response/2007/07/\">1</Hits>\r\n
+        \ <Statistics xmlns=\"http://epnet.com/webservices/SearchService/Response/2007/07/\">\r\n
+        \   <Statistic>\r\n      <Database>rih</Database>\r\n      <Hits>1</Hits>\r\n
+        \   </Statistic>\r\n  </Statistics>\r\n  <SearchResults xmlns=\"http://epnet.com/webservices/SearchService/Response/2007/07/\">\r\n
+        \   <records xmlns=\"\">\r\n      <rec recordID=\"1\">\r\n        <pdfLink
+        />\r\n        <plink>http://search.ebscohost.com/login.aspx?direct=true&amp;db=rih&amp;AN=1996-03247&amp;site=ehost-live&amp;scope=site</plink>\r\n
+        \       <header shortDbName=\"rih\" uiTerm=\"1996-03247\" longDbName=\"RILM
+        \ Abstracts of Music Literature\" uiTag=\"AN\">\r\n          <controlInfo>\r\n
+        \           <bkinfo>\r\n              <btl>Funk: The music, the people, and
+        the rhythm of the one</btl>\r\n              <aug>\r\n                <au>Vincent,
+        Rickey</au>\r\n                <au>Clinton, George</au>\r\n              </aug>\r\n
+        \             <isbn type=\"print\">0312134991</isbn>\r\n            </bkinfo>\r\n
+        \           <revinfo />\r\n            <dissinfo />\r\n            <jinfo
+        />\r\n            <pubinfo>\r\n              <dt year=\"1996\" month=\"01\"
+        day=\"01\" />\r\n              <pub>St. Martin's Press</pub>\r\n              <place>New
+        York</place>\r\n            </pubinfo>\r\n            <artinfo>\r\n              <ui>1996-03247</ui>\r\n
+        \             <tig>\r\n                <atl>Funk: The music, the people, and
+        the rhythm of the one</atl>\r\n              </tig>\r\n              <aug>\r\n
+        \               <au>Vincent, Rickey</au>\r\n                <au>Clinton, George</au>\r\n
+        \             </aug>\r\n              <sug>\r\n                <subj type=\"unclass\">popular
+        music--by genre -- funk -- history and development</subj>\r\n                <subj
+        type=\"unclass\">United States of America -- popular music -- funk -- history
+        and development</subj>\r\n                <subj type=\"unclass\">sound recordings
+        -- funk</subj>\r\n                <subj type=\"unclass\">Brown, James -- life
+        -- influence on funk</subj>\r\n                <subj type=\"unclass\">Morris,
+        Steveland Judkins (Stevie Wonder) -- life -- relation to funk</subj>\r\n                <subj
+        type=\"unclass\">performing groups--popular music -- Temptations -- relation
+        to funk</subj>\r\n                <subj type=\"unclass\">Hendrix, James Marshall
+        (Jimi) -- life -- relation to funk</subj>\r\n                <subj type=\"unclass\">performing
+        groups--popular music -- Sly and the Family Stone -- relation to funk</subj>\r\n
+        \               <subj type=\"unclass\">performing groups--popular music --
+        Isley Brothers -- relation to funk</subj>\r\n                <subj type=\"unclass\">jazz
+        -- jazz-funk</subj>\r\n                <subj type=\"unclass\">Davis, Miles
+        -- life -- relation to funk</subj>\r\n                <subj type=\"unclass\">Hancock,
+        Herbert Jeffrey (Herbie) -- life -- relation to funk</subj>\r\n                <subj
+        type=\"unclass\">performing groups--popular music -- Parliament-Funkadelic
+        -- relation to funk</subj>\r\n                <subj type=\"unclass\">performing
+        groups--popular music -- Bootsy's Rubber Band -- relation to funk</subj>\r\n
+        \               <subj type=\"unclass\">Collins, William (Bootsy) -- life --
+        relation to funk</subj>\r\n                <subj type=\"unclass\">James, Rick
+        -- life -- relation to funk</subj>\r\n                <subj type=\"unclass\">performing
+        groups--popular music -- Gap Band -- relation to funk</subj>\r\n                <subj
+        type=\"unclass\">performing groups--popular music -- Chic -- relation to funk</subj>\r\n
+        \               <subj type=\"unclass\">performing groups--popular music --
+        KC and the Sunshine Band -- relation to funk</subj>\r\n                <subj
+        type=\"unclass\">performing groups--popular music -- Kool &amp; the Gang --
+        relation to funk</subj>\r\n                <subj type=\"unclass\">Khan, Chaka
+        -- life -- relation to funk</subj>\r\n                <subj type=\"unclass\">performing
+        groups--popular music -- De La Soul -- relation to funk</subj>\r\n                <subj
+        type=\"unclass\">performing groups--popular music -- Digital Underground --
+        relation to funk</subj>\r\n                <subj type=\"unclass\">Jackson,
+        O'Shea (Ice Cube) -- life -- relation to funk</subj>\r\n                <subj
+        type=\"unclass\">Young, Andre (Dr. Dre) -- life -- relation to funk</subj>\r\n
+        \               <subj type=\"unclass\">performing groups--popular music --
+        Red Hot Chili Peppers -- relation to funk</subj>\r\n                <subj
+        type=\"unclass\">performing groups--popular music -- Primus -- relation to
+        funk</subj>\r\n                <subj type=\"major\">Popular music</subj>\r\n
+        \             </sug>\r\n              <su>popular music--by genre</su>\r\n
+        \             <su>United States of America</su>\r\n              <su>sound
+        recordings</su>\r\n              <su>Brown, James</su>\r\n              <su>Morris,
+        Steveland Judkins (Stevie Wonder)</su>\r\n              <su>performing groups--popular
+        music</su>\r\n              <su>Hendrix, James Marshall (Jimi)</su>\r\n              <su>performing
+        groups--popular music</su>\r\n              <su>performing groups--popular
+        music</su>\r\n              <su>jazz</su>\r\n              <su>Davis, Miles</su>\r\n
+        \             <su>Hancock, Herbert Jeffrey (Herbie)</su>\r\n              <su>performing
+        groups--popular music</su>\r\n              <su>performing groups--popular
+        music</su>\r\n              <su>Collins, William (Bootsy)</su>\r\n              <su>James,
+        Rick</su>\r\n              <su>performing groups--popular music</su>\r\n              <su>performing
+        groups--popular music</su>\r\n              <su>performing groups--popular
+        music</su>\r\n              <su>performing groups--popular music</su>\r\n
+        \             <su>Khan, Chaka</su>\r\n              <su>performing groups--popular
+        music</su>\r\n              <su>performing groups--popular music</su>\r\n
+        \             <su>Jackson, O'Shea (Ice Cube)</su>\r\n              <su>Young,
+        Andre (Dr. Dre)</su>\r\n              <su>performing groups--popular music</su>\r\n
+        \             <su>performing groups--popular music</su>\r\n              <ab>Celebrates
+        the songs, the musicians, the philosophy, and the meaning of funk, spanning
+        from the early work of James Brown (the Godfather of Funk) to funky soul (Stevie
+        Wonder, the Temptations), so-called 'black rock' (Jimi Hendrix, Sly and the
+        Family Stone, the Isely Brothers), jazz-funk (Miles Davis, Herbie Hancock),
+        monster funk (Parliament, Funkadelic, Bootsy's Rubber Band), naked funk (Rick
+        James, Gap Band), disco-funk (Chic, K.C. and the Sunshine Band), funky pop
+        (Kool &amp; the Gang, Chaka Khan), P-Funk Hip Hop (Digital Underground, De
+        La Soul), funk-sampling rap (Ice Cube, Dr. Dre), funk rock (Red Hot Chili
+        Peppers, Primus), and more.</ab>\r\n              <pubtype>Book</pubtype>\r\n
+        \             <doctype>Book: monograph</doctype>\r\n            </artinfo>\r\n
+        \           <language>English</language>\r\n            <copyright />\r\n
+        \           <holdings islocal=\"N\" />\r\n          </controlInfo>\r\n        </header>\r\n
+        \     </rec>\r\n    </records>\r\n  </SearchResults>\r\n</searchResponse>"
+    http_version: 
+  recorded_at: Tue, 18 Dec 2012 17:34:48 GMT
+recorded_with: VCR 2.2.5
