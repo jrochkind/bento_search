@@ -238,7 +238,7 @@ module BentoSearch
     def published_in
       result_elements = []
       
-      result_elements.push("<span class='source_title'>#{html_escape source_title}</span>".html_safe) unless source_title.blank?      
+      result_elements.push("<span class='source_label'>#{I18n.t("bento_search.published_in")}</span><span class='source_title'>#{html_escape source_title}</span>".html_safe) unless source_title.blank?      
       
       if source_title.blank? && ! publisher.blank?
         result_elements.push html_escape publisher
