@@ -116,7 +116,7 @@ class BentoSearch::EbscoHostEngine
   
   def search_implementation(args)
     url = query_url(args)
-
+    
     results = BentoSearch::Results.new
     xml, response, exception = nil, nil, nil
 
@@ -224,12 +224,15 @@ class BentoSearch::EbscoHostEngine
     components = components.collect {|a| a.titlecase if a}
     components.uniq! # no need to have the same thing twice
 
+    
     # some hard-coded cases for better user-displayable string, and other
     # normalization. 
     if ["Academic Journal", "Journal"].include?(components.first) && ["Article", "Journal Article"].include?(components.last)
       return "Journal Article"
     elsif components.last == "Book: Monograph"
       return "Book" # Book: Monograph what??
+    elsif components.first == "Book Article"
+      return "Book Chapter"
     elsif components.first == "Periodical" && components.length > 1
       return components.last
     elsif components.size == 2 && components.first.include?(components.last)
