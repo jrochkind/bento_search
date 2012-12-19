@@ -93,9 +93,7 @@ class GoogleSiteSearchTest < ActiveSupport::TestCase
 
     assert first.title.html_safe?    
     assert first.abstract.html_safe?
-    assert first.journal_title.html_safe?
-    
-    assert first.published_in.html_safe?
+    assert first.journal_title.html_safe?    
   end
   
   test_with_cassette("without highlighting", :google_site) do
