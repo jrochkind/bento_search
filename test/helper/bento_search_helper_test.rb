@@ -197,6 +197,31 @@ class BentoSearchHelperTest < ActionView::TestCase
     
   end
   
+  def test_bento_decorate
+    item = BentoSearch::ResultItem.new(:title => "foo")
+    
+    decorated = bento_decorate(item)
+    
+    assert_kind_of BentoSearch::StandardDecorator, decorated
+    
+    assert_equal "foo", decorated.title
+    
+    assert decorated.send("_h").respond_to?(:url_for), "has ActionView helpers available internally"        
+  end
+  
+  def test_bento_decorate_with_yield
+    item = BentoSearch::ResultItem.new(:title => "foo")
+    
+    got_here = false
+    
+    bento_decorate(item) do |decorated|
+      got_here = true
+      assert_equal "foo", decorated.title
+    end
+    
+    assert got_here, "Yielded block is called"
+    
+  end
 
     
 
