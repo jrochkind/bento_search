@@ -16,8 +16,10 @@
    # it default.
 %>
 
-<% bento_decorate(item) do %>
 
+
+<% bento_decorate(item) do |item| %>
+    
   <div class="bento_item">
     <%= render :partial => "bento_search/item_title", :object => item, :as => 'item', :locals => {:index => bento_item_counter(local_assigns[:item_counter], local_assigns[:results]) } %>
       
@@ -26,7 +28,7 @@
       
       <% if item.authors.length > 0 || item.year.present? %>
         <p class="bento_item_row first_about">
-          
+            
           <% if item.authors.length > 0 %>
             <%= bento_item_authors(item) %>
           <% end %>
