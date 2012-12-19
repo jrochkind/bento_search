@@ -25,6 +25,10 @@ class DecoratorBaseTest < ActionView::TestCase
     def make_br_with_helper
       _h.tag("br")
     end    
+    
+    def can_html_escape
+      _h.html_escape("<foo>")
+    end
   end
   
   
@@ -49,5 +53,11 @@ class DecoratorBaseTest < ActionView::TestCase
   def test_can_access_view_context_method
     assert_equal tag("br"), @decorated.make_br_with_helper
   end  
+  
+  def test_can_html_escape
+    # weird workaround needed in implementation for html_escape
+    # being defined as private for some reason. 
+    assert_equal "&lt;foo&gt;", @decorated.can_html_escape
+  end
   
 end
