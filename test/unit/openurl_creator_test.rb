@@ -2,8 +2,17 @@ require 'test_helper'
 
 class OpenurlCreatorTest < ActiveSupport::TestCase
   
+  def decorated_item(hash)
+    # Just passing a nil second argument to StandardDecorator,
+    # supposed to be an ActionView context but we don't have one here,
+    # and can get away without one for these tests. 
+    BentoSearch::StandardDecorator.new(
+      BentoSearch::ResultItem.new(hash), nil     
+    )
+  end
+  
   def test_create_article
-    item = BentoSearch::ResultItem.new(
+    item = decorated_item(
         :format => "Article",
         :title => "My Title",
         :subtitle => "A Nice One",
@@ -42,7 +51,7 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
   end
   
   def test_numeric_conversion
-    item = BentoSearch::ResultItem.new(
+    item = decorated_item(
         :format => "Article",
         :title => "My Title",
         :subtitle => "A Nice One",
@@ -61,7 +70,7 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
   end
   
   def test_create_book
-    item = BentoSearch::ResultItem.new(
+    item = decorated_item(
       :format => "Book",
       :title => "My Book",
       :year => 2012,
@@ -83,7 +92,7 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
   end
   
   def test_create_hardcoded_kev
-    item = BentoSearch::ResultItem.new(
+    item = decorated_item(
       :format => "Book",
       :title => "Something",
       :openurl_kev_co => "rft.title=Foo+Bar&rft.au=Smith"
@@ -98,19 +107,19 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
   end
   
   def test_result_item_to_openurl
-    item = BentoSearch::ResultItem.new(
+    item = decorated_item(
       :format => "Book",
       :title => "Something",
       :openurl_kev_co => "rft.title=Foo+Bar&rft.au=Smith"
       )
-    
+        
     openurl = item.to_openurl
     
     assert_kind_of OpenURL::ContextObject, openurl
   end
   
   def test_strip_tags     
-    item = BentoSearch::ResultItem.new(      
+    item = decorated_item(      
       :title => "<b>My Title</b>".html_safe,
       :year => 2012,
       :isbn => "XXXX",                        
@@ -123,19 +132,19 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
   
   
   def test_publication_date
-    item = BentoSearch::ResultItem.new(      
+    item = decorated_item(      
       :title => "some title",
       :year => 2012,
       :publication_date => Date.new(2012, 5, 1)             
       )
-    
+
     openurl = item.to_openurl
     
     assert_equal "2012-05-01", openurl.referent.metadata["date"]     
   end
   
   def test_oclcnum
-    item = BentoSearch::ResultItem.new(      
+    item = decorated_item(      
       :title => "some title",
       :oclcnum => "12345"                   
       )
@@ -149,7 +158,7 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
   end
   
   def test_book_chapter
-    item = BentoSearch::ResultItem.new(
+    item = decorated_item(
       :format => :book_item, 
       :title => "A Chapter",
       :source_title => "Containing Book",
@@ -166,7 +175,7 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
   end
   
   def test_doi
-    item = BentoSearch::ResultItem.new(      
+    item = decorated_item(      
       :title => "Sample",
       :doi => "10.3305/nh.2012.27.5.5997"
       )
@@ -178,6 +187,19 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
     kev = openurl.kev
     
     assert_include kev, "&rft_id=info%3Adoi%2F10.3305%2Fnh.2012.27.5.5997"        
+  end
+  
+  def test_openurl_disabled
+    item = BentoSearch::ResultItem.new(:title => "original")
+    item = BentoSearch::StandardDecorator.new(item, nil)
+    
+    assert_present item.to_openurl
+    assert_present item.to_openurl_kev
+    
+    item.openurl_disabled = true
+    
+    assert_nil item.to_openurl    
+    assert_nil item.to_openurl_kev
   end
   
   

@@ -81,7 +81,7 @@ class GoogleSiteSearchTest < ActiveSupport::TestCase
     assert_present first.journal_title # used as source_title for display url    
     
     # no openurls for google, we decided
-    assert_nil     first.to_openurl
+    assert_nil     BentoSearch::StandardDecorator.new(first, nil).to_openurl
   end
   
   test_with_cassette("with highlighting", :google_site) do

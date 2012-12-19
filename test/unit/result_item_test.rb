@@ -29,19 +29,7 @@ class ResultItemTest < ActiveSupport::TestCase
     
     assert_not_same dup, r        
   end
-  
-  def test_openurl_disabled
-    r = ResultItem.new(:title => "original")
-    
-    assert_present r.to_openurl
-    assert_present r.to_openurl_kev
-    
-    r.openurl_disabled = true
-    
-    assert_nil r.to_openurl    
-    assert_nil r.to_openurl_kev
-  end
-  
+      
   def test_language
     r = ResultItem.new(:title => "something", :language_code => "en")    
     assert_equal "en",      r.language_code

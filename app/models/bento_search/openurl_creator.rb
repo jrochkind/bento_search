@@ -8,7 +8,7 @@ module BentoSearch
   # a NISO Z39.88 OpenURL context object, useful for using
   # with linking software that expects such. http://en.wikipedia.org/wiki/OpenURL
   #
-  #     co = OpenurlCreator.new(  result_item ).to_open_url
+  #     co = OpenurlCreator.new(  decorated_result_item ).to_open_url
   #        # => ruby OpenURL::ContextObject object.
   #
   #     co.kev 
@@ -21,6 +21,9 @@ module BentoSearch
     
     attr_accessor :result_item
     
+    # Pass in a DECORATED result_item, eg StandardDecorator.new(result_item, nil)
+    # Need the display logic methods in the decorator, not just a raw
+    # result_item. 
     def initialize(ri)
       self.result_item = ri
     end
