@@ -42,7 +42,7 @@ module BentoSearch
     def published_in
       result_elements = []
       
-      result_elements.push("<span class='source_label'>#{I18n.t("bento_search.published_in")}</span><span class='source_title'>#{_h.html_escape source_title}</span>".html_safe) unless source_title.blank?      
+      result_elements.push("<span class='source_label'>#{I18n.t("bento_search.published_in")}</span><span class='source_title'>#{html_escape source_title}</span>".html_safe) unless source_title.blank?      
       
       if source_title.blank? && ! publisher.blank?
         result_elements.push html_escape publisher
@@ -53,9 +53,9 @@ module BentoSearch
       result_elements.push("#{I18n.t('bento_search.issue')} #{issue}") if issue.present?
             
       if (! start_page.blank?) && (! end_page.blank?)
-        result_elements.push _h.html_escape "pp. #{start_page}-#{end_page}"
+        result_elements.push html_escape "pp. #{start_page}-#{end_page}"
       elsif ! start_page.blank?
-        result_elements.push _h.html_escape "p. #{start_page}"
+        result_elements.push html_escape "p. #{start_page}"
       end
       
       return nil if result_elements.empty?

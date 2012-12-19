@@ -27,7 +27,10 @@ class DecoratorBaseTest < ActionView::TestCase
     end    
     
     def can_html_escape
-      _h.html_escape("<foo>")
+      # html_escape provided for us by DecoratorBase, because
+      # _h.html_escape doesn't work cause Rails is weird and makes
+      # it private. 
+      html_escape("<foo>")
     end
   end
   
