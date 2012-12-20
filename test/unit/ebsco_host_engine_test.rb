@@ -228,4 +228,16 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     assert result.source_title.starts_with?("Opera remade (1700")
   end
   
+  test_with_cassette("live dissertation", :ebscohost) do
+    # yeah, all the weird edge cases that make good tests are from RILM, it's
+    # got weird data. 
+    
+    engine = BentoSearch::EbscoHostEngine.new( @config.merge(:databases => ["rih"]) )
+    results = engine.search('"Machine gun voices: Bandits, favelas, and utopia in Brazilian funk"')
+    result = results.first
+    
+    assert_equal :dissertation, result.format
+    assert_equal "Machine gun voices: Bandits, favelas, and utopia in Brazilian funk", result.title    
+  end
+  
 end

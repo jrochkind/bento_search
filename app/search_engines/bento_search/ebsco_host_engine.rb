@@ -116,9 +116,7 @@ class BentoSearch::EbscoHostEngine
   
   def search_implementation(args)
     url = query_url(args)
-    
-
-    
+        
     results = BentoSearch::Results.new
     xml, response, exception = nil, nil, nil
 
@@ -194,7 +192,9 @@ class BentoSearch::EbscoHostEngine
   def sniff_format(xml_node)
     return nil if xml_node.nil?
     
-    if xml_node.at_xpath("./jinfo/*") && xml_node.at_xpath("./artinfo/*")
+    if xml_node.at_xpath("./dissinfo/*")
+      :dissertation
+    elsif xml_node.at_xpath("./jinfo/*") && xml_node.at_xpath("./artinfo/*")
       "Article"
     elsif xml_node.at_xpath("./bkinfo") && xml_node.at_xpath("./chapinfo")
       :book_item
@@ -206,8 +206,6 @@ class BentoSearch::EbscoHostEngine
       :book_item        
     elsif xml_node.at_xpath("./bkinfo/*")
       "Book"
-    elsif xml_node.at_xpath("./dissinfo/*")
-      :dissertation
     elsif xml_node.at_xpath("./jinfo/*")
       :serial
     else
