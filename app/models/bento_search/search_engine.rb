@@ -223,6 +223,7 @@ module BentoSearch
       results.timing = (Time.now - start_t)
             
       results.display_configuration = configuration.for_display
+      results.each {|item| item.decorator = configuration.lookup!("for_display.decorator") }
         
       return results
     rescue *auto_rescue_exceptions => e

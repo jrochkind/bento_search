@@ -89,8 +89,12 @@ module BentoSearchHelper
   # Wrap a ResultItem in a decorator! For now hard-coded to
   # BentoSearch::StandardDecorator
   def bento_decorate(result_item)
+    # What decorator class? If specified as string in #decorator,
+    # look it up as a class object, else default. 
+    decorator_class = result_item.decorator.try {|name| BentoSearch::Util.constantize(name) } || BentoSearch::StandardDecorator  
+    
     # in a helper method, 'self' is a view_context already I think?
-    decorated = BentoSearch::StandardDecorator.new(result_item, self)    
+    decorated = decorator_class.new(result_item, self)    
     yield(decorated) if block_given?    
     return decorated    
   end

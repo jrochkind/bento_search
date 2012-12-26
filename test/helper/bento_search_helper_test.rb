@@ -222,6 +222,16 @@ class BentoSearchHelperTest < ActionView::TestCase
     assert got_here, "Yielded block is called"
     
   end
+  
+  class SomeDecorator < BentoSearch::StandardDecorator ; end
+  
+  def test_bento_decorate_with_custom_decorator
+    item = BentoSearch::ResultItem.new(:title => "foo", :decorator => "BentoSearchHelperTest::SomeDecorator")
+    
+    decorated = bento_decorate(item)
+    
+    assert_kind_of BentoSearchHelperTest::SomeDecorator, decorated
+  end
 
     
 

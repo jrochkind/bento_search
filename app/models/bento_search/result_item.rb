@@ -172,6 +172,10 @@ module BentoSearch
     # for internal use. 
     attr_accessor :custom_data
     
+    # Copied over from engine configuration usually, a string
+    # qualified name of a decorator class. Can be nil for default. 
+    attr_accessor :decorator
+    
     
   end
 end
