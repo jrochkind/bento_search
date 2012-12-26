@@ -230,4 +230,16 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     assert result.source_title.starts_with?("Opera remade (1700")
   end
   
+  test_with_cassette("dissertation example", :ebscohost) do
+    # yeah, all the weird ones are from RILM
+    engine = BentoSearch::EbscoHostEngine.new( @config.merge(:databases => ["rih"]) )
+    
+    results = engine.search('"Research into free jazz in France, 1960-1975"')
+    result = results.first
+    
+    assert_equal "Research into free jazz in France, 1960-1975", result.title
+    assert_equal :dissertation, result.format 
+    
+  end
+  
 end

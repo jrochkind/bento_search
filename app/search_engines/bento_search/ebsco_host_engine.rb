@@ -118,8 +118,6 @@ class BentoSearch::EbscoHostEngine
   def search_implementation(args)
     url = query_url(args)
     
-
-    
     results = BentoSearch::Results.new
     xml, response, exception = nil, nil, nil
 
@@ -197,6 +195,8 @@ class BentoSearch::EbscoHostEngine
     
     if xml_node.at_xpath("./jinfo/*") && xml_node.at_xpath("./artinfo/*")
       "Article"
+    elsif xml_node.at_xpath("./dissinfo/disstl")
+      :dissertation
     elsif xml_node.at_xpath("./bkinfo") && xml_node.at_xpath("./chapinfo")
       :book_item
     elsif xml_node.at_xpath("./bkinfo/btl") && xml_node.at_xpath("./artinfo/tig/atl") &&
@@ -207,8 +207,6 @@ class BentoSearch::EbscoHostEngine
       :book_item        
     elsif xml_node.at_xpath("./bkinfo/*")
       "Book"
-    elsif xml_node.at_xpath("./dissinfo/*")
-      :dissertation
     elsif xml_node.at_xpath("./jinfo/*")
       :serial
     else
