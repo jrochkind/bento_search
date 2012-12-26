@@ -289,16 +289,9 @@ link resolver.
 BentoSearch::Items can have a main link associated with them (generally 
 hyperlinked from title), as well as a list of additional links. Most engines
 do not provide additional links by default, custom local Decorators would
-be used to add them.
-
-    BentoSearch.register_engine("something") do |conf|
-       conf.engine = SomeEngine
-       conf.item_decorators = [ SomeModule, OtherModule]
-    end
-
-See BentoSearch::Link for more info on links. (TODO: Better docs/examples
-on decorators). 
-
+be used to add them. See wiki for more info on decorators, and BentoSearch::Link
+for fields. 
+     
 ## OpenURL and metadata
 
 Academic library uses often need openurl links from scholarly citations. One of

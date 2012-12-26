@@ -22,25 +22,9 @@ module BentoSearch
   # PARTIAL, ALL_PAGES, NO_PAGES or UNKNOWN. 
   # https://developers.google.com/books/docs/v1/reference/volumes#resource
   #
-  # You may want to use the item decorators feature to replace the format string
-  # displayed by standard view template (mostly just "Book") with the viewability
-  # status:
-  #
-  # BentoSearch.register_engine("gbs") do |conf|
-  #  # ...
-  #  conf.item_decorators = [
-  #   Module.new do
-  #     def display_format
-  #       case custom_data[:viewability]
-  #       when "ALL_PAGES" then "Full view"
-  #       when "PARTIAL" then "Partial view"
-  #       else nil
-  #       end
-  #     end
-  #   end
-  #  ]
-  # end
-  # 
+  # You may want to use a custom decorator to display the viewability
+  # status somehow (in display_format? In an other_link?). See wiki
+  # for info on decorators. 
   class GoogleBooksEngine
     include BentoSearch::SearchEngine
     include ActionView::Helpers::SanitizeHelper

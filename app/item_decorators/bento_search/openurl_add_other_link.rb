@@ -1,3 +1,7 @@
+#  DEPRECATED. Just write the logic into a custom Decorator yourself.
+#  See wiki on decorators. 
+#
+#
 # Example of an Item Decorator that ADDs an 'other link' with an openurl. 
 #
 # This example uses crazy metaprogramming to dynamically create

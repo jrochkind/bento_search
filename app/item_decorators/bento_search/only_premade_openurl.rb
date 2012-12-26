@@ -1,3 +1,7 @@
+#  DEPRECATED. Just write the logic into a custom Decorator yourself.
+#  See wiki on decorators. 
+
+
 require 'openurl'
 
 # A Decorator that will make #to_openurl refuse to construct

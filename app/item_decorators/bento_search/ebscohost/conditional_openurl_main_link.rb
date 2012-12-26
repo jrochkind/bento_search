@@ -1,3 +1,7 @@
+#  DEPRECATED. Just write the logic into a custom Decorator yourself.
+#  See wiki on decorators. 
+#
+#
 # For ebscohost connector, example of an Item Decorator that replaces the main 
 # 'link' with an openurl ONLY if there is NOT fulltext avail from EBSCO.  
 #
