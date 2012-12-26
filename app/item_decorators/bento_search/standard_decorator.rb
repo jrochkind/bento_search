@@ -53,9 +53,9 @@ module BentoSearch
       result_elements.push("#{I18n.t('bento_search.issue')} #{issue}") if issue.present?
             
       if (! start_page.blank?) && (! end_page.blank?)
-        result_elements.push html_escape "pp. #{start_page}-#{end_page}"
+        result_elements.push html_escape "#{I18n.t('bento_search.pages')} #{start_page}-#{end_page}"
       elsif ! start_page.blank?
-        result_elements.push html_escape "p. #{start_page}"
+        result_elements.push html_escape "#{I18n.t('bento_search.page')} #{start_page}"
       end
       
       return nil if result_elements.empty?

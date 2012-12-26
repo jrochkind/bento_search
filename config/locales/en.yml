@@ -9,6 +9,8 @@ en:
     authors_et_al: " …"
     volume: "Volume"
     issue: "Issue"
+    page: "p."
+    pages: "pp." 
     format:
       # Schema.org formats
       Article: Article
