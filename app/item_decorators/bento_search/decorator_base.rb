@@ -9,8 +9,10 @@ module BentoSearch
   # inside a method in a decorator, `_h.content_tag` or `_h.html_escape`
   # or `_h.url_for` etc.   
   #
-  # Except you can't call html_escape that way becuase Rails makes it
-  # private for some reason, wtf. We provide an html_escape 
+  #   (Except you can't call html_escape that way becuase Rails makes it
+  #   private for some reason, wtf. We provide an html_escape) 
+  # 
+  # Inside a decorator, access #_base to get undecorated base model. 
   class DecoratorBase < SimpleDelegator
     
     def initialize(base, view_context)
@@ -30,11 +32,16 @@ module BentoSearch
       #end      
       
       @view_context = view_context
+      @base = base
     end
     
     def _h
       @view_context
     end    
+    
+    def _base
+      @base
+    end
     
     # _h.html_escape won't work because Rails makes html_escape
     # private for some weird reason. We provide our own here instead. 

@@ -63,4 +63,10 @@ class DecoratorBaseTest < ActionView::TestCase
     assert_equal "&lt;foo&gt;", @decorated.can_html_escape
   end
   
+    
+  def test_decorated_base
+    assert_kind_of Base, @decorated.send("_base")
+    assert_equal "foo", @decorated.send("_base").foo
+  end
+  
 end
