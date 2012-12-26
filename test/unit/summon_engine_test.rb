@@ -155,6 +155,9 @@ class SummonEngineTest < ActiveSupport::TestCase
     
     assert_present first.title
     assert_present first.format_str
+    
+    # just smoke test to make sure it's set to something
+    assert_not_nil first.link_is_fulltext?
   end
   
   test_with_cassette("proper tags for snippets", :summon) do

@@ -45,6 +45,8 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
     assert_present      results.find {|r| r.isbn.present? }
     
     assert_present      first.custom_data[:viewability]
+    
+    assert_not_nil      first.link_is_fulltext?
   end
   
   test_with_cassette("pagination", :gbs) do

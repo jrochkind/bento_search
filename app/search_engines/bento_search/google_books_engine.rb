@@ -22,6 +22,8 @@ module BentoSearch
   # PARTIAL, ALL_PAGES, NO_PAGES or UNKNOWN. 
   # https://developers.google.com/books/docs/v1/reference/volumes#resource
   #
+  # #link_is_fulltext? is also set appropriately. 
+  #
   # You may want to use a custom decorator to display the viewability
   # status somehow (in display_format? In an other_link?). See wiki
   # for info on decorators. 
@@ -131,7 +133,7 @@ module BentoSearch
         # save viewability status in custom_data. PARTIAL, ALL_PAGES, NO_PAGES or UNKNOWN. 
         # https://developers.google.com/books/docs/v1/reference/volumes#resource
         item.custom_data[:viewability] = item_response["accessInfo"].try {|h| h["viewability"]}
-          
+        item.link_is_fulltext = (item.custom_data[:viewability] == "ALL_PAGES") if item.custom_data[:viewability]        
       end
       
       

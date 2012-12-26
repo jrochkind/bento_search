@@ -32,10 +32,12 @@ require 'httpclient'
 # == Custom response data
 # 
 # Iff EBSCO API reports that fulltext is available for the hit, then 
-# result.custom_data["result_formats"] will be non-nil, and will be an array of
+# result.custom_data["fulltext_formats"] will be non-nil, and will be an array of
 # one or more of EBSCO's internal codes (P=PDF, T=HTML, C=HTML+Images). If
-# no fulltext is avail according to EBSCO API, result.custom_data["result_formats"]
+# no fulltext is avail according to EBSCO API, result.custom_data["fulltext_formats"]
 # will be nil. 
+#
+# #link_is_fulltext also set to true/false
 #
 # You can use this to, for instance, hyperlink the displayed title directly
 # to record on EBSCO if and only if there's fulltext.  By writing a custom
@@ -450,6 +452,8 @@ class BentoSearch::EbscoHostEngine
     
     # array of custom ebsco codes (or nil) for fulltext formats avail. 
     item.custom_data["fulltext_formats"] = fulltext_formats xml_rec
+    # if any fulltext format, mark present
+    item.link_is_fulltext = item.custom_data["fulltext_formats"].present? 
         
     return item
   end

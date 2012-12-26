@@ -51,6 +51,15 @@ module BentoSearch
     # * schema.org CreativeWork: 'url'
     attr_accessor :link
     
+    # does the #link correspond to fulltext?  true or false -- or nil
+    # for unknown/non-applicable. Not all engines will set. 
+    def link_is_fulltext?
+      @link_is_fulltext
+    end
+    def link_is_fulltext=(v)
+      @link_is_fulltext = v
+    end
+    
     # normalized controlled vocab title, important this is supplied
     # if possible for OpenURL generation and other features. 
     #

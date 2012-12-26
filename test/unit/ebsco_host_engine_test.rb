@@ -185,6 +185,8 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
       assert_kind_of Array, array
       # who's only legal values are P, T, and C, the EBSCO vocab for formats. 
       assert_equal array.length, array.find_all {|v| %w{P C T}.include?(v)}.length
+      
+      assert record.link_is_fulltext?, "#link_is_fulltext set"
     end    
     
   end

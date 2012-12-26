@@ -125,7 +125,11 @@ class BentoSearch::SummonEngine
       item.subtitle = handle_highlighting( first_if_present doc_hash["Subtitle"] )# TODO is this right?
       item.custom_data["raw_subtitle"] = handle_highlighting( first_if_present(doc_hash["Subtitle"]), :strip => true )
       
-      item.link = doc_hash["link"]
+      item.link             = doc_hash["link"]
+      # Don't understand difference between hasFullText and
+      # isFullTextHit. ??. We'll use hasFullText for now, that's
+      # the documented one. 
+      item.link_is_fulltext = doc_hash["hasFullText"] 
       
       if configuration.use_summon_openurl      
         item.openurl_kev_co = doc_hash["openUrl"] # Summon conveniently gives us pre-made OpenURL
