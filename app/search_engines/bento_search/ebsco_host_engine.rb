@@ -193,7 +193,9 @@ class BentoSearch::EbscoHostEngine
   def sniff_format(xml_node)
     return nil if xml_node.nil?
     
-    if xml_node.at_xpath("./jinfo/*") && xml_node.at_xpath("./artinfo/*")
+    if xml_node.at_xpath("./dissinfo/*")
+      :dissertation
+    elsif xml_node.at_xpath("./jinfo/*") && xml_node.at_xpath("./artinfo/*")
       "Article"
     elsif xml_node.at_xpath("./dissinfo/disstl")
       :dissertation

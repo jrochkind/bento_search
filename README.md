@@ -7,7 +7,7 @@ be some breaking api changes before 1.0, but probably not too many, it's
 looking pretty good). 
 
 bento_search provides an abstraction/normalization layer for querying and 
-displaying results for external search engines, in Ruby on Rails. Requires
+displaying results from external search engines, in Ruby on Rails. Requires
 Rails3 and tested only under ruby 1.9.3. 
 
 ### Goals: To help you
@@ -126,7 +126,7 @@ a list of BentoSearch::Results in a standard way, using the bento_search
 helper method. 
 
 ~~~~ruby
-    <%= bento_search(@results) %>
+    <%= bento_search @results %>
 ~~~~
 
 See also the [Customizing Results Display wiki page](https://github.com/jrochkind/bento_search/wiki/Customizing-Results-Display). 
