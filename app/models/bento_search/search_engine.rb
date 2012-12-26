@@ -49,13 +49,11 @@ module BentoSearch
   # Additional standard configuration keys that are implemented by the bento_search
   # framework:
   #
-  #  [item_decorators]
-  #      Array of Modules (or strings specifying modules, helpful to keep
-  #      config serializable) that will be decorated on to each individual search
-  #      BentoSearch::ResultItem. These can be used to, via configuration, change
-  #      the links associated with items, change certain item behaviors, or massage
-  #      item metadata. (Needs more documentation). 
-  #      
+  #  [for_display.decorator]
+  #      String name of decorator class that will be applied by #bento_decorate
+  #      helper in standard view. See wiki for more info on decorators. Must be
+  #      string name, actual class object not supported (to make it easier
+  #      to serialize and transport configuration). 
   #
   # == Implementing a SearchEngine
   #
@@ -143,8 +141,7 @@ module BentoSearch
       # merge in current instance config
       self.configuration.configure ( aConfiguration )
       
-      # global defaults?
-      self.configuration[:item_decorators] ||= []
+      # global defaults?      
       self.configuration[:for_display] ||= {}
             
       # check for required keys -- have to be present, and not nil
@@ -210,8 +207,7 @@ module BentoSearch
       arguments = normalized_search_arguments(*arguments)
 
       results = search_implementation(arguments)
-      
-      decorate(results)      
+            
       
       # standard result metadata
       results.start = arguments[:start] || 0
@@ -334,18 +330,6 @@ module BentoSearch
    
     
     protected
-    
-    # Extend each result with each specified decorator module
-    # configuration.item_decorators is an array of either Module constants,
-    # or strings specifying module constants. 
-    def decorate(results)      
-      results.each do |result|
-        configuration.item_decorators.each do |decorator|
-          decorator = (decorator.kind_of? Module) ? decorator : BentoSearch::Util.constantize(decorator)          
-          result.extend decorator
-        end
-      end
-    end
     
     # get value of an arg that can be supplied in search args OR config,
     # with search_args over-ridding config. Also normalizes value to_s
