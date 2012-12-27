@@ -48,18 +48,9 @@
         </p>
       <% end %>
       
-      <% if item.any_present?(:source_title, :publisher, :start_page) %>
+      <% if item.has_source_info? %>
         <p class="bento_item_row second_about">
-          <% if item.source_title.present? %>
-            <span class="source_label"><%= I18n.t("bento_search.published_in") %></span>
-            <span class="source_title"><%= item.source_title %></span>.
-          <% elsif item.publisher.present? %>
-            <span class="publisher"><%= item.publisher %></span>.
-          <% end %>
-          
-          <% if text = item.citation_details %>
-            <span class="citation_details"><%= text %></span>.
-          <% end %>          
+          <%= item.display_source_info %>        
         </p>
       <% end %>
                   

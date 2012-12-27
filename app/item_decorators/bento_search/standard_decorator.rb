@@ -53,6 +53,35 @@ module BentoSearch
       return _h.safe_join(parts, "")
     end
     
+    # Returns source publication name OR publisher, along with volume/issue/pages
+    # if present, all wrapped in various tags and labels. Returns html_safe
+    # with tags. 
+    #
+    # Experiment to do this in a decorator helper instead of a partial template,
+    # might be more convenient we think. 
+    def display_source_info
+      parts = []
+      
+      if self.source_title.present?
+        parts << _h.content_tag("span", I18n.t("bento_search.published_in"), :class=> "source_label")        
+        parts << _h.content_tag("span", self.source_title, :class => "source_title")            
+      elsif self.publisher.present?
+        parts << _h.content_tag("span", self.publisher, :class => "publisher")
+      end
+      
+      if text = self.citation_details
+        parts << text
+      end
+          
+      return _h.safe_join(parts)
+    end
+    
+    # if enough info is present that there will be non-empty display_source_info
+    # should be over-ridden to match display_source_info
+    def has_source_info?
+      self.any_present?(:source_title, :publisher, :start_page)
+    end
+    
     # Put together title and subtitle if neccesary. 
     def complete_title
       t = self.title
