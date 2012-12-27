@@ -31,7 +31,10 @@ module BentoSearch
     # experimentally trying this as a decorator helper method rather
     # than a view partial, not sure which is best. 
     #
-    # Will limit to first three authors, with elipsis if there are more. 
+    # Will limit to first three authors, with elipsis if there are more.
+    #
+    # Over-ride if you want to format authors names differently, or
+    # show more or less than first 3, etc. 
     def display_authors_list
       parts = []
       
@@ -64,16 +67,18 @@ module BentoSearch
       
       if self.source_title.present?
         parts << _h.content_tag("span", I18n.t("bento_search.published_in"), :class=> "source_label")        
-        parts << _h.content_tag("span", self.source_title, :class => "source_title")            
+        parts << _h.content_tag("span", self.source_title, :class => "source_title")  
+        parts << ". "
       elsif self.publisher.present?
         parts << _h.content_tag("span", self.publisher, :class => "publisher")
+        parts << ". "
       end
       
       if text = self.citation_details
-        parts << text
+        parts << text << "."
       end
           
-      return _h.safe_join(parts)
+      return _h.safe_join(parts, "")
     end
     
     # if enough info is present that there will be non-empty display_source_info
@@ -101,16 +106,18 @@ module BentoSearch
     # volume, issue, and page numbers. With prefixed labels from I18n. 
     # That's it.
     def citation_details
+      # \u00A0 is unicode non-breaking space to keep labels and values from
+      # getting separated. 
       result_elements = []
       
-      result_elements.push("#{I18n.t('bento_search.volume')} #{volume}") if volume.present?
+      result_elements.push("#{I18n.t('bento_search.volume')}\u00A0#{volume}") if volume.present?
       
-      result_elements.push("#{I18n.t('bento_search.issue')} #{issue}") if issue.present?
+      result_elements.push("#{I18n.t('bento_search.issue')}\u00A0#{issue}") if issue.present?
             
       if (! start_page.blank?) && (! end_page.blank?)
-        result_elements.push html_escape "#{I18n.t('bento_search.pages')} #{start_page}-#{end_page}"
+        result_elements.push html_escape "#{I18n.t('bento_search.pages')}\u00A0#{start_page}-#{end_page}"
       elsif ! start_page.blank?
-        result_elements.push html_escape "#{I18n.t('bento_search.page')} #{start_page}"
+        result_elements.push html_escape "#{I18n.t('bento_search.page')}\u00A0#{start_page}"
       end
                   
       return nil if result_elements.empty?
