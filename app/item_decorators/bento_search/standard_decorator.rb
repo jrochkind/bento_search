@@ -27,6 +27,32 @@ module BentoSearch
       end
     end
     
+    # display multiple authors, with HTML markup, returns html_safe string.
+    # experimentally trying this as a decorator helper method rather
+    # than a view partial, not sure which is best. 
+    #
+    # Will limit to first three authors, with elipsis if there are more. 
+    def display_authors_list
+      parts = []
+      
+      first_three = self.authors.slice(0,3) 
+          
+      first_three.each_with_index do |author, index|
+        parts << _h.content_tag("span", :class => "author") do
+          self.author_display(author)
+        end
+        if (index + 1) < first_three.length
+          parts << "; "
+        end      
+      end
+      
+      if self.authors.length > 3
+        parts << I18n.t("bento_search.authors_et_al")
+      end
+      
+      return _h.safe_join(parts, "")
+    end
+    
     # Put together title and subtitle if neccesary. 
     def complete_title
       t = self.title

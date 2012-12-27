@@ -30,7 +30,9 @@
         <p class="bento_item_row first_about">
             
           <% if item.authors.length > 0 %>
-            <%= bento_item_authors(item) %>
+            <span class="authors">
+              <%= item.display_authors_list %>
+            </span>
           <% end %>
           
           <% if item.year.present? %>

@@ -158,30 +158,7 @@ module BentoSearchHelper
     return counter + results.start + 1
   end
     
-  
-  # first 3 authors, each in a <span>, using item.author_display, seperated by
-  # semi-colons. 
-  def bento_item_authors(item)
-    parts = []
-    
-    first_three = item.authors.slice(0,3) 
-        
-    first_three.each_with_index do |author, index|
-      parts << content_tag("span", :class => "authors") do
-          item.author_display(author)
-      end
-      if (index + 1) < first_three.length
-        parts << "; "
-      end      
-    end
-    
-    if item.authors.length > 3
-      parts << I18n.t("bento_search.authors_et_al")
-    end
-    
-    return safe_join(parts, "")
-  end
-  
+     
   # returns a hash of label => key suitable for passing to rails
   # options_for_select. (Yes, it works backwards from how you'd expect). 
   # Label is looked up using I18n, at bento_search.sort_keys.*

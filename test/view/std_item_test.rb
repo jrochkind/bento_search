@@ -61,7 +61,9 @@ class StdItemTest < ActionView::TestCase
       # Make sure we have the items for complete citation
       
       assert_select ".bento_item_row.first_about" do
-        assert_select ".authors"
+        assert_select ".authors" do 
+          assert_select ".author"
+        end
         assert_select ".date"
       end
       
