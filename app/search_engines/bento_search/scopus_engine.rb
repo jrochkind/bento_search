@@ -101,6 +101,7 @@ module BentoSearch
         end
       end                  
       
+      
       results.total_items = (node_text xml.at_xpath("//opensearch:totalResults", xml_ns)).to_i
       
       xml.xpath("//atom:entry", xml_ns).each do | entry |
@@ -109,6 +110,9 @@ module BentoSearch
         if scopus_link = entry.at_xpath("atom:link[@ref='scopus']", xml_ns)
           item.link = scopus_link["href"]
         end
+        
+        item.id             = node_text entry.at_xpath("dc:identifier", xml_ns)
+        
         item.title          = node_text entry.at_xpath("dc:title", xml_ns)
         item.journal_title  = node_text entry.at_xpath("prism:publicationName", xml_ns)
         item.issn           = node_text entry.at_xpath("prism:issn", xml_ns)

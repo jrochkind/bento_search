@@ -144,6 +144,10 @@ class EdsEngineTest < ActiveSupport::TestCase
       assert_present first.custom_data["citation_blob"]      
       
       assert_present first.format_str
+      
+      assert_present first.id
+      # EDS id is db name, colon, accession number
+      assert_match /.+\:.+/, first.id
   end
   
   

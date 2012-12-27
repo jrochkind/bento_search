@@ -26,6 +26,11 @@ module BentoSearch
       self.custom_data ||= {}
     end
     
+    # internal unique id for the document, from the particular
+    # search service it came from. May be alphanumeric. May be nil
+    # for engines that don't support it. 
+    attr_accessor :id 
+    
     # If set to true, item will refuse to generate an openurl,
     # returning nil from #to_openurl or #openurl_kev
     attr_accessor :openurl_disabled 

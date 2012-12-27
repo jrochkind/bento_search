@@ -27,6 +27,8 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
     
     assert_kind_of BentoSearch::ResultItem, first
     
+    assert_not_empty    first.id
+    
     assert_not_empty    first.title
     assert_not_empty    first.publisher
     assert_not_empty    first.link

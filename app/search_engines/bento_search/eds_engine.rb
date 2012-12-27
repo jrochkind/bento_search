@@ -220,7 +220,16 @@ class BentoSearch::EdsEngine
         response.xpath("./SearchResponseMessageGet/SearchResult/Data/Records/Record").each do |record_xml|
           item = BentoSearch::ResultItem.new
           
-          item.title = prepare_eds_payload( element_by_group(record_xml, "Ti"), true )
+          item.title   = prepare_eds_payload( element_by_group(record_xml, "Ti"), true )
+          
+          # To get a unique id, we need to pull out db code and accession number
+          # and combine em with colon, accession number is not unique by itself. 
+          db           = record_xml.at_xpath("./Header/DbId").try(:text)
+          accession    = record_xml.at_xpath("./Header/An").try(:text)
+          if db && accession
+            item.id    = "#{db}:#{accession}"
+          end
+          
           
           if item.title.nil? && ! end_user_auth
             item.title = I18n.translate("bento_search.eds.record_not_available")

@@ -113,6 +113,8 @@ class WorldcatSruDcEngineTest < ActiveSupport::TestCase
     
     first = results.first
     
+    assert_present first.id
+    
     assert_present first.title
     assert_present first.authors
     assert_present first.publisher

@@ -132,6 +132,8 @@ class BentoSearch::WorldcatSruDcEngine
       # The recordIdentifier with no "xsi:type" attrib is an oclcnum. sigh. 
       # lccn may also be in there if we wanted to keep it. 
       item.oclcnum        = first_text_if_present(record, "./recordIdentifier[not(@type)]")
+      # oclcnum is our engine-specific unique id too. 
+      item.id             = item.oclcnum
       
       item.link           = "#{configuration.linking_base_url}#{item.oclcnum}"
       

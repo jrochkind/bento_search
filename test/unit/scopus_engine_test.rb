@@ -102,6 +102,8 @@ class ScopusEngineTest < ActiveSupport::TestCase
     
     assert_present sample_result.format
     
+    assert_present sample_result.id
+    
   end
   
   test_with_cassette("zero results search", :scopus) do

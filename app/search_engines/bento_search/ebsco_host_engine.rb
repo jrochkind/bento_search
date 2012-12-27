@@ -123,7 +123,7 @@ class BentoSearch::EbscoHostEngine
   
   def search_implementation(args)
     url = query_url(args)
-    
+        
     results = BentoSearch::Results.new
     xml, response, exception = nil, nil, nil
 
@@ -367,10 +367,18 @@ class BentoSearch::EbscoHostEngine
   
   # pass in a nokogiri representing an EBSCO <rec> result,
   # we'll turn it into a BentoSearch::ResultItem. 
-  def item_from_xml(xml_rec)        
+  def item_from_xml(xml_rec)                
     info = xml_rec.at_xpath("./header/controlInfo")
     
     item = BentoSearch::ResultItem.new
+    
+    # Get unique id. Think we need both the database code and accession
+    # number combined, accession numbers not neccesarily unique accross
+    # dbs. We'll combine with a colon. 
+    db                  = text_if_present xml_rec.at_xpath("./header/@shortDbName")
+    accession           = text_if_present xml_rec.at_xpath("./header/@uiTerm")    
+    item.id             = "#{db}:#{accession}" if db && accession
+    
     
     item.link           = get_link(xml_rec)
 

@@ -119,13 +119,15 @@ class BentoSearch::SummonEngine
     hash["documents"].each do |doc_hash|
       item = BentoSearch::ResultItem.new
       
-      item.title = handle_highlighting( first_if_present doc_hash["Title"] )
+      item.id             = first_if_present doc_hash["ID"]
+      
+      item.title          = handle_highlighting( first_if_present doc_hash["Title"] )
       item.custom_data["raw_title"] = handle_highlighting( first_if_present(doc_hash["Title"]) , :strip => true)
       
-      item.subtitle = handle_highlighting( first_if_present doc_hash["Subtitle"] )# TODO is this right?
+      item.subtitle       = handle_highlighting( first_if_present doc_hash["Subtitle"] )# TODO is this right?
       item.custom_data["raw_subtitle"] = handle_highlighting( first_if_present(doc_hash["Subtitle"]), :strip => true )
       
-      item.link             = doc_hash["link"]
+      item.link           = doc_hash["link"]
       # Don't understand difference between hasFullText and
       # isFullTextHit. ??. We'll use hasFullText for now, that's
       # the documented one. 

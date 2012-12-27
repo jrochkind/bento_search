@@ -69,7 +69,7 @@ class BentoSearch::PrimoEngine
   def search_implementation(args)
     
     url = construct_query(args)
-            
+        
     results = BentoSearch::Results.new
 
     response = http_client.get(url)
@@ -100,8 +100,12 @@ class BentoSearch::PrimoEngine
       # Data in primo response is confusing in many different places in
       # variant formats. We try to pick out the best to take things from,
       # but we're guessing, it's under-documented.
+                  
+      item.title      = handle_highlight_tags text_at_xpath(doc_xml, "./PrimoNMBib/record/display/title")
       
-      item.title      = handle_highlight_tags text_at_xpath(doc_xml, "./PrimoNMBib/record/display/title")        
+      # I think this is primo unique ID. Have no idea how to look things
+      # up by unique id though. 
+      item.id         = text_at_xpath(doc_xml, "./PrimoNMBib/record/control/recordid")
       
       item.custom_data["snippet"] = handle_snippet_value text_at_xpath(doc_xml, "./PrimoNMBib/record/display/snippet")
       
