@@ -31,7 +31,7 @@
             
           <% if item.authors.length > 0 %>
             <span class="authors">
-              <%= item.display_authors_list %>
+              <%= item.render_authors_list %>
             </span>
           <% end %>
           
@@ -50,7 +50,7 @@
       
       <% if item.has_source_info? %>
         <p class="bento_item_row second_about">
-          <%= item.display_source_info %>        
+          <%= item.render_source_info %>        
         </p>
       <% end %>
                   

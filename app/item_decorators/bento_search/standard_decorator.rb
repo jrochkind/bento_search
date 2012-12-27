@@ -35,7 +35,7 @@ module BentoSearch
     #
     # Over-ride if you want to format authors names differently, or
     # show more or less than first 3, etc. 
-    def display_authors_list
+    def render_authors_list
       parts = []
       
       first_three = self.authors.slice(0,3) 
@@ -62,7 +62,7 @@ module BentoSearch
     #
     # Experiment to do this in a decorator helper instead of a partial template,
     # might be more convenient we think. 
-    def display_source_info
+    def render_source_info
       parts = []
       
       if self.source_title.present?
@@ -74,14 +74,14 @@ module BentoSearch
         parts << ". "
       end
       
-      if text = self.citation_details
+      if text = self.render_citation_details
         parts << text << "."
       end
           
       return _h.safe_join(parts, "")
     end
     
-    # if enough info is present that there will be non-empty display_source_info
+    # if enough info is present that there will be non-empty render_source_info
     # should be over-ridden to match display_source_info
     def has_source_info?
       self.any_present?(:source_title, :publisher, :start_page)
@@ -105,7 +105,7 @@ module BentoSearch
     
     # volume, issue, and page numbers. With prefixed labels from I18n. 
     # That's it.
-    def citation_details
+    def render_citation_details
       # \u00A0 is unicode non-breaking space to keep labels and values from
       # getting separated. 
       result_elements = []
