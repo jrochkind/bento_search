@@ -60,12 +60,10 @@ module BentoSearchHelper
       end +
       content_tag(:div, 
         :class => "bento_search_ajax_loading", 
-        :style => "display:none") do
-      
+        :style => "display:none") do      
           image_tag("bento_search/large_loader.gif", 
-            :alt => I18n.translate("bento_search.ajax_loading"),            
+            :alt => I18n.translate("bento_search.ajax_loading")            
           ) 
-
         end
       end
     else
