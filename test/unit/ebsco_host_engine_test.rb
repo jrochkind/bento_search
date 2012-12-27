@@ -115,6 +115,13 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     assert_equal ['"cancer "'], query_params["query"]
   end
   
+  def test_has_http_timeout_set
+    assert_equal BentoSearch::EbscoHostEngine::HttpTimeout, @engine.http_client.receive_timeout
+    assert_equal BentoSearch::EbscoHostEngine::HttpTimeout, @engine.http_client.send_timeout
+    assert_equal BentoSearch::EbscoHostEngine::HttpTimeout, @engine.http_client.connect_timeout
+  end      
+
+  
   test_with_cassette("live search smoke test", :ebscohost) do
   
     results = @engine.search(:query => "cancer")

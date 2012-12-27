@@ -103,8 +103,14 @@ require 'httpclient'
 class BentoSearch::EbscoHostEngine
   include BentoSearch::SearchEngine
   
-  extend HTTPClientPatch::IncludeClient
-  include_http_client
+  # Can't change http timeout in config, because we keep an http
+  # client at class-wide level, and config is not class-wide. 
+  # Change this 'constant' if you want to change it, I guess. 
+  HttpTimeout = 4
+  extend HTTPClientPatch::IncludeClient  
+  include_http_client do |client|
+    client.connect_timeout = client.send_timeout = client.receive_timeout = HttpTimeout
+  end
   
   # Include some rails helpers, text_helper.trucate
   def text_helper

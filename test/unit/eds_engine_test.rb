@@ -61,6 +61,12 @@ class EdsEngineTest < ActiveSupport::TestCase
     assert_include parts, "SourceType:Academic Journals"
     assert_include parts, "SourceType:Magazines"        
   end
+  
+  def test_has_http_timeout_set
+    assert_equal BentoSearch::EbscoHostEngine::HttpTimeout, @engine.http_client.receive_timeout
+    assert_equal BentoSearch::EbscoHostEngine::HttpTimeout, @engine.http_client.send_timeout
+    assert_equal BentoSearch::EbscoHostEngine::HttpTimeout, @engine.http_client.connect_timeout
+  end 
 
   
   test_with_cassette("get_auth_token failure", :eds) do
