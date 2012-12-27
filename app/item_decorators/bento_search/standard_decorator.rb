@@ -2,7 +2,19 @@ module BentoSearch
   class StandardDecorator < DecoratorBase
     
     
-    # How to display a BentoSearch::Author object as a name
+    # convenience method that returns true if any of the keys
+    # are #present?  eg
+    # item.any_present?(:source_title, :authors) === item.source_title.present? || item.authors.present?
+    #
+    # note present? is false for nil, empty strings, and empty arrays. 
+    def any_present?(*keys)
+      keys.each do |key|
+        return true if self.send(key).present?
+      end
+      return false
+    end
+    
+    # How to display a BentoSearch::Author object as a name    
     def author_display(author)
       if (author.first && author.last)
         "#{author.last}, #{author.first.slice(0,1)}"
@@ -31,22 +43,10 @@ module BentoSearch
     
     
     
-    
-    
-    # A simple user-displayable citation, _without_ author/title.
-    # the journal, year, vol, iss, page; or publisher and year; etc. 
-    # Constructed from individual details. Not formal APA or MLA or anything,
-    # just a rough and ready display. 
-    #
-    # TODO: Should this be moved to a rails helper method? Not sure. 
-    def published_in
+    # volume, issue, and page numbers. With prefixed labels from I18n. 
+    # That's it.
+    def citation_details
       result_elements = []
-      
-      result_elements.push("<span class='source_label'>#{I18n.t("bento_search.published_in")}</span><span class='source_title'>#{html_escape source_title}</span>".html_safe) unless source_title.blank?      
-      
-      if source_title.blank? && ! publisher.blank?
-        result_elements.push html_escape publisher
-      end
       
       result_elements.push("#{I18n.t('bento_search.volume')} #{volume}") if volume.present?
       
@@ -57,7 +57,7 @@ module BentoSearch
       elsif ! start_page.blank?
         result_elements.push html_escape "#{I18n.t('bento_search.page')} #{start_page}"
       end
-      
+                  
       return nil if result_elements.empty?
       
       return result_elements.join(", ").html_safe
