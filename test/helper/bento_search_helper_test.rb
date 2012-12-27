@@ -24,7 +24,15 @@ class BentoSearchHelperTest < ActionView::TestCase
     results = MockEngine.new.search(:query => "foo")
     bento_search(results)    
     
-    assert_select("div.bento_item", 10)    
+    assert_select("div.bento_item", 10)
+  end
+  
+  def test_custom_partial
+    results = MockEngine.new(:for_display => {:item_partial => "test_custom_item_partial"})
+    
+    bento_search(results)
+    
+    assert_select("p.custom_item_partial")
   end
   
   def test_with_failed_search
@@ -80,6 +88,8 @@ class BentoSearchHelperTest < ActionView::TestCase
   def test_ajax_load_without_registration
     assert_raises(ArgumentError) { bento_search(MockEngine.new, :load => :ajax_auto) }
   end
+  
+
   
   def test_ajax_load 
     BentoSearch.register_engine("test_engine") do |conf|
