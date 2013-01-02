@@ -83,7 +83,7 @@ module BentoSearch
         item = ResultItem.new
         results << item
                         
-        item.id             = item_response["id"]
+        item.unique_id             = item_response["id"]
         
         item.title          = v_info["title"] 
         item.subtitle       = v_info["subtitle"] 

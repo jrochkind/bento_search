@@ -149,9 +149,9 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     assert_present first.language_code
     assert_present first.language_str
     
-    assert_present first.id
+    assert_present first.unique_id
     # db name, colon, accession number. 
-    assert_match /.+\:.+/, first.id
+    assert_match /.+\:.+/, first.unique_id
   end
   
   test_with_cassette("get_info", :ebscohost) do

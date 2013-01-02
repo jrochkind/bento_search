@@ -111,7 +111,7 @@ module BentoSearch
           item.link = scopus_link["href"]
         end
         
-        item.id             = node_text entry.at_xpath("dc:identifier", xml_ns)
+        item.unique_id             = node_text entry.at_xpath("dc:identifier", xml_ns)
         
         item.title          = node_text entry.at_xpath("dc:title", xml_ns)
         item.journal_title  = node_text entry.at_xpath("prism:publicationName", xml_ns)

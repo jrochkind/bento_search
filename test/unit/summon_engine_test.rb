@@ -159,7 +159,7 @@ class SummonEngineTest < ActiveSupport::TestCase
     # just smoke test to make sure it's set to something
     assert_not_nil first.link_is_fulltext?
     
-    assert_present  first.id
+    assert_present  first.unique_id
   end
   
   test_with_cassette("proper tags for snippets", :summon) do

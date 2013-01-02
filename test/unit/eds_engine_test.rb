@@ -145,9 +145,9 @@ class EdsEngineTest < ActiveSupport::TestCase
       
       assert_present first.format_str
       
-      assert_present first.id
+      assert_present first.unique_id
       # EDS id is db name, colon, accession number
-      assert_match /.+\:.+/, first.id
+      assert_match /.+\:.+/, first.unique_id
   end
   
   

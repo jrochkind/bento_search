@@ -42,7 +42,7 @@ class PrimoEngineTest < ActiveSupport::TestCase
     # not every result has every field, but at time we recorded
     # with VCR, this result for this search did. Sorry, a bit fragile. 
     # publisher
-    %w{format_str format title authors volume issue start_page end_page journal_title issn doi abstract id}.each do |attr|
+    %w{format_str format title authors volume issue start_page end_page journal_title issn doi abstract unique_id}.each do |attr|
       assert_present first.send(attr), "must have #{attr}"
     end
     

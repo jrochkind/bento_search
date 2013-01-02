@@ -102,7 +102,7 @@ class ScopusEngineTest < ActiveSupport::TestCase
     
     assert_present sample_result.format
     
-    assert_present sample_result.id
+    assert_present sample_result.unique_id
     
   end
   

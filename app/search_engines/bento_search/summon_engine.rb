@@ -119,7 +119,7 @@ class BentoSearch::SummonEngine
     hash["documents"].each do |doc_hash|
       item = BentoSearch::ResultItem.new
       
-      item.id             = first_if_present doc_hash["ID"]
+      item.unique_id      = first_if_present doc_hash["ID"]
       
       item.title          = handle_highlighting( first_if_present doc_hash["Title"] )
       item.custom_data["raw_title"] = handle_highlighting( first_if_present(doc_hash["Title"]) , :strip => true)

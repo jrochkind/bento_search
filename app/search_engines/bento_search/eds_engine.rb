@@ -227,7 +227,7 @@ class BentoSearch::EdsEngine
           db           = record_xml.at_xpath("./Header/DbId").try(:text)
           accession    = record_xml.at_xpath("./Header/An").try(:text)
           if db && accession
-            item.id    = "#{db}:#{accession}"
+            item.unique_id    = "#{db}:#{accession}"
           end
           
           

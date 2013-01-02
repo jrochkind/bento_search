@@ -105,7 +105,7 @@ class BentoSearch::PrimoEngine
       
       # I think this is primo unique ID. Have no idea how to look things
       # up by unique id though. 
-      item.id         = text_at_xpath(doc_xml, "./PrimoNMBib/record/control/recordid")
+      item.unique_id         = text_at_xpath(doc_xml, "./PrimoNMBib/record/control/recordid")
       
       item.custom_data["snippet"] = handle_snippet_value text_at_xpath(doc_xml, "./PrimoNMBib/record/display/snippet")
       
