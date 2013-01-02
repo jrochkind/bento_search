@@ -174,6 +174,25 @@ class BentoSearch::EbscoHostEngine
     
   end
   
+  # Method to get a single record by "identifier" string, which is really
+  # a combined "db:id" string, same string that would be returned by
+  # an individual item.identifier
+  #
+  # Returns a BentoSearch::Results, possibly with error message, possibly
+  # with 0 results, etc. 
+  def get(id)
+    # split on first colon only. 
+    id =~ /^([^:]+)\:(.*)$/
+    db = $1 ; an = $2
+    
+    raise ArgumentError.new("EbscoHostEngine#get requires an id with a colon, like `a9h:12345`. Instead, we got #{id}") unless db && an
+    
+    # "AN" search_field is not listed in our search_field_definitions,
+    # but it is an internal EBSCOHost search index on 'accession number'
+    
+    return search(an, :search_field => "AN", :databases => [db])        
+  end
+  
   # pass in nokogiri record xml for the records/rec node. 
   # Returns nil if NO fulltext is avail on ebsco platform, 
   # non-nil if fulltext is available. Non-nil value will

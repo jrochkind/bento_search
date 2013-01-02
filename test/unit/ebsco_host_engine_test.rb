@@ -96,6 +96,14 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     assert_equal ["aaa", "bbb"].to_set, query_params["db"].to_set    
   end
   
+  def test_lookup_by_accession_number_construction
+    url = @engine.query_url(:query => "123456", :search_field => "AN")
+    
+    query_params = CGI.parse( URI.parse(url).query )
+    
+    assert_equal ["(AN 123456)"], query_params["query"]
+  end
+  
   
   def test_prepare_query
     query = @engine.ebsco_query_prepare('one :. ; two "three four" and NOT OR five')
@@ -271,5 +279,25 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     assert_equal :dissertation, result.format
     assert_equal "Machine gun voices: Bandits, favelas, and utopia in Brazilian funk", result.title    
   end
+  
+  test_with_cassette("live #get(identifier) round trip", :ebscohost) do
+    results = @engine.search("cancer")
+    
+    assert (! results.failed?)
+    
+    get_results = @engine.get( results.first.unique_id )
+    
+    assert (! get_results.failed?)
+    
+    assert_equal 1, get_results.length
+  end
+  
+  test("illegal arg for get with id with no colon") do
+    assert_raise ArgumentError do
+      @engine.get("no_colon_in_here")
+    end
+  end
+  
+    
   
 end
