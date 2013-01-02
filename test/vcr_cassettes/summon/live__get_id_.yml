@@ -1,0 +1,313 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.summon.serialssolutions.com/2.0.0/search?s.he=$$BENTO_HL_END$$&s.hs=$$BENTO_HL_START$$&s.ps=10&s.q=cancer
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf8
+      Accept:
+      - application/json
+      X-Summon-Date:
+      - Wed, 02 Jan 2013 23:48:37 GMT
+      Authorization:
+      - Summon DUMMY_ACCESS_ID;BNQGCiVJejRH0KNxuJkCW6o5jrQ=
+      Host:
+      - api.summon.serialssolutions.com:80
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04
+      !binary "RGF0YWNlbnRlcg==":
+      - !binary |-
+        REZXMQ==
+      - !binary |-
+        SUFEMQ==
+      !binary "RGF0ZQ==":
+      - !binary |-
+        V2VkLCAwMiBKYW4gMjAxMyAyMzo0ODozOCBHTVQ=
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+    body:
+      encoding: UTF-8
+      string: ! '{"version": "2.0.0","sessionId": "79201052-b1c2-4b4f-9c79-32a7724a5650","elapsedQueryTime":
+        470,"queryTime": 467,"totalRequestTime": 520,"pageCount": 1358547,"recordCount":
+        13585461,"query": {"queryString": "s.rec.qs.max=&s.hs=%5C%24%5C%24BENTO_HL_START%5C%24%5C%24&s.mr=&s.rec.db.max=&s.ps=10&s.q=cancer&s.he=%5C%24%5C%24BENTO_HL_END%5C%24%5C%24&s.pn=1","pageNumber":
+        1,"pageSize": 10,"highlightStartDelimiter": "$$BENTO_HL_START$$","highlightEndDelimiter":
+        "$$BENTO_HL_END$$","textQueries": [{"textQuery": "cancer","removeCommand":
+        "removeTextQuery(cancer)"}],"searchTerms": [],"textFilters": [],"rangeFilters":
+        [],"facetValueFilters": [],"inclusiveFacetValueFilters": [],"facetValueGroupFilters":
+        [],"facetFields": [],"rangeFacetFields": [],"sort": []},"facetFields": [],"rangeFacetFields":
+        [],"didYouMeanSuggestions": [],"recommendationLists": {"database": [{"title":
+        "Cochrane Library","description": "","link": "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/dbrecommender/AAAkNzkyMDEwNTItYjFjMi00YjRmLTljNzktMzJhNzcyNGE1NjUwAQAKVlM5UE03WU40SAIAM2h0dHA6Ly93d3cudGhlY29jaHJhbmVsaWJyYXJ5LmNvbS92aWV3LzAvaW5kZXguaHRtbAMAATAEABBDb2NocmFuZSBMaWJyYXJ5BQAIZGF0YWJhc2U"}]},"documents":
+        [{"hasFullText": true,"isFullTextHit": false,"inHoldings": true,"openUrl":
+        "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=journal&rft.jtitle=&rft.series=&rft.pub=%E6%97%A5%E6%9C%AC%E7%94%B2%E6%AE%BB%E9%A1%9E%E5%AD%A6%E4%BC%9A&rft.isbn=&rft.issn=0918-1989&rft.externalDBID=&rft.externalDocID=","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQMbcETbGaGukmGSYb6ZokmaTpWiabW-oaGyUC23ImicA2BGgoOyzYMsDXPNLPxAOpRHcTZbB3cw1x9tDNykvJiQe3QeNBRyADnREPEknPj88qiA8CD0uDsnO8J5QFOnXFEDSXCgCqeSAS","Language":
+        ["Japanese"],"Author": ["日本甲殻類学会 [編]"],"PublicationPlace": ["東京"],"Score":
+        ["8.295631"],"DBID": ["3CS","JQU"],"IsPeerReviewed": ["false"],"PublicationDate_xml":
+        [{"text": "1991","year": "1991"}],"PublicationDate": ["1991"],"PublicationCentury":
+        ["1900"],"Publisher": ["日本甲殻類学会"],"SourceType": ["Publisher"],"Publisher_xml":
+        [{"name": "日本甲殻類学会"}],"ClassificationCodes": ["Z18-3327"],"URI": ["http://iss.ndl.go.jp/books/R100000002-I000000082371-00"],"IsScholarly":
+        ["true"],"ID": ["FETCH-jndl_porta_oai_iss_ndl_go_jp_R100000002_I000000082371_000"],"PublicationYear":
+        ["1991"],"PublicationPlace_xml": [{"name": "東京"}],"MergedId": ["FETCHMERGED-jndl_porta_oai_iss_ndl_go_jp_R100000002_I000000082371_000"],"Author_xml":
+        [{"fullname": "日本甲殻類学会 [編]"}],"PublicationDecade": ["1990"],"ContentType":
+        ["Journal"],"Title": ["$$BENTO_HL_START$$Cancer$$BENTO_HL_END$$"],"ISSN":
+        ["0918-1989"],"SSID": ["ssib003110677","ssib000935677","ssib002223832"]},{"hasFullText":
+        false,"isFullTextHit": false,"inHoldings": false,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=journal&rft.jtitle=Cancer&rft.series=&rft.pub=Wiley&rft.isbn=&rft.issn=0008-543X&rft.externalDBID=&rft.externalDocID=129067733","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQMbcETbGaGukmGSYb6ZokmaTpWiabW-oaGyUC23ImicA2BGgoOyzYMsDXPNLPxIMHUUC5iTLIuLmGOHvopieVxRdATlyIBw2WmJmbA_veALsTFSk","Language":
+        ["German"],"PublicationPlace": ["Hagerstown, Md","New York, NY","Hoboken,
+        NJ","Philadelphia, Pa"],"Score": ["8.274099"],"DBID": ["TB1"],"IsPeerReviewed":
+        ["true"],"PublicationDate": ["1995","1948-1995","1948-"],"PublicationDate_xml":
+        [{"text": "1995","year": "1995"},{"text": "1948-","year": "1948"},{"text":
+        "früher"},{"text": "1948-1995","year": "1948"}],"PublicationCentury": ["1900"],"Source":
+        ["unknown"],"OCLC": ["260154653","643471759","(DE-599)ZDB1429-1"],"Publisher":
+        ["Wiley","Lippincott","Lippincott-Raven Publishers"],"Notes": ["1.1948","Cancer
+        cytopathology; ungezählte Beil.: Suppl.","Zusatz 20.1967 - 24.1969: Proceedings
+        of the James Ewing Society. - Zusatz 25.1970 - 28.1971: official journal of
+        the James Ewing Society, the American Society of Clinical Oncology. - Zusatz
+        später: official journal for the Society of Surgical Oncology (founded as
+        James Ewing Society), the American Society of Clinical Oncology, American
+        Association of Therapeutic Radiologists","Pro Jahr ersch. mit durchgehender
+        Zählung jeweils 2 Vol. d. Hauptzeitschrift u. 1 Vol. d. Section"],"SourceType":
+        ["Institutional Repository"],"Publisher_xml": [{"name": "Wiley"},{"name":
+        "Lippincott-Raven Publishers"},{"name": "Lippincott"}],"DocumentTitleAlternate":
+        ["Cancer : a journal of the American Cancer Society ; official journal for
+        the Society of Surgical Oncology (founded as the James Ewing Soc., Inc.),
+        the American Society for Therapeutics Radiology and Oncology"],"PublicationTitleAlternate":
+        ["Cancer cytopathology","official journal of the James Ewing Society, the
+        American Society of Clinical Oncology","official journal for the Society of
+        Surgical Oncology (founded as James Ewing Society), the American Society of
+        Clinical Oncology, American Association of Therapeutic Radiologists","Cancer,
+        Suppl.","Cytopathology","Cancer","Proceedings of the James Ewing Society","Cancer
+        (Philadelphia)"],"URI": ["http://www.gbv.de/gsomenu/opendb.php?db=2.3&ln=en"],"IsScholarly":
+        ["true"],"ID": ["FETCH-gbv_primary_1290677330"],"PublicationTitle": ["Cancer"],"Discipline":
+        ["Medicine"],"PublicationYear": ["1995","1948"],"PublicationPlace_xml": [{"name":
+        "Philadelphia, Pa"},{"name": "Hagerstown, Md"},{"name": "New York, NY"},{"name":
+        "Hoboken, NJ"}],"EISSN": ["1934-6638"],"MergedId": ["FETCHMERGED-gbv_primary_1290677330"],"PublicationDecade":
+        ["1990","1940"],"ContentType": ["Journal"],"Title": ["$$BENTO_HL_START$$Cancer$$BENTO_HL_END$$"],"ISSN":
+        ["1934-662X","0008-543X"],"ExternalDocumentID": ["129067733"],"SSID": ["ssj0018721","ssj0007253"],"Subtitle":
+        ["a journal of the American $$BENTO_HL_START$$Cancer$$BENTO_HL_END$$ Society
+        ; official journal for the Society of Surgical Oncology (founded as the James
+        Ewing Soc., Inc.), the American Society for Therapeutics Radiology and Oncology"]},{"hasFullText":
+        false,"isFullTextHit": false,"inHoldings": false,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=journal&rft.jtitle=&rft.series=&rft.pub=%E9%AB%98%E6%9D%BE%E5%AE%AE%E5%A6%83%E7%99%8C%E7%A0%94%E7%A9%B6%E5%9F%BA%E9%87%91&rft.isbn=&rft.issn=&rft.externalDBID=&rft.externalDocID=","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQMbcETbGaGukmGSYb6ZokmaTpWiabW-oaGyUC23ImicA2BGgoOyzYMsDXPNLPxIMHUVC5iTLYu7mGOHvoZuWl5MSD26DxoCOQgc6IB4mk58dnFcQHgYelQdk53hPKMgG2RIxBc6kAqwcgFA","Language":
+        ["Japanese"],"Author": ["高松宮妃癌研究基金 [編]"],"PublicationPlace": ["東京"],"Score":
+        ["7.957937"],"IsPeerReviewed": ["false"],"DBID": ["3CS","JQU"],"PublicationDate":
+        ["1900"],"PublicationDate_xml": [{"text": "1900","year": "1900"}],"PublicationCentury":
+        ["1900"],"Publisher": ["高松宮妃癌研究基金"],"SourceType": ["Publisher"],"Publisher_xml":
+        [{"name": "高松宮妃癌研究基金"}],"ClassificationCodes": ["Z43-638"],"URI": ["http://iss.ndl.go.jp/books/R100000002-I000000049323-00"],"IsScholarly":
+        ["false"],"ID": ["FETCH-jndl_porta_oai_iss_ndl_go_jp_R100000002_I000000049323_000"],"PublicationYear":
+        ["1900"],"PublicationPlace_xml": [{"name": "東京"}],"MergedId": ["FETCHMERGED-jndl_porta_oai_iss_ndl_go_jp_R100000002_I000000049323_000"],"Author_xml":
+        [{"fullname": "高松宮妃癌研究基金 [編]"}],"PublicationDecade": ["1900"],"ContentType":
+        ["Journal"],"Title": ["$$BENTO_HL_START$$Cancer$$BENTO_HL_END$$"]},{"hasFullText":
+        false,"isFullTextHit": false,"inHoldings": false,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=journal&rft.jtitle=&rft.series=&rft.pub=&rft.isbn=&rft.issn=&rft.externalDBID=&rft.externalDocID=","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQMbcETbGaGukmGSYb6ZokmaTpWiabW-oaGyUC23ImicA2BGgoOyzYMsDXPNLPxIMHUWC5iTLYu7mGOHvoZuWl5MSD26DxoCOQgc6IB4mk58dnFcQHgYelQdk53hPCAJazZhYmoLlUAKt8IB0","Language":
+        ["Japanese"],"URI": ["http://iss.ndl.go.jp/books/R100000002-I000000128684-00"],"Score":
+        ["7.844063"],"IsScholarly": ["false"],"DBID": ["3CS","JQU"],"IsPeerReviewed":
+        ["false"],"ID": ["FETCH-jndl_porta_oai_iss_ndl_go_jp_R100000002_I000000128684_000"],"SourceType":
+        ["Publisher"],"MergedId": ["FETCHMERGED-jndl_porta_oai_iss_ndl_go_jp_R100000002_I000000128684_000"],"ContentType":
+        ["Journal"],"Title": ["$$BENTO_HL_START$$Cancer$$BENTO_HL_END$$"],"ClassificationCodes":
+        ["Z53-S17"]},{"hasFullText": false,"isFullTextHit": false,"inHoldings": false,"openUrl":
+        "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=journal&rft.jtitle=&rft.series=&rft.pub=Blackwell+Japan&rft.isbn=&rft.issn=1347-1082&rft.externalDBID=&rft.externalDocID=","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQMbcETbGaGukmGSYb6ZokmaTpWiabW-oaGyUC23ImicA2BGgoOyzYMsDXPNLPxIMHUXC5iTLYu7mGOHvoZuWl5MSD26DxoCOQgc6IB4mk58dnFcQHgYelQdk53hPCAHZMzIwNQXOpAKuaIBY","Language":
+        ["Japanese"],"Edition": ["日本語版"],"PublicationPlace": ["Tokyo"],"Score": ["7.844063"],"IsPeerReviewed":
+        ["false"],"DBID": ["3CS","JQU"],"PublicationDate": ["2002"],"PublicationDate_xml":
+        [{"text": "2002","year": "2002"}],"PublicationCentury": ["2000"],"Publisher":
+        ["Blackwell Japan"],"SourceType": ["Publisher"],"Publisher_xml": [{"name":
+        "Blackwell Japan"}],"ClassificationCodes": ["Z74-D141"],"URI": ["http://iss.ndl.go.jp/books/R100000002-I000000407631-00"],"IsScholarly":
+        ["false"],"ID": ["FETCH-jndl_porta_oai_iss_ndl_go_jp_R100000002_I000000407631_000"],"PublicationYear":
+        ["2002"],"PublicationPlace_xml": [{"name": "Tokyo"}],"MergedId": ["FETCHMERGED-jndl_porta_oai_iss_ndl_go_jp_R100000002_I000000407631_000"],"PublicationDecade":
+        ["2000"],"ContentType": ["Journal"],"Title": ["$$BENTO_HL_START$$Cancer$$BENTO_HL_END$$"],"ISSN":
+        ["1347-1082"]},{"hasFullText": false,"isFullTextHit": false,"inHoldings":
+        false,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Cancer&rft.jtitle=IARC+scientific+publications&rft.au=Perera%2C+Frederica+P&rft.au=Vineis%2C+Paolo&rft.series=&rft.date=2011-01-01&rft.pub=&rft.isbn=&rft.issn=0300-5038&rft.volume=&rft.issue=163&rft.spage=337&rft.epage=&rft_id=info:pmid/22997871&rft_id=info:pmid/22997871&rft.externalDBID=&rft.externalDocID=22997871","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQMbcETbGaGukmGSYb6ZokmaTpWiabW-oaGyUC23ImicA2BGgoOyzYMsDXPNLPxIMHUYC5iTLIubmGOHvoQuqD-ALIoQvxRsByE5i4DA0A7joWRA","Language":
+        ["English"],"Author": ["Vineis, Paolo","Perera, Frederica P"],"PublicationPlace":
+        ["France"],"AuthorAffiliation_xml": [{"name": "Columbia University, New York,
+        NY, USA. fpp1@columbia.edu"}],"Score": ["7.7872376"],"IsPeerReviewed": ["true"],"PublicationDate_xml":
+        [{"text": "2011-00-00","year": "2011"}],"PublicationDate": ["2011-00-00"],"PublicationCentury":
+        ["2000"],"AbstractList": ["Molecular epidemiology was introduced in the study
+        of cancer in the early 1980s, with the expectation that it would help overcome
+        some important limitations of epidemiology and facilitate cancer prevention.
+        The first generation of biomarkers has indeed contributed to our understanding
+        of mechanisms, risk and susceptibility as they relate largely to genotoxic
+        carcinogens, resulting in interventions and policy changes to reduce risk
+        from several important environmental carcinogens. New and promising biomarkers
+        are now becoming available for epidemiological studies, including alterations
+        in gene methylation and gene expression, proteomics and metabolomics. However,
+        most of these newer biomarkers have not been adequately validated, and their
+        role in the causal paradigm is not clear. Systematic validation of these newer
+        biomarkers is urgently needed and can take advantage of the principles and
+        criteria established over the past several decades from experience with the
+        first generation of biomarkers. Prevention of only 20% of cancers in the United
+        States alone would result in 300 000 fewer new cases annually, avoidance of
+        incalculable suffering, and a savings in direct financial costs of over US$20
+        billion each year (1). Molecular epidemiology can play a valuable role in
+        achieving this goal."],"SourceType": ["Publisher"],"Snippet": ["...Molecular
+        epidemiology was introduced in the study of $$BENTO_HL_START$$cancer$$BENTO_HL_END$$
+        in the early 1980s, with the expectation that it would help overcome some
+        important limitations of epidemiology and facilitate $$BENTO_HL_START$$cancer$$BENTO_HL_END$$
+        prevention..."],"PublicationTitleAlternate": ["IARC Sci Publ"],"GrantInformation":
+        ["R01CA69094 - NCI NIH HHS - United States","1R01CA127532 - NCI NIH HHS -
+        United States","5R01ES08977 - NIEHS NIH HHS - United States"],"URI": ["http://www.ncbi.nlm.nih.gov/pubmed/22997871"],"IsScholarly":
+        ["true"],"ID": ["FETCH-pubmed_primary_229978710"],"PMID": ["22997871"],"PublicationTitle":
+        ["IARC scientific publications"],"Issue": ["163"],"PublicationYear": ["2011"],"Genre":
+        ["Research Support, Non-U.S. Gov''t","Review","Research Support, U.S. Gov''t,
+        Non-P.H.S","Journal Article","Research Support, N.I.H., Extramural"],"PublicationPlace_xml":
+        [{"name": "France"}],"AuthorAffiliation": ["Columbia University, New York,
+        NY, USA. fpp1@columbia.edu"],"DatabaseTitleList": [""],"Abstract": ["Molecular
+        epidemiology was introduced in the study of cancer in the early 1980s, with
+        the expectation that it would help overcome some important limitations of
+        epidemiology and facilitate cancer prevention. The first generation of biomarkers
+        has indeed contributed to our understanding of mechanisms, risk and susceptibility
+        as they relate largely to genotoxic carcinogens, resulting in interventions
+        and policy changes to reduce risk from several important environmental carcinogens.
+        New and promising biomarkers are now becoming available for epidemiological
+        studies, including alterations in gene methylation and gene expression, proteomics
+        and metabolomics. However, most of these newer biomarkers have not been adequately
+        validated, and their role in the causal paradigm is not clear. Systematic
+        validation of these newer biomarkers is urgently needed and can take advantage
+        of the principles and criteria established over the past several decades from
+        experience with the first generation of biomarkers. Prevention of only 20%
+        of cancers in the United States alone would result in 300 000 fewer new cases
+        annually, avoidance of incalculable suffering, and a savings in direct financial
+        costs of over US$20 billion each year (1). Molecular epidemiology can play
+        a valuable role in achieving this goal."],"SubjectTerms": ["Neoplasms - prevention
+        & control","Neoplasms - diagnosis","Neoplasms - epidemiology","Tumor Markers,
+        Biological - analysis"],"MergedId": ["FETCHMERGED-pubmed_primary_229978710"],"Author_xml":
+        [{"sequence": "1","givenname": "Frederica P","surname": "Perera","fullname":
+        "Perera, Frederica P"},{"sequence": "2","givenname": "Paolo","surname": "Vineis","fullname":
+        "Vineis, Paolo"}],"PublicationDecade": ["2010"],"ContentType": ["Journal Article"],"Title":
+        ["$$BENTO_HL_START$$Cancer$$BENTO_HL_END$$"],"ISSN": ["0300-5038"],"ExternalDocumentID":
+        ["22997871"],"SSID": ["ssib004628120","ssib000496792"],"StartPage": ["337"]},{"hasFullText":
+        true,"isFullTextHit": false,"inHoldings": true,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=CANCER&rft.jtitle=Chest&rft.au=Lawrence%2C+D&rft.series=&rft.date=2010-06-03&rft.pub=&rft.isbn=&rft.issn=0012-3692&rft.volume=137&rft.issue=6&rft.spage=1483&rft.epage=1483&rft_id=info:doi/10.1378%2Fchest.09-1971&rft.externalDBID=n%2Fa&rft.externalDocID=10_1378_chest_09_1971","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQMbcETbGaGukmGSYb6ZokmaTpWiabW-oaGyUC23ImicA2BGgoOyzYMsDXPNLPxIMHUZC5iTLourmGOHvowmqJ-ALIsQvx4LkXc4t48EVS8QaW8YaWwOoRAHhUG5M","DatabaseTitle":
+        ["CrossRef"],"Volume": ["137"],"Language": ["English"],"Author": ["Lawrence,
+        D"],"Score": ["7.69245"],"DOI": ["10.1378/chest.09-1971"],"IsPeerReviewed":
+        ["true"],"PublicationDate": ["20100601","20100603"],"PublicationDate_xml":
+        [{"text": "20100603","month": "06","year": "2010","day": "03"},{"text": "20100601","month":
+        "06","year": "2010","day": "01"}],"PublicationCentury": ["2000"],"SourceType":
+        ["Aggregation Database"],"IsScholarly": ["true"],"ID": ["FETCH-crossref_primary_10_1378_chest_09_19710"],"PublicationTitle":
+        ["Chest"],"Issue": ["6"],"Discipline": ["Medicine"],"PublicationYear": ["2010"],"EISSN":
+        ["1931-3543"],"MergedId": ["FETCHMERGED-crossref_primary_10_1378_chest_09_19710"],"Author_xml":
+        [{"sequence": "1","givenname": "D","surname": "Lawrence","fullname": "Lawrence,
+        D"}],"PublicationDecade": ["2010"],"ContentType": ["Journal Article"],"Title":
+        ["$$BENTO_HL_START$$CANCER$$BENTO_HL_END$$"],"ISSN": ["0012-3692"],"ExternalDocumentID":
+        ["10_1378_chest_09_1971"],"SSID": ["ssj0001196"],"StartPage": ["1483"],"EndPage":
+        ["1483"]},{"hasFullText": true,"isFullTextHit": false,"inHoldings": true,"openUrl":
+        "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=CANCER&rft.jtitle=Chest&rft.au=Lawrence%2C+D&rft.series=&rft.date=2010-06-01&rft.pub=&rft.isbn=&rft.issn=0012-3692&rft.volume=137&rft.issue=6&rft.spage=1483&rft.epage=&rft.externalDBID=&rft.externalDocID=Lawrence_D_Chest_June_2010_137_6_1483_CANCER","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQMbcETbGaGukmGSYb6ZokmaTpWiabW-oaGyUC23ImicA2BGgoOyzYMsDXPNLPxIMHUaC5iTK4ubmGOHvowqqG-NyUZNBuxJySeJ_EcvAWuHiXeGfQbVLxXqV5qfEgy-INjc3jzYDtWAvjeGfQrS5BBgDYlSR-","Volume":
+        ["137"],"Language": ["English"],"Author": ["Lawrence, D"],"Score": ["7.6915755"],"IsPeerReviewed":
+        ["true"],"PublicationDate": ["20100600"],"PublicationDate_xml": [{"text":
+        "20100600","month": "06","year": "2010"}],"PublicationCentury": ["2000"],"SourceType":
+        ["Publisher"],"IsScholarly": ["true"],"ID": ["FETCH-elsevier_mdconsult_Lawrence_D_Chest_June_2010_137_6_1483_CANCER0"],"PublicationTitle":
+        ["Chest"],"Issue": ["6"],"PublicationYear": ["2010"],"EISSN": ["1931-3543"],"MergedId":
+        ["FETCHMERGED-elsevier_mdconsult_Lawrence_D_Chest_June_2010_137_6_1483_CANCER0"],"Author_xml":
+        [{"sequence": "1","fullname": "Lawrence, D"}],"PublicationDecade": ["2010"],"ContentType":
+        ["Journal Article"],"Title": ["$$BENTO_HL_START$$CANCER$$BENTO_HL_END$$"],"ISSN":
+        ["0012-3692"],"ExternalDocumentID": ["Lawrence_D_Chest_June_2010_137_6_1483_CANCER"],"SSID":
+        ["ssj0001196"],"StartPage": ["1483"]},{"hasFullText": true,"isFullTextHit":
+        false,"inHoldings": true,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Cancer&rft.jtitle=Chest&rft.au=Lawrence%2C+Deborah&rft.series=&rft.date=2010-06-01&rft.pub=American+College+of+Chest+Physicians&rft.isbn=&rft.issn=0012-3692&rft.volume=137&rft.issue=6&rft.spage=1483&rft.epage=&rft.externalDBID=n%2Fa&rft.externalDocID=230448683","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQMbcETbGaGukmGSYb6ZokmaTpWiabW-oaGyUC23ImicA2BGgoOyzYMsDXPNLPxIMHUbC5iTLIurmGOHvoggrI-ALIkQvxoKFLEwszC2MDANJ8FYs","Volume":
+        ["137"],"Language": ["English"],"Author": ["Lawrence, Deborah"],"Score": ["7.6915755"],"PageCount":
+        ["1"],"IsPeerReviewed": ["true"],"PublicationDate": ["June 2010"],"PublicationDate_xml":
+        [{"text": "June 2010","month": "06","year": "2010"}],"PublicationCentury":
+        ["2000"],"Publisher": ["American College of Chest Physicians"],"SourceType":
+        ["Aggregation Database"],"Publisher_xml": [{"name": "American College of Chest
+        Physicians"}],"IsScholarly": ["true"],"ID": ["FETCH-gale_primary_2304486830"],"PublicationTitle":
+        ["Chest"],"Issue": ["6"],"Discipline": ["Medicine"],"PublicationYear": ["2010"],"Audience":
+        ["Professional"],"EISSN": ["1931-3543"],"MergedId": ["FETCHMERGED-gale_primary_2304486830"],"Author_xml":
+        [{"sequence": "1","fullname": "Lawrence, Deborah"}],"PublicationDecade": ["2010"],"ContentType":
+        ["Journal Article"],"Title": ["$$BENTO_HL_START$$Cancer$$BENTO_HL_END$$"],"ISSN":
+        ["0012-3692"],"ExternalDocumentID": ["230448683"],"SSID": ["ssj0001196"],"StartPage":
+        ["1483"]},{"hasFullText": false,"isFullTextHit": false,"inHoldings": false,"openUrl":
+        "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.title=Cancer&rft.au=Acton%2C+Q.+Ashton&rft.series=&rft.date=2012-01-01&rft.pub=Scholarly+Editions&rft.isbn=&rft.issn=&rft.volume=&rft.issue=&rft.spage=&rft.epage=&rft.externalDBID=&rft.externalDocID=10548160","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQMbcETbGaGukmGSYb6ZokmaTpWiabW-oaGyUC23ImicA2BGgoOyzYMsDXPNLPxAO58HMTZZBzcw1x9tCFTJzGF0BOXYgHmmhiYQisnwEAoRZk","Language":
+        ["English"],"Author": ["Acton, Q. Ashton"],"Score": ["7.649659"],"PageCount":
+        ["3937"],"IsPeerReviewed": ["false"],"PublicationDate": ["20120101"],"PublicationDate_xml":
+        [{"text": "20120101","month": "01","year": "2012","day": "01"}],"PublicationCentury":
+        ["2000"],"Publisher": ["Scholarly Editions"],"SourceType": ["Publisher","Enrichment
+        Source"],"Publisher_xml": [{"name": "Scholarly Editions"}],"DocumentTitleAlternate":
+        ["Cancer : New Insights for the Healthcare Professional (2011 Edition)"],"EISBN":
+        ["1464900035","9781464900037"],"IsScholarly": ["false"],"ID": ["FETCH-ebrary_primary_105481600"],"PublicationYear":
+        ["2012"],"SubjectTerms": ["MEDICAL","Oncology"],"MergedId": ["FETCHMERGED-ebrary_primary_105481600"],"Author_xml":
+        [{"fullname": "Acton, Q. Ashton"}],"PublicationDecade": ["2010"],"ContentType":
+        ["eBook"],"Title": ["$$BENTO_HL_START$$Cancer$$BENTO_HL_END$$"],"ExternalDocumentID":
+        ["10548160"],"SSID": ["ssib009094050"],"Subtitle": ["New Insights for the
+        Healthcare Professional (2011 Edition)"]}],"spotlights": [],"spotlightPosition":
+        0}'
+    http_version: 
+  recorded_at: Wed, 02 Jan 2013 23:48:38 GMT
+- request:
+    method: get
+    uri: http://api.summon.serialssolutions.com/2.0.0/search?s.he=$$BENTO_HL_END$$&s.hs=$$BENTO_HL_START$$&s.ps=10&s.q=ID:(FETCH-jndl_porta_oai_iss_ndl_go_jp_R100000002_I000000082371_000)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf8
+      Accept:
+      - application/json
+      X-Summon-Date:
+      - Wed, 02 Jan 2013 23:48:45 GMT
+      Authorization:
+      - Summon DUMMY_ACCESS_ID;MNLmWqFyldwTVqld1YE2Yqbo26M=
+      Host:
+      - api.summon.serialssolutions.com:80
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04
+      !binary "RGF0YWNlbnRlcg==":
+      - !binary |-
+        REZXMQ==
+      - !binary |-
+        SUFEMQ==
+      !binary "RGF0ZQ==":
+      - !binary |-
+        V2VkLCAwMiBKYW4gMjAxMyAyMzo0ODo0NCBHTVQ=
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+    body:
+      encoding: UTF-8
+      string: ! '{"version": "2.0.0","sessionId": "e3f5fff3-2c4d-48a8-8aa7-52b6ff667c81","elapsedQueryTime":
+        16,"queryTime": 15,"totalRequestTime": 21,"pageCount": 1,"recordCount": 1,"query":
+        {"queryString": "s.rec.qs.max=&s.hs=%5C%24%5C%24BENTO_HL_START%5C%24%5C%24&s.mr=&s.ho=f&s.rec.db.max=&s.ps=10&s.q=ID%3A%28FETCH-jndl_porta_oai_iss_ndl_go_jp_R100000002_I000000082371_000%29&s.he=%5C%24%5C%24BENTO_HL_END%5C%24%5C%24&s.pn=1","pageNumber":
+        1,"pageSize": 10,"highlightStartDelimiter": "$$BENTO_HL_START$$","highlightEndDelimiter":
+        "$$BENTO_HL_END$$","isHoldingsOnlyEnabled": false,"textQueries": [{"textQuery":
+        "ID:(FETCH-jndl_porta_oai_iss_ndl_go_jp_R100000002_I000000082371_000)","removeCommand":
+        "removeTextQuery(ID\\:\\(FETCH-jndl_porta_oai_iss_ndl_go_jp_R100000002_I000000082371_000\\))"}],"searchTerms":
+        [],"textFilters": [],"rangeFilters": [],"facetValueFilters": [],"inclusiveFacetValueFilters":
+        [],"facetValueGroupFilters": [],"facetFields": [],"rangeFacetFields": [],"sort":
+        []},"facetFields": [],"rangeFacetFields": [],"didYouMeanSuggestions": [],"recommendationLists":
+        {},"documents": [{"hasFullText": true,"isFullTextHit": false,"inHoldings":
+        true,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=journal&rft.jtitle=&rft.series=&rft.pub=%E6%97%A5%E6%9C%AC%E7%94%B2%E6%AE%BB%E9%A1%9E%E5%AD%A6%E4%BC%9A&rft.isbn=&rft.issn=0918-1989&rft.externalDBID=&rft.externalDocID=","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQSTVOM01LSzPWNUo2SdE1sUi00LVITDQH9nmSzNLSzMzMk8GbxMKCLQN8zSP9TDyQSnQ3UQZ7N9cQZw_drLyUnHhwGzQedAQy0BnxIJH0_Pisgvgg8LA0KDvHe0JZoFNXDEFzqQBN2iF-","Language":
+        ["Japanese"],"Author": ["日本甲殻類学会 [編]"],"PublicationPlace": ["東京"],"Score":
+        ["5.911355"],"DBID": ["3CS","JQU"],"IsPeerReviewed": ["false"],"PublicationDate_xml":
+        [{"text": "1991","year": "1991"}],"PublicationDate": ["1991"],"PublicationCentury":
+        ["1900"],"Publisher": ["日本甲殻類学会"],"SourceType": ["Publisher"],"Publisher_xml":
+        [{"name": "日本甲殻類学会"}],"ClassificationCodes": ["Z18-3327"],"URI": ["http://iss.ndl.go.jp/books/R100000002-I000000082371-00"],"IsScholarly":
+        ["true"],"ID": ["FETCH-jndl_porta_oai_iss_ndl_go_jp_R100000002_I000000082371_000"],"PublicationYear":
+        ["1991"],"PublicationPlace_xml": [{"name": "東京"}],"MergedId": ["FETCHMERGED-jndl_porta_oai_iss_ndl_go_jp_R100000002_I000000082371_000"],"Author_xml":
+        [{"fullname": "日本甲殻類学会 [編]"}],"PublicationDecade": ["1990"],"ContentType":
+        ["Journal"],"Title": ["Cancer"],"ISSN": ["0918-1989"],"SSID": ["ssib003110677","ssib000935677","ssib002223832"]}],"spotlights":
+        [],"spotlightPosition": 0}'
+    http_version: 
+  recorded_at: Wed, 02 Jan 2013 23:48:45 GMT
+recorded_with: VCR 2.3.0

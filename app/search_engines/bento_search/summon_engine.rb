@@ -194,6 +194,23 @@ class BentoSearch::SummonEngine
     return results
   end
   
+  # Looks up a record by SerSol Id, engine.get( item.unique_id ) should return
+  # item. 
+  #
+  # Returns a single BentoSearch::ResultItem, or raises BentoSearch::NotFound,
+  # BentoSearch::TooManyFound, or other unspecified exception. 
+  def get(id)
+    # "ID" is an internal search field for Summon, not listed in our
+    # own search_field_definitions, but it works. 
+    results = search(id, :search_field => "ID")
+    
+    raise BentoSearch::NotFound.new("ID: #{id}") if results.length == 0
+    raise BentoSearch::TooManyFound.new("ID: #{id}") if results.length == 0
+    raise (results.error[:exception] || Exception.new(error.inspect)) if results.failed?
+    
+    return results.first
+  end
+  
   def first_if_present(array)
     array ? array.first : nil
   end
@@ -318,7 +335,10 @@ class BentoSearch::SummonEngine
     #
     # Do NOT escape double quotes, let people use them for
     # phrases! 
-    string.gsub(/([+\-&|!\(\){}\[\]^~*?\\:])/) do |match|
+    #
+    # While docs suggest you have to double-slash escape hyphens,
+    # in fact doing so ruins ID: search, so we don't. 
+    string.gsub(/([+&|!\(\){}\[\]^~*?\\:])/) do |match|
       "\\#{$1}"
     end
   end

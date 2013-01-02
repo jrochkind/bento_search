@@ -176,4 +176,23 @@ class SummonEngineTest < ActiveSupport::TestCase
     
   end
   
+  test_with_cassette("live #get(id)", :summon) do
+    results = @engine.search("cancer")
+    
+    assert_present results
+    
+    item = @engine.get(results.first.unique_id)
+    
+    assert_not_nil item
+    assert_kind_of BentoSearch::ResultItem, item    
+    
+    assert_equal results.first.unique_id, item.unique_id    
+  end
+  
+  test_with_cassette("live get(id) on non-existing id", :summon) do
+    assert_raise(BentoSearch::NotFound) do 
+      item = @engine.get("NONE SUCH")
+    end
+  end
+  
 end
