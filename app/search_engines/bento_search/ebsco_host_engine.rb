@@ -178,8 +178,11 @@ class BentoSearch::EbscoHostEngine
   # a combined "db:id" string, same string that would be returned by
   # an individual item.identifier
   #
-  # Returns a BentoSearch::Results, possibly with error message, possibly
-  # with 0 results, etc. 
+  # Returns an individual BentoSearch::Result, or raises an exception.
+  # Can raise BentoSearch::NotFound, BentoSearch::TooManyFound, or 
+  # any other weird random exception caused by problems fetching (network
+  # error etc. Is it bad that we don't wrap these in an expected single
+  # exception type? Should we?)
   def get(id)
     # split on first colon only. 
     id =~ /^([^:]+)\:(.*)$/
@@ -190,7 +193,13 @@ class BentoSearch::EbscoHostEngine
     # "AN" search_field is not listed in our search_field_definitions,
     # but it is an internal EBSCOHost search index on 'accession number'
     
-    return search(an, :search_field => "AN", :databases => [db])        
+    results = search(an, :search_field => "AN", :databases => [db])
+    
+    raise (results.error[:exception] || Exception.new) if results.failed?
+    raise BentoSearch::NotFound.new("For id: #{id}") if results.length == 0
+    raise BentoSearch::TooManyFound.new("For id: #{id}") if results.length > 1
+    
+    return results.first
   end
   
   # pass in nokogiri record xml for the records/rec node. 

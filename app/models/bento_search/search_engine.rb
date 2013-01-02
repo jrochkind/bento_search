@@ -8,6 +8,12 @@ require 'multi_json'
 require 'nokogiri'
 
 module BentoSearch
+  # Usually raised by #get on an engine, when result for specified identifier
+  # can't be found. 
+  class NotFound < Exception ; end
+  # Usually raised by #get when identifier results in more than one record. 
+  class TooManyFound < Exception ; end
+  
   # Module mix-in for bento_search search engines. 
   #
   # ==Using a SearchEngine 

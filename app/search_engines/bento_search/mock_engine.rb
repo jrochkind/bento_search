@@ -5,6 +5,8 @@
 #
 # The nature of the fake results can be controlled by config variables:
 #
+# [:num_results]      how many items to include in returned results (default
+#                     specified per_page, or 10)
 # [:total_items]  total_items to report
 # [:sort_definitions] hash for #sort_definitions
 # [:link]             link to give to each item in results

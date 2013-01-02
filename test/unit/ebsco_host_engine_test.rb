@@ -285,19 +285,31 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     
     assert (! results.failed?)
     
-    get_results = @engine.get( results.first.unique_id )
+    item = @engine.get( results.first.unique_id )
     
-    assert (! get_results.failed?)
-    
-    assert_equal 1, get_results.length
+    assert_not_nil  item
+    assert_kind_of  BentoSearch::ResultItem, item
   end
+  
+  test_with_cassette("live get(id) with no results raises", :ebscohost) do
+    assert_raise(BentoSearch::NotFound) do 
+      results = @engine.get("a9h:bar")
+    end
+  end
+  
+  test_with_cassette("live get(id) on bad db raises", :ebscohost) do
+    assert_raise(Exception) do
+      results = @engine.get("badbad:bar")
+    end
+  end
+    
   
   test("illegal arg for get with id with no colon") do
     assert_raise ArgumentError do
       @engine.get("no_colon_in_here")
     end
   end
-  
     
+      
   
 end
