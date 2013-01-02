@@ -103,6 +103,19 @@ class SearchEngineTest < ActiveSupport::TestCase
             
     end
     
+    test "failed sets metadata on results" do
+      engine = MockEngine.new(:id => "fail_engine", :error => {:message => "failed"}, :for_display => {:foo => "foo"})
+      
+      results = engine.search(:query => "cancer", :per_page => 20)
+      
+      assert results.failed?
+      assert_present results.error
+      assert_equal "fail_engine", results.engine_id
+      assert_present results.search_args
+      assert_equal(  {:foo => "foo"}, results.display_configuration )       
+    end
+      
+    
     test "has empty :for_display config" do
       engine = MockEngine.new
       
