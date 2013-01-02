@@ -59,5 +59,10 @@ module BentoSearch
     def failed?
       ! error.nil?
     end
+    
+    def inspect
+      "<BentoSearch::Results #{super} #{'FAILED' if self.failed?}>"
+    end
+    
   end
 end
