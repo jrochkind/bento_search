@@ -236,9 +236,11 @@ module BentoSearch
       failed.error ||= {}
       failed.error[:exception] = e
       
-      failed.search_args   = arguments
-      failed.engine_id     = configuration.id
+      failed.search_args           = arguments
+      failed.engine_id             = configuration.id
       failed.display_configuration = configuration.for_display
+      failed.timing                = (Time.now - start_t)
+
       
       return failed
     end
@@ -360,7 +362,7 @@ module BentoSearch
     # to be something diff in production and dev?
     #
     # This default list is probably useful already, but individual
-    # engines can override if it's convenient for their own error
+    # engines can override if it's convenient for their own errorau
     # handling. 
     def auto_rescue_exceptions
       [TimeoutError, HTTPClient::TimeoutError, 
