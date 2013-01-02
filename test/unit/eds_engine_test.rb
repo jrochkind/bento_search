@@ -63,9 +63,9 @@ class EdsEngineTest < ActiveSupport::TestCase
   end
   
   def test_has_http_timeout_set
-    assert_equal BentoSearch::EbscoHostEngine::HttpTimeout, @engine.http_client.receive_timeout
-    assert_equal BentoSearch::EbscoHostEngine::HttpTimeout, @engine.http_client.send_timeout
-    assert_equal BentoSearch::EbscoHostEngine::HttpTimeout, @engine.http_client.connect_timeout
+    assert_equal BentoSearch::EdsEngine::HttpTimeout, @engine.http_client.receive_timeout
+    assert_equal BentoSearch::EdsEngine::HttpTimeout, @engine.http_client.send_timeout
+    assert_equal BentoSearch::EdsEngine::HttpTimeout, @engine.http_client.connect_timeout
   end 
 
   
