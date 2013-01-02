@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://eit.ebscohost.com/Services/SearchService.asmx/Search?db=a9h&numrec=10&prof=DUMMY_PROFILE&pwd=DUMMY_PWD&query=(AN%20bar)&sort=relevance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        cHJpdmF0ZQ==
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        dGV4dC94bWw=
+      !binary "U2VydmVy":
+      - !binary |-
+        TWljcm9zb2Z0LUlJUy83LjU=
+      !binary "WC1Bc3BuZXQtVmVyc2lvbg==":
+      - !binary |-
+        NC4wLjMwMzE5
+      !binary "WC1Qb3dlcmVkLUJ5":
+      - !binary |-
+        QVNQLk5FVA==
+      !binary "RGF0ZQ==":
+      - !binary |-
+        V2VkLCAwMiBKYW4gMjAxMyAyMzoxNDoxNiBHTVQ=
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        Mzc4
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"?>\r\n<searchResponse xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
+        xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n  <Hits xmlns=\"http://epnet.com/webservices/SearchService/Response/2007/07/\">0</Hits>\r\n
+        \ <SearchResults xmlns=\"http://epnet.com/webservices/SearchService/Response/2007/07/\">\r\n
+        \   <records xmlns=\"\" />\r\n  </SearchResults>\r\n</searchResponse>"
+    http_version: 
+  recorded_at: Wed, 02 Jan 2013 23:14:18 GMT
+recorded_with: VCR 2.3.0
