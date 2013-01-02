@@ -108,11 +108,25 @@ class SearchEngineTest < ActiveSupport::TestCase
       
       results = engine.search(:query => "cancer", :per_page => 20)
       
-      assert results.failed?
-      assert_present results.error
-      assert_equal "fail_engine", results.engine_id
-      assert_present results.search_args
+      assert          results.failed?
+      assert_present  results.error
+      assert_equal    "fail_engine", results.engine_id
+      assert_present  results.search_args
       assert_equal(  {:foo => "foo"}, results.display_configuration )       
+    end
+    
+    test "auto rescued exception, with proper metadata" do
+      engine = MockEngine.new(:id => "raises", :raise_exception_class => 'TimeoutError', :for_display => {:foo => "foo"})
+      
+      results = engine.search("foo", :per_page => 20)
+      
+      assert          results.failed?, "marked failed"
+      assert_present  results.error      
+      assert_equal    "raises", results.engine_id
+      assert_present  results.search_args
+      assert_equal    "foo", results.search_args[:query]
+      
+      assert_equal(  {:foo => "foo"}, results.display_configuration )
     end
       
     

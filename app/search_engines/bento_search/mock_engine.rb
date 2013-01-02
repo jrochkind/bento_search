@@ -10,6 +10,8 @@
 # [:link]             link to give to each item in results
 # [:error]            set to an error value hash and results returned
 #                     will all be failed? with that error hash. 
+# [:raise_exception_class]  string name of exception class that the engine will raise and not catch,
+#                     to be caught by BentoSearch::SearchEngine wrapper possibly. 
 # [:timing]           in seconds, fill out the results as if they took
 #                     this long. 
 class BentoSearch::MockEngine
@@ -20,6 +22,10 @@ class BentoSearch::MockEngine
     
     def search_implementation(args)
       self.last_args = args
+      
+      if configuration.raise_exception_class
+        raise configuration.raise_exception_class.constantize.new("MockEngine forced raise")
+      end
       
       results = BentoSearch::Results.new
       

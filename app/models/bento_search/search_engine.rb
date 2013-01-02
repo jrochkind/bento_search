@@ -235,6 +235,11 @@ module BentoSearch
       failed = BentoSearch::Results.new
       failed.error ||= {}
       failed.error[:exception] = e
+      
+      failed.search_args   = arguments
+      failed.engine_id     = configuration.id
+      failed.display_configuration = configuration.for_display
+      
       return failed
     end
         
