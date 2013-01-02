@@ -28,6 +28,8 @@ require 'httpclient'
 #                         one or both of pubyear_start and pubyear_end
 #                         #to_i will be called on it, so can be string. 
 #                         .search(:query => "foo", :pubyear_start => 2000)
+# [:databases]            List of licensed EBSCO dbs to search, can override
+#                         list set in config databases, just for this search. 
 # 
 # == Custom response data
 # 
@@ -357,8 +359,8 @@ class BentoSearch::EbscoHostEngine
     url += "&sort=#{ sort_definitions[args[:sort]][:implementation]}"
     
     # Contrary to docs, don't pass these comma-seperated, pass em in seperate
-    # query params. 
-    configuration.databases.each do |db|
+    # query params. args databases overrides config databases.     
+    (args[:databases] || configuration.databases).each do |db|
       url += "&db=#{db}"
     end    
 

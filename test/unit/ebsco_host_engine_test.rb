@@ -88,6 +88,14 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     
   end
   
+  def test_per_search_databases_construction
+    url = @engine.query_url(:query => "cancer", :databases => ["aaa", "bbb"])
+    
+    query_params = CGI.parse( URI.parse(url).query )
+    
+    assert_equal ["aaa", "bbb"].to_set, query_params["db"].to_set    
+  end
+  
   
   def test_prepare_query
     query = @engine.ebsco_query_prepare('one :. ; two "three four" and NOT OR five')
