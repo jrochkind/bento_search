@@ -106,7 +106,7 @@ class BentoSearch::EbscoHostEngine
   # Can't change http timeout in config, because we keep an http
   # client at class-wide level, and config is not class-wide. 
   # Change this 'constant' if you want to change it, I guess. 
-  HttpTimeout = 4
+  HttpTimeout = 5.2 # observed 95th percentile timing in an EBSCOHost sample we did.  
   extend HTTPClientPatch::IncludeClient  
   include_http_client do |client|
     client.connect_timeout = client.send_timeout = client.receive_timeout = HttpTimeout
