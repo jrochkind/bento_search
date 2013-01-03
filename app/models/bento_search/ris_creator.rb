@@ -5,6 +5,10 @@ module BentoSearch
   #
   # RISCreator.new( result_item ).export
   #
+  # Note: We assume input and output in UTF8. The RIS spec kind of says
+  # it has to be ascii only, but most actual software seems to be able to do
+  # UTF8. 
+  #
   # Best spec/docs for RIS format seems to be at 
   # http://www.refman.com/support/risformat_intro.asp
   # Download zip file there, pay attention to excel spreadsheet
