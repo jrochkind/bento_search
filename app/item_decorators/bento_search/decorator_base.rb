@@ -49,5 +49,22 @@ module BentoSearch
       ERB::Util.html_escape(*args, &block)
     end
     
+    # Applies decorator to item and returns decorated item. 
+    # uses standard logic to look up which decorator to apply or
+    # applies default one. The point of this method is just that
+    # standard logic. 
+    #
+    # Need to pass a Rails ActionView::Context in, to use to
+    # initialize decorator. In Rails, in most places you can
+    # get one of those from #view_context. In helpers/views 
+    # you can also use `self`. 
+    def self.decorate(item, view_context)
+      # What decorator class? If specified as string in #decorator,
+      # look it up as a class object, else default. 
+      decorator_class = item.decorator.try {|name| BentoSearch::Util.constantize(name) } || BentoSearch::StandardDecorator  
+      
+      return decorator_class.new(item, view_context)    
+    end
+    
   end  
 end
