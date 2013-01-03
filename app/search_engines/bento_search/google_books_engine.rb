@@ -75,72 +75,97 @@ module BentoSearch
       
       
       results.total_items = json["totalItems"]
-
       
       (json["items"] || []).each do |item_response|
-        v_info = item_response["volumeInfo"] || {}
-
-        item = ResultItem.new
-        results << item
-                        
-        item.unique_id             = item_response["id"]
-        
-        item.title          = v_info["title"] 
-        item.subtitle       = v_info["subtitle"] 
-        item.publisher      = v_info["publisher"]
-        # previewLink gives you your search results highlighted, preferable
-        # if it exists. 
-        item.link           = v_info["previewLink"] || v_info["canonicalVolumeLink"]        
-        item.abstract       = sanitize v_info["description"]        
-        item.year           = get_year v_info["publishedDate"]
-        # sometimes we have yyyy-mm, but we need a date to make a ruby Date,
-        # we'll just say the 1st. 
-        item.publication_date = case v_info["publishedDate"]
-          when /(\d\d\d\d)-(\d\d)/ then Date.parse "#{$1}-#{$2}-01"
-          when /(\d\d\d\d)-(\d\d)-(\d\d)/ then Date.parse v_info["published_date"]
-          else nil
-        end
-
-          
-        item.format         = if v_info["printType"] == "MAGAZINE"
-                              :serial
-                            else
-                              "Book"
-                            end    
-                            
-
-                            
-        item.language_code  = v_info["language"]
-                            
-        (v_info["authors"] || []).each do |author_name|
-          item.authors << Author.new(:display => author_name)
-        end
-        
-        # Find ISBN's, prefer ISBN-13
-        item.isbn           = (v_info["industryIdentifiers"] || []).find {|node| node["type"] == "ISBN_13"}.try {|node| node["identifier"]}
-        unless item.isbn
-          # Look for ISBN-10 okay
-          item.isbn         = (v_info["industryIdentifiers"] || []).find {|node| node["type"] == "ISBN_10"}.try {|node| node["identifier"]}
-        end
-        
-
-        # only VERY occasionally does a GBS hit have an OCLC number, but let's look
-        # just in case.
-        item.oclcnum        = (v_info["industryIdentifiers"] || []).
-          find {|node| node["type"] == "OTHER" && node["identifier"].starts_with?("OCLC:") }.
-          try do |node|
-            node =~ /OCLC:(.*)/ ? $1 : nil
-          end
-                  
-        # save viewability status in custom_data. PARTIAL, ALL_PAGES, NO_PAGES or UNKNOWN. 
-        # https://developers.google.com/books/docs/v1/reference/volumes#resource
-        item.custom_data[:viewability] = item_response["accessInfo"].try {|h| h["viewability"]}
-        item.link_is_fulltext = (item.custom_data[:viewability] == "ALL_PAGES") if item.custom_data[:viewability]        
-      end
-      
-      
+        results <<  hash_to_item(item_response)                        
+      end            
       
       return results
+    end
+    
+    # Look up a single item by #unique_id. Returns a single item, or
+    # raises BentoSearch::NotFound, BentoSearch::TooManyFound, or other.  
+    def get(id)
+      # Have to use different API endpoint, can't do a fielded search.
+      url = base_url + "volumes/#{CGI.escape id}"
+      
+      response = http_client.get( url )
+      
+      if response.status == 404
+        raise BentoSearch::NotFound.new("ID: #{id}")
+      end       
+      
+      json = MultiJson.load( response.body )
+      
+      if json["error"]
+        raise Exception.new("Error in get(#{id}): #{json['error'].inspect}")
+      end
+      
+      return hash_to_item(json)       
+    end
+    
+    # take a hash from Google json response, representing a single
+    # item, return a ResultItem obj. Used internally. 
+    def hash_to_item(item_response)
+      v_info = item_response["volumeInfo"] || {}
+
+      item = ResultItem.new
+                      
+      item.unique_id             = item_response["id"]
+      
+      item.title          = v_info["title"] 
+      item.subtitle       = v_info["subtitle"] 
+      item.publisher      = v_info["publisher"]
+      # previewLink gives you your search results highlighted, preferable
+      # if it exists. 
+      item.link           = v_info["previewLink"] || v_info["canonicalVolumeLink"]        
+      item.abstract       = sanitize v_info["description"]        
+      item.year           = get_year v_info["publishedDate"]
+      # sometimes we have yyyy-mm, but we need a date to make a ruby Date,
+      # we'll just say the 1st. 
+      item.publication_date = case v_info["publishedDate"]
+        when /(\d\d\d\d)-(\d\d)/ then Date.parse "#{$1}-#{$2}-01"
+        when /(\d\d\d\d)-(\d\d)-(\d\d)/ then Date.parse v_info["published_date"]
+        else nil
+      end
+
+        
+      item.format         = if v_info["printType"] == "MAGAZINE"
+                            :serial
+                          else
+                            "Book"
+                          end    
+                          
+
+                          
+      item.language_code  = v_info["language"]
+                          
+      (v_info["authors"] || []).each do |author_name|
+        item.authors << Author.new(:display => author_name)
+      end
+      
+      # Find ISBN's, prefer ISBN-13
+      item.isbn           = (v_info["industryIdentifiers"] || []).find {|node| node["type"] == "ISBN_13"}.try {|node| node["identifier"]}
+      unless item.isbn
+        # Look for ISBN-10 okay
+        item.isbn         = (v_info["industryIdentifiers"] || []).find {|node| node["type"] == "ISBN_10"}.try {|node| node["identifier"]}
+      end
+      
+
+      # only VERY occasionally does a GBS hit have an OCLC number, but let's look
+      # just in case.
+      item.oclcnum        = (v_info["industryIdentifiers"] || []).
+        find {|node| node["type"] == "OTHER" && node["identifier"].starts_with?("OCLC:") }.
+        try do |node|
+          node =~ /OCLC:(.*)/ ? $1 : nil
+        end
+                
+      # save viewability status in custom_data. PARTIAL, ALL_PAGES, NO_PAGES or UNKNOWN. 
+      # https://developers.google.com/books/docs/v1/reference/volumes#resource
+      item.custom_data[:viewability] = item_response["accessInfo"].try {|h| h["viewability"]}
+      item.link_is_fulltext = (item.custom_data[:viewability] == "ALL_PAGES") if item.custom_data[:viewability]
+      
+      return item
     end
     
     

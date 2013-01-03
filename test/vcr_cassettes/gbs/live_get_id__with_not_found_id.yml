@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/books/v1/volumes/NOT+EXISTING
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 03 Jan 2013 00:23:33 GMT
+      Expires:
+      - Thu, 03 Jan 2013 00:23:33 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! "{\n \"error\": {\n  \"errors\": [\n   {\n    \"domain\": \"global\",\n
+        \   \"reason\": \"notFound\",\n    \"message\": \"The volume ID could not
+        be found.\"\n   }\n  ],\n  \"code\": 404,\n  \"message\": \"The volume ID
+        could not be found.\"\n }\n}\n"
+    http_version: 
+  recorded_at: Thu, 03 Jan 2013 00:23:33 GMT
+recorded_with: VCR 2.3.0

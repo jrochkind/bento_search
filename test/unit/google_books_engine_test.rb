@@ -83,6 +83,24 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
     assert ! results.failed?
     assert_equal 0, results.total_items
   end
+  
+  test_with_cassette("live get(id)", :gbs) do
+    results = @engine.search 'cancer'
+    
+    assert_present results
+    
+    item = @engine.get(results.first.unique_id)
+    
+    assert_present    item
+    assert_kind_of    BentoSearch::ResultItem, item
+    assert_equal      results.first.unique_id, item.unique_id    
+  end
+  
+  test_with_cassette("live get(id) with not found id", :gbs) do
+    assert_raise(BentoSearch::NotFound) do
+      @engine.get("NOT EXISTING")
+    end
+  end
 
   
   
