@@ -18,6 +18,9 @@ module BentoSearch
     # contexts too. 
     attr_accessor :style_classes
     
+    # Suggested `target` attribute to render link with as html <a> 
+    attr_accessor :target
+    
     def initialize(hash = {})
       self.style_classes = []
       
