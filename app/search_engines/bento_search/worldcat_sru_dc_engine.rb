@@ -145,6 +145,19 @@ class BentoSearch::WorldcatSruDcEngine
     return results
   end
   
+  # get a single record, by it's #unique_id (which is also an oclcnum), 
+  # returns record, or raises BentoSearch::NotFound, BentoSearch::TooManyFound,
+  # or possibly something weird. 
+  def get(id)
+    results = search(id, :semantic_search_field => :oclcnum)
+
+    raise (results.error[:exception] || Exception.new(results.error)) if results.failed?
+    raise BentoSearch::NotFound.new("ID: #{id}") if results.total_items == 0
+    raise BentoSearch::TooManyFound.new("ID: #{ID}") if results.total_items > 1
+    
+    return results.first    
+  end
+  
   # Note, if pagination start record is beyond what we think is worldcat's
   # max, it will silently reset to max, and mutate the args passed in
   # so pagination appears to be at max too!

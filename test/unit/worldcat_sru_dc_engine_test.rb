@@ -129,5 +129,23 @@ class WorldcatSruDcEngineTest < ActiveSupport::TestCase
     assert_present first.language_code      
   end
   
+  test_with_cassette("live get(id)", :worldcat_sru_dc) do
+    results = @engine.search("anarchism")
+    
+    assert_present results
+    
+    item = @engine.get( results.first.unique_id)
+    
+    assert_present  item
+    assert_kind_of  BentoSearch::ResultItem, item
+    assert_equal    results.first.unique_id, item.unique_id
+  end
+  
+  test_with_cassette("live get(id) for bad id", :worldcat_sru_dc) do
+    assert_raise(BentoSearch::NotFound) do
+      @engine.get("NOT EXISTING")
+    end
+  end
+  
   
 end
