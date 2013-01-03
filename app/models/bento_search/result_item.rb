@@ -80,7 +80,6 @@ module BentoSearch
     # * WebPage
     # * VideoObject
     # * AudioObject
-    # * SoftwareApplication
     # 
     # 
     # 
