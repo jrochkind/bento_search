@@ -225,7 +225,14 @@ module BentoSearch
       results.timing = (Time.now - start_t)
             
       results.display_configuration = configuration.for_display
-      results.each {|item| item.decorator = configuration.lookup!("for_display.decorator") }
+      results.each do |item| 
+        # We copy some configuraton info over to each Item, as a convenience
+        # to display logic that may have decide what to do given only an item,
+        # and may want to parameterize based on configuration.
+        item.engine_id              = results.engine_id 
+        item.decorator              = configuration.lookup!("for_display.decorator")
+        item.display_configuration  = configuration.for_display
+      end
         
       return results
     rescue *auto_rescue_exceptions => e

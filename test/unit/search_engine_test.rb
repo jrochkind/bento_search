@@ -103,6 +103,16 @@ class SearchEngineTest < ActiveSupport::TestCase
             
     end
     
+    test "sets metadata on items" do
+      engine = MockEngine.new(:id => "foo", :for_display => {:key => "value", :decorator => "Foo"})      
+      results = engine.search(:query => "cancer")
+      record = results.first
+      
+      assert_present record.engine_id
+      assert_present record.display_configuration
+      assert_present record.decorator      
+    end
+    
     test "failed sets metadata on results" do
       engine = MockEngine.new(:id => "fail_engine", :error => {:message => "failed"}, :for_display => {:foo => "foo"})
       

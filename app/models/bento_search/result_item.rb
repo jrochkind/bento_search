@@ -189,6 +189,18 @@ module BentoSearch
     # qualified name of a decorator class. Can be nil for default. 
     attr_accessor :decorator
     
+    # Copied over from engine configuration :for_display key
+    # by BentoSearch#search wrapper, here as a convenience t
+    # parameterize logic in decorators or other presentational logic, based
+    # on configuration, in places where logic has access to an item but
+    # not the overall Results obj anymore. 
+    #
+    # TODO: Consider, should we just copy over the whole Results
+    # into a backpointing reference instead? And user cover-methods
+    # for it? Nice thing about the configuration has instead is it's
+    # easily serializable, it's just data.  
+    attr_accessor :display_configuration
+    attr_accessor :engine_id
     
   end
 end
