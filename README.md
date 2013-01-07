@@ -292,7 +292,7 @@ do not provide additional links by default, custom local Decorators would
 be used to add them. See wiki for more info on decorators, and BentoSearch::Link
 for fields. 
      
-## OpenURL and metadata
+### OpenURL and metadata
 
 Academic library uses often need openurl links from scholarly citations. One of
 the design goals of bento_search is to produce standardized normalized BentoSearch::ResultItem
@@ -309,7 +309,21 @@ can be solved.
 
 See `./app/item_decorators/bento_search/openurl_add_other_link.rb` for an example
 of using item decorators to add a link to your openurl resover to an item when
-displayed. 
+displayed.
+
+### Exporting (eg as RIS) and get by unique_id
+
+A class is included to convert an individual BentoSearch::ResultItem to
+the RIS format, suitable for import into EndNote, Refworks, etc. 
+
+~~~ruby
+    ris_data = RISCreator.new( bento_item ).export 
+~~~
+
+Accomodating actual exports into the transactional flow of a web app can be
+tricky, and often requires use of the `result_item#unique_id` and 
+`engine.get( unique_id )` features. See the wiki at 
+
 
 ## Planned Features
 
