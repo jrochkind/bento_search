@@ -9,6 +9,13 @@ module BentoSearch
   # it has to be ascii only, but most actual software seems to be able to do
   # UTF8. 
   #
+  # Note: If you want your decorator to be taken into account in links
+  # or other data, you have to make sure it's applied. If you got result_item
+  # from SearchEngine#get, you should apply decorators yourself:
+  #
+  #    RISCreator.new(  BentoSearch::StandardDecorator.decorate(result_item) ).export
+  # 
+  #
   # Best spec/docs for RIS format seems to be at 
   # http://www.refman.com/support/risformat_intro.asp
   # Download zip file there, pay attention to excel spreadsheet
