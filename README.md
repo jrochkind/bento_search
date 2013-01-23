@@ -340,7 +340,17 @@ Probably:
   a normalized cross-engine way. 
 
 Other needs or suggestions?
-  
+
+## Backwards compat
+
+We are going to try to be strictly backwards compatible with all post 1.0 
+releases that do not increment the major version number (semantic versioning). 
+
+As a general rule, we're going to let our tests enforce this -- if a test has
+to be changed to pass with new code, that's a very strong sign that it is
+not a backwards-compat change, and you should think _very_ carefully to 
+be sure it is an exception to this rule before changing any existing tests
+for new functionality. 
 
 ## Developing
 
