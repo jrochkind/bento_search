@@ -87,18 +87,14 @@ module BentoSearch
       self.any_present?(:source_title, :publisher, :start_page)
     end
     
-    # Put together title and subtitle if neccesary. 
+    # Mix-in a default missing title marker for empty titles
+    # (Used to combine title and subtitle when those were different fields)
     def complete_title
-      t = self.title
-      if self.subtitle
-        t = safe_join([t, ": ", self.subtitle], "")        
-      end
-      
-      if t.blank?
-        t = I18n.translate("bento_search.missing_title")
-      end
-      
-      return t
+      if self.title.present?
+        self.title
+      else
+        I18n.translate("bento_search.missing_title")
+      end      
     end
     
     

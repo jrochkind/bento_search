@@ -14,8 +14,7 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
   def test_create_article
     item = decorated_item(
         :format => "Article",
-        :title => "My Title",
-        :subtitle => "A Nice One",
+        :title => "My Title: A Nice One",        
         :year => 2012,
         :volume => "10",
         :issue => "1",
@@ -53,8 +52,7 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
   def test_numeric_conversion
     item = decorated_item(
         :format => "Article",
-        :title => "My Title",
-        :subtitle => "A Nice One",
+        :title => "My Title: A Nice One",        
         :year => 2012,
         :volume => 10,
         :issue => 1,

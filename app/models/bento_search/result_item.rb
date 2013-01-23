@@ -44,12 +44,8 @@ module BentoSearch
     # * dc.title 
     # * schema.org CreativeWork: 'name'    
     attr_accessor :title
-    
-    # When an individual seperate subtitle is available. 
-    # May also be nil with subtitle in "title" field after colon. 
-    # 
-    # * 
-    attr_accessor :subtitle
+    # backwards compat, we used to have separate titles and subtitles
+    alias_method :complete_title, :title
     
     # usually a direct link to the search provider's 'native' page. 
     # Can be changed in actual presentation with a Decorator.

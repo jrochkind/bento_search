@@ -169,11 +169,7 @@ class SummonEngineTest < ActiveSupport::TestCase
     
     assert_include first.title, '<b class="bento_search_highlight">' 
     
-    assert first.title.html_safe?, "title is HTML safe"
-    
-    assert_present first.custom_data['raw_title']
-    assert_not_include first.custom_data['raw_title'], '<b class="bento_search_highlight">'
-    
+    assert first.title.html_safe?, "title is HTML safe"        
   end
   
   test_with_cassette("live #get(id)", :summon) do

@@ -121,11 +121,7 @@ class BentoSearch::SummonEngine
       
       item.unique_id      = first_if_present doc_hash["ID"]
       
-      item.title          = handle_highlighting( first_if_present doc_hash["Title"] )
-      item.custom_data["raw_title"] = handle_highlighting( first_if_present(doc_hash["Title"]) , :strip => true)
-      
-      item.subtitle       = handle_highlighting( first_if_present doc_hash["Subtitle"] )# TODO is this right?
-      item.custom_data["raw_subtitle"] = handle_highlighting( first_if_present(doc_hash["Subtitle"]), :strip => true )
+      item.title          = format_title(doc_hash)
       
       item.link           = doc_hash["link"]
       # Don't understand difference between hasFullText and
@@ -355,6 +351,18 @@ class BentoSearch::SummonEngine
       :enabled => configuration.highlighting,
       :strip => options[:strip]
       )          
+  end
+  
+  # combine title and subtitle into one title, 
+  def format_title(doc_hash)
+    title          = first_if_present  doc_hash["Title"]  
+    subtitle       = first_if_present doc_hash["Subtitle"] 
+    
+    if subtitle.present?
+      title = "#{title}: #{subtitle}"
+    end
+    
+    return handle_highlighting( title ) 
   end
     
   def self.required_configuration

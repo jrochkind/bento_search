@@ -113,8 +113,7 @@ module BentoSearch
                       
       item.unique_id             = item_response["id"]
       
-      item.title          = v_info["title"] 
-      item.subtitle       = v_info["subtitle"] 
+      item.title          = format_title(v_info)
       item.publisher      = v_info["publisher"]
       # previewLink gives you your search results highlighted, preferable
       # if it exists. 
@@ -254,6 +253,14 @@ module BentoSearch
         return $1.to_i
       end
       return nil            
+    end
+    
+    def format_title(v_info)
+      title = v_info["title"]
+      if v_info["subtitle"]
+        title = "#{title}: #{v_info["subtitle"]}"
+      end
+      return title
     end
         
   end
