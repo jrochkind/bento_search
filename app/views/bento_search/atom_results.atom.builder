@@ -24,8 +24,9 @@ results     = atom_results
 xml.instruct!(:xml, :encoding => "UTF-8")
 
 xml.feed("xmlns"            => "http://www.w3.org/2005/Atom",
-         "xmlns:opensearch" =>"http://a9.com/-/spec/opensearch/1.1/",
-         "xmlns:prism"      =>    "http://prismstandard.org/namespaces/basic/2.1/") do
+         "xmlns:opensearch" => "http://a9.com/-/spec/opensearch/1.1/",
+         "xmlns:prism"      => "http://prismstandard.org/namespaces/basic/2.1/",
+         "xmlns:dcterms"    => "http://purl.org/dc/terms/") do
 
   # "id" element required, we try to set it to the current app url
   xml.id request.url
@@ -52,6 +53,6 @@ xml.feed("xmlns"            => "http://www.w3.org/2005/Atom",
   # updated is required, for now we'll just set it to now, sorry
   xml.updated Time.now.strftime("%Y-%m-%dT%H:%M:%SZ")
 
-  render :partial => "bento_search/atom_item", :collection => results
+  render :partial => "bento_search/atom_item", :collection => results, :locals => {:builder => xml}
   
 end

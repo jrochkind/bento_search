@@ -6,7 +6,8 @@ class AtomResultsTest < ActionView::TestCase
   @@namespaces = {
     "atom"        => "http://www.w3.org/2005/Atom",
     "opensearch"  => "http://a9.com/-/spec/opensearch/1.1/",
-    "prism"       => ""
+    "prism"       => "http://prismstandard.org/namespaces/basic/2.1/",
+    "dcterms"     => "http://purl.org/dc/terms/"
   }
   # Instead of using assert_select, we do it ourselves with nokogiri
   # for better namespace control.
@@ -37,12 +38,62 @@ class AtomResultsTest < ActionView::TestCase
     @results = @engine.search("some query", :start => @start, :per_page => @per_page)
     
     # but fill the first result elements with some non-blank data to test
-    @article_example = BentoSearch::ResultItem.new(
-      :title => "An Article",
-      :link => "http://example.org/main_link"
+    @article = BentoSearch::ResultItem.new(
+      :title      => "An Article", #
+      :link       => "http://example.org/main_link", #
+      :unique_id  => "UNIQUE_ID",
+      :format     => "Article", #
+      :format_str => "Uncontrolled format", #
+      :language_code => "en", #
+      :year       => "2004", #
+      :volume     => "10", #
+      :issue      => "1", #
+      :start_page => "101", #
+      :end_page   => "110", #
+      :source_title => "Journal of Something", #
+      :issn       => "12345678", #
+      :doi        => "10.1000/182", #
+      :abstract   => "This is an abstract with escaped > parts < ", #
+      :authors => [ #
+        BentoSearch::Author.new(:first => "John", :last => "Smith"),
+        BentoSearch::Author.new(:display => "Jones, Jane")
+      ],
+      :other_links => [ #
+        BentoSearch::Link.new(:url => "http://example.org/bare_link"),
+        BentoSearch::Link.new(
+          :url    => "http://example.org/label_and_type",
+          :label  => "A link somewhere",      
+          :type   => "application/pdf"
+        ),
+        BentoSearch::Link.new(
+          :url    => "http://example.org/rel",
+          :rel    => "something"
+        )
+      ]
     )
+    @article_with_html_abstract = BentoSearch::ResultItem.new(
+      :title    => "foo",
+      :format   => "Article",
+      :abstract => "This is <b>html</b>".html_safe
+     )
+    @article_with_full_date = BentoSearch::ResultItem.new(
+      :title => "foo",
+      :format => "Article",
+      :publication_date => Date.new(2011, 5, 6)
+    )
+    @book = BentoSearch::ResultItem.new(
+      :title => "A Book",
+      :format => "Book",
+      :publisher => "Some publisher",
+      :isbn => "123456789X",
+      :year => "2004"
+    )
+    
      
-    @results[0] = @article_example
+    @results[0] = @article
+    @results[1] = @article_with_html_abstract
+    @results[3] = @article_with_full_date
+    @results[4] = @book
   end
   
   def test_smoke_atom_validate
@@ -62,13 +113,12 @@ class AtomResultsTest < ActionView::TestCase
     
     schema = Nokogiri::XML::Schema.from_document( schema_xml )
         
-    assert_empty schema.validate(xml_response), "Validates with atom XSD schema"    
+    assert_empty schema.validate(xml_response), "Validates with atom XSD schema"       
   end
   
   
   def test_feed_metadata
-    render :template => "bento_search/atom_results", :locals => {:atom_results => @results}
-    
+    render :template => "bento_search/atom_results", :locals => {:atom_results => @results}    
     xml_response = Nokogiri::XML( rendered ) 
     
     assert_node(xml_response, "atom:feed") do |feed|            
@@ -81,6 +131,58 @@ class AtomResultsTest < ActionView::TestCase
       assert_node(feed, "opensearch:itemsPerPage", :text => @per_page.to_s)
     end
     
+  end
+  
+  def test_article_entry_example
+    render :template => "bento_search/atom_results", :locals => {:atom_results => @results}    
+    xml_response = Nokogiri::XML( rendered ) 
+    
+    assert_node(xml_response, "./atom:feed/atom:entry[1]") do |article|
+      assert_node(article, "atom:title", :text => @article.title)  
+      assert_node(article, "prism:coverDate", :text => @article.year)
+      
+      assert_node(article, "prism:issn", :text => @article.issn)
+      assert_node(article, "prism:doi", :text => @article.doi)
+      
+      assert_node(article, "prism:volume", :text => @article.volume)
+      assert_node(article, "prism:number",  :text => @article.issue)
+      
+      assert_node(article, "prism:startingPage", :text => @article.start_page)
+      assert_node(article, "prism:endingPage",   :text => @article.end_page)
+      
+      assert_node(article, "prism:publicationName", :text => @article.source_title)
+      
+      abstract = article.at_xpath("atom:summary", @@namespaces)
+      assert_present abstract, "Has an abstract"
+      assert_equal "text", abstract["type"], "Abstract type text"
+      assert_equal @article.abstract, abstract.text
+      
+      assert_node(article, "dcterms:language[@vocabulary='http://dbpedia.org/resource/ISO_639-1']", :text => @article.language_iso_639_1)
+      assert_node(article, "dcterms:language[@vocabulary='http://dbpedia.org/resource/ISO_639-3']", :text => @article.language_iso_639_3)
+      assert_node(article, "dcterms:language[not(@vocabulary)]", :text => @article.language_str)   
+      
+      assert_node(article, "dcterms:type[not(@vocabulary)]", :text => @article.format_str)
+            
+      assert_node(article, "dcterms:type[@vocabulary='http://schema.org/']", :text => @article.schema_org_type_url)
+      assert_node(article, "dcterms:type[@vocabulary='http://github.com/jrochkind/bento_search/']", :text => @article.format)
+      
+      # Just make sure right number of author elements, with right structure. 
+      assert_node(article, "atom:author/atom:name") do |authors|
+        assert_equal @article.authors.length, authors.length, "right number of author elements"
+      end
+      
+      # Links. Main link is just rel=alternate
+      assert_node(article, 
+        "atom:link[@rel='alternate'][@href='#{@article.link}']")
+      
+      # other links also there, default rel=related
+      assert_node(article, 
+        "atom:link[@rel='related'][@type='application/pdf'][@title='A link somewhere'][@href='http://example.org/label_and_type']")
+      assert_node(article,
+        "atom:link[@rel='something'][@href='http://example.org/rel']")      
+            
+    end
+            
   end
   
 
