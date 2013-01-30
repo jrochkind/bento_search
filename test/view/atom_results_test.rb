@@ -9,7 +9,8 @@ class AtomResultsTest < ActionView::TestCase
     "atom"        => "http://www.w3.org/2005/Atom",
     "opensearch"  => "http://a9.com/-/spec/opensearch/1.1/",
     "prism"       => "http://prismstandard.org/namespaces/basic/2.1/",
-    "dcterms"     => "http://purl.org/dc/terms/"
+    "dcterms"     => "http://purl.org/dc/terms/",
+    "bibo"        => "http://purl.org/ontology/bibo/"
   }
   
   # Instead of using assert_select, we do it ourselves with nokogiri
@@ -194,7 +195,7 @@ class AtomResultsTest < ActionView::TestCase
     @results  = @engine.search("find")    
     @results[0] = BentoSearch::ResultItem.new(
       :title => "Something",      
-      :unique_id => "a00001",
+      :unique_id => "a000:/01",
       :engine_id => "some_engine"
     )
     
@@ -206,7 +207,7 @@ class AtomResultsTest < ActionView::TestCase
     assert_node(with_unique_id, "atom:id") do |id|
       # based off of engine_id and unique_id
       assert_include id.text, "some_engine"
-      assert_include id.text, "a00001"
+      assert_include id.text, "a000%3A%2F01"
     end      
   end
   
@@ -231,6 +232,8 @@ class AtomResultsTest < ActionView::TestCase
     assert_node(book, "dcterms:publisher", :text => @book.publisher)
     
     assert_node(book, "prism:isbn", :text => @book.isbn)
+    
+    assert_node(book, "bibo:oclcnum", :text => @book.oclcnum)
   end
   
   def test_with_full_date

@@ -26,7 +26,8 @@ xml.instruct!(:xml, :encoding => "UTF-8")
 xml.feed("xmlns"            => "http://www.w3.org/2005/Atom",
          "xmlns:opensearch" => "http://a9.com/-/spec/opensearch/1.1/",
          "xmlns:prism"      => "http://prismstandard.org/namespaces/basic/2.1/",
-         "xmlns:dcterms"    => "http://purl.org/dc/terms/") do
+         "xmlns:dcterms"    => "http://purl.org/dc/terms/",
+         "xmlns:bibo"       => "http://purl.org/ontology/bibo/" ) do
 
   # "id" element required, we try to set it to the current app url
   xml.id request.url

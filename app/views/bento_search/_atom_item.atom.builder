@@ -19,7 +19,7 @@ bento_decorate(item) do |item|
     # it. Bah. we'll do what we can, this could use some fine-tuning or
     # customization hooks. We can only do anything if there's an engine_id though
     if item.engine_id.present? && item.unique_id.present?
-      builder.id "#{root_url.chomp("/")}/bento_search/#{item.engine_id}/#{item.unique_id}"
+      builder.id "#{root_url.chomp("/")}/bento_search/#{CGI.escape item.engine_id}/#{CGI.escape item.unique_id}"
     end
     
     
@@ -76,6 +76,10 @@ bento_decorate(item) do |item|
     
     if item.isbn.present?
       builder.prism :isbn, item.isbn
+    end
+    
+    if item.oclcnum.present?
+      builder.bibo :oclcnum, item.oclcnum
     end
     
     # prism:doi was added to later versions of the standard,
