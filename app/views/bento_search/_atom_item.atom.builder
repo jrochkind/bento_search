@@ -66,6 +66,10 @@ bento_decorate(item) do |item|
       builder.prism :publicationName, item.source_title
     end
     
+    if item.publisher.present?
+      builder.dcterms :publisher, item.publisher
+    end
+    
     if item.issn.present?
       builder.prism :issn, item.issn
     end

@@ -189,32 +189,44 @@ class AtomResultsTest < ActionView::TestCase
         "atom:link[@rel='related'][@type='application/pdf'][@title='A link somewhere'][@href='http://example.org/label_and_type']")
       assert_node(article,
         "atom:link[@rel='something'][@href='http://example.org/rel']")                  
-    end
-    
-    def test_with_unique_id
-      render :template => "bento_search/atom_results", :locals => {:atom_results => @results}    
-      xml_response = Nokogiri::XML( rendered )
-      
-      with_unique_id = xml_response.xpath("atom:entry", @@namespaces)[6]
-      
-      assert_node(with_unique_id, "atom:id") do |id|
-        # based off of engine_id and unique_id
-        assert_include @with_unique_id.engine_id, id
-        assert_include @with_unique_id.unique_id, id
-      end      
-    end
-    
-    def test_with_html_abstract
-      render :template => "bento_search/atom_results", :locals => {:atom_results => @results}    
-      xml_response = Nokogiri::XML( rendered )
-      
-      with_html_abstract = xml_response.xpath("atom:entry", @@namespaces)[1]
-      
-      assert_node(with_html_abstract, "atom:summary[@type='html']", @with_html_abstract.abstract.to_s)      
-    end
+    end    
             
   end
   
+  
+  def test_with_unique_id
+    render :template => "bento_search/atom_results", :locals => {:atom_results => @results}    
+    xml_response = Nokogiri::XML( rendered )
+    
+    with_unique_id = xml_response.xpath("./atom:feed/atom:entry", @@namespaces)[6]
+    
+    assert_node(with_unique_id, "atom:id") do |id|
+      # based off of engine_id and unique_id
+      assert_include @with_unique_id.engine_id, id
+      assert_include @with_unique_id.unique_id, id
+    end      
+  end
+  
+  def test_with_html_abstract
+    render :template => "bento_search/atom_results", :locals => {:atom_results => @results}    
+    xml_response = Nokogiri::XML( rendered )
+    
+    with_html_abstract = xml_response.xpath("./atom:feed/atom:entry", @@namespaces)[1]
+    
+    assert_node(with_html_abstract, "atom:summary[@type='html']", @with_html_abstract.abstract.to_s)      
+  end
+  
+  def test_book
+    render :template => "bento_search/atom_results", :locals => {:atom_results => @results}    
+    xml_response = Nokogiri::XML( rendered )
+        
+    book = xml_response.xpath("./atom:feed/atom:entry", @@namespaces)[4]
+    
+    assert_node(book, "dcterms:type[@vocabulary='http://github.com/jrochkind/bento_search/']", :text => "Book")
+    assert_node(book, "dcterms:type[@vocabulary='http://schema.org/']", :text => "http://schema.org/Book")
+    
+    assert_node(book, "dcterms:publisher", :text => @book.publisher)
+  end
 
   
   
