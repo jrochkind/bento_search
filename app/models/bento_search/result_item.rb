@@ -138,10 +138,10 @@ module BentoSearch
     # Manually set language_str will over-ride display string calculated from
     # language_code. 
     # 
-    # Consumers can look at language_code or language_str regardless (although
-    # either or both may be nil). You can get a language_list gem obj from
-    # language_obj, and use to normalize to a 
-    # 2- or 3-letter from language_code that could be either. 
+    # Consumers that want a language code can use #language_iso_639_1 or
+    # #language_iso_639_2 (either may be null), or #language_str for uncontrolled
+    # string. If engine just sets one of these, internals take care of filling
+    # out the others. r
     attr_accessor :language_code
     attr_writer :language_str
     def language_str
@@ -157,6 +157,16 @@ module BentoSearch
       return nil unless self.language_code
       
       @language_obj ||= LanguageList::LanguageInfo.find( self.language_code )
+    end
+    
+    # Two letter ISO language code, or nil
+    def language_iso_639_1
+      language_obj.try { |l| l.iso_639_1 }
+    end
+    
+    # Three letter ISO language code, or nil
+    def language_iso_639_3
+      language_obj.try {|l| l.iso_639_3 }
     end
     
     # year published. a ruby int
