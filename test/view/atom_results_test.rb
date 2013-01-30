@@ -85,11 +85,12 @@ class AtomResultsTest < ActionView::TestCase
       :publication_date => Date.new(2011, 5, 6)
     )
     @book = BentoSearch::ResultItem.new(
-      :title => "A Book",
-      :format => "Book",
+      :title     => "A Book",
+      :format    => "Book",
       :publisher => "Some publisher",
-      :isbn => "123456789X",
-      :year => "2004"
+      :isbn      => "123456789X",
+      :oclcnum   => "12124345",
+      :year      => "2004"
     )
     
     
@@ -228,6 +229,8 @@ class AtomResultsTest < ActionView::TestCase
     assert_node(book, "dcterms:type[@vocabulary='http://schema.org/']", :text => "http://schema.org/Book")
     
     assert_node(book, "dcterms:publisher", :text => @book.publisher)
+    
+    assert_node(book, "prism:isbn", :text => @book.isbn)
   end
   
   def test_with_full_date
