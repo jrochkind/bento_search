@@ -3,12 +3,15 @@ require 'test_helper'
 require 'nokogiri'
 
 class AtomResultsTest < ActionView::TestCase
+  include ActionView::Helpers::UrlHelper
+  
   @@namespaces = {
     "atom"        => "http://www.w3.org/2005/Atom",
     "opensearch"  => "http://a9.com/-/spec/opensearch/1.1/",
     "prism"       => "http://prismstandard.org/namespaces/basic/2.1/",
     "dcterms"     => "http://purl.org/dc/terms/"
   }
+  
   # Instead of using assert_select, we do it ourselves with nokogiri
   # for better namespace control.
   #
@@ -88,12 +91,18 @@ class AtomResultsTest < ActionView::TestCase
       :isbn => "123456789X",
       :year => "2004"
     )
+    @with_unique_id = BentoSearch::ResultItem.new(
+      :title => "Something",
+      :engine_id => "engine",
+      :unique_id => "a00001"
+    )
     
      
     @results[0] = @article
     @results[1] = @article_with_html_abstract
     @results[3] = @article_with_full_date
     @results[4] = @book
+    @results[5] = @with_unique_id
   end
   
   def test_smoke_atom_validate
@@ -179,8 +188,29 @@ class AtomResultsTest < ActionView::TestCase
       assert_node(article, 
         "atom:link[@rel='related'][@type='application/pdf'][@title='A link somewhere'][@href='http://example.org/label_and_type']")
       assert_node(article,
-        "atom:link[@rel='something'][@href='http://example.org/rel']")      
-            
+        "atom:link[@rel='something'][@href='http://example.org/rel']")                  
+    end
+    
+    def test_with_unique_id
+      render :template => "bento_search/atom_results", :locals => {:atom_results => @results}    
+      xml_response = Nokogiri::XML( rendered )
+      
+      with_unique_id = xml_response.xpath("atom:entry", @@namespaces)[6]
+      
+      assert_node(with_unique_id, "atom:id") do |id|
+        # based off of engine_id and unique_id
+        assert_include @with_unique_id.engine_id, id
+        assert_include @with_unique_id.unique_id, id
+      end      
+    end
+    
+    def test_with_html_abstract
+      render :template => "bento_search/atom_results", :locals => {:atom_results => @results}    
+      xml_response = Nokogiri::XML( rendered )
+      
+      with_html_abstract = xml_response.xpath("atom:entry", @@namespaces)[1]
+      
+      assert_node(with_html_abstract, "atom:summary[@type='html']", @with_html_abstract.abstract.to_s)      
     end
             
   end
