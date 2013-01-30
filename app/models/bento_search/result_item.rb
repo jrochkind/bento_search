@@ -61,12 +61,24 @@ module BentoSearch
       @link_is_fulltext = v
     end
     
-    # normalized controlled vocab title, important this is supplied
-    # if possible for OpenURL generation and other features. 
+    # Our own INTERNAL controlled vocab for 'format'. 
+    #
+    # Important that this be supplied by engine for maximum
+    # success of openurl, ris export, etc. 
+    #
+    # This vocab is based on schema.org CreativeWork 'types', 
+    # but supplemented with values we needed not present in schema.org. 
+    # String values are last part of schema.org URLs, symbol values are custom.
+    #
+    # However, for backwards compat, values that didn't exist in schema.org
+    # when we started but later came to exist -- we still use our string
+    # values. If you actually want a schema.org url, see #schema_org_type_url
+    # which translates as needed. 
     #
     # schema.org 'type' that's a sub-type of CreativeWork. 
     # should hold a string that, when appended to "http://schema.org/"
-    # is a valid schema.org type uri, that sub-types CreativeWork. Eg.
+    # is a valid schema.org type uri, that sub-types CreativeWork. Ones
+    # we have used:
     # * Article
     # * Book
     # * Movie
@@ -89,7 +101,27 @@ module BentoSearch
     #
     # Note: We're re-thinking this, might allow uncontrolled
     # in here instead. 
-    attr_accessor :format    
+    attr_accessor :format
+
+    # Translated from internal format vocab at #format. Outputs
+    # eg http://schema.org/Book
+    # Uses the @@format_to_schema_org hash for mapping from
+    # certain internal symbol values to schema org value, where
+    # possible. 
+    #
+    # Can return nil if we don't know a schema.org type
+    def schema_org_type_url    
+      if format.kind_of? String
+        "http://schema.org/#{format}"
+      elsif mapped = @@format_to_schema_org[format]
+        "http://schema.org/#{mapped}"
+      else
+        nil
+      end
+    end
+    @@format_to_schema_org = {
+      :report => "Article",
+    }
     
     # uncontrolled presumably english-language format string.
     # if supplied will be used in display in place of controlled
