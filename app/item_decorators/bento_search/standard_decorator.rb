@@ -121,7 +121,7 @@ module BentoSearch
       return result_elements.join(", ").html_safe
     end
     
-        # A display method, this is like #langauge_str, but will be nil if
+    # A display method, this is like #langauge_str, but will be nil if
     # the language_code matches the current default locale, used
     # for printing language only when not "English" normally. 
     #
