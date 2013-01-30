@@ -13,6 +13,10 @@ module BentoSearch
     # http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#linkTypes    
     attr_accessor :rel
     
+    # MIME content type may be used for both HMTL links and Atom
+    # link 'type' attribute
+    attr_accessor :type
+    
     # Array of strings, used for CSS classes on this link, possibly
     # for custom styles/images etc. May be used in non-html link
     # contexts too. 
