@@ -229,7 +229,15 @@ class AtomResultsTest < ActionView::TestCase
     
     assert_node(book, "dcterms:publisher", :text => @book.publisher)
   end
-
+  
+  def test_with_full_date
+    render :template => "bento_search/atom_results", :locals => {:atom_results => @results}    
+    xml_response = Nokogiri::XML( rendered )
+    
+    with_full_date = xml_response.at_xpath("./atom:feed/atom:entry[4]", @@namespaces)
+    
+    assert_node(with_full_date, "prism:coverDate", :text => "2011-05-06")    
+  end
   
   
 end
