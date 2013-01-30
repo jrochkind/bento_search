@@ -91,18 +91,13 @@ class AtomResultsTest < ActionView::TestCase
       :isbn => "123456789X",
       :year => "2004"
     )
-    @with_unique_id = BentoSearch::ResultItem.new(
-      :title => "Something",
-      :engine_id => "engine",
-      :unique_id => "a00001"
-    )
+    
     
      
     @results[0] = @article
     @results[1] = @article_with_html_abstract
     @results[3] = @article_with_full_date
-    @results[4] = @book
-    @results[5] = @with_unique_id
+    @results[4] = @book    
   end
   
   def test_smoke_atom_validate
@@ -195,15 +190,22 @@ class AtomResultsTest < ActionView::TestCase
   
   
   def test_with_unique_id
+    @results  = @engine.search("find")    
+    @results[0] = BentoSearch::ResultItem.new(
+      :title => "Something",      
+      :unique_id => "a00001",
+      :engine_id => "some_engine"
+    )
+    
     render :template => "bento_search/atom_results", :locals => {:atom_results => @results}    
     xml_response = Nokogiri::XML( rendered )
     
-    with_unique_id = xml_response.xpath("./atom:feed/atom:entry", @@namespaces)[6]
+    with_unique_id = xml_response.xpath("./atom:feed/atom:entry", @@namespaces)[0]
     
     assert_node(with_unique_id, "atom:id") do |id|
       # based off of engine_id and unique_id
-      assert_include @with_unique_id.engine_id, id
-      assert_include @with_unique_id.unique_id, id
+      assert_include id.text, "some_engine"
+      assert_include id.text, "a00001"
     end      
   end
   
