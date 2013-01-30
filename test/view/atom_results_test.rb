@@ -213,7 +213,7 @@ class AtomResultsTest < ActionView::TestCase
     
     with_html_abstract = xml_response.xpath("./atom:feed/atom:entry", @@namespaces)[1]
     
-    assert_node(with_html_abstract, "atom:summary[@type='html']", @with_html_abstract.abstract.to_s)      
+    assert_node(with_html_abstract, "atom:summary[@type='html']", :text => @article_with_html_abstract.abstract.to_s)      
   end
   
   def test_book
