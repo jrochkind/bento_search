@@ -153,8 +153,9 @@ module BentoSearch
     # required, for instance in Atom. 
     #
     # We here provide a really dumb implementation, if and only if
-    # the result has an engine_id and unique_id available, by
-    # basically concatenating them to app base url. 
+    # the result has an engine_id and unique_id available, (and
+    # a #root_url is available) by basically concatenating them to 
+    # app base url. 
     #
     # That's pretty lame, probably not resolvable, but best we
     # can do without knowing details of host app. You may want
@@ -163,7 +164,7 @@ module BentoSearch
     #
     # yes uri_identifier is like PIN number, deal with it. 
     def uri_identifier
-      if self.engine_id.present? && self.unique_id.present?
+      if self.engine_id.present? && self.unique_id.present? && _h.respond_to?(:root_url)
         "#{_h.root_url.chomp("/")}/bento_search_opaque_id/#{CGI.escape self.engine_id}/#{CGI.escape self.unique_id}"
       else 
         nil
