@@ -25,7 +25,11 @@ bento_decorate(item) do |item|
     end
     
     
-    builder.title item.complete_title
+    builder.title( if item.complete_title.html_safe? 
+      strip_tags(item.complete_title)
+    else
+      item.complete_title
+    end)
       
     # updated is required, for now we'll just set it to now, sorry
     builder.updated Time.now.strftime("%Y-%m-%dT%H:%M:%SZ")

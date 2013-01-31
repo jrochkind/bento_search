@@ -264,5 +264,18 @@ class AtomResultsTest < ActionView::TestCase
     assert_node(xml_response, "./atom:feed/atom:author/atom:name", :text => "ACME Seed And Feed Products")
   end
   
+  def test_html_in_title_stripped
+    results = BentoSearch::Results.new
+    results << BentoSearch::ResultItem.new(
+      :title => "html <b>title</b>".html_safe
+    )
+    
+    render(:template => "bento_search/atom_results", :locals => {:atom_results => results})
+    xml_response = Nokogiri::XML( rendered )
+        
+    assert_node(xml_response, "./atom:feed/atom:entry[1]/atom:title", :text => "html title")
+    
+  end
+  
   
 end
