@@ -148,6 +148,27 @@ module BentoSearch
         
       return value.blank? ? nil : value        
     end
+    
+    # A unique opaque identifier for a record may sometimes be
+    # required, for instance in Atom. 
+    #
+    # We here provide a really dumb implementation, if and only if
+    # the result has an engine_id and unique_id available, by
+    # basically concatenating them to app base url. 
+    #
+    # That's pretty lame, probably not resolvable, but best we
+    # can do without knowing details of host app. You may want
+    # to over-ride this in a decorator to do something more valid
+    # in an app-specific way. 
+    #
+    # yes uri_identifier is like PIN number, deal with it. 
+    def uri_identifier
+      if self.engine_id.present? && self.unique_id.present?
+        "#{_h.root_url.chomp("/")}/bento_search/#{CGI.escape self.engine_id}/#{CGI.escape self.unique_id}"
+      else 
+        nil
+      end
+    end
 
     
     ###################

@@ -16,10 +16,12 @@ bento_decorate(item) do |item|
   builder.entry do     
     
     # An atom:entry needs an <id> with a URI uniquely identifying
-    # it. Bah. we'll do what we can, this could use some fine-tuning or
-    # customization hooks. We can only do anything if there's an engine_id though
-    if item.engine_id.present? && item.unique_id.present?
-      builder.id "#{root_url.chomp("/")}/bento_search/#{CGI.escape item.engine_id}/#{CGI.escape item.unique_id}"
+    # it. Bah. we'll do what we can,using this implementation in
+    # StandardDecorator that creates a kind of lame probably not
+    # resolvable opaque uri, based on your app's root url, engine_id,
+    # and unique_id. In some cases may be nil violating atom, yeah. 
+    if item.uri_identifier
+      builder.id item.uri_identifier
     end
     
     
