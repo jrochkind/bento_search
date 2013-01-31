@@ -345,7 +345,7 @@ respond_to do |format|
                  :feed_author_name => "MyCorp"
               }      
       ) 
-   end   
+end   
 ~~~
 
 There are additional details that might matter to you, for more info see the 
