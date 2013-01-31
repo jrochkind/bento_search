@@ -164,7 +164,7 @@ module BentoSearch
     # yes uri_identifier is like PIN number, deal with it. 
     def uri_identifier
       if self.engine_id.present? && self.unique_id.present?
-        "#{_h.root_url.chomp("/")}/bento_search/#{CGI.escape self.engine_id}/#{CGI.escape self.unique_id}"
+        "#{_h.root_url.chomp("/")}/bento_search_opaque_id/#{CGI.escape self.engine_id}/#{CGI.escape self.unique_id}"
       else 
         nil
       end
