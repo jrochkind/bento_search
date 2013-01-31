@@ -324,6 +324,32 @@ Accomodating actual exports into the transactional flow of a web app can be
 tricky, and often requires use of the `result_item#unique_id` and 
 `engine.get( unique_id )` features. See the wiki at 
 
+### Machine-readable serialization in Atom
+
+Translation of any BentoSearch::Results to an Atom response that is enhanced to
+include nearly all the elements of each BentoSearch::ResultItem, so can serves
+well as machine-readable api response in general, not just for Atom feed readers. 
+
+You can use the  'bento_search/atom_results' view template, perhaps 
+in your action method like so:
+
+~~~ruby
+# ...
+respond_to do |format|
+   format.html # default view
+   format.atom do
+      render( :template => "bento_search/atom_results",              
+              :locals   => {
+                 :atom_results     => @results,
+                 :feed_name        => "Acme results",
+                 :feed_author_name => "MyCorp"
+              }      
+      ) 
+   end   
+~~~
+
+There are additional details that might matter to you, for more info see the 
+[wiki page](https://github.com/jrochkind/bento_search/wiki/Machine-Readable-Serialization-With-Atom) 
 
 ## Planned Features
 
