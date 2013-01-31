@@ -248,8 +248,20 @@ class AtomResultsTest < ActionView::TestCase
   def test_nil_results
     # should render a more or less empty atom response for
     # nil results, convenient to not raise on nil
-    render :template => "bento_search/atom_results", :locals => {:atom_results => nil}
-   
+    render :template => "bento_search/atom_results", :locals => {:atom_results => nil}   
+  end
+  
+  def test_locals_for_feed_name_and_author
+    render( :template => "bento_search/atom_results", 
+      :locals => {:atom_results => @results, 
+                  :feed_name => "My Feed",
+                  :feed_author_name => "ACME Seed And Feed Products"}
+    )
+                  
+    xml_response = Nokogiri::XML( rendered )
+    
+    assert_node(xml_response, "./atom:feed/atom:title", :text => "My Feed")
+    assert_node(xml_response, "./atom:feed/atom:author/atom:name", :text => "ACME Seed And Feed Products")
   end
   
   

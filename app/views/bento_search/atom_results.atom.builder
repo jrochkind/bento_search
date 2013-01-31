@@ -14,8 +14,8 @@
 # or an example of PRISM in Atom from Nature, who generally knows what they're
 # doing, at: http://www.nature.com/opensearch/request?query=doi=%2210.1038/4611053b%22&httpAccept=application/atom%2Bxml
 
-feed_title  = local_assigns[:title] ? title : "Search Results"
-feed_author = local_assigns[:author] ? author : "Search Results"
+feed_title  = local_assigns[:feed_name] || "Search Results"
+feed_author = local_assigns[:feed_author_name] || "Search Results"
 
 # our object is passed in with name of template, more convenient as 'results' 
 # If nil passed in, use empty result object to avoid raising and
