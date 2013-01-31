@@ -244,6 +244,13 @@ class AtomResultsTest < ActionView::TestCase
     
     assert_node(with_full_date, "prism:coverDate", :text => "2011-05-06")    
   end
+
+  def test_nil_results
+    # should render a more or less empty atom response for
+    # nil results, convenient to not raise on nil
+    render :template => "bento_search/atom_results", :locals => {:atom_results => nil}
+   
+  end
   
   
 end

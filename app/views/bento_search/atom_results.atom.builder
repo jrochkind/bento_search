@@ -18,7 +18,9 @@ feed_title  = local_assigns[:title] ? title : "Search Results"
 feed_author = local_assigns[:author] ? author : "Search Results"
 
 # our object is passed in with name of template, more convenient as 'results' 
-results     = atom_results
+# If nil passed in, use empty result object to avoid raising and
+# render a fairly empty response
+results     = atom_results || BentoSearch::Results.new
 
 
 xml.instruct!(:xml, :encoding => "UTF-8")
