@@ -91,7 +91,7 @@ are standardized accross engines. BentoSearch::Items provide semantic
 values (title, author, etc.), as available from the particular engine. 
 
 To see which engines come bundled with BentoSearch, and any special 
-engine-specific instructions, look at BentoSearch source in `./app/search_engines`
+engine-specific instructions, look at BentoSearch source in [`./app/search_engines`](./app/search_engines)
 
 ### Register engines in global configuration
 
