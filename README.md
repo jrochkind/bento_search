@@ -207,7 +207,7 @@ An engine instance advertises it's maximum per-page values.
 bento_search fixes the default per_page at 10.     
     
 For help creating your UI, you can ask a BentoSearch::Results for
-`results.pagination`, which returns a BentoSearch::Results::Pagination
+`results.pagination`, which returns a [BentoSearch::Results::Pagination](app/models/bento_search/results/pagination.rb)
 object which should be suitable for passing to [kaminari](https://github.com/amatsuda/kaminari)
 `paginate`, or else have convenient methods for roll your own pagination UI. 
 Kaminari's paginate method:
