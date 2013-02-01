@@ -42,7 +42,7 @@ bento_decorate(item) do |item|
       builder.dcterms :type, item.format_str
     end
     if item.format.present?
-      builder.dcterms :type, item.format, :vocabulary => "http://github.com/jrochkind/bento_search/"
+      builder.dcterms :type, item.format, :vocabulary => "http://purl.org/NET/bento_search/ontology"
     end
 
     

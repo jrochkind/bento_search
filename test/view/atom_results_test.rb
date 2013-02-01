@@ -170,7 +170,7 @@ class AtomResultsTest < ActionView::TestCase
       assert_node(article, "dcterms:type[not(@vocabulary)]", :text => @article.format_str)
             
       assert_node(article, "dcterms:type[@vocabulary='http://schema.org/']", :text => @article.schema_org_type_url)
-      assert_node(article, "dcterms:type[@vocabulary='http://github.com/jrochkind/bento_search/']", :text => @article.format)
+      assert_node(article, "dcterms:type[@vocabulary='http://purl.org/NET/bento_search/ontology']", :text => @article.format)
       
       # Just make sure right number of author elements, with right structure. 
       assert_node(article, "atom:author/atom:name") do |authors|
@@ -226,7 +226,7 @@ class AtomResultsTest < ActionView::TestCase
         
     book = xml_response.xpath("./atom:feed/atom:entry", @@namespaces)[4]
     
-    assert_node(book, "dcterms:type[@vocabulary='http://github.com/jrochkind/bento_search/']", :text => "Book")
+    assert_node(book, "dcterms:type[@vocabulary='http://purl.org/NET/bento_search/ontology']", :text => "Book")
     assert_node(book, "dcterms:type[@vocabulary='http://schema.org/']", :text => "http://schema.org/Book")
     
     assert_node(book, "dcterms:publisher", :text => @book.publisher)
