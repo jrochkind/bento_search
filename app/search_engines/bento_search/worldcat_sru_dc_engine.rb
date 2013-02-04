@@ -240,7 +240,7 @@ class BentoSearch::WorldcatSruDcEngine
     else 
       # if we don't even have a 'type', use the 'format' if it's there, 
       # even though it's gonna be weird. 
-      format_str = first_text_if_present(record, "format")      
+      format_str = first_text_if_present(record_xml, "format")      
     end        
     
     return [format, format_str]
