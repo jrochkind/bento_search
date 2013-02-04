@@ -14,8 +14,10 @@ module BentoSearch
     @@global_registrar ||= BentoSearch::Registrar.new
   end
        
-  def self.register_engine(id, &block)
-    global_registrar.register_engine(id, &block)    
+  # See BentoSearch::Registrar#register_engine, this is a
+  # default global registrar. 
+  def self.register_engine(id, data = nil, &block)
+    global_registrar.register_engine(id, data, &block)    
   end
   
   def self.get_engine(id)

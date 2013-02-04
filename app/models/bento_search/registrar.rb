@@ -24,13 +24,42 @@ class BentoSearch::Registrar
   #
   # The first parameter identifier, eg "gbs", may be used in some
   # URLs, for AJAX etc. 
-  def register_engine(id, &block)
-    conf = Confstruct::Configuration.new(&block)
+  #
+  # You can also pass in a hash or hash-like object (including
+  # a configuration object returned by a prior register_engine)
+  # instead of or in addition to the block 'dsl' -- this can be used
+  # to base one configuration off another, with changes:
+  #
+  #     BentoSearch.register_engine("original", {
+  #       :engine => "Something",
+  #       :title => "Original",
+  #       :shared => "shared"
+  #     })
+  #
+  #     BentoSearch.register_engine("derived") do |conf|
+  #        conf.title = "Derived"
+  #     end
+  #
+  # Above would not change 'shared' in 'original', but would
+  # over-ride 'title' in 'derived', without changing 'title' in
+  # 'original'. 
+  def register_engine(id, conf_data = nil, &block)
+    conf = Confstruct::Configuration.new
+    
+    # Make sure we make a deep_copy so any changes don't mutate
+    # the original. Confstruct can be unpredictable. 
+    if conf_data.present?
+      conf_data = Confstruct::Configuration.new(conf_data).deep_copy
+    end
+    
+    conf.configure(conf_data, &block)
     conf.id = id.to_s
     
     raise ArgumentError.new("Must supply an `engine` class name") unless conf.engine
     
     @registered_engine_confs[id] = conf    
+    
+    return conf
   end
   
   # Get a configured SearchEngine, using configuration and engine
