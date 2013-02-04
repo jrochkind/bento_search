@@ -102,8 +102,10 @@ class BentoSearch::MultiSearcher
         Rails.logger.error("\nBentoSearch:MultiSearcher caught exception: #{e}\n#{e.backtrace.join("   \n")}")
         # Make a fake results with caught exception. 
         @results = BentoSearch::Results.new
+        self.engine.fill_in_search_metadata_for(@results, self.engine.normalized_search_arguments(search_args))
+        
         @results.error ||= {}
-        @results.error["exception"] = e        
+        @results.error["exception"] = e           
       end
     end
     

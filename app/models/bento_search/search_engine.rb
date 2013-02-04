@@ -213,18 +213,11 @@ module BentoSearch
       arguments = normalized_search_arguments(*arguments)
 
       results = search_implementation(arguments)
+      
+      fill_in_search_metadata_for(results, arguments)
             
-      
-      # standard result metadata
-      results.start = arguments[:start] || 0
-      results.per_page = arguments[:per_page]
-      
-      results.search_args   = arguments
-      results.engine_id     = configuration.id
-      
       results.timing = (Time.now - start_t)
             
-      results.display_configuration = configuration.for_display
       results.each do |item| 
         # We copy some configuraton info over to each Item, as a convenience
         # to display logic that may have decide what to do given only an item,
@@ -249,13 +242,26 @@ module BentoSearch
       failed.error ||= {}
       failed.error[:exception] = e
       
-      failed.search_args           = arguments
-      failed.engine_id             = configuration.id
-      failed.display_configuration = configuration.for_display
       failed.timing                = (Time.now - start_t)
+      
+      fill_in_search_metadata_for(failed, arguments)
 
       
       return failed
+    end
+    
+    # SOME of the elements of Results to be returned that SearchEngine implementation
+    # fills in automatically post-search. Extracted into a method for DRY in
+    # error handling to try to fill these in even in errors. And *possible*
+    # experimental use in other classes for same thing is why method is
+    # public, see MultiSearcher.     
+    def fill_in_search_metadata_for(results, normalized_arguments)
+      results.search_args           = normalized_arguments
+      results.start = normalized_arguments[:start] || 0
+      results.per_page = normalized_arguments[:per_page]
+      
+      results.engine_id             = configuration.id
+      results.display_configuration = configuration.for_display                        
     end
         
 
