@@ -99,7 +99,7 @@ class BentoSearch::GoogleSiteSearchEngine
     10
   end
   
-  def self.required_configuation
+  def self.required_configuration
     [:api_key, :cx]
   end
   
