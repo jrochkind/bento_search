@@ -84,14 +84,14 @@ may be required for certain engines.
     results = engine.search("a query")
 ~~~~
 
-`results` are a BentoSearch::Results object, which acts like an array of
-BentoSearch::Item objects, along with some meta-information about the
+`results` are a [BentoSearch::Results](./app/models/bento_search/results.rb) object, which acts like an array of
+[BentoSearch::Item](./app/models/bento_search/results.rb) objects, along with some meta-information about the
 search itself (pagination keys, etc).  BentoSearch::Results and Item fields
 are standardized accross engines. BentoSearch::Items provide semantic
 values (title, author, etc.), as available from the particular engine. 
 
 To see which engines come bundled with BentoSearch, and any special 
-engine-specific instructions, look at BentoSearch source in `./app/search_engines`
+engine-specific instructions, look at BentoSearch source in [`./app/search_engines/bento_search`](./app/search_engines/bento_search)
 
 ### Register engines in global configuration
 
@@ -207,7 +207,7 @@ An engine instance advertises it's maximum per-page values.
 bento_search fixes the default per_page at 10.     
     
 For help creating your UI, you can ask a BentoSearch::Results for
-`results.pagination`, which returns a BentoSearch::Results::Pagination
+`results.pagination`, which returns a [BentoSearch::Results::Pagination](app/models/bento_search/results/pagination.rb)
 object which should be suitable for passing to [kaminari](https://github.com/amatsuda/kaminari)
 `paginate`, or else have convenient methods for roll your own pagination UI. 
 Kaminari's paginate method:
@@ -255,7 +255,7 @@ that Celluloid uses multi-threading in such a way that you might need
 to turn Rails config.cache_classes=true even in development.
  
 
-For more info, see BentoSearch::MultiSearcher. 
+For more info, see [BentoSearch::MultiSearcher](./app/models/bento_search/multi_searcher.rb). 
 
 ### Delayed results loading via AJAX (actually more like AJAHtml)
 
@@ -285,7 +285,8 @@ link resolver.
 BentoSearch::Items can have a main link associated with them (generally 
 hyperlinked from title), as well as a list of additional links. Most engines
 do not provide additional links by default, custom local Decorators would
-be used to add them. See wiki for more info on decorators, and BentoSearch::Link
+be used to add them. See [wiki on display cusotmization](https://github.com/jrochkind/bento_search/wiki/Customizing-Results-Display) 
+for more info on decorators, and [BentoSearch::Link](app/models/bento_search/link.rb)
 for fields. 
      
 ### OpenURL and metadata
@@ -303,8 +304,8 @@ documented at ResultItem#format). As well as how well the #to_openurl routine
 handles all edge cases (OpenURL can be weird). As edge cases are discovered, they
 can be solved. 
 
-See `./app/item_decorators/bento_search/openurl_add_other_link.rb` for an example
-of using item decorators to add a link to your openurl resover to an item when
+See [`./app/item_decorators/bento_search/openurl_add_other_link.rb`](./app/item_decorators/bento_search/openurl_add_other_link.rb) 
+for an example of using item decorators to add a link to your openurl resover to an item when
 displayed.
 
 ### Exporting (eg as RIS) and get by unique_id
@@ -318,7 +319,7 @@ the RIS format, suitable for import into EndNote, Refworks, etc.
 
 Accomodating actual exports into the transactional flow of a web app can be
 tricky, and often requires use of the `result_item#unique_id` and 
-`engine.get( unique_id )` features. See the wiki at 
+`engine.get( unique_id )` features. See the wiki on [exports and #unique_id](https://github.com/jrochkind/bento_search/wiki/Exports-and-the-get-by-unique_id-feature)
 
 ### Machine-readable serialization in Atom
 
@@ -326,7 +327,7 @@ Translation of any BentoSearch::Results to an Atom response that is enhanced to
 include nearly all the elements of each BentoSearch::ResultItem, so can serves
 well as machine-readable api response in general, not just for Atom feed readers. 
 
-You can use the  'bento_search/atom_results' view template, perhaps 
+You can use the  [`bento_search/atom_results`](./app/views/bento_search/atom_results.atom.builder) view template, perhaps 
 in your action method like so:
 
 ~~~ruby
