@@ -11,6 +11,7 @@ en:
     issue: "Issue"
     page: "p."
     pages: "pp." 
+    author_date_seperator: "—"
     format:
       # Schema.org formats
       Article: Article

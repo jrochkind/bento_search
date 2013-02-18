@@ -29,14 +29,20 @@
       <% if item.any_present?(:authors, :year) %>
         <p class="bento_item_row first_about">
             
-          <% if item.authors.length > 0 %>
+          <% if item.authors.present? %>
             <span class="authors">
               <%= item.render_authors_list %>
             </span>
           <% end %>
           
+          <% if item.authors.present? && item.year.present? %>
+            <span class="seperator"><%= I18n.t("bento_search.author_date_seperator", :default=>"—") %></span>
+          <% end %>
+          
           <% if item.year.present? %>
-            <span class="date"> — <%= item.year %> </span>
+            <span class="date">              
+              <%= item.year %>
+            </span>
           <% end %>
                 
         </p>
