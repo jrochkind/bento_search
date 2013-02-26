@@ -3,7 +3,7 @@ PATH
   specs:
     bento_search (1.0.0)
       confstruct (>= 0.2.3, < 1.0)
-      httpclient (~> 2.2.5)
+      httpclient (>= 2.2.5, < 3.0.0)
       language_list
       multi_json (>= 1.0.4, < 2.0)
       nokogiri
@@ -61,7 +61,7 @@ GEM
     erubis (2.7.0)
     facter (1.6.16)
     hike (1.2.1)
-    httpclient (2.2.7)
+    httpclient (2.3.3)
     i18n (0.6.1)
     journey (1.0.4)
     jquery-rails (2.1.4)
@@ -74,7 +74,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     marc (0.5.0)
-    mime-types (1.19)
+    mime-types (1.21)
     multi_json (1.5.0)
     nokogiri (1.5.6)
     openurl (0.4.2)
