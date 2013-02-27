@@ -54,7 +54,7 @@ class StandardDecoratorTest < ActionView::TestCase
   test "display_format with nil format" do
     item = decorator(:format => nil, :format_str => nil)
     
-    display_format = item.display_format    
+    display_format = item.display_format
     
     assert_nil display_format  
   end
