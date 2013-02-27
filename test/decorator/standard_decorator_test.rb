@@ -58,6 +58,19 @@ class StandardDecoratorTest < ActionView::TestCase
     
     assert_nil display_format  
   end
+  
+  test "display_date" do
+    item = decorator(:year => 1900)    
+    assert_equal "1900", item.display_date
+    
+    d = Date.new(2010, 5, 5)
+    item = decorator(:publication_date => d)
+    assert_equal I18n.l(d, :format => "%d %b %Y"), item.display_date
+    
+    # if volume and issue, only prints out year
+    item = decorator(:publication_date => d, :volume => "101", :issue => "2")
+    assert_equal I18n.l(d, :format => "%Y"), item.display_date
+  end
     
   
 end

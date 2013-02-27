@@ -149,6 +149,30 @@ module BentoSearch
       return value.blank? ? nil : value        
     end
     
+    # outputs a date for display, from #publication_date or #year. 
+    # Uses it's own logic to decide whether to output entire date or just
+    # year, if it has a complete date. (If volume and issue are present,
+    # just year). 
+    #
+    # Over-ride in a decorator if you want to always or never or different
+    # logic for complete date. Or if you want to change the format of the date,
+    # etc. 
+    def display_date
+      if self.publication_date
+        if self.volume && self.issue
+          # just the year, ma'am
+          I18n.localize(self.publication_date, :format => "%Y")
+        else
+          # whole date, since we got it
+          I18n.localize(self.publication_date, :format => "%d %b %Y")
+        end
+      elsif self.year
+        self.year.to_s
+      else
+        nil
+      end
+    end
+    
     # A unique opaque identifier for a record may sometimes be
     # required, for instance in Atom. 
     #

@@ -35,13 +35,13 @@
             </span>
           <% end %>
           
-          <% if item.authors.present? && item.year.present? %>
+          <% if item.authors.present? && item.display_date.present? %>
             <span class="seperator"><%= I18n.t("bento_search.author_date_seperator", :default=>"—") %></span>
           <% end %>
           
-          <% if item.year.present? %>
+          <% if item.display_date.present? %>
             <span class="date">              
-              <%= item.year %>
+              <%= item.display_date %>
             </span>
           <% end %>
                 
