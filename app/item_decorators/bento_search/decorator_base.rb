@@ -59,9 +59,12 @@ module BentoSearch
     # get one of those from #view_context. In helpers/views 
     # you can also use `self`. 
     def self.decorate(item, view_context)
-      # What decorator class? If specified as string in #decorator,
-      # look it up as a class object, else default. 
-      decorator_class = item.decorator.try {|name| BentoSearch::Util.constantize(name) } || BentoSearch::StandardDecorator  
+      # What decorator class? If specified in #decorator,
+      # could be a class constant, or a string to be looked up. 
+      # else default. 
+      decorator_class = item.decorator.try do |arg|
+        (arg.kind_of?(Class) && arg <= BentoSearch::DecoratorBase) ? arg : BentoSearch::Util.constantize(arg)           
+      end || BentoSearch::StandardDecorator
       
       return decorator_class.new(item, view_context)    
     end

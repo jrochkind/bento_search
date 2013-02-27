@@ -4,13 +4,15 @@ require 'test_helper'
 # at `view` to test with. 
 class DecoratorBaseTest < ActionView::TestCase
   class Base
+    attr_accessor :decorator
+    
     def foo
       "foo"
     end
     
     def bar
       "bar"
-    end
+    end        
   end
   
   class SpecificDecorator < BentoSearch::DecoratorBase
@@ -67,6 +69,20 @@ class DecoratorBaseTest < ActionView::TestCase
   def test_decorated_base
     assert_kind_of Base, @decorated.send("_base")
     assert_equal "foo", @decorated.send("_base").foo
+  end
+  
+  def test_decorate_string_arg
+    @base.decorator = "DecoratorBaseTest::SpecificDecorator"
+    decorated = BentoSearch::DecoratorBase.decorate(@base, view)
+    
+    assert_kind_of DecoratorBaseTest::SpecificDecorator, decorated
+  end
+  
+  def test_decorate_class_arg
+    @base.decorator = DecoratorBaseTest::SpecificDecorator
+    decorated = BentoSearch::DecoratorBase.decorate(@base, view)
+    
+    assert_kind_of DecoratorBaseTest::SpecificDecorator, decorated
   end
   
 end
