@@ -26,7 +26,7 @@
     <div class="bento_item_body">
       
       
-      <% if item.any_present?(:authors, :year) %>
+      <% if item.any_present?(:authors, :display_date) %>
         <p class="bento_item_row first_about">
             
           <% if item.authors.present? %>
