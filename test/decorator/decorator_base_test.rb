@@ -78,11 +78,5 @@ class DecoratorBaseTest < ActionView::TestCase
     assert_kind_of DecoratorBaseTest::SpecificDecorator, decorated
   end
   
-  def test_decorate_class_arg
-    @base.decorator = DecoratorBaseTest::SpecificDecorator
-    decorated = BentoSearch::DecoratorBase.decorate(@base, view)
-    
-    assert_kind_of DecoratorBaseTest::SpecificDecorator, decorated
-  end
   
 end

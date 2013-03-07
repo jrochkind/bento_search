@@ -50,20 +50,20 @@ module BentoSearch
     end
     
     # Applies decorator to item and returns decorated item. 
-    # uses standard logic to look up which decorator to apply or
-    # applies default one. The point of this method is just that
-    # standard logic. 
+    # Will decide what decorator to apply based on String class name
+    # in item.decorator, or else apply StandardDecorator. The point of 
+    # this method is just that logic, nothing else special. 
     #
     # Need to pass a Rails ActionView::Context in, to use to
     # initialize decorator. In Rails, in most places you can
     # get one of those from #view_context. In helpers/views 
     # you can also use `self`. 
     def self.decorate(item, view_context)
-      # What decorator class? If specified in #decorator,
-      # could be a class constant, or a string to be looked up. 
-      # else default. 
+      # What decorator class? Specified in #decorator as a String,
+      # we intentionally do not allow an actual class constant, to
+      # maintain problem-free serialization of ItemResults and configuration. 
       decorator_class = item.decorator.try do |arg|
-        (arg.kind_of?(Class) && arg <= BentoSearch::DecoratorBase) ? arg : BentoSearch::Util.constantize(arg)           
+        BentoSearch::Util.constantize(arg.to_s)           
       end || BentoSearch::StandardDecorator
       
       return decorator_class.new(item, view_context)    
