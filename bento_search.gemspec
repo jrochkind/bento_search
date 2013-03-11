@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency "nokogiri"
   s.add_dependency "openurl", ">= 0.3.1", "< 1.1"
   s.add_dependency "summon"
-  s.add_dependency "language_list" # ISO 639 language codes
+  s.add_dependency "language_list", "~> 1.0" # ISO 639 language codes
 
   s.add_development_dependency "vcr"
   s.add_development_dependency "webmock"
