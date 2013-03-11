@@ -3,6 +3,7 @@ PATH
   specs:
     bento_search (1.0.2)
       confstruct (>= 0.2.3, < 1.0)
+      htmlentities
       httpclient (>= 2.2.5, < 3.0.0)
       language_list (~> 1.0)
       multi_json (>= 1.0.4, < 2.0)
@@ -61,6 +62,7 @@ GEM
     erubis (2.7.0)
     facter (1.6.16)
     hike (1.2.1)
+    htmlentities (4.3.1)
     httpclient (2.3.3)
     i18n (0.6.1)
     journey (1.0.4)

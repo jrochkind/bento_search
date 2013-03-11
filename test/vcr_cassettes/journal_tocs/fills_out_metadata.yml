@@ -1,0 +1,396 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.journaltocs.ac.uk/api/journals/1600-5740?output=articles&user=nobody@example.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "RGF0ZQ==":
+      - !binary |-
+        TW9uLCAxMSBNYXIgMjAxMyAyMDoxMjozOSBHTVQ=
+      !binary "U2VydmVy":
+      - !binary |-
+        QXBhY2hlLzIuMi4xNSAoQ2VudE9TKQ==
+      !binary "WC1Qb3dlcmVkLUJ5":
+      - !binary |-
+        UEhQLzUuMy4z
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24veG1sOyBjaGFyc2V0PXV0Zi04
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"
+        \r\n         xmlns:prism=\"http://prismstandard.org/namespaces/1.2/basic/\"
+        \r\n\t\t\t\t xmlns:dc=\"http://purl.org/dc/elements/1.1/\" \r\n\t\t\t\t xmlns:mn=\"http://usefulinc.com/rss/manifest/\"\r\n\t\t\t\t
+        xmlns:content=\"http://purl.org/rss/1.0/modules/content/\" \r\n\t\t\t\t xmlns=\"http://purl.org/rss/1.0/\">\n\n
+        \ <channel rdf:about=\"http://www.journaltocs.hw.ac.uk/api/journals\">\r\n
+        \   <title>JournalTOCs API - Acta Crystallographica Section B Structural Science
+        (7 articles)</title>\r\n    <link>http://www.journaltocs.ac.uk/api/journals/1600-5740</link>\r\n
+        \   <description><![CDATA[Your query: 1600-5740 has returned 7 articles. They
+        are listed in alphabetical order per journal (maximum number of returned items
+        is 3000).]]></description>\r\n    <dc:publisher>JournalTOCs API</dc:publisher>\r\n
+        \   <dc:creator>JOURNALTOCS API PROJECT</dc:creator>\r\n\t\t<dc:coverage>1</dc:coverage>\r\n
+        \   <image rdf:resource=\"http://www.journaltocs.hw.ac.uk/images/xtralogo.gif\"
+        />\r\n    <items>\r\n      <rdf:Seq>\r\n        \r\n      </rdf:Seq>\r\n    </items>\r\n
+        \ </channel>\r\n  <item rdf:about=\"http://dx.doi.org/10.1107/S0108768113001778\">\n<title>A
+        highly hydrated &#x3B1;-cyclodextrin/1-undecanol inclusion complex: crystal
+        structure and hydrogen-bond network from high-resolution neutron diffraction
+        at 20&#x2005;K</title>\r\n<link>http://scripts.iucr.org/cgi-bin/paper?eb5023</link>\r\n<description>The
+        monoclinic C2 crystal structure of an &#x3B1;-cyclodextrin/1-undecanol host&#x2013;guest
+        inclusion complex was solved using single-crystal neutron diffraction. Large
+        high-quality crystals were specially produced by optimizing temperature-controlled
+        growth conditions. The hydrate crystallizes in a channel-type structure formed
+        by head-to-head dimer units of &#x3B1;-cyclodextrin molecules stacked like
+        coins in a roll. The alkyl chain of the guest lipid is entirely embedded inside
+        the tubular cavity delimited by the &#x3B1;-cyclodextrin dimer and adopts
+        an all-trans planar zigzag conformation, while the alcohol polar head group
+        is outside close to the &#x3B1;-cyclodextrin primary hydroxyl groups. The
+        cyclodextrin dimer forms columns, which adopt a quasi-square arrangement much
+        less compact than the quasi-hexagonal close packing already observed in the
+        less hydrated &#x3B1;-cyclodextrin channel-type structures usually found with
+        similar linear guests. The lack of compactness of this crystal form is related
+        to the high number of interstitial water molecules. The replacement of 1-undecanol
+        by 1-decanol does not modify the overall crystal structure of the hydrate
+        as shown by additional X-ray diffraction investigations comparing the two
+        host&#x2013;guest assemblies. This is the first study that analyses the entire
+        hydrogen-bonding network involved in the formation of a cyclodextrin dimer
+        surrounded by its shell of water molecules.</description>\r\n<dc:identifier>DOI
+        10.1107/S0108768113001778</dc:identifier>\r\n<dc:creator>Gallois&#45;Montbrun</dc:creator>\n<dc:creator>D.</dc:creator>\n<dc:creator>Le
+        Bas,  G.</dc:creator>\n<dc:creator>Mason,  S.A.</dc:creator>\n<dc:creator>Prang&amp;&#35;xE9</dc:creator>\n<dc:creator>,
+        \ T.</dc:creator>\n<dc:creator>Lesieur,  S.</dc:creator>\n<dc:subject>cyclodextrin
+        dimer; monoalkyl lipid; channel assembly; host&#x2013;guest inclusion compound;
+        hydrogen bonding; single-crystal neutron diffraction</dc:subject>\n<dc:date>2013-02-26</dc:date>\n<dc:source>Acta
+        Crystallographica Section B Structural Science, Vol. 69, No. 2 (2013) pp.
+        0 - 0</dc:source>\n<dc:publisher>International Union of Crystallography (IUCr)</dc:publisher>\n<prism:PublicationName>Acta
+        Crystallographica Section B Structural Science</prism:PublicationName>\n<prism:volume>69</prism:volume>\n<prism:number>2</prism:number>\n<prism:startingPage>0</prism:startingPage>\n<prism:endingPage>0</prism:endingPage>\n<prism:publicationDate>2013-02-26</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://scripts.iucr.org/cgi-bin/paper?eb5023\"><b>A highly hydrated
+        &#x3B1;-cyclodextrin/1-undecanol inclusion complex: crystal structure and
+        hydrogen-bond network from high-resolution neutron diffraction at 20&#x2005;K</b></A><br
+        />Gallois-Montbrun D.; Le Bas,  G.; Mason,  S.A.; Prang&#xE9;,  T.; Lesieur,
+        \ S.<br /><i>Acta Crystallographica Section B Structural Science, Vol. 69,
+        No. 2 (2013) pp. 0 - 0</i><br />The monoclinic C2 crystal structure of an
+        &#x3B1;-cyclodextrin/1-undecanol host&#x2013;guest inclusion complex was solved
+        using single-crystal neutron diffraction. Large high-quality crystals were
+        specially produced by optimizing temperature-controlled growth conditions.
+        The hydrate crystallizes in a channel-type structure formed by head-to-head
+        dimer units of &#x3B1;-cyclodextrin molecules stacked like coins in a roll.
+        The alkyl chain of the guest lipid is entirely embedded inside the tubular
+        cavity delimited by the &#x3B1;-cyclodextrin dimer and adopts an all-trans
+        planar zigzag conformation, while the alcohol polar head group is outside
+        close to the &#x3B1;-cyclodextrin primary hydroxyl groups. The cyclodextrin
+        dimer forms columns, which adopt a quasi-square arrangement much less compact
+        than the quasi-hexagonal close packing already observed in the less hydrated
+        &#x3B1;-cyclodextrin channel-type structures usually found with similar linear
+        guests. The lack of compactness of this crystal form is related to the high
+        number of interstitial water molecules. The replacement of 1-undecanol by
+        1-decanol does not modify the overall crystal structure of the hydrate as
+        shown by additional X-ray diffraction investigations comparing the two host&#x2013;guest
+        assemblies. This is the first study that analyses the entire hydrogen-bonding
+        network involved in the formation of a cyclodextrin dimer surrounded by its
+        shell of water molecules.</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://dx.doi.org/10.1107/S0108768113001043\">\n<title>Isoelectronic
+        and isolobal O, CH2, CH_3^+ and BH3 as electron pairs; similarities between
+        molecular and solid-state chemistry</title>\r\n<link>http://scripts.iucr.org/cgi-bin/paper?eb5022</link>\r\n<description>A
+        topological analysis of the electron localization function (ELF) of a molecule
+        of hexamethyldisiloxane, (H3C)3&#x2013;Si&#x2013;O&#x2013;Si&#x2013;(CH3)3,
+        has been carried out, drawing a consistent picture of Si&#x2014;O&#x2014;Si
+        bonding both in the linear and angular geometries. The ELF analysis confirms
+        the idea that the O atom, in the linear geometry of (H3C)3&#x2014;Si&#x2014;O&#x2014;Si&#x2014;(CH3)3,
+        is isolobal with the isoelectronic &#x2014;CH_3^+&#x2014; and &#x2014;BH3&#x2014;
+        groups, the bonding in the Si&#x2014;O&#x2014;Si group being described as
+        a two-electron, three-center (2e, 3c) bond. At the same time, the three oxygen
+        lone pairs mirror the three C&#x2014;H and B&#x2014;H bonds, respectively.
+        On the contrary, in the angular geometry the same O atoms form two Si&#x2014;O
+        bonds and its lone pairs mimic the geometry of the &#x2014;CH2&#x2014; group.
+        In this model the O atoms would play the same role as the formally present
+        O2&#x2212; anions in the `so-called' ionic solids, such as in the skeletons
+        of aluminate and silicate polyanions, thereby connecting molecular and solid-state
+        chemistry as formulated by the `fragment formalism' or the `molecular unit-cell
+        approach'. This unifying concept as well as the calculations we have carried
+        out fully agree and also give support to earlier ideas developed by Bragg
+        and Bent, among other authors. Bonding in the series of compounds P4, P4O6,
+        P4O10, N4(CH2)6 (hexamethylenetetramine) and (CH)4(CH2)6 (adamantane) is discussed
+        in the context of the isolobal model.</description>\r\n<dc:identifier>DOI
+        10.1107/S0108768113001043</dc:identifier>\r\n<dc:creator>Vegas</dc:creator>\n<dc:creator>&amp;&#35;xC1</dc:creator>\n<dc:creator>.</dc:creator>\n<dc:creator>Notario,
+        \ R.</dc:creator>\n<dc:creator>Chamorro,  E.</dc:creator>\n<dc:creator>P&amp;&#35;xE9</dc:creator>\n<dc:creator>rez,
+        \ P.</dc:creator>\n<dc:creator>Liebman,  J.F.</dc:creator>\n<dc:subject>isolobal;
+        two-electron three-center bond; electron localization function; topological
+        analysis; fragment formalism; valence-shell electron-pair repulsion</dc:subject>\n<dc:date>2013-02-26</dc:date>\n<dc:source>Acta
+        Crystallographica Section B Structural Science, Vol. 69, No. 2 (2013) pp.
+        0 - 0</dc:source>\n<dc:publisher>International Union of Crystallography (IUCr)</dc:publisher>\n<prism:PublicationName>Acta
+        Crystallographica Section B Structural Science</prism:PublicationName>\n<prism:volume>69</prism:volume>\n<prism:number>2</prism:number>\n<prism:startingPage>0</prism:startingPage>\n<prism:endingPage>0</prism:endingPage>\n<prism:publicationDate>2013-02-26</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://scripts.iucr.org/cgi-bin/paper?eb5022\"><b>Isoelectronic and
+        isolobal O, CH2, CH_3^+ and BH3 as electron pairs; similarities between molecular
+        and solid-state chemistry</b></A><br />Vegas &#xC1;.; Notario,  R.; Chamorro,
+        \ E.; P&#xE9;rez,  P.; Liebman,  J.F.<br /><i>Acta Crystallographica Section
+        B Structural Science, Vol. 69, No. 2 (2013) pp. 0 - 0</i><br />A topological
+        analysis of the electron localization function (ELF) of a molecule of hexamethyldisiloxane,
+        (H3C)3&#x2013;Si&#x2013;O&#x2013;Si&#x2013;(CH3)3, has been carried out, drawing
+        a consistent picture of Si&#x2014;O&#x2014;Si bonding both in the linear and
+        angular geometries. The ELF analysis confirms the idea that the O atom, in
+        the linear geometry of (H3C)3&#x2014;Si&#x2014;O&#x2014;Si&#x2014;(CH3)3,
+        is isolobal with the isoelectronic &#x2014;CH_3^+&#x2014; and &#x2014;BH3&#x2014;
+        groups, the bonding in the Si&#x2014;O&#x2014;Si group being described as
+        a two-electron, three-center (2e, 3c) bond. At the same time, the three oxygen
+        lone pairs mirror the three C&#x2014;H and B&#x2014;H bonds, respectively.
+        On the contrary, in the angular geometry the same O atoms form two Si&#x2014;O
+        bonds and its lone pairs mimic the geometry of the &#x2014;CH2&#x2014; group.
+        In this model the O atoms would play the same role as the formally present
+        O2&#x2212; anions in the `so-called' ionic solids, such as in the skeletons
+        of aluminate and silicate polyanions, thereby connecting molecular and solid-state
+        chemistry as formulated by the `fragment formalism' or the `molecular unit-cell
+        approach'. This unifying concept as well as the calculations we have carried
+        out fully agree and also give support to earlier ideas developed by Bragg
+        and Bent, among other authors. Bonding in the series of compounds P4, P4O6,
+        P4O10, N4(CH2)6 (hexamethylenetetramine) and (CH)4(CH2)6 (adamantane) is discussed
+        in the context of the isolobal model.</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://dx.doi.org/10.1107/S0108768113003765\">\n<title>The importance
+        of proper crystal-chemical and geometrical reasoning demonstrated using layered
+        single and double hydroxides</title>\r\n<link>http://scripts.iucr.org/cgi-bin/paper?so5065</link>\r\n<description>Atomistic
+        modelling techniques and Rietveld refinement of X-ray powder diffraction data
+        are widely used but often result in crystal structures that are not realistic,
+        presumably because the authors neglect to check the crystal-chemical plausibility
+        of their structure. The purpose of this paper is to reinforce the importance
+        and utility of proper crystal-chemical and geometrical reasoning in structural
+        studies. It is achieved by using such reasoning to generate new yet fundamental
+        information about layered double hydroxides (LDH), a large, much-studied family
+        of compounds. LDH phases are derived from layered single hydroxides by the
+        substitution of a fraction (x) of the divalent cations by trivalent. Equations
+        are derived that enable calculation of x from the a parameter of the unit
+        cell and vice versa, which can be expected to be of widespread utility as
+        a sanity test for extant and future structure determinations and computer
+        simulation studies. The phase at x = 0 is shown to be an &#x3B1; form of divalent
+        metal hydroxide rather than the &#x3B2; polymorph. Crystal-chemically sensible
+        model structures are provided for &#x3B2;-Zn(OH)2 and Ni- and Mg-based carbonate
+        LDH phases that have any trivalent cation and any value of x, including x
+        = 0 [i.e. for &#x3B1;-M(OH)2&#xB7;mH2O phases].</description>\r\n<dc:identifier>DOI
+        10.1107/S0108768113003765</dc:identifier>\r\n<dc:creator>Richardson</dc:creator>\n<dc:creator>I.G.</dc:creator>\n<dc:subject>atomistic
+        modelling techniques; X-ray powder diffraction; layered double hydroxides</dc:subject>\n<dc:date>2013-02-26</dc:date>\n<dc:source>Acta
+        Crystallographica Section B Structural Science, Vol. 69, No. 2 (2013) pp.
+        0 - 0</dc:source>\n<dc:publisher>International Union of Crystallography (IUCr)</dc:publisher>\n<prism:PublicationName>Acta
+        Crystallographica Section B Structural Science</prism:PublicationName>\n<prism:volume>69</prism:volume>\n<prism:number>2</prism:number>\n<prism:startingPage>0</prism:startingPage>\n<prism:endingPage>0</prism:endingPage>\n<prism:publicationDate>2013-02-26</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://scripts.iucr.org/cgi-bin/paper?so5065\"><b>The importance of
+        proper crystal-chemical and geometrical reasoning demonstrated using layered
+        single and double hydroxides</b></A><br />Richardson I.G.<br /><i>Acta Crystallographica
+        Section B Structural Science, Vol. 69, No. 2 (2013) pp. 0 - 0</i><br />Atomistic
+        modelling techniques and Rietveld refinement of X-ray powder diffraction data
+        are widely used but often result in crystal structures that are not realistic,
+        presumably because the authors neglect to check the crystal-chemical plausibility
+        of their structure. The purpose of this paper is to reinforce the importance
+        and utility of proper crystal-chemical and geometrical reasoning in structural
+        studies. It is achieved by using such reasoning to generate new yet fundamental
+        information about layered double hydroxides (LDH), a large, much-studied family
+        of compounds. LDH phases are derived from layered single hydroxides by the
+        substitution of a fraction (x) of the divalent cations by trivalent. Equations
+        are derived that enable calculation of x from the a parameter of the unit
+        cell and vice versa, which can be expected to be of widespread utility as
+        a sanity test for extant and future structure determinations and computer
+        simulation studies. The phase at x = 0 is shown to be an &#x3B1; form of divalent
+        metal hydroxide rather than the &#x3B2; polymorph. Crystal-chemically sensible
+        model structures are provided for &#x3B2;-Zn(OH)2 and Ni- and Mg-based carbonate
+        LDH phases that have any trivalent cation and any value of x, including x
+        = 0 [i.e. for &#x3B1;-M(OH)2&#xB7;mH2O phases].</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://dx.doi.org/10.1107/S0108768113001407\">\n<title>Crystal
+        structure and microstructure of synthetic hexagonal magnesium&#x2013;cobalt
+        cordierite solid solutions (Mg2&#x2212;2xCo2xAl4Si5O18)</title>\r\n<link>http://scripts.iucr.org/cgi-bin/paper?sn5113</link>\r\n<description>Co2+-containing
+        cordierite glasses, of nominal compositions (Mg1&#x2212;xCox)2Al4Si5O18 (with
+        x = 0, 0.2, 0.4, 0.6, 0.8 and 1), were prepared by melting colloidal gel precursors.
+        After isothermal heating at 1273&#x2005;K for around 28&#x2005;h, a single-phase
+        &#x3B1;-cordierite (high-temperature hexagonal polymorph) was synthesized.
+        All materials were investigated using X-ray powder diffraction and field-emission
+        scanning electron microscopy. The crystal structure and microstructure were
+        determined from X-ray diffraction patterns. Rietveld refinement confirmed
+        the formation of magnesium&#x2013;cobalt cordierite solid solutions. The unit-cell
+        volume increased with the increase of cobalt content in the starting glass.
+        The crystalline microstructure of the cordierites was interpreted using a
+        mathematical model of a polycrystalline material and characterized by prevalent
+        crystallite shape, volume-weighted crystallite size distribution and second-order
+        crystalline lattice-strain distribution. Hexagonal prismatic was the prevalent
+        shape of &#x3B1;-cordierite crystallites. Bimodality in the size distribution
+        was observed and interpreted as a consequence of two paths of the crystallization:
+        the nucleation from glass of &#x3BC;-cordierite, which transformed into &#x3B1;-cordierite
+        with annealing, or the nucleation of &#x3B1;-cordierite directly from glass
+        at high temperatures. Scanning electron microscopy images agreed well with
+        crystalline microstructure characteristics determined from the X-ray diffraction
+        line-profile analysis.</description>\r\n<dc:identifier>DOI 10.1107/S0108768113001407</dc:identifier>\r\n<dc:creator>Serrano</dc:creator>\n<dc:creator>F.J.</dc:creator>\n<dc:creator>Montoya,
+        \ N.</dc:creator>\n<dc:creator>Pizarro,  J.L.</dc:creator>\n<dc:creator>Revent&amp;&#35;xF3</dc:creator>\n<dc:creator>s,
+        \ M.M.</dc:creator>\n<dc:creator>Kojdecki,  M.A.</dc:creator>\n<dc:creator>Amig&amp;&#35;xF3</dc:creator>\n<dc:creator>,
+        \ J.M.</dc:creator>\n<dc:creator>Alarc&amp;&#35;xF3</dc:creator>\n<dc:creator>n,
+        \ J.</dc:creator>\n<dc:subject>cordierite; crystalline microstructure; volume-weighted
+        crystallite size distribution; second-order crystalline lattice-strain distribution;
+        crystallite shape; glass; Rietveld analysis; X-ray diffraction line-profile
+        analysis; powder X-ray diffraction patter</dc:subject>\n<dc:date>2013-02-26</dc:date>\n<dc:source>Acta
+        Crystallographica Section B Structural Science, Vol. 69, No. 2 (2013) pp.
+        0 - 0</dc:source>\n<dc:publisher>International Union of Crystallography (IUCr)</dc:publisher>\n<prism:PublicationName>Acta
+        Crystallographica Section B Structural Science</prism:PublicationName>\n<prism:volume>69</prism:volume>\n<prism:number>2</prism:number>\n<prism:startingPage>0</prism:startingPage>\n<prism:endingPage>0</prism:endingPage>\n<prism:publicationDate>2013-02-26</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://scripts.iucr.org/cgi-bin/paper?sn5113\"><b>Crystal structure
+        and microstructure of synthetic hexagonal magnesium&#x2013;cobalt cordierite
+        solid solutions (Mg2&#x2212;2xCo2xAl4Si5O18)</b></A><br />Serrano F.J.; Montoya,
+        \ N.; Pizarro,  J.L.; Revent&#xF3;s,  M.M.; Kojdecki,  M.A.; Amig&#xF3;,  J.M.;
+        Alarc&#xF3;n,  J.<br /><i>Acta Crystallographica Section B Structural Science,
+        Vol. 69, No. 2 (2013) pp. 0 - 0</i><br />Co2+-containing cordierite glasses,
+        of nominal compositions (Mg1&#x2212;xCox)2Al4Si5O18 (with x = 0, 0.2, 0.4,
+        0.6, 0.8 and 1), were prepared by melting colloidal gel precursors. After
+        isothermal heating at 1273&#x2005;K for around 28&#x2005;h, a single-phase
+        &#x3B1;-cordierite (high-temperature hexagonal polymorph) was synthesized.
+        All materials were investigated using X-ray powder diffraction and field-emission
+        scanning electron microscopy. The crystal structure and microstructure were
+        determined from X-ray diffraction patterns. Rietveld refinement confirmed
+        the formation of magnesium&#x2013;cobalt cordierite solid solutions. The unit-cell
+        volume increased with the increase of cobalt content in the starting glass.
+        The crystalline microstructure of the cordierites was interpreted using a
+        mathematical model of a polycrystalline material and characterized by prevalent
+        crystallite shape, volume-weighted crystallite size distribution and second-order
+        crystalline lattice-strain distribution. Hexagonal prismatic was the prevalent
+        shape of &#x3B1;-cordierite crystallites. Bimodality in the size distribution
+        was observed and interpreted as a consequence of two paths of the crystallization:
+        the nucleation from glass of &#x3BC;-cordierite, which transformed into &#x3B1;-cordierite
+        with annealing, or the nucleation of &#x3B1;-cordierite directly from glass
+        at high temperatures. Scanning electron microscopy images agreed well with
+        crystalline microstructure characteristics determined from the X-ray diffraction
+        line-profile analysis.</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://dx.doi.org/10.1107/S0108768113002826\">\n<title>Monophosphate
+        tungsten bronzes with pentagonal tunnels: reinvestigation through the peephole
+        of the superspace</title>\r\n<link>http://scripts.iucr.org/cgi-bin/paper?sn5120</link>\r\n<description>The
+        large family of monophosphate tungsten bronzes with pentagonal tunnels (MPTBp),
+        (PO2)4(WO3)2m with m ranging from 4 to 14, can be considered as modular structures
+        via a description with (PO2)2(WO3)m modules related together by a symmetry
+        operation and alternating along the z axis. Following the success of the application
+        of the superspace for the description of the lillianites homologous series,
+        a (3&#x2005;+&#x2005;1)-dimensional superspace model is efficiently defined
+        to unify the structural analysis of the MPTBp. The (3&#x2005;+&#x2005;1)-dimensional
+        model reveals hidden common characteristics such as the symmetry. An evaluation
+        of the model for six well known members of the series was carried out from
+        experimental data collected to this aim.</description>\r\n<dc:identifier>DOI
+        10.1107/S0108768113002826</dc:identifier>\r\n<dc:creator>P&amp;&#35;xE9</dc:creator>\n<dc:creator>rez</dc:creator>\n<dc:creator>O.</dc:creator>\n<dc:creator>Elcoro,
+        \ L.</dc:creator>\n<dc:creator>P&amp;&#35;xE9</dc:creator>\n<dc:creator>rez&#45;Mato,
+        \ J.M.</dc:creator>\n<dc:creator>Pet&amp;&#35;x159</dc:creator>\n<dc:creator>&amp;&#35;xED</dc:creator>\n<dc:creator>&amp;&#35;x10D</dc:creator>\n<dc:creator>ek,
+        \ V.</dc:creator>\n<dc:subject>superspace formalism; tungsten bronzes; pentagonal
+        tunnel homologous series; modular structures</dc:subject>\n<dc:date>2013-02-27</dc:date>\n<dc:source>Acta
+        Crystallographica Section B Structural Science, Vol. 69, No. 2 (2013) pp.
+        0 - 0</dc:source>\n<dc:publisher>International Union of Crystallography (IUCr)</dc:publisher>\n<prism:PublicationName>Acta
+        Crystallographica Section B Structural Science</prism:PublicationName>\n<prism:volume>69</prism:volume>\n<prism:number>2</prism:number>\n<prism:startingPage>0</prism:startingPage>\n<prism:endingPage>0</prism:endingPage>\n<prism:publicationDate>2013-02-27</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://scripts.iucr.org/cgi-bin/paper?sn5120\"><b>Monophosphate tungsten
+        bronzes with pentagonal tunnels: reinvestigation through the peephole of the
+        superspace</b></A><br />P&#xE9;rez O.; Elcoro,  L.; P&#xE9;rez-Mato,  J.M.;
+        Pet&#x159;&#xED;&#x10D;ek,  V.<br /><i>Acta Crystallographica Section B Structural
+        Science, Vol. 69, No. 2 (2013) pp. 0 - 0</i><br />The large family of monophosphate
+        tungsten bronzes with pentagonal tunnels (MPTBp), (PO2)4(WO3)2m with m ranging
+        from 4 to 14, can be considered as modular structures via a description with
+        (PO2)2(WO3)m modules related together by a symmetry operation and alternating
+        along the z axis. Following the success of the application of the superspace
+        for the description of the lillianites homologous series, a (3&#x2005;+&#x2005;1)-dimensional
+        superspace model is efficiently defined to unify the structural analysis of
+        the MPTBp. The (3&#x2005;+&#x2005;1)-dimensional model reveals hidden common
+        characteristics such as the symmetry. An evaluation of the model for six well
+        known members of the series was carried out from experimental data collected
+        to this aim.</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://dx.doi.org/10.1107/S0108768113002954\">\n<title>Investigation
+        of non-corrin cobalt(II)-containing sites in protein structures of the Protein
+        Data Bank</title>\r\n<link>http://scripts.iucr.org/cgi-bin/paper?gp5059</link>\r\n<description>Protein
+        X-ray structures with non-corrin cobalt(II)-containing sites, either natural
+        or substituting another native ion, were downloaded from the Protein Data
+        Bank and explored to (i) describe which amino acids are involved in their
+        first ligand shells and (ii) analyze cobalt(II)&#x2013;donor bond lengths
+        in comparison with previously reported target distances, CSD data and EXAFS
+        data. The set of amino acids involved in CoII binding is similar to that observed
+        for catalytic ZnII sites, i.e. with a large fraction of carboxylate O atoms
+        from aspartate and glutamate and aromatic N atoms from histidine. The computed
+        CoII&#x2013;donor bond lengths were found to depend strongly on structure
+        resolution, an artifact previously detected for other metal&#x2013;donor distances.
+        Small corrections are suggested for the target bond lengths to the aromatic
+        N atoms of histidines and the O atoms of water and hydroxide. The available
+        target distance for cysteine (Scys) is confirmed; those for backbone O and
+        other donors remain uncertain and should be handled with caution in refinement
+        and modeling protocols. Finally, a relationship between both CoII&#x2014;O
+        bond lengths in bidentate carboxylates is quantified.</description>\r\n<dc:identifier>DOI
+        10.1107/S0108768113002954</dc:identifier>\r\n<dc:creator>Abriata</dc:creator>\n<dc:creator>L.A.</dc:creator>\n<dc:subject>non-corrin
+        cobalt(II) sites; proteins; Protein Data Bank; amino acids; CoII&#x2013;donor
+        bond lengths</dc:subject>\n<dc:date>2013-02-26</dc:date>\n<dc:source>Acta
+        Crystallographica Section B Structural Science, Vol. 69, No. 2 (2013) pp.
+        0 - 0</dc:source>\n<dc:publisher>International Union of Crystallography (IUCr)</dc:publisher>\n<prism:PublicationName>Acta
+        Crystallographica Section B Structural Science</prism:PublicationName>\n<prism:volume>69</prism:volume>\n<prism:number>2</prism:number>\n<prism:startingPage>0</prism:startingPage>\n<prism:endingPage>0</prism:endingPage>\n<prism:publicationDate>2013-02-26</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://scripts.iucr.org/cgi-bin/paper?gp5059\"><b>Investigation of
+        non-corrin cobalt(II)-containing sites in protein structures of the Protein
+        Data Bank</b></A><br />Abriata L.A.<br /><i>Acta Crystallographica Section
+        B Structural Science, Vol. 69, No. 2 (2013) pp. 0 - 0</i><br />Protein X-ray
+        structures with non-corrin cobalt(II)-containing sites, either natural or
+        substituting another native ion, were downloaded from the Protein Data Bank
+        and explored to (i) describe which amino acids are involved in their first
+        ligand shells and (ii) analyze cobalt(II)&#x2013;donor bond lengths in comparison
+        with previously reported target distances, CSD data and EXAFS data. The set
+        of amino acids involved in CoII binding is similar to that observed for catalytic
+        ZnII sites, i.e. with a large fraction of carboxylate O atoms from aspartate
+        and glutamate and aromatic N atoms from histidine. The computed CoII&#x2013;donor
+        bond lengths were found to depend strongly on structure resolution, an artifact
+        previously detected for other metal&#x2013;donor distances. Small corrections
+        are suggested for the target bond lengths to the aromatic N atoms of histidines
+        and the O atoms of water and hydroxide. The available target distance for
+        cysteine (Scys) is confirmed; those for backbone O and other donors remain
+        uncertain and should be handled with caution in refinement and modeling protocols.
+        Finally, a relationship between both CoII&#x2014;O bond lengths in bidentate
+        carboxylates is quantified.</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://dx.doi.org/10.1107/S0108768113003121\">\n<title>Anisotropic
+        thermal expansion of Lan(Ti,Fe)nO3n + 2 (n = 5 and 6)</title>\r\n<link>http://scripts.iucr.org/cgi-bin/paper?bp5048</link>\r\n<description>Crystal
+        structures are reported for two perovskite-related compounds with nominal
+        compositions La5(Ti0.8Fe0.2)5O17 and La6(Ti0.67Fe0.33)6O20 at seven different
+        temperatures between 90 and 350&#x2005;K. For both compounds no evidence of
+        a structural phase transition in the investigated range of temperatures was
+        found. The thermal expansions are found to be anisotropic, with the largest
+        thermal expansion along a direction parallel to the slabs of these layered
+        compounds. The origin of this anisotropy is proposed to be a temperature dependence
+        of tilts of the octahedral (Ti,Fe)O6 groups. It is likely that the same mechanism
+        will determine similar anisotropic thermal behaviour of other compounds AnBnO3n&#x2005;+&#x2005;2.
+        The crystal structures have revealed partial chemical order of Ti/Fe over
+        the B sites, with iron concentrated towards the centers of the slabs. Local
+        charge compensation is proposed as the driving force for the chemical order,
+        where the highest-valent cation moves to sites near the oxygen-rich borders
+        of the slabs. A linear dependence on the site occupation fraction by Fe of
+        the computed valences leads to extrapolated valence values close to the formal
+        valence of Ti4+ for sites fully occupied by Ti, and of Fe3+ for sites fully
+        occupied by Fe. These results demonstrate the power of the bond-valence method,
+        and they show that refined oxygen positions are the weighted average of oxygen
+        positions in TiO6 and FeO6 octahedral groups.</description>\r\n<dc:identifier>DOI
+        10.1107/S0108768113003121</dc:identifier>\r\n<dc:creator>W&amp;&#35;xF6</dc:creator>\n<dc:creator>lfel</dc:creator>\n<dc:creator>A.</dc:creator>\n<dc:creator>Dorscht,
+        \ P.</dc:creator>\n<dc:creator>Lichtenberg,  F.</dc:creator>\n<dc:creator>van
+        Smaalen,  S.</dc:creator>\n<dc:subject>perovskites; thermal expansion; phase
+        transitions; order; bond-valence method</dc:subject>\n<dc:date>2013-02-26</dc:date>\n<dc:source>Acta
+        Crystallographica Section B Structural Science, Vol. 69, No. 2 (2013) pp.
+        0 - 0</dc:source>\n<dc:publisher>International Union of Crystallography (IUCr)</dc:publisher>\n<prism:PublicationName>Acta
+        Crystallographica Section B Structural Science</prism:PublicationName>\n<prism:volume>69</prism:volume>\n<prism:number>2</prism:number>\n<prism:startingPage>0</prism:startingPage>\n<prism:endingPage>0</prism:endingPage>\n<prism:publicationDate>2013-02-26</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://scripts.iucr.org/cgi-bin/paper?bp5048\"><b>Anisotropic thermal
+        expansion of Lan(Ti,Fe)nO3n + 2 (n = 5 and 6)</b></A><br />W&#xF6;lfel A.;
+        Dorscht,  P.; Lichtenberg,  F.; van Smaalen,  S.<br /><i>Acta Crystallographica
+        Section B Structural Science, Vol. 69, No. 2 (2013) pp. 0 - 0</i><br />Crystal
+        structures are reported for two perovskite-related compounds with nominal
+        compositions La5(Ti0.8Fe0.2)5O17 and La6(Ti0.67Fe0.33)6O20 at seven different
+        temperatures between 90 and 350&#x2005;K. For both compounds no evidence of
+        a structural phase transition in the investigated range of temperatures was
+        found. The thermal expansions are found to be anisotropic, with the largest
+        thermal expansion along a direction parallel to the slabs of these layered
+        compounds. The origin of this anisotropy is proposed to be a temperature dependence
+        of tilts of the octahedral (Ti,Fe)O6 groups. It is likely that the same mechanism
+        will determine similar anisotropic thermal behaviour of other compounds AnBnO3n&#x2005;+&#x2005;2.
+        The crystal structures have revealed partial chemical order of Ti/Fe over
+        the B sites, with iron concentrated towards the centers of the slabs. Local
+        charge compensation is proposed as the driving force for the chemical order,
+        where the highest-valent cation moves to sites near the oxygen-rich borders
+        of the slabs. A linear dependence on the site occupation fraction by Fe of
+        the computed valences leads to extrapolated valence values close to the formal
+        valence of Ti4+ for sites fully occupied by Ti, and of Fe3+ for sites fully
+        occupied by Fe. These results demonstrate the power of the bond-valence method,
+        and they show that refined oxygen positions are the weighted average of oxygen
+        positions in TiO6 and FeO6 octahedral groups.</p>]]></content:encoded>\r\n</item>\n\r\n\t\r\n
+        \ <rdf:Description rdf:ID=\"manifest\">\r\n    <mn:channels>\r\n      <rdf:Seq>\r\n
+        \       <rdf:li rdf:resource=\"http://www.journaltocs.hw.ac.uk/api/journals\"
+        />\r\n      </rdf:Seq>\r\n    </mn:channels>\r\n  </rdf:Description>\r\n\r\n</rdf:RDF>"
+    http_version: 
+  recorded_at: Mon, 11 Mar 2013 20:12:40 GMT
+recorded_with: VCR 2.3.0
