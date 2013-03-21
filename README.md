@@ -2,9 +2,9 @@
 
 [![Build Status](https://secure.travis-ci.org/jrochkind/bento_search.png)](http://travis-ci.org/jrochkind/bento_search)
 
-bento_search provides an abstraction/normalization layer for querying and 
+bento_search provides an abstraction/normalization layer for querying and
 displaying results from external search engines, in Ruby on Rails. Requires
-Rails3 and tested only under ruby 1.9.3. 
+Rails3 and tested only under ruby 1.9.3.
 
 ### Goals: To help you
 
@@ -12,19 +12,19 @@ Rails3 and tested only under ruby 1.9.3.
   results from a  third-party service. Solutions to idiosyncracies and
   undocumented workarounds are encoded in a shared codebase, which abstracts
   everything to a good, simple code API giving you building blocks to focus
-  on your needs, not the search service's problems. 
+  on your needs, not the search service's problems.
 * Let you switch out one search service for another in an already built
-  application with as little code rewriting as possible. **Avoid vendor lock-in**. 
+  application with as little code rewriting as possible. **Avoid vendor lock-in**.
 * Give you the harness to **write adapters for new search services**, without
   having to rewrite common general functionality, just focus on the interface
-  with the new API you want to support. 
+  with the new API you want to support.
 
 bento_search is focused on use cases for academic libraries, which is mainly
 evidenced by the search engine adapters currently included, and by the
 generalized domain models including fields that matter in our domain (issn,
-vol/issue/page, etc), and some targetted functionality (OpenURL generation). 
+vol/issue/page, etc), and some targetted functionality (OpenURL generation).
 But it ought to be useful for more general basic use
-cases too (we include a google site search adapter for instance). 
+cases too (we include a google site search adapter for instance).
 
 Adapters currently included in bento_search
 
@@ -36,6 +36,7 @@ Adapters currently included in bento_search
 * EBSCOHost 'traditional' API (requires license)
 * WorldCat Search (requires OCLC membership to get api key)
 * Google Site Search (requires sign-up for more than 100 searches/day)
+* JournalTOCs (limited support for fetching current articles by ISSN, free but requires registration)
 
 
 
@@ -47,21 +48,21 @@ search' functionality, but it does not and will never support merging results
 from multiple engines into one result set. It is meant to support displaying the
 first few results from multiple engines on one page, "bento box" style (as
 named by Tito Sierra@NCSU), as well as more expanded single-search-on-a-page
-uses. 
+uses.
 
-* bento_search provides abstract functionality for pagination, sorting, 
+* bento_search provides abstract functionality for pagination, sorting,
 and single-field-specified queries. Faceting, generalized limiting, and 'advanced'
 multi-field searches are not yet supported, but possibly will be built
-out in the future. 
+out in the future.
 
 Not all search engine adapters support all features.  Some engines offer
 engine-specific features, such as limiting. Search engine adapters can
 declare search fields and sort options with 'semantics', so you can for
 instance search or sort by 'title' across search engines without regard
-to internal engine-specific field names. 
+to internal engine-specific field names.
 
 bento_search is designed to allow code to be written agnostic of the search
-provider, so you can switch out the search provider. 
+provider, so you can switch out the search provider.
 
 See code-level api documentation for more details, especially at
 BentoSearch::SearchEngine. http://rubydoc.info/gems/bento_search/frames/
@@ -76,8 +77,8 @@ There is a short screencast showing that sample app in action here: http://scree
 
 When you instantiate an engine, you can provide configuration keys. There
 are a few standard keys (see BentoSearch::SearchEngine), and others that
-may be engine-specific. Some engine-specific keys (such as api auth keys) 
-may be required for certain engines. 
+may be engine-specific. Some engine-specific keys (such as api auth keys)
+may be required for certain engines.
 
 ~~~~ruby
     engine = BentoSearch::GoogleBooksEngine.new(:api_key => "my_gbs_api_key")
@@ -88,15 +89,15 @@ may be required for certain engines.
 [BentoSearch::Item](./app/models/bento_search/results.rb) objects, along with some meta-information about the
 search itself (pagination keys, etc).  BentoSearch::Results and Item fields
 are standardized accross engines. BentoSearch::Items provide semantic
-values (title, author, etc.), as available from the particular engine. 
+values (title, author, etc.), as available from the particular engine.
 
-To see which engines come bundled with BentoSearch, and any special 
+To see which engines come bundled with BentoSearch, and any special
 engine-specific instructions, look at BentoSearch source in [`./app/search_engines/bento_search`](./app/search_engines/bento_search)
 
 ### Register engines in global configuration
 
-It can be convenient to register an engine in global configuration, and is 
-required for certain functionality (like out-of-the-box AJAX loading). 
+It can be convenient to register an engine in global configuration, and is
+required for certain functionality (like out-of-the-box AJAX loading).
 
 In an initializer in your app, like say `./config/initializers/bento_search.rb`:
 
@@ -107,7 +108,7 @@ In an initializer in your app, like say `./config/initializers/bento_search.rb`:
        # any other configuration
     end
 ~~~~
-    
+
 Then you can refer to it, for instance in a controller, by the id you registered:
 
 ~~~~ruby
@@ -119,14 +120,14 @@ Then you can refer to it, for instance in a controller, by the id you registered
 You can of course write your own code to display a BentoSearch::Results object
 however you like. But BentoSearch comes with a helper method for displaying
 a list of BentoSearch::Results in a standard way, using the bento_search
-helper method. 
+helper method.
 
 ~~~~ruby
     <%= bento_search @results %>
 ~~~~
 
-See also the [Customizing Results Display wiki page](https://github.com/jrochkind/bento_search/wiki/Customizing-Results-Display). 
-    
+See also the [Customizing Results Display wiki page](https://github.com/jrochkind/bento_search/wiki/Customizing-Results-Display).
+
 ### Fielded searching.
 
 You can search by an internal engine-specific field name:
@@ -146,11 +147,11 @@ You can find out what fields a particular engine supports.
 
 ~~~~ruby
     google_books_engine.search_keys # => internal keys
-    google_books_engine.semantic_search_keys 
+    google_books_engine.semantic_search_keys
 ~~~~
 
 A helper method for generating an html select of search field options is
-available in `bento_field_hash_for`, check it out. 
+available in `bento_field_hash_for`, check it out.
 
 You can also provide all arguments in a single hash when it's convenient
 to do so:
@@ -161,8 +162,8 @@ to do so:
 
 Search fields that are not recognized (semantic or internal) will normally
 be ignored, but set `:unrecognized_search_field => :raise` in configuration
-or search arg to get an ArgumentError instead. 
-    
+or search arg to get an ArgumentError instead.
+
 ### Sorting
 
 An engine advertises what sort types it supports:
@@ -173,7 +174,7 @@ An engine advertises what sort types it supports:
 
 An array of sort identifiers, where possible
 chosen from a standard list of semantics. (See list in `./config/i18n/en.yml`,
-`bento_search.sort_keys`). 
+`bento_search.sort_keys`).
 
 ~~~~ruby
     google_books_engine.search("my query", :sort => "date_desc")
@@ -184,36 +185,36 @@ options_for_select:
 
 ~~~~ruby
     <%= options_for_select( bento_sort_hash_for(engine), params[:sort] ) %>
-~~~~    
-        
-    
+~~~~
+
+
 ### Pagination
 
-You can tell the search engine how many items you want per-page, and 
+You can tell the search engine how many items you want per-page, and
 use _either_ `:start` (0-based item offset) or `:page` (1-based page
-offset) keys to paginate into the results. 
+offset) keys to paginate into the results.
 
 ~~~~ruby
     results = google_books_engine.search("my query", :per_page => 20, :start => 40)
     results = google_books_engine.search("my query", :per_page => 20, :page => 2) # means same as above
 ~~~~
 
-An engine instance advertises it's maximum per-page values. 
+An engine instance advertises it's maximum per-page values.
 
 ~~~~ruby
     google_books_engine.max_per_page
 ~~~~
 
-bento_search fixes the default per_page at 10.     
-    
+bento_search fixes the default per_page at 10.
+
 For help creating your UI, you can ask a BentoSearch::Results for
 `results.pagination`, which returns a [BentoSearch::Results::Pagination](app/models/bento_search/results/pagination.rb)
 object which should be suitable for passing to [kaminari](https://github.com/amatsuda/kaminari)
-`paginate`, or else have convenient methods for roll your own pagination UI. 
+`paginate`, or else have convenient methods for roll your own pagination UI.
 Kaminari's paginate method:
 
 ~~~~ruby
-    <%= paginate results.pagination %> 
+    <%= paginate results.pagination %>
 ~~~~
 
 ### Concurrent searching
@@ -223,23 +224,23 @@ those searches concurrently. For instance, if GoogleBooks results take 2 second
 to come in, and Scopus results take 3 seconds -- you don't want to first wait
 the 2 second then wait the 3 seconds for a total of 5 -- you instead want
 to execute concurrently in seperate threads, so the total wait time is the slowest
-engine, not the sum of the engines. 
+engine, not the sum of the engines.
 
-You can write your own logic using ruby threads to do this, but 
+You can write your own logic using ruby threads to do this, but
 BentoSearch provides a multi-searching helper using [Celluloid](https://github.com/celluloid/celluloid)
 to help you do this easily. Say, in a controller:
 
 ~~~~ruby
     # constructor takes id's registered with BentoSearch.register_engine
     searcher = BentoSearch::MultiSearcher.new(:gbs, :scopus, :summon)
-    
+
     # Call 'search' with any parameters you would give to an_engine.search
     searcher.search("my query", :semantic_search_field => :author, :sort => "title")
-    
+
     # At this point, all searches are executing asynchronously in seperate threads.
     # To get the results, blocking until all complete:
     @results = searcher.results
-    
+
     # @results will be a hash, keyed by registered engine id, values
     # are BentoSearch::Results
 ~~~~
@@ -249,85 +250,85 @@ search execute in a seperate thread, so you can continue doing other work
 in the main thread (like search a local store of some kind outside of
 bento_search)
 
-You will need to add the 'celluloid' gem to your app to use this feature, 
+You will need to add the 'celluloid' gem to your app to use this feature,
 BentoSearch doesn't automatically include the celluloid dependency. Note
 that Celluloid uses multi-threading in such a way that you might need
 to turn Rails config.cache_classes=true even in development.
- 
 
-For more info, see [BentoSearch::MultiSearcher](./app/models/bento_search/multi_searcher.rb). 
+
+For more info, see [BentoSearch::MultiSearcher](./app/models/bento_search/multi_searcher.rb).
 
 ### Delayed results loading via AJAX (actually more like AJAHtml)
 
 BentoSearch provides some basic support for initially displaying a placeholder
-progress spinner, and having Javascript call back to get the actual results. 
+progress spinner, and having Javascript call back to get the actual results.
 
 It's not a panacea for pathologically slow search results, and can be tricky
 for results that need access controls. But it can be useful
 in some situations, both for automatic on-page-load ajax loading, and triggered
-ajax loading. 
+ajax loading.
 
 See the [wiki page](https://github.com/jrochkind/bento_search/wiki/AJAX-results-loading)
-for more info. 
+for more info.
 
-                     
-                     
+
+
 ### Item Decorators, and Links
 
 You can configure Decorators, in the form of plain old ruby modules, to be
 applied to BentoSearch::Items, on an engine-by-engine basis. These can modify,
-add, or remove Item data, as well as over-ride some presentational methods.  
+add, or remove Item data, as well as over-ride some presentational methods.
 
 One common use for these Decorators is changing, adding, or removing links
-associated with an item. For instance, to link to your local OpenURL 
+associated with an item. For instance, to link to your local OpenURL
 link resolver.
 
-BentoSearch::Items can have a main link associated with them (generally 
+BentoSearch::Items can have a main link associated with them (generally
 hyperlinked from title), as well as a list of additional links. Most engines
 do not provide additional links by default, custom local Decorators would
-be used to add them. See [wiki on display cusotmization](https://github.com/jrochkind/bento_search/wiki/Customizing-Results-Display) 
+be used to add them. See [wiki on display cusotmization](https://github.com/jrochkind/bento_search/wiki/Customizing-Results-Display)
 for more info on decorators, and [BentoSearch::Link](app/models/bento_search/link.rb)
-for fields. 
-     
+for fields.
+
 ### OpenURL and metadata
 
 Academic library uses often need openurl links from scholarly citations. One of
 the design goals of bento_search is to produce standardized normalized BentoSearch::ResultItem
-models, with sufficient semantics for translation to other formats. 
+models, with sufficient semantics for translation to other formats.
 
-See ResultItem#to_openurl_kev (string URL query encoding of OpenURL), and 
-ResultItem#to_openurl (a [ruby OpenURL gem](https://github.com/openurl/openurl) object). 
+See ResultItem#to_openurl_kev (string URL query encoding of OpenURL), and
+ResultItem#to_openurl (a [ruby OpenURL gem](https://github.com/openurl/openurl) object).
 
 Quality may vary, depending on how well the particular engine adapter captures semantics,
 especially the format/type of results (See bento_search's internal format/type vocabulary
 documented at ResultItem#format). As well as how well the #to_openurl routine
 handles all edge cases (OpenURL can be weird). As edge cases are discovered, they
-can be solved. 
+can be solved.
 
-See [`./app/item_decorators/bento_search/openurl_add_other_link.rb`](./app/item_decorators/bento_search/openurl_add_other_link.rb) 
+See [`./app/item_decorators/bento_search/openurl_add_other_link.rb`](./app/item_decorators/bento_search/openurl_add_other_link.rb)
 for an example of using item decorators to add a link to your openurl resover to an item when
 displayed.
 
 ### Exporting (eg as RIS) and get by unique_id
 
 A class is included to convert an individual BentoSearch::ResultItem to
-the RIS format, suitable for import into EndNote, Refworks, etc. 
+the RIS format, suitable for import into EndNote, Refworks, etc.
 
 ~~~ruby
-    ris_data = RISCreator.new( bento_item ).export 
+    ris_data = RISCreator.new( bento_item ).export
 ~~~
 
 Accomodating actual exports into the transactional flow of a web app can be
-tricky, and often requires use of the `result_item#unique_id` and 
+tricky, and often requires use of the `result_item#unique_id` and
 `engine.get( unique_id )` features. See the wiki on [exports and #unique_id](https://github.com/jrochkind/bento_search/wiki/Exports-and-the-get-by-unique_id-feature)
 
 ### Machine-readable serialization in Atom
 
 Translation of any BentoSearch::Results to an Atom response that is enhanced to
 include nearly all the elements of each BentoSearch::ResultItem, so can serves
-well as machine-readable api response in general, not just for Atom feed readers. 
+well as machine-readable api response in general, not just for Atom feed readers.
 
-You can use the  [`bento_search/atom_results`](./app/views/bento_search/atom_results.atom.builder) view template, perhaps 
+You can use the  [`bento_search/atom_results`](./app/views/bento_search/atom_results.atom.builder) view template, perhaps
 in your action method like so:
 
 ~~~ruby
@@ -335,76 +336,76 @@ in your action method like so:
 respond_to do |format|
    format.html # default view
    format.atom do
-      render( :template => "bento_search/atom_results",              
+      render( :template => "bento_search/atom_results",
               :locals   => {
                  :atom_results     => @results,
                  :feed_name        => "Acme results",
                  :feed_author_name => "MyCorp"
-              }      
-      ) 
-end   
+              }
+      )
+end
 ~~~
 
-There are additional details that might matter to you, for more info see the 
-[wiki page](https://github.com/jrochkind/bento_search/wiki/Machine-Readable-Serialization-With-Atom) 
+There are additional details that might matter to you, for more info see the
+[wiki page](https://github.com/jrochkind/bento_search/wiki/Machine-Readable-Serialization-With-Atom)
 
 ## Planned Features
 
 I am trying to keep BentoSearch as simple as it can be to conveniently meet
 actual use cases.  Trying to avoid premature over-engineering, and pave
-the cowpaths as needed. 
+the cowpaths as needed.
 
 Probably:
 
-* Support for display facets for engines that support such, as well as 
+* Support for display facets for engines that support such, as well as
   search with limits from controlled vocabulary (ie, selected facet, but
-  also may be supported by some engines that do not support facetting). 
+  also may be supported by some engines that do not support facetting).
 * Support for multi-field, multi-entry-box 'advanced search' UI's, in
-  a normalized cross-engine way. 
+  a normalized cross-engine way.
 
 Other needs or suggestions?
 
 ## Backwards compat
 
-We are going to try to be strictly backwards compatible with all post 1.0 
-releases that do not increment the major version number (semantic versioning). 
+We are going to try to be strictly backwards compatible with all post 1.0
+releases that do not increment the major version number (semantic versioning).
 
 As a general rule, we're going to let our tests enforce this -- if a test has
 to be changed to pass with new code, that's a very strong sign that it is
-not a backwards-compat change, and you should think _very_ carefully to 
+not a backwards-compat change, and you should think _very_ carefully to
 be sure it is an exception to this rule before changing any existing tests
-for new functionality. 
+for new functionality.
 
 ## Developing
 
 BentoSearch is fairly well covered by automated tests. We simply use Test::Unit.
-Run tests with `rake test`. 
+Run tests with `rake test`.
 
 The testing environment was generated with `rails plugin new`, and includes
-a dummy app used when testing at `./test/dummy`. 
+a dummy app used when testing at `./test/dummy`.
 
 For integration tests against live external search API's, we use the awesome
-[VCR](https://github.com/myronmarston/vcr) gem to cache responses. 
-To write your own Test::Unit tests using VCR, take note of the 
-`test_with_cassette` method provided in `./test/support/test_with_cassette.rb`. 
+[VCR](https://github.com/myronmarston/vcr) gem to cache responses.
+To write your own Test::Unit tests using VCR, take note of the
+`test_with_cassette` method provided in `./test/support/test_with_cassette.rb`.
 
 Also note use of VCR.filter_sensitive_data to make sure your API keys
 do not get saved in cached response in the repo, while still allowing
 tests to be run against cached responses even for engines that require
-auth. 
+auth.
 
-To re-generate cached responses, delete the relevant files in 
+To re-generate cached responses, delete the relevant files in
 `./test/vcr_cassettes` and re-run tests. You may have to set an ENV
 variable with your own API keys to re-run tests without cached response
-like this. 
+like this.
 
 Also note `BentoSearch::MockEngine`, a simple mock/dummy SearchEngine
 implementation that can be used in other tests, including in client
-software where convenient. 
+software where convenient.
 
 Pull requests welcome.  Pull requests with additional search engine implementations
 welcome. See more info on writing a BentoSearch::SearchEngine in the inline
-docs in that file. 
+docs in that file.
 
 
 
