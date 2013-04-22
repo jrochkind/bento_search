@@ -20,10 +20,15 @@
 
 <% bento_decorate(item) do |item| %>
     
-  <div class="bento_item">
+  <%# for debugging purposes, we'll include the vendor-specific unique_id, if we have
+      one, in a data-unique-id attribute. %>
+
+  <div class="bento_item" data-unique-id="<%= item.unique_id %>">
     <%= render :partial => "bento_search/item_title", :object => item, :as => 'item', :locals => {:index => bento_item_counter(local_assigns[:item_counter], local_assigns[:results]) } %>
       
-    <div class="bento_item_body">
+
+    <div class="bento_item_body">      
+
       
       
       <% if item.any_present?(:authors, :display_date) %>
