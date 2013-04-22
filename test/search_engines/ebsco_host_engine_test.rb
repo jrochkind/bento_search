@@ -317,6 +317,17 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     end
   end
 
+  test_with_cassette("RILM record with ISSN in <jid> element", :ebscohost) do
+    engine = BentoSearch::EbscoHostEngine.new( @config.merge(:databases => ["rih"]) )
+    results = engine.search('"Schumann\'s Dichterliebe and early Romantic poetics: Fragmentation of desire"')
+
+    assert_present results
+
+    first = results.first
+
+    assert_present first.issn
+  end
+
 
 
 end

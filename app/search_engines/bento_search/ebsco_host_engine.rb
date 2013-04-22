@@ -129,7 +129,7 @@ class BentoSearch::EbscoHostEngine
 
   def search_implementation(args)
     url = query_url(args)
-
+  
     results = BentoSearch::Results.new
     xml, response, exception = nil, nil, nil
 
@@ -416,7 +416,8 @@ class BentoSearch::EbscoHostEngine
 
     item.link           = get_link(xml_rec)
 
-    item.issn           = text_if_present info.at_xpath("./jinfo/issn")
+    # EBSCO is somewhat inconsistent with where it puts the ISSN
+    item.issn           = text_if_present(info.at_xpath("./jinfo/issn")) || text_if_present(info.at_xpath("./jinfo/jid[@type='issn']"))
 
     # Dealing with titles is a bit crazy, while articles usually have atitles and
     # jtitles, sometimes they have a btitle instead. A book will usually have

@@ -1,0 +1,210 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://eit.ebscohost.com/Services/SearchService.asmx/Search?db=rih&numrec=10&prof=DUMMY_PROFILE&pwd=DUMMY_PWD&query=%22Schumann's%20Dichterliebe%20and%20early%20Romantic%20poetics:%20Fragmentation%20of%20desire%22&sort=relevance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        cHJpdmF0ZQ==
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        dGV4dC94bWw=
+      !binary "U2VydmVy":
+      - !binary |-
+        TWljcm9zb2Z0LUlJUy83LjU=
+      !binary "WC1Bc3BuZXQtVmVyc2lvbg==":
+      - !binary |-
+        NC4wLjMwMzE5
+      !binary "WC1Qb3dlcmVkLUJ5":
+      - !binary |-
+        QVNQLk5FVA==
+      !binary "RGF0ZQ==":
+      - !binary |-
+        TW9uLCAyMiBBcHIgMjAxMyAxNzoxMTowMCBHTVQ=
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        MTM2Nzc=
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"?>\r\n<searchResponse xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <Hits xmlns=\"http://epnet.com/webservices/SearchService/Response/2007/07/\">4</Hits>\r\n
+        \ <Statistics xmlns=\"http://epnet.com/webservices/SearchService/Response/2007/07/\">\r\n
+        \   <Statistic>\r\n      <Database>rih</Database>\r\n      <Hits>4</Hits>\r\n
+        \   </Statistic>\r\n  </Statistics>\r\n  <SearchResults xmlns=\"http://epnet.com/webservices/SearchService/Response/2007/07/\">\r\n
+        \   <records xmlns=\"\">\r\n      <rec recordID=\"1\">\r\n        <pdfLink
+        />\r\n        <plink>http://search.ebscohost.com/login.aspx?direct=true&amp;db=rih&amp;AN=2002-08630-3&amp;site=ehost-live&amp;scope=site</plink>\r\n
+        \       <header shortDbName=\"rih\" uiTerm=\"2002-08630-3\" longDbName=\"RILM
+        \ Abstracts of Music Literature\" uiTag=\"AN\">\r\n          <controlInfo>\r\n
+        \           <bkinfo>\r\n              <aug />\r\n            </bkinfo>\r\n
+        \           <revinfo>\r\n              <rtl>Schumann's <i>Dichterliebe</i>
+        and early Romantic poetics: Fragmentation of desire</rtl>\r\n              <aug>\r\n
+        \               <au type=\"reviewer\">Malin, Yonatan</au>\r\n              </aug>\r\n
+        \           </revinfo>\r\n            <dissinfo />\r\n            <jinfo>\r\n
+        \             <jid type=\"issn\">01956167</jid>\r\n              <jtl>Music
+        theory spectrum: The journal of the Society for Music Theory</jtl>\r\n              <isbn
+        type=\"print\">01956167</isbn>\r\n            </jinfo>\r\n            <pubinfo>\r\n
+        \             <dt year=\"2006\" month=\"09\" day=\"01\" />\r\n              <vid>28</vid>\r\n
+        \             <iid>2</iid>\r\n              <place>United States</place>\r\n
+        \           </pubinfo>\r\n            <artinfo>\r\n              <ui>2002-08630-3</ui>\r\n
+        \             <ppf>299</ppf>\r\n              <extent>299-310</extent>\r\n
+        \             <tig>\r\n                <atl>Schumann's <i>Dichterliebe</i>
+        and early Romantic poetics: Fragmentation of desire</atl>\r\n              </tig>\r\n
+        \             <aug>\r\n                <au>Malin, Yonatan</au>\r\n              </aug>\r\n
+        \             <sug>\r\n                <subj type=\"unclass\">Romantic era
+        -- aesthetics -- lied -- fragmentation</subj>\r\n                <subj type=\"unclass\">lied
+        -- Romantic era -- aesthetics -- fragmentation</subj>\r\n                <subj
+        type=\"unclass\">poetry -- Romantic era -- fragmentation</subj>\r\n                <subj
+        type=\"unclass\">aesthetics -- Romantic era -- lied -- fragmentation</subj>\r\n
+        \               <subj type=\"unclass\">Schumann, Robert -- works -- Dichterliebe,
+        op. 48 -- fragmentation</subj>\r\n                <subj type=\"unclass\">text
+        setting -- Schumann, Robert -- Dichterliebe, op. 48 -- fragmentation</subj>\r\n
+        \               <subj type=\"unclass\">Heine, Heinrich -- writings -- Lyrisches
+        Intermezzo -- set by Schumann</subj>\r\n                <subj type=\"unclass\">poetry
+        -- Heine, H. -- Lyrisches Intermezzo -- set by Schumann</subj>\r\n                <subj
+        type=\"unclass\">accompaniment -- Schumann, Robert -- Dichterliebe, op. 48
+        -- relation to voice</subj>\r\n                <subj type=\"major\">Music
+        and other arts</subj>\r\n                <subj type=\"major\">Western art
+        music</subj>\r\n              </sug>\r\n              <su>Romantic era</su>\r\n
+        \             <su>lied</su>\r\n              <su>poetry</su>\r\n              <su>aesthetics</su>\r\n
+        \             <su>Schumann, Robert</su>\r\n              <su>text setting</su>\r\n
+        \             <su>Heine, Heinrich</su>\r\n              <su>poetry</su>\r\n
+        \             <su>accompaniment</su>\r\n              <ab />\r\n              <doctype>Review
+        of book</doctype>\r\n            </artinfo>\r\n            <language>English</language>\r\n
+        \           <copyright />\r\n            <holdings islocal=\"N\" />\r\n          </controlInfo>\r\n
+        \       </header>\r\n      </rec>\r\n      <rec recordID=\"2\">\r\n        <pdfLink
+        />\r\n        <plink>http://search.ebscohost.com/login.aspx?direct=true&amp;db=rih&amp;AN=2002-08630-1&amp;site=ehost-live&amp;scope=site</plink>\r\n
+        \       <header shortDbName=\"rih\" uiTerm=\"2002-08630-1\" longDbName=\"RILM
+        \ Abstracts of Music Literature\" uiTag=\"AN\">\r\n          <controlInfo>\r\n
+        \           <bkinfo>\r\n              <aug />\r\n            </bkinfo>\r\n
+        \           <revinfo>\r\n              <rtl>Schumann's <i>Dichterliebe</i>
+        and early Romantic poetics: Fragmentation of desire</rtl>\r\n              <aug>\r\n
+        \               <au type=\"reviewer\">Brown, Julie Hedges</au>\r\n              </aug>\r\n
+        \           </revinfo>\r\n            <dissinfo />\r\n            <jinfo>\r\n
+        \             <jid type=\"issn\">01482076</jid>\r\n              <jtl>19th-century
+        music</jtl>\r\n              <isbn type=\"print\">01482076</isbn>\r\n            </jinfo>\r\n
+        \           <pubinfo>\r\n              <dt year=\"2005\" month=\"03\" day=\"01\"
+        />\r\n              <vid>28</vid>\r\n              <iid>3</iid>\r\n              <place>United
+        States</place>\r\n            </pubinfo>\r\n            <artinfo>\r\n              <ui>2002-08630-1</ui>\r\n
+        \             <ppf>276</ppf>\r\n              <extent>276-295</extent>\r\n
+        \             <tig>\r\n                <atl>Schumann's <i>Dichterliebe</i>
+        and early Romantic poetics: Fragmentation of desire</atl>\r\n              </tig>\r\n
+        \             <aug>\r\n                <au>Brown, Julie Hedges</au>\r\n              </aug>\r\n
+        \             <sug>\r\n                <subj type=\"unclass\">Romantic era
+        -- aesthetics -- lied -- fragmentation</subj>\r\n                <subj type=\"unclass\">lied
+        -- Romantic era -- aesthetics -- fragmentation</subj>\r\n                <subj
+        type=\"unclass\">poetry -- Romantic era -- fragmentation</subj>\r\n                <subj
+        type=\"unclass\">aesthetics -- Romantic era -- lied -- fragmentation</subj>\r\n
+        \               <subj type=\"unclass\">Schumann, Robert -- works -- Dichterliebe,
+        op. 48 -- fragmentation</subj>\r\n                <subj type=\"unclass\">text
+        setting -- Schumann, Robert -- Dichterliebe, op. 48 -- fragmentation</subj>\r\n
+        \               <subj type=\"unclass\">Heine, Heinrich -- writings -- Lyrisches
+        Intermezzo -- set by Schumann</subj>\r\n                <subj type=\"unclass\">poetry
+        -- Heine, H. -- Lyrisches Intermezzo -- set by Schumann</subj>\r\n                <subj
+        type=\"unclass\">accompaniment -- Schumann, Robert -- Dichterliebe, op. 48
+        -- relation to voice</subj>\r\n                <subj type=\"major\">Music
+        and other arts</subj>\r\n                <subj type=\"major\">Western art
+        music</subj>\r\n              </sug>\r\n              <su>Romantic era</su>\r\n
+        \             <su>lied</su>\r\n              <su>poetry</su>\r\n              <su>aesthetics</su>\r\n
+        \             <su>Schumann, Robert</su>\r\n              <su>text setting</su>\r\n
+        \             <su>Heine, Heinrich</su>\r\n              <su>poetry</su>\r\n
+        \             <su>accompaniment</su>\r\n              <ab />\r\n              <doctype>Review
+        of book</doctype>\r\n            </artinfo>\r\n            <language>English</language>\r\n
+        \           <copyright />\r\n            <holdings islocal=\"N\" />\r\n          </controlInfo>\r\n
+        \       </header>\r\n      </rec>\r\n      <rec recordID=\"3\">\r\n        <pdfLink
+        />\r\n        <plink>http://search.ebscohost.com/login.aspx?direct=true&amp;db=rih&amp;AN=2002-08630-2&amp;site=ehost-live&amp;scope=site</plink>\r\n
+        \       <header shortDbName=\"rih\" uiTerm=\"2002-08630-2\" longDbName=\"RILM
+        \ Abstracts of Music Literature\" uiTag=\"AN\">\r\n          <controlInfo>\r\n
+        \           <bkinfo>\r\n              <aug />\r\n            </bkinfo>\r\n
+        \           <revinfo>\r\n              <rtl>Schumann's <i>Dichterliebe</i>
+        and early Romantic poetics: Fragmentation of desire</rtl>\r\n              <aug>\r\n
+        \               <au type=\"reviewer\">Fodale, Angela</au>\r\n              </aug>\r\n
+        \           </revinfo>\r\n            <dissinfo />\r\n            <jinfo>\r\n
+        \             <jtl>Drammaturgia musicale e altri studi</jtl>\r\n            </jinfo>\r\n
+        \           <pubinfo>\r\n              <dt year=\"2004\" month=\"01\" day=\"01\"
+        />\r\n              <iid>2</iid>\r\n              <place>Italy</place>\r\n
+        \           </pubinfo>\r\n            <artinfo>\r\n              <ui>2002-08630-2</ui>\r\n
+        \             <ppf>133</ppf>\r\n              <extent>133-136</extent>\r\n
+        \             <tig>\r\n                <atl>Schumann's <i>Dichterliebe</i>
+        and early Romantic poetics: Fragmentation of desire</atl>\r\n              </tig>\r\n
+        \             <aug>\r\n                <au>Fodale, Angela</au>\r\n              </aug>\r\n
+        \             <sug>\r\n                <subj type=\"unclass\">Romantic era
+        -- aesthetics -- lied -- fragmentation</subj>\r\n                <subj type=\"unclass\">lied
+        -- Romantic era -- aesthetics -- fragmentation</subj>\r\n                <subj
+        type=\"unclass\">poetry -- Romantic era -- fragmentation</subj>\r\n                <subj
+        type=\"unclass\">aesthetics -- Romantic era -- lied -- fragmentation</subj>\r\n
+        \               <subj type=\"unclass\">Schumann, Robert -- works -- Dichterliebe,
+        op. 48 -- fragmentation</subj>\r\n                <subj type=\"unclass\">text
+        setting -- Schumann, Robert -- Dichterliebe, op. 48 -- fragmentation</subj>\r\n
+        \               <subj type=\"unclass\">Heine, Heinrich -- writings -- Lyrisches
+        Intermezzo -- set by Schumann</subj>\r\n                <subj type=\"unclass\">poetry
+        -- Heine, H. -- Lyrisches Intermezzo -- set by Schumann</subj>\r\n                <subj
+        type=\"unclass\">accompaniment -- Schumann, Robert -- Dichterliebe, op. 48
+        -- relation to voice</subj>\r\n                <subj type=\"major\">Music
+        and other arts</subj>\r\n                <subj type=\"major\">Western art
+        music</subj>\r\n              </sug>\r\n              <su>Romantic era</su>\r\n
+        \             <su>lied</su>\r\n              <su>poetry</su>\r\n              <su>aesthetics</su>\r\n
+        \             <su>Schumann, Robert</su>\r\n              <su>text setting</su>\r\n
+        \             <su>Heine, Heinrich</su>\r\n              <su>poetry</su>\r\n
+        \             <su>accompaniment</su>\r\n              <ab />\r\n              <doctype>Review
+        of book</doctype>\r\n            </artinfo>\r\n            <language>English</language>\r\n
+        \           <copyright />\r\n            <holdings islocal=\"N\" />\r\n          </controlInfo>\r\n
+        \       </header>\r\n      </rec>\r\n      <rec recordID=\"4\">\r\n        <pdfLink
+        />\r\n        <plink>http://search.ebscohost.com/login.aspx?direct=true&amp;db=rih&amp;AN=2002-08630&amp;site=ehost-live&amp;scope=site</plink>\r\n
+        \       <header shortDbName=\"rih\" uiTerm=\"2002-08630\" longDbName=\"RILM
+        \ Abstracts of Music Literature\" uiTag=\"AN\">\r\n          <controlInfo>\r\n
+        \           <bkinfo>\r\n              <btl>Schumann's <i>Dichterliebe</i>
+        and early Romantic poetics: Fragmentation of desire</btl>\r\n              <aug>\r\n
+        \               <au>Perrey, Beate</au>\r\n              </aug>\r\n              <sertl>Cambridge
+        studies in music theory and analysis</sertl>\r\n              <isbn type=\"print\">0521814790</isbn>\r\n
+        \           </bkinfo>\r\n            <revinfo />\r\n            <dissinfo
+        />\r\n            <jinfo />\r\n            <pubinfo>\r\n              <dt
+        year=\"2002\" month=\"01\" day=\"01\" />\r\n              <pub>Cambridge University
+        Press</pub>\r\n              <place>Cambridge</place>\r\n              <place>England</place>\r\n
+        \             <place>United States</place>\r\n            </pubinfo>\r\n            <artinfo>\r\n
+        \             <ui>2002-08630</ui>\r\n              <tig>\r\n                <atl>Schumann's
+        <i>Dichterliebe</i> and early Romantic poetics: Fragmentation of desire</atl>\r\n
+        \             </tig>\r\n              <aug>\r\n                <au>Perrey,
+        Beate</au>\r\n              </aug>\r\n              <sug>\r\n                <subj
+        type=\"unclass\">Romantic era -- aesthetics -- lied -- fragmentation</subj>\r\n
+        \               <subj type=\"unclass\">lied -- Romantic era -- aesthetics
+        -- fragmentation</subj>\r\n                <subj type=\"unclass\">poetry --
+        Romantic era -- fragmentation</subj>\r\n                <subj type=\"unclass\">aesthetics
+        -- Romantic era -- lied -- fragmentation</subj>\r\n                <subj type=\"unclass\">Schumann,
+        Robert -- works -- Dichterliebe, op. 48 -- fragmentation</subj>\r\n                <subj
+        type=\"unclass\">text setting -- Schumann, Robert -- Dichterliebe, op. 48
+        -- fragmentation</subj>\r\n                <subj type=\"unclass\">Heine, Heinrich
+        -- writings -- Lyrisches Intermezzo -- set by Schumann</subj>\r\n                <subj
+        type=\"unclass\">poetry -- Heine, H. -- Lyrisches Intermezzo -- set by Schumann</subj>\r\n
+        \               <subj type=\"unclass\">accompaniment -- Schumann, Robert --
+        Dichterliebe, op. 48 -- relation to voice</subj>\r\n                <subj
+        type=\"major\">Music and other arts</subj>\r\n                <subj type=\"major\">Western
+        art music</subj>\r\n              </sug>\r\n              <su>Romantic era</su>\r\n
+        \             <su>lied</su>\r\n              <su>poetry</su>\r\n              <su>aesthetics</su>\r\n
+        \             <su>Schumann, Robert</su>\r\n              <su>text setting</su>\r\n
+        \             <su>Heine, Heinrich</su>\r\n              <su>poetry</su>\r\n
+        \             <su>accompaniment</su>\r\n              <ab>Offers a theory
+        of the Romantic lied by reevaluating Schumann's <i>Dichterliebe</i> of 1840
+        and investigating the poetics of early Romanticism in order to understand
+        the mysterious magnetism and singular imaginative energy that imbues Schumann's
+        musical language. The Romantics rejected the ideal of a coherent and organic
+        whole, realizing an aesthetic of fragmentation. Close readings of many songs
+        from <i>Dichterliebe</i> show the singer's intense involvement with the piano's
+        voice, suggesting a split self and the presence of the Other. Schumann becomes
+        the second poet of the poem in this musical rendition of Heine's <i>Lyrisches
+        Intermezzo</i>.</ab>\r\n              <pubtype>Book</pubtype>\r\n              <doctype>Book:
+        monograph</doctype>\r\n            </artinfo>\r\n            <language>English</language>\r\n
+        \           <copyright />\r\n            <holdings islocal=\"N\" />\r\n          </controlInfo>\r\n
+        \       </header>\r\n      </rec>\r\n    </records>\r\n  </SearchResults>\r\n</searchResponse>"
+    http_version: 
+  recorded_at: Mon, 22 Apr 2013 17:10:59 GMT
+recorded_with: VCR 2.4.0
