@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bento_search (1.0.2)
+    bento_search (1.0.3)
       confstruct (>= 0.2.3, < 1.0)
       htmlentities
       httpclient (>= 2.2.5, < 3.0.0)
@@ -76,10 +76,10 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     marc (0.5.0)
-    mime-types (1.21)
+    mime-types (1.23)
     multi_json (1.5.0)
-    nokogiri (1.5.6)
-    openurl (0.4.2)
+    nokogiri (1.5.9)
+    openurl (0.4.3)
       ensure_valid_encoding
       marc
     polyglot (0.3.3)
@@ -122,7 +122,7 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.36)
+    tzinfo (0.3.37)
     vcr (2.4.0)
     webmock (1.9.0)
       addressable (>= 2.2.7)
