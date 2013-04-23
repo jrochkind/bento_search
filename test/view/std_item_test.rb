@@ -35,6 +35,16 @@ class StdItemTest < ActionView::TestCase
     
     assert_select ".bento_index", :text => "15."
   end
+
+  def test_has_html_id_when_index_and_engine_id
+    results = BentoSearch::Results.new
+    results.start = 9
+    results << (item = BentoSearch::ResultItem.new(:title => "Some Title", :engine_id => "some_engine"))
+        
+    render :partial => "bento_search/std_item", :object => item, :as => "item", :locals => { :results => results, :item_counter => 5}
+    
+    assert_select("#some_engine_15")
+  end
   
   def test_complete_article_item
     hash = {}

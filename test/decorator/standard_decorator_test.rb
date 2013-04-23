@@ -71,6 +71,25 @@ class StandardDecoratorTest < ActionView::TestCase
     item = decorator(:publication_date => d, :volume => "101", :issue => "2")
     assert_equal I18n.l(d, :format => "%Y"), item.display_date
   end
+
+  test "html_id with no engine_id" do
+    item = decorator(:title => "foo")
+    assert_nil item.html_id(nil, nil)
+
+    assert_nil item.html_id("prefix", nil)
+    assert_nil item.html_id(nil, 3)
+
+    assert_equal "prefix_3", item.html_id("prefix", 3)
+  end
+
+  test "html_id with engine_id" do
+    item = decorator(:engine_id => "my_engine")
+
+    assert_equal "my_engine_4", item.html_id(nil, 4)
+
+    assert_equal "override_5", item.html_id("override", 5)
+  end
+
     
   
 end

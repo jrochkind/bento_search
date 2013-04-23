@@ -195,6 +195,20 @@ module BentoSearch
       end
     end
 
+    # Can be used as an id attribute for anchor destination in HTML. 
+    # Will return "#{prefix}_#{index}" -- if prefix is missing, 
+    # will use #engine_id if present. If both are missing, returns nil. 
+    # if index missing, returns nil. 
+    def html_id(prefix, index)
+      prefix = prefix || self.engine_id
+      prefix, index = prefix.to_s, index.to_s      
+
+      return nil if index.empty?
+      return nil if prefix.empty?
+
+      return "#{prefix}_#{index}"
+    end
+
     
     ###################
     # turn into a representative OpenURL
