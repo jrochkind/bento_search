@@ -16,6 +16,14 @@ class PrimoEngineTest < ActiveSupport::TestCase
   def setup
     @engine = BentoSearch::PrimoEngine.new(:host_port => @@host_port, :institution => @@institution)
   end
+
+  test("always includes indx") do
+    # primo sometimes requires an indx, of for instance 1
+    url = @engine.construct_query(:query => "cancer")
+    query_params = CGI.parse( URI.parse(url).query )
+
+    assert_equal ["1"], query_params["indx"]
+  end
   
   test("sort params") do
     url = @engine.construct_query(:query => "cancer", :sort => "title_asc")    
