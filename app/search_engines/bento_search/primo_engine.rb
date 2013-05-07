@@ -240,15 +240,13 @@ class BentoSearch::PrimoEngine
     url = "http://#{configuration.host_port}/PrimoWebServices/xservice/search/brief"
     url += "?institution=#{configuration.institution}"
     url += "&loc=#{CGI.escape configuration.loc}"
-    
+
     url += "&lang=#{CGI.escape configuration.lang}"
     
     url += "&bulkSize=#{args[:per_page]}" if args[:per_page]
     # primo indx is 1-based record index, our :start is 0-based.
-    url += "&indx=#{args[:start] + 1}" if args[:start]
-    
+    url += "&indx=#{args[:start].to_i + 1}"
 
-    
     if (defn = self.sort_definitions[ args[:sort] ]) &&
         (value = defn[:implementation])
       
@@ -274,8 +272,8 @@ class BentoSearch::PrimoEngine
         url += "&#{CGI.escape key.to_s}=#{CGI.escape v.to_s}"
       end
     end
-    
-    
+
+
     return url
   end
   
