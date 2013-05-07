@@ -129,6 +129,8 @@ class BentoSearch::EbscoHostEngine
 
   def search_implementation(args)
     url = query_url(args)
+
+    Rails.logger.debug("EbscoHostEngine Search for: #{url}")
   
     results = BentoSearch::Results.new
     xml, response, exception = nil, nil, nil
