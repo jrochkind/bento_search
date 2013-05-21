@@ -843,7 +843,7 @@ http_interactions:
   recorded_at: Tue, 22 May 2012 16:03:54 GMT
 - request:
     method: get
-    uri: http://jhsearch.library.jhu.edu/metasearch/results?amp;resultSet=004191&group=2012-05-22-000200
+    uri: http://jhsearch.library.jhu.edu/metasearch/results?amp%3BresultSet=004191&group=2012-05-22-000200
     body:
       encoding: US-ASCII
       string: ''
@@ -1813,7 +1813,7 @@ http_interactions:
   recorded_at: Tue, 22 May 2012 16:45:25 GMT
 - request:
     method: get
-    uri: http://jhsearch.library.jhu.edu/metasearch/results?amp;format=xerxes&amp;resultSet=004877&group=2012-05-22-000249
+    uri: http://jhsearch.library.jhu.edu/metasearch/results?amp%3Bformat=xerxes&amp%3BresultSet=004877&group=2012-05-22-000249
     body:
       encoding: US-ASCII
       string: ''

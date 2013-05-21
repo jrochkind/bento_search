@@ -1760,7 +1760,7 @@ http_interactions:
   recorded_at: Mon, 06 Aug 2012 23:08:26 GMT
 - request:
     method: get
-    uri: http://eds-api.ebscohost.com/edsapi/rest/endsession?sessiontoken=26cf851d-9a36-435b-a50a-14a5aea15338.KErj2NrKZC8UxoZu2SfB28G2/w9Gjg+wmkWnBdUv3As=
+    uri: http://eds-api.ebscohost.com/edsapi/rest/endsession?sessiontoken=26cf851d-9a36-435b-a50a-14a5aea15338.KErj2NrKZC8UxoZu2SfB28G2/w9Gjg%2BwmkWnBdUv3As=
     body:
       encoding: US-ASCII
       string: ''
