@@ -166,9 +166,10 @@ class SummonEngineTest < ActiveSupport::TestCase
     results = @engine.search("cancer")
     
     first = results.first
-    
+
     assert_include first.title, '<b class="bento_search_highlight">' 
-    
+    assert_include first.title, '</b>' 
+
     assert first.title.html_safe?, "title is HTML safe"        
   end
   
