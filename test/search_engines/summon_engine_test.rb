@@ -131,6 +131,25 @@ class SummonEngineTest < ActiveSupport::TestCase
     
     assert_include query_params['s.hl'], "false"
   end
+
+
+  def test_construct_summon_params_on_search
+    engine = BentoSearch::SummonEngine.new('access_id' => @@access_id, 
+      'secret_key' => @@secret_key
+    )
+
+    uri, headers = engine.construct_request(:query => "elephants", :summon_params => {"a" => "a", "b" => ["b1", "b2"]})
+
+    query_params = CGI.parse( URI.parse(uri).query )
+
+    assert_equal    1,    query_params["a"].try(:length)
+    assert_include  query_params["a"], "a"
+
+    assert_equal    2,    query_params["b"].try(:length)
+    assert_include  query_params["b"], "b1"
+    assert_include  query_params["b"], "b2"
+  end
+
   
   test_with_cassette("bad auth", :summon) do
     engine = BentoSearch::SummonEngine.new('access_id' => "bad_access_id", :secret_key => 'bad_secret_key')

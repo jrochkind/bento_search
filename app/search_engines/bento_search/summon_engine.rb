@@ -66,8 +66,13 @@ require 'summon/transport/headers'
 #
 # == Custom search params
 #
-# Pass in `:auth => true` (or "true") to send headers to summon
+# [:auth] Pass in `:auth => true` (or "true") to send headers to summon
 # indicating an authorized user, for full search results. 
+# [:summon_params]  Hash of key/value pairs to pass directly to summon. Just like
+#                  fixed_params in configuration, but per-search. Can be
+#                  used to directly trigger functionality not covered by
+#                  the bento_search adapter. Values can be arrays where summon
+#                  keys are repeatable. 
 #
 #
 # == Tech notes
@@ -251,15 +256,15 @@ class BentoSearch::SummonEngine
     # are NOT URI-encoded yet. 
     query_params = Hash.new {|h, k| h[k] = [] }
     
-    # Add in fixed params from config, if any.
+    # Add in fixed_params from config, and summon_params from search, if any.
     
-    if configuration.fixed_params
-      configuration.fixed_params.each_pair do |key, value|
-        [value].flatten.each do |v|
-          query_params[key] << v
-        end
+    direct_params = (configuration.fixed_params || {}).merge( args[:summon_params] || {} ) 
+
+    direct_params.each_pair do |key, value|
+      [value].flatten.each do |v|
+        query_params[key] << v
       end
-    end
+    end  
     
     if args[:per_page]
       query_params["s.ps"] = args[:per_page]
