@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.summon.serialssolutions.com/2.0.0/search?s.he=$$BENTO_HL_END$$&s.hs=$$BENTO_HL_START$$&s.ps=10&s.q=elephants
+    uri: http://api.summon.serialssolutions.com/2.0.0/search?s.he=__BENTO_HL_END__&s.hs=__BENTO_HL_START__&s.ps=10&s.q=elephants
     body:
       encoding: US-ASCII
       string: ''
@@ -12,9 +12,9 @@ http_interactions:
       Accept:
       - application/json
       X-Summon-Date:
-      - Mon, 06 Aug 2012 15:13:33 GMT
+      - Wed, 19 Jun 2013 15:30:47 GMT
       Authorization:
-      - Summon DUMMY_ACCESS_ID;zkMz27i3XvhWxcCxo7TTy7bl5+Q=
+      - Summon DUMMY_ACCESS_ID;ZtOU1dSv5oHOWHRefZWQRJ5RpY8=
       Host:
       - api.summon.serialssolutions.com:80
   response:
@@ -31,212 +31,227 @@ http_interactions:
         SUFEMQ==
       !binary "RGF0ZQ==":
       - !binary |-
-        TW9uLCAwNiBBdWcgMjAxMiAxNToxMzozMyBHTVQ=
+        V2VkLCAxOSBKdW4gMjAxMyAxNTozMDo0NyBHTVQ=
       !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
       - !binary |-
         Y2h1bmtlZA==
     body:
       encoding: UTF-8
-      string: ! '{"version": "2.0.0","sessionId": "008ca147-d48c-4153-a574-bdb43b219d58","elapsedQueryTime":
-        226,"queryTime": 222,"totalRequestTime": 231,"pageCount": 146447,"recordCount":
-        1464465,"query": {"queryString": "s.hs=%5C%24%5C%24BENTO_HL_START%5C%24%5C%24&s.mr=&s.ps=10&s.q=elephants&s.he=%5C%24%5C%24BENTO_HL_END%5C%24%5C%24&s.pn=1","pageNumber":
-        1,"pageSize": 10,"highlightStartDelimiter": "$$BENTO_HL_START$$","highlightEndDelimiter":
-        "$$BENTO_HL_END$$","textQueries": [{"textQuery": "elephants","removeCommand":
+      string: ! '{"version": "2.0.0","sessionId": "ce7b7d61-347b-4411-bf3e-e9a010425a8e","elapsedQueryTime":
+        170,"queryTime": 164,"totalRequestTime": 227,"pageCount": 188992,"recordCount":
+        1889919,"query": {"queryString": "s.hs=__BENTO_HL_START__&s.ps=10&s.q=elephants&s.he=__BENTO_HL_END__&s.pn=1","pageNumber":
+        1,"pageSize": 10,"highlightStartDelimiter": "__BENTO_HL_START__","highlightEndDelimiter":
+        "__BENTO_HL_END__","textQueries": [{"textQuery": "elephants","removeCommand":
         "removeTextQuery(elephants)"}],"searchTerms": [],"textFilters": [],"rangeFilters":
-        [],"facetValueFilters": [],"facetValueGroupFilters": [],"facetFields": [],"rangeFacetFields":
-        [],"sort": []},"facetFields": [],"rangeFacetFields": [],"didYouMeanSuggestions":
-        [],"recommendationLists": {},"documents": [{"hasFullText": false,"isFullTextHit":
-        false,"inHoldings": false,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:dc&rft.title=Elephants&rft.date=2011-01-01&rft.pub=Marshall+Cavendish&rft.isbn=0761479376&rft.spage=52&rft.epage=65&rft.externalDocID=1508900010","link":
-        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQAVYryYmGJua6KSYWybrAGsJYN9HU3EQ3KSXJxDgJmEVSwIc9hwVbBviaR_qZeCCV6G6iDFJuriHOHrqgAjK-rCgnHnRiOehqS0MDA745Lnv9OFZ4ntj8xePmhq9HtQFUrB2X","Language":
-        ["English"],"PublicationPlace": ["New York"],"Score": ["18.681522"],"IsPeerReviewed":
-        ["false"],"PublicationDate": ["2011"],"PublicationCentury": ["2000"],"PublicationDate_xml":
-        [{"text": "2011","year": "2011"}],"Source": ["Marshall Cavendish Reference"],"Publisher":
-        ["Marshall Cavendish"],"SourceType": ["Publisher"],"Publisher_xml": [{"name":
-        "Marshall Cavendish"}],"Snippet": ["...A charging $$BENTO_HL_START$$elephant$$BENTO_HL_END$$
-        can reach a speed of around 25 miles per hour (40 km/h), fast enough to outrun
-        a human . $$BENTO_HL_START$$Elephant$$BENTO_HL_END$$ males use their tusks
-        to fight one..."],"EISBN": ["0761499628","9780761499626"],"ISBN": ["0761479376","9780761479376"],"IsScholarly":
-        ["false"],"ID": ["FETCH-gale_vrl_15089000100"],"PublicationTitle": ["Mammals
-        of the Southern Hemisphere"],"Discipline": ["Zoology"],"PublicationPlace_xml":
-        [{"name": "New York"}],"PublicationDecade": ["2010"],"ContentType": ["Reference"],"Title":
-        ["$$BENTO_HL_START$$Elephants$$BENTO_HL_END$$"],"ExternalDocumentID": ["1508900010"],"SSID":
-        ["ssj0000422555"],"StartPage": ["52"],"EndPage": ["65"],"thumbnail_l": ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780761479376/large"],"thumbnail_m":
-        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780761479376/medium"],"thumbnail_s":
-        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780761479376/small"]},{"hasFullText":
-        false,"isFullTextHit": false,"inHoldings": false,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:dc&rft.title=Elephants&rft.date=2011-01-01&rft.pub=Cengage+Learning&rft.isbn=1414487363&rft.volume=1&rft.spage=527&rft.epage=528&rft.externalDocID=1918700486","link":
-        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQAVYryYmGJua6KSYWybrAGsJYN9HU3EQ3KSXJxDgJmEVSwIc9hwVbBviaR_qZePAgCig3UQYpN9cQZw9dUAEZX1aUEw_sUViYQ25L4gtkztvat8Qreo3pppu3f5tFAABOGhzB","Volume":
+        [],"facetValueFilters": [],"inclusiveFacetValueFilters": [],"facetValueGroupFilters":
+        [],"facetFields": [],"rangeFacetFields": [],"sort": []},"facetFields": [],"rangeFacetFields":
+        [],"didYouMeanSuggestions": [],"recommendationLists": {},"documents": [{"hasFullText":
+        true,"isFullTextHit": false,"inHoldings": true,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Elephants&rft.jtitle=Prairie+Schooner&rft.au=Cockroft%2C+Martin&rft.date=2011-10-01&rft.issn=0032-6682&rft.eissn=1542-426X&rft.volume=85&rft.issue=3&rft.spage=98&rft.epage=98&rft.externalDocID=10.2307%2F23056515","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQSU41TzJPAY1rmJgn6QLrW0PdpDTjVN1Uy0RQ69_INNECvFE42DLA1zzSz8QDqUR3E2VQdXMNcfbQBa8OjC-AnLkQD2yrgpYsgwhT0O3dBuIMrGnACEoVBxWa4kDN4gwcEZbOPpH-QVCuEIyrVwzewKRXWCIOLKPB8atrqGcAAAT7KBI","Volume":
+        ["85"],"Language": ["English"],"Author": ["Cockroft, Martin"],"Score": ["19.525097"],"Copyright":
+        ["Copyright © 2011 University of Nebraska Press"],"IsPeerReviewed": ["false"],"PublicationDate":
+        ["20111001"],"PublicationDate_xml": [{"text": "20111001","month": "10","year":
+        "2011","day": "1"}],"PublicationCentury": ["2000"],"Copyright_xml": [{"notice":
+        "Copyright © 2011 University of Nebraska Press"}],"SourceType": ["Publisher"],"URI":
+        ["http://www.jstor.org/stable/23056515"],"IsScholarly": ["true"],"ID": ["FETCH-jstor_primary_10_2307_230565150"],"PublicationTitle":
+        ["Prairie Schooner"],"Issue": ["3"],"Discipline": ["Languages & Literatures"],"PublicationYear":
+        ["2011"],"EISSN": ["1542-426X"],"MergedId": ["FETCHMERGED-jstor_primary_10_2307_230565150"],"Author_xml":
+        [{"sequence": "1","givenname": "Martin","surname": "Cockroft","fullname":
+        "Cockroft, Martin"}],"PublicationDecade": ["2010"],"ContentType": ["Journal
+        Article"],"Title": ["__BENTO_HL_START__Elephants__BENTO_HL_END__"],"ExternalDocumentID":
+        ["10.2307/23056515"],"ISSN": ["0032-6682"],"SSID": ["ssj0014231"],"StartPage":
+        ["98"],"EndPage": ["98"],"LinkModel": ["OpenURL"]},{"hasFullText": true,"isFullTextHit":
+        false,"inHoldings": true,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Elephants&rft.jtitle=Prairie+Schooner&rft.au=Cockroft%2C+Martin&rft.date=2011-01-01&rft.pub=University+of+Nebraska+Press&rft.issn=0032-6682&rft.eissn=1542-426X&rft.volume=85&rft.issue=3&rft.spage=98&rft.externalDBID=n%2Fa&rft.externalDocID=266637090","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQSU41TzJPAY1rmJgn6QLrW0PdpDTjVN1Uy0RQ69_INNECvFE42DLA1zzSz8SDB1FAuYkyyLq5hjh76IIKyPgCyJEL8cBqxMzY3MDSwECcgTUNGDGp4qDCUhyoUZyBI8LS2SfSPwjKFYJx9YrBG5f0CkvEgWUzOF51DfUMAKQ8JcM","Volume":
+        ["85"],"Language": ["English"],"Author": ["Cockroft, Martin"],"Score": ["19.262342"],"PageCount":
+        ["1"],"Copyright": ["COPYRIGHT 2011 University of Nebraska Press"],"IsPeerReviewed":
+        ["false"],"PublicationDate_xml": [{"text": "Fall 2011","year": "2011"}],"PublicationDate":
+        ["Fall 2011"],"PublicationCentury": ["2000"],"Copyright_xml": [{"notice":
+        "COPYRIGHT 2011 University of Nebraska Press"}],"Publisher": ["University
+        of Nebraska Press"],"SourceType": ["Aggregation Database"],"Publisher_xml":
+        [{"name": "University of Nebraska Press"}],"Snippet": ["...Like sleeping __BENTO_HL_START__elephants__BENTO_HL_END__,
+        rocks crowd each other on a hill in Pennsylvania. Incongruous I admit, but
+        then just yesterday I saw light on Purman Run so broad..."],"IsScholarly":
+        ["true"],"ID": ["FETCH-gale_primary_2666370900"],"PublicationTitle": ["Prairie
+        Schooner"],"Issue": ["3"],"Discipline": ["Languages & Literatures"],"PublicationYear":
+        ["2011"],"Audience": ["Academic"],"EISSN": ["1542-426X"],"MergedId": ["FETCHMERGED-gale_primary_2666370900"],"Author_xml":
+        [{"sequence": "1","fullname": "Cockroft, Martin"}],"PublicationDecade": ["2010"],"ContentType":
+        ["Journal Article"],"Title": ["__BENTO_HL_START__Elephants__BENTO_HL_END__"],"ExternalDocumentID":
+        ["266637090"],"ISSN": ["0032-6682"],"SSID": ["ssj0014231"],"StartPage": ["98"],"LinkModel":
+        ["OpenURL"]},{"hasFullText": false,"isFullTextHit": false,"inHoldings": false,"openUrl":
+        "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book%20item&rft.title=Environmental+Encyclopedia&rft.atitle=Elephants&rft.date=2011-01-01&rft.pub=Cengage+Learning&rft.isbn=1414487363&rft.volume=1&rft.spage=527&rft.epage=528&rft.externalDocID=1918700486","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQSU41TzJPAY1rmJgn6QLrW0PdpDTjVN1Uy0RQ69_INNECvFE42DLA1zzSz8SDB1FQuYkySLm5hjh76IIKyPiyopx4YI_CwhxyW5I4A2saMFZSxUElpThQlzgDR4Sls0-kfxCUKwTj6hWDdy3pFZaIAwtmcKTqGuoZAAD2syRG","Volume":
         ["1"],"Language": ["English"],"Edition": ["4th"],"PublicationPlace": ["Detroit"],"Score":
-        ["18.679066"],"IsPeerReviewed": ["false"],"PublicationDate": ["2011"],"PublicationCentury":
-        ["2000"],"PublicationDate_xml": [{"text": "2011","year": "2011"}],"Source":
+        ["17.214838"],"IsPeerReviewed": ["false"],"PublicationDate": ["2011"],"PublicationDate_xml":
+        [{"text": "2011","year": "2011"}],"PublicationCentury": ["2000"],"Source":
         ["Gale"],"Publisher": ["Cengage Learning"],"SourceType": ["Publisher"],"Publisher_xml":
-        [{"name": "Cengage Learning"}],"Snippet": ["...The $$BENTO_HL_START$$elephant$$BENTO_HL_END$$
-        is a large mammal with a long trunk and tusks. The trunk is an elongated nose
-        used for feeding, drinking, bathing, blowing dust, and testing..."],"EISBN":
-        ["9781414487397","1414487398"],"ISBN": ["1414487363","9781414487366"],"IsScholarly":
+        [{"name": "Cengage Learning"}],"Snippet": ["... the air. The tusks are upper
+        incisor teeth composed entirely of dentine (ivory) used for defense, levering
+        trees, and scraping for water. __BENTO_HL_START__Elephants__BENTO_HL_END__
+        are long-lived..."],"EISBN": ["9781414487397","1414487398"],"ISBN": ["1414487363","9781414487366"],"IsScholarly":
         ["false"],"ID": ["FETCH-gale_vrl_19187004860"],"PublicationTitle": ["Environmental
-        Encyclopedia"],"PublicationPlace_xml": [{"name": "Detroit"}],"PublicationDecade":
-        ["2010"],"ContentType": ["Reference"],"Title": ["$$BENTO_HL_START$$Elephants$$BENTO_HL_END$$"],"PublicationSubtitle":
-        ["A-K"],"ExternalDocumentID": ["1918700486"],"SSID": ["ssib007105038"],"StartPage":
-        ["527"],"EndPage": ["528"],"thumbnail_l": ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9781414487366/large"],"thumbnail_m":
-        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9781414487366/medium"],"thumbnail_s":
-        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9781414487366/small"]},{"hasFullText":
-        false,"isFullTextHit": false,"inHoldings": false,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:dc&rft.title=Elephants&rft.date=2010-01-01&rft.pub=ABC-Clio&rft.isbn=9780313352553&rft.volume=1&rft.spage=198&rft.externalDocID=2442700083","link":
-        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQAVYryYmGJua6KSYWybrAGsJYN9HU3EQ3KSXJxDgJmEVSwIc9hwVbBviaR_qZePAgCio3UQYpN9cQZw9dUAEZX1aUEw-sgECzo8C2ggHfkWSfgL8_nH53aF4WmnQ1yA4AWvcdGA","Volume":
-        ["1"],"Language": ["English"],"Edition": ["2nd"],"PublicationPlace": ["Santa
-        Barbara, CA"],"Score": ["18.62199"],"IsPeerReviewed": ["false"],"PublicationDate":
-        ["2010"],"PublicationCentury": ["2000"],"PublicationDate_xml": [{"text": "2010","year":
-        "2010"}],"Source": ["Greenwood Press"],"Publisher": ["ABC-Clio"],"SourceType":
-        ["Publisher"],"Publisher_xml": [{"name": "ABC-Clio"}],"Snippet": ["...See
-        Conservation Ethics, $$BENTO_HL_START$$Elephants$$BENTO_HL_END$$..."],"EISBN":
-        ["0313352569","9780313352560"],"ISBN": ["9780313352553","0313352550"],"IsScholarly":
-        ["false"],"ID": ["FETCH-gale_vrl_24427000830"],"PublicationTitle": ["Encyclopedia
-        of Animal Rights and Animal Welfare"],"Editor": ["Bekoff, Marc"],"Editor_xml":
-        [{"givenname": "Marc","surname": "Bekoff","fullname": "Bekoff, Marc"}],"PublicationPlace_xml":
-        [{"name": "Santa Barbara, CA"}],"PublicationDecade": ["2010"],"ContentType":
-        ["Reference"],"PublicationSubtitle": ["A-H"],"Title": ["$$BENTO_HL_START$$Elephants$$BENTO_HL_END$$"],"ExternalDocumentID":
-        ["2442700083"],"SSID": ["ssj0000435931"],"StartPage": ["198"],"thumbnail_l":
-        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780313352553/large"],"thumbnail_m":
-        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780313352553/medium"],"thumbnail_s":
-        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780313352553/small"]},{"hasFullText":
-        false,"isFullTextHit": false,"inHoldings": false,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:dc&rft.title=Elephants&rft.date=2010-01-01&rft.pub=Dorling+Kindersley&rft.isbn=0756657598&rft.spage=184&rft.externalDocID=1796500128","link":
-        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQAVYryYmGJua6KSYWybrAGsJYN9HU3EQ3KSXJxDgJmEVSwIc9hwVbBviaR_qZePAgCiw3UQYpN9cQZw9dUAEZX1aUEw9MMsBmBKggNeC7tHiX_sV016ub5CT2ejJ_TwIAWVEcmg","Language":
-        ["English"],"PublicationPlace": ["New York"],"Score": ["18.57741"],"IsPeerReviewed":
-        ["false"],"PublicationCentury": ["2000"],"PublicationDate_xml": [{"text":
-        "2010","year": "2010"}],"PublicationDate": ["2010"],"Source": ["Dorling Kindersley"],"Publisher":
-        ["Dorling Kindersley"],"SourceType": ["Publisher"],"Publisher_xml": [{"name":
-        "Dorling Kindersley"}],"Snippet": ["...G REAT TUSKS , huge ears, and a strong
-        trunk make the $$BENTO_HL_START$$elephant$$BENTO_HL_END$$ one of the most
-        magnificent creatures on Earth. $$BENTO_HL_START$$Elephants$$BENTO_HL_END$$
-        are the largest living land mammals..."],"EISBN": ["9780756672546","0756672546"],"ISBN":
-        ["0756657598","9780756657598"],"IsScholarly": ["false"],"ID": ["FETCH-gale_vrl_17965001280"],"PublicationTitle":
-        ["Children''s Illustrated Encyclopedia"],"PublicationPlace_xml": [{"name":
-        "New York"}],"PublicationDecade": ["2010"],"ContentType": ["Reference"],"Title":
-        ["$$BENTO_HL_START$$Elephants$$BENTO_HL_END$$"],"ExternalDocumentID": ["1796500128"],"SSID":
-        ["ssib006123459","ssj0000522088"],"StartPage": ["184"],"thumbnail_l": ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780756657598/large"],"thumbnail_m":
-        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780756657598/medium"],"thumbnail_s":
-        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780756657598/small"]},{"hasFullText":
-        false,"isFullTextHit": false,"inHoldings": false,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:dc&rft.title=Elephants&rft.creator=Nolan%2C+Cathal+J&rft.date=2010-01-01&rft.pub=ABC-Clio&rft.isbn=9780313330506&rft.volume=1&rft.spage=347&rft.externalDocID=1762100616","link":
-        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQAVYryYmGJua6KSYWybrAGsJYN9HU3EQ3KSXJxDgJmEVSwIc9hwVbBviaR_qZePAgCi43UQYpN9cQZw9dUAEZX1aUE28IzK-GoKrWzICPS-ikpkap--WN9rNdQ1R-cQIAPqsaqA","Volume":
+        Encyclopedia"],"Discipline": ["Environmental Sciences"],"PublicationYear":
+        ["2011"],"PublicationPlace_xml": [{"name": "Detroit"}],"MergedId": ["FETCHMERGED-gale_vrl_19187004860"],"PublicationDecade":
+        ["2010"],"ContentType": ["Reference"],"PublicationSubtitle": ["A-K"],"Title":
+        ["__BENTO_HL_START__Elephants__BENTO_HL_END__"],"ExternalDocumentID": ["1918700486"],"SSID":
+        ["ssj0000670640"],"StartPage": ["527"],"EndPage": ["528"],"thumbnail_s": ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9781414487366/small"],"thumbnail_m":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9781414487366/medium"],"thumbnail_l":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9781414487366/large"],"LinkModel":
+        ["OpenURL"]},{"hasFullText": false,"isFullTextHit": false,"inHoldings": false,"openUrl":
+        "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book%20item&rft.title=Mammals+of+the+Southern+Hemisphere&rft.atitle=Elephants&rft.date=2011-01-01&rft.pub=Marshall+Cavendish&rft.isbn=0761479376&rft.spage=52&rft.epage=65&rft.externalDocID=1508900010","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQSU41TzJPAY1rmJgn6QLrW0PdpDTjVN1Uy0RQ69_INNECvFE42DLA1zzSz8SDB1FguYkySLm5hjh76IIKyPiyopx40InloKstDQ0MxBlY04CxkioOKinFgbrEGTgiLJ19Iv2DoFwhGFevGLxrSa-wRBxYMIMjVddQzwAA8ZskMw","Language":
+        ["English"],"PublicationPlace": ["New York"],"Score": ["17.207731"],"IsPeerReviewed":
+        ["false"],"PublicationDate": ["2011"],"PublicationDate_xml": [{"text": "2011","year":
+        "2011"}],"PublicationCentury": ["2000"],"Source": ["Marshall Cavendish Reference"],"Publisher":
+        ["Marshall Cavendish"],"SourceType": ["Publisher"],"Publisher_xml": [{"name":
+        "Marshall Cavendish"}],"Snippet": ["... another for the right to mate with
+        females . A savanna elephant family marches over the dusty ground. __BENTO_HL_START__Elephants__BENTO_HL_END__
+        live together in herds made of adult females and young..."],"EISBN": ["0761499628","9780761499626"],"ISBN":
+        ["0761479376","9780761479376"],"IsScholarly": ["false"],"ID": ["FETCH-gale_vrl_15089000100"],"PublicationTitle":
+        ["Mammals of the Southern Hemisphere"],"Discipline": ["Zoology"],"PublicationYear":
+        ["2011"],"PublicationPlace_xml": [{"name": "New York"}],"MergedId": ["FETCHMERGED-gale_vrl_15089000100"],"PublicationDecade":
+        ["2010"],"ContentType": ["Reference"],"Title": ["__BENTO_HL_START__Elephants__BENTO_HL_END__"],"ExternalDocumentID":
+        ["1508900010"],"SSID": ["ssj0000422555"],"StartPage": ["52"],"EndPage": ["65"],"thumbnail_s":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780761479376/small"],"thumbnail_m":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780761479376/medium"],"thumbnail_l":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780761479376/large"],"LinkModel":
+        ["OpenURL"]},{"hasFullText": false,"isFullTextHit": false,"inHoldings": false,"openUrl":
+        "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book%20item&rft.title=The+Concise+Encyclopedia+of+World+War+II&rft.au=Nolan%2C+Cathal+J&rft.atitle=Elephants&rft.date=2010-01-01&rft.pub=ABC-Clio&rft.isbn=9780313330506&rft.volume=1&rft.spage=347&rft.externalDocID=1762100616","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQSU41TzJPAY1rmJgn6QLrW0PdpDTjVN1Uy0RQ69_INNECvFE42DLA1zzSz8SDB1FwuYkySLm5hjh76IIKyPiyopx4Q2B-NQRVtWYG4gysacBYSRUHlZTiQF3iDBwRls4-kf5BUK4QjKtXDN61pFdYIg4smMGRqmuoZwAA85EkOg","Volume":
         ["1"],"Language": ["English"],"Author": ["Nolan, Cathal J"],"PublicationPlace":
-        ["Santa Barbara, CA"],"Score": ["18.57237"],"IsPeerReviewed": ["false"],"PublicationDate":
-        ["2010"],"PublicationCentury": ["2000"],"PublicationDate_xml": [{"text": "2010","year":
-        "2010"}],"Source": ["Greenwood Press"],"Publisher": ["ABC-Clio"],"SourceType":
+        ["Santa Barbara, CA"],"Score": ["17.160109"],"IsPeerReviewed": ["false"],"PublicationDate":
+        ["2010"],"PublicationDate_xml": [{"text": "2010","year": "2010"}],"PublicationCentury":
+        ["2000"],"Source": ["Greenwood Press"],"Publisher": ["ABC-Clio"],"SourceType":
         ["Publisher"],"Publisher_xml": [{"name": "ABC-Clio"}],"Snippet": ["...In World
-        War II $$BENTO_HL_START$$elephants$$BENTO_HL_END$$ were commonly employed
+        War II __BENTO_HL_START__elephants__BENTO_HL_END__ were commonly employed
         in military labor by both sides in northern India and Burma, as well as French
         Indochina and other parts..."],"EISBN": ["9780313365270","031336527X"],"ISBN":
         ["9780313330506","0313330506"],"IsScholarly": ["false"],"ID": ["FETCH-gale_vrl_17621006160"],"PublicationTitle":
-        ["The Concise Encyclopedia of World War II"],"Discipline": ["History & Archaeology"],"PublicationPlace_xml":
-        [{"name": "Santa Barbara, CA"}],"PublicationDecade": ["2010"],"Author_xml":
-        [{"middlename": "J","givenname": "Cathal","surname": "Nolan","fullname": "Nolan,
-        Cathal J"}],"ContentType": ["Reference"],"Title": ["$$BENTO_HL_START$$Elephants$$BENTO_HL_END$$"],"ExternalDocumentID":
-        ["1762100616"],"SSID": ["ssj0000414642"],"StartPage": ["347"],"thumbnail_l":
-        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780313330506/large"],"thumbnail_m":
-        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780313330506/medium"],"thumbnail_s":
-        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780313330506/small"]},{"hasFullText":
-        false,"isFullTextHit": false,"inHoldings": false,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Elephants&rft.jtitle=Broker+World&rft.au=Ronald+R+Hagelman+Jr&rft.date=2011-02-28&rft.issn=0273-6551&rft.volume=31&rft.issue=2&rft.spage=48&rft.externalDBID=BRW&rft.externalDocID=2278562941","link":
-        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQAVYryYmGJua6KSYWybrAGsJYN9HU3EQ3KSXJxDgJmEVSwIc9hwVbBviaR_qZePAgCjA3UQY5N9cQZw9dWMkYn5KTEw_asAmsqS1NDA34kqWzxcoafR33ZD_6rveogAEAylIdgw","Volume":
-        ["31"],"Language": ["English"],"Author": ["Ronald R Hagelman Jr"],"Score":
-        ["18.538109"],"Copyright": ["Copyright Insurance Publications, Inc. Feb 2011"],"IsPeerReviewed":
-        ["false"],"PublicationDate_xml": [{"text": "20110201","month": "02","year":
-        "2011","day": "01"},{"text": "20110228","month": "02","year": "2011","day":
-        "28"}],"PublicationCentury": ["2000"],"PublicationDate": ["20110228","20110201"],"Copyright_xml":
-        [{"notice": "Copyright Insurance Publications, Inc. Feb 2011"}],"AbstractList":
-        ["In many ways the pursuit of the LTC insurance sale has been paved with good
-        intentions yet impaired by a quest for easy answers. It seems that even wrong
-        answers -- if they appear logical and simple -- can take on a life of their
-        own. Maybe it''s because an LTC insurance sale defies easy answers. Perhaps
-        the most obvious restriction to mainstream critical mass sales has been insurance
-        salespeople''s lack of sufficient numbers of proselytizers who encourage clients
-        to protect their families. Maybe the revolving doors of carrier participation,
-        underwriting brick walls, abrupt rate increases and constant product evolution
-        just makes it too hard for too many agents."],"SourceType": ["Aggregation
-        Database"],"Snippet": ["In many ways the pursuit of the LTC insurance sale
+        ["The Concise Encyclopedia of World War II"],"Discipline": ["History & Archaeology"],"PublicationYear":
+        ["2010"],"PublicationPlace_xml": [{"name": "Santa Barbara, CA"}],"MergedId":
+        ["FETCHMERGED-gale_vrl_17621006160"],"Author_xml": [{"middlename": "J","givenname":
+        "Cathal","surname": "Nolan","fullname": "Nolan, Cathal J"}],"PublicationDecade":
+        ["2010"],"ContentType": ["Reference"],"Title": ["__BENTO_HL_START__Elephants__BENTO_HL_END__"],"ExternalDocumentID":
+        ["1762100616"],"SSID": ["ssj0000414642"],"StartPage": ["347"],"thumbnail_s":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780313330506/small"],"thumbnail_m":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780313330506/medium"],"thumbnail_l":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780313330506/large"],"LinkModel":
+        ["OpenURL"]},{"hasFullText": false,"isFullTextHit": false,"inHoldings": false,"openUrl":
+        "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Elephants&rft.jtitle=Broker+World&rft.au=Ronald+R+Hagelman+Jr&rft.date=2011-02-01&rft.pub=Insurance+Publications%2C+Inc&rft.issn=0273-6551&rft.volume=31&rft.issue=2&rft.spage=48&rft.externalDocID=2278562941","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQSU41TzJPAY1rmJgn6QLrW0PdpDTjVN1Uy0RQ69_INNECvFE42DLA1zzSz8SDB1GAuYkyyLm5hjh76MJKxviUnJx40IZNYE1taWJoIM7AmgaMmVRxUGkpDtQpzsARYensE-kfBOUKwbh6xeCdS3qFJeLAwhkcsbqGegYA14MmIQ","Volume":
+        ["31"],"DatabaseTitle": ["ABI/INFORM Complete - Professional Edition","Central
+        (Professional Edition)","ABI/INFORM Research (Alumni Edition)","ABI/INFORM
+        Complete (Alumni Edition)","ABI/INFORM Research","ABI/INFORM Global (Alumni
+        Edition)","ABI/INFORM Global","ProQuest Central","ABI/INFORM Complete","Central
+        (Alumni)"],"Language": ["English"],"Author": ["Ronald R Hagelman Jr"],"PublicationPlace":
+        ["Prairie Village"],"Score": ["17.021572"],"Copyright": ["Copyright Insurance
+        Publications, Inc. Feb 2011"],"IsPeerReviewed": ["false"],"PublicationDate_xml":
+        [{"text": "20110201","month": "02","year": "2011","day": "01"}],"PublicationDate":
+        ["20110201"],"PublicationCentury": ["2000"],"Copyright_xml": [{"notice": "Copyright
+        Insurance Publications, Inc. Feb 2011"}],"Publisher": ["Insurance Publications,
+        Inc"],"AbstractList": ["In many ways the pursuit of the LTC insurance sale
         has been paved with good intentions yet impaired by a quest for easy answers.
-        It seems that even wrong..."],"GeographicLocations": ["United States--US"],"IsScholarly":
-        ["false"],"ID": ["FETCH-proquest_dll_22785629410"],"DLL_JC": ["BRW"],"GeographicLocations_xml":
+        It seems that even wrong answers -- if they appear logical and simple -- can
+        take on a life of their own. Maybe it''s because an LTC insurance sale defies
+        easy answers. Perhaps the most obvious restriction to mainstream critical
+        mass sales has been insurance salespeople''s lack of sufficient numbers of
+        proselytizers who encourage clients to protect their families. Maybe the revolving
+        doors of carrier participation, underwriting brick walls, abrupt rate increases
+        and constant product evolution just makes it too hard for too many agents."],"SourceType":
+        ["Aggregation Database"],"Publisher_xml": [{"name": "Insurance Publications,
+        Inc"}],"Snippet": ["In many ways the pursuit of the LTC insurance sale has
+        been paved with good intentions yet impaired by a quest for easy answers.
+        It seems that even wrong..."],"GeographicLocations": ["United States--US"],"URI":
+        ["http://search.proquest.com/docview/854052088"],"PQPubID": ["37434"],"IsScholarly":
+        ["false"],"ID": ["FETCH-proquest_dll_22785629410"],"GeographicLocations_xml":
         [{"name": "United States--US"}],"PublicationTitle": ["Broker World"],"Issue":
-        ["2"],"PCID": ["58688491"],"Genre": ["Commentary"],"PublicationDecade": ["2010"],"PQID":
-        ["854052088"],"DatabaseTitleList": [""],"Abstract": ["In many ways the pursuit
-        of the LTC insurance sale has been paved with good intentions yet impaired
-        by a quest for easy answers. It seems that even wrong answers -- if they appear
+        ["2"],"PublicationYear": ["2011"],"Genre": ["Commentary"],"PublicationPlace_xml":
+        [{"name": "Prairie Village"}],"PQID": ["854052088"],"DatabaseTitleList": ["ABI/INFORM
+        Complete - Professional Edition"],"Abstract": ["In many ways the pursuit of
+        the LTC insurance sale has been paved with good intentions yet impaired by
+        a quest for easy answers. It seems that even wrong answers -- if they appear
         logical and simple -- can take on a life of their own. Maybe it''s because
         an LTC insurance sale defies easy answers. Perhaps the most obvious restriction
         to mainstream critical mass sales has been insurance salespeople''s lack of
         sufficient numbers of proselytizers who encourage clients to protect their
         families. Maybe the revolving doors of carrier participation, underwriting
         brick walls, abrupt rate increases and constant product evolution just makes
-        it too hard for too many agents."],"SubjectTerms": ["United States","Risk
-        management","Underwriting","Life & health insurance","Insurance agents & brokers","Long
-        term care insurance"],"Author_xml": [{"sequence": "1","fullname": "Ronald
-        R Hagelman Jr"}],"ContentType": ["Journal Article"],"Title": ["$$BENTO_HL_START$$Elephants$$BENTO_HL_END$$"],"ISSN":
-        ["0273-6551"],"ExternalDocumentID": ["2278562941"],"SSID": ["ssj0038604"],"StartPage":
-        ["48"]},{"hasFullText": false,"isFullTextHit": false,"inHoldings": false,"openUrl":
-        "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Elephants&rft.jtitle=Descant&rft.au=Bush%2C+Catherine&rft.date=2006-04-01&rft.issn=0382-909X&rft.volume=37&rft.issue=1&rft.spage=155&rft.externalDBID=DSCT&rft.externalDocID=1012718401","link":
-        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQAVYryYmGJua6KSYWybrAGsJYN9HU3EQ3KSXJxDgJmEVSwIc9hwVbBviaR_qZePAgCjI3UQY5N9cQZw9dWMkYn5KTA1qIZGQO6owYGvDxRrOtbCx2Xt-f_ePrPo49ZQDMFB5H","Volume":
-        ["37"],"Language": ["English"],"Author": ["Bush, Catherine"],"Score": ["18.524649"],"RelatedPersons_xml":
-        [{"fullname": "Gowdy, Barbara"}],"PageCount": ["0"],"Copyright": ["Copyright
-        Descant Arts & Letters Foundation Spring 2006"],"IsPeerReviewed": ["false"],"PublicationDate":
-        ["20060630","20060501","20060401"],"PublicationCentury": ["2000"],"PublicationDate_xml":
-        [{"text": "20060401","month": "04","year": "2006","day": "01"},{"text": "20060501","month":
-        "05","year": "2006","day": "01"},{"text": "20060630","month": "06","year":
-        "2006","day": "30"}],"RelatedPersons": ["Gowdy, Barbara"],"Copyright_xml":
-        [{"notice": "Copyright Descant Arts & Letters Foundation Spring 2006"}],"SourceType":
-        ["Aggregation Database"],"IsScholarly": ["true"],"ID": ["FETCH-proquest_dll_10127184010"],"PublicationTitle":
-        ["Descant"],"DLL_JC": ["DSCT"],"Issue": ["1"],"PCID": ["17914641"],"Discipline":
-        ["Languages & Literatures"],"Genre": ["General information"],"PublicationDecade":
-        ["2000"],"PQID": ["227255234"],"SubjectTerms": ["Writers","Canada","Writing"],"Author_xml":
-        [{"sequence": "1","fullname": "Bush, Catherine"}],"ContentType": ["Journal
-        Article"],"Title": ["$$BENTO_HL_START$$Elephants$$BENTO_HL_END$$"],"ISSN":
-        ["0382-909X"],"ExternalDocumentID": ["1012718401"],"SSID": ["ssj0030962"],"StartPage":
-        ["155"]},{"hasFullText": false,"isFullTextHit": false,"inHoldings": false,"openUrl":
-        "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:dc&rft.title=Elephants&rft.creator=Denis+Diderot&rft.date=2009-04-01&rft.pub=Ann+Arbor%2C+Michigan%3A+University+Library+University+of+Michigan&rft.externalDBID=spotext%3Adid&rft.externalDocID=oai_quod_lib_umich_edu_did2222_0000_946","link":
-        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQAVYryYmGJua6KSYWybrAGsJYN9HU3EQ3KSXJxDgJmEVSwIc9hwVbBviaR_qZePAgCjQ3UQZbN9cQZw_dUtBgW2Z6Yl58Sk5BcTzoGOTC0vyUeGA3Mh4sFw8si-NTMlOANZwRaA7VIN7SxMyAr0zoz_p3zd6-O43Ot3MyWAQDAGiJKb4","Language":
-        ["English"],"Author": ["Denis Diderot"],"Score": ["18.38482"],"Copyright":
+        it too hard for too many agents."],"SubjectTerms": ["Risk management","Underwriting","Insurance
+        agents & brokers","Long term care insurance"],"MergedId": ["FETCHMERGED-proquest_dll_22785629410"],"Author_xml":
+        [{"sequence": "1","fullname": "Ronald R Hagelman Jr"}],"PublicationDecade":
+        ["2010"],"ContentType": ["Journal Article"],"Title": ["__BENTO_HL_START__Elephants__BENTO_HL_END__"],"ExternalDocumentID":
+        ["2278562941"],"ISSN": ["0273-6551"],"SSID": ["ssj0038604"],"StartPage": ["48"],"LinkModel":
+        ["OpenURL"]},{"hasFullText": false,"isFullTextHit": false,"inHoldings": false,"openUrl":
+        "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Elephants&rft.au=Lister%2C+AM&rft.pub=Gale+Publishing%2C+USA&rft.externalDocID=31_9b7282e9_d366_4c65_a3f3_6c2a789c37ba_TURTdG9yZURTUmVzb3VyY2VzL01EU3RvcmVEU1Jlc291cmNlVHlwZQ_oai_eprints_ucl_ac_uk_OAI2_36662","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwRVyxasMwENUSyNCpUPQDWW0syZGisQSnbkmT1rFFneWQZHmJPJQkLcl_9H8jmZZOx5vuhse7ewd3CM2sE0Z0ca-RC5OEfksS0zOXOKnj9E_nejEeCu_k26toN3l59y9kqwf0syrqZRmMYdDd3vlu1HNgBKQRwSA4CR3jHHLL56BZz4BbqsVCWiaMhrqp6u5JXvYhNoO6GqYuLVXXdUaKhlVfdlBFQ168pZLYYeNV6b_37xC_LLu4Sjsd4Ww9aAvnA2wfnymEZJxmGE36QAiHo0jjUDBG0w-5XLfb6hfe_8H0OB5MpZ8nHHrCyKeEpNkNGclOBA","Language":
+        ["English"],"URI": ["http://eprints.ucl.ac.uk/36662/"],"Author": ["Lister,
+        AM"],"Score": ["16.895414"],"IsScholarly": ["false"],"DBID": ["SDZ"],"IsPeerReviewed":
+        ["false"],"ID": ["FETCH-bielefeld_base_31_9b7282e9_d366_4c65_a3f3_6c2a789c37ba_TURTdG9yZURTUmVzb3VyY2VzL01EU3RvcmVEU1Jlc291cmNlVHlwZQ_oai_eprints_ucl_ac_uk_OAI2_366620"],"Publisher":
+        ["Gale Publishing, USA"],"SourceType": ["Institutional Repository"],"Publisher_xml":
+        [{"name": "Gale Publishing, USA"}],"MergedId": ["FETCHMERGED-bielefeld_base_31_9b7282e9_d366_4c65_a3f3_6c2a789c37ba_TURTdG9yZURTUmVzb3VyY2VzL01EU3RvcmVEU1Jlc291cmNlVHlwZQ_oai_eprints_ucl_ac_uk_OAI2_366620"],"Author_xml":
+        [{"sequence": "1","fullname": "Lister, AM"}],"ContentType": ["Web Resource"],"Title":
+        ["__BENTO_HL_START__Elephants__BENTO_HL_END__"],"ExternalDocumentID": ["31_9b7282e9_d366_4c65_a3f3_6c2a789c37ba_TURTdG9yZURTUmVzb3VyY2VzL01EU3RvcmVEU1Jlc291cmNlVHlwZQ_oai_eprints_ucl_ac_uk_OAI2_36662"],"LinkModel":
+        ["DirectLink"]},{"hasFullText": false,"isFullTextHit": false,"inHoldings":
+        false,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Elephants&rft.jtitle=Encyclopedia+of+Diderot+%26+d%27Alembert&rft.au=Denis+Diderot&rft.date=2009-04-01&rft.pub=Ann+Arbor%2C+Michigan%3A+University+Library+University+of+Michigan&rft.externalDBID=spotext%3Adid&rft.externalDocID=oai_quod_lib_umich_edu_did2222_0000_946","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQSU41TzJPAY1rmJgn6QLrW0PdpDTjVN1Uy0RQ69_INNECvFE42DLA1zzSz8SDB1GguYky2Lq5hjh76JaCBtsy0xPz4lNyCorjQccgF5bmp8QDu5HxYLl4YFkcn5KZAqzhjEBzqAbxliZmBuIMrGnAiEsVBxWm4kCDxRk4IiydfSL9g6BcIRhXrxi8sUmvsEQcWHaD413XUM8AAMddMk8","Language":
+        ["English"],"Author": ["Denis Diderot"],"Score": ["16.895414"],"Copyright":
         ["This text may be freely searched and displayed. Permission must be received
         for subsequent distribution in print or electronically. Please contact the
         translator or spo-help@umich.edu for more information."],"DBID": ["379"],"IsPeerReviewed":
-        ["false"],"PublicationCentury": ["2000"],"PublicationDate_xml": [{"text":
-        "20090401","month": "04","year": "2009","day": "01"}],"PublicationDate": ["20090401"],"Copyright_xml":
-        [{"notice": "This text may be freely searched and displayed. Permission must
-        be received for subsequent distribution in print or electronically. Please
-        contact the translator or spo-help@umich.edu for more information."}],"Publisher":
-        ["Ann Arbor, Michigan: University Library University of Michigan"],"Notes":
-        ["(dlps) did2222.0000.946"],"SourceType": ["Open Access Repository"],"Publisher_xml":
+        ["false"],"PublicationDate": ["20090401"],"PublicationDate_xml": [{"text":
+        "20090401","month": "04","year": "2009","day": "01"}],"PublicationCentury":
+        ["2000"],"Copyright_xml": [{"notice": "This text may be freely searched and
+        displayed. Permission must be received for subsequent distribution in print
+        or electronically. Please contact the translator or spo-help@umich.edu for
+        more information."}],"Publisher": ["Ann Arbor, Michigan: University Library
+        University of Michigan"],"SourceType": ["Open Access Repository"],"Publisher_xml":
         [{"name": "Ann Arbor, Michigan: University Library University of Michigan"}],"DocumentTitleAlternate":
         ["Eléphans"],"URI": ["http://hdl.handle.net/2027/spo.did2222.0000.946"],"IsScholarly":
         ["false"],"ID": ["FETCH-umichigan_dlps_oai_quod_lib_umich_edu_did2222_0000_9460"],"PublicationTitle":
-        ["Encyclopedia of Diderot & d''Alembert"],"PublicationDecade": ["2000"],"SubjectTerms":
-        ["Ancient history"],"Author_xml": [{"sequence": "1","fullname": "Denis Diderot"}],"ContentType":
-        ["Web Resource"],"Title": ["$$BENTO_HL_START$$Elephants$$BENTO_HL_END$$"],"ExternalDocumentID":
-        ["oai_quod_lib_umich_edu_did2222_0000_946"]},{"hasFullText": false,"isFullTextHit":
-        false,"inHoldings": false,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:dc&rft.title=Elephants&rft.creator=Lister%2C+AM&rft.pub=Gale+Publishing%2C+USA&rft.externalDocID=31_9b7282e9_d366_4c65_a3f3_6c2a789c37ba_TURTdG9yZURTUmVzb3VyY2VzL01EU3RvcmVEU1Jlc291cmNlVHlwZQ_oai_eprints_ucl_ac_uk_OAI2_36662","link":
-        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQAVYryYmGJua6KSYWybrAGsJYN9HU3EQ3KSXJxDgJmEVSwIc9hwVbBviaR_qZePAgCjY3UYapbq4hzh7AjiGw3E1LzUkBl-fxxobxlknmwA5CqmV8irGZWbxJsplpfKJxmnG8WbJRormFZbKxeVJifEhoUEiKu2VlFJAOzQ2rSjIOq4w0CqvyMTB0DTUOKkvODXMNNfTKSTayNEzO9csJ88gpjwqMB52ynAoaSispji9NzolPTI4vzY73d_Q0igdaZmZkwJfQ_m2lUofHp-UdKqyRlkLWAEueRQU","Language":
-        ["English"],"URI": ["http://eprints.ucl.ac.uk/36662/"],"Author": ["Lister,
-        AM"],"Score": ["18.38482"],"IsScholarly": ["false"],"DBID": ["SDZ"],"IsPeerReviewed":
-        ["false"],"ID": ["FETCH-bielefeld_base_31_9b7282e9_d366_4c65_a3f3_6c2a789c37ba_TURTdG9yZURTUmVzb3VyY2VzL01EU3RvcmVEU1Jlc291cmNlVHlwZQ_oai_eprints_ucl_ac_uk_OAI2_366620"],"Publisher":
-        ["Gale Publishing, USA"],"SourceType": ["Institutional Repository"],"Publisher_xml":
-        [{"name": "Gale Publishing, USA"}],"Author_xml": [{"sequence": "1","fullname":
-        "Lister, AM"}],"ContentType": ["Web Resource"],"Title": ["$$BENTO_HL_START$$Elephants$$BENTO_HL_END$$"],"ExternalDocumentID":
-        ["31_9b7282e9_d366_4c65_a3f3_6c2a789c37ba_TURTdG9yZURTUmVzb3VyY2VzL01EU3RvcmVEU1Jlc291cmNlVHlwZQ_oai_eprints_ucl_ac_uk_OAI2_36662"]},{"hasFullText":
-        true,"isFullTextHit": false,"inHoldings": true,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Elephants&rft.jtitle=Cobblestone&rft.au=Meredith+Rutland&rft.date=2009-06-30&rft.issn=0199-5197&rft.volume=30&rft.issue=5&rft.spage=43&rft.externalDBID=ICBL&rft.externalDocID=1844972011","link":
-        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQAVYryYmGJua6KSYWybrAGsJYN9HU3EQ3KSXJxDgJmEVSwIc9hwVbBviaR_qZeCAXfm6iDHJuriHOHrqwojE-JScnHtgRMbE0B9dWfPZau01kld36t8adc5L4JuIJANlVHJ0","Volume":
-        ["30"],"Language": ["English"],"Author": ["Meredith Rutland"],"Score": ["18.319273"],"PageCount":
-        ["1"],"Copyright": ["Copyright Cobblestone Publishing Company May/Jun 2009"],"IsPeerReviewed":
-        ["false"],"PublicationDate_xml": [{"text": "20090601","month": "06","year":
-        "2009","day": "01"},{"text": "20090630","month": "06","year": "2009","day":
-        "30"},{"text": "20090501","month": "05","year": "2009","day": "01"}],"PublicationCentury":
-        ["2000"],"PublicationDate": ["20090501","20090630","20090601"],"Copyright_xml":
-        [{"notice": "Copyright Cobblestone Publishing Company May/Jun 2009"}],"SourceType":
-        ["Aggregation Database"],"Snippet": ["... speak, $$BENTO_HL_START$$elephants$$BENTO_HL_END$$
-        fly; where a castle stretches toward stars. Magical mystery awaits the same
-        day as the festival. Mom informs her of my decline. Festival day..."],"IsScholarly":
-        ["false"],"ID": ["FETCH-proquest_dll_18449720110"],"DLL_JC": ["ICBL"],"PublicationTitle":
-        ["Cobblestone"],"Issue": ["5"],"PCID": ["48172741"],"Discipline": ["History
-        & Archaeology"],"Genre": ["Poem"],"PublicationDecade": ["2000"],"PQID": ["195575981"],"EISSN":
-        ["1080-5486"],"Author_xml": [{"sequence": "1","fullname": "Meredith Rutland"}],"ContentType":
-        ["Journal Article"],"Title": ["$$BENTO_HL_START$$Elephants$$BENTO_HL_END$$"],"ExternalDocumentID":
-        ["1844972011"],"ISSN": ["0199-5197"],"SSID": ["ssj0012521"],"StartPage": ["43"]}]}'
+        ["Encyclopedia of Diderot & d''Alembert"],"PublicationYear": ["2009"],"SubjectTerms":
+        ["Ancient history"],"MergedId": ["FETCHMERGED-umichigan_dlps_oai_quod_lib_umich_edu_did2222_0000_9460"],"Author_xml":
+        [{"sequence": "1","fullname": "Denis Diderot"}],"PublicationDecade": ["2000"],"ContentType":
+        ["Web Resource"],"Title": ["__BENTO_HL_START__Elephants__BENTO_HL_END__"],"ExternalDocumentID":
+        ["oai_quod_lib_umich_edu_did2222_0000_946"],"LinkModel": ["DirectLink"]},{"hasFullText":
+        false,"isFullTextHit": false,"inHoldings": false,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book%20item&rft.title=Encyclopedia+of+Animal+Rights+and+Animal+Welfare&rft.atitle=Elephants&rft.date=2010-01-01&rft.pub=ABC-Clio&rft.isbn=9780313352553&rft.volume=1&rft.spage=198&rft.externalDocID=2442700083","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQSU41TzJPAY1rmJgn6QLrW0PdpDTjVN1Uy0RQ69_INNECvFE42DLA1zzSz8SDB1GwuYkySLm5hjh76IIKyPiyopx4YAUEmh0FthUMxBlY04CxkioOKinFgbrEGTgiLJ19Iv2DoFwhGFevGLxrSa-wRBxYMIMjVddQzwAA9R0kPg","Volume":
+        ["1"],"Language": ["English"],"Edition": ["2nd"],"PublicationPlace": ["Santa
+        Barbara, CA"],"Score": ["16.68911"],"IsPeerReviewed": ["false"],"PublicationDate":
+        ["2010"],"PublicationDate_xml": [{"text": "2010","year": "2010"}],"PublicationCentury":
+        ["2000"],"Source": ["Greenwood Press"],"Publisher": ["ABC-Clio"],"SourceType":
+        ["Publisher"],"Publisher_xml": [{"name": "ABC-Clio"}],"Snippet": ["...See
+        Conservation Ethics, __BENTO_HL_START__Elephants__BENTO_HL_END__..."],"EISBN":
+        ["0313352569","9780313352560"],"ISBN": ["9780313352553","0313352550"],"IsScholarly":
+        ["false"],"ID": ["FETCH-gale_vrl_24427000830"],"PublicationTitle": ["Encyclopedia
+        of Animal Rights and Animal Welfare"],"Editor": ["Bekoff, Marc"],"PublicationYear":
+        ["2010"],"Editor_xml": [{"givenname": "Marc","surname": "Bekoff","fullname":
+        "Bekoff, Marc"}],"PublicationPlace_xml": [{"name": "Santa Barbara, CA"}],"MergedId":
+        ["FETCHMERGED-gale_vrl_24427000830"],"PublicationDecade": ["2010"],"ContentType":
+        ["Reference"],"PublicationSubtitle": ["A-H"],"Title": ["__BENTO_HL_START__Elephants__BENTO_HL_END__"],"ExternalDocumentID":
+        ["2442700083"],"SSID": ["ssj0000435931"],"StartPage": ["198"],"thumbnail_s":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780313352553/small"],"thumbnail_m":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780313352553/medium"],"thumbnail_l":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780313352553/large"],"LinkModel":
+        ["OpenURL"]},{"hasFullText": false,"isFullTextHit": false,"inHoldings": false,"openUrl":
+        "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book%20item&rft.title=Children%27s+Illustrated+Encyclopedia&rft.atitle=Elephants&rft.date=2010-01-01&rft.pub=Dorling+Kindersley&rft.isbn=0756657598&rft.spage=184&rft.externalDocID=1796500128","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQSU41TzJPAY1rmJgn6QLrW0PdpDTjVN1Uy0RQ69_INNECvFE42DLA1zzSz8QDufBzE2WQcnMNcfbQBZWQ8WVFOfHANANsR4BKUgNxBtY0YLSkioNUiwO1iTNwRFg6-0T6B0G5QjCuXjF425JeYYk4sGQGx6quoZ4BABTCJHA","Language":
+        ["English"],"PublicationPlace": ["New York"],"Score": ["16.643383"],"IsPeerReviewed":
+        ["false"],"PublicationDate": ["2010"],"PublicationDate_xml": [{"text": "2010","year":
+        "2010"}],"PublicationCentury": ["2000"],"Source": ["Dorling Kindersley"],"Publisher":
+        ["Dorling Kindersley"],"SourceType": ["Publisher"],"Publisher_xml": [{"name":
+        "Dorling Kindersley"}],"Snippet": ["...G REAT TUSKS , huge ears, and a strong
+        trunk make the elephant one of the most magnificent creatures on Earth. __BENTO_HL_START__Elephants__BENTO_HL_END__
+        are the largest living land mammals..."],"EISBN": ["9780756672546","0756672546"],"ISBN":
+        ["0756657598","9780756657598"],"IsScholarly": ["false"],"ID": ["FETCH-gale_vrl_17965001280"],"PublicationTitle":
+        ["Children''s Illustrated Encyclopedia"],"PublicationYear": ["2010"],"PublicationPlace_xml":
+        [{"name": "New York"}],"MergedId": ["FETCHMERGED-gale_vrl_17965001280"],"PublicationDecade":
+        ["2010"],"ContentType": ["Reference"],"Title": ["__BENTO_HL_START__Elephants__BENTO_HL_END__"],"ExternalDocumentID":
+        ["1796500128"],"SSID": ["ssj0000522088"],"StartPage": ["184"],"thumbnail_s":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780756657598/small"],"thumbnail_m":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780756657598/medium"],"thumbnail_l":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780756657598/large"],"LinkModel":
+        ["OpenURL"]}],"spotlights": [],"spotlightPosition": 0,"rollups": {"image":
+        {"position": 0},"reference": {"position": 0},"newspaper": {"position": 0}}}'
     http_version: 
-  recorded_at: Mon, 06 Aug 2012 15:13:33 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Wed, 19 Jun 2013 15:30:48 GMT
+recorded_with: VCR 2.5.0

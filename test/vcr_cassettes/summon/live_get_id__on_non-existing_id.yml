@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.summon.serialssolutions.com/2.0.0/search?s.he=$$BENTO_HL_END$$&s.hs=$$BENTO_HL_START$$&s.ps=10&s.q=ID:(NONE%20SUCH)
+    uri: http://api.summon.serialssolutions.com/2.0.0/search?s.he=__BENTO_HL_END__&s.hs=__BENTO_HL_START__&s.ps=10&s.q=ID:(NONE%20SUCH)
     body:
       encoding: US-ASCII
       string: ''
@@ -12,9 +12,9 @@ http_interactions:
       Accept:
       - application/json
       X-Summon-Date:
-      - Wed, 02 Jan 2013 23:53:31 GMT
+      - Wed, 19 Jun 2013 15:30:45 GMT
       Authorization:
-      - Summon DUMMY_ACCESS_ID;RbsSujGNqxGIwdLOCWCH6rFvtSY=
+      - Summon DUMMY_ACCESS_ID;IUrt55S9q89H0tPI87aU1hrJUAs=
       Host:
       - api.summon.serialssolutions.com:80
   response:
@@ -28,27 +28,26 @@ http_interactions:
         YXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04
       !binary "RGF0YWNlbnRlcg==":
       - !binary |-
-        REZXMQ==
-      - !binary |-
         SUFEMQ==
       !binary "RGF0ZQ==":
       - !binary |-
-        V2VkLCAwMiBKYW4gMjAxMyAyMzo1MzozMSBHTVQ=
+        V2VkLCAxOSBKdW4gMjAxMyAxNTozMDo0NiBHTVQ=
       !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
       - !binary |-
         Y2h1bmtlZA==
     body:
       encoding: US-ASCII
-      string: ! '{"version": "2.0.0","sessionId": "b7232712-0a93-49e7-b5ab-83716199b33e","elapsedQueryTime":
-        53,"queryTime": 52,"totalRequestTime": 54,"pageCount": 0,"recordCount": 0,"query":
-        {"queryString": "s.rec.qs.max=&s.hs=%5C%24%5C%24BENTO_HL_START%5C%24%5C%24&s.mr=&s.rec.db.max=&s.ps=10&s.q=ID%3A%28NONE+SUCH%29&s.he=%5C%24%5C%24BENTO_HL_END%5C%24%5C%24&s.pn=1","pageNumber":
-        1,"pageSize": 10,"highlightStartDelimiter": "$$BENTO_HL_START$$","highlightEndDelimiter":
-        "$$BENTO_HL_END$$","textQueries": [{"textQuery": "ID:(NONE SUCH)","removeCommand":
+      string: ! '{"version": "2.0.0","sessionId": "dd22d4c4-a826-44f9-9214-9b2ddf4c9f55","elapsedQueryTime":
+        162,"queryTime": 159,"totalRequestTime": 162,"pageCount": 0,"recordCount":
+        0,"query": {"queryString": "s.hs=__BENTO_HL_START__&s.ps=10&s.q=ID%3A%28NONE+SUCH%29&s.he=__BENTO_HL_END__&s.pn=1","pageNumber":
+        1,"pageSize": 10,"highlightStartDelimiter": "__BENTO_HL_START__","highlightEndDelimiter":
+        "__BENTO_HL_END__","textQueries": [{"textQuery": "ID:(NONE SUCH)","removeCommand":
         "removeTextQuery(ID\\:\\(NONE SUCH\\))"}],"searchTerms": [],"textFilters":
         [],"rangeFilters": [],"facetValueFilters": [],"inclusiveFacetValueFilters":
         [],"facetValueGroupFilters": [],"facetFields": [],"rangeFacetFields": [],"sort":
         []},"facetFields": [],"rangeFacetFields": [],"didYouMeanSuggestions": [],"recommendationLists":
-        {},"documents": [],"spotlights": [],"spotlightPosition": 0}'
+        {},"documents": [],"spotlights": [],"spotlightPosition": 0,"rollups": {"image":
+        {"position": 0},"reference": {"position": 0},"newspaper": {"position": 0}}}'
     http_version: 
-  recorded_at: Wed, 02 Jan 2013 23:53:31 GMT
-recorded_with: VCR 2.3.0
+  recorded_at: Wed, 19 Jun 2013 15:30:46 GMT
+recorded_with: VCR 2.5.0
