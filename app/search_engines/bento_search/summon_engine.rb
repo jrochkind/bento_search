@@ -91,11 +91,16 @@ class BentoSearch::SummonEngine
   
   include ActionView::Helpers::OutputSafetyHelper # for safe_join
   
-  @@hl_start_token = "$$BENTO_HL_START$$"
-  @@hl_end_token = "$$BENTO_HL_END$$"
+  # Originally we used $$BENTO_HL_START$$ etc with dollar
+  # signs, but the dollar signs trigger a weird bug in summon
+  # where end tokens are missing from output. 
+  @@hl_start_token = "__BENTO_HL_START__"
+  @@hl_end_token = "__BENTO_HL_END__"
   
   def search_implementation(args)
     uri, headers = construct_request(args)
+
+    Rails.logger.debug("SummonEngine request URL: #{uri}")
     
     results = BentoSearch::Results.new
     
