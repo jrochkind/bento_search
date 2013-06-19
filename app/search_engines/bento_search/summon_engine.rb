@@ -70,7 +70,8 @@ require 'summon/transport/headers'
 #                  used to directly trigger functionality not covered by
 #                  the bento_search adapter. Values can be arrays where summon
 #                  keys are repeatable. 
-#
+# [:peer_reviewed_only]   Set to boolean true or string 'true', to restrict
+#                         results to peer-reviewed only (as identified by Summon)
 #
 # == Tech notes
 # We did not choose to use the summon ruby gem in general, we wanted more control
@@ -290,7 +291,12 @@ class BentoSearch::SummonEngine
     if args[:auth] == true
       query_params['s.role'] = "authenticated"
     end
-    
+
+    if [true, "true"].include? args[:peer_reviewed_only]
+      query_params['s.fvf'] ||= []
+      query_params['s.fvf'] << "IsPeerReviewed,true"
+    end
+
     if configuration.highlighting
       query_params['s.hs'] = @@hl_start_token
       query_params['s.he'] = @@hl_end_token

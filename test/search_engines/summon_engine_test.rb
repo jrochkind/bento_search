@@ -150,6 +150,15 @@ class SummonEngineTest < ActiveSupport::TestCase
     assert_include  query_params["b"], "b2"
   end
 
+  def test_construct_peer_reviewed_only
+    uri, headers = @engine.construct_request(:query => "foo", :peer_reviewed_only => "true")
+
+    query_params = CGI.parse( URI.parse(uri).query )
+
+    assert_kind_of Array, query_params["s.fvf"]
+    assert_include query_params["s.fvf"], "IsPeerReviewed,true"
+  end
+
   
   test_with_cassette("bad auth", :summon) do
     engine = BentoSearch::SummonEngine.new('access_id' => "bad_access_id", :secret_key => 'bad_secret_key')
