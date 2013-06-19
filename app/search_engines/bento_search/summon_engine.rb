@@ -35,17 +35,14 @@ require 'summon/transport/headers'
 # [fixed_params]  
 #     Fixed SerSol query param literals to send with every search.
 #     Value is a HASH, of keys and either single values or arrays
-#     of values. For instance, to exclude Newspaper Articles and Books
+#     of values. For instance, to exclude certain content types
 #     from all search results, in config:
 #         :fixed_params => 
-#           {"s.cmd" => ["addFacetValueFilters(ContentType,Web Resource:true,Reference:true,eBook:true)"]
+#           {"s.fvf" => ["ContentType,Web Resource,true","ContentType,Reference,true","ContentType,eBook,true"] }
 #     Note that values are NOT URI escaped in config, code will take care
 #     of that for you. You could also fix "s.role" to 'authenticated' using
 #     this mechanism, if you restrict all access to your app to authenticated
 #     affiliated users. 
-#     Note: We wanted to use this for content type facet exclusions, as
-#     per above. We could NOT get Summon "s.fvf" param to work right, had
-#     to use the s.cmd=addFacetValueFilter version. 
 # [highlighting]
 #     Default true, ask SerSol for query-in-context highlighting in
 #     title and snippets field. If true you WILL get HTML with <b> tags
