@@ -433,6 +433,7 @@ class BentoSearch::SummonEngine
   # aren't even listed in the docs, but they are real. I think. 
   def search_field_definitions
       {
+        nil                   => {:semantic => :general},
         "AuthorCombined"      => {:semantic => :author},
         "TitleCombined"       => {:semantic => :title},
         # SubjectTerms does not include TemporalSubjectTerms
@@ -443,7 +444,7 @@ class BentoSearch::SummonEngine
         "ISBN"                => {:semantic => :isbn},
         "ISSN"                => {:semantic => :issn},  
         "OCLC"                => {:semantic => :oclcnum},
-        "PublicationSeriesTitle" => {}
+        "PublicationSeriesTitle" => {:semantic => :publication_title }
       }
   end
   
