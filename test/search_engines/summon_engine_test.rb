@@ -159,6 +159,30 @@ class SummonEngineTest < ActiveSupport::TestCase
     assert_include query_params["s.fvf"], "IsPeerReviewed,true"
   end
 
+  def test_construct_pubyear_range
+    uri, headers = @engine.construct_request(:query => "foo", :pubyear_start => "1990", :pubyear_end => 2000)
+
+    query_params = CGI.parse( URI.parse(uri).query )    
+
+    assert_include query_params["s.rf"], "PublicationDate,1990:2000"
+  end
+
+  def test_construct_pubyear_range_open_bottom
+    uri, headers = @engine.construct_request(:query => "foo", :pubyear_end => 2000)
+
+    query_params = CGI.parse( URI.parse(uri).query )    
+
+    assert_include query_params["s.rf"], "PublicationDate,*:2000"
+  end
+
+  def test_construct_pubyear_range_open_top
+    uri, headers = @engine.construct_request(:query => "foo", :pubyear_start => "1990")
+
+    query_params = CGI.parse( URI.parse(uri).query )    
+
+    assert_include query_params["s.rf"], "PublicationDate,1990:*"
+  end
+
   
   test_with_cassette("bad auth", :summon) do
     engine = BentoSearch::SummonEngine.new('access_id' => "bad_access_id", :secret_key => 'bad_secret_key')

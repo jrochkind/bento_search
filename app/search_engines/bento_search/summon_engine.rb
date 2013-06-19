@@ -72,6 +72,11 @@ require 'summon/transport/headers'
 #                  keys are repeatable. 
 # [:peer_reviewed_only]   Set to boolean true or string 'true', to restrict
 #                         results to peer-reviewed only (as identified by Summon)
+# [:pubyear_start]
+# [:pubyear_end]          Date range limiting, pass in custom search args,
+#                         one or both of pubyear_start and pubyear_end
+#                         #to_i will be called on it, so can be string.
+#                         .search(:query => "foo", :pubyear_start => 2000)
 #
 # == Tech notes
 # We did not choose to use the summon ruby gem in general, we wanted more control
@@ -295,6 +300,18 @@ class BentoSearch::SummonEngine
     if [true, "true"].include? args[:peer_reviewed_only]
       query_params['s.fvf'] ||= []
       query_params['s.fvf'] << "IsPeerReviewed,true"
+    end
+
+    # Summon uses "*" for open ended range endpoint
+    if args[:pubyear_start] || args[:pubyear_end]
+      from = args[:pubyear_start].to_i      
+      from = "*" if from == 0
+
+      to = args[:pubyear_end].to_i
+      to = "*" if to == 0
+
+      query_params["s.rf"] ||= []
+      query_params["s.rf"] << "PublicationDate,#{from}:#{to}"      
     end
 
     if configuration.highlighting
