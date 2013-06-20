@@ -128,8 +128,6 @@ module BentoSearch
     #(Sorry, will be 'Spanish' never 'Espa~nol", we don't
     # have a data source for language names in other languages right now. )
     def display_language
-      return nil unless self.language_code
-      
       default = I18n.locale.try {|l| l.to_s.gsub(/\-.*$/, '')} || "en" 
       
       this_doc = self.language_obj.try(:iso_639_1)

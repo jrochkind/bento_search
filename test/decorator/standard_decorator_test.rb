@@ -50,6 +50,11 @@ class StandardDecoratorTest < ActionView::TestCase
       assert_equal "Spanish", item.display_language      
     end
   end
+
+  test "display_language works with just langauge_str" do
+     item = decorator(:language_str => 'German')      
+     assert_equal "German", item.display_language
+  end
   
   test "display_format with nil format" do
     item = decorator(:format => nil, :format_str => nil)
