@@ -170,6 +170,7 @@ class BentoSearch::SummonEngine
       if (pub = first_if_present doc_hash["Publisher_xml"])
         item.publisher    = pub["name"]
       end
+
       # if it's a dissertation, put the school in the 'publisher' field.
       # if we don't have one otherwise. 
       if (! item.publisher) && (school = first_if_present doc_hash["DissertationSchool_xml"])
@@ -187,7 +188,7 @@ class BentoSearch::SummonEngine
         
         item.authors << a unless a.empty?
       end
-      
+
       item.format         = normalize_content_type( first_if_present doc_hash["ContentType"] )
       if doc_hash["ContentType"]
         item.format_str     = doc_hash["ContentType"].join(", ")
@@ -238,14 +239,17 @@ class BentoSearch::SummonEngine
   # This ends up losing useful distinctions Summon makes, however. 
   def normalize_content_type(summon_type)
     case summon_type
-    when "Journal Article", "Book Review", "Trade Publication Article" then "Article"
-    when "Audio Recording", "Music Recording" then "AudioObject"
-    when "Book", "eBook" then "Book"
-    when "Conference Proceedings" then :conference_paper
+    when "Journal Article", "Book Review", "Trade Publication Article", "Newspaper Article" then "Article"
+    when "Audio Recording", "Music Recording", "Spoken Word Recording" then "AudioObject"
+    when "Book", "eBook", "Book / eBook", "Book Chapter" then "Book"
+    when "Conference Proceeding" then :conference_paper
     when "Dissertation" then :dissertation
-    when "Journal", "Newsletter" then :serial
+    when "Journal", "Newsletter", "Newspaper" then :serial
     when "Photograph" then "Photograph"
-    when "Video Recording" then "VideoObject"
+    when "Report", "Technical Report"   then "Report"
+    when "Video Recording", "Film" then "VideoObject"
+    when "Web Resource" then "WebPage"
+    when "Computer File", "Data Set" then "SoftwareApplication"
     else nil
     end
   end
