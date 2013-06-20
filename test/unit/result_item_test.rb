@@ -50,6 +50,23 @@ class ResultItemTest < ActiveSupport::TestCase
     assert_equal "English", r.language_str
     
   end
+
+  def test_language_obj
+    # from language_code
+    r = ResultItem.new(:title => "something", :language_code => "en")
+    assert_present r.language_obj
+    assert_equal "eng", r.language_obj.iso_639_3
+
+    # from language_str only with no language_code
+    r = ResultItem.new(:title => "something", :language_str => "English")
+    assert_present r.language_obj
+    assert_equal "eng", r.language_obj.iso_639_3
+
+    # neither is nil with no raise
+    r = ResultItem.new(:title => "something")
+    assert_nil r.language_obj    
+  end
+
   
   def test_bad_language_code
     r = ResultItem.new(:title => "something", :language_code => "not_valid")

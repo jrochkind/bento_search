@@ -151,12 +151,11 @@ module BentoSearch
         end
       end
     end
-    # Returns a LanguageList gem language object, from #language_code,
-    # convenience
-    def language_obj
-      return nil unless self.language_code
-      
-      @language_obj ||= LanguageList::LanguageInfo.find( self.language_code )
+    # Returns a LanguageList gem language object-- from #language_code
+    # if available, otherwise from direct language_str if available and
+    # possible.     
+    def language_obj            
+      @language_obj ||= LanguageList::LanguageInfo.find( self.language_code || self.language_str )
     end
     
     # Two letter ISO language code, or nil
