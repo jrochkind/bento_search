@@ -212,6 +212,9 @@ class SummonEngineTest < ActiveSupport::TestCase
     assert_not_nil first.link_is_fulltext?
     
     assert_present  first.unique_id
+
+    # Make sure we have the summon.original_data hash
+    assert_kind_of Hash,  first.custom_data["summon.original_data"]
   end
   
   test_with_cassette("proper tags for snippets", :summon) do

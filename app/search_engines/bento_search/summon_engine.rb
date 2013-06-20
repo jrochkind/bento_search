@@ -78,6 +78,11 @@ require 'summon/transport/headers'
 #                         #to_i will be called on it, so can be string.
 #                         .search(:query => "foo", :pubyear_start => 2000)
 #
+# == Custom response data
+#
+# * result_item.custom_data["summon.original_data"] has a Hash of the decoded JSON
+#   for the item, directly as returned by Summon API. 
+#
 # == Tech notes
 # We did not choose to use the summon ruby gem in general, we wanted more control
 # than it offered (ability to use HTTPClient persistent connections, MultiJson
@@ -131,6 +136,8 @@ class BentoSearch::SummonEngine
     
     hash["documents"].each do |doc_hash|
       item = BentoSearch::ResultItem.new
+
+      item.custom_data["summon.original_data"] = doc_hash
       
       item.unique_id      = first_if_present doc_hash["ID"]
       
@@ -142,7 +149,7 @@ class BentoSearch::SummonEngine
       # the documented one. 
       item.link_is_fulltext = doc_hash["hasFullText"] 
       
-      if configuration.use_summon_openurl      
+      if configuration.use_summon_openurl
         item.openurl_kev_co = doc_hash["openUrl"] # Summon conveniently gives us pre-made OpenURL
       end
             
