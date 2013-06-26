@@ -97,8 +97,18 @@ require 'summon/transport/headers'
 class BentoSearch::SummonEngine
   include BentoSearch::SearchEngine
   
+
+  # Can't change http timeout in config, because we keep an http
+  # client at class-wide level, and config is not class-wide.
+  # Change this 'constant' if you want to change it, I guess.
+  #
+  # Summon is pretty fast, we think a 4.5 second timeout should be
+  # be plenty. May be adjusted from experience. 
+  HttpTimeout = 4.5
   extend HTTPClientPatch::IncludeClient
-  include_http_client
+  include_http_client do |client|
+    client.connect_timeout = client.send_timeout = client.receive_timeout = HttpTimeout
+  end
   
   include ActionView::Helpers::OutputSafetyHelper # for safe_join
   
