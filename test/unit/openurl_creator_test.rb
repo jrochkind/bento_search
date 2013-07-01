@@ -171,6 +171,47 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
     assert_equal "Containing Book", openurl.referent.metadata["btitle"]
     
   end
+
+  # No format given, we guess book if there's an ISBN
+  # and no source_title
+  def test_no_format_guess_book
+    item = decorated_item(    
+      :title => "Book Title",
+      :isbn => "1234567X",      
+      )
+
+    openurl = item.to_openurl
+
+    assert_equal "book", openurl.referent.format
+    assert_equal "book", openurl.referent.metadata["genre"]
+  end
+
+  # No format given, but ISBN and source_title, we guess book_item
+  def test_no_format_guess_book_item
+    item = decorated_item(    
+      :title => "Chapter Title",
+      :isbn => "1234567X",
+      :source_title => "Book Title"      
+      )
+
+    openurl = item.to_openurl
+
+    assert_equal "book", openurl.referent.format
+    assert_equal "bookitem", openurl.referent.metadata["genre"]
+  end
+
+  def test_no_format_guess_journal_article
+    item = decorated_item(    
+      :title => "Article Title",      
+      :source_title => "Journal Title"      
+      )
+
+    openurl = item.to_openurl
+
+    assert_equal "journal", openurl.referent.format
+    assert_equal "article", openurl.referent.metadata["genre"]
+  end
+    
   
   def test_doi
     item = decorated_item(      
