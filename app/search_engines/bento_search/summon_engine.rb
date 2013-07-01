@@ -251,7 +251,8 @@ class BentoSearch::SummonEngine
     case summon_type
     when "Journal Article", "Book Review", "Trade Publication Article", "Newspaper Article" then "Article"
     when "Audio Recording", "Music Recording", "Spoken Word Recording" then "AudioObject"
-    when "Book", "eBook", "Book / eBook", "Book Chapter" then "Book"
+    when "Book", "eBook", "Book / eBook" then "Book"
+    when "Book Chapter" then :book_item
     when "Conference Proceeding" then :conference_paper
     when "Dissertation" then :dissertation
     when "Journal", "Newsletter", "Newspaper" then :serial
