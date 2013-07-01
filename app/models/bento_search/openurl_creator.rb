@@ -114,16 +114,7 @@ module BentoSearch
         when "Article"
           "article"
         else
-          # We guess heuristically, if we can
-          if result_item.source_title.present? && result_item.isbn.present?
-            "bookitem"
-          elsif result_item.isbn.present?
-            "book"
-          elsif result_item.source_title.present?
-            "article"
-          else
-            nil
-          end
+          nil
       end          
     end
     
@@ -150,12 +141,7 @@ module BentoSearch
       when :dissertation
         "dissertation"
       else
-        # We guess. book if we have an ISBN, otherwise journal. 
-        if result_item.isbn.present?
-          "book"
-        else
-          "journal"
-        end
+        "journal"
       end
     end
     
