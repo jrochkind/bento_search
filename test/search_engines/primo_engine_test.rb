@@ -53,7 +53,6 @@ class PrimoEngineTest < ActiveSupport::TestCase
     %w{format_str format title authors volume issue start_page journal_title issn unique_id}.each do |attr|
       assert_present first.send(attr), "must have #{attr}"
     end
-
   end
 
   # test of highlighting assumes if search for 'cancer', then
@@ -66,6 +65,8 @@ class PrimoEngineTest < ActiveSupport::TestCase
     assert first.title.html_safe?, "title is HTML safe"
 
     assert_include first.title, '<b class="bento_search_highlight">'
+
+    assert_present first.snippets
 
   end
 

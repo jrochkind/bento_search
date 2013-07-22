@@ -109,6 +109,11 @@ class BentoSearch::PrimoEngine
 
       item.custom_data["snippet"] = handle_snippet_value text_at_xpath(doc_xml, "./PrimoNMBib/record/display/snippet")
 
+      # straight snippets
+      item.snippets              = doc_xml.xpath("./PrimoNMBib/record/display/snippet").collect do |node|
+        handle_snippet_value( node.text )
+      end
+
       # If we have a snippet that is not just the title, and we've been configured
       # to use it instead of the abstract, then do so.
       # there's an empty snippet tag even if no snippet, have to check for children.
