@@ -2,12 +2,12 @@
    #    * 'item' that's a BentoSearch::ResultItem
    #    * 'results' that's the BentoSearch::Results (optional, actually)
    #    * 'item_counter', 1-based collection counter, passed in automatically
-   #       by rails render collection (little known rails feature), 
+   #       by rails render collection (little known rails feature),
    #       can be used with results.start to calculate actual result set
-   #       index. 
-   #   
+   #       index.
+   #
    # Custom partials meant to take this place of this one should
-   # use same convention, local 'item'. 
+   # use same convention, local 'item'.
    #
    # By default we're passing index to item_title partial to display
    # counter for results, not sure if that's going to be generally
@@ -19,58 +19,58 @@
 
 
 <% bento_decorate(item) do |item| %>
-    
+
   <%# for debugging purposes, we'll include the vendor-specific unique_id, if we have
       one, in a data-unique-id attribute. %>
 
   <div class="bento_item" data-unique-id="<%= item.unique_id %>">
     <%= render :partial => "bento_search/item_title", :object => item, :as => 'item', :locals => {:index => bento_item_counter(local_assigns[:item_counter], local_assigns[:results]) } %>
-      
 
-    <div class="bento_item_body">      
 
-      
-      
+    <div class="bento_item_body">
+
+
+
       <% if item.any_present?(:authors, :display_date) %>
         <p class="bento_item_row first_about">
-            
+
           <% if item.authors.present? %>
             <span class="authors">
               <%= item.render_authors_list %>
             </span>
           <% end %>
-          
+
           <% if item.authors.present? && item.display_date.present? %>
             <span class="seperator"><%= I18n.t("bento_search.author_date_seperator", :default=>"—") %></span>
           <% end %>
-          
+
           <% if item.display_date.present? %>
-            <span class="date">              
+            <span class="date">
               <%= item.display_date %>
             </span>
           <% end %>
-                
+
         </p>
-      <% end %>      
-                    
+      <% end %>
+
       <% if item.abstract %>
         <p class="bento_item_row abstract">
           <%= bento_truncate( item.abstract ) %>
         </p>
       <% end %>
-      
+
       <% if item.has_source_info? %>
         <p class="bento_item_row second_about">
-          <%= item.render_source_info %>        
+          <%= item.render_source_info %>
         </p>
       <% end %>
-                  
+
       <% if item.other_links.present? %>
         <p class="bento_item_other_links">
           <%= render :partial => "bento_search/link", :collection => item.other_links %>
         </p>
       <% end %>
     </div>
-    
+
   </div>
 <% end %>
