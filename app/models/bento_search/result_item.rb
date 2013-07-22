@@ -218,6 +218,11 @@ module BentoSearch
     # An ARRAY of string query-in-context snippets. Will usually
     # have highlighting <b> tags in it. Creator is responsible
     # for making sure it's otherwise html-safe. 
+    #
+    # Not all engines may stores Snippets array in addition to abstract,
+    # some may only store one or the other. Some may store both but
+    # with same content formatted differently (array of multiple vs
+    # one combined string), some engines they may be different. 
     attr_accessor :snippets
 
     # An array (order matters) of BentoSearch::Author objects
