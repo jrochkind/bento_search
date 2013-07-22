@@ -228,6 +228,16 @@ class SummonEngineTest < ActiveSupport::TestCase
     assert first.title.html_safe?, "title is HTML safe"
   end
 
+  test_with_cassette("snippets array", :summon) do
+    results = @engine.search("noam chomsky")
+
+    assert_present results.first
+
+    assert_present results.first.snippets
+
+    assert_include results.first.snippets.first, '<b class="bento_search_highlight">'
+  end
+
   test_with_cassette("live #get(id)", :summon) do
     results = @engine.search("cancer")
 

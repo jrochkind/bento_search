@@ -1,0 +1,363 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.summon.serialssolutions.com/2.0.0/search?s.he=__BENTO_HL_END__&s.hs=__BENTO_HL_START__&s.ps=10&s.q=noam%20chomsky
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf8
+      Accept:
+      - application/json
+      X-Summon-Date:
+      - Mon, 22 Jul 2013 20:41:39 GMT
+      Authorization:
+      - Summon DUMMY_ACCESS_ID;IWOw90F83JtbN2hFabmVzpzzeoI=
+      Host:
+      - api.summon.serialssolutions.com:80
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04
+      !binary "RGF0YWNlbnRlcg==":
+      - !binary |-
+        SUFEMQ==
+      !binary "RGF0ZQ==":
+      - !binary |-
+        TW9uLCAyMiBKdWwgMjAxMyAyMDo0MTozOSBHTVQ=
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+    body:
+      encoding: UTF-8
+      string: ! '{"version": "2.0.0","sessionId": "5386e556-3f22-4584-ac1b-278cfceed662","elapsedQueryTime":
+        311,"queryTime": 305,"totalRequestTime": 372,"pageCount": 8378,"recordCount":
+        83776,"query": {"queryString": "s.hs=__BENTO_HL_START__&s.ps=10&s.q=noam+chomsky&s.he=__BENTO_HL_END__&s.pn=1","pageNumber":
+        1,"pageSize": 10,"highlightStartDelimiter": "__BENTO_HL_START__","highlightEndDelimiter":
+        "__BENTO_HL_END__","textQueries": [{"textQuery": "noam chomsky","removeCommand":
+        "removeTextQuery(noam chomsky)"}],"searchTerms": [],"textFilters": [],"rangeFilters":
+        [],"facetValueFilters": [],"inclusiveFacetValueFilters": [],"facetValueGroupFilters":
+        [],"facetFields": [],"rangeFacetFields": [],"sort": []},"facetFields": [],"rangeFacetFields":
+        [],"didYouMeanSuggestions": [],"recommendationLists": {},"documents": [{"hasFullText":
+        true,"isFullTextHit": false,"inHoldings": true,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Noam+Chomsky&rft.jtitle=Discover&rft.au=Valerie+Ross&rft.date=2011-11-01&rft.issn=0274-7529&rft.volume=32&rft.issue=9&rft.spage=66&rft.externalDBID=GDIS&rft.externalDocID=2497666681","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwTZ27DsIwDEWzIDEjofwAqyvybmZE1YWqgg5lTNx6BsH_C6cFifFOGewcXyuKLcSB75CfnfNgiDud8hAHCVUGHWqkAmW_DnG9xf4S7p1t_4je7MXQnIdTC99dAPBgSwBIJpA1Fn1KxH6QuWrIl_JOqUZlSaPOKfspsX1HG20OSMTodahVjtNRig1xPGdZGCv5LCm2Y9TXboz9Knc_Wb2W_07V8y0Z6Us6gKrcB2G6M-0","Volume":
+        ["32"],"Language": ["English"],"Author": ["Valerie Ross"],"Score": ["65.849144"],"RelatedPersons_xml":
+        [{"fullname": "Chomsky, Noam"}],"Copyright": ["Copyright DISCOVER, a Division
+        of Disney Magazine Publishing, Inc. Nov 2011"],"IsPeerReviewed": ["false"],"PublicationDate_xml":
+        [{"text": "20111101","month": "11","year": "2011","day": "01"}],"PublicationDate":
+        ["20111101"],"PublicationCentury": ["2000"],"RelatedPersons": ["Chomsky, Noam"],"Copyright_xml":
+        [{"notice": "Copyright DISCOVER, a Division of Disney Magazine Publishing,
+        Inc. Nov 2011"}],"AbstractList": ["Ross interviews radical linguist Noam Chomsky.
+        Here, Chomsky describes human language as a unique trait, compares the differences
+        between historical grammars and descriptive grammars and reveals what sparked
+        his interest in human language. Among other things, he details the outstanding
+        big questions in linguistics and narrates whether the brain imaging has changed
+        the way humans understand language."],"SourceType": ["Aggregation Database"],"Snippet":
+        ["...Ross interviews radical linguist __BENTO_HL_START__Noam__BENTO_HL_END__
+        __BENTO_HL_START__Chomsky__BENTO_HL_END__. Here, __BENTO_HL_START__Chomsky__BENTO_HL_END__
+        describes human language as a unique trait, compares the differences between
+        historical grammars and descriptive grammars and reveals what sparked his
+        interest in human language..."],"IsScholarly": ["false"],"ID": ["FETCH-LOGICAL-p511-cf37f434c6aaf7298013f62183fa8c14f2c2bab6da966c494b7cff2845c21b9d0"],"DLL_JC":
+        ["GDIS"],"PublicationTitle": ["Discover"],"Issue": ["9"],"PCID": ["65243491"],"Discipline":
+        ["Engineering","Sciences (General)"],"PublicationYear": ["2011"],"Genre":
+        ["Interview"],"PQID": ["900914536"],"DatabaseTitleList": [""],"Abstract":
+        ["Ross interviews radical linguist Noam Chomsky. Here, Chomsky describes human
+        language as a unique trait, compares the differences between historical grammars
+        and descriptive grammars and reveals what sparked his interest in human language.
+        Among other things, he details the outstanding big questions in linguistics
+        and narrates whether the brain imaging has changed the way humans understand
+        language."],"SubjectTerms": ["Specialists","Cognition & reasoning","Linguistics","Differences","Languages"],"MergedId":
+        ["FETCHMERGED-LOGICAL-p511-cf37f434c6aaf7298013f62183fa8c14f2c2bab6da966c494b7cff2845c21b9d0"],"Author_xml":
+        [{"sequence": "1","fullname": "Valerie Ross"}],"PublicationDecade": ["2010"],"ContentType":
+        ["Journal Article"],"Title": ["__BENTO_HL_START__Noam__BENTO_HL_END__ __BENTO_HL_START__Chomsky__BENTO_HL_END__"],"ExternalDocumentID":
+        ["2497666681"],"ISSN": ["0274-7529"],"SSID": ["ssj0000723"],"StartPage": ["66"],"LinkModel":
+        ["OpenURL"]},{"hasFullText": false,"isFullTextHit": false,"inHoldings": false,"openUrl":
+        "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.title=Noam+Chomsky&rft.au=Sperlich%2C+Wolfgang&rft.date=2006-06-01&rft.pub=Reaktion+Books&rft.isbn=1861892691&rft.externalDocID=10285792","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwRV09C8JADL1FcHAS5P6Aa0p6uY92FksXS_ED6ngfvV30_2POKo6ZMuTlhUfIixB77iE7G2OBMiudsogDH-sAyjUxF1K2i4nrpR1P7j7ofvMnqG4nbt3xeujh-wsAPA-VxoIpRueBZuR5ToEYVjmY3KhIOtmEiVg5GB0J0WunUnaonWWEFkxi9ijFKnNBZ1lIVnJCKdZTq87D1I5LuP2F1fNz8FQ9XpI5_YMHqCvzBtW6Mjc","Language":
+        ["English"],"Edition": ["illustrated edition"],"Author": ["Sperlich, Wolfgang
+        B"],"PublicationPlace": ["London"],"Score": ["65.73825"],"PageCount": ["162"],"Copyright":
+        ["Copyright © 2006 Wolfgang B. Sperlich"],"IsPeerReviewed": ["false"],"PublicationDate_xml":
+        [{"text": "20060601","month": "06","year": "2006","day": "01"}],"PublicationDate":
+        ["20060106","20060601"],"PublicationSeriesTitle": ["RB-Critical Lives"],"PublicationCentury":
+        ["2000"],"LCCN": ["P85.C47"],"Copyright_xml": [{"notice": "Copyright © 2006
+        Wolfgang B. Sperlich"}],"Publisher": ["Reaktion Books"],"AbstractList": ["\"\"The
+        intellectual tradition is one of servility to power, and if I didn''t betray
+        it I''d be ashamed of myself.\"\" This declaration by Noam Chomsky exemplifies
+        the uncompromising radicalism that has long defined his life and work. A linguist,
+        philosopher, prolific author, and political activist, Chomsky is one of the
+        most influential Western intellectuals of the last half-century. Yet it is
+        this very capaciousness that biographers and interpreters have struggled with,
+        and as a result, there are very few readable accounts of Chomsky and his project.
+        Wolfgang B. Sperlich surmounts this challenge with his succinct yet in-depth
+        introduction to the thinker in Noam Chomsky, one of the new titles in the
+        acclaimed Critical Lives series. Beginning with Chomsky''s formative years
+        as a sixteen-year-old student at the University of Pennsylvania, Sperlich
+        traces his education in linguistics and politics in its rich historical context.
+        He explores Chomsky''s main intellectual influences, particularly in language
+        studies, and charts his strained relationship with mainstream American academia.
+        Sperlich also offers an informed overview of Chomsky''s landmark linguistic
+        contributions as a comprehensive introduction to his work, and he explains
+        the latest developments in Chomskyan linguistics and how they influence research
+        in fields as varied as neuroscience, biology, and evolution. Sperlich is equally
+        attentive to Chomsky''s political activism: through Sperlich''s account we
+        follow Chomsky from his pacifist-anarchist lectures and writings of the 1950s
+        and 1960s to his seminal 1988 treatise, Manufacturing Consent, and his relentless
+        criticism of the American government over two decades. A compact and rich
+        biographical study, Noam Chomsky is a brilliant introduction to one of the
+        most polarizing intellectuals of our time, a thinker whose words continue
+        to pierce the heart of public discourse.","Noam Chomsky has become the acknowledged
+        supreme anti-authoritarian figure of our age. A prolific writer, researcher
+        and critical thinker, he has shaped contemporary linguistics, philosophy and
+        liberal thought like no other. Volumes on Chomsky abound, yet an approachable
+        and up-to-date introduction to the man and his life has until now been lacking,
+        due perhaps to the sometimes dense and technical nature of Chomsky''s writing,
+        and also the sheer volume of his work. \"Noam Chomsky\" presents just such
+        an introduction. With extensive biographical background notes, photographs,
+        and illustrations, Wolfgang B. Sperlich introduces the reader to Chomsky''s
+        major innovations in linguistics and politics, illuminating the work within
+        its historical context. Chomsky''s formative years and his main intellectual
+        influences, especially in the field of language studies; and his gradual separation
+        from the mainstream American intellectual community are described. The work
+        also traces the latest developments in Chomskyan linguistics and how they
+        relate to wider issues of cognition, neuro-science, biology and evolution.
+        Chomsky''s career as a political activist is charted: from a 16-year-old university
+        student against the background of Hiroshima and Nagasaki; the 1950s and ''60s
+        and his pacifist-anarchist lectures and writings; the 1970s and ''80s and
+        his development of increasingly radical anarcho-syndicalist thought; the late
+        1980s and ''90s and his seminal treatise on mass-media Manufacturing Consent;
+        and, to the present where he has become an increasingly ferocious critic of
+        American politics and the American political system. Those interested in Chomsky''s
+        contributions to linguistics will find in Noam Chomsky a challenging but non-technical
+        introduction; those interested in Chomsky''s politics will receive a common-sense
+        lesson in political analysis; and, those interested in Chomsky''s life will
+        discover a rich and sympathetic portrait of a man who, despite a forbidding
+        reputation, is actually very human indeed."],"LCCallNum": ["P85.C47"],"SourceType":
+        ["Publisher","Enrichment Source"],"Publisher_xml": [{"name": "Reaktion Books"}],"Snippet":
+        ["....\"\" This declaration by __BENTO_HL_START__Noam__BENTO_HL_END__ __BENTO_HL_START__Chomsky__BENTO_HL_END__
+        exemplifies the uncompromising radicalism that has long defined his life and
+        work...","...__BENTO_HL_START__Noam__BENTO_HL_END__ __BENTO_HL_START__Chomsky__BENTO_HL_END__
+        has become the acknowledged supreme anti-authoritarian figure of our age..."],"DEWEY":
+        ["410.92","320.973"],"EISBN": ["1861895089","9781861895080"],"ISBN": ["1861892691","9781861892690"],"IsScholarly":
+        ["false"],"ID": ["FETCH-LOGICAL-a23886-53647b3e09293b3793fb5f82c34d6d0d328954c300a472df7047604042570fa0"],"Discipline":
+        ["Political Science","Languages & Literatures"],"PublicationYear": ["2006"],"PublicationPlace_xml":
+        [{"name": "GB"},{"name": "London"}],"DatabaseTitleList": ["",""],"Abstract":
+        ["\"\"The intellectual tradition is one of servility to power, and if I didn''t
+        betray it I''d be ashamed of myself.\"\" This declaration by Noam Chomsky
+        exemplifies the uncompromising radicalism that has long defined his life and
+        work. A linguist, philosopher, prolific author, and political activist, Chomsky
+        is one of the most influential Western intellectuals of the last half-century.
+        Yet it is this very capaciousness that biographers and interpreters have struggled
+        with, and as a result, there are very few readable accounts of Chomsky and
+        his project. Wolfgang B. Sperlich surmounts this challenge with his succinct
+        yet in-depth introduction to the thinker in Noam Chomsky, one of the new titles
+        in the acclaimed Critical Lives series. Beginning with Chomsky''s formative
+        years as a sixteen-year-old student at the University of Pennsylvania, Sperlich
+        traces his education in linguistics and politics in its rich historical context.
+        He explores Chomsky''s main intellectual influences, particularly in language
+        studies, and charts his strained relationship with mainstream American academia.
+        Sperlich also offers an informed overview of Chomsky''s landmark linguistic
+        contributions as a comprehensive introduction to his work, and he explains
+        the latest developments in Chomskyan linguistics and how they influence research
+        in fields as varied as neuroscience, biology, and evolution. Sperlich is equally
+        attentive to Chomsky''s political activism: through Sperlich''s account we
+        follow Chomsky from his pacifist-anarchist lectures and writings of the 1950s
+        and 1960s to his seminal 1988 treatise, Manufacturing Consent, and his relentless
+        criticism of the American government over two decades. A compact and rich
+        biographical study, Noam Chomsky is a brilliant introduction to one of the
+        most polarizing intellectuals of our time, a thinker whose words continue
+        to pierce the heart of public discourse."],"SubjectTerms": ["LANGUAGE ARTS
+        & DISCIPLINES","General","Biography & Autobiography","Chomsky, Noam","Linguists"],"MergedId":
+        ["FETCHMERGED-LOGICAL-a23886-53647b3e09293b3793fb5f82c34d6d0d328954c300a472df7047604042570fa0"],"Author_xml":
+        [{"sequence": "1","fullname": "Sperlich, Wolfgang B"}],"PublicationDecade":
+        ["2000"],"ContentType": ["eBook"],"Title": ["__BENTO_HL_START__Noam__BENTO_HL_END__
+        __BENTO_HL_START__Chomsky__BENTO_HL_END__"],"ExternalDocumentID": ["10285792","410802","9781861895080"],"SSID":
+        ["ssj0000340971","ssib002888517"],"thumbnail_l": ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9781861892690/large"],"thumbnail_s":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9781861892690/small"],"thumbnail_m":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9781861892690/medium"],"LinkModel":
+        ["OpenURL"]},{"hasFullText": true,"isFullTextHit": false,"inHoldings": true,"openUrl":
+        "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book%20item&rft.title=Encyclop%C3%A6dia+Britannica+Online&rft.atitle=Chomsky%2C+Noam&rft.date=2013-01-15&rft.pub=Encyclop%C3%A6dia+Britannica+Inc&rft.externalDocID=82316","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQAeYhs1RTUzNd4zRgTwc0EaebmGyYpGtkbpGcBiqUzSCHuAZbBviaR_qZePAgCio3UQYpN9cQZw_dJFDnOA-0QyI-NSkeNFtlZiDOwJoGjJVUcVBJKQ7UJc7AEWFpFOQXYRkA4QrBuHrF4F1LeoUl4sCCGRypuoZ6pgAf7iUT","Language":
+        ["English"],"Score": ["59.53925"],"Copyright": ["Copyright © 1994-2013 Encyclopædia
+        Britannica, Inc."],"DBID": ["KLX","ASC","2WU","BKT","DNS","3ZV","KER","5VY"],"IsPeerReviewed":
+        ["false"],"PublicationDate": ["2013-01-15"],"PublicationDate_xml": [{"text":
+        "2013-01-15","month": "01","year": "2013","day": "15"}],"PublicationCentury":
+        ["2000"],"Copyright_xml": [{"notice": "Copyright © 1994-2013 Encyclopædia
+        Britannica, Inc."}],"Publisher": ["Encyclopædia Britannica Inc"],"SourceType":
+        ["Publisher"],"Publisher_xml": [{"name": "Encyclopædia Britannica Inc"}],"Snippet":
+        ["...__BENTO_HL_START__Chomsky__BENTO_HL_END__, __BENTO_HL_START__Noam__BENTO_HL_END__
+        __BENTO_HL_START__Noam__BENTO_HL_END__ __BENTO_HL_START__Chomsky__BENTO_HL_END__,
+        April 27, 1999. AP (born Dec. 7, 1928, Philadelphia, Pa., U.S.) American theoretical
+        linguist whose work from the 1950s..."],"URI": ["http://www.britannica.com/EBchecked/topic/114218/Noam-Chomsky"],"IsScholarly":
+        ["false"],"ID": ["FETCH-britannica_eb_823160"],"PublicationTitle": ["Encyclopædia
+        Britannica Online"],"PublicationYear": ["2013"],"SubjectTerms": ["mind","language","linguistics"],"MergedId":
+        ["FETCHMERGED-britannica_eb_823160"],"PublicationDecade": ["2010"],"ContentType":
+        ["Reference"],"Title": ["__BENTO_HL_START__Chomsky__BENTO_HL_END__, __BENTO_HL_START__Noam__BENTO_HL_END__"],"ExternalDocumentID":
+        ["82316"],"thumbnail_s": ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/custom?url=http%3A%2F%2Fmedia-3.web.britannica.com%2Feb-media%2F31%2F62031-003-BD22ADCB.gif"],"thumbnail_l":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/custom?url=http%3A%2F%2Fmedia-3.web.britannica.com%2Feb-media%2F31%2F62031-004-FFAD25E4.jpg"],"Database_xml":
+        [{"sequence": "1","name": "Britannica Online Academic Edition","dbid": "BKT","url":
+        "http://search.eb.com","sourceTypes": ["Publisher"]}],"LinkModel": ["DirectLink"]},{"hasFullText":
+        true,"isFullTextHit": false,"inHoldings": true,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Noam+Chomsky&rft.jtitle=Veja&rft.date=2009-09-02&rft.pub=Conteudo+Expresso+S.A&rft.issn=0100-7122&rft.eissn=1982-3371&rft.volume=42&rft.issue=35&rft.spage=56&rft.externalDBID=n%2Fa&rft.externalDocID=209535126","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQAeYhs1RTUzNd4zRgTwc0EaebmGyYpGtkbpGcBiqUzSCHuAZbBviaR_qZePAgCiw3UQZZN9cQZw9dUAEZXwA5ciHeCHQsGrBuMjMQZ2BNA0ZMqjiosBQHahRn4IiwNAryi7AMgHCFYFy9YvDGJb3CEnFg2QyOV11DPVMAhgclnw","Volume":
+        ["42"],"Language": ["Spanish"],"Score": ["59.23072"],"PageCount": ["1"],"Copyright":
+        ["COPYRIGHT 2009 Conteudo Expresso S.A."],"IsPeerReviewed": ["false"],"PublicationDate":
+        ["Sept 2 2009"],"PublicationDate_xml": [{"text": "Sept 2 2009","month": "09","year":
+        "2009","day": "02"}],"PublicationCentury": ["2000"],"Copyright_xml": [{"notice":
+        "COPYRIGHT 2009 Conteudo Expresso S.A."}],"Publisher": ["Conteudo Expresso
+        S.A"],"SourceType": ["Aggregation Database"],"Publisher_xml": [{"name": "Conteudo
+        Expresso S.A"}],"IsScholarly": ["false"],"ID": ["FETCH-gale_primary_2095351260"],"PublicationTitle":
+        ["Veja"],"Issue": ["35"],"PublicationYear": ["2009"],"Audience": ["General"],"EISSN":
+        ["1982-3371"],"MergedId": ["FETCHMERGED-gale_primary_2095351260"],"PublicationDecade":
+        ["2000"],"ContentType": ["Journal Article"],"Title": ["__BENTO_HL_START__Noam__BENTO_HL_END__
+        __BENTO_HL_START__Chomsky__BENTO_HL_END__"],"ISSN": ["0100-7122"],"ExternalDocumentID":
+        ["209535126"],"SSID": ["ssj0056802"],"StartPage": ["56"],"LinkModel": ["OpenURL"]},{"hasFullText":
+        true,"isFullTextHit": false,"inHoldings": true,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=NOAM+CHOMSKY&rft.jtitle=Discover&rft.au=Anonymous&rft.date=2008-12-01&rft.issn=0274-7529&rft.volume=29&rft.issue=12&rft.spage=50&rft.externalDBID=GDIS&rft.externalDocID=1599379581","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwRV27DsIwDMyCxMCEhPIDrImapEmaGVF1oaqgQxnz8gyC_xdOCmL0YHmwc3eW5ZiQI74hk7U2TAF2OmUQx3wUgUnbRSigbNZPXG9uutj72A67P3D1BzL35_k0sO8tAPZASYD-LQSN7C5QscgYkwDkfqW8F1YlJDWffQc5-lAlQ5ODKxNDY03SQYrYULIBzGemBWMpxqNkuzh5HRc3reb-Z_JX3XfizzdFSK_lwATXHzgAM2k","Volume":
+        ["29"],"Language": ["English"],"Author": ["Anonymous"],"Score": ["57.937904"],"RelatedPersons_xml":
+        [{"fullname": "Chomsky, Noam"}],"Copyright": ["Copyright DISCOVER, a Division
+        of Disney Magazine Publishing, Inc. Dec 2008"],"IsPeerReviewed": ["false"],"PublicationDate_xml":
+        [{"text": "20081201","month": "12","year": "2008","day": "01"}],"PublicationDate":
+        ["20081201"],"PublicationCentury": ["2000"],"RelatedPersons": ["Chomsky, Noam"],"Copyright_xml":
+        [{"notice": "Copyright DISCOVER, a Division of Disney Magazine Publishing,
+        Inc. Dec 2008"}],"AbstractList": ["In his penetrating study of language, Noam
+        Chomsky has given people a framework that is to culture what the genetic code
+        is to life. University College London linguist Neil Smith declared in Nature
+        said that Chomsky''s position in the history ideas is comparable to that of
+        Darwin or Descartes. He noted that Chomsky has redefined the people''s understanding
+        of themselves as humans. Here, an appreciation by Steven Pinker, professor
+        of psychology at Harvard University and author of The Stuff of Thought: Language
+        as Window Into Human Nature, is presented."],"SourceType": ["Aggregation Database"],"Snippet":
+        ["...In his penetrating study of language, __BENTO_HL_START__Noam__BENTO_HL_END__
+        __BENTO_HL_START__Chomsky__BENTO_HL_END__ has given people a framework that
+        is to culture what the genetic code is to life..."],"IsScholarly": ["false"],"ID":
+        ["FETCH-LOGICAL-p511-ac4fb555111392ccd1f15433aa173d190aea8fecab095100eb98065676d5b21c0"],"DLL_JC":
+        ["GDIS"],"PublicationTitle": ["Discover"],"Issue": ["12"],"PCID": ["41122321"],"Discipline":
+        ["Engineering","Sciences (General)"],"PublicationYear": ["2008"],"Genre":
+        ["Feature"],"PQID": ["205997110"],"DatabaseTitleList": [""],"Abstract": ["In
+        his penetrating study of language, Noam Chomsky has given people a framework
+        that is to culture what the genetic code is to life. University College London
+        linguist Neil Smith declared in Nature said that Chomsky''s position in the
+        history ideas is comparable to that of Darwin or Descartes. He noted that
+        Chomsky has redefined the people''s understanding of themselves as humans.
+        Here, an appreciation by Steven Pinker, professor of psychology at Harvard
+        University and author of The Stuff of Thought: Language as Window Into Human
+        Nature, is presented."],"SubjectTerms": ["Genetics","Scientists","Linguistics"],"MergedId":
+        ["FETCHMERGED-LOGICAL-p511-ac4fb555111392ccd1f15433aa173d190aea8fecab095100eb98065676d5b21c0"],"Author_xml":
+        [{"sequence": "1","fullname": "Anonymous"}],"PublicationDecade": ["2000"],"ContentType":
+        ["Journal Article"],"Title": ["__BENTO_HL_START__NOAM__BENTO_HL_END__ __BENTO_HL_START__CHOMSKY__BENTO_HL_END__"],"ExternalDocumentID":
+        ["1599379581"],"ISSN": ["0274-7529"],"SSID": ["ssj0000723"],"StartPage": ["50"],"LinkModel":
+        ["OpenURL"]},{"hasFullText": false,"isFullTextHit": false,"inHoldings": false,"openUrl":
+        "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book%20item&rft.title=The+Encyclopedia+of+Literary+and+Cultural+Theory&rft.atitle=Chomsky%2C+Noam&rft.date=2011-01-01&rft.pub=John+Wiley+%26+Sons%2C+Inc&rft.isbn=1405183128&rft.volume=3&rft.spage=944&rft.epage=947&rft.externalDocID=1942200240","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQAeYhs1RTUzNd4zRgTwc0EaebmGyYpGtkbpGcBiqUzSCHuAZbBviaR_qZePAgCjA3UQYpN9cQZw9dUAEZX1aUEw_sZhsZgc_iMhBnYE0DxkqqOKikFAfqEmfgiLA0CvKLsAyAcIVgXL1i8K4lvcIScWDBDI5UXUM9UwDVZyQV","Volume":
+        ["3"],"Language": ["English"],"PublicationPlace": ["Chichester, United Kingdom"],"Score":
+        ["55.794807"],"IsPeerReviewed": ["false"],"PublicationDate": ["2011"],"PublicationDate_xml":
+        [{"text": "2011","year": "2011"}],"PublicationCentury": ["2000"],"Source":
+        ["Wiley-Blackwell"],"Publisher": ["John Wiley & Sons, Inc"],"SourceType":
+        ["Publisher"],"Publisher_xml": [{"name": "John Wiley & Sons, Inc"}],"Snippet":
+        ["...__BENTO_HL_START__Noam__BENTO_HL_END__ __BENTO_HL_START__Chomsky__BENTO_HL_END__
+        (b. 1928) is a groundbreaking linguist whose revolutionary theory of generative
+        grammar, developed in the 1950s, successfully challenged dominant..."],"EISBN":
+        ["9781444350456","1444350455"],"ISBN": ["1405183128","9781405183123"],"IsScholarly":
+        ["false"],"ID": ["FETCH-gale_vrl_19422002400"],"PublicationTitle": ["The Encyclopedia
+        of Literary and Cultural Theory"],"Editor": ["Booker, M Keith","Ryan, Michael"],"Discipline":
+        ["Languages & Literatures"],"PublicationYear": ["2011"],"Editor_xml": [{"middlename":
+        "Keith","givenname": "M","surname": "Booker","fullname": "Booker, M Keith"},{"givenname":
+        "Michael","surname": "Ryan","fullname": "Ryan, Michael"}],"PublicationPlace_xml":
+        [{"name": "Chichester, United Kingdom"}],"MergedId": ["FETCHMERGED-gale_vrl_19422002400"],"PublicationDecade":
+        ["2010"],"ContentType": ["Reference"],"PublicationSubtitle": ["Cultural Theory"],"Title":
+        ["__BENTO_HL_START__Chomsky__BENTO_HL_END__, __BENTO_HL_START__Noam__BENTO_HL_END__"],"ExternalDocumentID":
+        ["1942200240"],"SSID": ["ssj0000514626"],"StartPage": ["944"],"EndPage": ["947"],"thumbnail_l":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9781405183123/large"],"thumbnail_s":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9781405183123/small"],"thumbnail_m":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9781405183123/medium"],"LinkModel":
+        ["OpenURL"]},{"hasFullText": false,"isFullTextHit": false,"inHoldings": false,"openUrl":
+        "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.title=Noam+Chomsky+%2F+Wolfgang+B.+Sperlich&rft.series=Critical+lives&rft.date=2006&rft.pub=Reaktion&rft.isbn=1861892691","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwRV29CsJADL5FcHAS5F7A9cpdez9mFksXS9EOdby7Jrvo-2OuVRwzJZDkyxdCEiGOnEMenfOqIe50yiBOxWySqsMpUwFlvx5xvcNwDY_edrs_kLUHMbaX8dyp7y8ANTOlUSEmnBGtAXKGGTglaAo1CCZbipq4SiXN5mgog7zssQa0kbk4NTPklLUUG2J_oiwYK1mfFNsJ6ls_wbCK-59YvZZ9p-r5lgzpSzgoU7kPXMYz3Q","Language":
+        ["English"],"PublicationPlace": ["London"],"Score": ["55.030052"],"IsPeerReviewed":
+        ["false"],"DBID": ["3CS","JQU"],"PublicationDate_xml": [{"text": "2006","year":
+        "2006"}],"PublicationDate": ["2006"],"PublicationSeriesTitle": ["Critical
+        lives"],"PublicationCentury": ["2000"],"Publisher": ["Reaktion"],"SourceType":
+        ["Publisher"],"Publisher_xml": [{"name": "Reaktion"}],"ClassificationCodes":
+        ["KE12-B26"],"URI": ["http://iss.ndl.go.jp/books/R100000002-I000008320176-00"],"ISBN":
+        ["1861892691","9781861892690"],"IsScholarly": ["false"],"ID": ["FETCH-LOGICAL-d800-7abedee419f51605fb93510571c4fa0f124b0bec092456c6e29e4a875f3d9cbc0"],"Discipline":
+        ["Languages & Literatures"],"PublicationYear": ["2006"],"PublicationPlace_xml":
+        [{"name": "London"}],"SubjectTerms": ["Chomsky, Noam","Linguists -- United
+        States -- Biography"],"MergedId": ["FETCHMERGED-LOGICAL-d800-7abedee419f51605fb93510571c4fa0f124b0bec092456c6e29e4a875f3d9cbc0"],"PublicationDecade":
+        ["2000"],"ContentType": ["Book"],"Title": ["__BENTO_HL_START__Noam__BENTO_HL_END__
+        __BENTO_HL_START__Chomsky__BENTO_HL_END__ / Wolfgang B. Sperlich"],"SSID":
+        ["ssj0000340971"],"thumbnail_l": ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9781861892690/large"],"thumbnail_s":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9781861892690/small"],"thumbnail_m":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9781861892690/medium"],"LinkModel":
+        ["OpenURL"]},{"hasFullText": false,"isFullTextHit": false,"inHoldings": true,"openUrl":
+        "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.title=Noam+Chomsky&rft.au=Lyons%2C+John&rft.date=1978&rft.isbn=0140043705&rft.externalDBID=n%2Fa&rft.externalDocID=mdp.39076006031954","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwRV29CsJADL5FcHAS5F7ANaW5n15vFksXS1GROvZyd7vo-2POKk4hU4Z8-ZIQkgix5xhqkrUN6MydThnEwUwYQLmWciHlZjnievHjyd0H02_-hNbtxK07Xg89fH8BwFwgZCES2lRTRBVpjlkrwkQ6a5NNTMl5JE6eoaVyEQ0xWBsCcaliyKXMUtdSrDJ7NMnCspItSrGevDoPkx8XdftTq-dn46l6vCST-gcQgJV9A_oVNKo","FullText_t_NoSnippeting":
+        ["true"],"Language": ["English"],"Author": ["Lyons, John"],"PublicationPlace":
+        ["England","United Kingdom"],"Score": ["54.540504"],"IsPeerReviewed": ["false"],"DBID":
+        ["9PP","1HA"],"PublicationDate_xml": [{"text": "1978","year": "1978"}],"PublicationDate":
+        ["1978"],"Source": ["University of Michigan"],"PublicationCentury": ["1900"],"LCCN":
+        ["77021346"],"OCLC": ["03202811"],"SourceType": ["Open Access Repository"],"URI":
+        ["http://catalog.hathitrust.org/Record/000278913"],"ISBN": ["0140043705","9780140043709"],"IsScholarly":
+        ["false"],"ID": ["FETCH-LOGICAL-a17935-dc15e0cd12dcadf32c1ec3f34f4dee791c066b8c067711b55bbc5664c7ef56630"],"PublicationYear":
+        ["1978"],"PublicationPlace_xml": [{"name": "England"},{"name": "United Kingdom"}],"MergedId":
+        ["FETCHMERGED-LOGICAL-a17935-dc15e0cd12dcadf32c1ec3f34f4dee791c066b8c067711b55bbc5664c7ef56630"],"Author_xml":
+        [{"sequence": "1","fullname": "Lyons, John"}],"PublicationDecade": ["1970"],"ContentType":
+        ["Book"],"Title": ["__BENTO_HL_START__Noam__BENTO_HL_END__ __BENTO_HL_START__Chomsky__BENTO_HL_END__"],"ExternalDocumentID":
+        ["mdp.39076006031954"],"thumbnail_l": ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780140043709/large"],"thumbnail_s":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780140043709/small"],"thumbnail_m":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780140043709/medium"],"Database_xml":
+        [{"sequence": "1","name": "HathiTrust Digital Library","dbid": "9PP","url":
+        "http://www.hathitrust.org/","sourceTypes": ["Open Access Repository"]}],"LinkModel":
+        ["DirectLink"]},{"hasFullText": false,"isFullTextHit": false,"inHoldings":
+        false,"openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book%20item&rft.title=The+Hutchinson+Unabridged+Encyclopedia+with+Atlas+and+Weather+guide&rft.atitle=Chomsky%2C+Noam&rft.date=2010-01-01&rft.pub=Helicon&rft.externalDocID=9923666","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQAeYhs1RTUzNd4zRgTwc0EaebmGyYpGtkbpGcBiqUzSCHuAZbBviaR_qZePAgCjY3UQYZN9cQZw9d8IGZ8aAhTmCXMd4S2BABtrQNxBlY04DxkioOKivFgfrEGTgiLI2C_CIsAyBcIRhXrxi8b0mvsEQcWDSDo1XXUM8UAHh8JbU","Language":
+        ["English"],"Score": ["54.451008"],"Copyright": ["RM, 2010. All rights reserved.
+        Helicon Publishing is a division of RM."],"DBID": ["QAF"],"IsPeerReviewed":
+        ["false"],"PublicationDate": ["2010"],"PublicationDate_xml": [{"text": "2010","year":
+        "2010"}],"PublicationCentury": ["2000"],"Source": ["Powered by credoreference.com"],"Copyright_xml":
+        [{"notice": "RM, 2010. All rights reserved. Helicon Publishing is a division
+        of RM."}],"Publisher": ["Helicon"],"SourceType": ["Publisher"],"Publisher_xml":
+        [{"name": "Helicon"}],"Snippet": ["... and philosopher __BENTO_HL_START__Noam__BENTO_HL_END__
+        __BENTO_HL_START__Chomsky__BENTO_HL_END__, with online books, articles, a
+        long archive of his correspondence, an extended list of interviews given by
+        him, and more than seven hours..."],"URI": ["http://www.credoreference.com/entry/heliconhe/chomsky_noam"],"IsScholarly":
+        ["false"],"ID": ["FETCH-credo_entries_99236660"],"PublicationTitle": ["The
+        Hutchinson Unabridged Encyclopedia with Atlas and Weather guide"],"PublicationYear":
+        ["2010"],"SubjectTerms": ["Humboldt, (Karl) Wilhelm Baron von Humboldt (1767-1835)","Bloomfield,
+        Leonard (1887-1949)","Chomsky, (Avram) Noam (1928-)","cognitive psychology","transformational
+        grammar","competence and performance","Chomsky, Noam","innate idea","(Avram)
+        Noam Chomsky (1928– )"],"MergedId": ["FETCHMERGED-credo_entries_99236660"],"PublicationDecade":
+        ["2010"],"ContentType": ["Reference"],"Title": ["__BENTO_HL_START__Chomsky__BENTO_HL_END__,
+        __BENTO_HL_START__Noam__BENTO_HL_END__"],"ExternalDocumentID": ["9923666"],"LinkModel":
+        ["OpenURL"]},{"hasFullText": false,"isFullTextHit": false,"inHoldings": false,"openUrl":
+        "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book%20item&rft.title=Culture+Wars%3A+An+Encyclopedia+of+Issues%2C+Viewpoints%2C+and+Voices&rft.atitle=Chomsky%2C+Noam&rft.date=2010-01-01&rft.pub=M.E.+Sharpe&rft.isbn=0765617617&rft.externalDocID=9796609","link":
+        "http://DUMMY_ACCESS_ID.summon.serialssolutions.com/link/0/eLvHCXMwY2BQAeYhs1RTUzNd4zRgTwc0EaebmGyYpGtkbpGcBiqUzSCHuAZbBviaR_qZeCAXfm6iDDJuriHOHrrgEzPjQWOcwD5jvKU56BxJSwNxBtY0YMSkioPUiwM1ijNwRFgaBflFWAZAuEIwrl4xeOOSXmGJOLBsBserrqGeKQCXFCXj","Language":
+        ["English"],"Score": ["54.320374"],"Copyright": ["2010 by M.E. Sharpe, Inc."],"DBID":
+        ["QAR"],"IsPeerReviewed": ["false"],"PublicationDate": ["2010"],"PublicationDate_xml":
+        [{"text": "2010","year": "2010"}],"PublicationCentury": ["2000"],"Source":
+        ["Powered by credoreference.com"],"Copyright_xml": [{"notice": "2010 by M.E.
+        Sharpe, Inc."}],"Publisher": ["M.E. Sharpe"],"SourceType": ["Publisher"],"Publisher_xml":
+        [{"name": "M.E. Sharpe"}],"Snippet": ["...A leading linguistic theorist, libertarian
+        socialist, and activist, __BENTO_HL_START__Noam__BENTO_HL_END__ __BENTO_HL_START__Chomsky__BENTO_HL_END__
+        has criticized U.S. foreign policy, critiqued American mass media, attacked..."],"URI":
+        ["http://www.credoreference.com/entry/sharpecw/chomsky_noam"],"ISBN": ["0765617617","9780765617613"],"IsScholarly":
+        ["false"],"ID": ["FETCH-credo_entries_97966090"],"PublicationTitle": ["Culture
+        Wars: An Encyclopedia of Issues, Viewpoints, and Voices"],"Discipline": ["Sociology
+        & Social History"],"PublicationYear": ["2010"],"SubjectTerms": ["New York
+        Times, The","Media Bias","Academic Freedom","Anti-Semitism","Vietnam War","Holocaust","Cold
+        War","September 11","Israel","Conspiracy Theories"],"MergedId": ["FETCHMERGED-credo_entries_97966090"],"PublicationDecade":
+        ["2010"],"ContentType": ["Reference"],"Title": ["__BENTO_HL_START__Chomsky__BENTO_HL_END__,
+        __BENTO_HL_START__Noam__BENTO_HL_END__"],"ExternalDocumentID": ["9796609"],"SSID":
+        ["ssj0000409164"],"thumbnail_l": ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780765617613/large"],"thumbnail_s":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780765617613/small"],"thumbnail_m":
+        ["http://DUMMY_ACCESS_ID.summon.serialssolutions.com/2.0.0/image/isbn/VS9PM7YN4H/9780765617613/medium"],"LinkModel":
+        ["OpenURL"]}],"rollups": {"image": {"position": 0},"reference": {"position":
+        0},"newspaper": {"position": 0}}}'
+    http_version: 
+  recorded_at: Mon, 22 Jul 2013 20:41:39 GMT
+recorded_with: VCR 2.5.0

@@ -214,6 +214,11 @@ class BentoSearch::SummonEngine
         item.abstract       = first_if_present doc_hash["Abstract"]
       end
 
+      # Just straight snippets
+      if doc_hash["Snippet"]
+        item.snippets = doc_hash["Snippet"].collect {|s| handle_highlighting(s)}
+      end
+
       results << item
     end
 

@@ -20,8 +20,9 @@ module BentoSearch
         send("#{key}=", value)
       end
 
-      self.authors ||= []
+      self.authors     ||= []
       self.other_links ||= []
+      self.snippets    ||= []
 
       self.custom_data ||= {}
     end
@@ -213,6 +214,11 @@ module BentoSearch
     # rails ActionView::Helpers::Sanistize #sanitize and #strip_tags
     # may be helpful.
     attr_accessor :abstract
+
+    # An ARRAY of string query-in-context snippets. Will usually
+    # have highlighting <b> tags in it. Creator is responsible
+    # for making sure it's otherwise html-safe. 
+    attr_accessor :snippets
 
     # An array (order matters) of BentoSearch::Author objects
     # add authors to it with results.authors << Author
