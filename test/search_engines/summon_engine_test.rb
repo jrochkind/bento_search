@@ -159,6 +159,15 @@ class SummonEngineTest < ActiveSupport::TestCase
     assert_include query_params["s.fvf"], "IsPeerReviewed,true"
   end
 
+  def test_construct_online_only
+    uri, headers = @engine.construct_request(:query => "foo", :online_only => "true")
+
+    query_params = CGI.parse( URI.parse(uri).query )
+
+    assert_kind_of Array, query_params["s.fvf"]
+    assert_include query_params["s.fvf"], "IsFullText,true"
+  end
+
   def test_construct_pubyear_range
     uri, headers = @engine.construct_request(:query => "foo", :pubyear_start => "1990", :pubyear_end => 2000)
 

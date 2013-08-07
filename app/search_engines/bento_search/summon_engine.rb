@@ -13,6 +13,9 @@ require 'summon/transport/headers'
 # http://api.summon.serialssolutions.com/help/api/search
 # http://api.summon.serialssolutions.com/help/api/search/fields
 #
+# Also Summon user guide at:
+# http://support.serialssolutions.com/app/answers/detail/a_id/3906
+#
 # Can try out searches and see XML results with an auth login in their
 # interface: http://api.summon.serialssolutions.com/help/api/search/example?s.q=query
 #
@@ -72,6 +75,9 @@ require 'summon/transport/headers'
 #                  keys are repeatable.
 # [:peer_reviewed_only]   Set to boolean true or string 'true', to restrict
 #                         results to peer-reviewed only (as identified by Summon)
+# [:online_only]      Limit to only items marked 'with fulltext online' by Summon. 
+#                     Just a convenience shortcut for setting s.fvf including IsFullText,true
+# 
 # [:pubyear_start]
 # [:pubyear_end]          Date range limiting, pass in custom search args,
 #                         one or both of pubyear_start and pubyear_end
@@ -327,6 +333,11 @@ class BentoSearch::SummonEngine
     if [true, "true"].include? args[:peer_reviewed_only]
       query_params['s.fvf'] ||= []
       query_params['s.fvf'] << "IsPeerReviewed,true"
+    end
+
+    if [true, "true"].include? args[:online_only]
+      query_params["s.fvf"] ||= []
+      query_params['s.fvf'] << "IsFullText,true"
     end
 
     # Summon uses "*" for open ended range endpoint
