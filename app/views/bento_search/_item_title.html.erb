@@ -13,6 +13,9 @@
   # or, the engine_id if present. If neither present no go (need a prefix for
   # uniqueness when more than one bento_results on a page).
   #
+  # If "indicate_fulltext" is set in display configuration, an "Online"
+  # marker will be output after title, in class .bento_available_online
+  #
   # %>
   <h4 class="bento_item_title">
     <% if local_assigns[:index] %>
@@ -31,6 +34,10 @@
         (<%- if item.display_format.present? -%><span class="bento_format"><%= item.display_format -%></span><%- end -%><%- if item.display_language.present? -%><span class="bento_language"> in <%= item.display_language -%></span><%- end -%>)
       </small>
 
+    <% end %>
+
+    <% if item.display_configuration.try{|h| h[:indicate_fulltext]} && item.link_is_fulltext? %>
+      <small class="bento_available_online">Online</small>
     <% end %>
   </h4>
 
