@@ -39,16 +39,8 @@ require 'httpclient'
 # [:highlighting] default 'true'. If true, ask primo for query-in-context in
 #                 some fields. If true, you WILL get html_safe content in
 #                 some fields, with standardized <b class='bento_search_highlight'> tags.
-# [:snippets_as_abstract]
-#     Defaults true, if true and :highlighting is true, we'll put the
-#     query-in-context snippets in the 'abstract' field if it's present and it's
-#     NOT just the title field repeated (can be hard to tell).
-#     either way it will be in results as custom_data["snippet"].
-# [:max_snippets]
-#     Default 1. How many snippets to include in snippet display, for use
-#     with snippets_as_abstract. Primo API packs them all together in one
-#     element seperated by "...", so we need to kind of hack it to seperate.
-#     Set to nil to use entire primo supplied snippets field.
+#                 Snippets will be used as summary in standard display logic unless you
+#                 set configuration.for_display.prefer_abstract_as_summary = true
 #
 # == Vendor docs
 #
@@ -114,17 +106,7 @@ class BentoSearch::PrimoEngine
         handle_snippet_value( node.text )
       end
 
-      # If we have a snippet that is not just the title, and we've been configured
-      # to use it instead of the abstract, then do so.
-      # there's an empty snippet tag even if no snippet, have to check for children.
-      if ( configuration.highlighting && configuration.snippets_as_abstract &&
-          (snippet_el = doc_xml.at_xpath("./PrimoNMBib/record/display/snippet/text()")) &&
-          ! (doc_xml.at_xpath("./PrimoNMBib/record/display/snippetfield/text()").to_s == "title")
-        )
-        item.abstract = item.custom_data["snippet"]
-      else
-        item.abstract   = text_at_xpath(doc_xml, "./PrimoNMBib/record/addata/abstract")
-      end
+      item.abstract   = text_at_xpath(doc_xml, "./PrimoNMBib/record/addata/abstract")      
 
 
       doc_xml.xpath("./PrimoNMBib/record/facets/creatorcontrib").each do |author_node|
@@ -167,15 +149,11 @@ class BentoSearch::PrimoEngine
     return results
   end
 
-  # enforce configuration.max_snippets, add elipses on the end
-  def handle_snippet_value(str)
-    if configuration.max_snippets && str.present?
-      str = str.split("...").slice(0, configuration.max_snippets).join("\u2026")
-    end
-
+  # add elipses on the end, fix html highlighting
+  def handle_snippet_value(str)    
     # primo doesn't put elipses tags on ends of snippet usually, which is
     # confusing. let's add them ourselves.
-    str = "\u2026#{str}\u2026"
+    str = "\u2026#{str}\u2026" if str
 
     return handle_highlight_tags str
   end
@@ -320,9 +298,7 @@ class BentoSearch::PrimoEngine
       # "eng" or "fre" or "ger" (Code for the representation of name of language conform to ISO-639)
       :lang => "eng",
       :fixed_params => {},
-      :highlighting => true,
-      :snippets_as_abstract => true,
-      :max_snippets => 1
+      :highlighting => true
     }
   end
 

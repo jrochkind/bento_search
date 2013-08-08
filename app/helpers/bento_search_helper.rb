@@ -116,6 +116,8 @@ module BentoSearchHelper
   # :length option will also default to 280, what we think is a good
   # length for abstract/snippet display
   def bento_truncate(str, options = {})
+    return str if str.nil? || str.empty?
+
     options.reverse_merge!(:omission => "…", :length => 280, :separator => ' ')       
     
     # works for non-html of course, but for html a quick check

@@ -5,9 +5,9 @@ require 'test_helper'
 class StandardDecoratorTest < ActionView::TestCase
   include BentoSearch
   
-  def decorator(hash = {})
+  def decorator(hash = {})    
     StandardDecorator.new(
-      ResultItem.new(hash), nil
+      ResultItem.new(hash), view
     )
   end
   
@@ -95,6 +95,24 @@ class StandardDecoratorTest < ActionView::TestCase
     assert_equal "override_5", item.html_id("override", 5)
   end
 
-    
+  test "render_summary"  do
+    item = decorator(:abstract => "abstract", :snippets => ["snippet"])
+    assert_equal "snippet", item.render_summary, "prefer snippet by default"
+
+    item = decorator(:abstract => "abstract")
+    assert_equal "abstract", item.render_summary, "use abstract if only thing there"
+
+    item = decorator(:snippets => ['snippet'])
+    assert_equal "snippet", item.render_summary, "use snippet if only thing there"
+
+    item = decorator(:abstract => "abstract", :snippets => ["snippet"], :display_configuration => {"prefer_abstract_as_summary" => true})
+    assert_equal "abstract", item.render_summary, "prefer abstract when configured"
+
+    item = decorator(:snippets => ["snippet"], :display_configuration => {"prefer_abstract_as_summary" => true})
+    assert_equal "snippet", item.render_summary, "use snippet if that's all that's there, even when configured for abstract"
+
+    item = decorator()
+    assert_equal nil, item.render_summary, "Okay with no snippet or abstract"
+  end
   
 end

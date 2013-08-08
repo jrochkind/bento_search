@@ -49,12 +49,9 @@ require 'summon/transport/headers'
 # [highlighting]
 #     Default true, ask SerSol for query-in-context highlighting in
 #     title and snippets field. If true you WILL get HTML with <b> tags
-#     in your titles.
-# [snippets_as_abstract]
-#     Defaults true, if true and :highlighting is true, we'll put the
-#     query-in-context snippets in the 'abstract' field. Set :max_snippets
-#     for how many to possibly include (default 1). We may change this functionality
-#     later, this is a bit of hacky way to do it.
+#     in your titles -- and snippets available in ResultItems. They
+#     will be used by stnadard display logic as summary unless you set
+#     for_display.prefer_abstract_as_summary = true
 # [use_summon_openurl] default false. If true, will use OpenURL kev context
 #     object passed back by summon to generate openurls, instead of creating
 #     one ourself from individual data elements. summon openurl is decent,
@@ -212,13 +209,7 @@ class BentoSearch::SummonEngine
 
       item.language_str   = first_if_present doc_hash["Language"]
 
-      if ( configuration.highlighting && configuration.snippets_as_abstract &&
-        doc_hash["Snippet"] && doc_hash["Snippet"].length > 0 )
-
-        item.abstract = handle_highlighting doc_hash["Snippet"].slice(0, configuration.max_snippets).join(" ")
-      else
-        item.abstract       = first_if_present doc_hash["Abstract"]
-      end
+      item.abstract       = first_if_present doc_hash["Abstract"]      
 
       # Just straight snippets
       if doc_hash["Snippet"]
@@ -441,8 +432,6 @@ class BentoSearch::SummonEngine
     {
       :base_url => "http://api.summon.serialssolutions.com/2.0.0/search",
       :highlighting => true,
-      :snippets_as_abstract => true,
-      :max_snippets => 1,
       :use_summon_openurl => false
     }
   end

@@ -55,7 +55,7 @@
 
       <% if item.abstract %>
         <p class="bento_item_row abstract">
-          <%= bento_truncate( item.abstract ) %>
+          <%= item.render_summary  %>
         </p>
       <% end %>
 
