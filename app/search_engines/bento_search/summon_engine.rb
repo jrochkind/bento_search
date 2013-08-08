@@ -72,9 +72,9 @@ require 'summon/transport/headers'
 #                  keys are repeatable.
 # [:peer_reviewed_only]   Set to boolean true or string 'true', to restrict
 #                         results to peer-reviewed only (as identified by Summon)
-# [:online_only]      Limit to only items marked 'with fulltext online' by Summon. 
+# [:online_only]      Limit to only items marked 'with fulltext online' by Summon.
 #                     Just a convenience shortcut for setting s.fvf including IsFullText,true
-# 
+#
 # [:pubyear_start]
 # [:pubyear_end]          Date range limiting, pass in custom search args,
 #                         one or both of pubyear_start and pubyear_end
@@ -209,7 +209,7 @@ class BentoSearch::SummonEngine
 
       item.language_str   = first_if_present doc_hash["Language"]
 
-      item.abstract       = first_if_present doc_hash["Abstract"]      
+      item.abstract       = first_if_present doc_hash["Abstract"]
 
       # Just straight snippets
       if doc_hash["Snippet"]
