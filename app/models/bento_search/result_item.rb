@@ -199,6 +199,7 @@ module BentoSearch
     attr_accessor :oclcnum # OCLC accession number, WorldCat.
 
     attr_accessor :doi
+    attr_accessor :pmid
 
     # usually used for books rather than articles
     attr_accessor :publisher

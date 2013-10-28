@@ -44,6 +44,10 @@ module BentoSearch
       if result_item.doi
         r.add_identifier("info:doi/#{result_item.doi}")
       end
+
+      if result_item.pmid
+        r.add_identifier("info:pmid/#{result_item.pmid}")
+      end
       
       if result_item.oclcnum
         r.add_identifier("info:oclcnum/#{result_item.oclcnum}")

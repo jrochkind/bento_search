@@ -48,6 +48,22 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
     assert_equal "My Title: A Nice One",  r.metadata["atitle"]
         
   end
+
+  def test_creation_with_pmid
+    pmid = "12345"
+    item = decorated_item(
+        :format => "Article",
+        :title => "My Title: A Nice One",        
+        :journal_title => "Journal of Fakes",
+        :issn => "12345678",
+        :pmid => pmid,
+      )
+
+    r = BentoSearch::OpenurlCreator.new(item).to_openurl.referent
+
+    assert_include r.identifiers, "info:pmid/#{pmid}"
+  end
+
   
   def test_numeric_conversion
     item = decorated_item(
