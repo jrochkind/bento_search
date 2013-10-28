@@ -479,6 +479,8 @@ class BentoSearch::EbscoHostEngine
 
     item.doi            = text_if_present info.at_xpath("./artinfo/ui[@type='doi']")
 
+    item.pmid           = text_if_present info.at_xpath("./artinfo/ui[@type='pmid']")
+
     item.abstract       = text_if_present info.at_xpath("./artinfo/ab")
     # EBSCO abstracts have an annoying habit of beginning with "Abstract:"
     if item.abstract
