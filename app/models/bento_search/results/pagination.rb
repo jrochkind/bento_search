@@ -47,7 +47,9 @@ class BentoSearch::Results::Pagination
   def count_records
     @total_count
   end
+  # Kaminari in different versions wants this called SO MANY things. 
   alias count count_records
+  alias total_count count_records
   
   def total_pages
     (@total_count.to_f / @per_page).ceil
@@ -69,5 +71,11 @@ class BentoSearch::Results::Pagination
   end
   # kaminari wants it called this.
   alias limit_value per_page
+
+  # Recent kaminari's have an offset_value which is 0-based, unlike
+  # our 1-based @start_record. Le Sigh. 
+  def offset_value
+    @start_record - 1
+  end
   
 end

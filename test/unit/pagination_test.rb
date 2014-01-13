@@ -13,6 +13,7 @@ class PaginationTest < ActiveSupport::TestCase
     assert pag.first_page?
     assert ! pag.last_page?
     assert_equal 100, pag.count_records
+    assert_equal 100, pag.total_count # some kaminari's want it called this instead. 
     assert_equal 10, pag.total_pages
     assert_equal 10, pag.per_page    
   end
@@ -22,6 +23,7 @@ class PaginationTest < ActiveSupport::TestCase
     
     assert_equal 5, pag.current_page
     assert_equal 81, pag.start_record
+    assert_equal 80, pag.offset_value
     assert_equal 100, pag.end_record
     assert ! pag.first_page?
     assert pag.last_page?
