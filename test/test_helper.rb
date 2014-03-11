@@ -49,4 +49,19 @@ if ! defined? VCR
   end
 end
 
+# re-open to add 
+# some custom assertions, that used to be in mini-test, or that
+# we wanted to add. 
+class ActiveSupport::TestCase
 
+  def assert_present(object, msg = nil)
+    msg ||= "expected #{object} to be #present?"
+    assert(object.present?, msg)
+  end
+
+  def assert_blank(object, msg = nil)
+    msg ||= "expected #{object} to be #blank?"
+    assert object.blank?, msg
+  end
+
+end

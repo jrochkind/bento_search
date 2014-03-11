@@ -42,7 +42,7 @@ module BentoSearch
       assert_response :success
       assert_not_nil assigns(:results)
       
-      assert_template "bento_search/search"
+      assert_template "bento_search/search/search"
       
       # meta tag with count
       assert_tag(:tag => "meta", :attributes => {"itemprop" => "total_items", "content" => /^\d+$/ })
@@ -57,7 +57,7 @@ module BentoSearch
       # warning?
       assert_response :success
       
-      assert_template "bento_search/search"
+      assert_template "bento_search/search/search"
       assert_template "bento_search/_search_error"
       
       assert_no_tag(:tag => "meta", :attributes => {"itemprop" => "total_items"})
@@ -75,7 +75,7 @@ module BentoSearch
       assert_not_nil assigns(:partial_wrapper)
       
       assert_template "bento_search/_wrap_with_count"
-      assert_template "bento_search/search"
+      assert_template "bento_search/search/search"
     end
     
     test "non-routable engine" do
@@ -126,7 +126,7 @@ module BentoSearch
       
       begin
         Rails.application.routes.draw do
-          match "/custom_search" => "bento_search/search_controller_test/custom_search#search"
+          get "/custom_search" => "bento_search/search_controller_test/custom_search#search"
         end
         @controller = CustomSearchController.new
         

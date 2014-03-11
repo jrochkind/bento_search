@@ -58,8 +58,8 @@ class EdsEngineTest < ActiveSupport::TestCase
     
     assert_equal "1", parts.first
     
-    assert_include parts, "SourceType:Academic Journals"
-    assert_include parts, "SourceType:Magazines"        
+    assert_includes parts, "SourceType:Academic Journals"
+    assert_includes parts, "SourceType:Magazines"        
   end
   
   def test_has_http_timeout_set

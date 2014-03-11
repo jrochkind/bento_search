@@ -114,9 +114,9 @@ class SummonEngineTest < ActiveSupport::TestCase
 
     query_params = CGI.parse( URI.parse(uri).query )
 
-    assert_include query_params["s.fvf"], "ContentType,Newspaper Article,true"
-    assert_include query_params["s.fvf"], "ContentType,Book,true"
-    assert_include query_params["s.role"], "authenticated"
+    assert_includes query_params["s.fvf"], "ContentType,Newspaper Article,true"
+    assert_includes query_params["s.fvf"], "ContentType,Book,true"
+    assert_includes query_params["s.role"], "authenticated"
 
   end
 
@@ -129,7 +129,7 @@ class SummonEngineTest < ActiveSupport::TestCase
 
     query_params = CGI.parse( URI.parse(uri).query )
 
-    assert_include query_params['s.hl'], "false"
+    assert_includes query_params['s.hl'], "false"
   end
 
 
@@ -143,11 +143,11 @@ class SummonEngineTest < ActiveSupport::TestCase
     query_params = CGI.parse( URI.parse(uri).query )
 
     assert_equal    1,    query_params["a"].try(:length)
-    assert_include  query_params["a"], "a"
+    assert_includes  query_params["a"], "a"
 
     assert_equal    2,    query_params["b"].try(:length)
-    assert_include  query_params["b"], "b1"
-    assert_include  query_params["b"], "b2"
+    assert_includes  query_params["b"], "b1"
+    assert_includes  query_params["b"], "b2"
   end
 
   def test_construct_peer_reviewed_only
@@ -156,7 +156,7 @@ class SummonEngineTest < ActiveSupport::TestCase
     query_params = CGI.parse( URI.parse(uri).query )
 
     assert_kind_of Array, query_params["s.fvf"]
-    assert_include query_params["s.fvf"], "IsPeerReviewed,true"
+    assert_includes query_params["s.fvf"], "IsPeerReviewed,true"
   end
 
   def test_construct_online_only
@@ -165,7 +165,7 @@ class SummonEngineTest < ActiveSupport::TestCase
     query_params = CGI.parse( URI.parse(uri).query )
 
     assert_kind_of Array, query_params["s.fvf"]
-    assert_include query_params["s.fvf"], "IsFullText,true"
+    assert_includes query_params["s.fvf"], "IsFullText,true"
   end
 
   def test_construct_pubyear_range
@@ -173,7 +173,7 @@ class SummonEngineTest < ActiveSupport::TestCase
 
     query_params = CGI.parse( URI.parse(uri).query )
 
-    assert_include query_params["s.rf"], "PublicationDate,1990:2000"
+    assert_includes query_params["s.rf"], "PublicationDate,1990:2000"
   end
 
   def test_construct_pubyear_range_open_bottom
@@ -181,7 +181,7 @@ class SummonEngineTest < ActiveSupport::TestCase
 
     query_params = CGI.parse( URI.parse(uri).query )
 
-    assert_include query_params["s.rf"], "PublicationDate,*:2000"
+    assert_includes query_params["s.rf"], "PublicationDate,*:2000"
   end
 
   def test_construct_pubyear_range_open_top
@@ -189,7 +189,7 @@ class SummonEngineTest < ActiveSupport::TestCase
 
     query_params = CGI.parse( URI.parse(uri).query )
 
-    assert_include query_params["s.rf"], "PublicationDate,1990:*"
+    assert_includes query_params["s.rf"], "PublicationDate,1990:*"
   end
 
 
@@ -231,8 +231,8 @@ class SummonEngineTest < ActiveSupport::TestCase
 
     first = results.first
 
-    assert_include first.title, '<b class="bento_search_highlight">'
-    assert_include first.title, '</b>'
+    assert_includes first.title, '<b class="bento_search_highlight">'
+    assert_includes first.title, '</b>'
 
     assert first.title.html_safe?, "title is HTML safe"
   end
@@ -244,7 +244,7 @@ class SummonEngineTest < ActiveSupport::TestCase
 
     assert_present results.first.snippets
 
-    assert_include results.first.snippets.first, '<b class="bento_search_highlight">'
+    assert_includes results.first.snippets.first, '<b class="bento_search_highlight">'
   end
 
   test_with_cassette("live #get(id)", :summon) do

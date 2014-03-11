@@ -206,8 +206,8 @@ class AtomResultsTest < ActionView::TestCase
     
     assert_node(with_unique_id, "atom:id") do |id|
       # based off of engine_id and unique_id
-      assert_include id.text, "some_engine"
-      assert_include id.text, "a000%3A%2F01"
+      assert_includes id.text, "some_engine"
+      assert_includes id.text, "a000%3A%2F01"
     end      
   end
   

@@ -46,7 +46,7 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     assert_equal ["relevance"], query_params["sort"]
 
     @engine.configuration.databases.each do |db|
-      assert_include query_params["db"], db
+      assert_includes query_params["db"], db
     end
   end
 

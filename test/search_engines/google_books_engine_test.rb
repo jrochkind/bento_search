@@ -111,7 +111,7 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
     
     url = @engine.send(:args_to_search_url, :query => "cancer", :sort => "relevance")
     
-    assert_not_match "&orderBy", url    
+    refute_match "&orderBy", url    
   end
   
   def test_fielded_search    

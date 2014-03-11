@@ -61,21 +61,21 @@ class WorldcatSruDcEngineTest < ActiveSupport::TestCase
   def test_construct_servicelevel
     url = @engine.construct_query_url(:query => "cancer")    
     query_hash = CGI.parse(URI.parse(url).query)
-    assert_not_include query_hash["servicelevel"], "full"
+    assert_not_includes query_hash["servicelevel"], "full"
         
     url = @engine.construct_query_url(:query => "cancer auth", :auth => true)    
     query_hash = CGI.parse(URI.parse(url).query)
-    assert_include query_hash["servicelevel"], "full"
+    assert_includes query_hash["servicelevel"], "full"
     
     default_on = BentoSearch::WorldcatSruDcEngine.new(@config.merge(:auth => true))
     
     url = default_on.construct_query_url(:query => "cancer")    
     query_hash = CGI.parse(URI.parse(url).query)
-    assert_include query_hash["servicelevel"], "full"
+    assert_includes query_hash["servicelevel"], "full"
     
     url = default_on.construct_query_url(:query => "cancer", :auth => false)    
     query_hash = CGI.parse(URI.parse(url).query)
-    assert_not_include query_hash["servicelevel"], "full"    
+    assert_not_includes query_hash["servicelevel"], "full"    
   end
   
   def test_construct_cql
@@ -90,7 +90,7 @@ class WorldcatSruDcEngineTest < ActiveSupport::TestCase
      "srw.kw = \"alpha's\"", 
      "srw.kw = \"one two\"",  
      "srw.kw = \"thr\\\"ee\""].each do |clause|
-      assert_include components, clause
+      assert_includes components, clause
     end        
   end
   

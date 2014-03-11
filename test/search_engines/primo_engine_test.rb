@@ -64,7 +64,7 @@ class PrimoEngineTest < ActiveSupport::TestCase
 
     assert first.title.html_safe?, "title is HTML safe"
 
-    assert_include first.title, '<b class="bento_search_highlight">'
+    assert_includes first.title, '<b class="bento_search_highlight">'
 
     assert_present first.snippets
 

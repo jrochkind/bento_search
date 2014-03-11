@@ -39,7 +39,7 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
     assert_equal "100",         r.metadata["epage"]
     assert_equal "Journal of Fakes", r.metadata["jtitle"]
     assert_equal "12345678",    r.metadata["issn"]
-    assert_include r.identifiers, "info:doi/XXXX"
+    assert_includes r.identifiers, "info:doi/XXXX"
     
     assert_equal "John",        r.metadata["aufirst"]
     assert_equal "Smith",       r.metadata["aulast"]
@@ -61,7 +61,7 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
 
     r = BentoSearch::OpenurlCreator.new(item).to_openurl.referent
 
-    assert_include r.identifiers, "info:pmid/#{pmid}"
+    assert_includes r.identifiers, "info:pmid/#{pmid}"
   end
 
   
@@ -166,7 +166,7 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
     openurl = item.to_openurl
     
     # The legal way:
-    assert_include openurl.referent.identifiers, 'info:oclcnum/12345'
+    assert_includes openurl.referent.identifiers, 'info:oclcnum/12345'
     # Not actually legal but common practice:
     assert_equal '12345',openurl.referent.metadata["oclcnum"] 
   end
@@ -200,7 +200,7 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
     
     kev = openurl.kev
     
-    assert_include kev, "&rft_id=info%3Adoi%2F10.3305%2Fnh.2012.27.5.5997"        
+    assert_includes kev, "&rft_id=info%3Adoi%2F10.3305%2Fnh.2012.27.5.5997"        
   end
   
   def test_openurl_disabled

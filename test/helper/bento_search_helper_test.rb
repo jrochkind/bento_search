@@ -2,9 +2,6 @@
 
 require 'test_helper'
 
-# this seems to work? Rails view testing is a mess. 
-require 'sprockets/helpers/rails_helper'
-
 class BentoSearchHelperTest < ActionView::TestCase
   include BentoSearchHelper
   

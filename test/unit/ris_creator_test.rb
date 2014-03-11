@@ -97,62 +97,62 @@ class RISCreatorTest < ActiveSupport::TestCase
   def test_article        
     lines = ris_parse RISCreator.new(@@article).export    
     
-    assert_include lines, ['TY', 'JOUR']
-    assert_include lines, ['TI', @@article.title]
-    assert_include lines, ['T2', @@article.source_title]
-    assert_include lines, ['SN', @@article.issn]
-    assert_include lines, ['VL', @@article.volume]
-    assert_include lines, ['IS', @@article.issue]
-    assert_include lines, ['SP', @@article.start_page]    
-    assert_include lines, ['EP', @@article.end_page]
-    assert_include lines, ['DO', @@article.doi]
-    assert_include lines, ['AB', @@article.abstract]
+    assert_includes lines, ['TY', 'JOUR']
+    assert_includes lines, ['TI', @@article.title]
+    assert_includes lines, ['T2', @@article.source_title]
+    assert_includes lines, ['SN', @@article.issn]
+    assert_includes lines, ['VL', @@article.volume]
+    assert_includes lines, ['IS', @@article.issue]
+    assert_includes lines, ['SP', @@article.start_page]    
+    assert_includes lines, ['EP', @@article.end_page]
+    assert_includes lines, ['DO', @@article.doi]
+    assert_includes lines, ['AB', @@article.abstract]
 
-    assert_include lines, ['AU', "Smith, John Q."]
-    assert_include lines, ['AU', "Lopez, Maria"]
-    assert_include lines, ['AU', "Some Guy"]
+    assert_includes lines, ['AU', "Smith, John Q."]
+    assert_includes lines, ['AU', "Lopez, Maria"]
+    assert_includes lines, ['AU', "Some Guy"]
   end
   
   def test_book
     lines = ris_parse RISCreator.new(@@book).export
     
-    assert_include lines, ['TY', 'BOOK']
-    assert_include lines, ['TI', @@book.title]
-    assert_include lines, ['PY', @@book.year]
-    assert_include lines, ['PB', @@book.publisher]
-    assert_include lines, ['SN', @@book.isbn]
+    assert_includes lines, ['TY', 'BOOK']
+    assert_includes lines, ['TI', @@book.title]
+    assert_includes lines, ['PY', @@book.year]
+    assert_includes lines, ['PB', @@book.publisher]
+    assert_includes lines, ['SN', @@book.isbn]
     
-    assert_include lines, ['AU', "Smith, John Q."]
+    assert_includes lines, ['AU', "Smith, John Q."]
   end
   
   def test_book_chapter
     lines = ris_parse RISCreator.new(@@book_chapter).export
     
-    assert_include lines, ['TY', 'CHAP']
+    assert_includes lines, ['TY', 'CHAP']
     
-    assert_include lines, ['TI', @@book_chapter.title]
-    assert_include lines, ['T2', @@book_chapter.source_title]
-    assert_include lines, ['PY', @@book_chapter.year]
-    assert_include lines, ['PB', @@book_chapter.publisher]
-    assert_include lines, ['SP', @@book_chapter.start_page]
+    assert_includes lines, ['TI', @@book_chapter.title]
+    assert_includes lines, ['T2', @@book_chapter.source_title]
+    assert_includes lines, ['PY', @@book_chapter.year]
+    assert_includes lines, ['PB', @@book_chapter.publisher]
+    assert_includes lines, ['SP', @@book_chapter.start_page]
   end
   
   def test_dissertation
     lines = ris_parse RISCreator.new(@@dissertation).export
     
-    assert_include lines, ['TY', 'THES']
+    assert_includes lines, ['TY', 'THES']
     
-    assert_include lines, ['TI', @@dissertation.title]
-    assert_include lines, ['PB', @@dissertation.publisher]
-    assert_include lines, ['PY', @@dissertation.year]
+    assert_includes lines, ['TI', @@dissertation.title]
+    assert_includes lines, ['PB', @@dissertation.publisher]
+    assert_includes lines, ['PY', @@dissertation.year]
   end
   
   def test_article_with_full_date
     lines = ris_parse RISCreator.new(@@article_with_full_date).export
     
-    assert_include lines, ['TY', 'JOUR']
+    assert_includes lines, ['TY', 'JOUR']
     
-    assert_include lines, ['DA', '2011/09/01']    
+    assert_includes lines, ['DA', '2011/09/01']    
   end
   
     
