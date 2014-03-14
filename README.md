@@ -4,8 +4,8 @@
 [![Gem Version](https://badge.fury.io/rb/bento_search.png)](http://badge.fury.io/rb/bento_search)
 
 bento_search provides an abstraction/normalization layer for querying and
-displaying results from external search engines, in Ruby on Rails. Requires
-Rails3 and tested only under ruby 1.9.3.
+displaying results from external search engines, in Ruby on Rails. Works with
+Rails 3.x or 4.x.  Currently tested only under ruby 1.9.3. (todo, change this soon)
 
 ### Goals: To help you
 
