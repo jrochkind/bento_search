@@ -143,6 +143,18 @@ class OpenurlCreatorTest < ActiveSupport::TestCase
     
     assert_equal "My Title", openurl.referent.metadata["title"]
   end
+
+  def test_decode_html_entities
+    item = decorated_item(      
+      :title => "<b>John&#39;s Title</b>".html_safe,
+      :year => 2012,
+      :isbn => "XXXX",                        
+      )
+    
+    openurl = item.to_openurl
+    
+    assert_equal "John's Title", openurl.referent.metadata["title"]
+  end
   
   
   def test_publication_date

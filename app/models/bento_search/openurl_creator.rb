@@ -1,5 +1,6 @@
 require 'openurl'
 require 'cgi'
+require 'htmlentities'
 
 module BentoSearch
   
@@ -151,11 +152,16 @@ module BentoSearch
     
     
     # If the input is not marked html_safe?, just return it. Otherwise
-    # strip html tags from it.
+    # strip html tags from it AND replace HTML char entities
     def ensure_no_tags(str)
       return str unless str.html_safe?
       
-      strip_tags(str)      
+      str = str.to_str # get it out of HTMLSafeBuffer, which messes things up
+      str = strip_tags(str) 
+
+      str = HTMLEntities.new.decode(str)
+
+      return str
     end
     
   end
