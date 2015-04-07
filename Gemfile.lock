@@ -44,6 +44,10 @@ GEM
     addressable (2.3.6)
     arel (5.0.1.20140414130214)
     builder (3.2.2)
+    byebug (3.5.1)
+      columnize (~> 0.8)
+      debugger-linecache (~> 1.2)
+      slop (~> 3.6)
     celluloid (0.16.0)
       timers (~> 4.0.0)
     columnize (0.8.9)
@@ -104,6 +108,7 @@ GEM
     rake (10.3.2)
     safe_yaml (1.0.4)
     scrub_rb (1.0.1)
+    slop (3.6.0)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -136,6 +141,7 @@ PLATFORMS
 
 DEPENDENCIES
   bento_search!
+  byebug
   celluloid
   debugger
   jdbc-sqlite3
