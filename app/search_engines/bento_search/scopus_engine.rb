@@ -238,12 +238,10 @@ module BentoSearch
     # Returns nil if can't map. 
     def doctype_to_format(doctype)
       { "ar" => "Article",
-        "ip" => "Article",
         "bk" => "Book",
         "bz" => "Article",
         "re" => "Article", # most of what scopus labels 'Report' seem to be ordinary articles.
         "cp" => :conference_paper,
-        "re" => "Article", # really 'report', but Scopus is unreliable here, most of these are actually articles.
         "sh" => "Article", # 'short survey' to scopus, but seems to be used for articles. 
         "ip" => "Article", # 'article in press'. 
         'ed' => "Article", # Editorial
