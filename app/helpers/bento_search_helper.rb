@@ -193,7 +193,7 @@ module BentoSearchHelper
         if defn[:semantic] && (label = I18n.t(defn[:semantic], :scope => "bento_search.search_fields", :default => defn[:semantic].to_s.titlecase )) 
           [label,  defn[:semantic].to_s]
         end
-      end]
+      end.compact]
     end
   
     # :only/:except    
