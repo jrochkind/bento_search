@@ -64,8 +64,8 @@ class BentoSearchHelperTest < ActionView::TestCase
     bento_search(engine, :query => "QUERY")
     
     assert_select("div.bento_item", 10).each_with_index do |node, i|
-      node.match /QUERY/
-      node.match /#{i +1 }/      
+      assert_select node, "*", /QUERY/
+      assert_select node, "*", /#{i +1 }/
     end    
   end
   
@@ -77,8 +77,8 @@ class BentoSearchHelperTest < ActionView::TestCase
     bento_search("test_engine", :query => "QUERY")
     
     assert_select("div.bento_item", 10).each_with_index do |node, i|
-      node.match /QUERY/
-      node.match /#{i +1 }/      
+      assert_select node, "*", /QUERY/
+      assert_select node, "*", /#{i +1 }/      
     end    
   end
   
