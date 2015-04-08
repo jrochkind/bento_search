@@ -43,7 +43,7 @@ class BentoSearch::Registrar
   # Above would not change 'shared' in 'original', but would
   # over-ride 'title' in 'derived', without changing 'title' in
   # 'original'. 
-  def register_engine(engine_id, conf_data = nil, &block)
+  def register_engine(id, conf_data = nil, &block)
     conf = Confstruct::Configuration.new
     
     # Make sure we make a deep_copy so any changes don't mutate
@@ -53,11 +53,11 @@ class BentoSearch::Registrar
     end
     
     conf.configure(conf_data, &block)
-    conf.engine_id = engine_id.to_s
+    conf.id = id.to_s
     
     raise ArgumentError.new("Must supply an `engine` class name") unless conf.engine
     
-    @registered_engine_confs[engine_id] = conf    
+    @registered_engine_confs[id] = conf    
     
     return conf
   end
@@ -65,10 +65,10 @@ class BentoSearch::Registrar
   # Get a configured SearchEngine, using configuration and engine
   # class previously registered for `id` with #register_engine. 
   # Raises a BentoSearch::NoSuchEngine if is is not registered.
-  def get_engine(engine_id)
-    conf = @registered_engine_confs[engine_id.to_s]
+  def get_engine(id)
+    conf = @registered_engine_confs[id.to_s]
     
-    raise BentoSearch::NoSuchEngine.new("No registered engine for identifier '#{engine_id}'") unless conf
+    raise BentoSearch::NoSuchEngine.new("No registered engine for identifier '#{id}'") unless conf
     
     # Figure out which SearchEngine class to instantiate
     klass = constantize(conf.engine)

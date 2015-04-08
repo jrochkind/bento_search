@@ -27,7 +27,7 @@ class SearchEngineTest < ActiveSupport::TestCase
     test "nested required config key" do
       requires_class = Class.new(MockEngine) do
         def self.required_configuration
-          ["required.mykey"]
+          ["required.key"]
         end
       end
             
@@ -40,11 +40,11 @@ class SearchEngineTest < ActiveSupport::TestCase
       end
       
       assert_raise ArgumentError do
-        requires_class.new(:required => {:mykey => nil})
+        requires_class.new(:required => {:key => nil})
       end
       
       assert_nothing_raised do
-        requires_class.new(:required => {:mykey => "foo"})
+        requires_class.new(:required => {:key => "foo"})
       end
     end
      
@@ -60,7 +60,7 @@ class SearchEngineTest < ActiveSupport::TestCase
         end
       end
       
-      engine = @dummy_class.new( :two => "new", :array => ["one", "two"], :nested => {:two => "new"}, :required => {:mykey => "required key"} )
+      engine = @dummy_class.new( :two => "new", :array => ["one", "two"], :nested => {:two => "new"}, :required => {:key => "required key"} )
       
       assert_kind_of Confstruct::Configuration, engine.configuration
       assert_equal "default"      , engine.configuration.one
@@ -82,7 +82,7 @@ class SearchEngineTest < ActiveSupport::TestCase
     end
       
     test "sets metadata on results" do
-      engine = MockEngine.new(:engine_id => "foo")
+      engine = MockEngine.new(:id => "foo")
       
       results = engine.search(:query => "cancer", :per_page => 20)
       
@@ -104,7 +104,7 @@ class SearchEngineTest < ActiveSupport::TestCase
     end
     
     test "sets metadata on items" do
-      engine = MockEngine.new(:engine_id => "foo", :for_display => {:mykey => "value", :decorator => "Foo"})      
+      engine = MockEngine.new(:id => "foo", :for_display => {:key => "value", :decorator => "Foo"})      
       results = engine.search(:query => "cancer")
       record = results.first
       
@@ -114,7 +114,7 @@ class SearchEngineTest < ActiveSupport::TestCase
     end
     
     test "failed sets metadata on results" do
-      engine = MockEngine.new(:engine_id => "fail_engine", :error => {:message => "failed"}, :for_display => {:foo => "foo"})
+      engine = MockEngine.new(:id => "fail_engine", :error => {:message => "failed"}, :for_display => {:foo => "foo"})
       
       results = engine.search(:query => "cancer", :per_page => 20)
       
@@ -126,7 +126,7 @@ class SearchEngineTest < ActiveSupport::TestCase
     end
     
     test "auto rescued exception, with proper metadata" do
-      engine = MockEngine.new(:engine_id => "raises", :raise_exception_class => 'TimeoutError', :for_display => {:foo => "foo"})
+      engine = MockEngine.new(:id => "raises", :raise_exception_class => 'TimeoutError', :for_display => {:foo => "foo"})
       
       results = engine.search("foo", :per_page => 20)
       
@@ -147,7 +147,7 @@ class SearchEngineTest < ActiveSupport::TestCase
     end
     
     test "error results still filled out okay" do
-      engine = MockEngine.new(:error => {:msg => "forced error"}, :engine_id => "test")
+      engine = MockEngine.new(:error => {:msg => "forced error"}, :id => "test")
       
       results = engine.search("foo")
       
@@ -164,7 +164,7 @@ class SearchEngineTest < ActiveSupport::TestCase
     
     
     test "carries display configuration over to results" do
-      engine = MockEngine.new(:engine_id => "foo", 
+      engine = MockEngine.new(:id => "foo", 
         :for_display => {:foo => "bar", :nested => {"one" => "two"}}
       )
       

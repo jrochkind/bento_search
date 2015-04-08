@@ -130,6 +130,13 @@ module BentoSearch
     # handles configuration loading, mostly. Argument is a
     # Confstruct::Configuration or Hash. 
     def initialize(aConfiguration = Confstruct::Configuration.new)
+      # To work around weird confstruct bug, we need to change
+      # a hash to a Confstruct ourselves. 
+      # https://github.com/mbklein/confstruct/issues/14
+      unless aConfiguration.kind_of? Confstruct::Configuration
+        aConfiguration = Confstruct::Configuration.new aConfiguration
+      end
+        
       
       # init, from copy of default, or new      
       if self.class.default_configuration
@@ -253,7 +260,7 @@ module BentoSearch
       results.start = normalized_arguments[:start] || 0
       results.per_page = normalized_arguments[:per_page]
       
-      results.engine_id             = configuration.engine_id
+      results.engine_id             = configuration.id
       results.display_configuration = configuration.for_display                        
     end
         
