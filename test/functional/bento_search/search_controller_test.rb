@@ -45,7 +45,8 @@ module BentoSearch
       assert_template "bento_search/search/search"
       
       # meta tag with count
-      assert_tag(:tag => "meta", :attributes => {"itemprop" => "total_items", "content" => /^\d+$/ })
+      meta_tag = assert_select("meta[itemprop=total_items][content]", :count => 1 )
+      assert_match /^\d+$/, meta_tag.attribute("content").text
     end
     
     test "failed search" do
@@ -60,7 +61,7 @@ module BentoSearch
       assert_template "bento_search/search/search"
       assert_template "bento_search/_search_error"
       
-      assert_no_tag(:tag => "meta", :attributes => {"itemprop" => "total_items"})
+      assert_select("meta[itemprop=total_items]", :count => 0)
     end
     
     
