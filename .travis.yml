@@ -13,3 +13,7 @@ rvm:
 # script: bundle exec rspec spec
 before_install:
   - gem install bundler
+# use new faster travis infrastructure
+sudo: false
+# which let's us do caching
+cache: bundler
