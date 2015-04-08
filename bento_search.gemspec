@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", ">= 3.2.3", "< 5"
   # s.add_dependency "jquery-rails"
-  s.add_dependency "confstruct", ">= 0.2.3", "< 1.0"
+  s.add_dependency "confstruct", "~> 1.0"
   s.add_dependency "httpclient", ">= 2.2.5", "< 3.0.0"
   s.add_dependency "multi_json", ">= 1.0.4", "< 2.0"
   s.add_dependency "nokogiri"

@@ -81,7 +81,7 @@ begin
       # we use #delete_if to get an iterator that deletes
       # each item after iteration. 
       @actors.delete_if do |actor|
-        result_key = (actor.engine.configuration.id || actor.engine.class.name)
+        result_key = (actor.engine.configuration.engine_id || actor.engine.class.name)
         results[result_key] = actor.results
         actor.terminate
         
