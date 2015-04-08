@@ -8,6 +8,18 @@ require 'bento_search/util'
 # ugh, sorry:
 require File.dirname(__FILE__) + '/../app/models/bento_search/registrar'
 
+# Crazy workaround to the fact that some versions of Hashie::Mash,
+# when used with SafeAssignment as Confstruct does, don't let
+# you use :id as a key. 
+# https://github.com/intridea/hashie/issues/290
+# We fix by removing the unused method with vary hacky meta programming
+# sorry. 
+require 'hashie/mash'
+if Hashie::Mash.instance_methods(false).include?(:id)
+  Hashie::Mash.send(:remove_method, :id)
+end
+
+
 module BentoSearch  
   
   def self.global_registrar

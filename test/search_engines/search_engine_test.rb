@@ -27,7 +27,7 @@ class SearchEngineTest < ActiveSupport::TestCase
     test "nested required config key" do
       requires_class = Class.new(MockEngine) do
         def self.required_configuration
-          ["required.key"]
+          ["required.mykey"]
         end
       end
             
@@ -40,11 +40,11 @@ class SearchEngineTest < ActiveSupport::TestCase
       end
       
       assert_raise ArgumentError do
-        requires_class.new(:required => {:key => nil})
+        requires_class.new(:required => {:mykey => nil})
       end
       
       assert_nothing_raised do
-        requires_class.new(:required => {:key => "foo"})
+        requires_class.new(:required => {:mykey => "foo"})
       end
     end
      
@@ -60,7 +60,7 @@ class SearchEngineTest < ActiveSupport::TestCase
         end
       end
       
-      engine = @dummy_class.new( :two => "new", :array => ["one", "two"], :nested => {:two => "new"}, :required => {:key => "required key"} )
+      engine = @dummy_class.new( :two => "new", :array => ["one", "two"], :nested => {:two => "new"}, :required => {:mykey => "required key"} )
       
       assert_kind_of Confstruct::Configuration, engine.configuration
       assert_equal "default"      , engine.configuration.one
@@ -104,7 +104,7 @@ class SearchEngineTest < ActiveSupport::TestCase
     end
     
     test "sets metadata on items" do
-      engine = MockEngine.new(:id => "foo", :for_display => {:key => "value", :decorator => "Foo"})      
+      engine = MockEngine.new(:id => "foo", :for_display => {:mykey => "value", :decorator => "Foo"})      
       results = engine.search(:query => "cancer")
       record = results.first
       
