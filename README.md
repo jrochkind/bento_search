@@ -87,7 +87,7 @@ may be required for certain engines.
 ~~~~
 
 `results` are a [BentoSearch::Results](./app/models/bento_search/results.rb) object, which acts like an array of
-[BentoSearch::Item](./app/models/bento_search/results.rb) objects, along with some meta-information about the
+[BentoSearch::ResultItem](./app/models/bento_search/result_item.rb) objects, along with some meta-information about the
 search itself (pagination keys, etc).  BentoSearch::Results and Item fields
 are standardized accross engines. BentoSearch::Items provide semantic
 values (title, author, etc.), as available from the particular engine.
