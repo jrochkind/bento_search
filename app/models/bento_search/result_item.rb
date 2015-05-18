@@ -49,6 +49,7 @@ module BentoSearch
     # won't include any of these, but Decorators will be used
     # to add them in.
     attr_accessor :other_links
+    serializable_attr :other_links, :collection_of => "BentoSearch::Link"
 
     # * dc.title
     # * schema.org CreativeWork: 'name'

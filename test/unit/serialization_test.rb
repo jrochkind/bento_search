@@ -82,6 +82,19 @@ class SerializationTest < ActiveSupport::TestCase
     assert_equal "Jonathan", au.first
     assert_equal "Rochkind", au.last
   end
+
+  def test_result_item_other_links
+    r = ResultItem.new(:title => "foo")
+    r.other_links << BentoSearch::Link.new(:url => "http://example.org")
+
+    r2 = ResultItem.from_json(  r.dump_to_json  )
+    assert_kind_of Array, r2.other_links
+    assert r2.other_links.length == 1
+
+    l = r2.other_links.first
+    assert_kind_of BentoSearch::Link, l
+    assert_equal "http://example.org", l.url
+  end
   
 
 end
