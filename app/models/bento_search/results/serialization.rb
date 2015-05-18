@@ -21,7 +21,9 @@ module BentoSearch::Results::Serialization
   end
 
   class_methods do
-    # Just a macro to mark a property name serializable
+    # Just a macro to mark a property name serializable -- the name is
+    # of an instance method that will be included in our serializations
+    # and de-serializations. 
     #
     # Options:
     #   * collection_of: String fully qualified name of a class that is
@@ -45,7 +47,7 @@ module BentoSearch::Results::Serialization
       self.serializable_attr symbol
     end
 
-    def from_serializable_hash(hash)
+    def from_internal_state_hash(hash)
       o = self.new
       hash.each_pair do |key, value|
         key = key.to_s
@@ -56,7 +58,7 @@ module BentoSearch::Results::Serialization
         if _serializable_attr_options[key] && _serializable_attr_options[key][:collection_of]
           klass = qualified_const_get(_serializable_attr_options[key][:collection_of])
           value = value.collect do |item|
-            klass.from_serializable_hash(item)
+            klass.from_internal_state_hash(item)
           end
         end
 
@@ -75,13 +77,13 @@ module BentoSearch::Results::Serialization
       return o
     end
 
-    def from_json(json_str)
-      self.from_serializable_hash( JSON.parse! json_str )
+    def load_json(json_str)
+      self.from_internal_state_hash( JSON.parse! json_str )
     end
 
   end
 
-  def serializable_hash
+  def internal_state_hash
     hash = {}
     self._serializable_attrs.each do |accessor|
       accessor = accessor.to_s
@@ -94,7 +96,7 @@ module BentoSearch::Results::Serialization
         value = klass.dump(value)
       elsif value.respond_to?(:to_ary)
         value = value.to_ary.collect do |item|
-          item.respond_to?(:serializable_hash) ? item.serializable_hash : item
+          item.respond_to?(:internal_state_hash) ? item.internal_state_hash : item
         end
       end
 
@@ -108,7 +110,7 @@ module BentoSearch::Results::Serialization
   end
 
   def dump_to_json
-    JSON.dump self.serializable_hash
+    JSON.dump self.internal_state_hash
   end
 
   class Date

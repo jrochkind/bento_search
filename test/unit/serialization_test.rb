@@ -17,9 +17,9 @@ class SerializationTest < ActiveSupport::TestCase
 
     r = ResultItem.new(@init_hash)
 
-    hash = r.serializable_hash
+    hash = r.internal_state_hash
 
-    r2 = ResultItem.from_serializable_hash(hash)
+    r2 = ResultItem.from_internal_state_hash(hash)
 
     assert_kind_of ResultItem, r2
 
@@ -32,7 +32,7 @@ class SerializationTest < ActiveSupport::TestCase
     hash = {:first => "Jonathan", :last => "Rochkind", :middle => "A", :display => "Rochkind, Jonathan A."}
     a = BentoSearch::Author.new(hash)
 
-    a2 = BentoSearch::Author.from_json( a.dump_to_json )
+    a2 = BentoSearch::Author.load_json( a.dump_to_json )
 
     hash.each_pair do |key, value|
       assert_equal value, a2.send(key)
@@ -44,7 +44,7 @@ class SerializationTest < ActiveSupport::TestCase
 
     assert_kind_of String, json_str
 
-    r2 = ResultItem.from_json(json_str)
+    r2 = ResultItem.load_json(json_str)
 
     @init_hash.each_pair do |key, value|
       assert_equal value, r2.instance_variable_get("@#{key}")
@@ -54,7 +54,7 @@ class SerializationTest < ActiveSupport::TestCase
   def test_html_safe_serialization
     r = ResultItem.new(:title => "<b>foo</b>".html_safe)
 
-    r2 = ResultItem.from_json( r.dump_to_json )
+    r2 = ResultItem.load_json( r.dump_to_json )
 
     assert r2.title.html_safe?
     assert_equal "<b>foo</b>", r2.title
@@ -64,7 +64,7 @@ class SerializationTest < ActiveSupport::TestCase
     r = ResultItem.new(:title => "foo")
     r.authors << BentoSearch::Author.new(:first => "Jonathan", :last => "Rochkind")
 
-    hash = r.serializable_hash
+    hash = r.internal_state_hash
     assert_kind_of Array, hash['authors']
     hash['authors'].each do |item|
       assert_kind_of Hash, item
@@ -73,7 +73,7 @@ class SerializationTest < ActiveSupport::TestCase
     json_str = r.dump_to_json
     assert_kind_of String, json_str
 
-    r2 = ResultItem.from_json( json_str )
+    r2 = ResultItem.load_json( json_str )
     assert_kind_of Array, r2.authors
     assert r2.authors.length == 1
 
@@ -87,7 +87,7 @@ class SerializationTest < ActiveSupport::TestCase
     r = ResultItem.new(:title => "foo")
     r.other_links << BentoSearch::Link.new(:url => "http://example.org")
 
-    r2 = ResultItem.from_json(  r.dump_to_json  )
+    r2 = ResultItem.load_json(  r.dump_to_json  )
     assert_kind_of Array, r2.other_links
     assert r2.other_links.length == 1
 
@@ -99,7 +99,7 @@ class SerializationTest < ActiveSupport::TestCase
   def test_year_and_date
     r = ResultItem.new(:title => "foo", :year => 1991, :publication_date => Date.new(1991, 5, 1))
 
-    r2 = ResultItem.from_json(  r.dump_to_json )
+    r2 = ResultItem.load_json(  r.dump_to_json )
 
     assert_equal 1991, r2.year
     assert_equal Date.new(1991, 5, 1), r2.publication_date
