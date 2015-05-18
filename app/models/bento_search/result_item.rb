@@ -36,13 +36,13 @@ module BentoSearch
     # internal unique id for the document, from the particular
     # search service it came from. May be alphanumeric. May be nil
     # for engines that don't support it.
-    attr_accessor :unique_id
-    serializable_attr :unique_id
+    serializable_attr_accessor :unique_id
+    
 
     # If set to true, item will refuse to generate an openurl,
     # returning nil from #to_openurl or #openurl_kev
-    attr_accessor :openurl_disabled
-    serializable_attr :unique_id
+    serializable_attr_accessor :openurl_disabled
+    
 
     # Array (possibly empty) of BentoSearch::Link objects
     # representing additional links. Often SearchEngine's themselves
@@ -53,8 +53,7 @@ module BentoSearch
 
     # * dc.title
     # * schema.org CreativeWork: 'name'
-    attr_accessor :title
-    serializable_attr :title
+    serializable_attr_accessor :title    
     # backwards compat, we used to have separate titles and subtitles
     alias_method :complete_title, :title
 
@@ -114,8 +113,7 @@ module BentoSearch
     #
     # Note: We're re-thinking this, might allow uncontrolled
     # in here instead.
-    attr_accessor :format
-    serializable_attr :format
+    serializable_attr_accessor :format    
 
     # Translated from internal format vocab at #format. Outputs
     # eg http://schema.org/Book
@@ -140,8 +138,7 @@ module BentoSearch
     # uncontrolled presumably english-language format string.
     # if supplied will be used in display in place of controlled
     # format.
-    attr_accessor :format_str
-    serializable_attr :format_str
+    serializable_attr_accessor :format_str    
 
     # Language of materials. Producer can set language_code to an ISO 639-1 (two
     # letter) or 639-3 (three letter) language code. If you do this, you don't
@@ -157,8 +154,7 @@ module BentoSearch
     # #language_iso_639_2 (either may be null), or #language_str for uncontrolled
     # string. If engine just sets one of these, internals take care of filling
     # out the others. r
-    attr_accessor :language_code
-    serializable_attr :language_code
+    serializable_attr_accessor :language_code    
     attr_writer :language_str
     def language_str
       @language_str || language_code.try do |code|
@@ -197,41 +193,41 @@ module BentoSearch
     attr_accessor :publication_date
     serializable_attr :publication_date, :serializer => "Date"
 
-    attr_accessor :volume
-    attr_accessor :issue
-    attr_accessor :start_page
-    attr_accessor :end_page
+    serializable_attr_accessor :volume
+    serializable_attr_accessor :issue
+    serializable_attr_accessor :start_page
+    serializable_attr_accessor :end_page
 
     # source_title is often used for journal_title (and aliased
     # as #journal_title, although that may go away), but can
     # also be used for other 'container' titles. Book title for
     # a book chapter. Even web site or URL for a web page.
-    attr_accessor :source_title
+    serializable_attr_accessor :source_title
     alias_method :journal_title, :source_title
     alias_method :'journal_title=',  :'source_title='
 
 
-    attr_accessor :issn
-    attr_accessor :isbn
-    attr_accessor :oclcnum # OCLC accession number, WorldCat.
+    serializable_attr_accessor :issn
+    serializable_attr_accessor :isbn
+    serializable_attr_accessor :oclcnum # OCLC accession number, WorldCat.
 
-    attr_accessor :doi
-    attr_accessor :pmid
+    serializable_attr_accessor :doi
+    serializable_attr_accessor :pmid
 
     # usually used for books rather than articles
-    attr_accessor :publisher
+    serializable_attr_accessor :publisher
 
     # an openurl kev-encoded context object. optional,
     # only if source provides one that may be better
     # than can be constructed from individual elements above
-    attr_accessor :openurl_kev_co
+    serializable_attr_accessor :openurl_kev_co
 
     # Short summary of item.
     # Mark .html_safe if it includes html -- creator is responsible
     # for making sure html is safely sanitizied and/or stripped,
     # rails ActionView::Helpers::Sanistize #sanitize and #strip_tags
     # may be helpful.
-    attr_accessor :abstract
+    serializable_attr_accessor :abstract
 
     # An ARRAY of string query-in-context snippets. Will usually
     # have highlighting <b> tags in it. Creator is responsible
@@ -251,7 +247,7 @@ module BentoSearch
 
     # engine-specific data not suitable for abstract API, usually
     # for internal use.
-    attr_accessor :custom_data
+    serializable_attr_accessor :custom_data
 
     # Copied over from engine configuration usually, a string
     # qualified name of a decorator class. Can be nil for default.

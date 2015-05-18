@@ -6,8 +6,31 @@ class SerializationTest < ActiveSupport::TestCase
   ResultItem = BentoSearch::ResultItem
 
   setup do
-    @init_hash = {:title => "something", :language_code => "en", 
+    @init_hash = {:title => "something", 
+                  :unique_id => "AAA11212",
+                  :openurl_disabled => true,
+                  :link => "http://www.example.org/something",
                   :link_is_fulltext => true,
+                  :format => "Article",
+                  :year => 2000,
+                  :publication_date => Date.new(2000,1,1),
+                  :volume => "10",
+                  :issue => "22",
+                  :start_page => "122",
+                  :end_page => "124",
+                  :language_code => "en",
+                  :language_str => "English 22",
+                  :source_title => "Journal of Things",
+                  :issn => "12345678",
+                  :isbn => "1234567890",
+                  :oclcnum => "1",
+                  :doi => "10.2.whatever",
+                  :pmid => "12121212",
+                  :publisher => "Joe Blow",
+                  :abstract => "something or other",
+                  :openurl_kev_co => "&rft.fake=fake",
+                  :format_str => "Something or other",
+                  :custom_data => {'foo' => "bar"},
                   :snippets => ["snippet one", "snippet two"]}
     @result_item = ResultItem.new(@init_hash)
   end
