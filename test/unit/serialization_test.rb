@@ -64,7 +64,23 @@ class SerializationTest < ActiveSupport::TestCase
     r = ResultItem.new(:title => "foo")
     r.authors << BentoSearch::Author.new(:first => "Jonathan", :last => "Rochkind")
 
+    hash = r.serializable_hash
+    assert_kind_of Array, hash['authors']
+    hash['authors'].each do |item|
+      assert_kind_of Hash, item
+    end
+
     json_str = r.dump_to_json
+    assert_kind_of String, json_str
+
+    r2 = ResultItem.from_json( json_str )
+    assert_kind_of Array, r2.authors
+    assert r2.authors.length == 1
+
+    au = r2.authors.first
+    assert_kind_of BentoSearch::Author, au
+    assert_equal "Jonathan", au.first
+    assert_equal "Rochkind", au.last
   end
   
 

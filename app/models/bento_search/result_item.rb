@@ -1,5 +1,8 @@
 require 'language_list'
+require 'bento_search/author'
+require 'bento_search/link'
 require 'bento_search/results/serialization'
+
 
 module BentoSearch
   # Data object representing a single hit from a search, normalized
@@ -241,7 +244,8 @@ module BentoSearch
 
     # An array (order matters) of BentoSearch::Author objects
     # add authors to it with results.authors << Author
-    serializable_attr_accessor :authors
+    attr_accessor :authors
+    serializable_attr :authors, :collection_of => "BentoSearch::Author"
 
     # engine-specific data not suitable for abstract API, usually
     # for internal use.

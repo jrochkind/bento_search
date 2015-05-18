@@ -21,6 +21,11 @@ module BentoSearch::Results::Serialization
 
   class_methods do
     # Just a macro to mark a property name serializable
+    #
+    # Options:
+    #   * collection_of: String fully qualified name of a class that is
+    #       is also BentoSearch::Results::Serialization, the attribute
+    #       is an array of these. 
     def serializable_attr(symbol, options = nil)
       symbol = symbol.to_s
       self._serializable_attrs << symbol
@@ -42,6 +47,14 @@ module BentoSearch::Results::Serialization
         key = key.to_s
 
         next if key =~ /\A_.*_htmlsafe\Z/
+
+
+        if _serializable_attr_options[key] && _serializable_attr_options[key][:collection_of]
+          klass = qualified_const_get(_serializable_attr_options[key][:collection_of])
+          value = value.collect do |item|
+            klass.from_serializable_hash(item)
+          end
+        end
 
         if hash["_#{key}_htmlsafe"] == true && value.respond_to?(:html_safe)
           value = value.html_safe
