@@ -192,9 +192,10 @@ module BentoSearch
     # * prism:coverDate, year portion
     #
     # See also publication_date when you have a complete date
-    attr_accessor :year
+    serializable_attr_accessor :year
     # ruby stdlib Date object.
     attr_accessor :publication_date
+    serializable_attr :publication_date, :serializer => "Date"
 
     attr_accessor :volume
     attr_accessor :issue

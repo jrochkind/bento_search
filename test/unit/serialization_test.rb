@@ -95,6 +95,15 @@ class SerializationTest < ActiveSupport::TestCase
     assert_kind_of BentoSearch::Link, l
     assert_equal "http://example.org", l.url
   end
+
+  def test_year_and_date
+    r = ResultItem.new(:title => "foo", :year => 1991, :publication_date => Date.new(1991, 5, 1))
+
+    r2 = ResultItem.from_json(  r.dump_to_json )
+
+    assert_equal 1991, r2.year
+    assert_equal Date.new(1991, 5, 1), r2.publication_date
+  end
   
 
 end

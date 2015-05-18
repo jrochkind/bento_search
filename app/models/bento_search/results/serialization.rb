@@ -1,6 +1,7 @@
 require 'bento_search/results'
 require 'active_support/concern'
 require 'json'
+require 'date'
 
 # 
 # 
@@ -26,6 +27,9 @@ module BentoSearch::Results::Serialization
     #   * collection_of: String fully qualified name of a class that is
     #       is also BentoSearch::Results::Serialization, the attribute
     #       is an array of these. 
+    #   * serializer: String fully qualified class name of a serializer
+    #        class that has a `dump` and a `load` for individual values,
+    #        we just use it for Date now, see BentoSearch::Results::Serialization::Date
     def serializable_attr(symbol, options = nil)
       symbol = symbol.to_s
       self._serializable_attrs << symbol
@@ -56,6 +60,11 @@ module BentoSearch::Results::Serialization
           end
         end
 
+        if _serializable_attr_options[key] && _serializable_attr_options[key][:serializer]
+          klass = qualified_const_get(_serializable_attr_options[key][:serializer])
+          value = klass.load(value)
+        end
+
         if hash["_#{key}_htmlsafe"] == true && value.respond_to?(:html_safe)
           value = value.html_safe
         end
@@ -78,13 +87,18 @@ module BentoSearch::Results::Serialization
       accessor = accessor.to_s
       value = self.instance_variable_get("@#{accessor}")
 
-      if value.respond_to?(:to_ary)
+      next if value.nil?
+
+      if _serializable_attr_options[accessor] && _serializable_attr_options[accessor][:serializer]
+        klass = self.class.qualified_const_get(_serializable_attr_options[accessor][:serializer])
+        value = klass.dump(value)
+      elsif value.respond_to?(:to_ary)
         value = value.to_ary.collect do |item|
           item.respond_to?(:serializable_hash) ? item.serializable_hash : item
         end
       end
 
-      hash[accessor] = value unless value.nil?
+      hash[accessor] = value
 
       if value.respond_to?(:html_safe?) && value.html_safe?
         hash["_#{accessor}_htmlsafe"] = true
@@ -95,6 +109,15 @@ module BentoSearch::Results::Serialization
 
   def dump_to_json
     JSON.dump self.serializable_hash
+  end
+
+  class Date
+    def self.dump(datetime)
+      datetime.iso8601
+    end
+    def self.load(str)
+      ::Date.iso8601(str)
+    end
   end
 
 end
