@@ -1,4 +1,5 @@
 require 'language_list'
+require 'bento_search/results/serialization'
 
 module BentoSearch
   # Data object representing a single hit from a search, normalized
@@ -13,6 +14,8 @@ module BentoSearch
   class ResultItem
     include ERB::Util # for html_escape for our presentational stuff
     include ActionView::Helpers::OutputSafetyHelper # for safe_join
+
+    include ::BentoSearch::Results::Serialization
 
     # Can initialize with a hash of key/values
     def initialize(args = {})
@@ -31,10 +34,12 @@ module BentoSearch
     # search service it came from. May be alphanumeric. May be nil
     # for engines that don't support it.
     attr_accessor :unique_id
+    serializable_attr :unique_id
 
     # If set to true, item will refuse to generate an openurl,
     # returning nil from #to_openurl or #openurl_kev
     attr_accessor :openurl_disabled
+    serializable_attr :unique_id
 
     # Array (possibly empty) of BentoSearch::Link objects
     # representing additional links. Often SearchEngine's themselves
@@ -45,6 +50,7 @@ module BentoSearch
     # * dc.title
     # * schema.org CreativeWork: 'name'
     attr_accessor :title
+    serializable_attr :title
     # backwards compat, we used to have separate titles and subtitles
     alias_method :complete_title, :title
 
@@ -52,6 +58,7 @@ module BentoSearch
     # Can be changed in actual presentation with a Decorator.
     # * schema.org CreativeWork: 'url'
     attr_accessor :link
+    serializable_attr :link
 
     # does the #link correspond to fulltext?  true or false -- or nil
     # for unknown/non-applicable. Not all engines will set.
@@ -61,6 +68,7 @@ module BentoSearch
     def link_is_fulltext=(v)
       @link_is_fulltext = v
     end
+    serializable_attr :link_is_fulltext
 
     # Our own INTERNAL controlled vocab for 'format'.
     #
@@ -103,6 +111,7 @@ module BentoSearch
     # Note: We're re-thinking this, might allow uncontrolled
     # in here instead.
     attr_accessor :format
+    serializable_attr :format
 
     # Translated from internal format vocab at #format. Outputs
     # eg http://schema.org/Book
@@ -128,6 +137,7 @@ module BentoSearch
     # if supplied will be used in display in place of controlled
     # format.
     attr_accessor :format_str
+    serializable_attr :format_str
 
     # Language of materials. Producer can set language_code to an ISO 639-1 (two
     # letter) or 639-3 (three letter) language code. If you do this, you don't
@@ -144,6 +154,7 @@ module BentoSearch
     # string. If engine just sets one of these, internals take care of filling
     # out the others. r
     attr_accessor :language_code
+    serializable_attr :language_code
     attr_writer :language_str
     def language_str
       @language_str || language_code.try do |code|
@@ -152,6 +163,7 @@ module BentoSearch
         end
       end
     end
+    serializable_attr :language_str
     # Returns a LanguageList gem language object-- from #language_code
     # if available, otherwise from direct language_str if available and
     # possible.
@@ -225,10 +237,11 @@ module BentoSearch
     # with same content formatted differently (array of multiple vs
     # one combined string), some engines they may be different. 
     attr_accessor :snippets
+    serializable_attr :snippets
 
     # An array (order matters) of BentoSearch::Author objects
     # add authors to it with results.authors << Author
-    attr_accessor :authors
+    serializable_attr_accessor :authors
 
     # engine-specific data not suitable for abstract API, usually
     # for internal use.

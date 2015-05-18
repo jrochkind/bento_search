@@ -1,5 +1,7 @@
 module BentoSearch
   class Author
+    include ::BentoSearch::Results::Serialization
+
     def initialize(args ={})
       args.each_pair do |key, value|
         send("#{key}=", value)
@@ -7,15 +9,15 @@ module BentoSearch
     end
     
     # Can be first name or initial, whatever source provides
-    attr_accessor :first
+    serializable_attr_accessor :first
     # last name/surname/family name as provided by source
-    attr_accessor :last
+    serializable_attr_accessor :last
     # middle name or initial, as and if provided by source
-    attr_accessor :middle
+    serializable_attr_accessor :middle
     
     # if source doens't provide seperate first/last, 
     # source may only be able to provide one big string, author_display
-    attr_accessor :display
+    serializable_attr_accessor :display
     
     def empty?
       first.blank? && last.blank? && middle.blank? && display.blank?
