@@ -369,7 +369,9 @@ will be re-assigned on de-serialization.  This means if the configuration
 changed between serialization and de-serialization, you get the new stuff
 assigned on de-serialization. Which I thought desirable. 
 
-De-serializing results with an engine_id that no longer exists will raise.
+De-serializing results with an engine_id that no longer exists will raise --
+but may be changed to silently accept as if no engine_id present in the future,
+figuring out which is best, so don't rely on the exception. 
 
 ## Planned Features
 
