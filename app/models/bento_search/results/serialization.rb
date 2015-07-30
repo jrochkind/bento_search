@@ -3,14 +3,25 @@ require 'active_support/concern'
 require 'json'
 require 'date'
 
-# 
+# Call #dump_to_json on a BentoSearch value object (such as BentoSearch::Result or ::Author)
+# to get it in Json 
+#
+# Values marked with serializable_attr in BentoSearch::Result are
+# included in seralization. 
+#
+# At present metadata and configuration are NOT serialized: #decorator, #display_configuration,
+# and #engine_id are not included in the serialization, so when loaded from serialization,
+# ResultItems will not have such things set. 
 # 
 # * Works by getting and setting instance variables directly, ignores getters/setters
+#
 # * This means decorated values are NOT included in serialization, the raw
 #   values are what is serialized. This is intended, we serialize internal
 #   state, not decoration which can be recreated. You should make sure the decorators you
 #   want are applied after de-serialization. 
+#
 # * preserves html_safety status in serialization, by adding extra `_attr_htmlsafe: true` key/value
+#
 module BentoSearch::Results::Serialization
   extend ActiveSupport::Concern
 

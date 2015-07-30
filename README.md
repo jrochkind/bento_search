@@ -350,6 +350,27 @@ end
 There are additional details that might matter to you, for more info see the
 [wiki page](https://github.com/jrochkind/bento_search/wiki/Machine-Readable-Serialization-With-Atom)
 
+### Round-Trip Serialization to JSON
+
+You can serialize BentoSearch::Results to a simple straightforward JSON structure, and de-serialize
+them back into BentoSearch::Results. 
+
+~~~ruby
+json_str          = results.dump_to_json
+copy_of_results   = BentoSearch::Results.load_json(json_str)
+~~~
+
+Search context (query, start, per_page) are not serialized, and will be lost
+on de-serialization. 
+
+Configuration normally attached to Results and Item is not serialized either. 
+However, the engine_id, if present is, and configuration from the specified engine
+will be re-assigned on de-serialization.  This means if the configuration
+changed between serialization and de-serialization, you get the new stuff
+assigned on de-serialization. Which I thought desirable. 
+
+De-serializing results with an engine_id that no longer exists will raise.
+
 ## Planned Features
 
 I am trying to keep BentoSearch as simple as it can be to conveniently meet

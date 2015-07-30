@@ -263,6 +263,8 @@ module BentoSearch
     # into a backpointing reference instead? And user cover-methods
     # for it? Nice thing about the configuration has instead is it's
     # easily serializable, it's just data.
+    #
+    # Although we intentionally do NOT include these in JSON serialization, ha. 
     attr_accessor :display_configuration
     attr_accessor :engine_id
 
