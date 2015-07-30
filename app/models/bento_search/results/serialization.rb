@@ -100,7 +100,7 @@ module BentoSearch::Results::Serialization
       accessor = accessor.to_s
       value = self.instance_variable_get("@#{accessor}")
 
-      next if value.nil?
+      next if value.blank?
 
       if _serializable_attr_options[accessor] && _serializable_attr_options[accessor][:serializer]
         klass = self.class.qualified_const_get(_serializable_attr_options[accessor][:serializer])
