@@ -363,15 +363,17 @@ copy_of_results   = BentoSearch::Results.load_json(json_str)
 Search context (query, start, per_page) are not serialized, and will be lost
 on de-serialization. 
 
-Configuration normally attached to Results and Item is not serialized either. 
-However, the engine_id, if present is, and configuration from the specified engine
+Unlike the Atom serialization, **the JSON serialization is of internal data
+state, without decoration.** Configuration context is not serialized.  
+
+However, the engine_id is included in serialization if present, 
+and configuration from the specified engine
 will be re-assigned on de-serialization.  This means if the configuration
 changed between serialization and de-serialization, you get the new stuff
-assigned on de-serialization. Which I thought desirable. 
+assigned on de-serialization. 
 
-De-serializing results with an engine_id that no longer exists will raise --
-but may be changed to silently accept as if no engine_id present in the future,
-figuring out which is best, so don't rely on the exception. 
+The use case guiding JSON serialization is storage somewhere, and
+round-trip de-serialization in the current app context. 
 
 ## Planned Features
 
