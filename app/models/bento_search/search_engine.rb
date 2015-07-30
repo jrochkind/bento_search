@@ -217,16 +217,7 @@ module BentoSearch
       fill_in_search_metadata_for(results, arguments)
             
       results.timing = (Time.now - start_t)
-            
-      results.each do |item| 
-        # We copy some configuraton info over to each Item, as a convenience
-        # to display logic that may have decide what to do given only an item,
-        # and may want to parameterize based on configuration.
-        item.engine_id              = results.engine_id 
-        item.decorator              = configuration.lookup!("for_display.decorator")
-        item.display_configuration  = configuration.for_display
-      end
-        
+                    
       return results
     rescue *auto_rescue_exceptions => e
       # Uncaught exception, log and turn into failed Results object. We
@@ -252,16 +243,24 @@ module BentoSearch
     
     # SOME of the elements of Results to be returned that SearchEngine implementation
     # fills in automatically post-search. Extracted into a method for DRY in
-    # error handling to try to fill these in even in errors. And *possible*
-    # experimental use in other classes for same thing is why method is
-    # public, see MultiSearcher.     
+    # error handling to try to fill these in even in errors. Also can be used
+    # as public method for de-serialized or mock results. 
     def fill_in_search_metadata_for(results, normalized_arguments)
       results.search_args           = normalized_arguments
       results.start = normalized_arguments[:start] || 0
       results.per_page = normalized_arguments[:per_page]
       
       results.engine_id             = configuration.id
-      results.display_configuration = configuration.for_display                        
+      results.display_configuration = configuration.for_display
+
+      # We copy some configuraton info over to each Item, as a convenience
+      # to display logic that may have decide what to do given only an item,
+      # and may want to parameterize based on configuration.
+      results.each do |item| 
+        item.engine_id              = configuration.id 
+        item.decorator              = configuration.lookup!("for_display.decorator")
+        item.display_configuration  = configuration.for_display
+      end
     end
         
 
