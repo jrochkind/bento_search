@@ -50,6 +50,23 @@ class SerializationTest < ActiveSupport::TestCase
     end
   end
 
+  class ::SerializationTest::ExampleDecorator < BentoSearch::StandardDecorator
+    def title
+      "DECORATED TITLE"
+    end        
+  end
+
+  def test_item_serialization_not_decorated      
+    r = ::SerializationTest::ExampleDecorator.new(ResultItem.new(@init_hash), nil)
+    
+    assert_equal "DECORATED TITLE", r.title
+
+    hash = r.internal_state_hash
+
+    assert_present hash["title"]
+    refute_equal "DECORATED TITLE", hash["title"]
+  end
+
   def test_author_serialization
     hash = {:first => "Jonathan", :last => "Rochkind", :middle => "A", :display => "Rochkind, Jonathan A."}
     a = BentoSearch::Author.new(hash)
