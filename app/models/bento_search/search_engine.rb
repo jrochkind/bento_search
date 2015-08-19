@@ -245,7 +245,7 @@ module BentoSearch
     # fills in automatically post-search. Extracted into a method for DRY in
     # error handling to try to fill these in even in errors. Also can be used
     # as public method for de-serialized or mock results. 
-    def fill_in_search_metadata_for(results, normalized_arguments)
+    def fill_in_search_metadata_for(results, normalized_arguments = {})
       results.search_args           = normalized_arguments
       results.start = normalized_arguments[:start] || 0
       results.per_page = normalized_arguments[:per_page]

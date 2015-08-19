@@ -160,6 +160,30 @@ class SerializationTest < ActiveSupport::TestCase
       assert_kind_of BentoSearch::Results, BentoSearch::Results.load_json(json_str)
     end
 
+    test "de-serialized can be configured for any engine" do
+      create_engine = MockEngine.new()
+      restore_engine = MockEngine.new(
+        :id => "MyMockEngine",
+        :for_display => {:foo => "bar", :nested => {"one" => "two"}, :decorator => "SomeDecorator"}
+      )
+
+      json = create_engine.search("foo").dump_to_json
+
+      restored = BentoSearch::Results.load_json(json)
+      restore_engine.fill_in_search_metadata_for(restored)
+
+      assert_equal "MyMockEngine", restored.engine_id
+      assert_equal restore_engine.configuration.for_display, restored.display_configuration
+
+      assert restored.length > 0
+
+      restored.each do |item|
+        assert_equal "MyMockEngine", item.engine_id
+        assert_equal restore_engine.configuration.for_display, item.display_configuration
+        assert_equal "SomeDecorator", item.decorator
+      end
+    end
+
     class RegisteredEngineTest < ActionController::TestCase
       def setup
         BentoSearch.register_engine("mock") do |config|

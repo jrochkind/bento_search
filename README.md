@@ -375,6 +375,17 @@ assigned on de-serialization.
 The use case guiding JSON serialization is storage somewhere, and
 round-trip de-serialization in the current app context. 
 
+If you want to take de-serialized results that did not have an engine_id,
+or set configuration on them to a different engine (registered or not) you can:
+
+~~~ruby
+  restored = BentoSearch::Results.load_json(json_str)
+  some_engine.fill_in_search_metadata_for(restored)
+
+  # restored Results will have configuration (engine_id, decorators, etc)
+  # set to those configured on some_engine
+~~~
+
 ## Planned Features
 
 I am trying to keep BentoSearch as simple as it can be to conveniently meet
