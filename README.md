@@ -386,6 +386,10 @@ or set configuration on them to a different engine (registered or not) you can:
   # set to those configured on some_engine
 ~~~
 
+If you want a serialization to be consumed by something other than an
+app using the bento_search gem, as an API, we recommend the [Atom serialization](https://github.com/jrochkind/bento_search/wiki/Machine-Readable-Serialization-With-Atom)
+instead. 
+
 ## Planned Features
 
 I am trying to keep BentoSearch as simple as it can be to conveniently meet
