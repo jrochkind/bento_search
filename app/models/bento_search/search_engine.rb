@@ -265,6 +265,8 @@ module BentoSearch
         item.decorator              = configuration.lookup!("for_display.decorator")
         item.display_configuration  = configuration.for_display
       end
+
+      results
     end
         
 
