@@ -4,325 +4,328 @@ http_interactions:
     method: get
     uri: http://www.journaltocs.ac.uk/api/journals/1533290X?output=articles&user=nobody@example.com
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers: {}
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "RGF0ZQ==":
-      - !binary |-
-        TW9uLCAxMSBNYXIgMjAxMyAyMDoxMjo0MCBHTVQ=
-      !binary "U2VydmVy":
-      - !binary |-
-        QXBhY2hlLzIuMi4xNSAoQ2VudE9TKQ==
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        UEhQLzUuMy4z
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24veG1sOyBjaGFyc2V0PXV0Zi04
+      Date:
+      - Tue, 01 Sep 2015 21:20:09 GMT
+      Server:
+      - Apache
+      X-Powered-By:
+      - PHP/5.3.3
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/xml; charset=utf-8
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"
         \r\n         xmlns:prism=\"http://prismstandard.org/namespaces/1.2/basic/\"
         \r\n\t\t\t\t xmlns:dc=\"http://purl.org/dc/elements/1.1/\" \r\n\t\t\t\t xmlns:mn=\"http://usefulinc.com/rss/manifest/\"\r\n\t\t\t\t
         xmlns:content=\"http://purl.org/rss/1.0/modules/content/\" \r\n\t\t\t\t xmlns=\"http://purl.org/rss/1.0/\">\n\n
         \ <channel rdf:about=\"http://www.journaltocs.hw.ac.uk/api/journals\">\r\n
         \   <title>JournalTOCs API - Journal of Library &amp; Information Services
-        in Distance Learning (18 articles)</title>\r\n    <link>http://www.journaltocs.ac.uk/api/journals/1533290X</link>\r\n
-        \   <description><![CDATA[Your query: 1533290X has returned 18 articles. They
+        in Distance Learning (14 articles)</title>\r\n    <link>http://www.journaltocs.ac.uk/api/journals/1533290X</link>\r\n
+        \   <description><![CDATA[Your query: 1533290X has returned 14 articles. They
         are listed in alphabetical order per journal (maximum number of returned items
         is 3000).]]></description>\r\n    <dc:publisher>JournalTOCs API</dc:publisher>\r\n
         \   <dc:creator>JOURNALTOCS API PROJECT</dc:creator>\r\n\t\t<dc:coverage>1</dc:coverage>\r\n
-        \   <image rdf:resource=\"http://www.journaltocs.hw.ac.uk/images/xtralogo.gif\"
-        />\r\n    <items>\r\n      <rdf:Seq>\r\n        \r\n      </rdf:Seq>\r\n    </items>\r\n
-        \ </channel>\r\n  <item rdf:about=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705697?af=R\">\n<title>Workshop</title>\r\n<link>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705697?af=R</link>\r\n<description>&lt;br&gt;\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705697?af=R&lt;br&gt;\nCitation:
-        Vol 1-2 No. 7 (2012) &lt;br&gt;\nPublication Date: Mon, 12 Nov 2012 15:03:09
-        GMT&lt;br&gt;\nJournal: Journal of Library &amp;amp; Information Services
-        in Distance Learning</description>\r\n<dc:identifier>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705697?af=R</dc:identifier>\r\n<dc:source>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp.  - </dc:source>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
-        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>1-2</prism:volume>\n<prism:number>7</prism:number>\n<content:encoded><![CDATA[<p><a
-        href=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705697?af=R\"><b>Workshop</b></A><br
-        /> <br /><i>Journal of Library &amp; Information Services in Distance Learning,
-        Vol. 1-2, No. 7 (2012) pp.  - </i><br />\nArticle URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705697?af=R\nCitation:
-        Vol 1-2 No. 7 (2012) \nPublication Date: Mon, 12 Nov 2012 15:03:09 GMT\nJournal:
-        Journal of Library &amp;amp; Information Services in Distance Learning</p>]]></content:encoded>\r\n</item>\n<item
-        rdf:about=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705695?af=R\">\n<title>Poster
-        Sessions</title>\r\n<link>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705695?af=R</link>\r\n<description>&lt;br&gt;\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705695?af=R&lt;br&gt;\nCitation:
-        Vol 1-2 No. 7 (2012) pp 234 243&lt;br&gt;\nPublication Date: Mon, 12 Nov 2012
-        15:03:16 GMT&lt;br&gt;\nJournal: Journal of Library &amp;amp; Information
-        Services in Distance Learning</description>\r\n<dc:identifier>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705695?af=R</dc:identifier>\r\n<dc:source>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp. 234 - 243</dc:source>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
-        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>1-2</prism:volume>\n<prism:number>7</prism:number>\n<prism:startingPage>234</prism:startingPage>\n<prism:endingPage>243</prism:endingPage>\n<content:encoded><![CDATA[<p><a
-        href=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705695?af=R\"><b>Poster
-        Sessions</b></A><br /> <br /><i>Journal of Library &amp; Information Services
-        in Distance Learning, Vol. 1-2, No. 7 (2012) pp. 234 - 243</i><br />\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705695?af=R\nCitation:
-        Vol 1-2 No. 7 (2012) pp 234 243\nPublication Date: Mon, 12 Nov 2012 15:03:16
-        GMT\nJournal: Journal of Library &amp;amp; Information Services in Distance
-        Learning</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705694?af=R\">\n<title>Panel
-        Discussions</title>\r\n<link>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705694?af=R</link>\r\n<description>&lt;br&gt;\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705694?af=R&lt;br&gt;\nCitation:
-        Vol 1-2 No. 7 (2012) pp 229 233&lt;br&gt;\nPublication Date: Mon, 12 Nov 2012
-        15:03:23 GMT&lt;br&gt;\nJournal: Journal of Library &amp;amp; Information
-        Services in Distance Learning</description>\r\n<dc:identifier>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705694?af=R</dc:identifier>\r\n<dc:source>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp. 229 - 233</dc:source>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
-        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>1-2</prism:volume>\n<prism:number>7</prism:number>\n<prism:startingPage>229</prism:startingPage>\n<prism:endingPage>233</prism:endingPage>\n<content:encoded><![CDATA[<p><a
-        href=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705694?af=R\"><b>Panel
-        Discussions</b></A><br /> <br /><i>Journal of Library &amp; Information Services
-        in Distance Learning, Vol. 1-2, No. 7 (2012) pp. 229 - 233</i><br />\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705694?af=R\nCitation:
-        Vol 1-2 No. 7 (2012) pp 229 233\nPublication Date: Mon, 12 Nov 2012 15:03:23
-        GMT\nJournal: Journal of Library &amp;amp; Information Services in Distance
-        Learning</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705688?af=R\">\n<title>From
-        Add-On to Mainstream: Applying Distance Learning Models for ALL Students</title>\r\n<link>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705688?af=R</link>\r\n<description>&lt;br&gt;\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705688?af=R&lt;br&gt;\nCitation:
-        Vol 1-2 No. 7 (2012) pp 220 228&lt;br&gt;\nPublication Date: Mon, 12 Nov 2012
-        15:04:11 GMT&lt;br&gt;\nJournal: Journal of Library &amp;amp; Information
-        Services in Distance Learning</description>\r\n<dc:identifier>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705688?af=R</dc:identifier>\r\n<dc:source>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp. 220 - 228</dc:source>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
-        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>1-2</prism:volume>\n<prism:number>7</prism:number>\n<prism:startingPage>220</prism:startingPage>\n<prism:endingPage>228</prism:endingPage>\n<content:encoded><![CDATA[<p><a
-        href=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705688?af=R\"><b>From
-        Add-On to Mainstream: Applying Distance Learning Models for ALL Students</b></A><br
-        /> <br /><i>Journal of Library &amp; Information Services in Distance Learning,
-        Vol. 1-2, No. 7 (2012) pp. 220 - 228</i><br />\nArticle URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705688?af=R\nCitation:
-        Vol 1-2 No. 7 (2012) pp 220 228\nPublication Date: Mon, 12 Nov 2012 15:04:11
-        GMT\nJournal: Journal of Library &amp;amp; Information Services in Distance
-        Learning</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705658?af=R\">\n<title>Effectively
-        Managing Copyright Clearance: Electronic Reserves in a Large Distance Education
-        University</title>\r\n<link>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705658?af=R</link>\r\n<description>&lt;br&gt;\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705658?af=R&lt;br&gt;\nCitation:
-        Vol 1-2 No. 7 (2012) pp 210 219&lt;br&gt;\nPublication Date: Mon, 12 Nov 2012
-        15:03:27 GMT&lt;br&gt;\nJournal: Journal of Library &amp;amp; Information
-        Services in Distance Learning</description>\r\n<dc:identifier>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705658?af=R</dc:identifier>\r\n<dc:source>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp. 210 - 219</dc:source>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
-        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>1-2</prism:volume>\n<prism:number>7</prism:number>\n<prism:startingPage>210</prism:startingPage>\n<prism:endingPage>219</prism:endingPage>\n<content:encoded><![CDATA[<p><a
-        href=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705658?af=R\"><b>Effectively
-        Managing Copyright Clearance: Electronic Reserves in a Large Distance Education
-        University</b></A><br /> <br /><i>Journal of Library &amp; Information Services
-        in Distance Learning, Vol. 1-2, No. 7 (2012) pp. 210 - 219</i><br />\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705658?af=R\nCitation:
-        Vol 1-2 No. 7 (2012) pp 210 219\nPublication Date: Mon, 12 Nov 2012 15:03:27
-        GMT\nJournal: Journal of Library &amp;amp; Information Services in Distance
-        Learning</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705656?af=R\">\n<title>Studying
-        Distance Students: Methods, Findings, Actions</title>\r\n<link>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705656?af=R</link>\r\n<description>&lt;br&gt;\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705656?af=R&lt;br&gt;\nCitation:
-        Vol 1-2 No. 7 (2012) pp 183 209&lt;br&gt;\nPublication Date: Mon, 12 Nov 2012
-        15:03:30 GMT&lt;br&gt;\nJournal: Journal of Library &amp;amp; Information
-        Services in Distance Learning</description>\r\n<dc:identifier>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705656?af=R</dc:identifier>\r\n<dc:source>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp. 183 - 209</dc:source>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
-        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>1-2</prism:volume>\n<prism:number>7</prism:number>\n<prism:startingPage>183</prism:startingPage>\n<prism:endingPage>209</prism:endingPage>\n<content:encoded><![CDATA[<p><a
-        href=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705656?af=R\"><b>Studying
-        Distance Students: Methods, Findings, Actions</b></A><br /> <br /><i>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp. 183 - 209</i><br />\nArticle URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705656?af=R\nCitation:
-        Vol 1-2 No. 7 (2012) pp 183 209\nPublication Date: Mon, 12 Nov 2012 15:03:30
-        GMT\nJournal: Journal of Library &amp;amp; Information Services in Distance
-        Learning</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705630?af=R\">\n<title>But
-        We Don't Have an Instructional Designer: Designing Online Library Instruction
-        Using ISD Techniques</title>\r\n<link>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705630?af=R</link>\r\n<description>&lt;br&gt;\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705630?af=R&lt;br&gt;\nCitation:
-        Vol 1-2 No. 7 (2012) pp 169 182&lt;br&gt;\nPublication Date: Mon, 12 Nov 2012
-        15:03:36 GMT&lt;br&gt;\nJournal: Journal of Library &amp;amp; Information
-        Services in Distance Learning</description>\r\n<dc:identifier>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705630?af=R</dc:identifier>\r\n<dc:source>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp. 169 - 182</dc:source>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
-        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>1-2</prism:volume>\n<prism:number>7</prism:number>\n<prism:startingPage>169</prism:startingPage>\n<prism:endingPage>182</prism:endingPage>\n<content:encoded><![CDATA[<p><a
-        href=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705630?af=R\"><b>But
-        We Don't Have an Instructional Designer: Designing Online Library Instruction
-        Using ISD Techniques</b></A><br /> <br /><i>Journal of Library &amp; Information
-        Services in Distance Learning, Vol. 1-2, No. 7 (2012) pp. 169 - 182</i><br
-        />\nArticle URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705630?af=R\nCitation:
-        Vol 1-2 No. 7 (2012) pp 169 182\nPublication Date: Mon, 12 Nov 2012 15:03:36
-        GMT\nJournal: Journal of Library &amp;amp; Information Services in Distance
-        Learning</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705619?af=R\">\n<title>Embracing
-        a Customer Service Mindset: A Fresh Examination of Services for Distance Learners</title>\r\n<link>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705619?af=R</link>\r\n<description>&lt;br&gt;\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705619?af=R&lt;br&gt;\nCitation:
-        Vol 1-2 No. 7 (2012) pp 156 168&lt;br&gt;\nPublication Date: Mon, 12 Nov 2012
-        15:03:39 GMT&lt;br&gt;\nJournal: Journal of Library &amp;amp; Information
-        Services in Distance Learning</description>\r\n<dc:identifier>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705619?af=R</dc:identifier>\r\n<dc:source>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp. 156 - 168</dc:source>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
-        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>1-2</prism:volume>\n<prism:number>7</prism:number>\n<prism:startingPage>156</prism:startingPage>\n<prism:endingPage>168</prism:endingPage>\n<content:encoded><![CDATA[<p><a
-        href=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705619?af=R\"><b>Embracing
-        a Customer Service Mindset: A Fresh Examination of Services for Distance Learners</b></A><br
-        /> <br /><i>Journal of Library &amp; Information Services in Distance Learning,
-        Vol. 1-2, No. 7 (2012) pp. 156 - 168</i><br />\nArticle URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705619?af=R\nCitation:
-        Vol 1-2 No. 7 (2012) pp 156 168\nPublication Date: Mon, 12 Nov 2012 15:03:39
-        GMT\nJournal: Journal of Library &amp;amp; Information Services in Distance
-        Learning</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705684?af=R\">\n<title>In
-        It for the Long Haul: Lessons from a Decade of Assessment</title>\r\n<link>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705684?af=R</link>\r\n<description>&lt;br&gt;\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705684?af=R&lt;br&gt;\nCitation:
-        Vol 1-2 No. 7 (2012) pp 111 142&lt;br&gt;\nPublication Date: Mon, 12 Nov 2012
-        15:04:15 GMT&lt;br&gt;\nJournal: Journal of Library &amp;amp; Information
-        Services in Distance Learning</description>\r\n<dc:identifier>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705684?af=R</dc:identifier>\r\n<dc:source>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp. 111 - 142</dc:source>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
-        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>1-2</prism:volume>\n<prism:number>7</prism:number>\n<prism:startingPage>111</prism:startingPage>\n<prism:endingPage>142</prism:endingPage>\n<content:encoded><![CDATA[<p><a
-        href=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705684?af=R\"><b>In
-        It for the Long Haul: Lessons from a Decade of Assessment</b></A><br /> <br
+        \   <image rdf:resource=\"http://www.journaltocs.ac.uk/images/jtocslogo.gif\"
+        />\r\n    <items>\r\n      <rdf:Seq><rdf:li rdf:resource=\"http://dx.doi.org/10.1080/1533290X.2014.946350\"
+        />\n<rdf:li rdf:resource=\"http://dx.doi.org/10.1080/1533290X.2014.946349\"
+        />\n<rdf:li rdf:resource=\"http://dx.doi.org/10.1080/1533290X.2014.946352\"
+        />\n<rdf:li rdf:resource=\"http://dx.doi.org/10.1080/1533290X.2014.946351\"
+        />\n<rdf:li rdf:resource=\"http://dx.doi.org/10.1080/1533290X.2014.946347\"
+        />\n<rdf:li rdf:resource=\"http://dx.doi.org/10.1080/1533290X.2014.946345\"
+        />\n<rdf:li rdf:resource=\"http://dx.doi.org/10.1080/1533290X.2014.946343\"
+        />\n<rdf:li rdf:resource=\"http://dx.doi.org/10.1080/1533290X.2014.946335\"
+        />\n<rdf:li rdf:resource=\"http://dx.doi.org/10.1080/1533290X.2014.945877\"
+        />\n<rdf:li rdf:resource=\"http://dx.doi.org/10.1080/1533290X.2014.946355\"
+        />\n<rdf:li rdf:resource=\"http://dx.doi.org/10.1080/1533290X.2014.946356\"
+        />\n<rdf:li rdf:resource=\"http://dx.doi.org/10.1080/1533290X.2014.946358\"
+        />\n<rdf:li rdf:resource=\"http://dx.doi.org/10.1080/1533290X.2014.946353\"
+        />\n<rdf:li rdf:resource=\"http://dx.doi.org/10.1080/1533290X.2014.946354\"
+        />\n\r\n      </rdf:Seq>\r\n    </items>\r\n  </channel>\r\n  <item rdf:about=\"http://dx.doi.org/10.1080/1533290X.2014.946350\">\n<title>Massive
+        Open Online Librarianship: Emerging Practices in Response to MOOCs</title>\r\n<link>http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946350?af=R</link>\r\n<description>Authors:
+        Christina Mune&lt;br&gt;\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946350?af=R&lt;br&gt;\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning&lt;br&gt;\nPublication
+        Date: Thu, 16 Apr 2015 19:21:03 GMT&lt;br&gt;\nJournal: Journal of Library
+        &amp;amp; Information Services in Distance Learning</description>\r\n<dc:identifier>DOI
+        10.1080/1533290X.2014.946350</dc:identifier>\r\n<dc:creator>Christina Mune</dc:creator>\n<dc:publisher>Taylor
+        &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal of Library &amp;
+        Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>9</prism:volume>\n<prism:number>1-2</prism:number>\n<prism:startingPage>89</prism:startingPage>\n<prism:endingPage>100</prism:endingPage>\n<prism:publicationDate>Thu,
+        16 Apr 2015 19:21:03 GMT</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946350?af=R\"><b>Massive
+        Open Online Librarianship: Emerging Practices in Response to MOOCs</b></A><br
+        />Christina Mune <br /><i>Journal of Library &amp; Information Services in
+        Distance Learning, Vol. 9, No. 1-2 (2015) pp. 89 - 100</i><br />Authors: Christina
+        Mune\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946350?af=R\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning\nPublication
+        Date: Thu, 16 Apr 2015 19:21:03 GMT\nJournal: Journal of Library &amp;amp;
+        Information Services in Distance Learning</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://dx.doi.org/10.1080/1533290X.2014.946349\">\n<title>It Takes
+        a Village to Design a Course: Embedding a Librarian in Course Design</title>\r\n<link>http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946349?af=R</link>\r\n<description>Authors:
+        Alex Mudd ; Terri Summey ; Matt Upson&lt;br&gt;\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946349?af=R&lt;br&gt;\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning&lt;br&gt;\nPublication
+        Date: Thu, 16 Apr 2015 19:20:37 GMT&lt;br&gt;\nJournal: Journal of Library
+        &amp;amp; Information Services in Distance Learning</description>\r\n<dc:identifier>DOI
+        10.1080/1533290X.2014.946349</dc:identifier>\r\n<dc:creator>Alex Mudd</dc:creator>\n<dc:creator>Terri
+        Summey</dc:creator>\n<dc:creator>Matt Upson</dc:creator>\n<dc:publisher>Taylor
+        &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal of Library &amp;
+        Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>9</prism:volume>\n<prism:number>1-2</prism:number>\n<prism:startingPage>69</prism:startingPage>\n<prism:endingPage>88</prism:endingPage>\n<prism:publicationDate>Thu,
+        16 Apr 2015 19:20:37 GMT</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946349?af=R\"><b>It
+        Takes a Village to Design a Course: Embedding a Librarian in Course Design</b></A><br
+        />Alex Mudd; Terri Summey; Matt Upson <br /><i>Journal of Library &amp; Information
+        Services in Distance Learning, Vol. 9, No. 1-2 (2015) pp. 69 - 88</i><br />Authors:
+        Alex Mudd ; Terri Summey ; Matt Upson\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946349?af=R\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning\nPublication
+        Date: Thu, 16 Apr 2015 19:20:37 GMT\nJournal: Journal of Library &amp;amp;
+        Information Services in Distance Learning</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://dx.doi.org/10.1080/1533290X.2014.946352\">\n<title>Circle
+        the Wagons &amp; Bust Out the Big Guns! Tame the &#8220;Wild West&#8221; of
+        Distance Librarianship Using Quality MattersTM Benchmarks</title>\r\n<link>http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946352?af=R</link>\r\n<description>Authors:
+        Kathleen Pickens ; Ginna Witte&lt;br&gt;\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946352?af=R&lt;br&gt;\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning&lt;br&gt;\nPublication
+        Date: Thu, 16 Apr 2015 19:21:18 GMT&lt;br&gt;\nJournal: Journal of Library
+        &amp;amp; Information Services in Distance Learning</description>\r\n<dc:identifier>DOI
+        10.1080/1533290X.2014.946352</dc:identifier>\r\n<dc:creator>Kathleen Pickens</dc:creator>\n<dc:creator>Ginna
+        Witte</dc:creator>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
+        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>9</prism:volume>\n<prism:number>1-2</prism:number>\n<prism:startingPage>119</prism:startingPage>\n<prism:endingPage>132</prism:endingPage>\n<prism:publicationDate>Thu,
+        16 Apr 2015 19:21:18 GMT</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946352?af=R\"><b>Circle
+        the Wagons &amp; Bust Out the Big Guns! Tame the &#8220;Wild West&#8221; of
+        Distance Librarianship Using Quality MattersTM Benchmarks</b></A><br />Kathleen
+        Pickens; Ginna Witte <br /><i>Journal of Library &amp; Information Services
+        in Distance Learning, Vol. 9, No. 1-2 (2015) pp. 119 - 132</i><br />Authors:
+        Kathleen Pickens ; Ginna Witte\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946352?af=R\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning\nPublication
+        Date: Thu, 16 Apr 2015 19:21:18 GMT\nJournal: Journal of Library &amp;amp;
+        Information Services in Distance Learning</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://dx.doi.org/10.1080/1533290X.2014.946351\">\n<title>Developing
+        Adaptable Online Information Literacy Modules for a Learning Management System</title>\r\n<link>http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946351?af=R</link>\r\n<description>Authors:
+        Christina Mune ; Crystal Goldman ; Silke Higgins ; Laurel Eby ; Emily K. Chan
+        ; Linda Crotty&lt;br&gt;\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946351?af=R&lt;br&gt;\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning&lt;br&gt;\nPublication
+        Date: Thu, 16 Apr 2015 19:20:58 GMT&lt;br&gt;\nJournal: Journal of Library
+        &amp;amp; Information Services in Distance Learning</description>\r\n<dc:identifier>DOI
+        10.1080/1533290X.2014.946351</dc:identifier>\r\n<dc:creator>Christina Mune</dc:creator>\n<dc:creator>Crystal
+        Goldman</dc:creator>\n<dc:creator>Silke Higgins</dc:creator>\n<dc:creator>Laurel
+        Eby</dc:creator>\n<dc:creator>Emily K. Chan</dc:creator>\n<dc:creator>Linda
+        Crotty</dc:creator>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
+        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>9</prism:volume>\n<prism:number>1-2</prism:number>\n<prism:startingPage>101</prism:startingPage>\n<prism:endingPage>118</prism:endingPage>\n<prism:publicationDate>Thu,
+        16 Apr 2015 19:20:58 GMT</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946351?af=R\"><b>Developing
+        Adaptable Online Information Literacy Modules for a Learning Management System</b></A><br
+        />Christina Mune; Crystal Goldman; Silke Higgins; Laurel Eby; Emily K. Chan;
+        Linda Crotty <br /><i>Journal of Library &amp; Information Services in Distance
+        Learning, Vol. 9, No. 1-2 (2015) pp. 101 - 118</i><br />Authors: Christina
+        Mune ; Crystal Goldman ; Silke Higgins ; Laurel Eby ; Emily K. Chan ; Linda
+        Crotty\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946351?af=R\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning\nPublication
+        Date: Thu, 16 Apr 2015 19:20:58 GMT\nJournal: Journal of Library &amp;amp;
+        Information Services in Distance Learning</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://dx.doi.org/10.1080/1533290X.2014.946347\">\n<title>Instruction
+        on the Go: Reaching Out to Students from the Academic Library</title>\r\n<link>http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946347?af=R</link>\r\n<description>Authors:
+        Heather Moorefield-Lang ; Tracy Hall&lt;br&gt;\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946347?af=R&lt;br&gt;\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning&lt;br&gt;\nPublication
+        Date: Thu, 16 Apr 2015 19:20:19 GMT&lt;br&gt;\nJournal: Journal of Library
+        &amp;amp; Information Services in Distance Learning</description>\r\n<dc:identifier>DOI
+        10.1080/1533290X.2014.946347</dc:identifier>\r\n<dc:creator>Heather Moorefield-;Lang</dc:creator>\n<dc:creator>Tracy
+        Hall</dc:creator>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
+        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>9</prism:volume>\n<prism:number>1-2</prism:number>\n<prism:startingPage>57</prism:startingPage>\n<prism:endingPage>68</prism:endingPage>\n<prism:publicationDate>Thu,
+        16 Apr 2015 19:20:19 GMT</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946347?af=R\"><b>Instruction
+        on the Go: Reaching Out to Students from the Academic Library</b></A><br />Heather
+        Moorefield-Lang; Tracy Hall <br /><i>Journal of Library &amp; Information
+        Services in Distance Learning, Vol. 9, No. 1-2 (2015) pp. 57 - 68</i><br />Authors:
+        Heather Moorefield-Lang ; Tracy Hall\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946347?af=R\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning\nPublication
+        Date: Thu, 16 Apr 2015 19:20:19 GMT\nJournal: Journal of Library &amp;amp;
+        Information Services in Distance Learning</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://dx.doi.org/10.1080/1533290X.2014.946345\">\n<title>Would
+        You Watch It&#63; Creating Effective and Engaging Video Tutorials</title>\r\n<link>http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946345?af=R</link>\r\n<description>Authors:
+        Nichole A. Martin ; Ross Martin&lt;br&gt;\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946345?af=R&lt;br&gt;\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning&lt;br&gt;\nPublication
+        Date: Thu, 16 Apr 2015 19:19:47 GMT&lt;br&gt;\nJournal: Journal of Library
+        &amp;amp; Information Services in Distance Learning</description>\r\n<dc:identifier>DOI
+        10.1080/1533290X.2014.946345</dc:identifier>\r\n<dc:creator>Nichole A. Martin</dc:creator>\n<dc:creator>Ross
+        Martin</dc:creator>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
+        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>9</prism:volume>\n<prism:number>1-2</prism:number>\n<prism:startingPage>40</prism:startingPage>\n<prism:endingPage>56</prism:endingPage>\n<prism:publicationDate>Thu,
+        16 Apr 2015 19:19:47 GMT</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946345?af=R\"><b>Would
+        You Watch It&#63; Creating Effective and Engaging Video Tutorials</b></A><br
+        />Nichole A. Martin; Ross Martin <br /><i>Journal of Library &amp; Information
+        Services in Distance Learning, Vol. 9, No. 1-2 (2015) pp. 40 - 56</i><br />Authors:
+        Nichole A. Martin ; Ross Martin\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946345?af=R\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning\nPublication
+        Date: Thu, 16 Apr 2015 19:19:47 GMT\nJournal: Journal of Library &amp;amp;
+        Information Services in Distance Learning</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://dx.doi.org/10.1080/1533290X.2014.946343\">\n<title>A Universe
+        of Information, One Citation at a Time: How Students Engage with Scholarly
+        Sources</title>\r\n<link>http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946343?af=R</link>\r\n<description>Authors:
+        Carrie Ludovico ; Carol Wittig&lt;br&gt;\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946343?af=R&lt;br&gt;\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning&lt;br&gt;\nPublication
+        Date: Thu, 16 Apr 2015 19:20:35 GMT&lt;br&gt;\nJournal: Journal of Library
+        &amp;amp; Information Services in Distance Learning</description>\r\n<dc:identifier>DOI
+        10.1080/1533290X.2014.946343</dc:identifier>\r\n<dc:creator>Carrie Ludovico</dc:creator>\n<dc:creator>Carol
+        Wittig</dc:creator>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
+        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>9</prism:volume>\n<prism:number>1-2</prism:number>\n<prism:startingPage>30</prism:startingPage>\n<prism:endingPage>39</prism:endingPage>\n<prism:publicationDate>Thu,
+        16 Apr 2015 19:20:35 GMT</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946343?af=R\"><b>A
+        Universe of Information, One Citation at a Time: How Students Engage with
+        Scholarly Sources</b></A><br />Carrie Ludovico; Carol Wittig <br /><i>Journal
+        of Library &amp; Information Services in Distance Learning, Vol. 9, No. 1-2
+        (2015) pp. 30 - 39</i><br />Authors: Carrie Ludovico ; Carol Wittig\nArticle
+        URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946343?af=R\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning\nPublication
+        Date: Thu, 16 Apr 2015 19:20:35 GMT\nJournal: Journal of Library &amp;amp;
+        Information Services in Distance Learning</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://dx.doi.org/10.1080/1533290X.2014.946335\">\n<title>Making
+        It Work: Creating a Student-Friendly Repository of Instructional Videos</title>\r\n<link>http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946335?af=R</link>\r\n<description>Authors:
+        Michelle Keba ; Jamie Segno ; Michael Schofield&lt;br&gt;\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946335?af=R&lt;br&gt;\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning&lt;br&gt;\nPublication
+        Date: Thu, 16 Apr 2015 19:21:27 GMT&lt;br&gt;\nJournal: Journal of Library
+        &amp;amp; Information Services in Distance Learning</description>\r\n<dc:identifier>DOI
+        10.1080/1533290X.2014.946335</dc:identifier>\r\n<dc:creator>Michelle Keba</dc:creator>\n<dc:creator>Jamie
+        Segno</dc:creator>\n<dc:creator>Michael Schofield</dc:creator>\n<dc:publisher>Taylor
+        &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal of Library &amp;
+        Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>9</prism:volume>\n<prism:number>1-2</prism:number>\n<prism:startingPage>17</prism:startingPage>\n<prism:endingPage>29</prism:endingPage>\n<prism:publicationDate>Thu,
+        16 Apr 2015 19:21:27 GMT</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946335?af=R\"><b>Making
+        It Work: Creating a Student-Friendly Repository of Instructional Videos</b></A><br
+        />Michelle Keba; Jamie Segno; Michael Schofield <br /><i>Journal of Library
+        &amp; Information Services in Distance Learning, Vol. 9, No. 1-2 (2015) pp.
+        17 - 29</i><br />Authors: Michelle Keba ; Jamie Segno ; Michael Schofield\nArticle
+        URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946335?af=R\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning\nPublication
+        Date: Thu, 16 Apr 2015 19:21:27 GMT\nJournal: Journal of Library &amp;amp;
+        Information Services in Distance Learning</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://dx.doi.org/10.1080/1533290X.2014.945877\">\n<title>Embedded
+        Librarians: Just-In-Time or Just-In-Case&#63; A Research Study</title>\r\n<link>http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.945877?af=R</link>\r\n<description>Authors:
+        Kristin Heathcock&lt;br&gt;\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.945877?af=R&lt;br&gt;\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning&lt;br&gt;\nPublication
+        Date: Thu, 16 Apr 2015 19:19:55 GMT&lt;br&gt;\nJournal: Journal of Library
+        &amp;amp; Information Services in Distance Learning</description>\r\n<dc:identifier>DOI
+        10.1080/1533290X.2014.945877</dc:identifier>\r\n<dc:creator>Kristin Heathcock</dc:creator>\n<dc:publisher>Taylor
+        &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal of Library &amp;
+        Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>9</prism:volume>\n<prism:number>1-2</prism:number>\n<prism:startingPage>1</prism:startingPage>\n<prism:endingPage>16</prism:endingPage>\n<prism:publicationDate>Thu,
+        16 Apr 2015 19:19:55 GMT</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.945877?af=R\"><b>Embedded
+        Librarians: Just-In-Time or Just-In-Case&#63; A Research Study</b></A><br
+        />Kristin Heathcock <br /><i>Journal of Library &amp; Information Services
+        in Distance Learning, Vol. 9, No. 1-2 (2015) pp. 1 - 16</i><br />Authors:
+        Kristin Heathcock\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.945877?af=R\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning\nPublication
+        Date: Thu, 16 Apr 2015 19:19:55 GMT\nJournal: Journal of Library &amp;amp;
+        Information Services in Distance Learning</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://dx.doi.org/10.1080/1533290X.2014.946355\">\n<title>Creating
+        an Information Literacy Badges Program in Blackboard: A Formative Program
+        Evaluation</title>\r\n<link>http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946355?af=R</link>\r\n<description>Authors:
+        Johanna Tunon ; Laura Lucio Ramirez ; Brian Ryckman ; Loy Campbell ; Courtney
+        Mlinar&lt;br&gt;\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946355?af=R&lt;br&gt;\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning&lt;br&gt;\nPublication
+        Date: Thu, 16 Apr 2015 19:21:16 GMT&lt;br&gt;\nJournal: Journal of Library
+        &amp;amp; Information Services in Distance Learning</description>\r\n<dc:identifier>DOI
+        10.1080/1533290X.2014.946355</dc:identifier>\r\n<dc:creator>Johanna Tunon</dc:creator>\n<dc:creator>Laura
+        Lucio Ramirez</dc:creator>\n<dc:creator>Brian Ryckman</dc:creator>\n<dc:creator>Loy
+        Campbell</dc:creator>\n<dc:creator>Courtney Mlinar</dc:creator>\n<dc:publisher>Taylor
+        &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal of Library &amp;
+        Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>9</prism:volume>\n<prism:number>1-2</prism:number>\n<prism:startingPage>157</prism:startingPage>\n<prism:endingPage>169</prism:endingPage>\n<prism:publicationDate>Thu,
+        16 Apr 2015 19:21:16 GMT</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946355?af=R\"><b>Creating
+        an Information Literacy Badges Program in Blackboard: A Formative Program
+        Evaluation</b></A><br />Johanna Tunon; Laura Lucio Ramirez; Brian Ryckman;
+        Loy Campbell; Courtney Mlinar <br /><i>Journal of Library &amp; Information
+        Services in Distance Learning, Vol. 9, No. 1-2 (2015) pp. 157 - 169</i><br
+        />Authors: Johanna Tunon ; Laura Lucio Ramirez ; Brian Ryckman ; Loy Campbell
+        ; Courtney Mlinar\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946355?af=R\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning\nPublication
+        Date: Thu, 16 Apr 2015 19:21:16 GMT\nJournal: Journal of Library &amp;amp;
+        Information Services in Distance Learning</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://dx.doi.org/10.1080/1533290X.2014.946356\">\n<title>Authentic
+        Assessments: Praxis for the Distance Librarian</title>\r\n<link>http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946356?af=R</link>\r\n<description>Authors:
+        Beth Twomey&lt;br&gt;\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946356?af=R&lt;br&gt;\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning&lt;br&gt;\nPublication
+        Date: Thu, 16 Apr 2015 19:21:38 GMT&lt;br&gt;\nJournal: Journal of Library
+        &amp;amp; Information Services in Distance Learning</description>\r\n<dc:identifier>DOI
+        10.1080/1533290X.2014.946356</dc:identifier>\r\n<dc:creator>Beth Twomey</dc:creator>\n<dc:publisher>Taylor
+        &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal of Library &amp;
+        Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>9</prism:volume>\n<prism:number>1-2</prism:number>\n<prism:startingPage>170</prism:startingPage>\n<prism:endingPage>178</prism:endingPage>\n<prism:publicationDate>Thu,
+        16 Apr 2015 19:21:38 GMT</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946356?af=R\"><b>Authentic
+        Assessments: Praxis for the Distance Librarian</b></A><br />Beth Twomey <br
         /><i>Journal of Library &amp; Information Services in Distance Learning, Vol.
-        1-2, No. 7 (2012) pp. 111 - 142</i><br />\nArticle URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705684?af=R\nCitation:
-        Vol 1-2 No. 7 (2012) pp 111 142\nPublication Date: Mon, 12 Nov 2012 15:04:15
-        GMT\nJournal: Journal of Library &amp;amp; Information Services in Distance
-        Learning</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705627?af=R\">\n<title>Aided
-        and Embedded: The Team Approach to Instructional Design</title>\r\n<link>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705627?af=R</link>\r\n<description>&lt;br&gt;\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705627?af=R&lt;br&gt;\nCitation:
-        Vol 1-2 No. 7 (2012) pp 143 155&lt;br&gt;\nPublication Date: Mon, 12 Nov 2012
-        15:04:41 GMT&lt;br&gt;\nJournal: Journal of Library &amp;amp; Information
-        Services in Distance Learning</description>\r\n<dc:identifier>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705627?af=R</dc:identifier>\r\n<dc:source>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp. 143 - 155</dc:source>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
-        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>1-2</prism:volume>\n<prism:number>7</prism:number>\n<prism:startingPage>143</prism:startingPage>\n<prism:endingPage>155</prism:endingPage>\n<content:encoded><![CDATA[<p><a
-        href=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705627?af=R\"><b>Aided
-        and Embedded: The Team Approach to Instructional Design</b></A><br /> <br
-        /><i>Journal of Library &amp; Information Services in Distance Learning, Vol.
-        1-2, No. 7 (2012) pp. 143 - 155</i><br />\nArticle URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705627?af=R\nCitation:
-        Vol 1-2 No. 7 (2012) pp 143 155\nPublication Date: Mon, 12 Nov 2012 15:04:41
-        GMT\nJournal: Journal of Library &amp;amp; Information Services in Distance
-        Learning</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705616?af=R\">\n<title>Real
-        Time with the Librarian: Using Web Conferencing Software to Connect to Distance
-        Students</title>\r\n<link>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705616?af=R</link>\r\n<description>&lt;br&gt;\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705616?af=R&lt;br&gt;\nCitation:
-        Vol 1-2 No. 7 (2012) pp 98 110&lt;br&gt;\nPublication Date: Mon, 12 Nov 2012
-        15:03:44 GMT&lt;br&gt;\nJournal: Journal of Library &amp;amp; Information
-        Services in Distance Learning</description>\r\n<dc:identifier>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705616?af=R</dc:identifier>\r\n<dc:source>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp. 98 - 110</dc:source>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
-        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>1-2</prism:volume>\n<prism:number>7</prism:number>\n<prism:startingPage>98</prism:startingPage>\n<prism:endingPage>110</prism:endingPage>\n<content:encoded><![CDATA[<p><a
-        href=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705616?af=R\"><b>Real
-        Time with the Librarian: Using Web Conferencing Software to Connect to Distance
-        Students</b></A><br /> <br /><i>Journal of Library &amp; Information Services
-        in Distance Learning, Vol. 1-2, No. 7 (2012) pp. 98 - 110</i><br />\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705616?af=R\nCitation:
-        Vol 1-2 No. 7 (2012) pp 98 110\nPublication Date: Mon, 12 Nov 2012 15:03:44
-        GMT\nJournal: Journal of Library &amp;amp; Information Services in Distance
-        Learning</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705624?af=R\">\n<title>Virtual
-        Reference at a Global University: An Analysis of Patron and Question Type</title>\r\n<link>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705624?af=R</link>\r\n<description>&lt;br&gt;\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705624?af=R&lt;br&gt;\nCitation:
-        Vol 1-2 No. 7 (2012) pp 93 97&lt;br&gt;\nPublication Date: Mon, 12 Nov 2012
-        15:04:38 GMT&lt;br&gt;\nJournal: Journal of Library &amp;amp; Information
-        Services in Distance Learning</description>\r\n<dc:identifier>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705624?af=R</dc:identifier>\r\n<dc:source>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp. 93 - 97</dc:source>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
-        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>1-2</prism:volume>\n<prism:number>7</prism:number>\n<prism:startingPage>93</prism:startingPage>\n<prism:endingPage>97</prism:endingPage>\n<content:encoded><![CDATA[<p><a
-        href=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705624?af=R\"><b>Virtual
-        Reference at a Global University: An Analysis of Patron and Question Type</b></A><br
-        /> <br /><i>Journal of Library &amp; Information Services in Distance Learning,
-        Vol. 1-2, No. 7 (2012) pp. 93 - 97</i><br />\nArticle URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705624?af=R\nCitation:
-        Vol 1-2 No. 7 (2012) pp 93 97\nPublication Date: Mon, 12 Nov 2012 15:04:38
-        GMT\nJournal: Journal of Library &amp;amp; Information Services in Distance
-        Learning</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705570?af=R\">\n<title>A
-        Model for Designing Library Instruction for Distance Learning</title>\r\n<link>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705570?af=R</link>\r\n<description>&lt;br&gt;\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705570?af=R&lt;br&gt;\nCitation:
-        Vol 1-2 No. 7 (2012) pp 84 92&lt;br&gt;\nPublication Date: Mon, 12 Nov 2012
-        15:03:12 GMT&lt;br&gt;\nJournal: Journal of Library &amp;amp; Information
-        Services in Distance Learning</description>\r\n<dc:identifier>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705570?af=R</dc:identifier>\r\n<dc:source>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp. 84 - 92</dc:source>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
-        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>1-2</prism:volume>\n<prism:number>7</prism:number>\n<prism:startingPage>84</prism:startingPage>\n<prism:endingPage>92</prism:endingPage>\n<content:encoded><![CDATA[<p><a
-        href=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705570?af=R\"><b>A
-        Model for Designing Library Instruction for Distance Learning</b></A><br />
-        <br /><i>Journal of Library &amp; Information Services in Distance Learning,
-        Vol. 1-2, No. 7 (2012) pp. 84 - 92</i><br />\nArticle URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705570?af=R\nCitation:
-        Vol 1-2 No. 7 (2012) pp 84 92\nPublication Date: Mon, 12 Nov 2012 15:03:12
-        GMT\nJournal: Journal of Library &amp;amp; Information Services in Distance
-        Learning</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705568?af=R\">\n<title>How
-        to Implement a New Search System and Make Friends While Doing It!</title>\r\n<link>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705568?af=R</link>\r\n<description>&lt;br&gt;\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705568?af=R&lt;br&gt;\nCitation:
-        Vol 1-2 No. 7 (2012) pp 73 83&lt;br&gt;\nPublication Date: Mon, 12 Nov 2012
-        15:04:30 GMT&lt;br&gt;\nJournal: Journal of Library &amp;amp; Information
-        Services in Distance Learning</description>\r\n<dc:identifier>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705568?af=R</dc:identifier>\r\n<dc:source>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp. 73 - 83</dc:source>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
-        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>1-2</prism:volume>\n<prism:number>7</prism:number>\n<prism:startingPage>73</prism:startingPage>\n<prism:endingPage>83</prism:endingPage>\n<content:encoded><![CDATA[<p><a
-        href=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705568?af=R\"><b>How
-        to Implement a New Search System and Make Friends While Doing It!</b></A><br
-        /> <br /><i>Journal of Library &amp; Information Services in Distance Learning,
-        Vol. 1-2, No. 7 (2012) pp. 73 - 83</i><br />\nArticle URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705568?af=R\nCitation:
-        Vol 1-2 No. 7 (2012) pp 73 83\nPublication Date: Mon, 12 Nov 2012 15:04:30
-        GMT\nJournal: Journal of Library &amp;amp; Information Services in Distance
-        Learning</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705613?af=R\">\n<title>Changing
-        Trenches, Changing Tactics: A Library's Frontline Redesign in a New CMS</title>\r\n<link>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705613?af=R</link>\r\n<description>&lt;br&gt;\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705613?af=R&lt;br&gt;\nCitation:
-        Vol 1-2 No. 7 (2012) pp 53 72&lt;br&gt;\nPublication Date: Mon, 12 Nov 2012
-        15:03:58 GMT&lt;br&gt;\nJournal: Journal of Library &amp;amp; Information
-        Services in Distance Learning</description>\r\n<dc:identifier>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705613?af=R</dc:identifier>\r\n<dc:source>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp. 53 - 72</dc:source>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
-        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>1-2</prism:volume>\n<prism:number>7</prism:number>\n<prism:startingPage>53</prism:startingPage>\n<prism:endingPage>72</prism:endingPage>\n<content:encoded><![CDATA[<p><a
-        href=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705613?af=R\"><b>Changing
-        Trenches, Changing Tactics: A Library's Frontline Redesign in a New CMS</b></A><br
-        /> <br /><i>Journal of Library &amp; Information Services in Distance Learning,
-        Vol. 1-2, No. 7 (2012) pp. 53 - 72</i><br />\nArticle URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705613?af=R\nCitation:
-        Vol 1-2 No. 7 (2012) pp 53 72\nPublication Date: Mon, 12 Nov 2012 15:03:58
-        GMT\nJournal: Journal of Library &amp;amp; Information Services in Distance
-        Learning</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705177?af=R\">\n<title>Beyond
-        the Reference Desk: A Study on the Effectiveness of Low-Cost Distance Library
-        Services at California State University San Marcos</title>\r\n<link>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705177?af=R</link>\r\n<description>&lt;br&gt;\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705177?af=R&lt;br&gt;\nCitation:
-        Vol 1-2 No. 7 (2012) pp 40 52&lt;br&gt;\nPublication Date: Mon, 12 Nov 2012
-        15:03:19 GMT&lt;br&gt;\nJournal: Journal of Library &amp;amp; Information
-        Services in Distance Learning</description>\r\n<dc:identifier>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705177?af=R</dc:identifier>\r\n<dc:source>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp. 40 - 52</dc:source>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
-        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>1-2</prism:volume>\n<prism:number>7</prism:number>\n<prism:startingPage>40</prism:startingPage>\n<prism:endingPage>52</prism:endingPage>\n<content:encoded><![CDATA[<p><a
-        href=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705177?af=R\"><b>Beyond
-        the Reference Desk: A Study on the Effectiveness of Low-Cost Distance Library
-        Services at California State University San Marcos</b></A><br /> <br /><i>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp. 40 - 52</i><br />\nArticle URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705177?af=R\nCitation:
-        Vol 1-2 No. 7 (2012) pp 40 52\nPublication Date: Mon, 12 Nov 2012 15:03:19
-        GMT\nJournal: Journal of Library &amp;amp; Information Services in Distance
-        Learning</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705173?af=R\">\n<title>Outreach
-        to International Campuses: Removing Barriers and Building Relationships</title>\r\n<link>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705173?af=R</link>\r\n<description>&lt;br&gt;\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705173?af=R&lt;br&gt;\nCitation:
-        Vol 1-2 No. 7 (2012) pp 1 17&lt;br&gt;\nPublication Date: Mon, 12 Nov 2012
-        15:03:52 GMT&lt;br&gt;\nJournal: Journal of Library &amp;amp; Information
-        Services in Distance Learning</description>\r\n<dc:identifier>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705173?af=R</dc:identifier>\r\n<dc:source>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp. 1 - 17</dc:source>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
-        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>1-2</prism:volume>\n<prism:number>7</prism:number>\n<prism:startingPage>1</prism:startingPage>\n<prism:endingPage>17</prism:endingPage>\n<content:encoded><![CDATA[<p><a
-        href=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705173?af=R\"><b>Outreach
-        to International Campuses: Removing Barriers and Building Relationships</b></A><br
-        /> <br /><i>Journal of Library &amp; Information Services in Distance Learning,
-        Vol. 1-2, No. 7 (2012) pp. 1 - 17</i><br />\nArticle URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705173?af=R\nCitation:
-        Vol 1-2 No. 7 (2012) pp 1 17\nPublication Date: Mon, 12 Nov 2012 15:03:52
-        GMT\nJournal: Journal of Library &amp;amp; Information Services in Distance
-        Learning</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705561?af=R\">\n<title>Discovery
-        Layers and the Distance Student: Online Search Habits of Students</title>\r\n<link>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705561?af=R</link>\r\n<description>&lt;br&gt;\nArticle
-        URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705561?af=R&lt;br&gt;\nCitation:
-        Vol 1-2 No. 7 (2012) pp 18 39&lt;br&gt;\nPublication Date: Mon, 12 Nov 2012
-        15:04:57 GMT&lt;br&gt;\nJournal: Journal of Library &amp;amp; Information
-        Services in Distance Learning</description>\r\n<dc:identifier>http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705561?af=R</dc:identifier>\r\n<dc:source>Journal
-        of Library &amp; Information Services in Distance Learning, Vol. 1-2, No.
-        7 (2012) pp. 18 - 39</dc:source>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
-        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>1-2</prism:volume>\n<prism:number>7</prism:number>\n<prism:startingPage>18</prism:startingPage>\n<prism:endingPage>39</prism:endingPage>\n<content:encoded><![CDATA[<p><a
-        href=\"http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705561?af=R\"><b>Discovery
-        Layers and the Distance Student: Online Search Habits of Students</b></A><br
-        /> <br /><i>Journal of Library &amp; Information Services in Distance Learning,
-        Vol. 1-2, No. 7 (2012) pp. 18 - 39</i><br />\nArticle URL: http://www.tandfonline.com/doi/abs/10.1080/1533290X.2012.705561?af=R\nCitation:
-        Vol 1-2 No. 7 (2012) pp 18 39\nPublication Date: Mon, 12 Nov 2012 15:04:57
-        GMT\nJournal: Journal of Library &amp;amp; Information Services in Distance
-        Learning</p>]]></content:encoded>\r\n</item>\n\r\n\t\r\n  <rdf:Description
-        rdf:ID=\"manifest\">\r\n    <mn:channels>\r\n      <rdf:Seq>\r\n        <rdf:li
-        rdf:resource=\"http://www.journaltocs.hw.ac.uk/api/journals\" />\r\n      </rdf:Seq>\r\n
-        \   </mn:channels>\r\n  </rdf:Description>\r\n\r\n</rdf:RDF>"
+        9, No. 1-2 (2015) pp. 170 - 178</i><br />Authors: Beth Twomey\nArticle URL:
+        http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946356?af=R\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning\nPublication
+        Date: Thu, 16 Apr 2015 19:21:38 GMT\nJournal: Journal of Library &amp;amp;
+        Information Services in Distance Learning</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://dx.doi.org/10.1080/1533290X.2014.946358\">\n<title>Embedded
+        with the Military: It's All About the Relationships</title>\r\n<link>http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946358?af=R</link>\r\n<description>Authors:
+        Catrina Whited ; Greg Frederick&lt;br&gt;\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946358?af=R&lt;br&gt;\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning&lt;br&gt;\nPublication
+        Date: Thu, 16 Apr 2015 19:21:37 GMT&lt;br&gt;\nJournal: Journal of Library
+        &amp;amp; Information Services in Distance Learning</description>\r\n<dc:identifier>DOI
+        10.1080/1533290X.2014.946358</dc:identifier>\r\n<dc:creator>Catrina Whited</dc:creator>\n<dc:creator>Greg
+        Frederick</dc:creator>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
+        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>9</prism:volume>\n<prism:number>1-2</prism:number>\n<prism:startingPage>179</prism:startingPage>\n<prism:endingPage>187</prism:endingPage>\n<prism:publicationDate>Thu,
+        16 Apr 2015 19:21:37 GMT</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946358?af=R\"><b>Embedded
+        with the Military: It's All About the Relationships</b></A><br />Catrina Whited;
+        Greg Frederick <br /><i>Journal of Library &amp; Information Services in Distance
+        Learning, Vol. 9, No. 1-2 (2015) pp. 179 - 187</i><br />Authors: Catrina Whited
+        ; Greg Frederick\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946358?af=R\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning\nPublication
+        Date: Thu, 16 Apr 2015 19:21:37 GMT\nJournal: Journal of Library &amp;amp;
+        Information Services in Distance Learning</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://dx.doi.org/10.1080/1533290X.2014.946353\">\n<title>Emerging
+        Roles: Key Insights from Librarians in a Massive Open Online Course</title>\r\n<link>http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946353?af=R</link>\r\n<description>Authors:
+        Michael Stephens ; Kyle M. L. Jones&lt;br&gt;\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946353?af=R&lt;br&gt;\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning&lt;br&gt;\nPublication
+        Date: Thu, 16 Apr 2015 19:21:34 GMT&lt;br&gt;\nJournal: Journal of Library
+        &amp;amp; Information Services in Distance Learning</description>\r\n<dc:identifier>DOI
+        10.1080/1533290X.2014.946353</dc:identifier>\r\n<dc:creator>Michael Stephens</dc:creator>\n<dc:creator>Kyle
+        M. L. Jones</dc:creator>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
+        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>9</prism:volume>\n<prism:number>1-2</prism:number>\n<prism:startingPage>133</prism:startingPage>\n<prism:endingPage>147</prism:endingPage>\n<prism:publicationDate>Thu,
+        16 Apr 2015 19:21:34 GMT</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946353?af=R\"><b>Emerging
+        Roles: Key Insights from Librarians in a Massive Open Online Course</b></A><br
+        />Michael Stephens; Kyle M. L. Jones <br /><i>Journal of Library &amp; Information
+        Services in Distance Learning, Vol. 9, No. 1-2 (2015) pp. 133 - 147</i><br
+        />Authors: Michael Stephens ; Kyle M. L. Jones\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946353?af=R\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning\nPublication
+        Date: Thu, 16 Apr 2015 19:21:34 GMT\nJournal: Journal of Library &amp;amp;
+        Information Services in Distance Learning</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://dx.doi.org/10.1080/1533290X.2014.946354\">\n<title>Listen
+        to What You Cannot Hear, Observe What You Cannot See: An Introduction to Evidence-Based
+        Methods for Evaluating and Enhancing the User Experience in Distance Library
+        Services</title>\r\n<link>http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946354?af=R</link>\r\n<description>Authors:
+        Christine Tobias ; Amy Blair&lt;br&gt;\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946354?af=R&lt;br&gt;\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning&lt;br&gt;\nPublication
+        Date: Thu, 16 Apr 2015 19:21:10 GMT&lt;br&gt;\nJournal: Journal of Library
+        &amp;amp; Information Services in Distance Learning</description>\r\n<dc:identifier>DOI
+        10.1080/1533290X.2014.946354</dc:identifier>\r\n<dc:creator>Christine Tobias</dc:creator>\n<dc:creator>Amy
+        Blair</dc:creator>\n<dc:publisher>Taylor &amp; Francis</dc:publisher>\n<prism:PublicationName>Journal
+        of Library &amp; Information Services in Distance Learning</prism:PublicationName>\n<prism:volume>9</prism:volume>\n<prism:number>1-2</prism:number>\n<prism:startingPage>148</prism:startingPage>\n<prism:endingPage>156</prism:endingPage>\n<prism:publicationDate>Thu,
+        16 Apr 2015 19:21:10 GMT</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946354?af=R\"><b>Listen
+        to What You Cannot Hear, Observe What You Cannot See: An Introduction to Evidence-Based
+        Methods for Evaluating and Enhancing the User Experience in Distance Library
+        Services</b></A><br />Christine Tobias; Amy Blair <br /><i>Journal of Library
+        &amp; Information Services in Distance Learning, Vol. 9, No. 1-2 (2015) pp.
+        148 - 156</i><br />Authors: Christine Tobias ; Amy Blair\nArticle URL: http://www.tandfonline.com/doi/full/10.1080/1533290X.2014.946354?af=R\nCitation:
+        Journal of Library &amp;amp; Information Services in Distance Learning\nPublication
+        Date: Thu, 16 Apr 2015 19:21:10 GMT\nJournal: Journal of Library &amp;amp;
+        Information Services in Distance Learning</p>]]></content:encoded>\r\n</item>\n\r\n\t\r\n
+        \ <rdf:Description rdf:ID=\"manifest\">\r\n    <mn:channels>\r\n      <rdf:Seq>\r\n
+        \       <rdf:li rdf:resource=\"http://www.journaltocs.hw.ac.uk/api/journals\"
+        />\r\n      </rdf:Seq>\r\n    </mn:channels>\r\n  </rdf:Description>\r\n\r\n</rdf:RDF>"
     http_version: 
-  recorded_at: Mon, 11 Mar 2013 20:12:40 GMT
-recorded_with: VCR 2.3.0
+  recorded_at: Tue, 01 Sep 2015 21:20:10 GMT
+recorded_with: VCR 2.9.3

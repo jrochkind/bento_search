@@ -4,33 +4,27 @@ http_interactions:
     method: get
     uri: http://www.journaltocs.ac.uk/api/journals/badissn?output=articles&user=nobody@example.com
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers: {}
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "RGF0ZQ==":
-      - !binary |-
-        TW9uLCAxMSBNYXIgMjAxMyAyMDoxMjozOCBHTVQ=
-      !binary "U2VydmVy":
-      - !binary |-
-        QXBhY2hlLzIuMi4xNSAoQ2VudE9TKQ==
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        UEhQLzUuMy4z
-      !binary "Q29udGVudC1MZW5ndGg=":
-      - !binary |-
-        MTIwMQ==
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24veG1sOyBjaGFyc2V0PXV0Zi04
+      Date:
+      - Tue, 01 Sep 2015 21:20:10 GMT
+      Server:
+      - Apache
+      X-Powered-By:
+      - PHP/5.3.3
+      Content-Length:
+      - '1189'
+      Content-Type:
+      - application/xml; charset=utf-8
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\r\n
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\r\n
         \        xmlns=\"http://purl.org/rss/1.0/\"\r\n         xmlns:mn=\"http://usefulinc.com/rss/manifest/\"\r\n
         \        xmlns:dc=\"http://purl.org/dc/elements/1.1/\">\n\n  <channel rdf:about=\"http://www.journaltocs.hw.ac.uk/api/journals\">\r\n
         \   <title>JournalTOCs API - Found 0 journals for: badissn (0 articles)</title>\r\n
@@ -39,11 +33,11 @@ http_interactions:
         for this journal. Please report to S.Chumbe@hw.ac.uk]]></description>\r\n
         \   <dc:publisher>JournalTOCs API</dc:publisher>\r\n    <dc:creator>JOURNALTOCS
         API PROJECT</dc:creator>\r\n\t\t<dc:coverage>1</dc:coverage>\r\n    <image
-        rdf:resource=\"http://www.journaltocs.hw.ac.uk/images/xtralogo.gif\" />\r\n
-        \   <items>\r\n      <rdf:Seq>\r\n        \r\n      </rdf:Seq>\r\n    </items>\r\n
-        \ </channel>\r\n  \r\n\t\r\n  <rdf:Description rdf:ID=\"manifest\">\r\n    <mn:channels>\r\n
+        rdf:resource=\"http://www.journaltocs.ac.uk/images/jtocslogo.gif\" />\r\n
+        \   <items>\r\n      <rdf:Seq>\r\n      </rdf:Seq>\r\n    </items>\r\n  </channel>\r\n
+        \ \r\n\t\r\n  <rdf:Description rdf:ID=\"manifest\">\r\n    <mn:channels>\r\n
         \     <rdf:Seq>\r\n        <rdf:li rdf:resource=\"http://www.journaltocs.hw.ac.uk/api/journals\"
         />\r\n      </rdf:Seq>\r\n    </mn:channels>\r\n  </rdf:Description>\r\n\r\n</rdf:RDF>"
     http_version: 
-  recorded_at: Mon, 11 Mar 2013 20:12:38 GMT
-recorded_with: VCR 2.3.0
+  recorded_at: Tue, 01 Sep 2015 21:20:10 GMT
+recorded_with: VCR 2.9.3

@@ -4,48 +4,44 @@ http_interactions:
     method: get
     uri: http://www.journaltocs.ac.uk/bad_url/journals/1533290X?output=articles&user=nobody@example.com
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers: {}
   response:
     status:
       code: 404
-      message: !binary |-
-        Tm90IEZvdW5k
+      message: Not Found
     headers:
-      !binary "RGF0ZQ==":
-      - !binary |-
-        TW9uLCAxMSBNYXIgMjAxMyAyMDoxMjozOCBHTVQ=
-      !binary "U2VydmVy":
-      - !binary |-
-        QXBhY2hlLzIuMi4xNSAoQ2VudE9TKQ==
-      !binary "Q29udGVudC1MZW5ndGg=":
-      - !binary |-
-        MzEz
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9odG1sOyBjaGFyc2V0PWlzby04ODU5LTE=
+      Date:
+      - Tue, 01 Sep 2015 21:20:10 GMT
+      Server:
+      - Apache
+      Vary:
+      - accept-language,accept-charset
+      Accept-Ranges:
+      - bytes
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Content-Language:
+      - en
     body:
-      encoding: US-ASCII
-      string: ! '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-
-        <html><head>
-
-        <title>404 Not Found</title>
-
-        </head><body>
-
-        <h1>Not Found</h1>
-
-        <p>The requested URL /bad_url/journals/1533290X was not found on this server.</p>
-
-        <hr>
-
-        <address>Apache/2.2.15 (CentOS) Server at www.journaltocs.hw.ac.uk Port 80</address>
-
-        </body></html>
-
-'
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n<!DOCTYPE html PUBLIC
+        \"-//W3C//DTD XHTML 1.0 Strict//EN\"\n  \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\">\n<head>\n<title>Object
+        not found!</title>\n<link rev=\"made\" href=\"mailto:help@macs.hw.ac.uk\"
+        />\n<style type=\"text/css\"><!--/*--><![CDATA[/*><!--*/ \n    body { color:
+        #000000; background-color: #FFFFFF; }\n    a:link { color: #0000CC; }\n    p,
+        address {margin-left: 3em;}\n    span {font-size: smaller;}\n/*]]>*/--></style>\n<img
+        alt=\"Heriot-Watt University\" id=\"HW Logo\" style=\"float:right\" src=http://images.hw.ac.uk/hwu_logo.gif>\n</head>\n\n<body>\n<h1>Object
+        not found!</h1>\n<p>\n\n\n    The requested URL was not found on this server.\n\n
+        \ \n\n    If you entered the URL manually please check your\n    spelling
+        and try again.\n\n  \n\n</p>\n<p>\nIf you think this is a server error, please
+        contact\nthe <a href=\"mailto:help@macs.hw.ac.uk\">Site owner - MACS help</a>.\n\n</p>\n\n<h2>Error
+        404</h2>\n<address>\n  <a href=\"/\">www.journaltocs.hw.ac.uk</a><br />\n
+        \ \n  <span>Tue Sep  1 22:20:10 2015<br />\n  Apache</span>\n</address>\n</body>\n</html>\n\n"
     http_version: 
-  recorded_at: Mon, 11 Mar 2013 20:12:39 GMT
-recorded_with: VCR 2.3.0
+  recorded_at: Tue, 01 Sep 2015 21:20:10 GMT
+recorded_with: VCR 2.9.3

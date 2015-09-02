@@ -50,8 +50,13 @@ module BentoSearch
           url = request_url(issn)
           response = http_client.get(url)
 
+          # In some cases, status 401 seems to be bad email
           unless response.ok?
-            raise FetchError.new("#{url}: returns #{response.status} response")
+            # trim some XML boilerplate and remove newlines
+            # from response body, for better error message
+            response_body = response.body.gsub(/[\n\t]/, '').sub(/\A<\?xml[^>]*\>/, '')
+
+            raise FetchError.new("#{url}: returns #{response.status} response: #{response_body}")
           end
 
           Nokogiri::XML(response.body)

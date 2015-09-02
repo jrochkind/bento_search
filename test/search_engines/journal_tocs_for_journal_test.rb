@@ -43,9 +43,11 @@ class JournalTocsForJournalTest < ActiveSupport::TestCase
   test_with_cassette("error on bad registered email", :journal_tocs) do
     engine = JournalTocsForJournal.new(:registered_email => "unregistered@nowhere.com")
 
-    assert_raise JournalTocsForJournal::FetchError do
+    error = assert_raise JournalTocsForJournal::FetchError do
       xml = engine.fetch_xml("1533290X")
     end
+
+    assert error.message =~ /account is invalid/
   end
 
   test_with_cassette("smoke test", :journal_tocs) do
@@ -88,6 +90,7 @@ class JournalTocsForJournalTest < ActiveSupport::TestCase
 
     assert items.empty?
   end
+
 
 end
 
