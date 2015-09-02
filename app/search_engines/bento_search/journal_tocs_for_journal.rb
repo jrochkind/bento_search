@@ -133,6 +133,9 @@ module BentoSearch
           date_node = xml_text(node, "prism:coverDate") || xml_text(node, "dc:date") || xml_text(node, "prism:publicationDate")
           if date_node && date_node =~ /\A(\d\d\d\d-\d\d-\d\d)/
             item.publication_date = Date.strptime( $1, "%Y-%m-%d")
+          elsif date_node
+            # Let's try a random parse, they give us all kinds of things I'm afraid
+            item.publication_date = Date.parse(date_node) rescue ArgumentError
           end
 
           # abstract, we need to strip possible HTML tags (sometimes they're
