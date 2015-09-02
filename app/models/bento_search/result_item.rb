@@ -1,7 +1,6 @@
 require 'language_list'
 require 'bento_search/author'
 require 'bento_search/link'
-require 'bento_search/results/serialization'
 
 
 module BentoSearch
