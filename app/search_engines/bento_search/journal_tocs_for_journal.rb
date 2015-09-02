@@ -177,7 +177,7 @@ module BentoSearch
       ["registered_email"]
     end
 
-    class FetchError < ::StandardError ; end
+    class FetchError < BentoSearch::FetchError ; end
 
 
   end
