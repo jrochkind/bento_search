@@ -104,6 +104,14 @@ class JournalTocsForJournalTest < ActiveSupport::TestCase
     assert items.empty?
   end
 
+  test_with_cassette("sorts by date", :journal_tocs) do
+    items = @engine.fetch_by_issn("0026-2617")
+
+    (1..(items.length - 1)).each do |i|
+      assert items[i].publication_date <= items[i-1].publication_date, "Expected sorted in reverse date order"
+    end
+  end
+
 
 end
 

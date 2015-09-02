@@ -1,0 +1,922 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.journaltocs.ac.uk/api/journals/0026-2617?output=articles&user=nobody@example.com
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Sep 2015 20:57:46 GMT
+      Server:
+      - Apache
+      X-Powered-By:
+      - PHP/5.3.3
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/xml; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"
+        \r\n         xmlns:prism=\"http://prismstandard.org/namespaces/1.2/basic/\"
+        \r\n\t\t\t\t xmlns:dc=\"http://purl.org/dc/elements/1.1/\" \r\n\t\t\t\t xmlns:mn=\"http://usefulinc.com/rss/manifest/\"\r\n\t\t\t\t
+        xmlns:content=\"http://purl.org/rss/1.0/modules/content/\" \r\n\t\t\t\t xmlns=\"http://purl.org/rss/1.0/\">\n\n
+        \ <channel rdf:about=\"http://www.journaltocs.hw.ac.uk/api/journals\">\r\n
+        \   <title>JournalTOCs API - Microbiology (20 articles)</title>\r\n    <link>http://www.journaltocs.ac.uk/api/journals/0026-2617</link>\r\n
+        \   <description><![CDATA[Your query: 0026-2617 has returned 20 articles.
+        They are listed in alphabetical order per journal (maximum number of returned
+        items is 3000).]]></description>\r\n    <dc:publisher>JournalTOCs API</dc:publisher>\r\n
+        \   <dc:creator>JOURNALTOCS API PROJECT</dc:creator>\r\n\t\t<dc:coverage>1</dc:coverage>\r\n
+        \   <image rdf:resource=\"http://www.journaltocs.ac.uk/images/jtocslogo.gif\"
+        />\r\n    <items>\r\n      <rdf:Seq><rdf:li rdf:resource=\"http://link.springer.com/10.1134/S0026261715040128\"
+        />\n<rdf:li rdf:resource=\"http://link.springer.com/10.1134/S0026261715040098\"
+        />\n<rdf:li rdf:resource=\"http://link.springer.com/10.1134/S0026261715040165\"
+        />\n<rdf:li rdf:resource=\"http://link.springer.com/10.1134/S002626171504013X\"
+        />\n<rdf:li rdf:resource=\"http://link.springer.com/10.1134/S0026261715040086\"
+        />\n<rdf:li rdf:resource=\"http://link.springer.com/10.1134/S0026261715040153\"
+        />\n<rdf:li rdf:resource=\"http://link.springer.com/10.1134/S0026261715030157\"
+        />\n<rdf:li rdf:resource=\"http://link.springer.com/10.1134/S0026261715030030\"
+        />\n<rdf:li rdf:resource=\"http://link.springer.com/10.1134/S0026261715040074\"
+        />\n<rdf:li rdf:resource=\"http://link.springer.com/10.1134/S0026261715040141\"
+        />\n<rdf:li rdf:resource=\"http://link.springer.com/10.1134/S0026261715040104\"
+        />\n<rdf:li rdf:resource=\"http://link.springer.com/10.1134/S0026261715040062\"
+        />\n<rdf:li rdf:resource=\"http://link.springer.com/10.1134/S0026261715040025\"
+        />\n<rdf:li rdf:resource=\"http://link.springer.com/10.1134/S0026261715040037\"
+        />\n<rdf:li rdf:resource=\"http://link.springer.com/10.1134/S0026261715040189\"
+        />\n<rdf:li rdf:resource=\"http://link.springer.com/10.1134/S0026261715030194\"
+        />\n<rdf:li rdf:resource=\"http://link.springer.com/10.1134/S0026261715040177\"
+        />\n<rdf:li rdf:resource=\"http://link.springer.com/10.1134/S0026261715040050\"
+        />\n<rdf:li rdf:resource=\"http://link.springer.com/10.1134/S0026261715040116\"
+        />\n<rdf:li rdf:resource=\"http://link.springer.com/10.1134/S0026261715040049\"
+        />\n\r\n      </rdf:Seq>\r\n    </items>\r\n  </channel>\r\n  <item rdf:about=\"http://link.springer.com/10.1134/S0026261715040128\">\n<title>Structure
+        of the archaeal community in the Black Sea photic zone</title>\r\n<link>http://link.springer.com/10.1134/S0026261715040128</link>\r\n<description>&lt;h3
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n                    &lt;p
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Qualitative and quantitative analysis
+        of the structure of the archaeal community of the photic zone of the Black
+        Sea water column was carried out. Real-time PCR revealed 2 &#215; 10&lt;sup
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;4&lt;/sup&gt; archaeal cells/mL (4.2%
+        of the total cell number) at a 15-m depth. The structure of archaeal communities
+        in the subsurface water column was investigated using the sequencing by synthesis
+        technology (Illumina/Solexa) of the 16S rRNA genes. The Marine Group II phylogenetic
+        cluster belonging to the phylum &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Euryarchaeota&lt;/em&gt;
+        was the most numerous archaeal group (1.2&#8211;1.7 &#215; 10&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;4&lt;/sup&gt;
+        cells/mL). The Marine Group I phylogenetic cluster (phylum &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Thaumarchaeota&lt;/em&gt;)
+        was the second most numerous group (40% of the free-living archaea or 7.7
+        &#215; 10&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;3&lt;/sup&gt; cells/mL).
+        Sequences of the &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8216;Nitrosopumilus&#8217;&lt;/em&gt;
+        cluster were revealed among Marine Group I sequences due to high homology
+        (over 90%). A group of archaea belonging to the Deep-sea Hydrothermal Vent
+        Euryarchaeotic Group 6 (DHVEG-6) (phylum &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Euryarchaeota&lt;/em&gt;)
+        was also detected. The 16S rRNA gene sequences belonging to this cluster were
+        revealed only in the suspension fraction. High homology level (over 90%) suggested
+        classification of most DHVEG-6 sequences within the &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8216;Parvarchaeum&#8217;&lt;/em&gt;
+        cluster. In spite of a noticeable methane peak detected at 15-m depth, no
+        sequences of methanogens were found.&lt;/p&gt;</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S0026261715040128</dc:identifier>\r\n<dc:date>2015-07-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-07-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S0026261715040128\"><b>Structure of
+        the archaeal community in the Black Sea photic zone</b></A><br /> <br /><i>Microbiology,
+        Vol. , No.  (2015) pp.  - </i><br />&lt;h3 class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n
+        \                   &lt;p class=&amp;quot;a-plus-plus&amp;quot;&gt;Qualitative
+        and quantitative analysis of the structure of the archaeal community of the
+        photic zone of the Black Sea water column was carried out. Real-time PCR revealed
+        2 &#215; 10&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;4&lt;/sup&gt;
+        archaeal cells/mL (4.2% of the total cell number) at a 15-m depth. The structure
+        of archaeal communities in the subsurface water column was investigated using
+        the sequencing by synthesis technology (Illumina/Solexa) of the 16S rRNA genes.
+        The Marine Group II phylogenetic cluster belonging to the phylum &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Euryarchaeota&lt;/em&gt;
+        was the most numerous archaeal group (1.2&#8211;1.7 &#215; 10&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;4&lt;/sup&gt;
+        cells/mL). The Marine Group I phylogenetic cluster (phylum &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Thaumarchaeota&lt;/em&gt;)
+        was the second most numerous group (40% of the free-living archaea or 7.7
+        &#215; 10&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;3&lt;/sup&gt; cells/mL).
+        Sequences of the &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8216;Nitrosopumilus&#8217;&lt;/em&gt;
+        cluster were revealed among Marine Group I sequences due to high homology
+        (over 90%). A group of archaea belonging to the Deep-sea Hydrothermal Vent
+        Euryarchaeotic Group 6 (DHVEG-6) (phylum &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Euryarchaeota&lt;/em&gt;)
+        was also detected. The 16S rRNA gene sequences belonging to this cluster were
+        revealed only in the suspension fraction. High homology level (over 90%) suggested
+        classification of most DHVEG-6 sequences within the &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8216;Parvarchaeum&#8217;&lt;/em&gt;
+        cluster. In spite of a noticeable methane peak detected at 15-m depth, no
+        sequences of methanogens were found.&lt;/p&gt;</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://link.springer.com/10.1134/S0026261715040098\">\n<title>Molecular
+        identification and resistance investigation of atrazine degrading bacteria
+        in the sediments of Karun River, Ahvaz, Iran</title>\r\n<link>http://link.springer.com/10.1134/S0026261715040098</link>\r\n<description>&lt;h3
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n                    &lt;p
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Nowadays, the use of pesticides as
+        plant protection products has become widely prevalent, leading to the entry
+        of large amounts of pesticides into soil and water resources, and subsequently,
+        a threat to the environment. The objective of this study was molecular identification
+        and resistance investigation of atrazine degrading bacteria in the sediments
+        of Karun River, Ahvaz, Iran. Nine samples were collected in both summer (Jul)
+        and autumn (Nov) year 2012 from a depth of 3 to 5 cm of the sediments. Atrazine
+        degrading bacteria were enriched in a culture containing atrazine with initial
+        concentration of 30 mg/L. Identification of isolated bacteria was performed
+        by morphological and biochemical test and molecular analysis based on 16S
+        rDNA sequencing. The atrazine biodegradation rate was obtained by high-performance
+        liquid chromatography (HPLC). Six strains was identified including &lt;em
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Achromobacter insolitus&lt;/em&gt;
+        strain F-N3, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Delftia tsuruhatensis&lt;/em&gt;
+        strain F-N4, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Klebsiella pneumonia&lt;/em&gt;
+        F-N1, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Enterobacter ludwigii&lt;/em&gt;
+        strain F-N5, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Serratia marcescens&lt;/em&gt;
+        strain F-N6 in both summer and autumn, and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Exiguobacterium
+        profundum&lt;/em&gt; strain F-N2 only in the summer. The minimum inhibitory
+        concentration (MIC) of atrazine showed that the most resistant species belonged
+        to &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;E. ludwigii&lt;/em&gt;
+        F-N5 and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;D. tsuruhatensis&lt;/em&gt;
+        F-N4 in the both seasons. The atrazine degradation rates of the two strains
+        reached 90 and 85%, respectively after 7 days culture. Result showed that
+        indigenous bacteria in the Karun River can degrade the atrazine effectively.&lt;/p&gt;</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S0026261715040098</dc:identifier>\r\n<dc:date>2015-07-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-07-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S0026261715040098\"><b>Molecular identification
+        and resistance investigation of atrazine degrading bacteria in the sediments
+        of Karun River, Ahvaz, Iran</b></A><br /> <br /><i>Microbiology, Vol. , No.
+        \ (2015) pp.  - </i><br />&lt;h3 class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n
+        \                   &lt;p class=&amp;quot;a-plus-plus&amp;quot;&gt;Nowadays,
+        the use of pesticides as plant protection products has become widely prevalent,
+        leading to the entry of large amounts of pesticides into soil and water resources,
+        and subsequently, a threat to the environment. The objective of this study
+        was molecular identification and resistance investigation of atrazine degrading
+        bacteria in the sediments of Karun River, Ahvaz, Iran. Nine samples were collected
+        in both summer (Jul) and autumn (Nov) year 2012 from a depth of 3 to 5 cm
+        of the sediments. Atrazine degrading bacteria were enriched in a culture containing
+        atrazine with initial concentration of 30 mg/L. Identification of isolated
+        bacteria was performed by morphological and biochemical test and molecular
+        analysis based on 16S rDNA sequencing. The atrazine biodegradation rate was
+        obtained by high-performance liquid chromatography (HPLC). Six strains was
+        identified including &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Achromobacter
+        insolitus&lt;/em&gt; strain F-N3, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Delftia
+        tsuruhatensis&lt;/em&gt; strain F-N4, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Klebsiella
+        pneumonia&lt;/em&gt; F-N1, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Enterobacter
+        ludwigii&lt;/em&gt; strain F-N5, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Serratia
+        marcescens&lt;/em&gt; strain F-N6 in both summer and autumn, and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Exiguobacterium
+        profundum&lt;/em&gt; strain F-N2 only in the summer. The minimum inhibitory
+        concentration (MIC) of atrazine showed that the most resistant species belonged
+        to &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;E. ludwigii&lt;/em&gt;
+        F-N5 and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;D. tsuruhatensis&lt;/em&gt;
+        F-N4 in the both seasons. The atrazine degradation rates of the two strains
+        reached 90 and 85%, respectively after 7 days culture. Result showed that
+        indigenous bacteria in the Karun River can degrade the atrazine effectively.&lt;/p&gt;</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://link.springer.com/10.1134/S0026261715040165\">\n<title>Sulfate-reducing
+        bacteria of the genus Desulfovibrio from south vietnam seacoast</title>\r\n<link>http://link.springer.com/10.1134/S0026261715040165</link>\r\n<description>&lt;h3
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n                    &lt;p
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Nine strains of sulfate-reducing
+        bacteria were isolated from a biofouling of corroded steel samples incubated
+        in a marine environment near Nha Trang, South Vietnam. Sulfate-reducing bacteria
+        were obtained from all samples with black corrosion products (in rust-filled
+        metal cavities, beneath the &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Balanus&lt;/em&gt;
+        and oyster booths, and beneath &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Bryozoa&lt;/em&gt;
+        or algal colonies). Analysis of the 16S rRNA gene sequences of these strains
+        showed that they belonged to the genus &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Desulfovibrio&lt;/em&gt;,
+        with &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;D. salexigens&lt;/em&gt;,
+        &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;D. marinisediminis&lt;/em&gt;,
+        &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;D. alaskensis&lt;/em&gt;,
+        &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;D. bizertensis D. indonesiensis&lt;/em&gt;,
+        and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;D. dechloracetivorans&lt;/em&gt;
+        as the closest phylogenetic relatives (98&#8211;99% similarity). According
+        to the 16S rRNA gene sequencing, one &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Desulfovibrio&lt;/em&gt;
+        isolate was related to &#8220;&lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;D.
+        caledoniensis&#8221;&lt;/em&gt;, although the similarity did not exceed 97.0%.
+        All strains utilized hydrogen (in the presence of acetate and CO&lt;sub class=&amp;quot;a-plus-plus&amp;quot;&gt;2&lt;/sub&gt;),
+        lactate, pyruvate, formate, and fumarate, but not acetate. Utilization of
+        other substrates varied from strain to strain. Some isolates were capable
+        of slow autotrophic growth with H&lt;sub class=&amp;quot;a-plus-plus&amp;quot;&gt;2&lt;/sub&gt;
+        as the sole electron donor. &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;D.
+        indonesiensis&lt;/em&gt; and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;D.
+        alaskensis&lt;/em&gt; strains were tolerant to long-term exposure to atmospheric
+        oxygen exposure and could grow in the presence of 0.1% O&lt;sub class=&amp;quot;a-plus-plus&amp;quot;&gt;2&lt;/sub&gt;
+        in the gas phase.&lt;/p&gt;</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S0026261715040165</dc:identifier>\r\n<dc:date>2015-07-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-07-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S0026261715040165\"><b>Sulfate-reducing
+        bacteria of the genus Desulfovibrio from south vietnam seacoast</b></A><br
+        /> <br /><i>Microbiology, Vol. , No.  (2015) pp.  - </i><br />&lt;h3 class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n
+        \                   &lt;p class=&amp;quot;a-plus-plus&amp;quot;&gt;Nine strains
+        of sulfate-reducing bacteria were isolated from a biofouling of corroded steel
+        samples incubated in a marine environment near Nha Trang, South Vietnam. Sulfate-reducing
+        bacteria were obtained from all samples with black corrosion products (in
+        rust-filled metal cavities, beneath the &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Balanus&lt;/em&gt;
+        and oyster booths, and beneath &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Bryozoa&lt;/em&gt;
+        or algal colonies). Analysis of the 16S rRNA gene sequences of these strains
+        showed that they belonged to the genus &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Desulfovibrio&lt;/em&gt;,
+        with &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;D. salexigens&lt;/em&gt;,
+        &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;D. marinisediminis&lt;/em&gt;,
+        &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;D. alaskensis&lt;/em&gt;,
+        &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;D. bizertensis D. indonesiensis&lt;/em&gt;,
+        and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;D. dechloracetivorans&lt;/em&gt;
+        as the closest phylogenetic relatives (98&#8211;99% similarity). According
+        to the 16S rRNA gene sequencing, one &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Desulfovibrio&lt;/em&gt;
+        isolate was related to &#8220;&lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;D.
+        caledoniensis&#8221;&lt;/em&gt;, although the similarity did not exceed 97.0%.
+        All strains utilized hydrogen (in the presence of acetate and CO&lt;sub class=&amp;quot;a-plus-plus&amp;quot;&gt;2&lt;/sub&gt;),
+        lactate, pyruvate, formate, and fumarate, but not acetate. Utilization of
+        other substrates varied from strain to strain. Some isolates were capable
+        of slow autotrophic growth with H&lt;sub class=&amp;quot;a-plus-plus&amp;quot;&gt;2&lt;/sub&gt;
+        as the sole electron donor. &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;D.
+        indonesiensis&lt;/em&gt; and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;D.
+        alaskensis&lt;/em&gt; strains were tolerant to long-term exposure to atmospheric
+        oxygen exposure and could grow in the presence of 0.1% O&lt;sub class=&amp;quot;a-plus-plus&amp;quot;&gt;2&lt;/sub&gt;
+        in the gas phase.&lt;/p&gt;</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://link.springer.com/10.1134/S002626171504013X\">\n<title>Occurrence,
+        diversity, and abundance of methanogenic archaea in terrestrial hot springs
+        of Kamchatka and Sa&#245; Miguel Island</title>\r\n<link>http://link.springer.com/10.1134/S002626171504013X</link>\r\n<description>&lt;h3
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n                    &lt;p
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Detection and analysis of the &lt;em
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;mcrA&lt;/em&gt; gene encoding methyl-coenzyme
+        M reductase, the key enzyme of methanogenesis, was used to assess occurrence
+        and diversity of methanogenic archaea in terrestrial hot springs of Kamchatka
+        and Sa~o Miguel Island (the Azores). For this analysis, phylogeny of methanogens
+        was initially reconstructed based on available sequences of the &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;mcrA&lt;/em&gt;
+        gene, which is a common functional and phylogenetic marker for this physiological
+        group of prokaryotes. Methanogens were revealed in most of the studied terrestrial
+        hot springs with temperatures from 51 to 89&#176;C, although they constituted
+        an insignificant portion of the microbial population. The &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;mcrA&lt;/em&gt;
+        gene sequences revealed in the samples belonged to members of the genera &lt;em
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Methanothermobacter, Methanothermus&lt;/em&gt;,
+        and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Methanothrix&lt;/em&gt;,
+        previously detected in hot springs, as well as to methanogens not found earlier
+        in these environments. The latter belonged to &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Methanomassiliicoccales,
+        Methanocellales&lt;/em&gt;, and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Methanomethylovorans&lt;/em&gt;,
+        as well as to MCR-2a, the new deep phylogenetic cluster of uncultured methanogenic
+        archaea; its phylotypes were present in all springs where the &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;mcrA&lt;/em&gt;
+        gene was detected. Our results indicate high diversity of the thermophilic
+        methanogens inhabiting terrestrial hot springs and the presence among them
+        of new groups with yet unknown substrate specificity.&lt;/p&gt;</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S002626171504013X</dc:identifier>\r\n<dc:date>2015-07-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-07-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S002626171504013X\"><b>Occurrence,
+        diversity, and abundance of methanogenic archaea in terrestrial hot springs
+        of Kamchatka and Sa&#245; Miguel Island</b></A><br /> <br /><i>Microbiology,
+        Vol. , No.  (2015) pp.  - </i><br />&lt;h3 class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n
+        \                   &lt;p class=&amp;quot;a-plus-plus&amp;quot;&gt;Detection
+        and analysis of the &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;mcrA&lt;/em&gt;
+        gene encoding methyl-coenzyme M reductase, the key enzyme of methanogenesis,
+        was used to assess occurrence and diversity of methanogenic archaea in terrestrial
+        hot springs of Kamchatka and Sa~o Miguel Island (the Azores). For this analysis,
+        phylogeny of methanogens was initially reconstructed based on available sequences
+        of the &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;mcrA&lt;/em&gt; gene,
+        which is a common functional and phylogenetic marker for this physiological
+        group of prokaryotes. Methanogens were revealed in most of the studied terrestrial
+        hot springs with temperatures from 51 to 89&#176;C, although they constituted
+        an insignificant portion of the microbial population. The &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;mcrA&lt;/em&gt;
+        gene sequences revealed in the samples belonged to members of the genera &lt;em
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Methanothermobacter, Methanothermus&lt;/em&gt;,
+        and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Methanothrix&lt;/em&gt;,
+        previously detected in hot springs, as well as to methanogens not found earlier
+        in these environments. The latter belonged to &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Methanomassiliicoccales,
+        Methanocellales&lt;/em&gt;, and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Methanomethylovorans&lt;/em&gt;,
+        as well as to MCR-2a, the new deep phylogenetic cluster of uncultured methanogenic
+        archaea; its phylotypes were present in all springs where the &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;mcrA&lt;/em&gt;
+        gene was detected. Our results indicate high diversity of the thermophilic
+        methanogens inhabiting terrestrial hot springs and the presence among them
+        of new groups with yet unknown substrate specificity.&lt;/p&gt;</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://link.springer.com/10.1134/S0026261715040086\">\n<title>Bacterial
+        photosensory proteins: Regulatory functions and optogenetic applications</title>\r\n<link>http://link.springer.com/10.1134/S0026261715040086</link>\r\n<description>&lt;h3
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n                    &lt;p
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Three classes of light-sensory regulatory
+        proteins, which have been identified in genomes of numerous phototrophic and
+        nonphotosynthetic bacteria, are discussed: the UVA/blue light sensitive BLUF
+        and LOV domain-containing proteins and red/far-red light-sensitive phytochromes.
+        Light perception by these chromoproteins is provided by the flavin or bilin
+        (in phytochromes) chromophores binding to their photosensory domains. Bacterial
+        photoreceptors also contain a variety of effector domains with enzymatic DNA-binding
+        and other functions, which compose modular light-switchable systems. In recent
+        years, progress was achieved in uncovering the photoactivation mechanisms
+        of such systems. Based on the chromophore phototransformation-induced changes
+        in the domain structures, these mechanisms cause the biochemical signal cascades
+        which can control the light-dependent physiological responses of the cells.
+        The new information obtained is important not only for understanding the fundamental
+        mechanisms of light perception and signal transduction by bacterial photosensory
+        proteins but also as a basis for designing photo-switchable enzymes and light-inducible
+        gene expression systems, which may be used in optogenetics, a new field in
+        cell biology and biotechnology. The presents review is focused on the structural
+        aspects of signal transduction in light-activated bacterial photoreceptors,
+        on their regulatory functions, and on some recent advances in using LOV and
+        BLUF photosensors in optogenetics for the regulation of biological processes.&lt;/p&gt;</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S0026261715040086</dc:identifier>\r\n<dc:date>2015-07-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-07-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S0026261715040086\"><b>Bacterial photosensory
+        proteins: Regulatory functions and optogenetic applications</b></A><br />
+        <br /><i>Microbiology, Vol. , No.  (2015) pp.  - </i><br />&lt;h3 class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n
+        \                   &lt;p class=&amp;quot;a-plus-plus&amp;quot;&gt;Three classes
+        of light-sensory regulatory proteins, which have been identified in genomes
+        of numerous phototrophic and nonphotosynthetic bacteria, are discussed: the
+        UVA/blue light sensitive BLUF and LOV domain-containing proteins and red/far-red
+        light-sensitive phytochromes. Light perception by these chromoproteins is
+        provided by the flavin or bilin (in phytochromes) chromophores binding to
+        their photosensory domains. Bacterial photoreceptors also contain a variety
+        of effector domains with enzymatic DNA-binding and other functions, which
+        compose modular light-switchable systems. In recent years, progress was achieved
+        in uncovering the photoactivation mechanisms of such systems. Based on the
+        chromophore phototransformation-induced changes in the domain structures,
+        these mechanisms cause the biochemical signal cascades which can control the
+        light-dependent physiological responses of the cells. The new information
+        obtained is important not only for understanding the fundamental mechanisms
+        of light perception and signal transduction by bacterial photosensory proteins
+        but also as a basis for designing photo-switchable enzymes and light-inducible
+        gene expression systems, which may be used in optogenetics, a new field in
+        cell biology and biotechnology. The presents review is focused on the structural
+        aspects of signal transduction in light-activated bacterial photoreceptors,
+        on their regulatory functions, and on some recent advances in using LOV and
+        BLUF photosensors in optogenetics for the regulation of biological processes.&lt;/p&gt;</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://link.springer.com/10.1134/S0026261715040153\">\n<title>The
+        production of exopolysaccharide by Pseudomonas putida GAP-P45 under various
+        abiotic stress conditions and its role in soil aggregation</title>\r\n<link>http://link.springer.com/10.1134/S0026261715040153</link>\r\n<description>&lt;h3
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n                    &lt;p
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Exopolysaccharides (EPS) production
+        is modified in response to environmental changes and is believed to protect
+        bacteria. In the present study &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Pseudomonas
+        putida&lt;/em&gt; strain GAP-P45 identified by 16S rDNA sequence analysis
+        was exposed to stresses such as drought, temperature and salt to test the
+        ability to tolerate and produce EPS. Strain GAP-P45 could tolerate matric
+        stress up to &#8722;0.73 MPa, Temperature of 50&#176;C and 1.4 M salt and
+        produced EPS, which increased with increase in stress levels. Among all stress
+        conditions, the production was high under drought stress. HPLC analysis revealed
+        that monosaccharide composition and ratio of sugars in EPS increased under
+        stress that might induce osmotic and thermal tolerance in GAP-P45. Rhamnose
+        was reported as major sugar under all stress conditions. Among the different
+        carbon sources tested, glycerol was found to be best for EPS production under
+        stressed as well as non-stressed conditions. Inoculation with GAP-P45 resulted
+        in better soil aggregation and aggregate stability under different stress
+        conditions. However inoculation effect was more under drought-stress. The
+        significance of these findings shows that abiotic stresses influence the EPS
+        composition and ratios of sugars, which influence the tolerance of the microorganisms
+        which can be employed for improvement in water holding capacity under unfavorable
+        environmental conditions.&lt;/p&gt;</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S0026261715040153</dc:identifier>\r\n<dc:date>2015-07-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-07-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S0026261715040153\"><b>The production
+        of exopolysaccharide by Pseudomonas putida GAP-P45 under various abiotic stress
+        conditions and its role in soil aggregation</b></A><br /> <br /><i>Microbiology,
+        Vol. , No.  (2015) pp.  - </i><br />&lt;h3 class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n
+        \                   &lt;p class=&amp;quot;a-plus-plus&amp;quot;&gt;Exopolysaccharides
+        (EPS) production is modified in response to environmental changes and is believed
+        to protect bacteria. In the present study &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Pseudomonas
+        putida&lt;/em&gt; strain GAP-P45 identified by 16S rDNA sequence analysis
+        was exposed to stresses such as drought, temperature and salt to test the
+        ability to tolerate and produce EPS. Strain GAP-P45 could tolerate matric
+        stress up to &#8722;0.73 MPa, Temperature of 50&#176;C and 1.4 M salt and
+        produced EPS, which increased with increase in stress levels. Among all stress
+        conditions, the production was high under drought stress. HPLC analysis revealed
+        that monosaccharide composition and ratio of sugars in EPS increased under
+        stress that might induce osmotic and thermal tolerance in GAP-P45. Rhamnose
+        was reported as major sugar under all stress conditions. Among the different
+        carbon sources tested, glycerol was found to be best for EPS production under
+        stressed as well as non-stressed conditions. Inoculation with GAP-P45 resulted
+        in better soil aggregation and aggregate stability under different stress
+        conditions. However inoculation effect was more under drought-stress. The
+        significance of these findings shows that abiotic stresses influence the EPS
+        composition and ratios of sugars, which influence the tolerance of the microorganisms
+        which can be employed for improvement in water holding capacity under unfavorable
+        environmental conditions.&lt;/p&gt;</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://link.springer.com/10.1134/S0026261715030157\">\n<title>Active
+        sulfate reduction in acidic sediments of gold mine tailings</title>\r\n<link>http://link.springer.com/10.1134/S0026261715030157</link>\r\n<description>&lt;br&gt;\nArticle
+        URL: http://link.springer.com/10.1134/S0026261715030157&lt;br&gt;\nCitation:
+        \ (2015) &lt;br&gt;\nPublication Date: 2015-05-01&lt;br&gt;\nJournal: Microbiology</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S0026261715030157</dc:identifier>\r\n<dc:date>2015-05-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-05-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S0026261715030157\"><b>Active sulfate
+        reduction in acidic sediments of gold mine tailings</b></A><br /> <br /><i>Microbiology,
+        Vol. , No.  (2015) pp.  - </i><br />\nArticle URL: http://link.springer.com/10.1134/S0026261715030157\nCitation:
+        \ (2015) \nPublication Date: 2015-05-01\nJournal: Microbiology</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://link.springer.com/10.1134/S0026261715030030\">\n<title>Activated
+        sludge bacteria transforming cyanopyridines and amides of pyridinecarboxylic
+        acids</title>\r\n<link>http://link.springer.com/10.1134/S0026261715030030</link>\r\n<description>&lt;h3
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n                    &lt;p
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Species diversity of bacteria from
+        the activated sludge of Perm biological waste treatment facilities capable
+        of transformation of cyanopyridines and amides of pyridinecarboxylic acids
+        was investigated. Enrichment cultures in mineral media with 3-cyanopyridine
+        as the sole carbon and nitrogen source were used to obtain 32 clones of gram-negative
+        heterotrophic bacteria exhibiting moderate growth on solid and liquid media
+        with 3- and 4-cyanopyridine. Sequencing of the 16S rRNA gene fragments revealed
+        that the clones with homology of at least 99% belonged to the genera &lt;em
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Acinetobacter&lt;/em&gt;, &lt;em
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Alcaligenes&lt;/em&gt;, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Delftia&lt;/em&gt;,
+        &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Ochrobactrum&lt;/em&gt;, &lt;em
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Pseudomonas&lt;/em&gt;, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Stenotrophomonas&lt;/em&gt;,
+        and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Xanthobacter&lt;/em&gt;.
+        PCR analysis showed that 13 out of 32 isolates contained the sequences (~1070
+        bp) homologous to the nitrilase genes reported previously in &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Alcaligenes
+        faecalis&lt;/em&gt; JM3 (GenBank, D13419.1). Nine clones were capable of nitrile
+        and amide transformation when grown on minimal salt medium. &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Acinetobacter&lt;/em&gt;
+        sp. 11h and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Alcaligenes&lt;/em&gt;
+        sp. osv transformed 3-cyanopyridine to nicotinamide, while most of the clones
+        possessed amidase activity (0.5 to 46.3 mmol/(g h) for acetamide and 0.1 to
+        5.6 mmol/(g h) for nicotinamide). Nicotinamide utilization by strain &lt;em
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;A. faecalis&lt;/em&gt; 2 was shown
+        to result in excretion of a secondary metabolite, which was identified as
+        dodecyl acrylate at 91% probability.&lt;/p&gt;</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S0026261715030030</dc:identifier>\r\n<dc:date>2015-05-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-05-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S0026261715030030\"><b>Activated sludge
+        bacteria transforming cyanopyridines and amides of pyridinecarboxylic acids</b></A><br
+        /> <br /><i>Microbiology, Vol. , No.  (2015) pp.  - </i><br />&lt;h3 class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n
+        \                   &lt;p class=&amp;quot;a-plus-plus&amp;quot;&gt;Species
+        diversity of bacteria from the activated sludge of Perm biological waste treatment
+        facilities capable of transformation of cyanopyridines and amides of pyridinecarboxylic
+        acids was investigated. Enrichment cultures in mineral media with 3-cyanopyridine
+        as the sole carbon and nitrogen source were used to obtain 32 clones of gram-negative
+        heterotrophic bacteria exhibiting moderate growth on solid and liquid media
+        with 3- and 4-cyanopyridine. Sequencing of the 16S rRNA gene fragments revealed
+        that the clones with homology of at least 99% belonged to the genera &lt;em
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Acinetobacter&lt;/em&gt;, &lt;em
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Alcaligenes&lt;/em&gt;, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Delftia&lt;/em&gt;,
+        &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Ochrobactrum&lt;/em&gt;, &lt;em
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Pseudomonas&lt;/em&gt;, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Stenotrophomonas&lt;/em&gt;,
+        and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Xanthobacter&lt;/em&gt;.
+        PCR analysis showed that 13 out of 32 isolates contained the sequences (~1070
+        bp) homologous to the nitrilase genes reported previously in &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Alcaligenes
+        faecalis&lt;/em&gt; JM3 (GenBank, D13419.1). Nine clones were capable of nitrile
+        and amide transformation when grown on minimal salt medium. &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Acinetobacter&lt;/em&gt;
+        sp. 11h and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Alcaligenes&lt;/em&gt;
+        sp. osv transformed 3-cyanopyridine to nicotinamide, while most of the clones
+        possessed amidase activity (0.5 to 46.3 mmol/(g h) for acetamide and 0.1 to
+        5.6 mmol/(g h) for nicotinamide). Nicotinamide utilization by strain &lt;em
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;A. faecalis&lt;/em&gt; 2 was shown
+        to result in excretion of a secondary metabolite, which was identified as
+        dodecyl acrylate at 91% probability.&lt;/p&gt;</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://link.springer.com/10.1134/S0026261715040074\">\n<title>1-aminocyclopropane-1-carboxylate
+        deaminase of the aerobic facultative methylotrophic actinomycete Amycolatopsis
+        methanolica 239</title>\r\n<link>http://link.springer.com/10.1134/S0026261715040074</link>\r\n<description>&lt;br&gt;\nArticle
+        URL: http://link.springer.com/10.1134/S0026261715040074&lt;br&gt;\nCitation:
+        \ (2015) &lt;br&gt;\nPublication Date: 2015-07-01&lt;br&gt;\nJournal: Microbiology</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S0026261715040074</dc:identifier>\r\n<dc:date>2015-07-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-07-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S0026261715040074\"><b>1-aminocyclopropane-1-carboxylate
+        deaminase of the aerobic facultative methylotrophic actinomycete Amycolatopsis
+        methanolica 239</b></A><br /> <br /><i>Microbiology, Vol. , No.  (2015) pp.
+        \ - </i><br />\nArticle URL: http://link.springer.com/10.1134/S0026261715040074\nCitation:
+        \ (2015) \nPublication Date: 2015-07-01\nJournal: Microbiology</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://link.springer.com/10.1134/S0026261715040141\">\n<title>The
+        yeast Komagataella : A genetic genus in accordance with interspecies hybridization</title>\r\n<link>http://link.springer.com/10.1134/S0026261715040141</link>\r\n<description>&lt;h3
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n                    &lt;p
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Using induced complementary auxotrophic
+        mutants and selective growth of prototrophic hybrids on minimal medium, hybridization
+        of the type strain of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Komagataella
+        kurtzmanii&lt;/em&gt; VKPM Y-727 with the type strains of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;K.
+        pastoris&lt;/em&gt; VKPM Y-3262, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;K.
+        phaffii&lt;/em&gt; NRRL Y-7556, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;K.
+        populi&lt;/em&gt; NRRL YB-455, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;K.
+        pseudopastoris&lt;/em&gt; NRRL Y-27603, and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;K.
+        ulmi&lt;/em&gt; NRRL YB-407 was demonstrated. The data obtained suggest that
+        the genus &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Komagataella&lt;/em&gt;,
+        established previously by phylogenetic analysis, corresponds well to the concept
+        of genetic genus in ascomycetous fungi. According to this concept, a genetic
+        genus is a group of hybridized species having a common mating type system.
+        Application of the concept of genetic genus for different yeast genera is
+        discussed.&lt;/p&gt;</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S0026261715040141</dc:identifier>\r\n<dc:date>2015-07-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-07-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S0026261715040141\"><b>The yeast Komagataella
+        : A genetic genus in accordance with interspecies hybridization</b></A><br
+        /> <br /><i>Microbiology, Vol. , No.  (2015) pp.  - </i><br />&lt;h3 class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n
+        \                   &lt;p class=&amp;quot;a-plus-plus&amp;quot;&gt;Using induced
+        complementary auxotrophic mutants and selective growth of prototrophic hybrids
+        on minimal medium, hybridization of the type strain of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Komagataella
+        kurtzmanii&lt;/em&gt; VKPM Y-727 with the type strains of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;K.
+        pastoris&lt;/em&gt; VKPM Y-3262, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;K.
+        phaffii&lt;/em&gt; NRRL Y-7556, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;K.
+        populi&lt;/em&gt; NRRL YB-455, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;K.
+        pseudopastoris&lt;/em&gt; NRRL Y-27603, and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;K.
+        ulmi&lt;/em&gt; NRRL YB-407 was demonstrated. The data obtained suggest that
+        the genus &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Komagataella&lt;/em&gt;,
+        established previously by phylogenetic analysis, corresponds well to the concept
+        of genetic genus in ascomycetous fungi. According to this concept, a genetic
+        genus is a group of hybridized species having a common mating type system.
+        Application of the concept of genetic genus for different yeast genera is
+        discussed.&lt;/p&gt;</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://link.springer.com/10.1134/S0026261715040104\">\n<title>Trophic
+        patterns of functioning and microbial profile of the evolutionally established
+        associated kefir grains culture</title>\r\n<link>http://link.springer.com/10.1134/S0026261715040104</link>\r\n<description>&lt;h3
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n                    &lt;p
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;The associated culture of kefir grains
+        was analyzed by molecular methods for determination of the functional activity
+        of microbial isolates and molecular genetic techniques for their identification.
+        A combination of 16S rRNA analysis and denaturing gradient gel electrophoresis
+        was used to determine the microbial profile of kefir grains and to reveal
+        lactic acid bacteria of two physiological groups, differing in their ability
+        to use lactose for lactic acid fermentation. The role of inducible &#946;-galactosidase
+        of lactic acid bacteria for the functional stability of the microbial community
+        was shown in the study of the functional activity and microbial profile of
+        the kefir grains after long-time cultivation (over 4 years) on lactose-free
+        milk. The results obtained improve our understanding of the possible trophic
+        interactions in such microbial communities and may be used to develop the
+        algorithm for experimental production of a stably associated culture of kefir
+        grains.&lt;/p&gt;</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S0026261715040104</dc:identifier>\r\n<dc:date>2015-07-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-07-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S0026261715040104\"><b>Trophic patterns
+        of functioning and microbial profile of the evolutionally established associated
+        kefir grains culture</b></A><br /> <br /><i>Microbiology, Vol. , No.  (2015)
+        pp.  - </i><br />&lt;h3 class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n
+        \                   &lt;p class=&amp;quot;a-plus-plus&amp;quot;&gt;The associated
+        culture of kefir grains was analyzed by molecular methods for determination
+        of the functional activity of microbial isolates and molecular genetic techniques
+        for their identification. A combination of 16S rRNA analysis and denaturing
+        gradient gel electrophoresis was used to determine the microbial profile of
+        kefir grains and to reveal lactic acid bacteria of two physiological groups,
+        differing in their ability to use lactose for lactic acid fermentation. The
+        role of inducible &#946;-galactosidase of lactic acid bacteria for the functional
+        stability of the microbial community was shown in the study of the functional
+        activity and microbial profile of the kefir grains after long-time cultivation
+        (over 4 years) on lactose-free milk. The results obtained improve our understanding
+        of the possible trophic interactions in such microbial communities and may
+        be used to develop the algorithm for experimental production of a stably associated
+        culture of kefir grains.&lt;/p&gt;</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://link.springer.com/10.1134/S0026261715040062\">\n<title>Disruption
+        of bacterial biofilms using recombinant dispersin B</title>\r\n<link>http://link.springer.com/10.1134/S0026261715040062</link>\r\n<description>&lt;h3
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n                    &lt;p
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;A synthetic gene encoding dispersin
+        B of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Aggregatibacter actinomycetemcomitans&lt;/em&gt;
+        was cloned and expressed in &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Escherichia
+        coli&lt;/em&gt; cells. Procedure for purification of recombinant dispersin
+        B was developed, and its in vitro activity was determined. The enzyme was
+        used in experiments on disruption of the biofilms formed by various microorganisms.
+        It exhibited high activity against &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Staphylococcus
+        epidermidis&lt;/em&gt; biofilms. The biofilms formed by &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Burkholderia
+        cenocepacia&lt;/em&gt; and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Achromobacter
+        xylosoxidans&lt;/em&gt; were more resistant to the recombinant enzyme.&lt;/p&gt;</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S0026261715040062</dc:identifier>\r\n<dc:date>2015-07-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-07-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S0026261715040062\"><b>Disruption
+        of bacterial biofilms using recombinant dispersin B</b></A><br /> <br /><i>Microbiology,
+        Vol. , No.  (2015) pp.  - </i><br />&lt;h3 class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n
+        \                   &lt;p class=&amp;quot;a-plus-plus&amp;quot;&gt;A synthetic
+        gene encoding dispersin B of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Aggregatibacter
+        actinomycetemcomitans&lt;/em&gt; was cloned and expressed in &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Escherichia
+        coli&lt;/em&gt; cells. Procedure for purification of recombinant dispersin
+        B was developed, and its in vitro activity was determined. The enzyme was
+        used in experiments on disruption of the biofilms formed by various microorganisms.
+        It exhibited high activity against &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Staphylococcus
+        epidermidis&lt;/em&gt; biofilms. The biofilms formed by &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Burkholderia
+        cenocepacia&lt;/em&gt; and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Achromobacter
+        xylosoxidans&lt;/em&gt; were more resistant to the recombinant enzyme.&lt;/p&gt;</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://link.springer.com/10.1134/S0026261715040025\">\n<title>
+        Methylopila turkiensis sp. nov., a new aerobic facultatively methylotrophic
+        phytosymbiont</title>\r\n<link>http://link.springer.com/10.1134/S0026261715040025</link>\r\n<description>&lt;h3
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n                    &lt;p
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;A new facultative methylotroph, strain
+        Side1&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;T&lt;/sup&gt;, was isolated
+        from the phyllosphere of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Bougainvillea&lt;/em&gt;
+        sp. L. The isolate is represented by rod-shaped, aerobic gram-negative asporogenous
+        bacteria which divide by binary fission. Methanol and mono- and trimethylamine
+        were utilized, as well as a limited spectrum of polycarbon substrates, while
+        methane and dichloromethane were not used. Growth occurred at pH 6.0&#8211;9.0
+        with the optimum at pH 7.0 within the temperature range from 20 to 40&#176;C
+        (optimum at 28&#8211;30&#176;C) and 0&#8211;2.5% NaCl in the medium. The predominant
+        fatty acids were &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;cis&lt;/em&gt;-11-octadecenoic
+        (C18:1&#969;7c), 11-methyl-octadecenoic (C18:&#969;7c11Me), and stearic (C18:0)
+        acids. Phosphatidylethanolamine, phosphatidylcholine, phosphatidylglycerol,
+        and diphosphatidylglycerol were the dominant phospholipids. Q&lt;sub class=&amp;quot;a-plus-plus&amp;quot;&gt;10&lt;/sub&gt;
+        was the dominant ubiquinone. The isolate oxidized methanol and methylamine
+        by the appropriate dehydrogenases. The isocitrate lyase-negative variant of
+        the serine pathway was used. Ammonium assimilation involved glutamate dehydrogenase
+        and the glutamate cycle (glutamate synthase and glutamine synthetase). The
+        strain synthesized indole and siderophores; it solubilized insoluble phosphates.
+        The DNA G+C content (&lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;T&lt;/em&gt;\n
+        \                                     &lt;sub class=&amp;quot;a-plus-plus&amp;quot;&gt;m&lt;/sub&gt;)
+        was 65.4 mol %. While the nucleotide sequence of the 16S rRNA gene of strain
+        Side1 exhibited high similarity to those of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Methylopila&lt;/em&gt;
+        species (&lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;M. musalis&lt;/em&gt;
+        MUSA&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;T&lt;/sup&gt; and &lt;em
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;M. capsulata&lt;/em&gt; IM1&lt;sup
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;T&lt;/sup&gt;), DNA-DNA homology
+        with these cultures was 32&#8211;37%. The results obtained supported classification
+        of strain Side1&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;T&lt;/sup&gt;
+        as a new species &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Methylopila
+        turkiensis&lt;/em&gt; sp. nov. (VKM B-2748&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;T&lt;/sup&gt;=
+        DSM 27566&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;T&lt;/sup&gt;).&lt;/p&gt;</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S0026261715040025</dc:identifier>\r\n<dc:date>2015-07-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-07-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S0026261715040025\"><b> Methylopila
+        turkiensis sp. nov., a new aerobic facultatively methylotrophic phytosymbiont</b></A><br
+        /> <br /><i>Microbiology, Vol. , No.  (2015) pp.  - </i><br />&lt;h3 class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n
+        \                   &lt;p class=&amp;quot;a-plus-plus&amp;quot;&gt;A new facultative
+        methylotroph, strain Side1&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;T&lt;/sup&gt;,
+        was isolated from the phyllosphere of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Bougainvillea&lt;/em&gt;
+        sp. L. The isolate is represented by rod-shaped, aerobic gram-negative asporogenous
+        bacteria which divide by binary fission. Methanol and mono- and trimethylamine
+        were utilized, as well as a limited spectrum of polycarbon substrates, while
+        methane and dichloromethane were not used. Growth occurred at pH 6.0&#8211;9.0
+        with the optimum at pH 7.0 within the temperature range from 20 to 40&#176;C
+        (optimum at 28&#8211;30&#176;C) and 0&#8211;2.5% NaCl in the medium. The predominant
+        fatty acids were &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;cis&lt;/em&gt;-11-octadecenoic
+        (C18:1&#969;7c), 11-methyl-octadecenoic (C18:&#969;7c11Me), and stearic (C18:0)
+        acids. Phosphatidylethanolamine, phosphatidylcholine, phosphatidylglycerol,
+        and diphosphatidylglycerol were the dominant phospholipids. Q&lt;sub class=&amp;quot;a-plus-plus&amp;quot;&gt;10&lt;/sub&gt;
+        was the dominant ubiquinone. The isolate oxidized methanol and methylamine
+        by the appropriate dehydrogenases. The isocitrate lyase-negative variant of
+        the serine pathway was used. Ammonium assimilation involved glutamate dehydrogenase
+        and the glutamate cycle (glutamate synthase and glutamine synthetase). The
+        strain synthesized indole and siderophores; it solubilized insoluble phosphates.
+        The DNA G+C content (&lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;T&lt;/em&gt;\n
+        \                                     &lt;sub class=&amp;quot;a-plus-plus&amp;quot;&gt;m&lt;/sub&gt;)
+        was 65.4 mol %. While the nucleotide sequence of the 16S rRNA gene of strain
+        Side1 exhibited high similarity to those of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Methylopila&lt;/em&gt;
+        species (&lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;M. musalis&lt;/em&gt;
+        MUSA&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;T&lt;/sup&gt; and &lt;em
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;M. capsulata&lt;/em&gt; IM1&lt;sup
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;T&lt;/sup&gt;), DNA-DNA homology
+        with these cultures was 32&#8211;37%. The results obtained supported classification
+        of strain Side1&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;T&lt;/sup&gt;
+        as a new species &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Methylopila
+        turkiensis&lt;/em&gt; sp. nov. (VKM B-2748&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;T&lt;/sup&gt;=
+        DSM 27566&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;T&lt;/sup&gt;).&lt;/p&gt;</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://link.springer.com/10.1134/S0026261715040037\">\n<title>Statistical
+        medium optimization for the production of collagenolytic protease by Pseudomonas
+        sp. SUK using response surface methodology</title>\r\n<link>http://link.springer.com/10.1134/S0026261715040037</link>\r\n<description>&lt;h3
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n                    &lt;p
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;\n                                      &lt;em
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Pseudomonas&lt;/em&gt; sp. SUK producing
+        an extracellular collagenolytic protease was isolated from soil samples from
+        meat and poultry industrial area based in Kolhapur, India. Response surface
+        methodology was employed for the optimization of different nutritional parameters
+        influencing production of collagenolytic protease by newly isolated &lt;em
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Pseudomonas&lt;/em&gt; sp. SUK in
+        submerged fermentation. Initial screening of production parameters was performed
+        using Plackett-Burman design and the variables with statistically significant
+        effects on collagenolytic protease production were identified as gelatin,
+        peptone, and K&lt;sub class=&amp;quot;a-plus-plus&amp;quot;&gt;2&lt;/sub&gt;HPO&lt;sub
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;4&lt;/sub&gt;. Further, optimization
+        by response surface methodology (RSM) using Central Composite Design showed
+        optimum production of collagenolytic protease with 12.05 g L&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt;
+        of gelatin, 12.26 g L&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt;
+        of peptone and 1.29 g L&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt;
+        of K&lt;sub class=&amp;quot;a-plus-plus&amp;quot;&gt;2&lt;/sub&gt;HPO&lt;sub
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;4&lt;/sub&gt;. Collagenolytic protease
+        production obtained experimentally has very close agreement with the model
+        prediction value and the model was proven to be adequate. The statistical
+        optimization by response surface methodology upsurges collagenolytic protease
+        yield by 2.9 fold, hence the experimental design is effective towards process
+        optimization. Moreover, ammonium sulphate precipitated, partially purified
+        enzyme has shown to cleave collagen from bovine achilles tendon, which was
+        observed by phase contrast microscopy, and SDS-PAGE. Hence, extracellular
+        collagenolytic protease of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Pseudomonas&lt;/em&gt;
+        sp. SUK could have considerable potential for industrial as well as medical
+        applications.&lt;/p&gt;</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S0026261715040037</dc:identifier>\r\n<dc:date>2015-07-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-07-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S0026261715040037\"><b>Statistical
+        medium optimization for the production of collagenolytic protease by Pseudomonas
+        sp. SUK using response surface methodology</b></A><br /> <br /><i>Microbiology,
+        Vol. , No.  (2015) pp.  - </i><br />&lt;h3 class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n
+        \                   &lt;p class=&amp;quot;a-plus-plus&amp;quot;&gt;\n                                      &lt;em
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Pseudomonas&lt;/em&gt; sp. SUK producing
+        an extracellular collagenolytic protease was isolated from soil samples from
+        meat and poultry industrial area based in Kolhapur, India. Response surface
+        methodology was employed for the optimization of different nutritional parameters
+        influencing production of collagenolytic protease by newly isolated &lt;em
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Pseudomonas&lt;/em&gt; sp. SUK in
+        submerged fermentation. Initial screening of production parameters was performed
+        using Plackett-Burman design and the variables with statistically significant
+        effects on collagenolytic protease production were identified as gelatin,
+        peptone, and K&lt;sub class=&amp;quot;a-plus-plus&amp;quot;&gt;2&lt;/sub&gt;HPO&lt;sub
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;4&lt;/sub&gt;. Further, optimization
+        by response surface methodology (RSM) using Central Composite Design showed
+        optimum production of collagenolytic protease with 12.05 g L&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt;
+        of gelatin, 12.26 g L&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt;
+        of peptone and 1.29 g L&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt;
+        of K&lt;sub class=&amp;quot;a-plus-plus&amp;quot;&gt;2&lt;/sub&gt;HPO&lt;sub
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;4&lt;/sub&gt;. Collagenolytic protease
+        production obtained experimentally has very close agreement with the model
+        prediction value and the model was proven to be adequate. The statistical
+        optimization by response surface methodology upsurges collagenolytic protease
+        yield by 2.9 fold, hence the experimental design is effective towards process
+        optimization. Moreover, ammonium sulphate precipitated, partially purified
+        enzyme has shown to cleave collagen from bovine achilles tendon, which was
+        observed by phase contrast microscopy, and SDS-PAGE. Hence, extracellular
+        collagenolytic protease of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Pseudomonas&lt;/em&gt;
+        sp. SUK could have considerable potential for industrial as well as medical
+        applications.&lt;/p&gt;</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://link.springer.com/10.1134/S0026261715040189\">\n<title>Structural
+        characterization of the extracellular peptide metabolites of Luteococcus japonicus
+        subsp. casei and their protective effect on probiotic bacteria</title>\r\n<link>http://link.springer.com/10.1134/S0026261715040189</link>\r\n<description>&lt;h3
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n                    &lt;p
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Protective effect of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Luteococcus
+        japonicus&lt;/em&gt; subsp. &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;casei&lt;/em&gt;
+        exometabolites on the cells of transient probiotic &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Propionibacterium&lt;/em&gt;
+        strains, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Enterococcus faecium&lt;/em&gt;,
+        and the yeasts &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Saccharomyces
+        cerevisiae&lt;/em&gt; Boulardii under exposure to bile salts (BS) and acid
+        stress was studied. The extracellular peptide reactivating factor (RF) and
+        the peptide component of the culture liquid (CL) after RF removal possessed
+        a protective effect. Protective (preventive) and reactivating (after stress
+        impact) application of RF resulted in 1.5- to 2.0-fold increased survival
+        of the human transient probiotics &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;P.
+        freudenreichii, P. acidipropionici&lt;/em&gt; and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;E.
+        faecium&lt;/em&gt; subjected to BS treatment of acid stress. The CL peptide
+        fraction had a stronger protective effect. Its application for preincubation
+        of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;P. acidipropionici&lt;/em&gt;
+        cells resulted in 14-fold (BS treatment) and 8-fold (acid stress) increased
+        survival compared to the control. Yeasts exhibited very high resistance to
+        the stress factors used. Two active glycopeptide fractions with molecular
+        masses of 1.8 and 2.4 kDa were found in RF. Analysis of their amino acid composition
+        revealed the residues of glycine, leucine, proline, arginine, and aspartate/asparagine,
+        while no residues of aromatic and sulfur-containing amino acids, or the disulfide
+        bridge-type posttranslational modifications, were found. The possible mechanisms
+        of reactivating and the protective effect of RF are discussed.&lt;/p&gt;</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S0026261715040189</dc:identifier>\r\n<dc:date>2015-07-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-07-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S0026261715040189\"><b>Structural
+        characterization of the extracellular peptide metabolites of Luteococcus japonicus
+        subsp. casei and their protective effect on probiotic bacteria</b></A><br
+        /> <br /><i>Microbiology, Vol. , No.  (2015) pp.  - </i><br />&lt;h3 class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n
+        \                   &lt;p class=&amp;quot;a-plus-plus&amp;quot;&gt;Protective
+        effect of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Luteococcus japonicus&lt;/em&gt;
+        subsp. &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;casei&lt;/em&gt; exometabolites
+        on the cells of transient probiotic &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Propionibacterium&lt;/em&gt;
+        strains, &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Enterococcus faecium&lt;/em&gt;,
+        and the yeasts &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Saccharomyces
+        cerevisiae&lt;/em&gt; Boulardii under exposure to bile salts (BS) and acid
+        stress was studied. The extracellular peptide reactivating factor (RF) and
+        the peptide component of the culture liquid (CL) after RF removal possessed
+        a protective effect. Protective (preventive) and reactivating (after stress
+        impact) application of RF resulted in 1.5- to 2.0-fold increased survival
+        of the human transient probiotics &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;P.
+        freudenreichii, P. acidipropionici&lt;/em&gt; and &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;E.
+        faecium&lt;/em&gt; subjected to BS treatment of acid stress. The CL peptide
+        fraction had a stronger protective effect. Its application for preincubation
+        of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;P. acidipropionici&lt;/em&gt;
+        cells resulted in 14-fold (BS treatment) and 8-fold (acid stress) increased
+        survival compared to the control. Yeasts exhibited very high resistance to
+        the stress factors used. Two active glycopeptide fractions with molecular
+        masses of 1.8 and 2.4 kDa were found in RF. Analysis of their amino acid composition
+        revealed the residues of glycine, leucine, proline, arginine, and aspartate/asparagine,
+        while no residues of aromatic and sulfur-containing amino acids, or the disulfide
+        bridge-type posttranslational modifications, were found. The possible mechanisms
+        of reactivating and the protective effect of RF are discussed.&lt;/p&gt;</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://link.springer.com/10.1134/S0026261715030194\">\n<title>Formation
+        of 55-kDa fragments under impaired coordination bonds and hydrophobic interactions
+        in peripheral light-harvesting complexes isolated from photosynthetic purple
+        bacteria</title>\r\n<link>http://link.springer.com/10.1134/S0026261715030194</link>\r\n<description>&lt;h3
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n                    &lt;p
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Size exclusion chromatography was
+        used to assess the relative size of intact and diphenylamine-treated (DPA,
+        with suppressed carotenoid synthesis) peripheral light-harvesting complexes
+        (LH2 complexes) of the sulfur bacterium &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Allochromatium
+        minutissimum&lt;/em&gt;. Both LH2 complexes were nonamers and had the same
+        elution volume V&lt;sub class=&amp;quot;a-plus-plus&amp;quot;&gt;e&lt;/sub&gt;,
+        coinciding with that for the LH2 complex of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Rhodoblastus
+        acidophilus&lt;/em&gt; (strain 10050). Their molecular weight was 150 kDa.
+        Both pheophytinization of bacteriochlorophyll (BChl) at low pH and treatment
+        with the detergent LDAO, which affects the hydrophobic interactions between
+        the neighboring protomers, result in the fragmentation of the ring of the
+        isolated LH2 complexes and formation of 55-kDa fragments with molecular weights
+        corresponding to one-third of the initial value. Fragmentation caused by both
+        pheophytinization and detergent treatment was much more rapid in DPA LH2 complexes
+        than in the intact ones. The 55-kDa fragments formed at low pH values contained
+        monomeric bacteriopheophytin, while the fragments of a similar molecular weight
+        formed at pH 8.0 in the presence of the detergent contained monomeric BChl.
+        The observed fragmentation was hypothesized to reflect the inherent C&lt;sub
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;3&lt;/sub&gt; symmetry of the LH2
+        complexes, with the preliminarily assembled trimers used as building blocks.&lt;/p&gt;</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S0026261715030194</dc:identifier>\r\n<dc:date>2015-05-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-05-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S0026261715030194\"><b>Formation of
+        55-kDa fragments under impaired coordination bonds and hydrophobic interactions
+        in peripheral light-harvesting complexes isolated from photosynthetic purple
+        bacteria</b></A><br /> <br /><i>Microbiology, Vol. , No.  (2015) pp.  - </i><br
+        />&lt;h3 class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n                    &lt;p
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Size exclusion chromatography was
+        used to assess the relative size of intact and diphenylamine-treated (DPA,
+        with suppressed carotenoid synthesis) peripheral light-harvesting complexes
+        (LH2 complexes) of the sulfur bacterium &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Allochromatium
+        minutissimum&lt;/em&gt;. Both LH2 complexes were nonamers and had the same
+        elution volume V&lt;sub class=&amp;quot;a-plus-plus&amp;quot;&gt;e&lt;/sub&gt;,
+        coinciding with that for the LH2 complex of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Rhodoblastus
+        acidophilus&lt;/em&gt; (strain 10050). Their molecular weight was 150 kDa.
+        Both pheophytinization of bacteriochlorophyll (BChl) at low pH and treatment
+        with the detergent LDAO, which affects the hydrophobic interactions between
+        the neighboring protomers, result in the fragmentation of the ring of the
+        isolated LH2 complexes and formation of 55-kDa fragments with molecular weights
+        corresponding to one-third of the initial value. Fragmentation caused by both
+        pheophytinization and detergent treatment was much more rapid in DPA LH2 complexes
+        than in the intact ones. The 55-kDa fragments formed at low pH values contained
+        monomeric bacteriopheophytin, while the fragments of a similar molecular weight
+        formed at pH 8.0 in the presence of the detergent contained monomeric BChl.
+        The observed fragmentation was hypothesized to reflect the inherent C&lt;sub
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;3&lt;/sub&gt; symmetry of the LH2
+        complexes, with the preliminarily assembled trimers used as building blocks.&lt;/p&gt;</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://link.springer.com/10.1134/S0026261715040177\">\n<title>Preparations
+        of Bacillus pumilus secreted RNase: One enzyme or two&#39;</title>\r\n<link>http://link.springer.com/10.1134/S0026261715040177</link>\r\n<description>&lt;h3
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n                    &lt;p
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Immunochemical analysis of the following
+        purified preparations of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Bacillus
+        pumilus&lt;/em&gt; RNase (binase) was carried out: industrially manufactured
+        enzyme (Institute of Organic Synthesis, Riga, Latvia) and the enzymes isolated
+        from the culture liquid of the native &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;B.
+        pumilus&lt;/em&gt; producer and from the &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Escherichia
+        coli&lt;/em&gt; BL21 recombinant strain bearing the pGEMGX1/ent/Bi plasmid.
+        Electrophoresis of all three samples of purified binase revealed two protein
+        fractions with ribonuclease activity possessing molecular masses of &#8764;12
+        and 25 kDa. The possible presence of binase II, a second secreted RNase, was
+        ruled out. Both high- and low-molecular mass proteins interacted with binase-specific
+        antibodies in the immunoblotting reaction, which indicated their antigenic
+        identity. The difference in molecular mass between these proteins indicated
+        the possible presence of two forms of binase in solution, a monomer and a
+        dimer.&lt;/p&gt;</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S0026261715040177</dc:identifier>\r\n<dc:date>2015-07-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-07-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S0026261715040177\"><b>Preparations
+        of Bacillus pumilus secreted RNase: One enzyme or two&#39;</b></A><br /> <br
+        /><i>Microbiology, Vol. , No.  (2015) pp.  - </i><br />&lt;h3 class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n
+        \                   &lt;p class=&amp;quot;a-plus-plus&amp;quot;&gt;Immunochemical
+        analysis of the following purified preparations of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Bacillus
+        pumilus&lt;/em&gt; RNase (binase) was carried out: industrially manufactured
+        enzyme (Institute of Organic Synthesis, Riga, Latvia) and the enzymes isolated
+        from the culture liquid of the native &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;B.
+        pumilus&lt;/em&gt; producer and from the &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Escherichia
+        coli&lt;/em&gt; BL21 recombinant strain bearing the pGEMGX1/ent/Bi plasmid.
+        Electrophoresis of all three samples of purified binase revealed two protein
+        fractions with ribonuclease activity possessing molecular masses of &#8764;12
+        and 25 kDa. The possible presence of binase II, a second secreted RNase, was
+        ruled out. Both high- and low-molecular mass proteins interacted with binase-specific
+        antibodies in the immunoblotting reaction, which indicated their antigenic
+        identity. The difference in molecular mass between these proteins indicated
+        the possible presence of two forms of binase in solution, a monomer and a
+        dimer.&lt;/p&gt;</p>]]></content:encoded>\r\n</item>\n<item rdf:about=\"http://link.springer.com/10.1134/S0026261715040050\">\n<title>Metabolic
+        properties of Pachysolen tannophilus mutants producing xylitol and ethanol
+        from D-xylose</title>\r\n<link>http://link.springer.com/10.1134/S0026261715040050</link>\r\n<description>&lt;h3
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n                    &lt;p
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Activity of the major enzymes of
+        D-xylose metabolism in the mutants of xylose-utilizing yeasts &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Pachysolen
+        tannophilus&lt;/em&gt; selectively producing xylitol or ethanol was studied.
+        The xylitol-producing strain exhibited low activities of xylitol dehydrogenase,
+        xylose reductase with preferential affinity to NADPH, NAD&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;+&lt;/sup&gt;-dependent
+        malate dehydrogenase, and cytochrome &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;c&lt;/em&gt;
+        oxidase (4.40, 4.80, 1.87, and 0.28 &#956;mol mg&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt;
+        min&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt;,
+        respectively). The cells of the ethanol-producing mutants exhibited elevated
+        activity of NADH/NADPH-xylose reductase, xylitol dehydrogenase, 1-glycerophosphate
+        dehydrogenase, and lactate dehydrogenase to 6.80, 8.60, 4.68, and 16.48 &#956;mol
+        mg&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt; min&lt;sup
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt;, respectively.
+        Effect of the NADPH/NADH imbalance on ethanol production accumulation and
+        xylitol accumulation is discussed.&lt;/p&gt;</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S0026261715040050</dc:identifier>\r\n<dc:date>2015-07-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-07-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S0026261715040050\"><b>Metabolic properties
+        of Pachysolen tannophilus mutants producing xylitol and ethanol from D-xylose</b></A><br
+        /> <br /><i>Microbiology, Vol. , No.  (2015) pp.  - </i><br />&lt;h3 class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n
+        \                   &lt;p class=&amp;quot;a-plus-plus&amp;quot;&gt;Activity
+        of the major enzymes of D-xylose metabolism in the mutants of xylose-utilizing
+        yeasts &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Pachysolen tannophilus&lt;/em&gt;
+        selectively producing xylitol or ethanol was studied. The xylitol-producing
+        strain exhibited low activities of xylitol dehydrogenase, xylose reductase
+        with preferential affinity to NADPH, NAD&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;+&lt;/sup&gt;-dependent
+        malate dehydrogenase, and cytochrome &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;c&lt;/em&gt;
+        oxidase (4.40, 4.80, 1.87, and 0.28 &#956;mol mg&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt;
+        min&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt;,
+        respectively). The cells of the ethanol-producing mutants exhibited elevated
+        activity of NADH/NADPH-xylose reductase, xylitol dehydrogenase, 1-glycerophosphate
+        dehydrogenase, and lactate dehydrogenase to 6.80, 8.60, 4.68, and 16.48 &#956;mol
+        mg&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt; min&lt;sup
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt;, respectively.
+        Effect of the NADPH/NADH imbalance on ethanol production accumulation and
+        xylitol accumulation is discussed.&lt;/p&gt;</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://link.springer.com/10.1134/S0026261715040116\">\n<title>Transmembrane
+        adenylate cyclase controls the virulence factors of plant pathogenic Pseudomonas
+        siringae and mutualistic Rhizobium leguminosarum </title>\r\n<link>http://link.springer.com/10.1134/S0026261715040116</link>\r\n<description>&lt;h3
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n                    &lt;p
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;The possible role of transmembrane
+        adenylate cyclase of a plant pathogen &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Pseudomonas
+        siringae&lt;/em&gt; pv. &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;pisi&lt;/em&gt;
+        and of a symbiotroph &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Rhizobium
+        leguminosarum&lt;/em&gt; bv. &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;viceae&lt;/em&gt;
+        in control of the activity of their virulence factors (cellulases and pectinases,
+        the enzymes degrading plant cell walls) was investigated. While transmembrane
+        adenylate cyclase was found to control the activity of virulence factors in
+        both pathogens and symbionts, the strategies employed by these microorganisms
+        in molecular dialogue with plants involving the adenylate cylcase signal system
+        exhibited both similarities and cardinal differences.&lt;/p&gt;</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S0026261715040116</dc:identifier>\r\n<dc:date>2015-07-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-07-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S0026261715040116\"><b>Transmembrane
+        adenylate cyclase controls the virulence factors of plant pathogenic Pseudomonas
+        siringae and mutualistic Rhizobium leguminosarum </b></A><br /> <br /><i>Microbiology,
+        Vol. , No.  (2015) pp.  - </i><br />&lt;h3 class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n
+        \                   &lt;p class=&amp;quot;a-plus-plus&amp;quot;&gt;The possible
+        role of transmembrane adenylate cyclase of a plant pathogen &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Pseudomonas
+        siringae&lt;/em&gt; pv. &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;pisi&lt;/em&gt;
+        and of a symbiotroph &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Rhizobium
+        leguminosarum&lt;/em&gt; bv. &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;viceae&lt;/em&gt;
+        in control of the activity of their virulence factors (cellulases and pectinases,
+        the enzymes degrading plant cell walls) was investigated. While transmembrane
+        adenylate cyclase was found to control the activity of virulence factors in
+        both pathogens and symbionts, the strategies employed by these microorganisms
+        in molecular dialogue with plants involving the adenylate cylcase signal system
+        exhibited both similarities and cardinal differences.&lt;/p&gt;</p>]]></content:encoded>\r\n</item>\n<item
+        rdf:about=\"http://link.springer.com/10.1134/S0026261715040049\">\n<title>Production
+        of xylitol and ethanol and activity of the key enzymes of D-xylose consumption
+        in Pachysolen tannophilus mutant strains</title>\r\n<link>http://link.springer.com/10.1134/S0026261715040049</link>\r\n<description>&lt;h3
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n                    &lt;p
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;Production of xylitol and ethanol,
+        as well as activities of the key enzymes of D-xylose consumption, were studied
+        in &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Pachysolen tannophilus&lt;/em&gt;
+        mutants with altered growth on D-xylose, xylitol, ethanol, or D-glucose as
+        sole carbon sources. Suppressed activity of xylose reductase with preferential
+        affinity for NADPH and of xylitol dehydrogenase to 4.40 and 4.80 &#956;mol
+        mg&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt; min&lt;sup
+        class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt;, respectively,
+        resulted in accumulation of xylitol (0.25 g per 1 g D-xylose consumed). The
+        highest levels of NADH/NADPH-xylose reductase and xylitol dehydrogenase (6.00&#8211;6.80
+        and 6.80&#8211;8.40 &#956;mol mg&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt;
+        min&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt;,
+        respectively) were found in the strains producing 0.24&#8211;0.26 g ethanol
+        per 1 g D-xylose. Application of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Pa.
+        tannophilus&lt;/em&gt; mutants for analysis of the regulation of D-xylose
+        catabolism in yeasts is discussed.&lt;/p&gt;</description>\r\n<dc:identifier>http://link.springer.com/10.1134/S0026261715040049</dc:identifier>\r\n<dc:date>2015-07-01</dc:date>\n<dc:publisher>Springer-Verlag</dc:publisher>\n<prism:PublicationName>Microbiology</prism:PublicationName>\n<prism:publicationDate>2015-07-01</prism:publicationDate>\n<content:encoded><![CDATA[<p><a
+        href=\"http://link.springer.com/10.1134/S0026261715040049\"><b>Production
+        of xylitol and ethanol and activity of the key enzymes of D-xylose consumption
+        in Pachysolen tannophilus mutant strains</b></A><br /> <br /><i>Microbiology,
+        Vol. , No.  (2015) pp.  - </i><br />&lt;h3 class=&amp;quot;a-plus-plus&amp;quot;&gt;Abstract&lt;/h3&gt;\n
+        \                   &lt;p class=&amp;quot;a-plus-plus&amp;quot;&gt;Production
+        of xylitol and ethanol, as well as activities of the key enzymes of D-xylose
+        consumption, were studied in &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Pachysolen
+        tannophilus&lt;/em&gt; mutants with altered growth on D-xylose, xylitol, ethanol,
+        or D-glucose as sole carbon sources. Suppressed activity of xylose reductase
+        with preferential affinity for NADPH and of xylitol dehydrogenase to 4.40
+        and 4.80 &#956;mol mg&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt;
+        min&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt;,
+        respectively, resulted in accumulation of xylitol (0.25 g per 1 g D-xylose
+        consumed). The highest levels of NADH/NADPH-xylose reductase and xylitol dehydrogenase
+        (6.00&#8211;6.80 and 6.80&#8211;8.40 &#956;mol mg&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt;
+        min&lt;sup class=&amp;quot;a-plus-plus&amp;quot;&gt;&#8722;1&lt;/sup&gt;,
+        respectively) were found in the strains producing 0.24&#8211;0.26 g ethanol
+        per 1 g D-xylose. Application of &lt;em class=&amp;quot;a-plus-plus&amp;quot;&gt;Pa.
+        tannophilus&lt;/em&gt; mutants for analysis of the regulation of D-xylose
+        catabolism in yeasts is discussed.&lt;/p&gt;</p>]]></content:encoded>\r\n</item>\n\r\n\t\r\n
+        \ <rdf:Description rdf:ID=\"manifest\">\r\n    <mn:channels>\r\n      <rdf:Seq>\r\n
+        \       <rdf:li rdf:resource=\"http://www.journaltocs.hw.ac.uk/api/journals\"
+        />\r\n      </rdf:Seq>\r\n    </mn:channels>\r\n  </rdf:Description>\r\n\r\n</rdf:RDF>"
+    http_version: 
+  recorded_at: Wed, 02 Sep 2015 20:57:47 GMT
+recorded_with: VCR 2.9.3

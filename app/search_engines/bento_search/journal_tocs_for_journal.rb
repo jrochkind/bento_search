@@ -148,6 +148,12 @@ module BentoSearch
         end
       )
 
+      # Items seem to come back in arbitrary order, we want to sort
+      # by date reverse if we can
+      if results.all? {|i| i.publication_date.present? }
+        results.sort_by! {|i| i.publication_date}.reverse!
+      end
+
       fill_in_search_metadata_for(results)
 
       return results
