@@ -13,7 +13,12 @@ class JournalTocsForJournalTest < ActiveSupport::TestCase
   end
 
   def setup
-  	@engine = JournalTocsForJournal.new(:registered_email => @@registered_email)
+    @test_engine_id       = "test_journal_tocs_engine_id"
+    @test_decorator_name  = "MockDecorator"
+  	@engine = JournalTocsForJournal.new(:registered_email => @@registered_email, 
+      :id => @test_engine_id,
+      :for_display => {:one => "one", :two => "two", :decorator => @test_decorator_name})
+    @test_display_config = @engine.configuration.for_display
   end
 
 
@@ -56,8 +61,16 @@ class JournalTocsForJournalTest < ActiveSupport::TestCase
     assert_present items
     assert_kind_of Array, items
     assert_kind_of BentoSearch::Results, items
+
+    assert_equal @test_engine_id,           items.engine_id
+    assert_equal @test_display_config.to_h, items.display_configuration.to_h
+
     items.each do |item|
       assert_kind_of BentoSearch::ResultItem, item
+
+      assert_equal @test_engine_id, item.engine_id
+      assert_equal @test_display_config.to_h, item.display_configuration.to_h
+      assert_equal @test_decorator_name, item.decorator
     end
   end
 

@@ -81,7 +81,7 @@ module BentoSearch
       xml = fetch_xml(issn)
 
 
-      BentoSearch::Results.new.concat(
+      results = BentoSearch::Results.new.concat(
         xml.xpath("./rdf:RDF/rss:item", xml_ns).collect do |node|
           item = BentoSearch::ResultItem.new
 
@@ -147,6 +147,10 @@ module BentoSearch
           item
         end
       )
+
+      fill_in_search_metadata_for(results)
+
+      return results
     end
 
     # just a convenience method
