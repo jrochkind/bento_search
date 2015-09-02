@@ -539,7 +539,7 @@ class BentoSearch::EdsEngine
   # there's a short reason in #message, but also
   # possibly an http_status and http_body copied
   # from error EDS response. 
-  class EdsCommException < Exception
+  class EdsCommException < ::BentoSearch::FetchError
     attr_accessor :http_status, :http_body
     def initialize(message, status = nil, body = nil)
       super(message)

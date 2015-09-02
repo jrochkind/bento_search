@@ -8,15 +8,14 @@ require 'multi_json'
 require 'nokogiri'
 
 module BentoSearch
-  class Error < StandardError ; end
   # Usually raised by #get on an engine, when result for specified identifier
   # can't be found. 
-  class NotFound < Error ; end
+  class ::BentoSearch::NotFound < ::BentoSearch::Error ; end
   # Usually raised by #get when identifier results in more than one record. 
-  class TooManyFound < Error ; end
+  class ::BentoSearch::TooManyFound < ::BentoSearch::Error ; end
   # Raised for problem contacting or unexpected response from
   # remote service. Not yet universally used. 
-  class FetchError < Error ; end
+  class ::BentoSearch::FetchError < ::BentoSearch::Error ; end
 
   
   # Module mix-in for bento_search search engines. 

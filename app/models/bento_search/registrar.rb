@@ -1,9 +1,10 @@
+require 'bento_search'
 
 # Holds a list of registered search engines with configuration. 
 # There's one global one referened by BentoSearch module, but one
 # might want to create multiple. 
 class BentoSearch::Registrar
-  class ::BentoSearch::NoSuchEngine < Exception ; end
+  class ::BentoSearch::NoSuchEngine < ::BentoSearch::Error ; end
   
   def initialize    
     @registered_engine_confs = {}

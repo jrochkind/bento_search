@@ -32,7 +32,7 @@ module BentoSearch
   # We may provide fancier/nicer API for this in the future, if there's
   # demand. 
   class SearchController < BentoSearchController
-    class AccessDenied < Exception ; end
+    class AccessDenied < BentoSearch::Error ; end
 
     
     rescue_from AccessDenied, :with => :deny_access
