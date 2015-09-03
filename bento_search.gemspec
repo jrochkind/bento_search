@@ -12,7 +12,8 @@ Gem::Specification.new do |s|
   s.summary     = "An abstraction/normalization layer for querying and displaying results for external search engines, in Ruby on Rails."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
-  s.test_files = Dir["test/**/*"]
+
+  s.test_files = Dir["test/**/*"] - Dir["test/dummy/log/**/*"] - Dir["test/dummy/tmp/**/*"] - Dir["test/db/*.sqlite"] - Dir["test/dummy/db/**/*.sqlite3"]
 
   s.add_dependency "rails", ">= 3.2.3", "< 5"
   # s.add_dependency "jquery-rails"

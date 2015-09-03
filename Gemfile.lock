@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bento_search (1.4.0)
+    bento_search (1.4.1)
       confstruct (~> 1.0)
       htmlentities
       httpclient (>= 2.2.5, < 3.0.0)
@@ -191,7 +191,6 @@ GEM
       thread_safe (~> 0.1)
     unf (0.1.4)
       unf_ext
-    unf (0.1.4-java)
     unf_ext (0.0.7.1)
     vcr (2.9.3)
     webmock (1.11.0)
