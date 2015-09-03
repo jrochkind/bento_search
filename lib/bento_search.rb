@@ -1,7 +1,7 @@
 require 'confstruct'
 
 module BentoSearch
-  class Error < ::StandardError
+  class Error < ::StandardError ; end
 end 
 
 require "bento_search/engine"
