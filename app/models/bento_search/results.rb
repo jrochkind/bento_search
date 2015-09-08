@@ -79,7 +79,8 @@ module BentoSearch
     def internal_state_hash
       {
         "engine_id" => self.engine_id,
-        "result_items" => self.collect {|i| i.internal_state_hash}
+        "result_items" => self.collect {|i| i.internal_state_hash},
+        "bento_search_version" => BentoSearch::VERSION
       }
     end
 
