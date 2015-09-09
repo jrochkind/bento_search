@@ -139,9 +139,9 @@ module BentoSearch
           end
 
           # abstract, we need to strip possible HTML tags (sometimes they're
-          # there, sometimes not).
-          item.abstract   = xml_text(node, "rss:description").try do |text|
-            strip_tags(text)
+          # there, sometimes not), and also decode HTML entities. 
+          item.abstract   = xml_text(node, "rss:description").try do |text|            
+            HTMLEntities.new.decode(strip_tags(text))
           end
 
           item
