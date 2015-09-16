@@ -1,0 +1,2196 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/books/v1/volumes?maxResults=10&q=cancer
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Wed, 16 Sep 2015 15:03:22 GMT
+      Date:
+      - Wed, 16 Sep 2015 15:03:22 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - '"AEqHJ39cYOcHij976IZqD9LCWzE/XW8vWJ_RVJdcULl-EW0jLjVZioA"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '34007'
+      Server:
+      - GSE
+      Alternate-Protocol:
+      - 443:quic,p=1
+      Alt-Svc:
+      - quic=":443"; p="1"; ma=604800
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "books#volumes",
+         "totalItems": 1285,
+         "items": [
+          {
+           "kind": "books#volume",
+           "id": "-TAxAAAAQBAJ",
+           "etag": "n9cAvaUys7o",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/-TAxAAAAQBAJ",
+           "volumeInfo": {
+            "title": "The Mayo Clinic Breast Cancer Book",
+            "authors": [
+             "Mayo Clinic"
+            ],
+            "publisher": "RosettaBooks",
+            "publishedDate": "2012-11-16",
+            "description": "From the breast health experts at Mayo Clinic comes a guide to the many aspects of breast cancer—from prevention, to care and coping, to survival, to living with hope. Trustworthy information offered in a spirit of companionship. “This is the best source for readable, up-to-date information—from the world’s experts.” —Dr. Thomas J. Smith, Johns Hopkins Hospital “If you’re looking for a comprehensive, easy-to-read book about an often confusing topic, The Mayo Clinic Breast Cancer Book is for you.” —Henry M. Kuerer, M.D., Ph.D., FACS, Professor and Director, Breast Surgical Oncology Training Program, MD Anderson Cancer Center “Readers will likely return again and again to this book as a convenient source of knowledge, insight, and reassurance as they confront the many decisions required in the treatment of breast cancer.” —Clifford A. Hudis, M.D., Chief, Breast Cancer Medicine Service, Memorial Sloan-Kettering Cancer Center Mayo Clinic Cancer Center is dedicated to understanding and discovering new ways to predict, prevent, diagnose and treat cancer, transforming the quality of life for cancer patients today and into the future. With a multisite national presence, its three campuses—in Pheonix/Scottsdale, Ariz.; Jacksonville, Fla.; and Rochester, Minn.—offer a broad geographic reach to serve patients. Designated as a Comprehensive Cancer Center by the National Cancer Institute, Mayo Clinic Cancer Center is a leader in translating discoveries into effective improvements in patient care. ABOUT THE AUTHOR Mayo Clinic took root in farm fields near Rochester, Minn., in the late 1800s. It grew from the medical practice of a country doctor, William Worrall Mayo, and the partnership of his two sons, William J. and Charles H. Mayo—affectionately known as Dr. Will and Dr. Charlie. The brothers' innovative ideas and tireless work in learning and creating new surgical techniques attracted international attention. Physicians from around the world came to watch the Mayo brothers perform surgery. The Mayo brothers invited other doctors to join them, forming teams of medical experts. Today, Mayo Clinic—one of the world’s oldest and largest multispecialty group practices—comprises more than 45,000 physicians, scientists, nurses and other staff at its three locations in Rochester, Minn., Jacksonville, Fla., and Scottsdale, Ariz., and its regional community-based health care practices.",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_13",
+              "identifier": "9780795331893"
+             },
+             {
+              "type": "ISBN_10",
+              "identifier": "0795331894"
+             }
+            ],
+            "readingModes": {
+             "text": true,
+             "image": true
+            },
+            "pageCount": 453,
+            "printType": "BOOK",
+            "categories": [
+             "Health & Fitness"
+            ],
+            "averageRating": 4.5,
+            "ratingsCount": 2,
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "1.2.2.0.preview.3",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=-TAxAAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=-TAxAAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=-TAxAAAAQBAJ&printsec=frontcover&dq=cancer&hl=&cd=1&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=-TAxAAAAQBAJ&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/The_Mayo_Clinic_Breast_Cancer_Book.html?hl=&id=-TAxAAAAQBAJ"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "FOR_SALE",
+            "isEbook": true,
+            "listPrice": {
+             "amount": 11.99,
+             "currencyCode": "USD"
+            },
+            "retailPrice": {
+             "amount": 11.99,
+             "currencyCode": "USD"
+            },
+            "buyLink": "http://books.google.com/books?id=-TAxAAAAQBAJ&dq=cancer&hl=&buy=&source=gbs_api",
+            "offers": [
+             {
+              "finskyOfferType": 1,
+              "listPrice": {
+               "amountInMicros": 1.199E7,
+               "currencyCode": "USD"
+              },
+              "retailPrice": {
+               "amountInMicros": 1.199E7,
+               "currencyCode": "USD"
+              }
+             }
+            ]
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+             "isAvailable": true,
+             "acsTokenLink": "http://books.google.com/books/download/The_Mayo_Clinic_Breast_Cancer_Book-sample-epub.acsm?id=-TAxAAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+             "isAvailable": true,
+             "acsTokenLink": "http://books.google.com/books/download/The_Mayo_Clinic_Breast_Cancer_Book-sample-pdf.acsm?id=-TAxAAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=-TAxAAAAQBAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           },
+           "searchInfo": {
+            "textSnippet": "Thomas J. Smith, Johns Hopkins Hospital “If you’re looking for a comprehensive, easy-to-read book about an often confusing topic, The Mayo Clinic Breast Cancer Book is for you.” —Henry M. Kuerer, M.D., Ph.D., FACS, Professor and ..."
+           }
+          },
+          {
+           "kind": "books#volume",
+           "id": "g0Fpf0mPXmQC",
+           "etag": "Y5kMeCHyq54",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/g0Fpf0mPXmQC",
+           "volumeInfo": {
+            "title": "Anticancer, A New Way of Life, New Edition",
+            "authors": [
+             "David Servan-Schreiber MD, PhD"
+            ],
+            "publisher": "Penguin",
+            "publishedDate": "2009-12-31",
+            "description": "The New York Times and international bestseller-now updated with the latest research Anticancer has been a bestselling phenomenon since Viking first published it in fall 2008. Now, a new edition addresses current developments in cancer research and offers more tips on how people living with cancer can fight it and how healthy people can prevent it. The new edition of Anticancer includes: • The latest research on anticancer foods, including new alternatives to sugar and cautions about some that are now on the market • New information about how vitamin D strengthens the immune system • Warnings about common food contaminants that have recently been proven to contribute to cancer progression • A new chapter on mind-body approaches to stress reduction, with recent studies that show how our reactions to stress can interfere with natural defenses and how friendships can support healing in ways never before understood • A groundbreaking study showing that lifestyle modification, as originally proposed in Anticancer, reduces mortality for breast cancer by an astounding 68 percent after completion of treatment • New supporting evidence for the entire Anticancer program",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_13",
+              "identifier": "9781101163054"
+             },
+             {
+              "type": "ISBN_10",
+              "identifier": "1101163054"
+             }
+            ],
+            "readingModes": {
+             "text": true,
+             "image": false
+            },
+            "pageCount": 288,
+            "printType": "BOOK",
+            "categories": [
+             "Health & Fitness"
+            ],
+            "averageRating": 4.0,
+            "ratingsCount": 35,
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "1.2.0.0.preview.2",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=g0Fpf0mPXmQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=g0Fpf0mPXmQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=g0Fpf0mPXmQC&printsec=frontcover&dq=cancer&hl=&cd=2&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=g0Fpf0mPXmQC&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/Anticancer_A_New_Way_of_Life_New_Edition.html?hl=&id=g0Fpf0mPXmQC"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "FOR_SALE",
+            "isEbook": true,
+            "listPrice": {
+             "amount": 18.99,
+             "currencyCode": "USD"
+            },
+            "retailPrice": {
+             "amount": 18.99,
+             "currencyCode": "USD"
+            },
+            "buyLink": "http://books.google.com/books?id=g0Fpf0mPXmQC&dq=cancer&hl=&buy=&source=gbs_api",
+            "offers": [
+             {
+              "finskyOfferType": 1,
+              "listPrice": {
+               "amountInMicros": 1.899E7,
+               "currencyCode": "USD"
+              },
+              "retailPrice": {
+               "amountInMicros": 1.899E7,
+               "currencyCode": "USD"
+              }
+             }
+            ]
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+            "epub": {
+             "isAvailable": true,
+             "acsTokenLink": "http://books.google.com/books/download/Anticancer_A_New_Way_of_Life_New_Edition-sample-epub.acsm?id=g0Fpf0mPXmQC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+             "isAvailable": false
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=g0Fpf0mPXmQC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           },
+           "searchInfo": {
+            "textSnippet": "A revised edition of a best-selling reference incorporates the latest recommendations for recovering from cancer, from foods to eat or avoid and mind-body stress reduction practices to strategic lifestyle modifications and immune system ..."
+           }
+          },
+          {
+           "kind": "books#volume",
+           "id": "NIaiHLcr0n8C",
+           "etag": "/yaCMTBwIDI",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/NIaiHLcr0n8C",
+           "volumeInfo": {
+            "title": "Cancer",
+            "authors": [
+             "Joanna Martine Woolfolk"
+            ],
+            "publisher": "Taylor Trade Publications",
+            "publishedDate": "2011",
+            "description": "Each of these elegant little volumes is packed with everything you'd want to know about your Sun Sign from such basics as your ruling planet, symbol, constellation, lucky numbers and birthstone, to keywords and illuminating quotes from the rich and famous who share your sign. Naturally, romance comes into play with suggested amorous combinations for each sign and even an exploration of each sign's distinctive erogenous zones for the benefit of a would-be lover.",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_13",
+              "identifier": "9781589795563"
+             },
+             {
+              "type": "ISBN_10",
+              "identifier": "1589795563"
+             }
+            ],
+            "readingModes": {
+             "text": false,
+             "image": true
+            },
+            "pageCount": 96,
+            "printType": "BOOK",
+            "categories": [
+             "Body, Mind & Spirit"
+            ],
+            "averageRating": 3.5,
+            "ratingsCount": 2,
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "preview-1.0.0",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=NIaiHLcr0n8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=NIaiHLcr0n8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=NIaiHLcr0n8C&printsec=frontcover&dq=cancer&hl=&cd=3&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=NIaiHLcr0n8C&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/Cancer.html?hl=&id=NIaiHLcr0n8C"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+             "isAvailable": false
+            },
+            "pdf": {
+             "isAvailable": true,
+             "acsTokenLink": "http://books.google.com/books/download/Cancer-sample-pdf.acsm?id=NIaiHLcr0n8C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=NIaiHLcr0n8C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           },
+           "searchInfo": {
+            "textSnippet": "Each of these elegant little volumes is packed with everything you&#39;d want to know about your Sun Sign from such basics as your ruling planet, symbol, constellation, lucky numbers and birthstone, to keywords and illuminating quotes from the ..."
+           }
+          },
+          {
+           "kind": "books#volume",
+           "id": "8Rlxz7ETndcC",
+           "etag": "KgG85BoJ2V0",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/8Rlxz7ETndcC",
+           "volumeInfo": {
+            "title": "Breast Cancer Q & A",
+            "subtitle": "Insightful Answers to the 100 Most Frequently Asked Questions",
+            "authors": [
+             "Charyn Pfeuffer"
+            ],
+            "publisher": "Penguin",
+            "publishedDate": "2003",
+            "description": "Provides information on breast cancer, covering such topics as medical terminology, support groups, medication, and alternative treatments.",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_10",
+              "identifier": "158333145X"
+             },
+             {
+              "type": "ISBN_13",
+              "identifier": "9781583331453"
+             }
+            ],
+            "readingModes": {
+             "text": false,
+             "image": false
+            },
+            "pageCount": 326,
+            "printType": "BOOK",
+            "categories": [
+             "Health & Fitness"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "preview-1.0.0",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=8Rlxz7ETndcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=8Rlxz7ETndcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=8Rlxz7ETndcC&printsec=frontcover&dq=cancer&hl=&cd=4&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=8Rlxz7ETndcC&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/Breast_Cancer_Q_A.html?hl=&id=8Rlxz7ETndcC"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+            "epub": {
+             "isAvailable": false
+            },
+            "pdf": {
+             "isAvailable": false
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=8Rlxz7ETndcC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           },
+           "searchInfo": {
+            "textSnippet": "Provides information on breast cancer, covering such topics as medical terminology, support groups, medication, and alternative treatments."
+           }
+          },
+          {
+           "kind": "books#volume",
+           "id": "oKsa4tuJYK0C",
+           "etag": "OWO60/ED8Po",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/oKsa4tuJYK0C",
+           "volumeInfo": {
+            "title": "Chicken Soup for the Soul: Teacher Tales",
+            "subtitle": "101 Inspirational Stories from Great Teachers and Appreciative Students",
+            "authors": [
+             "Jack Canfield",
+             "Mark Victor Hansen",
+             "Amy Newmark"
+            ],
+            "publisher": "Simon and Schuster",
+            "publishedDate": "2011-02-01",
+            "description": "Chicken Soup for the Soul: Teacher Tales brings much-needed inspiration to teachers, and brings together great stories about teaching from the 2009 National Teacher of the Year and all the 2009 State Teachers of the Year, as well as other teachers and stories of thanks from students. A great teacher gift all year round. There’s always that one special teacher or student, and Chicken Soup for the Soul: Teacher Tales regales all educators with its heartfelt, inspiring, and humorous stories from inside and outside the classroom. Stories from teachers and students about their favorite memories, lasting lessons, and unforgettable moments will uplift and encourage any teacher. A foreword by Anthony J. Mullen, 2009 National Teacher of the Year, and stories from all the 2009 State Teachers of the Year.",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_13",
+              "identifier": "9781611591422"
+             },
+             {
+              "type": "ISBN_10",
+              "identifier": "1611591422"
+             }
+            ],
+            "readingModes": {
+             "text": true,
+             "image": false
+            },
+            "pageCount": 416,
+            "printType": "BOOK",
+            "categories": [
+             "Self-Help"
+            ],
+            "averageRating": 4.0,
+            "ratingsCount": 9,
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "0.0.2.0.preview.2",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=oKsa4tuJYK0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=oKsa4tuJYK0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=oKsa4tuJYK0C&printsec=frontcover&dq=cancer&hl=&cd=5&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=oKsa4tuJYK0C&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/Chicken_Soup_for_the_Soul_Teacher_Tales.html?hl=&id=oKsa4tuJYK0C"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "FOR_SALE",
+            "isEbook": true,
+            "listPrice": {
+             "amount": 9.99,
+             "currencyCode": "USD"
+            },
+            "retailPrice": {
+             "amount": 9.99,
+             "currencyCode": "USD"
+            },
+            "buyLink": "http://books.google.com/books?id=oKsa4tuJYK0C&dq=cancer&hl=&buy=&source=gbs_api",
+            "offers": [
+             {
+              "finskyOfferType": 1,
+              "listPrice": {
+               "amountInMicros": 9990000.0,
+               "currencyCode": "USD"
+              },
+              "retailPrice": {
+               "amountInMicros": 9990000.0,
+               "currencyCode": "USD"
+              }
+             }
+            ]
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+            "epub": {
+             "isAvailable": true,
+             "acsTokenLink": "http://books.google.com/books/download/Chicken_Soup_for_the_Soul_Teacher_Tales-sample-epub.acsm?id=oKsa4tuJYK0C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+             "isAvailable": false
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=oKsa4tuJYK0C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           },
+           "searchInfo": {
+            "textSnippet": "Chicken Soup for the Soul: Teacher Tales brings much-needed inspiration to teachers, and brings together great stories about teaching from the 2009 National Teacher of the Year and all the 2009 State Teachers of the Year, as well as other ..."
+           }
+          },
+          {
+           "kind": "books#volume",
+           "id": "UKbCg6YJM98C",
+           "etag": "lXnKDlRPeLs",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/UKbCg6YJM98C",
+           "volumeInfo": {
+            "title": "Cancer Pain Management",
+            "authors": [
+             "Deborah B. McGuire",
+             "Connie Henke Yarbro",
+             "Betty Ferrell"
+            ],
+            "publisher": "Jones & Bartlett Learning",
+            "publishedDate": "1995-01-01",
+            "description": "Nursing",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_10",
+              "identifier": "0867207256"
+             },
+             {
+              "type": "ISBN_13",
+              "identifier": "9780867207255"
+             }
+            ],
+            "readingModes": {
+             "text": false,
+             "image": true
+            },
+            "pageCount": 380,
+            "printType": "BOOK",
+            "categories": [
+             "Medical"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "0.1.0.0.preview.1",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=UKbCg6YJM98C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=UKbCg6YJM98C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=UKbCg6YJM98C&printsec=frontcover&dq=cancer&hl=&cd=6&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=UKbCg6YJM98C&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/Cancer_Pain_Management.html?hl=&id=UKbCg6YJM98C"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+             "isAvailable": false
+            },
+            "pdf": {
+             "isAvailable": false
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=UKbCg6YJM98C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           },
+           "searchInfo": {
+            "textSnippet": "Nursing"
+           }
+          },
+          {
+           "kind": "books#volume",
+           "id": "MzMmAgAAQBAJ",
+           "etag": "eD5UaTXOnJc",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/MzMmAgAAQBAJ",
+           "volumeInfo": {
+            "title": "The Biology of Cancer, Second Edition",
+            "authors": [
+             "Robert Weinberg"
+            ],
+            "publisher": "Garland Science",
+            "publishedDate": "2013-05-14",
+            "description": "Thoroughly updated and incorporating the most important advances in the fast-growing field of cancer biology, The Biology of Cancer, Second Edition, maintains all of its hallmark features admired by students, instructors, researchers, and clinicians around the world. The Biology of Cancer is a textbook for students studying the molecular and cellular bases of cancer at the undergraduate, graduate, and medical school levels. The principles of cancer biology are presented in an organized, cogent, and in-depth manner. The clarity of writing, supported by an extensive full-color art program and numerous pedagogical features, makes the book accessible and engaging. The information unfolds through the presentation of key experiments that give readers a sense of discovery and provide insights into the conceptual foundation underlying modern cancer biology.",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_13",
+              "identifier": "9781317963462"
+             },
+             {
+              "type": "ISBN_10",
+              "identifier": "1317963466"
+             }
+            ],
+            "readingModes": {
+             "text": false,
+             "image": true
+            },
+            "pageCount": 960,
+            "printType": "BOOK",
+            "categories": [
+             "Science"
+            ],
+            "averageRating": 4.5,
+            "ratingsCount": 7,
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "preview-1.0.0",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=MzMmAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=MzMmAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=MzMmAgAAQBAJ&printsec=frontcover&dq=cancer&hl=&cd=7&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=MzMmAgAAQBAJ&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/The_Biology_of_Cancer_Second_Edition.html?hl=&id=MzMmAgAAQBAJ"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "FOR_SALE",
+            "isEbook": true,
+            "listPrice": {
+             "amount": 155.0,
+             "currencyCode": "USD"
+            },
+            "retailPrice": {
+             "amount": 124.0,
+             "currencyCode": "USD"
+            },
+            "buyLink": "http://books.google.com/books?id=MzMmAgAAQBAJ&dq=cancer&hl=&buy=&source=gbs_api",
+            "offers": [
+             {
+              "finskyOfferType": 1,
+              "listPrice": {
+               "amountInMicros": 1.55E8,
+               "currencyCode": "USD"
+              },
+              "retailPrice": {
+               "amountInMicros": 1.24E8,
+               "currencyCode": "USD"
+              }
+             }
+            ]
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+             "isAvailable": false
+            },
+            "pdf": {
+             "isAvailable": true,
+             "acsTokenLink": "http://books.google.com/books/download/The_Biology_of_Cancer_Second_Edition-sample-pdf.acsm?id=MzMmAgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=MzMmAgAAQBAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           },
+           "searchInfo": {
+            "textSnippet": "The principles of cancer biology are presented in an organized, cogent, and in-depth manner. The clarity of writing, supported by an extensive full-color art program and numerous pedagogical features, makes the book accessible and engaging."
+           }
+          },
+          {
+           "kind": "books#volume",
+           "id": "LteAUrJQyfEC",
+           "etag": "8PUoz4QSV64",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/LteAUrJQyfEC",
+           "volumeInfo": {
+            "title": "Cancer",
+            "authors": [
+             "Susan Pories",
+             "Marsha A. Moses",
+             "Margaret M. Lotz"
+            ],
+            "publisher": "ABC-CLIO",
+            "publishedDate": "2009",
+            "description": "Cancer is a diagnosis that causes fear and confusion. It is really a family of diseases, and the process, causes, and prognosis can vary widely. Get an overview of the history of cancer as well as seminal figures and discoveries on the path to today's understanding of cancer.",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_13",
+              "identifier": "9780313359798"
+             },
+             {
+              "type": "ISBN_10",
+              "identifier": "0313359792"
+             }
+            ],
+            "readingModes": {
+             "text": true,
+             "image": true
+            },
+            "pageCount": 174,
+            "printType": "BOOK",
+            "categories": [
+             "Health & Fitness"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "0.0.2.0.preview.3",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=LteAUrJQyfEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=LteAUrJQyfEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=LteAUrJQyfEC&printsec=frontcover&dq=cancer&hl=&cd=8&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=LteAUrJQyfEC&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/Cancer.html?hl=&id=LteAUrJQyfEC"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "FOR_SALE",
+            "isEbook": true,
+            "listPrice": {
+             "amount": 45.0,
+             "currencyCode": "USD"
+            },
+            "retailPrice": {
+             "amount": 36.0,
+             "currencyCode": "USD"
+            },
+            "buyLink": "http://books.google.com/books?id=LteAUrJQyfEC&dq=cancer&hl=&buy=&source=gbs_api",
+            "offers": [
+             {
+              "finskyOfferType": 1,
+              "listPrice": {
+               "amountInMicros": 4.5E7,
+               "currencyCode": "USD"
+              },
+              "retailPrice": {
+               "amountInMicros": 3.6E7,
+               "currencyCode": "USD"
+              }
+             }
+            ]
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+             "isAvailable": true,
+             "acsTokenLink": "http://books.google.com/books/download/Cancer-sample-epub.acsm?id=LteAUrJQyfEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+             "isAvailable": true,
+             "acsTokenLink": "http://books.google.com/books/download/Cancer-sample-pdf.acsm?id=LteAUrJQyfEC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=LteAUrJQyfEC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           },
+           "searchInfo": {
+            "textSnippet": "Cancer is a diagnosis that causes fear and confusion."
+           }
+          },
+          {
+           "kind": "books#volume",
+           "id": "5ziWNCqD7OEC",
+           "etag": "2yk+HkPk8CI",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/5ziWNCqD7OEC",
+           "volumeInfo": {
+            "title": "Cancer",
+            "subtitle": "The Evolutionary Legacy",
+            "authors": [
+             "Mel Greaves"
+            ],
+            "publisher": "Oxford University Press on Demand",
+            "publishedDate": "2001",
+            "description": "In this lucid and entertaining book, Mel Greaves argues that evolutionary biology offers a new perspective that can help us unravel the riddle of cancer. Why, for example, have women always had such a raw deal in the cancer stakes? And why are some cancers, such as prostate cancer, increasing in incidence? Greaves argues that Darwinian selection millions of years ago has endowed our genes and cells with inherently cancerous credentials, and this is exacerbated by our rapid social evolution and exotic behavioural traits that outpace genetic adaptation. The book is full of novel insights, the latest scientific discoveries, and wonderful historical anecdotes. It provides a unique portrait of cancer, past, present, and future.",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_10",
+              "identifier": "0192628348"
+             },
+             {
+              "type": "ISBN_13",
+              "identifier": "9780192628343"
+             }
+            ],
+            "readingModes": {
+             "text": false,
+             "image": true
+            },
+            "pageCount": 276,
+            "printType": "BOOK",
+            "categories": [
+             "Medical"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "preview-1.0.0",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=5ziWNCqD7OEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=5ziWNCqD7OEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=5ziWNCqD7OEC&printsec=frontcover&dq=cancer&hl=&cd=9&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=5ziWNCqD7OEC&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/Cancer.html?hl=&id=5ziWNCqD7OEC"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+             "isAvailable": false
+            },
+            "pdf": {
+             "isAvailable": false
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=5ziWNCqD7OEC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           },
+           "searchInfo": {
+            "textSnippet": "Greaves argues that Darwinian selection millions of years ago has endowed our genes and cells with inherently cancerous credentials, and this is exacerbated by our rapid social evolution and exotic behavioural traits that outpace genetic ..."
+           }
+          },
+          {
+           "kind": "books#volume",
+           "id": "nFoz31cKpFgC",
+           "etag": "U++ZN62A9/Y",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/nFoz31cKpFgC",
+           "volumeInfo": {
+            "title": "Cancer",
+            "subtitle": "My Story",
+            "authors": [
+             "Daniel Feist",
+             "Stan Shatenstein"
+            ],
+            "publisher": "CanWest Books",
+            "publishedDate": "2006",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_10",
+              "identifier": "1897229089"
+             },
+             {
+              "type": "ISBN_13",
+              "identifier": "9781897229088"
+             }
+            ],
+            "readingModes": {
+             "text": false,
+             "image": true
+            },
+            "pageCount": 125,
+            "printType": "BOOK",
+            "categories": [
+             "Cancer"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "preview-1.0.0",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=nFoz31cKpFgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=nFoz31cKpFgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=nFoz31cKpFgC&printsec=frontcover&dq=cancer&hl=&cd=10&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=nFoz31cKpFgC&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/Cancer.html?hl=&id=nFoz31cKpFgC"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+             "isAvailable": false
+            },
+            "pdf": {
+             "isAvailable": false
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=nFoz31cKpFgC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Wed, 16 Sep 2015 15:03:22 GMT
+- request:
+    method: get
+    uri: http://doaj.org/api/v1/search/articles/cancer
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Wed, 16 Sep 2015 15:33:19 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '193'
+      Connection:
+      - keep-alive
+      Location:
+      - https://doaj.org/api/v1/search/articles/cancer
+    body:
+      encoding: UTF-8
+      string: "<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body
+        bgcolor=\"white\">\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.4.6
+        (Ubuntu)</center>\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Wed, 16 Sep 2015 15:33:19 GMT
+- request:
+    method: get
+    uri: https://doaj.org/api/v1/search/articles/cancer
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Wed, 16 Sep 2015 15:55:30 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '22873'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Set-Cookie:
+      - session="UspzkET/3IS3Z8PIxKnLAhLnXDY=?_id=UycyNmYyZmZkMzhkMjA5MWE0NmNjZTU2YTI4OGJjNDZlNycKcDEKLg==";
+        Path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"pageSize": 10, "timestamp": "2015-0916T15:55:30Z", "results": [{"last_updated":
+        "2015-04-22T01:47:22Z", "id": "1c7e32e140c94c7cb5c7902ec96f1136", "bibjson":
+        {"title": "Cancer Incidence in Egypt:  Results of the National Population-Based
+        Cancer Registry Program", "journal": {"publisher": "Hindawi Publishing Corporation",
+        "language": ["English"], "license": [{"type": "CC BY", "title": "CC BY"}],
+        "title": "Journal of Cancer Epidemiology", "country": "EG", "volume": "2014"},
+        "author": [{"affiliation": "Department of Biostatistics and Cancer Epidemiology,
+        National Cancer Institute, Cairo University, Cairo, Egypt", "email": "ibrahimamalsamy@gmail.com",
+        "name": "Amal S. Ibrahim"}, {"affiliation": "Department of Medical Oncology,
+        National Cancer Institute, Cairo University, Cairo, Egypt", "email": "khussein528@gmail.com",
+        "name": "Hussein M. Khaled"}, {"affiliation": "Department of Biostatistics
+        and Cancer Epidemiology, South Egypt Cancer Institute, Assiut University,
+        Assiut, Egypt", "email": "nabiel.mikhail@gmail.com", "name": "Nabiel NH Mikhail"},
+        {"affiliation": "Department of Computer Engineering, Faculty of Engineering,
+        Cairo University, Giza, Egypt", "email": "hbaraka@mcit.gov.eg", "name": "Hoda
+        Baraka"}, {"affiliation": "Department of Medical Oncology, National Cancer
+        Institute, Cairo University, Cairo, Egypt", "email": "hkamel@cu.edu.eg", "name":
+        "Hossam Kamel"}], "link": [{"url": "http://dx.doi.org/10.1155/2014/437971",
+        "type": "fulltext"}], "year": "2014", "identifier": [{"type": "pissn", "id":
+        "1687-8558"}, {"type": "eissn", "id": "1687-8566"}, {"type": "doi", "id":
+        "10.1155/2014/437971"}], "subject": [{"code": "RC254-282", "term": "Neoplasms.
+        Tumors. Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code":
+        "RC31-1245", "term": "Internal medicine", "scheme": "LCC"}, {"code": "R",
+        "term": "Medicine", "scheme": "LCC"}]}, "created_date": "2014-10-20T08:05:15Z"},
+        {"last_updated": "2015-04-22T03:59:29Z", "id": "c7cbb0516de24de2bdcfb3d81a40ab1b",
+        "bibjson": {"start_page": "497", "title": "Breast cancer patients with lobular
+        cancer more commonly have a father than a mother diagnosed with cancer", "journal":
+        {"publisher": "BioMed Central", "language": ["English"], "license": [{"type":
+        "CC BY", "title": "CC BY"}], "title": "BMC Cancer", "country": "GB", "number":
+        "1", "volume": "11"}, "author": [{"name": "Ellberg Carolina"}, {"name": "Olsson
+        H\u00e5kan"}], "month": "11", "link": [{"url": "http://www.biomedcentral.com/1471-2407/11/497",
+        "type": "fulltext"}], "year": "2011", "identifier": [{"type": "doi", "id":
+        "10.1186/1471-2407-11-497"}, {"type": "pissn", "id": "1471-2407"}], "abstract":
+        "<p>Abstract</p> <p>Background</p> <p>The association between lobular breast
+        cancer and family history is not clear. The aim of the study was to possibly
+        identifying new hereditary patterns predisposing for cancer in the different
+        histopathologic subtypes of breast cancer, with focus on patients with lobular
+        breast cancer and cancer in their first degree relatives.</p> <p>Methods</p>
+        <p>In 1676 consecutive breast cancer patients detailed family history of cancer
+        was related to histopathologic subtype of breast cancer.</p> <p>Results</p>
+        <p>Patients with lobular breast cancer were found to be significantly positively
+        associated with having a father diagnosed with cancer, OR 2.17 (95% confidence
+        interval (CI) 1.37-3.46). The finding persisted after excluding breast cancer
+        in the family. Ductal breast cancer was associated with having a mother diagnosed
+        with cancer. There was a significant association between lobular breast cancer
+        and having a father with prostate cancer, OR 2.4 (CI 1.1-5.3). The occurrence
+        of having a father with prostate cancer for lobular breast cancer patients
+        was higher in the younger patient group, OR 2.9 (CI 1.1-7.8), and was still
+        high but lost statistical significance in the older patient group, OR 1.9
+        (CI 0.5-7.4). The association between lobular breast cancer and a father remained
+        significant after excluding fathers with prostate cancer, OR 1.94 (CI 1.20-3.14).
+        Other commonly occurring tumor types in the father included sarcoma and leukemia.</p>
+        <p>Conclusion</p> <p>We propose that lobular breast cancer is associated with
+        having a father diagnosed with cancer, most commonly prostate carcinoma. Since
+        the association remained after excluding family history of breast cancer,
+        the association seems independent of classical breast cancer heredity. The
+        association with a father diagnosed with cancer also remained after removing
+        prostate cancer, indicating an independence from prostate cancer as well.
+        The reason for this association is genetically unclear, but could involve
+        sex-specific imprinting.</p> ", "subject": [{"code": "RC254-282", "term":
+        "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}]},
+        "created_date": "2013-03-12T01:21:44Z"}, {"last_updated": "2015-04-22T04:16:36Z",
+        "id": "de1a7c4a93394d28b6e7ad0cf1e4d3c9", "bibjson": {"identifier": [{"type":
+        "pissn", "id": "1000-467X"}, {"type": "eissn", "id": "1944-446X"}, {"type":
+        "doi", "id": "10.5732/cjc.014.10153"}], "start_page": "413", "title": "Cancer
+        immunotherapy", "journal": {"publisher": "Cancer Center,Sun Yat-sen University",
+        "language": ["English"], "title": "Chinese Journal of Cancer", "country":
+        "CN", "number": "9", "volume": "33"}, "author": [{"name": "Li Yan "}, {"name":
+        " Helen X. Chen"}], "month": "9", "link": [{"url": "\n http://www.cjcsysu.com/abstract.asp?fr=doaj&idno=21152",
+        "type": "fulltext", "content_type": "pdf"}], "year": "2014", "subject": [{"code":
+        "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens",
+        "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme":
+        "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}], "end_page": "415"},
+        "created_date": "2014-09-30T10:00:07Z"}, {"last_updated": "2015-04-22T03:13:42Z",
+        "id": "8c8c9d89e036455aa8a3c0d2b482364a", "bibjson": {"identifier": [{"type":
+        "pissn", "id": "1179-299X"}], "start_page": "11", "title": "Biomarkers of
+        HIV-associated Cancer", "journal": {"publisher": "Libertas Academica", "language":
+        ["English"], "license": [{"type": "CC BY", "title": "CC BY"}], "title": "Biomarkers
+        in Cancer", "country": "NZ", "number": "6", "volume": "2014"}, "author": [{"name":
+        "Brian Thabile Flepisi"}, {"name": "Patrick Bouic"}, {"name": "Gerhard Sissolak"},
+        {"name": "Bernd Rosenkranz"}], "month": "7", "link": [{"url": "http://www.la-press.com/biomarkers-of-hiv-associated-cancer-article-a4282",
+        "type": "fulltext", "content_type": "html"}], "year": "2014", "end_page":
+        "20", "subject": [{"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}]}, "created_date": "2014-08-06T01:30:02Z"}, {"last_updated":
+        "2015-08-25T02:30:15Z", "id": "db0db6262a8d4098ab991d8cab40cce8", "bibjson":
+        {"identifier": [{"type": "pissn", "id": "1179-299X"}], "start_page": "31",
+        "title": "Infrequent Expression of the Cancer-Testis Antigen, PASD1, in Ovarian
+        Cancer", "journal": {"publisher": "Libertas Academica", "language": ["EN"],
+        "license": [{"url": "http://www.la-press.com/about_us.php?folder_id=160",
+        "open_access": true, "type": "CC BY-NC", "title": "CC BY-NC"}], "title": "Biomarkers
+        in Cancer", "country": "NZ", "number": "7", "volume": "2015"}, "author": [{"name":
+        "Ghazala Khan"}, {"name": "Suzanne E. Brooks"}, {"name": "Ken I. Mills"},
+        {"name": "Barbara-Ann Guinn"}], "month": "8", "link": [{"url": "http://www.la-press.com/infrequent-expression-of-the-cancer-testis-antigen-pasd1-in-ovarian-ca-article-a5005",
+        "type": "fulltext", "content_type": "html"}], "year": "2015", "end_page":
+        "38", "subject": [{"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}]}, "created_date": "2015-08-25T02:30:15Z"},
+        {"last_updated": "2015-04-22T03:54:10Z", "id": "c0e1a6cb7dbb4e57b633c1563b3c4987",
+        "bibjson": {"identifier": [{"type": "pissn", "id": "1000-467X"}, {"type":
+        "eissn", "id": "1944-446X"}, {"type": "doi", "id": "10.5732/cjc.014.10116"}],
+        "start_page": "369", "title": " Large-scale molecular characterization and
+        analysis of gastric cancer", "journal": {"publisher": "Cancer Center,Sun Yat-sen
+        University", "language": ["English"], "title": "Chinese Journal of Cancer",
+        "country": "CN", "number": "8", "volume": "33"}, "author": [{"name": "Ilya
+        Shmulevich"}], "month": "8", "link": [{"url": "\n http://www.cjcsysu.com/abstract.asp?fr=doaj&idno=21115",
+        "type": "fulltext", "content_type": "pdf"}], "year": "2014", "subject": [{"code":
+        "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens",
+        "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme":
+        "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}], "end_page": "370"},
+        "created_date": "2014-09-30T10:00:02Z"}, {"last_updated": "2015-04-22T03:05:35Z",
+        "id": "823bf5d81e5d4693b21990899f4e09b8", "bibjson": {"identifier": [{"type":
+        "pissn", "id": "1000-467X"}, {"type": "eissn", "id": "1944-446X"}, {"type":
+        "doi", "id": "10.5732/cjc.014.10117"}], "start_page": "469", "title": " TCGA
+        divides gastric cancer into four molecular subtypes: implications for individualized
+        therapeutics", "journal": {"publisher": "Cancer Center,Sun Yat-sen University",
+        "language": ["English"], "title": "Chinese Journal of Cancer", "country":
+        "CN", "number": "10", "volume": "33"}, "author": [{"name": "Wei Zhang"}],
+        "month": "10", "link": [{"url": "\n http://www.cjcsysu.com/abstract.asp?fr=doaj&idno=21116",
+        "type": "fulltext", "content_type": "pdf"}], "year": "2014", "subject": [{"code":
+        "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens",
+        "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme":
+        "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}], "abstract": "Gastric
+        cancer is a leading cause of cancer deaths in the world. The treatment of
+        gastric cancer is challenging because of its highly heterogeneous etiology
+        and clinical characteristics. Recent genomic and molecular characterization
+        of gastric cancer, especially the findings reported by the Cancer Genome Atlas
+        (TCGA), have shed light on the heterogeneity and potential targeted therapeutics
+        for four different subtypes of gastric cancer.", "end_page": "470"}, "created_date":
+        "2014-09-30T10:00:12Z"}, {"last_updated": "2015-04-22T04:13:41Z", "id": "da6d367e9f8e4b82aa9413f36485adb3",
+        "bibjson": {"identifier": [{"type": "doi", "id": "10.5732/cjc.013.10018"},
+        {"type": "pissn", "id": "1000-467X"}, {"type": "eissn", "id": "1944-446X"}],
+        "start_page": "106", "title": "The incidences and mortalities of major cancers
+        in China, 2009", "journal": {"publisher": "Sun Yat-sen University Cancer Center",
+        "language": ["English"], "title": "Chinese Journal of Cancer", "country":
+        "CN", "number": "3", "volume": "32"}, "author": [{"name": "Wanqing Chen"},
+        {"name": "Rongshou Zheng"}, {"name": "Siwei Zhang"}, {"name": "Ping Zhao"},
+        {"name": "Guanglin Li"}, {"name": "Lingyou Wu"}, {"name": "Jie He"}], "month":
+        "03", "link": [{"url": "http://www.cjcsysu.com/abstract.asp?idno=20517", "type":
+        "fulltext"}], "year": "2013", "keywords": ["Cancer registry", "incidence",
+        "mortality", "epidemiology", "China"], "subject": [{"code": "RC254-282", "term":
+        "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}],
+        "abstract": "In 2012, the National Central Cancer Registry (NCCR) of China
+        collected cancer registration information for the year 2009 from local cancer
+        registries and analyzed it to describe the incidences and mortalities of cancers
+        in China. Based on the data quality criteria from NCCR, data from 104 registries
+        covering 85,470,522 people (57,489,009 in urban areas and 27,981,513 in rural
+        areas) were checked and evaluated. The data from 72 registries were qualified
+        and accepted for the cancer registry annual report in 2012. The total cancer
+        incident cases and cancer deaths were 244,366 and 154,310, respectively. The
+        morphologically verified cases accounted for 67.23%, and 3.14% of the incident
+        cases only had information from death certifications. The crude incidence
+        in the Chinese cancer registration areas was 285.91/100,000 (317.97/100,000
+        in males and 253.09/100,000 in females). The age-standardized rates for incidences
+        based on the Chinese standard population (ASRIC) and the world standard population
+        (ASRIW) were 146.87/100,000 and 191.72/100,000, respectively, with a cumulative
+        incidence of 22.08%. The cancer mortality in the Chinese cancer registration
+        areas was 180.54/100,000 (224.20/100,000 in males and 135.85/100,000 in females).
+        The age-standardized rates for mortalities based on the Chinese standard population(ASRMC)
+        and the world standard population (ASRMW) were 85.06/100,000 and 115.65/100,000,
+        respectively, and the cumulative mortality was 12.94%. Lung cancer, gastric
+        cancer, colorectal cancer, liver cancer, esophageal cancer, pancreatic cancer,
+        encephaloma, lymphoma, female breast cancer, and cervical cancer were the
+        most common cancers, accounting for 75% of all cancer cases. Lung cancer,
+        gastric cancer, liver cancer, esophageal cancer, colorectal cancer, pancreatic
+        cancer, breast cancer, encephaloma, leukemia, and lymphoma accounted for 80%
+        of all cancer deaths. The cancer registration''s population coverage has been
+        increasing, and its data quality is improving. As the basis of the cancer
+        control program, the cancer registry plays an important role in directing
+        anticancer strategies in the medium and long term. Because cancer burdens
+        are different in urban and rural areas in China, prevention and control efforts
+        should be based on practical situations.  ", "end_page": "112"}, "created_date":
+        "2013-03-19T08:31:56Z"}, {"last_updated": "2015-04-22T03:15:55Z", "id": "8f79f8dcc5bf4b789a97a2cc67ff6da5",
+        "bibjson": {"identifier": [{"type": "doi", "id": "10.5732/cjc.011.10444"},
+        {"type": "pissn", "id": "1000-467X"}, {"type": "eissn", "id": "1944-446X"}],
+        "start_page": "564", "title": "A new prospect in cancer therapy: targeting
+        cancer stem cells to eradicate cancer", "journal": {"publisher": "Sun Yat-sen
+        University Cancer Center", "language": ["English"], "title": "Chinese Journal
+        of Cancer", "country": "CN", "number": "12", "volume": "31"}, "author": [{"name":
+        "Yi-Min Zhu"}, {"name": "Li-Hua Yuan"}, {"name": "Ke-Feng Pu"}, {"name": "Bing
+        Dong"}, {"name": "An-Xin Wang"}, {"name": "Li-Sha Chen"}], "month": "12",
+        "link": [{"url": "http://www.cjcsysu.com/abstract.asp?fr=doaj&idno=20081",
+        "type": "fulltext"}], "year": "2012", "subject": [{"code": "RC254-282", "term":
+        "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}],
+        "abstract": "According to the cancer stem cell theory, cancers can be initiated
+        by cancer stem cells. This makes cancer stem cells prime targets for therapeutic
+        intervention. Eradicating cancer stem cells by efficient targeting agents
+        may have the potential to cure cancer. In this review, we summarize recent
+        breakthroughs that have improved our understanding of cancer stem cells, and
+        we discuss the therapeutic strategy of targeting cancer stem cells, a promising
+        future direction for cancer stem cell research.", "end_page": "572"}, "created_date":
+        "2013-04-26T10:30:03Z"}, {"last_updated": "2015-04-22T03:51:28Z", "id": "bd4c138833f54e558052765bada05514",
+        "bibjson": {"identifier": [{"type": "pissn", "id": "1837-9664"}], "start_page":
+        "107", "title": "Human Cancer Classification: A Systems Biology- Based Model
+        Integrating Morphology, Cancer Stem Cells, Proteomics, and Genomics", "journal":
+        {"publisher": "Ivyspring International Publisher", "language": ["English"],
+        "license": [{"type": "CC BY-NC-ND", "title": "CC BY-NC-ND"}], "title": "Journal
+        of Cancer", "country": "AU", "number": "1", "volume": "2"}, "author": [{"name":
+        "Halliday A Idikio"}], "link": [{"url": "http://www.jcancer.org/v02p0107.htm",
+        "type": "fulltext"}], "year": "2011", "subject": [{"code": "RC254-282", "term":
+        "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}],
+        "abstract": "<p>Human cancer classification is currently based on the idea
+        of cell of origin, light and electron microscopic attributes of the cancer.
+        What is not yet integrated into cancer classification are the functional attributes
+        of these cancer cells. Recent innovative techniques in biology have provided
+        a wealth of information on the genomic, transcriptomic and proteomic changes
+        in cancer cells. The emergence of the concept of cancer stem cells needs to
+        be included in a classification model to capture the known attributes of cancer
+        stem cells and their potential contribution to treatment response, and metastases.
+        The integrated model of cancer classification presented here incorporates
+        all morphology, cancer stem cell contributions, genetic, and functional attributes
+        of cancer. Integrated cancer classification models could eliminate the unclassifiable
+        cancers as used in current classifications. Future cancer treatment may be
+        advanced by using an integrated model of cancer classification.</p>", "end_page":
+        "115"}, "created_date": "2011-03-20T10:19:56Z"}], "query": "cancer", "total":
+        64943, "page": 1}'
+    http_version: 
+  recorded_at: Wed, 16 Sep 2015 15:55:30 GMT
+- request:
+    method: get
+    uri: https://doaj.org/api/v1/search/articles/Breast+cancer+patients+with+lobular+cancer+more+commonly+have+a+father+than+a+mother+diagnosed+with+cancer
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Wed, 16 Sep 2015 15:58:52 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '35667'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Set-Cookie:
+      - session="UspzkET/3IS3Z8PIxKnLAhLnXDY=?_id=UycyNmYyZmZkMzhkMjA5MWE0NmNjZTU2YTI4OGJjNDZlNycKcDEKLg==";
+        Path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"pageSize": 10, "timestamp": "2015-0916T15:58:52Z", "results": [{"last_updated":
+        "2015-04-22T03:59:29Z", "id": "c7cbb0516de24de2bdcfb3d81a40ab1b", "bibjson":
+        {"start_page": "497", "title": "Breast cancer patients with lobular cancer
+        more commonly have a father than a mother diagnosed with cancer", "journal":
+        {"publisher": "BioMed Central", "language": ["English"], "license": [{"type":
+        "CC BY", "title": "CC BY"}], "title": "BMC Cancer", "country": "GB", "number":
+        "1", "volume": "11"}, "author": [{"name": "Ellberg Carolina"}, {"name": "Olsson
+        H\u00e5kan"}], "month": "11", "link": [{"url": "http://www.biomedcentral.com/1471-2407/11/497",
+        "type": "fulltext"}], "year": "2011", "identifier": [{"type": "doi", "id":
+        "10.1186/1471-2407-11-497"}, {"type": "pissn", "id": "1471-2407"}], "abstract":
+        "<p>Abstract</p> <p>Background</p> <p>The association between lobular breast
+        cancer and family history is not clear. The aim of the study was to possibly
+        identifying new hereditary patterns predisposing for cancer in the different
+        histopathologic subtypes of breast cancer, with focus on patients with lobular
+        breast cancer and cancer in their first degree relatives.</p> <p>Methods</p>
+        <p>In 1676 consecutive breast cancer patients detailed family history of cancer
+        was related to histopathologic subtype of breast cancer.</p> <p>Results</p>
+        <p>Patients with lobular breast cancer were found to be significantly positively
+        associated with having a father diagnosed with cancer, OR 2.17 (95% confidence
+        interval (CI) 1.37-3.46). The finding persisted after excluding breast cancer
+        in the family. Ductal breast cancer was associated with having a mother diagnosed
+        with cancer. There was a significant association between lobular breast cancer
+        and having a father with prostate cancer, OR 2.4 (CI 1.1-5.3). The occurrence
+        of having a father with prostate cancer for lobular breast cancer patients
+        was higher in the younger patient group, OR 2.9 (CI 1.1-7.8), and was still
+        high but lost statistical significance in the older patient group, OR 1.9
+        (CI 0.5-7.4). The association between lobular breast cancer and a father remained
+        significant after excluding fathers with prostate cancer, OR 1.94 (CI 1.20-3.14).
+        Other commonly occurring tumor types in the father included sarcoma and leukemia.</p>
+        <p>Conclusion</p> <p>We propose that lobular breast cancer is associated with
+        having a father diagnosed with cancer, most commonly prostate carcinoma. Since
+        the association remained after excluding family history of breast cancer,
+        the association seems independent of classical breast cancer heredity. The
+        association with a father diagnosed with cancer also remained after removing
+        prostate cancer, indicating an independence from prostate cancer as well.
+        The reason for this association is genetically unclear, but could involve
+        sex-specific imprinting.</p> ", "subject": [{"code": "RC254-282", "term":
+        "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}]},
+        "created_date": "2013-03-12T01:21:44Z"}, {"last_updated": "2015-04-22T02:51:14Z",
+        "id": "6fdef0952adc4e439b320bfd0463f026", "bibjson": {"start_page": "74",
+        "title": "Lobular neoplasia: frequency and association with other breast lesions",
+        "journal": {"publisher": "BioMed Central", "language": ["English"], "license":
+        [{"type": "CC BY", "title": "CC BY"}], "title": "Diagnostic Pathology", "country":
+        "GB", "number": "1", "volume": "6"}, "author": [{"name": "Gobbi Helenice"},
+        {"name": "Porto Simone S"}, {"name": "Balabram D\u00e9bora"}, {"name": "Gomes
+        Douglas S"}], "month": "8", "link": [{"url": "http://www.diagnosticpathology.org/content/6/1/74",
+        "type": "fulltext"}], "year": "2011", "keywords": ["breast cancer", "lobular
+        neoplasia", "ductal carcinoma <it>in situ</it>", "columnar cell lesions"],
+        "identifier": [{"type": "doi", "id": "10.1186/1746-1596-6-74"}, {"type": "pissn",
+        "id": "1746-1596"}], "abstract": "<p>Abstract</p> <p>Background</p> <p>Using
+        new molecular biology techniques, recent studies have implicated a common
+        evolutionary pathway between lobular neoplasia, lobular carcinomas, and columnar
+        cell lesions. Our aims were to assess the frequency of lobular neoplasia in
+        a series of breast biopsies that were performed and examined in the same institution
+        and to analyze the association between subtypes of lobular neoplasia and benign
+        and malignant breast lesions.</p> <p>Methods</p> <p>Cases were selected after
+        reviewing archived pathological reports in the Breast Pathology Laboratory,
+        School of Medicine of Federal University of Minas Gerais (1999-2008). Cases
+        of lobular neoplasia were reviewed and classified as atypical lobular hyperplasia,
+        ductal involvement by cells of atypical lobular hyperplasia, lobular carcinoma
+        <it>in situ</it>, and pleomorphic lobular carcinoma <it>in situ</it>. Coexistence
+        of lobular neoplasia with other breast lesions, including columnar cell lesions,
+        invasive ductal carcinoma and invasive lobular carcinoma, was evaluated. The
+        association between lobular neoplasia and breast lesions was analyzed by Fisher''s
+        exact test and chi-square test for linear trend.</p> <p>Results</p> <p>We
+        analyzed 5650 breast specimens, selecting 135 breast specimens (2.4%) that
+        had a diagnosis of lobular neoplasia, corresponding to 106 patients. Hematoxylin
+        and eosin-stained slides were available for 84 cases, 5 of which were excluded
+        because they contained only \"indeterminate\" <it>in situ </it>lesions. Of
+        the 79 remaining cases, columnar cell lesions were present in 78.5%, primarily
+        with columnar cell changes without atypia (67.7%). Invasive carcinoma was
+        present in 45.6% of cases of lobular neoplasia--a similar frequency (47.2%)
+        as invasive ductal carcinoma and invasive lobular carcinoma. We noted a significant
+        linear trend (p < 0.03) of a higher frequency of invasive carcinomas that
+        were concomitant with lobular carcinoma <it>in situ </it>compared with atypical
+        lobular hyperplasia. Invasive lobular carcinomas were associated with lobular
+        carcinoma <it>in situ </it>in 33% of cases, compared with 2.8% of atypical
+        lobular hyperplasia cases.</p> <p>Conclusions</p> <p>Our findings confirm
+        a frequent association between lobular neoplasia and columnar cell lesions,
+        the majority of which lacked atypia. We also observed a greater frequency
+        of invasive carcinoma, more commonly invasive lobular carcinoma, associated
+        with more developed forms of lobular neoplasia (lobular carcinoma <it>in situ</it>).</p>
+        ", "subject": [{"code": "RB1-214", "term": "Pathology", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Pathology",
+        "scheme": "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term":
+        "Health Sciences", "scheme": "DOAJ"}, {"code": "RB1-214", "term": "Pathology",
+        "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term":
+        "Pathology", "scheme": "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"},
+        {"term": "Health Sciences", "scheme": "DOAJ"}, {"code": "RB1-214", "term":
+        "Pathology", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme":
+        "LCC"}, {"code": "RB1-214", "term": "Pathology", "scheme": "LCC"}, {"code":
+        "R", "term": "Medicine", "scheme": "LCC"}, {"code": "RB1-214", "term": "Pathology",
+        "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}]}, "created_date":
+        "2011-11-19T00:00:00Z"}, {"last_updated": "2015-04-22T03:48:12Z", "id": "b93ddf2db71140d6af5f815dad9d5ed6",
+        "bibjson": {"identifier": [{"type": "pissn", "id": "1179-1411"}], "start_page":
+        "935", "title": "Pregnancy-associated breast cancer: optimal treatment options",
+        "journal": {"publisher": "Dove Press", "language": ["English"], "title": "International
+        Journal of Women''s Health ", "country": "GB", "number": "default", "volume":
+        "2014"}, "author": [{"name": "Cardonick E"}], "month": "11", "link": [{"url":
+        "http://www.dovepress.com/pregnancy-associated-breast-cancer-optimal-treatment-options-peer-reviewed-article-IJWH",
+        "type": "fulltext", "content_type": "html"}], "year": "2014", "subject": [{"code":
+        "RG1-991", "term": "Gynecology and obstetrics", "scheme": "LCC"}, {"code":
+        "R", "term": "Medicine", "scheme": "LCC"}], "abstract": "\nElyce Cardonick
+        Division of Maternal-Fetal Medicine, Department of Obstetrics and Gynecology,
+        Cooper University Hospital, Camden, NJ, USA  Abstract: Cancer is diagnosed
+        approximately once per 1,000 pregnancies; most commonly due to the reproductive
+        age of the women, these include breast, cervical, melanoma, thyroid, and Hodgkin&#39;s
+        lymphoma diagnoses. As a single diagnosis, breast cancer is the most common
+        cancer diagnosed during pregnancy. Cancer is expected to complicate pregnancy
+        more often due to the trend for women to delay child bearing to later maternal
+        ages. Delayed first birth is itself a risk factor for breast cancer. Termination
+        of pregnancy has not been shown to afford a survival benefit. While protecting
+        the interests of mother and unborn fetus, breast cancer can be safely diagnosed,
+        staged, and treated during pregnancy with good outcomes for both. Some modification
+        of the protocols used for nonpregnant women with suspicious palpable breast
+        masses is required. This article reviews the challenges for physicians in
+        making the diagnosis of breast cancer during pregnancy and upon diagnosis,
+        counseling patients about treatment options. The consequences of diagnostic
+        investigations and cancer treatment for the exposed fetus are also addressed.  Keywords:
+        chemotherapy, in utero exposure, gestational", "end_page": "943"}, "created_date":
+        "2014-11-05T20:30:07Z"}, {"last_updated": "2015-09-07T23:00:05Z", "id": "98ec9281d0434869a6678d5e2674414a",
+        "bibjson": {"identifier": [{"type": "pissn", "id": "1179-1314"}], "start_page":
+        "293", "title": "Taxanes in the elderly patient with metastatic breast cancer",
+        "journal": {"publisher": "Dove Press", "language": ["English"], "title": "Breast
+        Cancer : Targets and Therapy", "country": "NZ", "number": "default", "volume":
+        "2015"}, "author": [{"name": "Yardley DA"}], "month": "9", "link": [{"url":
+        "https://www.dovepress.com/taxanes-in-the-elderly-patient-with-metastatic-breast-cancer-peer-reviewed-article-BCTT",
+        "type": "fulltext", "content_type": "html"}], "year": "2015", "end_page":
+        "301", "abstract": "Denise A Yardley Sarah Cannon Research Institute, Nashville,
+        TN, USA  Abstract: More than 40% of all breast cancer cases are diagnosed
+        in patients aged &ge;65 years, accounting for an ever-increasing disease burden
+        in the elderly. Historically, however, this growing population of breast cancer
+        patients has been underrepresented in clinical trials, resulting in a paucity
+        of data that clinicians can reference in making treatment decisions for their
+        older patients. A consequence may be the undertreatment of elderly patients,
+        who have the highest incidence of breast cancer. However, subgroup analyses
+        of elderly patients in multiple early-Phase (I or II) studies and a handful
+        of small studies with elderly-specific populations have suggested that older
+        patients may experience similar benefit from cancer therapy as younger patients
+        with otherwise similar baseline characteristics. Although steps should be
+        taken to avoid undertreating older patients, a balance must be achieved to
+        avoid overtreatment. Guidelines have been released detailing recommendations
+        for the treatment of elderly breast cancer patients, including a discussion
+        of various geriatric assessments that might aid physicians in selecting patients
+        appropriate for recommended treatment options. Chemotherapy remains a key
+        component of treatment regimens for many older patients. However, the benefit
+        of some agents may be limited by tolerability issues. Taxanes, one of the
+        most established classes of chemotherapy for breast cancer, are known to be
+        highly active and efficacious and to have well-characterized safety profiles.
+        This review discusses factors that influence treatment choices for elderly
+        patients with metastatic breast cancer, and then focuses on clinical data
+        for taxanes in this patient population.  Keywords: breast cancer, elderly,
+        taxane, chemotherapy, treatment guidelines", "subject": [{"code": "RC254-282",
+        "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}]}, "created_date": "2015-09-07T23:00:05Z"},
+        {"last_updated": "2015-04-22T04:18:47Z", "id": "e0eec9c4a7124aac8bf015ac1d8954d4",
+        "bibjson": {"identifier": [{"type": "pissn", "id": "1837-9664"}], "start_page":
+        "226", "title": "A Case Report: Lobular Carcinoma In Situ in a Male Patient
+        with Subsequent Invasive Ductal Carcinoma Identified on Screening Breast MRI",
+        "journal": {"publisher": "Ivyspring International Publisher", "language":
+        ["English"], "license": [{"type": "CC BY-NC-ND", "title": "CC BY-NC-ND"}],
+        "title": "Journal of Cancer", "country": "AU", "number": "1", "volume": "3"},
+        "author": [{"name": "Linda Kao, Yekaterina Bulkin, Susan Fineberg, Leslie
+        Montgomery, Tova Koenigsberg"}], "link": [{"url": "http://www.jcancer.org/v03p0226.htm",
+        "type": "fulltext"}], "year": "2012", "subject": [{"code": "RC254-282", "term":
+        "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}],
+        "abstract": "<p>Lobular carcinoma in situ is a form of in situ neoplasia that
+        develops within the terminal lobules of the breast. It is an extremely rare
+        finding in males due to the lack of lobular development in the male breast.
+        The authors herein report an unusual case of incidentally discovered lobular
+        carcinoma in situ in a male patient with recurrent bilateral gynecomastia
+        who was subsequently diagnosed with invasive ductal carcinoma of the left
+        breast. The pathology of lobular carcinoma in situ in a male as well as screening
+        MRI surveillance of male patients at high risk for breast cancer are discussed,
+        emphasizing the importance of screening and imaging follow up in men who are
+        at high risk for breast cancer.</p>", "end_page": "230"}, "created_date":
+        "2012-07-15T06:32:18Z"}, {"last_updated": "2015-09-15T08:30:42Z", "id": "db67681778e24939aa7c2f863d1a7069",
+        "bibjson": {"identifier": [{"type": "pissn", "id": "2210-2612"}, {"type":
+        "doi", "id": "10.1016/j.ijscr.2015.07.036"}], "start_page": "141", "title":
+        "Concomitant endometrial and gallbladder metastasis in advanced multiple metastatic
+        invasive lobular carcinoma of the breast: A rare case report", "journal":
+        {"publisher": "Elsevier", "language": ["EN"], "license": [{"url": "http://www.elsevier.com/journals/international-journal-of-surgery-case-reports/2210-2612/open-access-journal",
+        "open_access": true, "type": "CC BY-NC-ND", "title": "CC BY-NC-ND"}], "title":
+        "International Journal of Surgery Case Reports", "country": "NL", "number":
+        "C", "volume": "14"}, "author": [{"affiliation": "Michigan State University,
+        Hurley Medical Center, Trauma Services Department, One Hurley Plaza, Flint,
+        MI 48503, USA", "email": "ksenbez@gmail.com", "name": "Kseniya Bezpalko"},
+        {"affiliation": "Hurley Medical Center, Trauma Services Department, One Hurley
+        Plaza, Flint, MI 48503, USA", "name": "Mohamed A. Mohamed"}, {"affiliation":
+        "Hurley Medical Center, Trauma Services Department, One Hurley Plaza, Flint,
+        MI 48503, USA", "name": "Leo Mercer"}, {"affiliation": "Hurley Medical Center,
+        Trauma Services Department, One Hurley Plaza, Flint, MI 48503, USA", "name":
+        "Michael McCann"}, {"affiliation": "Hurley Medical Center, Trauma Services
+        Department, One Hurley Plaza, Flint, MI 48503, USA", "name": "Karim Elghawy"},
+        {"affiliation": "Hurley Medical Center, Trauma Services Department, One Hurley
+        Plaza, Flint, MI 48503, USA", "name": "Kenneth Wilson"}], "link": [{"url":
+        "http://www.sciencedirect.com/science/article/pii/S2210261215003430", "type":
+        "fulltext"}], "year": "2015", "keywords": ["Breast cancer", "Infiltrating
+        lobular carcinoma", "Biliary metastasis", "Acute cholecystitis", "Endometrial
+        metastasis", "Uterine metastasis"], "end_page": "145", "abstract": "Introduction:
+        At time of presentation, fewer than 10% of patients have metastatic breast
+        cancer. The most common sites of metastasis in order of frequency are bone,
+        lung, pleura, soft tissue, and liver. Breast cancer metastasis to the uterus
+        or gallbladder is rare and has infrequently been reported in the English literature.\nPresentation
+        of case: A 47 year old female with a recent history of thrombocytopenia presented
+        with abnormal vaginal bleeding. Pelvic ultrasound revealed multiple uterine
+        fibroids and endometrial curettings revealed cells consistent with lobular
+        carcinoma of the breast. Breast examination revealed edema and induration
+        of the lower half of the right breast. Biopsy of the right breast revealed
+        invasive lobular carcinoma. Bone marrow aspiration obtained at a previous
+        outpatient visit revealed extensive involvement by metastatic breast carcinoma.
+        Shortly after discharge, the patient presented with acute cholecystitis and
+        underwent cholecystectomy. Microscopic examination of the gallbladder revealed
+        metastatic infiltrating lobular carcinoma. The final diagnosis was invasive
+        lobular carcinoma of the right breast with metastasis to the bone marrow,
+        endometrium, gallbladder, regional lymph nodes, and peritoneum.\nDiscussion:
+        The growth pattern of invasive lobular carcinoma of the breast is unique and
+        poses a challenge in diagnosing the cancer at an early stage. Unlike other
+        types of breast cancer, it tends to metastasize more to the peritoneum, ovary,
+        and gastrointestinal tract. Metastasis to the endometrium or gallbladder is
+        rare.\nConclusion: Metastatic spread should be considered in the differential
+        diagnosis of patients with invasive lobular breast carcinoma presenting with
+        abnormal vaginal bleeding or acute cholecystitis.", "subject": [{"code": "RD1-811",
+        "term": "Surgery", "scheme": "LCC"}]}, "created_date": "2015-09-15T08:30:42Z"},
+        {"last_updated": "2015-04-22T02:48:10Z", "id": "6bdc5b0ccbe242a8987744afaaf08984",
+        "bibjson": {"start_page": "134", "title": "Differential pattern and prognostic
+        significance of CD4<sup>+</sup>, FOXP3<sup>+ </sup>and IL-17<sup>+ </sup>tumor
+        infiltrating lymphocytes in ductal and lobular breast cancers", "journal":
+        {"publisher": "BioMed Central", "language": ["English"], "license": [{"type":
+        "CC BY", "title": "CC BY"}], "title": "BMC Cancer", "country": "GB", "number":
+        "1", "volume": "12"}, "author": [{"name": "Droeser Raoul"}, {"name": "Zlobec
+        Inti"}, {"name": "Kilic Ergin"}, {"name": "G\u00fcth Uwe"}, {"name": "Heberer
+        Michael"}, {"name": "Spagnoli Giulio"}, {"name": "Oertli Daniel"}, {"name":
+        "Tapia Coya"}], "month": "4", "link": [{"url": "http://www.biomedcentral.com/1471-2407/12/134",
+        "type": "fulltext"}], "year": "2012", "identifier": [{"type": "doi", "id":
+        "10.1186/1471-2407-12-134"}, {"type": "pissn", "id": "1471-2407"}], "abstract":
+        "<p>Abstract</p> <p>Background</p> <p>Clinical relevance of tumor infiltrating
+        lymphocytes (TILs) in breast cancer is controversial. Here, we used a tumor
+        microarray including a large series of ductal and lobular breast cancers with
+        long term follow up data, to analyze clinical impact of TIL expressing specific
+        phenotypes and distribution of TILs within different tumor compartments and
+        in different histological subtypes.</p> <p>Methods</p> <p>A tissue microarray
+        (TMA) including 894 ductal and 164 lobular breast cancers was stained with
+        antibodies recognizing CD4, FOXP3, and IL-17 by standard immunohistochemical
+        techniques. Lymphocyte counts were correlated with clinico-pathological parameters
+        and survival.</p> <p>Results</p> <p>CD4<sup>+ </sup>lymphocytes were more
+        prevalent than FOXP3<sup>+ </sup>TILs whereas IL-17<sup>+ </sup>TILs were
+        rare. Increased numbers of total CD4<sup>+ </sup>and FOXP3<sup>+ </sup>TIL
+        were observed in ductal, as compared with lobular carcinomas. High grade (G3)
+        and estrogen receptor (ER) negative ductal carcinomas displayed significantly
+        (<it>p </it> < 0.001) higher CD4<sup>+ </sup>and FOXP3<sup>+ </sup>lymphocyte
+        infiltration while her2/neu over-expression in ductal carcinomas was significantly
+        (<it>p </it> < 0.001) associated with higher FOXP3<sup>+ </sup>TIL counts.
+        In contrast, lymphocyte infiltration was not linked to any clinico-pathological
+        parameters in lobular cancers. In univariate but not in multivariate analysis
+        CD4<sup>+ </sup>infiltration was associated with significantly shorter survival
+        in patients bearing ductal, but not lobular cancers. However, a FOXP3<sup>+</sup>/CD4<sup>+
+        </sup>ratio > 1 was associated with improved overall survival even in multivariate
+        analysis (<it>p </it>= 0.033).</p> <p>Conclusions</p> <p>Ductal and lobular
+        breast cancers appear to be infiltrated by different lymphocyte subpopulations.
+        In ductal cancers increased CD4<sup>+ </sup>and FOXP3<sup>+ </sup>TIL numbers
+        are associated with more aggressive tumor features. In survival analysis,
+        absolute numbers of TILs do not represent major prognostic indicators in ductal
+        and lobular breast cancer. Remarkably however, a ratio > 1 of total FOXP3<sup>+</sup>/CD4<sup>+
+        </sup>TILs in ductal carcinoma appears to represent an independent favorable
+        prognostic factor.</p> ", "subject": [{"code": "RC254-282", "term": "Neoplasms.
+        Tumors. Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code":
+        "RC31-1245", "term": "Internal medicine", "scheme": "LCC"}, {"code": "R",
+        "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"},
+        {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health Sciences",
+        "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}]},
+        "created_date": "2013-03-12T01:23:02Z"}, {"last_updated": "2015-04-22T02:09:36Z",
+        "id": "3998cf20a4bf48b8a83fdb8b1d1e7361", "bibjson": {"identifier": [{"type":
+        "pissn", "id": "1179-1314"}], "start_page": "127", "title": "Update on raloxifene:
+        role in reducing the risk of invasive breast cancer in postmenopausal women",
+        "journal": {"publisher": "Dove Press", "language": ["English"], "title": "Breast
+        Cancer : Targets and Therapy", "country": "NZ", "number": "default", "volume":
+        "2011"}, "author": [{"name": "Vogel VG"}], "month": "10", "link": [{"url":
+        "http://www.dovepress.com/update-on-raloxifene-role-in-reducing-the-risk-of-invasive-breast-canc-a8510",
+        "type": "fulltext"}], "year": "2011", "subject": [{"code": "RC254-282", "term":
+        "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}],
+        "abstract": "Victor G Vogel Cancer Institute, Geisinger Health System, Danville,
+        PA, USA Abstract: Risk factors allow us to define women who are at increased
+        lifetime risk for breast cancer, and the most important factor is age. Benign
+        breast disease increases risk, and the most important histologies are atypical
+        lobular or ductal hyperplasia and lobular carcinoma in situ. Family history
+        of breast cancer among first-degree relatives (mother, sisters, daughters)
+        also increases risk. Quantitative measures of risk give accurate predictions
+        of breast cancer incidence for groups of women but not for individual subjects.
+        Multiple published, randomized controlled trials, which employed selective
+        estrogen receptor (ER) modulators (SERMs), have demonstrated consistent reductions
+        of 35% or greater in the risk of ER-positive invasive and noninvasive breast
+        cancer in postmenopausal women. Professional organizations in the US now recommend
+        the use of SERMs to reduce the risk of breast cancer in high-risk, postmenopausal
+        women. Raloxifene and tamoxifen reduce the risk of ER-positive invasive breast
+        cancer with equal efficacy, but raloxifene is associated with a lower risk
+        of thromboembolic disease, benign uterine conditions, and cataracts than tamoxifen
+        in postmenopausal women. No evidence exists establishing whether a reduction
+        in breast cancer risk from either agent translates into reduced breast cancer
+        mortality. Overall quality of life is similar with raloxifene or tamoxifen,
+        but the incidence of dyspareunia, weight gain, and musculoskeletal complaints
+        is higher with raloxifene use, whereas vasomotor symptoms, bladder incontinence,
+        gynecologic symptoms, and leg cramps were higher with tamoxifen use. Keywords:
+        selective estrogen receptor modulators (SERMs), raloxifene, risk reduction,
+        chemoprevention", "end_page": "137"}, "created_date": "2011-10-21T00:43:56Z"},
+        {"last_updated": "2015-04-22T04:21:28Z", "id": "e4551ba0ffb04065a0f62751d5c4c1a7",
+        "bibjson": {"start_page": "191", "title": "Breast cancer histology and receptor
+        status characterization in Asian Indian and Pakistani women in the U.S. -
+        a SEER analysis", "journal": {"publisher": "BioMed Central", "language": ["English"],
+        "license": [{"type": "CC BY", "title": "CC BY"}], "title": "BMC Cancer", "country":
+        "GB", "number": "1", "volume": "10"}, "author": [{"name": "Liyanage Samadhi"},
+        {"name": "Cote Michele"}, {"name": "Rozek Laura"}, {"name": "Kakarala Madhuri"},
+        {"name": "Brenner Dean E"}], "month": "5", "link": [{"url": "http://www.biomedcentral.com/1471-2407/10/191",
+        "type": "fulltext"}], "year": "2010", "identifier": [{"type": "doi", "id":
+        "10.1186/1471-2407-10-191"}, {"type": "pissn", "id": "1471-2407"}], "abstract":
+        "<p>Abstract</p> <p>Background</p> <p>Recent reports suggest increase in estrogen
+        receptor (ER), progesterone receptor (PR) negative breast cancer yet little
+        is known about histology or receptor status of breast cancer in Indian/Pakistani
+        women.in the U.S.</p> <p>Methods</p> <p>We examined the United States National
+        Cancer Institute''s Surveillance Epidemiology and End Results (SEER) Cancer
+        program to assess: a) frequency of breast cancer by age, b) histologic subtypes,
+        c) receptor status of breast cancer and, d) survival in Indians/Pakistanis
+        compared to Caucasians. There were 360,933 breast cancer cases diagnosed 1988-2006.
+        Chi-Square analyses and Cox proportional hazards models, to estimate relative
+        risks for breast cancer mortality after adjusting for confounders, were performed
+        using Statistical Analysis Software 9.2.</p> <p>Results</p> <p>Among Asian
+        Indian/Pakistani breast cancer patients, 16.2% were < 40 yrs. old compared
+        to 6.23% in Caucasians (p < 0.0001). Asian Indian women had more invasive
+        ductal carcinoma (69.1 vs. 65.7%, p < 0.0001), inflammatory cancer (1.4% vs.
+        0.8, p < 0.0001) and less invasive lobular carcinoma (4.2% vs. 8.1%, p < 0.0001)
+        than Caucasians. Asian Indian/Pakistani women had more ER/PR negative breast
+        cancer (30.6% vs. 21.8%, p = 0.0095) than Caucasians. Adjusting for stage
+        at diagnosis, age, tumor grade, nodal status, and histology, Asian Indian/Pakistani
+        women''s survival was similar to Caucasians, while African Americans'' was
+        worse.</p> <p>Conclusions</p> <p>Asian Indian/Pakistani women have higher
+        frequency of breast cancer (particularly in age < 40), ER/PR negative invasive
+        ductal and inflammatory cancer than Caucasians.</p> ", "subject": [{"code":
+        "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens",
+        "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme":
+        "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology",
+        "scheme": "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term":
+        "Health Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms.
+        Tumors. Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code":
+        "RC31-1245", "term": "Internal medicine", "scheme": "LCC"}, {"code": "R",
+        "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"},
+        {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health Sciences",
+        "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}]}, "created_date": "2010-06-18T00:00:00Z"}, {"last_updated":
+        "2015-08-06T16:42:39Z", "id": "a183851211ac47dcaca7cb85d2d36f5e", "bibjson":
+        {"identifier": [{"type": "pissn", "id": "2210-2612"}, {"type": "doi", "id":
+        "10.1016/j.ijscr.2015.06.023"}], "start_page": "103", "title": "Rectal metastasis
+        from Breast cancer: A rare entity", "journal": {"publisher": "Elsevier", "language":
+        ["EN"], "license": [{"url": "http://www.elsevier.com/journals/international-journal-of-surgery-case-reports/2210-2612/open-access-journal",
+        "open_access": true, "type": "CC BY-NC-ND", "title": "CC BY-NC-ND"}], "title":
+        "International Journal of Surgery Case Reports", "country": "NL", "number":
+        "C", "volume": "13"}, "author": [{"email": "isao.nce@gmail.com", "name": "Cho
+        Ee Ng"}, {"email": "luciejwright@doctors.org.uk", "name": "Lucie Wright"},
+        {"email": "andrewpieri2@gmail.com", "name": "Andrew Pieri"}, {"email": "aybfxuk@googlemail.com",
+        "name": "Anas Belhasan"}, {"email": "tani.fasih@ghnt.nhs.uk", "name": "Tarannum
+        Fasih"}], "link": [{"url": "http://www.sciencedirect.com/science/article/pii/S2210261215002849",
+        "type": "fulltext"}], "year": "2015", "keywords": ["Breast cancer", "Invasive
+        lobular cancer", "Rectal metastases"], "end_page": "105", "abstract": "Introduction:
+        Breast cancer metastases occurs in around 50% of all presentation. It is the
+        second most common type of cancer to metastasise to the GI tract but this
+        only occurs in less than 1% of cases.\nPresentation of case: We report a case
+        that underwent treatment for invasive lobular cancer (ILC) of the breast and
+        5 years later was found to have rectal and peritoneal metastasis. She is currently
+        receiving palliative management including chemotherapy in the form of weekly
+        Paclitaxel (Taxol\u00ae) and stenting to relieve obstruction.\nConclusion:
+        There should be high clinical suspicion of bowel metastasis in patients presenting
+        with positive faecal occult blood with or without bowel symptoms even if the
+        incidence is less <1% of metastases, particularly in cases where the initial
+        breast tumour was large, with positive axillary nodes.", "subject": [{"code":
+        "RD1-811", "term": "Surgery", "scheme": "LCC"}]}, "created_date": "2015-08-06T16:42:39Z"}],
+        "query": "Breast+cancer+patients+with+lobular+cancer+more+commonly+have+a+father+than+a+mother+diagnosed+with+cancer",
+        "total": 1708725, "page": 1}'
+    http_version: 
+  recorded_at: Wed, 16 Sep 2015 15:58:52 GMT
+- request:
+    method: get
+    uri: https://doaj.org/api/v1/search/articles/Breast+cancer+patients+with+lobular+cancer+more+commonly+have+a+father+than+a+mother+diagnosed+with+cancer?pageSize=10
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Wed, 16 Sep 2015 16:50:32 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '35667'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Set-Cookie:
+      - session="UspzkET/3IS3Z8PIxKnLAhLnXDY=?_id=UycyNmYyZmZkMzhkMjA5MWE0NmNjZTU2YTI4OGJjNDZlNycKcDEKLg==";
+        Path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"pageSize": 10, "timestamp": "2015-0916T16:50:32Z", "results": [{"last_updated":
+        "2015-04-22T03:59:29Z", "id": "c7cbb0516de24de2bdcfb3d81a40ab1b", "bibjson":
+        {"start_page": "497", "title": "Breast cancer patients with lobular cancer
+        more commonly have a father than a mother diagnosed with cancer", "journal":
+        {"publisher": "BioMed Central", "language": ["English"], "license": [{"type":
+        "CC BY", "title": "CC BY"}], "title": "BMC Cancer", "country": "GB", "number":
+        "1", "volume": "11"}, "author": [{"name": "Ellberg Carolina"}, {"name": "Olsson
+        H\u00e5kan"}], "month": "11", "link": [{"url": "http://www.biomedcentral.com/1471-2407/11/497",
+        "type": "fulltext"}], "year": "2011", "identifier": [{"type": "doi", "id":
+        "10.1186/1471-2407-11-497"}, {"type": "pissn", "id": "1471-2407"}], "abstract":
+        "<p>Abstract</p> <p>Background</p> <p>The association between lobular breast
+        cancer and family history is not clear. The aim of the study was to possibly
+        identifying new hereditary patterns predisposing for cancer in the different
+        histopathologic subtypes of breast cancer, with focus on patients with lobular
+        breast cancer and cancer in their first degree relatives.</p> <p>Methods</p>
+        <p>In 1676 consecutive breast cancer patients detailed family history of cancer
+        was related to histopathologic subtype of breast cancer.</p> <p>Results</p>
+        <p>Patients with lobular breast cancer were found to be significantly positively
+        associated with having a father diagnosed with cancer, OR 2.17 (95% confidence
+        interval (CI) 1.37-3.46). The finding persisted after excluding breast cancer
+        in the family. Ductal breast cancer was associated with having a mother diagnosed
+        with cancer. There was a significant association between lobular breast cancer
+        and having a father with prostate cancer, OR 2.4 (CI 1.1-5.3). The occurrence
+        of having a father with prostate cancer for lobular breast cancer patients
+        was higher in the younger patient group, OR 2.9 (CI 1.1-7.8), and was still
+        high but lost statistical significance in the older patient group, OR 1.9
+        (CI 0.5-7.4). The association between lobular breast cancer and a father remained
+        significant after excluding fathers with prostate cancer, OR 1.94 (CI 1.20-3.14).
+        Other commonly occurring tumor types in the father included sarcoma and leukemia.</p>
+        <p>Conclusion</p> <p>We propose that lobular breast cancer is associated with
+        having a father diagnosed with cancer, most commonly prostate carcinoma. Since
+        the association remained after excluding family history of breast cancer,
+        the association seems independent of classical breast cancer heredity. The
+        association with a father diagnosed with cancer also remained after removing
+        prostate cancer, indicating an independence from prostate cancer as well.
+        The reason for this association is genetically unclear, but could involve
+        sex-specific imprinting.</p> ", "subject": [{"code": "RC254-282", "term":
+        "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}]},
+        "created_date": "2013-03-12T01:21:44Z"}, {"last_updated": "2015-04-22T02:51:14Z",
+        "id": "6fdef0952adc4e439b320bfd0463f026", "bibjson": {"start_page": "74",
+        "title": "Lobular neoplasia: frequency and association with other breast lesions",
+        "journal": {"publisher": "BioMed Central", "language": ["English"], "license":
+        [{"type": "CC BY", "title": "CC BY"}], "title": "Diagnostic Pathology", "country":
+        "GB", "number": "1", "volume": "6"}, "author": [{"name": "Gobbi Helenice"},
+        {"name": "Porto Simone S"}, {"name": "Balabram D\u00e9bora"}, {"name": "Gomes
+        Douglas S"}], "month": "8", "link": [{"url": "http://www.diagnosticpathology.org/content/6/1/74",
+        "type": "fulltext"}], "year": "2011", "keywords": ["breast cancer", "lobular
+        neoplasia", "ductal carcinoma <it>in situ</it>", "columnar cell lesions"],
+        "identifier": [{"type": "doi", "id": "10.1186/1746-1596-6-74"}, {"type": "pissn",
+        "id": "1746-1596"}], "abstract": "<p>Abstract</p> <p>Background</p> <p>Using
+        new molecular biology techniques, recent studies have implicated a common
+        evolutionary pathway between lobular neoplasia, lobular carcinomas, and columnar
+        cell lesions. Our aims were to assess the frequency of lobular neoplasia in
+        a series of breast biopsies that were performed and examined in the same institution
+        and to analyze the association between subtypes of lobular neoplasia and benign
+        and malignant breast lesions.</p> <p>Methods</p> <p>Cases were selected after
+        reviewing archived pathological reports in the Breast Pathology Laboratory,
+        School of Medicine of Federal University of Minas Gerais (1999-2008). Cases
+        of lobular neoplasia were reviewed and classified as atypical lobular hyperplasia,
+        ductal involvement by cells of atypical lobular hyperplasia, lobular carcinoma
+        <it>in situ</it>, and pleomorphic lobular carcinoma <it>in situ</it>. Coexistence
+        of lobular neoplasia with other breast lesions, including columnar cell lesions,
+        invasive ductal carcinoma and invasive lobular carcinoma, was evaluated. The
+        association between lobular neoplasia and breast lesions was analyzed by Fisher''s
+        exact test and chi-square test for linear trend.</p> <p>Results</p> <p>We
+        analyzed 5650 breast specimens, selecting 135 breast specimens (2.4%) that
+        had a diagnosis of lobular neoplasia, corresponding to 106 patients. Hematoxylin
+        and eosin-stained slides were available for 84 cases, 5 of which were excluded
+        because they contained only \"indeterminate\" <it>in situ </it>lesions. Of
+        the 79 remaining cases, columnar cell lesions were present in 78.5%, primarily
+        with columnar cell changes without atypia (67.7%). Invasive carcinoma was
+        present in 45.6% of cases of lobular neoplasia--a similar frequency (47.2%)
+        as invasive ductal carcinoma and invasive lobular carcinoma. We noted a significant
+        linear trend (p < 0.03) of a higher frequency of invasive carcinomas that
+        were concomitant with lobular carcinoma <it>in situ </it>compared with atypical
+        lobular hyperplasia. Invasive lobular carcinomas were associated with lobular
+        carcinoma <it>in situ </it>in 33% of cases, compared with 2.8% of atypical
+        lobular hyperplasia cases.</p> <p>Conclusions</p> <p>Our findings confirm
+        a frequent association between lobular neoplasia and columnar cell lesions,
+        the majority of which lacked atypia. We also observed a greater frequency
+        of invasive carcinoma, more commonly invasive lobular carcinoma, associated
+        with more developed forms of lobular neoplasia (lobular carcinoma <it>in situ</it>).</p>
+        ", "subject": [{"code": "RB1-214", "term": "Pathology", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Pathology",
+        "scheme": "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term":
+        "Health Sciences", "scheme": "DOAJ"}, {"code": "RB1-214", "term": "Pathology",
+        "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term":
+        "Pathology", "scheme": "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"},
+        {"term": "Health Sciences", "scheme": "DOAJ"}, {"code": "RB1-214", "term":
+        "Pathology", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme":
+        "LCC"}, {"code": "RB1-214", "term": "Pathology", "scheme": "LCC"}, {"code":
+        "R", "term": "Medicine", "scheme": "LCC"}, {"code": "RB1-214", "term": "Pathology",
+        "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}]}, "created_date":
+        "2011-11-19T00:00:00Z"}, {"last_updated": "2015-04-22T03:48:12Z", "id": "b93ddf2db71140d6af5f815dad9d5ed6",
+        "bibjson": {"identifier": [{"type": "pissn", "id": "1179-1411"}], "start_page":
+        "935", "title": "Pregnancy-associated breast cancer: optimal treatment options",
+        "journal": {"publisher": "Dove Press", "language": ["English"], "title": "International
+        Journal of Women''s Health ", "country": "GB", "number": "default", "volume":
+        "2014"}, "author": [{"name": "Cardonick E"}], "month": "11", "link": [{"url":
+        "http://www.dovepress.com/pregnancy-associated-breast-cancer-optimal-treatment-options-peer-reviewed-article-IJWH",
+        "type": "fulltext", "content_type": "html"}], "year": "2014", "subject": [{"code":
+        "RG1-991", "term": "Gynecology and obstetrics", "scheme": "LCC"}, {"code":
+        "R", "term": "Medicine", "scheme": "LCC"}], "abstract": "\nElyce Cardonick
+        Division of Maternal-Fetal Medicine, Department of Obstetrics and Gynecology,
+        Cooper University Hospital, Camden, NJ, USA  Abstract: Cancer is diagnosed
+        approximately once per 1,000 pregnancies; most commonly due to the reproductive
+        age of the women, these include breast, cervical, melanoma, thyroid, and Hodgkin&#39;s
+        lymphoma diagnoses. As a single diagnosis, breast cancer is the most common
+        cancer diagnosed during pregnancy. Cancer is expected to complicate pregnancy
+        more often due to the trend for women to delay child bearing to later maternal
+        ages. Delayed first birth is itself a risk factor for breast cancer. Termination
+        of pregnancy has not been shown to afford a survival benefit. While protecting
+        the interests of mother and unborn fetus, breast cancer can be safely diagnosed,
+        staged, and treated during pregnancy with good outcomes for both. Some modification
+        of the protocols used for nonpregnant women with suspicious palpable breast
+        masses is required. This article reviews the challenges for physicians in
+        making the diagnosis of breast cancer during pregnancy and upon diagnosis,
+        counseling patients about treatment options. The consequences of diagnostic
+        investigations and cancer treatment for the exposed fetus are also addressed.  Keywords:
+        chemotherapy, in utero exposure, gestational", "end_page": "943"}, "created_date":
+        "2014-11-05T20:30:07Z"}, {"last_updated": "2015-09-07T23:00:05Z", "id": "98ec9281d0434869a6678d5e2674414a",
+        "bibjson": {"identifier": [{"type": "pissn", "id": "1179-1314"}], "start_page":
+        "293", "title": "Taxanes in the elderly patient with metastatic breast cancer",
+        "journal": {"publisher": "Dove Press", "language": ["English"], "title": "Breast
+        Cancer : Targets and Therapy", "country": "NZ", "number": "default", "volume":
+        "2015"}, "author": [{"name": "Yardley DA"}], "month": "9", "link": [{"url":
+        "https://www.dovepress.com/taxanes-in-the-elderly-patient-with-metastatic-breast-cancer-peer-reviewed-article-BCTT",
+        "type": "fulltext", "content_type": "html"}], "year": "2015", "end_page":
+        "301", "abstract": "Denise A Yardley Sarah Cannon Research Institute, Nashville,
+        TN, USA  Abstract: More than 40% of all breast cancer cases are diagnosed
+        in patients aged &ge;65 years, accounting for an ever-increasing disease burden
+        in the elderly. Historically, however, this growing population of breast cancer
+        patients has been underrepresented in clinical trials, resulting in a paucity
+        of data that clinicians can reference in making treatment decisions for their
+        older patients. A consequence may be the undertreatment of elderly patients,
+        who have the highest incidence of breast cancer. However, subgroup analyses
+        of elderly patients in multiple early-Phase (I or II) studies and a handful
+        of small studies with elderly-specific populations have suggested that older
+        patients may experience similar benefit from cancer therapy as younger patients
+        with otherwise similar baseline characteristics. Although steps should be
+        taken to avoid undertreating older patients, a balance must be achieved to
+        avoid overtreatment. Guidelines have been released detailing recommendations
+        for the treatment of elderly breast cancer patients, including a discussion
+        of various geriatric assessments that might aid physicians in selecting patients
+        appropriate for recommended treatment options. Chemotherapy remains a key
+        component of treatment regimens for many older patients. However, the benefit
+        of some agents may be limited by tolerability issues. Taxanes, one of the
+        most established classes of chemotherapy for breast cancer, are known to be
+        highly active and efficacious and to have well-characterized safety profiles.
+        This review discusses factors that influence treatment choices for elderly
+        patients with metastatic breast cancer, and then focuses on clinical data
+        for taxanes in this patient population.  Keywords: breast cancer, elderly,
+        taxane, chemotherapy, treatment guidelines", "subject": [{"code": "RC254-282",
+        "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}]}, "created_date": "2015-09-07T23:00:05Z"},
+        {"last_updated": "2015-04-22T04:18:47Z", "id": "e0eec9c4a7124aac8bf015ac1d8954d4",
+        "bibjson": {"identifier": [{"type": "pissn", "id": "1837-9664"}], "start_page":
+        "226", "title": "A Case Report: Lobular Carcinoma In Situ in a Male Patient
+        with Subsequent Invasive Ductal Carcinoma Identified on Screening Breast MRI",
+        "journal": {"publisher": "Ivyspring International Publisher", "language":
+        ["English"], "license": [{"type": "CC BY-NC-ND", "title": "CC BY-NC-ND"}],
+        "title": "Journal of Cancer", "country": "AU", "number": "1", "volume": "3"},
+        "author": [{"name": "Linda Kao, Yekaterina Bulkin, Susan Fineberg, Leslie
+        Montgomery, Tova Koenigsberg"}], "link": [{"url": "http://www.jcancer.org/v03p0226.htm",
+        "type": "fulltext"}], "year": "2012", "subject": [{"code": "RC254-282", "term":
+        "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}],
+        "abstract": "<p>Lobular carcinoma in situ is a form of in situ neoplasia that
+        develops within the terminal lobules of the breast. It is an extremely rare
+        finding in males due to the lack of lobular development in the male breast.
+        The authors herein report an unusual case of incidentally discovered lobular
+        carcinoma in situ in a male patient with recurrent bilateral gynecomastia
+        who was subsequently diagnosed with invasive ductal carcinoma of the left
+        breast. The pathology of lobular carcinoma in situ in a male as well as screening
+        MRI surveillance of male patients at high risk for breast cancer are discussed,
+        emphasizing the importance of screening and imaging follow up in men who are
+        at high risk for breast cancer.</p>", "end_page": "230"}, "created_date":
+        "2012-07-15T06:32:18Z"}, {"last_updated": "2015-09-15T08:30:42Z", "id": "db67681778e24939aa7c2f863d1a7069",
+        "bibjson": {"identifier": [{"type": "pissn", "id": "2210-2612"}, {"type":
+        "doi", "id": "10.1016/j.ijscr.2015.07.036"}], "start_page": "141", "title":
+        "Concomitant endometrial and gallbladder metastasis in advanced multiple metastatic
+        invasive lobular carcinoma of the breast: A rare case report", "journal":
+        {"publisher": "Elsevier", "language": ["EN"], "license": [{"url": "http://www.elsevier.com/journals/international-journal-of-surgery-case-reports/2210-2612/open-access-journal",
+        "open_access": true, "type": "CC BY-NC-ND", "title": "CC BY-NC-ND"}], "title":
+        "International Journal of Surgery Case Reports", "country": "NL", "number":
+        "C", "volume": "14"}, "author": [{"affiliation": "Michigan State University,
+        Hurley Medical Center, Trauma Services Department, One Hurley Plaza, Flint,
+        MI 48503, USA", "email": "ksenbez@gmail.com", "name": "Kseniya Bezpalko"},
+        {"affiliation": "Hurley Medical Center, Trauma Services Department, One Hurley
+        Plaza, Flint, MI 48503, USA", "name": "Mohamed A. Mohamed"}, {"affiliation":
+        "Hurley Medical Center, Trauma Services Department, One Hurley Plaza, Flint,
+        MI 48503, USA", "name": "Leo Mercer"}, {"affiliation": "Hurley Medical Center,
+        Trauma Services Department, One Hurley Plaza, Flint, MI 48503, USA", "name":
+        "Michael McCann"}, {"affiliation": "Hurley Medical Center, Trauma Services
+        Department, One Hurley Plaza, Flint, MI 48503, USA", "name": "Karim Elghawy"},
+        {"affiliation": "Hurley Medical Center, Trauma Services Department, One Hurley
+        Plaza, Flint, MI 48503, USA", "name": "Kenneth Wilson"}], "link": [{"url":
+        "http://www.sciencedirect.com/science/article/pii/S2210261215003430", "type":
+        "fulltext"}], "year": "2015", "keywords": ["Breast cancer", "Infiltrating
+        lobular carcinoma", "Biliary metastasis", "Acute cholecystitis", "Endometrial
+        metastasis", "Uterine metastasis"], "end_page": "145", "abstract": "Introduction:
+        At time of presentation, fewer than 10% of patients have metastatic breast
+        cancer. The most common sites of metastasis in order of frequency are bone,
+        lung, pleura, soft tissue, and liver. Breast cancer metastasis to the uterus
+        or gallbladder is rare and has infrequently been reported in the English literature.\nPresentation
+        of case: A 47 year old female with a recent history of thrombocytopenia presented
+        with abnormal vaginal bleeding. Pelvic ultrasound revealed multiple uterine
+        fibroids and endometrial curettings revealed cells consistent with lobular
+        carcinoma of the breast. Breast examination revealed edema and induration
+        of the lower half of the right breast. Biopsy of the right breast revealed
+        invasive lobular carcinoma. Bone marrow aspiration obtained at a previous
+        outpatient visit revealed extensive involvement by metastatic breast carcinoma.
+        Shortly after discharge, the patient presented with acute cholecystitis and
+        underwent cholecystectomy. Microscopic examination of the gallbladder revealed
+        metastatic infiltrating lobular carcinoma. The final diagnosis was invasive
+        lobular carcinoma of the right breast with metastasis to the bone marrow,
+        endometrium, gallbladder, regional lymph nodes, and peritoneum.\nDiscussion:
+        The growth pattern of invasive lobular carcinoma of the breast is unique and
+        poses a challenge in diagnosing the cancer at an early stage. Unlike other
+        types of breast cancer, it tends to metastasize more to the peritoneum, ovary,
+        and gastrointestinal tract. Metastasis to the endometrium or gallbladder is
+        rare.\nConclusion: Metastatic spread should be considered in the differential
+        diagnosis of patients with invasive lobular breast carcinoma presenting with
+        abnormal vaginal bleeding or acute cholecystitis.", "subject": [{"code": "RD1-811",
+        "term": "Surgery", "scheme": "LCC"}]}, "created_date": "2015-09-15T08:30:42Z"},
+        {"last_updated": "2015-04-22T02:48:10Z", "id": "6bdc5b0ccbe242a8987744afaaf08984",
+        "bibjson": {"start_page": "134", "title": "Differential pattern and prognostic
+        significance of CD4<sup>+</sup>, FOXP3<sup>+ </sup>and IL-17<sup>+ </sup>tumor
+        infiltrating lymphocytes in ductal and lobular breast cancers", "journal":
+        {"publisher": "BioMed Central", "language": ["English"], "license": [{"type":
+        "CC BY", "title": "CC BY"}], "title": "BMC Cancer", "country": "GB", "number":
+        "1", "volume": "12"}, "author": [{"name": "Droeser Raoul"}, {"name": "Zlobec
+        Inti"}, {"name": "Kilic Ergin"}, {"name": "G\u00fcth Uwe"}, {"name": "Heberer
+        Michael"}, {"name": "Spagnoli Giulio"}, {"name": "Oertli Daniel"}, {"name":
+        "Tapia Coya"}], "month": "4", "link": [{"url": "http://www.biomedcentral.com/1471-2407/12/134",
+        "type": "fulltext"}], "year": "2012", "identifier": [{"type": "doi", "id":
+        "10.1186/1471-2407-12-134"}, {"type": "pissn", "id": "1471-2407"}], "abstract":
+        "<p>Abstract</p> <p>Background</p> <p>Clinical relevance of tumor infiltrating
+        lymphocytes (TILs) in breast cancer is controversial. Here, we used a tumor
+        microarray including a large series of ductal and lobular breast cancers with
+        long term follow up data, to analyze clinical impact of TIL expressing specific
+        phenotypes and distribution of TILs within different tumor compartments and
+        in different histological subtypes.</p> <p>Methods</p> <p>A tissue microarray
+        (TMA) including 894 ductal and 164 lobular breast cancers was stained with
+        antibodies recognizing CD4, FOXP3, and IL-17 by standard immunohistochemical
+        techniques. Lymphocyte counts were correlated with clinico-pathological parameters
+        and survival.</p> <p>Results</p> <p>CD4<sup>+ </sup>lymphocytes were more
+        prevalent than FOXP3<sup>+ </sup>TILs whereas IL-17<sup>+ </sup>TILs were
+        rare. Increased numbers of total CD4<sup>+ </sup>and FOXP3<sup>+ </sup>TIL
+        were observed in ductal, as compared with lobular carcinomas. High grade (G3)
+        and estrogen receptor (ER) negative ductal carcinomas displayed significantly
+        (<it>p </it> < 0.001) higher CD4<sup>+ </sup>and FOXP3<sup>+ </sup>lymphocyte
+        infiltration while her2/neu over-expression in ductal carcinomas was significantly
+        (<it>p </it> < 0.001) associated with higher FOXP3<sup>+ </sup>TIL counts.
+        In contrast, lymphocyte infiltration was not linked to any clinico-pathological
+        parameters in lobular cancers. In univariate but not in multivariate analysis
+        CD4<sup>+ </sup>infiltration was associated with significantly shorter survival
+        in patients bearing ductal, but not lobular cancers. However, a FOXP3<sup>+</sup>/CD4<sup>+
+        </sup>ratio > 1 was associated with improved overall survival even in multivariate
+        analysis (<it>p </it>= 0.033).</p> <p>Conclusions</p> <p>Ductal and lobular
+        breast cancers appear to be infiltrated by different lymphocyte subpopulations.
+        In ductal cancers increased CD4<sup>+ </sup>and FOXP3<sup>+ </sup>TIL numbers
+        are associated with more aggressive tumor features. In survival analysis,
+        absolute numbers of TILs do not represent major prognostic indicators in ductal
+        and lobular breast cancer. Remarkably however, a ratio > 1 of total FOXP3<sup>+</sup>/CD4<sup>+
+        </sup>TILs in ductal carcinoma appears to represent an independent favorable
+        prognostic factor.</p> ", "subject": [{"code": "RC254-282", "term": "Neoplasms.
+        Tumors. Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code":
+        "RC31-1245", "term": "Internal medicine", "scheme": "LCC"}, {"code": "R",
+        "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"},
+        {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health Sciences",
+        "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}]},
+        "created_date": "2013-03-12T01:23:02Z"}, {"last_updated": "2015-04-22T02:09:36Z",
+        "id": "3998cf20a4bf48b8a83fdb8b1d1e7361", "bibjson": {"identifier": [{"type":
+        "pissn", "id": "1179-1314"}], "start_page": "127", "title": "Update on raloxifene:
+        role in reducing the risk of invasive breast cancer in postmenopausal women",
+        "journal": {"publisher": "Dove Press", "language": ["English"], "title": "Breast
+        Cancer : Targets and Therapy", "country": "NZ", "number": "default", "volume":
+        "2011"}, "author": [{"name": "Vogel VG"}], "month": "10", "link": [{"url":
+        "http://www.dovepress.com/update-on-raloxifene-role-in-reducing-the-risk-of-invasive-breast-canc-a8510",
+        "type": "fulltext"}], "year": "2011", "subject": [{"code": "RC254-282", "term":
+        "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}],
+        "abstract": "Victor G Vogel Cancer Institute, Geisinger Health System, Danville,
+        PA, USA Abstract: Risk factors allow us to define women who are at increased
+        lifetime risk for breast cancer, and the most important factor is age. Benign
+        breast disease increases risk, and the most important histologies are atypical
+        lobular or ductal hyperplasia and lobular carcinoma in situ. Family history
+        of breast cancer among first-degree relatives (mother, sisters, daughters)
+        also increases risk. Quantitative measures of risk give accurate predictions
+        of breast cancer incidence for groups of women but not for individual subjects.
+        Multiple published, randomized controlled trials, which employed selective
+        estrogen receptor (ER) modulators (SERMs), have demonstrated consistent reductions
+        of 35% or greater in the risk of ER-positive invasive and noninvasive breast
+        cancer in postmenopausal women. Professional organizations in the US now recommend
+        the use of SERMs to reduce the risk of breast cancer in high-risk, postmenopausal
+        women. Raloxifene and tamoxifen reduce the risk of ER-positive invasive breast
+        cancer with equal efficacy, but raloxifene is associated with a lower risk
+        of thromboembolic disease, benign uterine conditions, and cataracts than tamoxifen
+        in postmenopausal women. No evidence exists establishing whether a reduction
+        in breast cancer risk from either agent translates into reduced breast cancer
+        mortality. Overall quality of life is similar with raloxifene or tamoxifen,
+        but the incidence of dyspareunia, weight gain, and musculoskeletal complaints
+        is higher with raloxifene use, whereas vasomotor symptoms, bladder incontinence,
+        gynecologic symptoms, and leg cramps were higher with tamoxifen use. Keywords:
+        selective estrogen receptor modulators (SERMs), raloxifene, risk reduction,
+        chemoprevention", "end_page": "137"}, "created_date": "2011-10-21T00:43:56Z"},
+        {"last_updated": "2015-04-22T04:21:28Z", "id": "e4551ba0ffb04065a0f62751d5c4c1a7",
+        "bibjson": {"start_page": "191", "title": "Breast cancer histology and receptor
+        status characterization in Asian Indian and Pakistani women in the U.S. -
+        a SEER analysis", "journal": {"publisher": "BioMed Central", "language": ["English"],
+        "license": [{"type": "CC BY", "title": "CC BY"}], "title": "BMC Cancer", "country":
+        "GB", "number": "1", "volume": "10"}, "author": [{"name": "Liyanage Samadhi"},
+        {"name": "Cote Michele"}, {"name": "Rozek Laura"}, {"name": "Kakarala Madhuri"},
+        {"name": "Brenner Dean E"}], "month": "5", "link": [{"url": "http://www.biomedcentral.com/1471-2407/10/191",
+        "type": "fulltext"}], "year": "2010", "identifier": [{"type": "doi", "id":
+        "10.1186/1471-2407-10-191"}, {"type": "pissn", "id": "1471-2407"}], "abstract":
+        "<p>Abstract</p> <p>Background</p> <p>Recent reports suggest increase in estrogen
+        receptor (ER), progesterone receptor (PR) negative breast cancer yet little
+        is known about histology or receptor status of breast cancer in Indian/Pakistani
+        women.in the U.S.</p> <p>Methods</p> <p>We examined the United States National
+        Cancer Institute''s Surveillance Epidemiology and End Results (SEER) Cancer
+        program to assess: a) frequency of breast cancer by age, b) histologic subtypes,
+        c) receptor status of breast cancer and, d) survival in Indians/Pakistanis
+        compared to Caucasians. There were 360,933 breast cancer cases diagnosed 1988-2006.
+        Chi-Square analyses and Cox proportional hazards models, to estimate relative
+        risks for breast cancer mortality after adjusting for confounders, were performed
+        using Statistical Analysis Software 9.2.</p> <p>Results</p> <p>Among Asian
+        Indian/Pakistani breast cancer patients, 16.2% were < 40 yrs. old compared
+        to 6.23% in Caucasians (p < 0.0001). Asian Indian women had more invasive
+        ductal carcinoma (69.1 vs. 65.7%, p < 0.0001), inflammatory cancer (1.4% vs.
+        0.8, p < 0.0001) and less invasive lobular carcinoma (4.2% vs. 8.1%, p < 0.0001)
+        than Caucasians. Asian Indian/Pakistani women had more ER/PR negative breast
+        cancer (30.6% vs. 21.8%, p = 0.0095) than Caucasians. Adjusting for stage
+        at diagnosis, age, tumor grade, nodal status, and histology, Asian Indian/Pakistani
+        women''s survival was similar to Caucasians, while African Americans'' was
+        worse.</p> <p>Conclusions</p> <p>Asian Indian/Pakistani women have higher
+        frequency of breast cancer (particularly in age < 40), ER/PR negative invasive
+        ductal and inflammatory cancer than Caucasians.</p> ", "subject": [{"code":
+        "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens",
+        "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme":
+        "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology",
+        "scheme": "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term":
+        "Health Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms.
+        Tumors. Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code":
+        "RC31-1245", "term": "Internal medicine", "scheme": "LCC"}, {"code": "R",
+        "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"},
+        {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health Sciences",
+        "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}]}, "created_date": "2010-06-18T00:00:00Z"}, {"last_updated":
+        "2015-08-06T16:42:39Z", "id": "a183851211ac47dcaca7cb85d2d36f5e", "bibjson":
+        {"identifier": [{"type": "pissn", "id": "2210-2612"}, {"type": "doi", "id":
+        "10.1016/j.ijscr.2015.06.023"}], "start_page": "103", "title": "Rectal metastasis
+        from Breast cancer: A rare entity", "journal": {"publisher": "Elsevier", "language":
+        ["EN"], "license": [{"url": "http://www.elsevier.com/journals/international-journal-of-surgery-case-reports/2210-2612/open-access-journal",
+        "open_access": true, "type": "CC BY-NC-ND", "title": "CC BY-NC-ND"}], "title":
+        "International Journal of Surgery Case Reports", "country": "NL", "number":
+        "C", "volume": "13"}, "author": [{"email": "isao.nce@gmail.com", "name": "Cho
+        Ee Ng"}, {"email": "luciejwright@doctors.org.uk", "name": "Lucie Wright"},
+        {"email": "andrewpieri2@gmail.com", "name": "Andrew Pieri"}, {"email": "aybfxuk@googlemail.com",
+        "name": "Anas Belhasan"}, {"email": "tani.fasih@ghnt.nhs.uk", "name": "Tarannum
+        Fasih"}], "link": [{"url": "http://www.sciencedirect.com/science/article/pii/S2210261215002849",
+        "type": "fulltext"}], "year": "2015", "keywords": ["Breast cancer", "Invasive
+        lobular cancer", "Rectal metastases"], "end_page": "105", "abstract": "Introduction:
+        Breast cancer metastases occurs in around 50% of all presentation. It is the
+        second most common type of cancer to metastasise to the GI tract but this
+        only occurs in less than 1% of cases.\nPresentation of case: We report a case
+        that underwent treatment for invasive lobular cancer (ILC) of the breast and
+        5 years later was found to have rectal and peritoneal metastasis. She is currently
+        receiving palliative management including chemotherapy in the form of weekly
+        Paclitaxel (Taxol\u00ae) and stenting to relieve obstruction.\nConclusion:
+        There should be high clinical suspicion of bowel metastasis in patients presenting
+        with positive faecal occult blood with or without bowel symptoms even if the
+        incidence is less <1% of metastases, particularly in cases where the initial
+        breast tumour was large, with positive axillary nodes.", "subject": [{"code":
+        "RD1-811", "term": "Surgery", "scheme": "LCC"}]}, "created_date": "2015-08-06T16:42:39Z"}],
+        "query": "Breast+cancer+patients+with+lobular+cancer+more+commonly+have+a+father+than+a+mother+diagnosed+with+cancer",
+        "total": 1708734, "page": 1}'
+    http_version: 
+  recorded_at: Wed, 16 Sep 2015 16:50:32 GMT
+recorded_with: VCR 2.9.3
