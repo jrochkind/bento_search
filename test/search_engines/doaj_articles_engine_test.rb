@@ -63,7 +63,7 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
   end
 
   test_with_cassette("fielded search", :doaj_articles) do
-    results = @engine.search('Code4Lib Journal', :semantic_search_field => :publication_name)
+    results = @engine.search('"Code4Lib Journal"', :semantic_search_field => :publication_name)
 
     assert ! results.failed?
 
@@ -81,6 +81,18 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
     last_path = CGI.unescape(last_path)
 
     assert_equal "Me\\: And\\\/Or You", last_path
+  end
+
+  test "does not escape double quotes" do
+    # we want to allow them for phrase searching
+    url = @engine.args_to_search_url(:query => '"This is a phrase"')
+
+    parsed = URI.parse(url)
+
+    last_path = parsed.path.split('/').last
+    last_path = CGI.unescape(last_path)
+
+    assert_equal '"This is a phrase"', last_path
   end
 
   test "adds sort to query url" do

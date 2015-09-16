@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://doaj.org/api/v1/search/articles/Code4Lib+Journal?pageSize=10
+    uri: https://doaj.org/api/v1/search/articles/%22Code4Lib+Journal%22?pageSize=10
     body:
       encoding: UTF-8
       string: ''
@@ -15,11 +15,11 @@ http_interactions:
       Server:
       - nginx/1.4.6 (Ubuntu)
       Date:
-      - Wed, 16 Sep 2015 18:54:12 GMT
+      - Wed, 16 Sep 2015 18:57:21 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '15170'
+      - '13396'
       Connection:
       - keep-alive
       Vary:
@@ -32,7 +32,7 @@ http_interactions:
         Path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: '{"pageSize": 10, "timestamp": "2015-0916T18:54:12Z", "results": [{"last_updated":
+      string: '{"pageSize": 10, "timestamp": "2015-0916T18:57:21Z", "results": [{"last_updated":
         "2015-04-22T03:48:49Z", "id": "b9f0b5fb8e3a487388ec8aba4041bfa7", "bibjson":
         {"title": "Editorial Introduction: On Being on The Code4Lib Journal Editorial
         Committee", "journal": {"publisher": "Code4Lib", "language": ["English"],
@@ -43,129 +43,7 @@ http_interactions:
         [{"type": "pissn", "id": "1940-5758"}], "abstract": "Behind the scenes of
         the The Code4Lib Journal...", "subject": [{"code": "Z", "term": "Bibliography.
         Library science. Information resources", "scheme": "LCC"}]}, "created_date":
-        "2014-10-21T22:30:02Z"}, {"last_updated": "2015-04-22T01:34:11Z", "id": "0c668438777c4b259da98e3adc928e7a",
-        "bibjson": {"title": "CONFERENCE REPORT: Code4Lib 2010", "journal": {"publisher":
-        "Code4Lib", "language": ["English"], "license": [{"type": "CC BY", "title":
-        "CC BY"}], "title": "Code4Lib Journal", "country": "US", "number": "9"}, "author":
-        [{"name": "Birong Ho"}, {"name": "Banurekha Lakshminarayanan"}, {"name": "Vanessa
-        Meireles"}], "month": "03", "link": [{"url": "http://journal.code4lib.org/articles/2717",
-        "type": "fulltext"}], "year": "2010", "keywords": ["c4l10", "code4lib"], "identifier":
-        [{"type": "pissn", "id": "1940-5758"}], "abstract": "Conference reports from
-        the 5th Code4Lib Conference, held in Asheville, NC, from February 22 to 25,
-        2010. The Code4Lib conference is a collective volunteer effort of the Code4Lib
-        community of library technologists. Included are three brief reports on the
-        conference from the recipients of conference scholarships.  ", "subject":
-        [{"code": "Z", "term": "Bibliography. Library science. Information resources",
-        "scheme": "LCC"}, {"term": "Library and Information Science", "scheme": "DOAJ"},
-        {"term": "Social Sciences", "scheme": "DOAJ"}, {"code": "Z", "term": "Bibliography.
-        Library science. Information resources", "scheme": "LCC"}, {"term": "Library
-        and Information Science", "scheme": "DOAJ"}, {"term": "Social Sciences", "scheme":
-        "DOAJ"}, {"code": "Z", "term": "Bibliography. Library science. Information
-        resources", "scheme": "LCC"}, {"term": "Library and Information Science",
-        "scheme": "DOAJ"}, {"term": "Social Sciences", "scheme": "DOAJ"}, {"code":
-        "Z", "term": "Bibliography. Library science. Information resources", "scheme":
-        "LCC"}, {"code": "Z", "term": "Bibliography. Library science. Information
-        resources", "scheme": "LCC"}, {"code": "Z", "term": "Bibliography. Library
-        science. Information resources", "scheme": "LCC"}]}, "created_date": "2010-03-23T00:21:22Z"},
-        {"last_updated": "2015-04-22T01:55:37Z", "id": "27368ca370da44f4a6fa812aa5e4dfd8",
-        "bibjson": {"start_page": "998", "title": "CONFERENCE REPORT: Code4Lib 2009",
-        "journal": {"publisher": "Code4Lib", "language": ["English"], "license": [{"type":
-        "CC BY", "title": "CC BY"}], "title": "Code4Lib Journal", "country": "US",
-        "number": "6"}, "author": [{"name": "Lauren Ko"}, {"name": "Joanna DiPasquale"},
-        {"name": "Jie Chen"}, {"name": "Andreas Orphanides"}], "month": "03", "link":
-        [{"url": "http://journal.code4lib.org/articles/998", "type": "fulltext"}],
-        "year": "2009", "identifier": [{"type": "pissn", "id": "1940-5758"}], "abstract":
-        "Conference reports from the 4th Code4Lib conference, held in Providence,
-        RI from February 23 to 26, 2009. The Code4Lib conference is a collective volunteer
-        effort of the informal Code4Lib community of library technologists. Included
-        are four brief reports on the conference from the recipients of conference
-        scholarships.  ", "subject": [{"code": "Z", "term": "Bibliography. Library
-        science. Information resources", "scheme": "LCC"}, {"term": "Library and Information
-        Science", "scheme": "DOAJ"}, {"term": "Social Sciences", "scheme": "DOAJ"},
-        {"code": "Z", "term": "Bibliography. Library science. Information resources",
-        "scheme": "LCC"}, {"term": "Library and Information Science", "scheme": "DOAJ"},
-        {"term": "Social Sciences", "scheme": "DOAJ"}, {"code": "Z", "term": "Bibliography.
-        Library science. Information resources", "scheme": "LCC"}, {"code": "Z", "term":
-        "Bibliography. Library science. Information resources", "scheme": "LCC"},
-        {"code": "Z", "term": "Bibliography. Library science. Information resources",
-        "scheme": "LCC"}]}, "created_date": "2009-04-06T17:53:24Z"}, {"last_updated":
-        "2015-04-22T03:22:27Z", "id": "980eb33b9423466c802b1ee7d95c56c2", "bibjson":
-        {"title": "Conference Reports: Code4Lib 2011", "journal": {"publisher": "Code4Lib",
-        "language": ["English"], "license": [{"type": "CC BY", "title": "CC BY"}],
-        "title": "Code4Lib Journal", "country": "US", "number": "13"}, "author": [{"name":
-        "Bohyun Kim"}, {"name": "Elias Tzoc"}], "month": "04", "link": [{"url": "http://journal.code4lib.org/articles/4960",
-        "type": "fulltext"}], "year": "2011", "identifier": [{"type": "pissn", "id":
-        "1940-5758"}], "abstract": "Conference reports from the 6th Code4Lib Conference,
-        held in Bloomington, IN, from February 7 to 10, 2011. The Code4Lib conference
-        is a collective volunteer effort of the Code4Lib community of library technologists.
-        Included are two brief reports on the conference from some recipients of conference
-        scholarships. ", "subject": [{"code": "Z", "term": "Bibliography. Library
-        science. Information resources", "scheme": "LCC"}, {"term": "Library and Information
-        Science", "scheme": "DOAJ"}, {"term": "Social Sciences", "scheme": "DOAJ"},
-        {"code": "Z", "term": "Bibliography. Library science. Information resources",
-        "scheme": "LCC"}, {"term": "Library and Information Science", "scheme": "DOAJ"},
-        {"term": "Social Sciences", "scheme": "DOAJ"}, {"code": "Z", "term": "Bibliography.
-        Library science. Information resources", "scheme": "LCC"}, {"code": "Z", "term":
-        "Bibliography. Library science. Information resources", "scheme": "LCC"},
-        {"code": "Z", "term": "Bibliography. Library science. Information resources",
-        "scheme": "LCC"}]}, "created_date": "2011-04-12T01:27:24Z"}, {"last_updated":
-        "2015-04-22T02:57:08Z", "id": "777a5c529e7b495aa3d1630b914d9ac3", "bibjson":
-        {"start_page": "71", "title": "Code4Lib: More than a journal", "journal":
-        {"publisher": "Code4Lib", "language": ["English"], "license": [{"type": "CC
-        BY", "title": "CC BY"}], "title": "Code4Lib Journal", "country": "US", "number":
-        "2"}, "author": [{"name": "Eric Lease Morgan"}], "month": "03", "link": [{"url":
-        "http://journal.code4lib.org/articles/71", "type": "fulltext"}], "year": "2008",
-        "identifier": [{"type": "pissn", "id": "1940-5758"}], "abstract": "It is a
-        pleasure and an honor to be able to introduce this, the second issue of Code4Lib
-        Journal. Code4Lib is much more than a journal. It is a thriving community.",
-        "subject": [{"code": "Z", "term": "Bibliography. Library science. Information
-        resources", "scheme": "LCC"}, {"term": "Library and Information Science",
-        "scheme": "DOAJ"}, {"term": "Social Sciences", "scheme": "DOAJ"}, {"code":
-        "Z", "term": "Bibliography. Library science. Information resources", "scheme":
-        "LCC"}, {"term": "Library and Information Science", "scheme": "DOAJ"}, {"term":
-        "Social Sciences", "scheme": "DOAJ"}, {"code": "Z", "term": "Bibliography.
-        Library science. Information resources", "scheme": "LCC"}, {"code": "Z", "term":
-        "Bibliography. Library science. Information resources", "scheme": "LCC"},
-        {"code": "Z", "term": "Bibliography. Library science. Information resources",
-        "scheme": "LCC"}]}, "created_date": "2008-05-28T22:34:09Z"}, {"last_updated":
-        "2015-04-22T02:20:49Z", "id": "48779029dd114dab9c48537c4d6b70c6", "bibjson":
-        {"title": "Editorial Introduction: The Code4Lib Journal Experiment, Rejection
-        Rates, and Peer Review", "journal": {"publisher": "Code4Lib", "language":
-        ["English"], "license": [{"type": "CC BY", "title": "CC BY"}], "title": "Code4Lib
-        Journal", "country": "US", "number": "10"}, "author": [{"name": "Edward M.
-        Corrado"}], "month": "06", "link": [{"url": "http://journal.code4lib.org/articles/3277",
-        "type": "fulltext"}], "year": "2010", "identifier": [{"type": "pissn", "id":
-        "1940-5758"}], "abstract": "Code4Lib Journal has been a successful experiment.
-        With success, questions have arisen about the scholarly nature and status
-        of the Journal. In this editorial introduction we take a look at the question
-        of Code4Lib Journal''s rejections rates and peer review status. ", "subject":
-        [{"code": "Z", "term": "Bibliography. Library science. Information resources",
-        "scheme": "LCC"}, {"term": "Library and Information Science", "scheme": "DOAJ"},
-        {"term": "Social Sciences", "scheme": "DOAJ"}, {"code": "Z", "term": "Bibliography.
-        Library science. Information resources", "scheme": "LCC"}, {"term": "Library
-        and Information Science", "scheme": "DOAJ"}, {"term": "Social Sciences", "scheme":
-        "DOAJ"}, {"code": "Z", "term": "Bibliography. Library science. Information
-        resources", "scheme": "LCC"}, {"code": "Z", "term": "Bibliography. Library
-        science. Information resources", "scheme": "LCC"}, {"code": "Z", "term": "Bibliography.
-        Library science. Information resources", "scheme": "LCC"}]}, "created_date":
-        "2010-06-22T18:23:32Z"}, {"last_updated": "2015-04-22T01:58:15Z", "id": "2aa5c8867c5547ab8e595931b5878db9",
-        "bibjson": {"title": "Editorial Introduction: A Peer Network", "journal":
-        {"publisher": "Code4Lib", "language": ["English"], "license": [{"type": "CC
-        BY", "title": "CC BY"}], "title": "Code4Lib Journal", "country": "US", "number":
-        "19"}, "author": [{"name": "Andrew Darby"}], "month": "01", "link": [{"url":
-        "http://journal.code4lib.org/articles/8087", "type": "fulltext"}], "year":
-        "2013", "identifier": [{"type": "pissn", "id": "1940-5758"}], "abstract":
-        "Code4Lib, and the Code4Lib Journal, considered as a peer network.", "subject":
-        [{"code": "Z", "term": "Bibliography. Library science. Information resources",
-        "scheme": "LCC"}, {"term": "Library and Information Science", "scheme": "DOAJ"},
-        {"term": "Social Sciences", "scheme": "DOAJ"}, {"code": "Z", "term": "Bibliography.
-        Library science. Information resources", "scheme": "LCC"}, {"term": "Library
-        and Information Science", "scheme": "DOAJ"}, {"term": "Social Sciences", "scheme":
-        "DOAJ"}, {"code": "Z", "term": "Bibliography. Library science. Information
-        resources", "scheme": "LCC"}, {"code": "Z", "term": "Bibliography. Library
-        science. Information resources", "scheme": "LCC"}, {"code": "Z", "term": "Bibliography.
-        Library science. Information resources", "scheme": "LCC"}]}, "created_date":
-        "2013-01-15T21:58:34Z"}, {"last_updated": "2015-04-22T03:18:29Z", "id": "92ca80231d594df1abd65087c06f9e99",
+        "2014-10-21T22:30:02Z"}, {"last_updated": "2015-04-22T03:18:29Z", "id": "92ca80231d594df1abd65087c06f9e99",
         "bibjson": {"title": "Editorial Introduction: The Code4Lib Journal isn\u2019t
         just for Coders", "journal": {"publisher": "Code4Lib", "language": ["English"],
         "license": [{"type": "CC BY", "title": "CC BY"}], "title": "Code4Lib Journal",
@@ -204,15 +82,17 @@ http_interactions:
         "LCC"}, {"code": "Z", "term": "Bibliography. Library science. Information
         resources", "scheme": "LCC"}, {"code": "Z", "term": "Bibliography. Library
         science. Information resources", "scheme": "LCC"}]}, "created_date": "2010-09-22T04:04:53Z"},
-        {"last_updated": "2015-04-22T03:39:34Z", "id": "ae87123c1f624be8882127c416f627d8",
-        "bibjson": {"start_page": "1695", "title": "Editorial Introduction - Code4Lib:
-        Long May You Run", "journal": {"publisher": "Code4Lib", "language": ["English"],
-        "license": [{"type": "CC BY", "title": "CC BY"}], "title": "Code4Lib Journal",
-        "country": "US", "number": "7"}, "author": [{"name": "Tom Keays"}], "month":
-        "06", "link": [{"url": "http://journal.code4lib.org/articles/1695", "type":
-        "fulltext"}], "year": "2009", "identifier": [{"type": "pissn", "id": "1940-5758"}],
-        "abstract": "The Code4Lib Journal mirrors the diversity and depth of interests
-        and expertise of its readership. Our successes, indeed, are yours.  ", "subject":
+        {"last_updated": "2015-04-22T02:20:49Z", "id": "48779029dd114dab9c48537c4d6b70c6",
+        "bibjson": {"title": "Editorial Introduction: The Code4Lib Journal Experiment,
+        Rejection Rates, and Peer Review", "journal": {"publisher": "Code4Lib", "language":
+        ["English"], "license": [{"type": "CC BY", "title": "CC BY"}], "title": "Code4Lib
+        Journal", "country": "US", "number": "10"}, "author": [{"name": "Edward M.
+        Corrado"}], "month": "06", "link": [{"url": "http://journal.code4lib.org/articles/3277",
+        "type": "fulltext"}], "year": "2010", "identifier": [{"type": "pissn", "id":
+        "1940-5758"}], "abstract": "Code4Lib Journal has been a successful experiment.
+        With success, questions have arisen about the scholarly nature and status
+        of the Journal. In this editorial introduction we take a look at the question
+        of Code4Lib Journal''s rejections rates and peer review status. ", "subject":
         [{"code": "Z", "term": "Bibliography. Library science. Information resources",
         "scheme": "LCC"}, {"term": "Library and Information Science", "scheme": "DOAJ"},
         {"term": "Social Sciences", "scheme": "DOAJ"}, {"code": "Z", "term": "Bibliography.
@@ -222,8 +102,105 @@ http_interactions:
         resources", "scheme": "LCC"}, {"code": "Z", "term": "Bibliography. Library
         science. Information resources", "scheme": "LCC"}, {"code": "Z", "term": "Bibliography.
         Library science. Information resources", "scheme": "LCC"}]}, "created_date":
-        "2009-07-01T19:12:41Z"}], "query": "Code4Lib+Journal", "total": 628421, "page":
-        1}'
+        "2010-06-22T18:23:32Z"}, {"last_updated": "2015-04-22T01:25:29Z", "id": "03984f4359064dda908311e2f9bed30a",
+        "bibjson": {"title": "Editorial Introduction: Conscious Resolutions", "journal":
+        {"publisher": "Code4Lib", "language": ["English"], "license": [{"type": "CC
+        BY", "title": "CC BY"}], "title": "Code4Lib Journal", "country": "US", "number":
+        "23"}, "author": [{"name": "Shawn Averkamp"}], "month": "1", "link": [{"url":
+        "http://journal.code4lib.org/articles/9389", "type": "fulltext", "content_type":
+        "html"}], "year": "2014", "identifier": [{"type": "pissn", "id": "1940-5758"}],
+        "abstract": "Hack your life with 10 New Year''s resolutions from Code4Lib
+        Journal.", "subject": [{"code": "Z", "term": "Bibliography. Library science.
+        Information resources", "scheme": "LCC"}, {"term": "Library and Information
+        Science", "scheme": "DOAJ"}, {"term": "Social Sciences", "scheme": "DOAJ"},
+        {"code": "Z", "term": "Bibliography. Library science. Information resources",
+        "scheme": "LCC"}, {"code": "Z", "term": "Bibliography. Library science. Information
+        resources", "scheme": "LCC"}, {"code": "Z", "term": "Bibliography. Library
+        science. Information resources", "scheme": "LCC"}]}, "created_date": "2014-03-09T17:48:26Z"},
+        {"last_updated": "2015-04-22T02:03:23Z", "id": "317331193a1249988c0bd2bd74f0ec96",
+        "bibjson": {"start_page": "2282", "title": "Editorial Introduction \u2014
+        Openness", "journal": {"publisher": "Code4Lib", "language": ["English"], "license":
+        [{"type": "CC BY", "title": "CC BY"}], "title": "Code4Lib Journal", "country":
+        "US", "number": "8"}, "author": [{"name": "Andrew Darby"}], "month": "11",
+        "link": [{"url": "http://journal.code4lib.org/articles/2282", "type": "fulltext"}],
+        "year": "2009", "identifier": [{"type": "pissn", "id": "1940-5758"}], "abstract":
+        "On openness and the Code4Lib Journal. ", "subject": [{"code": "Z", "term":
+        "Bibliography. Library science. Information resources", "scheme": "LCC"},
+        {"term": "Library and Information Science", "scheme": "DOAJ"}, {"term": "Social
+        Sciences", "scheme": "DOAJ"}, {"code": "Z", "term": "Bibliography. Library
+        science. Information resources", "scheme": "LCC"}, {"term": "Library and Information
+        Science", "scheme": "DOAJ"}, {"term": "Social Sciences", "scheme": "DOAJ"},
+        {"code": "Z", "term": "Bibliography. Library science. Information resources",
+        "scheme": "LCC"}, {"code": "Z", "term": "Bibliography. Library science. Information
+        resources", "scheme": "LCC"}, {"code": "Z", "term": "Bibliography. Library
+        science. Information resources", "scheme": "LCC"}]}, "created_date": "2009-11-24T15:10:48Z"},
+        {"last_updated": "2015-04-22T03:27:11Z", "id": "9e44cfa47e2f43039df3c9a74e18877b",
+        "bibjson": {"title": "Editorial introduction: On libraries, code, support,
+        inspiration, and collaboration", "journal": {"publisher": "Code4Lib", "language":
+        ["English"], "license": [{"type": "CC BY", "title": "CC BY"}], "title": "Code4Lib
+        Journal", "country": "US", "number": "25"}, "author": [{"name": "Dan Scott"}],
+        "month": "7", "link": [{"url": "http://journal.code4lib.org/articles/9987",
+        "type": "fulltext", "content_type": "html"}], "year": "2014", "identifier":
+        [{"type": "pissn", "id": "1940-5758"}], "abstract": "Reflections on the occasion
+        of the 25th issue of the Code4Lib Journal: sustaining a community for support,
+        inspiration, and collaboration at the intersection of libraries and information
+        technology.", "subject": [{"code": "Z", "term": "Bibliography. Library science.
+        Information resources", "scheme": "LCC"}, {"code": "Z", "term": "Bibliography.
+        Library science. Information resources", "scheme": "LCC"}]}, "created_date":
+        "2014-07-21T19:30:01Z"}, {"last_updated": "2015-04-22T01:58:15Z", "id": "2aa5c8867c5547ab8e595931b5878db9",
+        "bibjson": {"title": "Editorial Introduction: A Peer Network", "journal":
+        {"publisher": "Code4Lib", "language": ["English"], "license": [{"type": "CC
+        BY", "title": "CC BY"}], "title": "Code4Lib Journal", "country": "US", "number":
+        "19"}, "author": [{"name": "Andrew Darby"}], "month": "01", "link": [{"url":
+        "http://journal.code4lib.org/articles/8087", "type": "fulltext"}], "year":
+        "2013", "identifier": [{"type": "pissn", "id": "1940-5758"}], "abstract":
+        "Code4Lib, and the Code4Lib Journal, considered as a peer network.", "subject":
+        [{"code": "Z", "term": "Bibliography. Library science. Information resources",
+        "scheme": "LCC"}, {"term": "Library and Information Science", "scheme": "DOAJ"},
+        {"term": "Social Sciences", "scheme": "DOAJ"}, {"code": "Z", "term": "Bibliography.
+        Library science. Information resources", "scheme": "LCC"}, {"term": "Library
+        and Information Science", "scheme": "DOAJ"}, {"term": "Social Sciences", "scheme":
+        "DOAJ"}, {"code": "Z", "term": "Bibliography. Library science. Information
+        resources", "scheme": "LCC"}, {"code": "Z", "term": "Bibliography. Library
+        science. Information resources", "scheme": "LCC"}, {"code": "Z", "term": "Bibliography.
+        Library science. Information resources", "scheme": "LCC"}]}, "created_date":
+        "2013-01-15T21:58:34Z"}, {"last_updated": "2015-04-22T04:25:12Z", "id": "e9014437201e4dfc84b1e026f0bcce27",
+        "bibjson": {"title": "Solving Advanced Encoding Problems with FFMPEG", "journal":
+        {"publisher": "Code4Lib", "language": ["English"], "license": [{"type": "CC
+        BY", "title": "CC BY"}], "title": "Code4Lib Journal", "country": "US", "number":
+        "25"}, "author": [{"name": "Josh Romphf"}], "month": "7", "link": [{"url":
+        "http://journal.code4lib.org/articles/9856", "type": "fulltext", "content_type":
+        "html"}], "year": "2014", "identifier": [{"type": "pissn", "id": "1940-5758"}],
+        "abstract": "Previous articles in the Code4Lib Journal touch on the capabilities
+        of FFMPEG in great detail, and given these excellent introductions, the purpose
+        of this article is to tackle some of the common problems users might face,
+        dissecting more complicated commands and suggesting their possible uses.",
+        "subject": [{"code": "Z", "term": "Bibliography. Library science. Information
+        resources", "scheme": "LCC"}, {"code": "Z", "term": "Bibliography. Library
+        science. Information resources", "scheme": "LCC"}]}, "created_date": "2014-07-21T19:30:02Z"},
+        {"last_updated": "2015-04-22T03:00:53Z", "id": "7c50fda16cf04a63bee8a893060cc379",
+        "bibjson": {"start_page": "363", "title": "Editorial Introduction -- Issue
+        4", "journal": {"publisher": "Code4Lib", "language": ["English"], "license":
+        [{"type": "CC BY", "title": "CC BY"}], "title": "Code4Lib Journal", "country":
+        "US", "number": "4"}, "author": [{"name": "Ken Varnum"}], "month": "09", "link":
+        [{"url": "http://journal.code4lib.org/articles/363", "type": "fulltext"}],
+        "year": "2008", "identifier": [{"type": "pissn", "id": "1940-5758"}], "abstract":
+        "Welcome to Issue 4 of the Code4Lib Journal!  We are pleased to present articles
+        covering an impressive breadth of topics. The strength of the Code4Lib Journal
+        lies in its readers.  You are not only the audience but also the authors for
+        the articles published here.  We hope the items you see in this, and future,
+        issues inspire you to innovate and to share your discoveries with the rest
+        of us.", "subject": [{"code": "Z", "term": "Bibliography. Library science.
+        Information resources", "scheme": "LCC"}, {"term": "Library and Information
+        Science", "scheme": "DOAJ"}, {"term": "Social Sciences", "scheme": "DOAJ"},
+        {"code": "Z", "term": "Bibliography. Library science. Information resources",
+        "scheme": "LCC"}, {"term": "Library and Information Science", "scheme": "DOAJ"},
+        {"term": "Social Sciences", "scheme": "DOAJ"}, {"code": "Z", "term": "Bibliography.
+        Library science. Information resources", "scheme": "LCC"}, {"code": "Z", "term":
+        "Bibliography. Library science. Information resources", "scheme": "LCC"},
+        {"code": "Z", "term": "Bibliography. Library science. Information resources",
+        "scheme": "LCC"}]}, "created_date": "2008-11-03T22:14:30Z"}], "query": "\"Code4Lib+Journal\"",
+        "total": 298, "page": 1}'
     http_version: 
-  recorded_at: Wed, 16 Sep 2015 18:54:13 GMT
+  recorded_at: Wed, 16 Sep 2015 18:57:21 GMT
 recorded_with: VCR 2.9.3

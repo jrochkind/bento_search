@@ -138,9 +138,11 @@ module BentoSearch
     # punctuation that needs to be escaped and how to escape (backslash)
     # for ES documented here: https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html
     #
+    # We do not escape double quotes, want to allow them for phrases. 
+    #
     # This method does NOT return URI-escaped, it returns literal, escaped for ES. 
     def escape_query(q)
-      q.gsub(/([\+\-\=\&\|\>\<\!\(\)\{\}\[\]\^\"\~\*\?\:\\\/])/) {|m| "\\#{$1}"}
+      q.gsub(/([\+\-\=\&\|\>\<\!\(\)\{\}\[\]\^\~\*\?\:\\\/])/) {|m| "\\#{$1}"}
     end
 
 
