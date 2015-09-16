@@ -91,8 +91,8 @@ module BentoSearch
       return url
     end
 
-    def fielded_query(field, query)
-      "field:#{escape_query query}"
+    def fielded_query(query, field)
+      "#{field}:#{escape_query query}"
     end
 
     # Converts from item found in DOAJ results to BentoSearch::ResultItem

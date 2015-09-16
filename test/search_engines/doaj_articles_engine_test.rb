@@ -62,17 +62,7 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
     assert_equal 20, results.per_page
   end
 
-  test_with_cassette("fielded search", :doaj_articles) do
-    results = @engine.search('"Code4Lib Journal"', :semantic_search_field => :publication_name)
-
-    assert ! results.failed?
-
-    results.each do |result|
-      assert_equal "Code4Lib Journal", result.source_title
-    end
-  end
-
-  test_with_cassette("catches errors", :doaj_articles, :record => :all) do
+  test_with_cassette("catches errors", :doaj_articles) do
     @engine.base_url = "https://doaj.org/api/v1/search/articles_bad_url/"
 
     results = @engine.search("something")
@@ -92,6 +82,17 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
     last_path = CGI.unescape(last_path)
 
     assert_equal "Me\\: And\\\/Or You", last_path
+  end
+
+  test "generates fielded searches" do
+    url = @engine.args_to_search_url(:query => "Smith", :search_field => "bibjson.author.name")
+
+    parsed = URI.parse(url)
+
+    last_path = parsed.path.split('/').last
+    last_path = CGI.unescape(last_path)
+
+    assert_equal "bibjson.author.name:Smith", last_path
   end
 
   test "does not escape double quotes" do
