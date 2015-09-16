@@ -43,11 +43,19 @@ module BentoSearch
       url = self.base_url + CGI.escape(escape_query(arguments[:query]))
 
       query_args = {}
+
       if arguments[:per_page]
         query_args["pageSize"]  = arguments[:per_page]
       end
+      
       if arguments[:page]
         query_args["page"]      = arguments[:page]
+      end
+
+      if arguments[:sort] &&
+          (defn = sort_definitions[arguments[:sort]]) &&
+          (value = defn[:implementation])
+        query_args["sort"] = value
       end
 
       query = query_args.to_query
@@ -132,6 +140,20 @@ module BentoSearch
 
     def max_per_page
       100
+    end
+
+    def sort_definitions
+      # Don't believe DOAJ supports sorting by author
+      {        
+        "relevance" => {:implementation => nil}, # default
+        "title" => {:implementation => "title:asc"},
+        # We don't quite have publication date sorting, but we'll use
+        # created_date from DOAJ
+        "date_desc" => {:implementation => "article.created_date:desc"},
+        "date_asc"  => {:implementation => "article.created_date:asc"},
+        # custom one not previously standardized
+        "publication_name" => {:implementation => "bibjson.journal.title:asc"}
+      }
     end
 
   end

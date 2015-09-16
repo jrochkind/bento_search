@@ -73,4 +73,13 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
     assert_equal "Me\\: And\\\/Or You", last_path
   end
 
-end
+  test "adds sort to query url" do
+    url = @engine.args_to_search_url(:query => "cancer", :sort => 'date_desc')
+
+    parsed = URI.parse(url)
+    query  = CGI.parse(parsed.query)
+
+    assert_equal ["article.created_date:desc"], query["sort"]
+  end
+
+  end
