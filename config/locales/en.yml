@@ -46,6 +46,9 @@ en:
       isbn:         "ISBN"
       oclcnum:      "OCLCnum"
       lccn:         "LCCN"
+      doi:          "DOI"
       publisher:    "Publisher"
       publication_title: "Publication"
-
+      volume:       "Volume"
+      issue:        "Issue"
+      start_page:   "Start Page"

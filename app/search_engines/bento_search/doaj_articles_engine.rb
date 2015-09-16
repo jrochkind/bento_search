@@ -40,7 +40,13 @@ module BentoSearch
 
 
     def args_to_search_url(arguments)
-      url = self.base_url + CGI.escape(escape_query(arguments[:query]))
+      query = if arguments[:search_field]
+        fielded_query(arguments[:query], arguments[:search_field])
+      else
+        escape_query(arguments[:query])
+      end
+
+      url = self.base_url + CGI.escape(query)
 
       query_args = {}
 
@@ -62,6 +68,10 @@ module BentoSearch
       url = url + "?" + query if query.present?
 
       return url
+    end
+
+    def fielded_query(field, query)
+      "field:#{escape_query query}"
     end
 
     # Converts from item found in DOAJ results to BentoSearch::ResultItem
@@ -140,6 +150,25 @@ module BentoSearch
 
     def max_per_page
       100
+    end
+
+    def search_field_definitions
+      # DOAJ supports 'exact match' searches, we're going to add
+      # them in with :semantic with _exact on the end, not strictly
+      # supported by current bento_search api?
+      { nil                     => {:semantic => :general},
+        "bibjson.title"         => {:semantic => :title},
+        "bibjson.author.name"   => {:semantic => :author},
+        "publisher"             => {:semantic => :publisher},
+        "bibjson.subject"       => {:semantic => :subject},
+        "bibjson.journal.title" => {:semantic => :publication_title},
+        "issn"                  => {:semantic => :issn},
+        "doi"                   => {:semantic => :doi},
+        "bibjson.journal.volume.exact"   => {:semantic => :volume},
+        "bibjson.journal.number.exact"   => {:semantic => :issue},
+        "bibjson.start_page"   => {:semantic => :start_page},
+        "license" => {}
+      }
     end
 
     def sort_definitions

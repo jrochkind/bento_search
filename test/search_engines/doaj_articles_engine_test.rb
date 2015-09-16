@@ -62,6 +62,16 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
     assert_equal 20, results.per_page
   end
 
+  test_with_cassette("fielded search", :doaj_articles) do
+    results = @engine.search('Code4Lib Journal', :semantic_search_field => :publication_name)
+
+    assert ! results.failed?
+
+    results.each do |result|
+      assert_equal "Code4Lib Journal", result.source_title
+    end
+  end
+
   test "escapes special chars" do
     url = @engine.args_to_search_url(:query => "Me: And/Or You")
 
