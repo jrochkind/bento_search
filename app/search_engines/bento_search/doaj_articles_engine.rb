@@ -8,6 +8,8 @@ module BentoSearch
   # https://doaj.org/api/v1/docs
   #
   # Phrase searches with double quotes are respected. 
+  #
+  # Supports #get by unique_id feature
   class DoajArticlesEngine
     include BentoSearch::SearchEngine
     include ActionView::Helpers::SanitizeHelper
@@ -57,6 +59,16 @@ module BentoSearch
       end
 
       return results
+    end
+
+    def get(unique_id)
+      results = search(unique_id, :search_field => "id")
+
+      raise (results.error[:exception] || StandardError.new(results.error[:message] || results.error[:status])) if results.failed?
+      raise BentoSearch::NotFound.new("For id: #{unique_id}") if results.length == 0
+      raise BentoSearch::TooManyFound.new("For id: #{unique_id}") if results.length > 1
+
+      results.first
     end
 
 
@@ -190,7 +202,8 @@ module BentoSearch
         "bibjson.journal.volume.exact"   => {:semantic => :volume},
         "bibjson.journal.number.exact"   => {:semantic => :issue},
         "bibjson.start_page"   => {:semantic => :start_page},
-        "license" => {}
+        "license" => {},
+        "id"      => {}
       }
     end
 

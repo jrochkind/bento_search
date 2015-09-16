@@ -73,6 +73,21 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
     assert_present results.error[:status]    
   end
 
+  test_with_cassette("live #get(identifier) round trip", :doaj_articles) do
+    results = @engine.search("cancer")
+
+    assert (! results.failed?)
+
+    item = @engine.get( results.first.unique_id )
+
+    assert_not_nil  item
+    assert_kind_of  BentoSearch::ResultItem, item
+  end
+
+  test_with_cassette("live get(identifier) raises on no results", :doaj_articles) do
+    assert_raises(BentoSearch::NotFound) { item = @engine.get( "no such id" ) }
+  end
+
   test "escapes special chars" do
     url = @engine.args_to_search_url(:query => "Me: And/Or You")
 
