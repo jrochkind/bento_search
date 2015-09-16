@@ -4,6 +4,10 @@ require 'http_client_patch/include_client'
 require 'json'
 
 module BentoSearch
+  # DOAJ Articles search. 
+  # https://doaj.org/api/v1/docs
+  #
+  # Phrase searches with double quotes are respected. 
   class DoajArticlesEngine
     include BentoSearch::SearchEngine
     include ActionView::Helpers::SanitizeHelper
@@ -25,9 +29,26 @@ module BentoSearch
 
       results = Results.new
 
-      response = http_client.get( query_url )
+      begin
+        response = http_client.get( query_url )
+        json = JSON.parse(response.body)
+      rescue TimeoutError, HTTPClient::TimeoutError,
+             HTTPClient::ConfigurationError, HTTPClient::BadResponseError,
+             JSON::ParserError  => e
+        results.error ||= {}
+        results.error[:exception] = e
+      end
 
-      json = JSON.parse(response.body)
+      if ( response.nil? || json.nil? ||
+          (! HTTP::Status.successful? response.status) ||
+          (json && json["error"]))
+
+        results.error ||= {}
+        results.error[:status] = response.status if response
+        results.error[:message] = json["error"] if json["error"]
+
+        return results
+      end
 
       results.total_items = json["total"]
 

@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://doaj.org/api/v1/search/articles_bad_url/something?pageSize=10
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 404
+      message: NOT FOUND
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Wed, 16 Sep 2015 19:14:37 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '245'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Set-Cookie:
+      - session="UspzkET/3IS3Z8PIxKnLAhLnXDY=?_id=UycyNmYyZmZkMzhkMjA5MWE0NmNjZTU2YTI4OGJjNDZlNycKcDEKLg==";
+        Path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"status": "not_found", "error": "No endpoint at search/articles_bad_url/something.
+        See https://doaj.org/api/v1/swagger.json for valid paths or read the documentation
+        at https://doaj.org/api/v1/docs. (ref: 2bdeefac-5ca7-11e5-b3b8-04014a62b401)"}'
+    http_version: 
+  recorded_at: Wed, 16 Sep 2015 19:14:37 GMT
+recorded_with: VCR 2.9.3

@@ -72,6 +72,17 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
     end
   end
 
+  test_with_cassette("catches errors", :doaj_articles, :record => :all) do
+    @engine.base_url = "https://doaj.org/api/v1/search/articles_bad_url/"
+
+    results = @engine.search("something")
+
+    assert results.failed?
+    assert_kind_of Hash, results.error
+    assert_present results.error[:message]
+    assert_present results.error[:status]    
+  end
+
   test "escapes special chars" do
     url = @engine.args_to_search_url(:query => "Me: And/Or You")
 
