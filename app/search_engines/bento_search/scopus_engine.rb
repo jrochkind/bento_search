@@ -27,8 +27,8 @@ module BentoSearch
   # apparently by emailing directly to dave.santucci at elsevier dot com.  
   #    
   # Scopus API Docs:   
-  # * http://www.developers.elsevier.com/devcms/content-api-search-request
-  # * http://www.developers.elsevier.com/devcms/content/search-fields-overview
+  # * http://api.elsevier.com/documentation/SCOPUSSearchAPI.wadl
+  # * http://api.elsevier.com/documentation/search/SCOPUSSearchViews.htm
   #
   # Some more docs on response elements and query elements:
   # * http://api.elsevier.com/content/search/#d0n14606
@@ -222,6 +222,9 @@ module BentoSearch
       }
     end
 
+    def supports_multi_search?
+      true
+    end
             
     protected
     
@@ -282,10 +285,12 @@ module BentoSearch
     
      
     def scopus_url(args)
-      query = escape_query args[:query]
-      
-      if args[:search_field]
-        query = "#{args[:search_field]}(#{query})"
+      query = if args[:query].kind_of? Hash
+        args[:query].collect {|field, query| fielded_query(query,field)}.join(" AND ")
+      elsif args[:search_field]
+        fielded_query(args[:query], args[:search_field])
+      else
+        escape_query args[:query]
       end
       
       query = "#{configuration.base_url.chomp("/")}/content/search/index:#{configuration.cluster}?query=#{CGI.escape(query)}"
@@ -303,6 +308,10 @@ module BentoSearch
       end      
       
       return query
+    end
+
+    def fielded_query(query, field)
+      "#{field}(#{escape_query query})"
     end
     
   end

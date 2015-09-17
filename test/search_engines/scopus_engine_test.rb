@@ -32,6 +32,20 @@ class ScopusEngineTest < ActiveSupport::TestCase
     
     assert_equal "http://api.elsevier.com/content/search/index:SCOPUS?query=AUTH%28one+two%29&sort=refeid", url
   end
+
+  def test_construct_multi_field
+    url = @engine.send(:scopus_url, :query => {"TITLE" => "Terrible Diseases", "AUTH" => "John Smith"})
+
+    url           = URI.parse(url)
+    params        = CGI.parse(url.query)
+    scopus_query  = params["query"].first
+
+    query_components = scopus_query.split(" AND ")
+
+    assert_equal 2, query_components.length
+    assert_includes query_components, "AUTH(John Smith)"
+    assert_includes query_components, "TITLE(Terrible Diseases)"
+  end
   
   def test_construct_search_with_per_page
     url = @engine.send(:scopus_url, :query => "one two", :per_page => 30)
@@ -129,7 +143,21 @@ class ScopusEngineTest < ActiveSupport::TestCase
     assert results.first.title.downcase.include?("cancer"), "Title includes query term"    
   end
   
-  
+  test_with_cassette("multi-field search", :scopus) do
+    results = @engine.search(:query => 
+      { :title => "Protein measurement with the folin phenol reagent",
+        :author => "Lowry",
+        :issn => "0021-9258"
+      })
+
+    assert ! results.failed?
+    assert_present results
+
+    results.each do |result|
+      assert_equal "00219258", result.issn
+      assert_includes result.title.downcase, "Protein measurement with the folin phenol reagent".downcase
+    end
+  end
     
   
 end
