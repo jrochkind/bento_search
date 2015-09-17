@@ -188,19 +188,18 @@ module BentoSearch
     end
 
     def search_field_definitions
-      # DOAJ supports 'exact match' searches, we're going to add
-      # them in with :semantic with _exact on the end, not strictly
-      # supported by current bento_search api?
       { nil                     => {:semantic => :general},
         "bibjson.title"         => {:semantic => :title},
+        # Using 'exact' seems to produce much better results for
+        # author, don't entirely understand what's up. 
         "bibjson.author.name"   => {:semantic => :author},
         "publisher"             => {:semantic => :publisher},
-        "bibjson.subject"       => {:semantic => :subject},
+        "bibjson.subject.term"  => {:semantic => :subject},
         "bibjson.journal.title" => {:semantic => :publication_title},
         "issn"                  => {:semantic => :issn},
         "doi"                   => {:semantic => :doi},
-        "bibjson.journal.volume.exact"   => {:semantic => :volume},
-        "bibjson.journal.number.exact"   => {:semantic => :issue},
+        "bibjson.journal.volume"   => {:semantic => :volume},
+        "bibjson.journal.number"   => {:semantic => :issue},
         "bibjson.start_page"   => {:semantic => :start_page},
         "license" => {},
         "id"      => {}
