@@ -1,3 +1,7 @@
+## 1.4.3
+
+* Fix Scopus to properly handle zero-hit results, respond to undoc'd Scopus API change. 
+
 ## 1.4.0
 
 * Round-trippable JSON serialization of internal state of results
