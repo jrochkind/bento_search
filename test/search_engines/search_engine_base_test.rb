@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class ParseSearchArgumentsTest < ActiveSupport::TestCase
+  MockEngine = BentoSearch::MockEngine
+
   class Dummy
     include BentoSearch::SearchEngine
     
@@ -152,6 +154,63 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
       engine.normalized_search_arguments(:query => "query", :search_field => "I_made_this_up", :unrecognized_search_field => :ignore)
     end
     
+  end
+
+
+  describe "multi-field search" do
+    it "complains with multi-query and search_field" do
+      engine = MockEngine.new(:supports_multi_search => true)
+      assert_raises(ArgumentError) { engine.search(:query => {:title => "foo"}, :semantic_search_field => :author)}
+      assert_raises(ArgumentError) { engine.search(:query => {:title => "foo"}, :search_field => "something")}
+    end
+
+    it "rejects if search engine does not support" do
+      engine = MockEngine.new(:supports_multi_search => false)
+      assert_raises(ArgumentError) { engine.search(:query => {:title => "title", :author => "author"}) }
+    end
+
+    it "converts semantic search fields" do
+      engine = MockEngine.new(:supports_multi_search => true, 
+        :search_field_definitions => {
+          "internal_title_field"  => {:semantic => :title},
+          "internal_author_field" => {:semantic => :author}  
+        })
+
+      engine.search(:query => {:title => "title query", :author => "author query"})
+
+      assert_equal(
+        { "internal_title_field"  => "title query", 
+          "internal_author_field" => "author query"},
+        engine.last_args[:query]
+      )
+    end
+
+    it "passes through other fields" do
+      engine = MockEngine.new(:supports_multi_search => true, 
+        :search_field_definitions => {
+          "internal_title_field"  => {:semantic => :title},
+          "internal_author_field" => {:semantic => :author}  
+        })
+
+      engine.search(:query => {"internal_title_field" => "query", "other field" => "query"})
+
+      assert_equal(
+       {"internal_title_field" => "query", "other field" => "query"},
+        engine.last_args[:query]
+      )
+    end
+
+    it "complains on unrecognized field if configured" do
+      engine = MockEngine.new(:supports_multi_search => true, 
+        :unrecognized_search_field => "raise",
+        :search_field_definitions => {
+          "internal_title_field"  => {:semantic => :title},
+          "internal_author_field" => {:semantic => :author}  
+        })      
+      assert_raises(ArgumentError) do
+        engine.search(:query => {"internal_title_field" => "query", "other field" => "query"})
+      end
+    end
   end
   
   def test_semantic_blank_ignored

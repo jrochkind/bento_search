@@ -329,10 +329,39 @@ module BentoSearch
       if arguments[:sort]
         arguments[:sort] = arguments[:sort].to_s
       end
+
+      
+      # Multi-field search
+      if arguments[:query].kind_of? Hash
+        # Only if allowed
+        unless self.supports_multi_search?
+          raise ArgumentError.new("You supplied a :query as a hash, but this engine (#{self.class}) does not suport multi-search. #{arguments[:query].inspect}")
+        end
+        # Multi-field search incompatible with :search_field or :semantic_search_field
+        if arguments[:search_field].present?
+          raise ArgumentError.new("You supplied a :query as a Hash, but also a :search_field, you can only use one. #{arguments.inspect}")
+        end
+        if arguments[:semantic_search_field].present?
+          raise ArgumentError.new("You supplied a :query as a Hash, but also a :semantic_search_field, you can only use one. #{arguments.inspect}")
+        end
+
+        # translate semantic fields, raising for unfound fields if configured
+        arguments[:query].transform_keys! do |key|
+          new_key = self.semantic_search_map[key.to_s] || key
+          
+          if ( config_arg(arguments, :unrecognized_search_field) == "raise" &&
+              ! self.search_keys.include?(new_key))
+            raise ArgumentError.new("#{self.class.name} does not know about search_field #{new_key}, in query Hash #{arguments[:query]}")
+          end
+
+          new_key
+        end
+
+      end
       
       # translate semantic_search_field to search_field, or raise if
       # can't. 
-      if (semantic = arguments.delete(:semantic_search_field)) && ! semantic.blank?        
+      if (semantic = arguments.delete(:semantic_search_field)) && ! semantic.blank?
         mapped = self.semantic_search_map[semantic.to_s]
         if config_arg(arguments, :unrecognized_search_field) == "raise" && ! mapped 
           raise ArgumentError.new("#{self.class.name} does not know about :semantic_search_field #{semantic}")
@@ -361,7 +390,7 @@ module BentoSearch
    
     
     protected
-    
+
     # get value of an arg that can be supplied in search args OR config,
     # with search_args over-ridding config. Also normalizes value to_s
     # (for symbols/strings). 
