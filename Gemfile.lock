@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bento_search (1.4.2)
+    bento_search (1.4.3)
       confstruct (~> 1.0)
       htmlentities
       httpclient (>= 2.2.5, < 3.0.0)
@@ -111,8 +111,8 @@ GEM
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     hashie (3.4.2)
-    hitimes (1.2.2)
-    hitimes (1.2.2-java)
+    hitimes (1.2.3)
+    hitimes (1.2.3-java)
     htmlentities (4.3.4)
     httpclient (2.6.0.1)
     i18n (0.7.0)
@@ -131,7 +131,7 @@ GEM
     marc (1.0.0)
       scrub_rb (>= 1.0.1, < 2)
       unf
-    mime-types (2.6.1)
+    mime-types (2.6.2)
     mini_portile (0.6.2)
     minitest (5.8.0)
     multi_json (1.11.2)
@@ -175,7 +175,7 @@ GEM
     scrub_rb (1.0.1)
     sprockets (3.3.4)
       rack (~> 1.0)
-    sprockets-rails (2.3.2)
+    sprockets-rails (2.3.3)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
@@ -191,6 +191,7 @@ GEM
       thread_safe (~> 0.1)
     unf (0.1.4)
       unf_ext
+    unf (0.1.4-java)
     unf_ext (0.0.7.1)
     vcr (2.9.3)
     webmock (1.11.0)
