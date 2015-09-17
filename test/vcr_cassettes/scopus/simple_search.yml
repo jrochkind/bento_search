@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: http://api.elsevier.com/content/search/index:SCOPUS?count=10&query=cancer&sort=refeid
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       X-Els-Apikey:
@@ -13,215 +13,43 @@ http_interactions:
       - XOCS
       Accept:
       - application/atom+xml
-      Cookie:
-      - JSESSIONID=8A3C45B45381C520A87587779216A1D3.2Uioveo1XMSKrL6eSaINMQ
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        YXBpLmVsc2V2aWVyLmNvbSAgOTk5OQ==
-      !binary "WC1FbHMtU3RhdHVz":
-      - !binary |-
-        T0s=
-      !binary "WC1FbHMtUmVxaWQ=":
-      - !binary |-
-        MDAwMDAxMzhlODI3MmEwNC0yZDQwZDI=
-      !binary "WC1FbHMtQXBpa2V5":
-      - !binary |-
-        RFVNTVlfQVBJX0tFWQ==
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        SlNFU1NJT05JRD1GQzlFQTM4MjA2QUI2QkZEN0Q0OEY2QjFFRDE4NkU1Ny5L
-        TENJbnMzRHkybjJHSjlLTmtVQTsgRG9tYWluPWFwaS5lbHNldmllci5jb207
-        IFBhdGg9L2NvbnRlbnQvc2VhcmNo
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC94bWw7Y2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "RGF0ZQ==":
-      - !binary |-
-        TW9uLCAwNiBBdWcgMjAxMiAxNToyMDoxOCBHTVQ=
-      !binary "WC1SZS1SZWY=":
-      - !binary |-
-        MSAtMjA5NDcyNDU1MQ==
-      !binary "UDNw":
-      - !binary |-
-        Q1A9IklEQyBEU1AgTEFXIEFETSBERVYgVEFJIFBTQSBQU0QgSVZBIElWRCBD
-        T04gSElTIFRFTCBPVVIgREVMIFNBTSBPVFIgSU5EIE9UQyI=
+      Server:
+      - api.elsevier.com  9999
+      X-Els-Status:
+      - OK
+      X-Els-Reqid:
+      - 0000014f72d218c9-4edd45c
+      X-Els-Apikey:
+      - DUMMY_API_KEY
+      X-Els-Transid:
+      - 5d5238cb-7a8c-4367-8aa2-83d3a051fc7c
+      Allow:
+      - GET
+      Content-Type:
+      - application/atom+xml;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 17 Sep 2015 20:54:51 GMT
+      X-Re-Ref:
+      - 1 -1608368997
+      P3p:
+      - CP="IDC DSP LAW ADM DEV TAI PSA PSD IVA IVD CON HIS TEL OUR DEL SAM OTR IND
+        OTC"
     body:
       encoding: UTF-8
-      string: ! '<feed xmlns="http://www.w3.org/2005/Atom" xmlns:atom="http://www.w3.org/2005/Atom"
-        xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/"
-        xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/"><title>SCOPUS
-        Search Results: cancer</title><updated>2012-08-06T15:20:18.911Z</updated><author><name>Elsevier,
-        Inc.</name></author><id>http://api.elsevier.com:80/content/search/index:SCOPUS?query=cancer&amp;count=10&amp;start=0&amp;view=STANDARD&amp;field=</id><opensearch:totalResults>3290635</opensearch:totalResults><opensearch:startIndex>0</opensearch:startIndex><opensearch:itemsPerPage>10</opensearch:itemsPerPage><opensearch:Query
-        role="request" searchTerms="cancer" startPage="0"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=0&amp;count=10&amp;query=cancer&amp;sort=refeid"
-        ref="self" type="application/atom+xml"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=0&amp;count=10&amp;query=cancer&amp;sort=refeid"
-        ref="first" type="application/atom+xml"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=10&amp;count=10&amp;query=cancer&amp;sort=refeid"
-        ref="next" type="application/atom+xml"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=1990&amp;count=10&amp;query=cancer&amp;sort=refeid"
-        ref="last" type="application/atom+xml"/><entry><link href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84855801774"
-        ref="self"/><link href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84855801774"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84855801774"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84855801774</prism:url><dc:identifier>SCOPUS_ID:84855801774</dc:identifier><dc:title>American
-        Cancer Society guidelines on nutrition and physical activity for cancer prevention:
-        Reducing the Risk of Cancer with Healthy Food Choices and Physical Activity</dc:title><dc:creator>Kushi,
-        L.H.</dc:creator><prism:publicationName>CA Cancer Journal for Clinicians</prism:publicationName><prism:issn>00079235</prism:issn><prism:eIssn>15424863</prism:eIssn><prism:volume>62</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>30-67</prism:pageRange><prism:coverDate>2012-01-01</prism:coverDate><prism:doi>10.3322/caac.20140</prism:doi><citedby-count>5</citedby-count><affiliation><affilname>Kaiser
-        Permanente Division of Research | ^ Division of Research ^ Kaiser Foundation
-        Research Institute</affilname></affiliation><affiliation><affilname>American
-        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>American
-        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>University
-        of California, San Diego, School of Medicine | University of California, San
-        Diego ^ University of California ^ Univ. California</affilname></affiliation><affiliation><affilname>University
-        of Alabama at Birmingham | University of Alabama at Birmingham</affilname></affiliation><affiliation><affilname>The
-        Cancer Institute of New Jersey | Cancer Institute of New Jersey</affilname></affiliation><affiliation><affilname>American
-        Cancer Society | American Cancer Society</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:79952232216" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=79952232216"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=79952232216"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:79952232216</prism:url><dc:identifier>SCOPUS_ID:79952232216</dc:identifier><dc:title>Global
-        cancer statistics</dc:title><dc:creator>Jemal, A.</dc:creator><prism:publicationName>CA
-        Cancer Journal for Clinicians</prism:publicationName><prism:issn>00079235</prism:issn><prism:eIssn>15424863</prism:eIssn><prism:volume>61</prism:volume><prism:issueIdentifier>2</prism:issueIdentifier><prism:pageRange>69-90</prism:pageRange><prism:coverDate>2011-03-01</prism:coverDate><prism:doi>10.3322/caac.20107</prism:doi><citedby-count>1158</citedby-count><affiliation><affilname>International
-        Agency for Research on Cancer | International Agency for Research on Cancer
-        ^ Intl. Agency for Research on Cancer</affilname></affiliation><affiliation><affilname>American
-        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>American
-        Cancer Society | American Cancer Society</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:49849100140" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=49849100140"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=49849100140"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:49849100140</prism:url><dc:identifier>SCOPUS_ID:49849100140</dc:identifier><dc:title>Biological
-        approaches to therapy of pancreatic cancer</dc:title><dc:creator>Wong, H.H.</dc:creator><prism:publicationName>Pancreatology</prism:publicationName><prism:issn>14243903</prism:issn><prism:volume>8</prism:volume><prism:issueIdentifier>4-5</prism:issueIdentifier><prism:pageRange>431-461</prism:pageRange><prism:coverDate>2008-10-01</prism:coverDate><prism:doi>10.1159/000151536</prism:doi><citedby-count>11</citedby-count><affiliation><affilname>Barts
-        and The London Queen Mary''s School of Medicine and Dentistry</affilname></affiliation><affiliation><affilname>Barts
-        and The London Queen Mary''s School of Medicine and Dentistry</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:77955462853" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=77955462853"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=77955462853"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:77955462853</prism:url><dc:identifier>SCOPUS_ID:77955462853</dc:identifier><dc:title>Global
-        patterns of cancer incidence and mortality rates and trends</dc:title><dc:creator>Jemal,
-        A.</dc:creator><prism:publicationName>Cancer Epidemiology Biomarkers and Prevention</prism:publicationName><prism:issn>10559965</prism:issn><prism:volume>19</prism:volume><prism:issueIdentifier>8</prism:issueIdentifier><prism:pageRange>1893-1907</prism:pageRange><prism:coverDate>2010-08-01</prism:coverDate><prism:doi>10.1158/1055-9965.EPI-10-0437</prism:doi><citedby-count>142</citedby-count><affiliation><affilname>American
-        Cancer Society | American Cancer Society</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:68349100621" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=68349100621"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=68349100621"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:68349100621</prism:url><dc:identifier>SCOPUS_ID:68349100621</dc:identifier><dc:title>Occupation
-        and cancer follow-up of 15 million people in five Nordic countries</dc:title><dc:creator>Pukkala,
-        E.</dc:creator><prism:publicationName>Acta Oncologica</prism:publicationName><prism:issn>0284186X</prism:issn><prism:eIssn>1651226X</prism:eIssn><prism:volume>48</prism:volume><prism:issueIdentifier>5</prism:issueIdentifier><prism:pageRange>646-790</prism:pageRange><prism:coverDate>2009-11-18</prism:coverDate><prism:doi>10.1080/02841860902913546</prism:doi><citedby-count>77</citedby-count><affiliation><affilname>Finnish
-        Cancer Registry | Finnish Cancer Registry</affilname></affiliation><affiliation><affilname>Tampere
-        School of Public Health | University of Tampere</affilname></affiliation><affiliation><affilname>Cancer
-        Registry of Norway Institute of Population-Based Cancer Research | Cancer
-        Registry of Norway ^ Institute for Cancer Research</affilname></affiliation><affiliation><affilname>Københavns
-        Universitet | University of Copenhagen</affilname></affiliation><affiliation><affilname>Research
-        Centre for Occupational Health and Working Life, Iceland | Research Centre
-        for Occupational Health and Working Life ^ Research Center for Occupational
-        Health and Working Life</affilname></affiliation><affiliation><affilname>Karolinska
-        Institutet | Karolinska Institutet ^ Karolinska Institute ^ Karolinska Inst.</affilname></affiliation><affiliation><affilname>Icelandic
-        Cancer Registry | Icelandic Cancer Registry</affilname></affiliation><affiliation><affilname>Folkhälsan
-        | Folkhälsan Research Center ^ Folkhälsan Research Centre</affilname></affiliation><affiliation><affilname>Universitetet
-        i Tromsø | University of Tromsø ^ University of Tromso</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:79951834315" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=79951834315"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=79951834315"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:79951834315</prism:url><dc:identifier>SCOPUS_ID:79951834315</dc:identifier><dc:title>Cancer
-        screening in the United States, 2011: A review of current American Cancer
-        Society guidelines and issues in cancer screening</dc:title><dc:creator>Smith,
-        R.A.</dc:creator><prism:publicationName>CA Cancer Journal for Clinicians</prism:publicationName><prism:issn>00079235</prism:issn><prism:eIssn>15424863</prism:eIssn><prism:volume>61</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>8-30</prism:pageRange><prism:coverDate>2011-01-01</prism:coverDate><prism:doi>10.3322/caac.20096</prism:doi><citedby-count>38</citedby-count><affiliation><affilname>American
-        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>American
-        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>Associate
-        Director of Federal Relations | Associate Director of Federal Relations</affilname></affiliation><affiliation><affilname>American
-        Cancer Society | American Cancer Society</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84860564294" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84860564294"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84860564294"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84860564294</prism:url><dc:identifier>SCOPUS_ID:84860564294</dc:identifier><dc:title>American
-        Cancer Society, American Society for Colposcopy and Cervical Pathology, and
-        American Society for Clinical Pathology screening guidelines for the prevention
-        and early detection of cervical cancer</dc:title><dc:creator>Saslow, D.</dc:creator><prism:publicationName>American
-        Journal of Clinical Pathology</prism:publicationName><prism:issn>00029173</prism:issn><prism:eIssn>19437722</prism:eIssn><prism:volume>137</prism:volume><prism:issueIdentifier>4</prism:issueIdentifier><prism:pageRange>516-542</prism:pageRange><prism:coverDate>2012-04-01</prism:coverDate><prism:doi>10.1309/AJCPTGD94EVRSJCG</prism:doi><citedby-count>3</citedby-count><affiliation><affilname>American
-        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>National
-        Cancer Institute | National Cancer Institute ^ NIH</affilname></affiliation><affiliation><affilname>Emory
-        University School of Medicine | Emory University School of Medicine</affilname></affiliation><affiliation><affilname>Memorial
-        Sloan-Kettering Cancer Center | Memorial Sloan-Kettering Cancer Center ^ Mem.
-        Sloan-Kettering Cancer Center</affilname></affiliation><affiliation><affilname>University
-        of Minnesota System | University of Minnesota</affilname></affiliation><affiliation><affilname>University
-        of Massachusetts Medical School | University of Massachusetts Medical School
-        ^ Univ. of Massachusetts Med. School ^ University of Massachusetts ^</affilname></affiliation><affiliation><affilname>University
-        of Arizona | University of Arizona</affilname></affiliation><affiliation><affilname>University
-        of New Mexico School of Medicine | University of New Mexico School of Medicine
-        ^ University of New Mexico ^ Univ. New Mexico Sch. Med.</affilname></affiliation><affiliation><affilname>Massachusetts
-        General Hospital | Massachusetts General Hospital</affilname></affiliation><affiliation><affilname>National
-        Cancer Institute | National Cancer Institute ^ NIH</affilname></affiliation><affiliation><affilname>University
-        of Minnesota Medical School | University of Minnesota Medical School ^ Univ.
-        of Minnesota Medical School ^ Univ. Minnesota Med. Sch.</affilname></affiliation><affiliation><affilname>Weill
-        Cornell Medical College | Cornell University Medical College ^ Cornell University
-        ^ Weill Medical College of Cornell University</affilname></affiliation><affiliation><affilname>University
-        of California, San Francisco | University of California</affilname></affiliation><affiliation><affilname>McGill
-        University | McGill University</affilname></affiliation><affiliation><affilname>University
-        of Virginia Health System | University of Virginia Health System ^ University
-        of Virginia ^ Univ. of Virginia Hlth. Sci. Center ^ University of Virginia
-        Health Sciences Center</affilname></affiliation><affiliation><affilname>American
-        Society for Clinical Pathology Institute | American Society for Clinical Pathology
-        Institute</affilname></affiliation><affiliation><affilname>Duke University
-        School of Medicine | Duke University Medical Center ^ Duke Univ. Med. Cent.</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:80155159982" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=80155159982"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=80155159982"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:80155159982</prism:url><dc:identifier>SCOPUS_ID:80155159982</dc:identifier><dc:title>Recent
-        developments in treatment stratification for metastatic breast cancer</dc:title><dc:creator>Barton,
-        S.</dc:creator><prism:publicationName>Drugs</prism:publicationName><prism:issn>00126667</prism:issn><prism:eIssn>11791950</prism:eIssn><prism:volume>71</prism:volume><prism:issueIdentifier>16</prism:issueIdentifier><prism:pageRange>2099-2113</prism:pageRange><prism:coverDate>2011-11-07</prism:coverDate><prism:doi>10.2165/11594480-000000000-00000</prism:doi><citedby-count>1</citedby-count><affiliation><affilname>Royal
-        Marsden Hospital, Sutton | Royal Marsden Hospital ^ The Royal Marsden Hospital</affilname></affiliation><affiliation><affilname>Cancer
-        Research UK | Imperial Cancer Research Fund ^ Cancer Research UK</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84863589988" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84863589988"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84863589988"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84863589988</prism:url><dc:identifier>SCOPUS_ID:84863589988</dc:identifier><dc:title>American
-        cancer society, american society for colposcopy and cervical pathology, and
-        american society for clinical pathology screening guidelines for the prevention
-        and early detection of cervical cancer</dc:title><dc:creator>Saslow, D.</dc:creator><prism:publicationName>Journal
-        of Lower Genital Tract Disease</prism:publicationName><prism:issn>10892591</prism:issn><prism:eIssn>15260976</prism:eIssn><prism:volume>16</prism:volume><prism:issueIdentifier>3</prism:issueIdentifier><prism:pageRange>175-204</prism:pageRange><prism:coverDate>2012-07-01</prism:coverDate><prism:doi>10.1097/LGT.0b013e31824ca9d5</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>American
-        Cancer Society | American Cancer Society</affilname></affiliation><affiliation><affilname>National
-        Cancer Institute | National Cancer Institute ^ NIH</affilname></affiliation><affiliation><affilname>Emory
-        University | Emory University</affilname></affiliation><affiliation><affilname>Memorial
-        Sloan-Kettering Cancer Center | Memorial Sloan-Kettering Cancer Center ^ Mem.
-        Sloan-Kettering Cancer Center</affilname></affiliation><affiliation><affilname>University
-        of Minnesota Twin Cities | Univ. Minnesota ^ University of Minnesota ^ Univ
-        of Minnesota</affilname></affiliation><affiliation><affilname>University of
-        Massachusetts Medical School | University of Massachusetts Medical School
-        ^ Univ. of Massachusetts Med. School ^ University of Massachusetts ^</affilname></affiliation><affiliation><affilname>University
-        of Arizona | University of Arizona</affilname></affiliation><affiliation><affilname>University
-        of New Mexico School of Medicine | University of New Mexico School of Medicine
-        ^ University of New Mexico ^ Univ. New Mexico Sch. Med.</affilname></affiliation><affiliation><affilname>Massachusetts
-        General Hospital | Massachusetts General Hospital</affilname></affiliation><affiliation><affilname>National
-        Cancer Institute | National Cancer Institute ^ NIH</affilname></affiliation><affiliation><affilname>University
-        of Minnesota Twin Cities | Univ. Minnesota ^ University of Minnesota ^ Univ
-        of Minnesota</affilname></affiliation><affiliation><affilname>Weill Cornell
-        Medical College | Cornell University Medical College ^ Cornell University
-        ^ Weill Medical College of Cornell University</affilname></affiliation><affiliation><affilname>University
-        of California, San Francisco | University of California</affilname></affiliation><affiliation><affilname>McGill
-        University | McGill University</affilname></affiliation><affiliation><affilname>University
-        of Virginia Medical School | University of Virginia School of Medicine ^ University
-        of Virginia ^ Univ. Virginia Sch. Med.</affilname></affiliation><affiliation><affilname>National
-        Institutes of Health, Bethesda | National Institutes of Health ^ NIH</affilname></affiliation><affiliation><affilname>American
-        Society for Clinical Pathology Institute | American Society for Clinical Pathology
-        Institute</affilname></affiliation><affiliation><affilname>Duke University
-        | Duke University</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:77955709954" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=77955709954"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=77955709954"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:77955709954</prism:url><dc:identifier>SCOPUS_ID:77955709954</dc:identifier><dc:title>Anti-cancer
-        drug resistance: Understanding the mechanisms through the use of integrative
-        genomics and functional RNA interference</dc:title><dc:creator>Tan, D.S.-W.</dc:creator><prism:publicationName>European
-        Journal of Cancer</prism:publicationName><prism:issn>09598049</prism:issn><prism:volume>46</prism:volume><prism:issueIdentifier>12</prism:issueIdentifier><prism:pageRange>2166-2177</prism:pageRange><prism:coverDate>2010-04-20</prism:coverDate><prism:doi>10.1016/j.ejca.2010.03.019</prism:doi><citedby-count>16</citedby-count><affiliation><affilname>Cancer
-        Research UK | Imperial Cancer Research Fund ^ Cancer Research UK</affilname></affiliation><affiliation><affilname>National
-        Cancer Centre, Singapore | National Cancer Centre ^ National Cancer Center</affilname></affiliation><affiliation><affilname>National
-        Cancer Centre, Singapore | National Cancer Centre ^ National Cancer Center</affilname></affiliation><affiliation><affilname>Barts
-        and The London Queen Mary''s School of Medicine and Dentistry</affilname></affiliation><affiliation><affilname>Royal
-        Marsden NHS Foundation Trust | Royal Marsden NHS Trust ^ Royal Marsden NHS
-        Foundation Trust</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry></feed>'
+      string: |2+
+
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:cto="http://www.elsevier.com/xml/cto/dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:dc="http://purl.org/dc/elements/1.1/"><title>SCOPUS Search Results: cancer</title><updated>2015-09-17T20:54:51.558Z</updated><author><name>Elsevier, Inc.</name></author><id>http://api.elsevier.com:80/content/search/index:SCOPUS?&amp;count=10&amp;start=0&amp;query=cancer&amp;sort=refeid</id><opensearch:totalResults>4498809</opensearch:totalResults><opensearch:startIndex>0</opensearch:startIndex><opensearch:itemsPerPage>10</opensearch:itemsPerPage><opensearch:Query role="request" searchTerms="cancer" startPage="0"/><link ref="self" href="http://api.elsevier.com:80/content/search/index:scopus?start=0&amp;count=10&amp;query=cancer&amp;sort=refeid" type="application/atom+xml"/><link ref="first" href="http://api.elsevier.com:80/content/search/index:scopus?start=0&amp;count=10&amp;query=cancer&amp;sort=refeid" type="application/atom+xml"/><link ref="next" href="http://api.elsevier.com:80/content/search/index:scopus?start=10&amp;count=10&amp;query=cancer&amp;sort=refeid" type="application/atom+xml"/><link ref="last" href="http://api.elsevier.com:80/content/search/index:scopus?start=4990&amp;count=10&amp;query=cancer&amp;sort=refeid" type="application/atom+xml"/><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:84940734581"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:84940734581?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84940734581&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84940734581&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:84940734581</prism:url><dc:identifier>SCOPUS_ID:84940734581</dc:identifier><eid>2-s2.0-84940734581</eid><dc:title>Human epidermal growth factor receptor 2 (HER2) impedes MLK3 kinase activity to support breast cancer cell survival</dc:title><dc:creator>Das S.</dc:creator><prism:publicationName>Journal of Biological Chemistry</prism:publicationName><prism:issn>00219258</prism:issn><prism:eIssn>1083351X</prism:eIssn><prism:volume>290</prism:volume><prism:issueIdentifier>35</prism:issueIdentifier><prism:pageRange>21705-21712</prism:pageRange><prism:coverDate>2015-08-28</prism:coverDate><prism:coverDisplayDate>28 August 2015</prism:coverDisplayDate><prism:doi>10.1074/jbc.M115.655563</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Loyola University of Chicago</affilname><affiliation-city>Chicago</affiliation-city><affiliation-country>United States</affiliation-country></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><source-id>17592</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:84888411673"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:84888411673?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84888411673&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84888411673&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:84888411673</prism:url><dc:identifier>SCOPUS_ID:84888411673</dc:identifier><eid>2-s2.0-84888411673</eid><dc:title>Biological influence of brain-derived neurotrophic factor (BDNF) on colon cancer cells</dc:title><dc:creator>Yang X.</dc:creator><prism:publicationName>Experimental and Therapeutic Medicine</prism:publicationName><prism:issn>17920981</prism:issn><prism:eIssn>17921015</prism:eIssn><prism:volume>6</prism:volume><prism:issueIdentifier>6</prism:issueIdentifier><prism:pageRange>1475-1481</prism:pageRange><prism:coverDate>2013-12-03</prism:coverDate><prism:coverDisplayDate>2013</prism:coverDisplayDate><prism:doi>10.3892/etm.2013.1330</prism:doi><citedby-count>3</citedby-count><affiliation><affilname>Cardiff University</affilname><affiliation-city>Cardiff</affiliation-city><affiliation-country>United Kingdom</affiliation-country></affiliation><affiliation><affilname>Capital Medical University China</affilname><affiliation-city>Beijing</affiliation-city><affiliation-country>China</affiliation-country></affiliation><affiliation><affilname>Capital Medical University China</affilname><affiliation-city>Beijing</affiliation-city><affiliation-country>China</affiliation-country></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><source-id>19700176236</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:49849100140"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:49849100140?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=49849100140&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=49849100140&amp;origin=inward"/><link ref="full-text" href="http://api.elsevier.com/content/article/eid:1-s2.0-S1424390308800567"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:49849100140</prism:url><dc:identifier>SCOPUS_ID:49849100140</dc:identifier><eid>2-s2.0-49849100140</eid><dc:title>Biological approaches to therapy of pancreatic cancer</dc:title><dc:creator>Wong H.</dc:creator><prism:publicationName>Pancreatology</prism:publicationName><prism:issn>14243903</prism:issn><prism:volume>8</prism:volume><prism:issueIdentifier>4-5</prism:issueIdentifier><prism:pageRange>431-461</prism:pageRange><prism:coverDate>2008-10-01</prism:coverDate><prism:coverDisplayDate>October 2008</prism:coverDisplayDate><prism:doi>10.1159/000151536</prism:doi><citedby-count>18</citedby-count><affiliation><affilname>Barts and The London Queen Mary's School of Medicine and Dentistry</affilname><affiliation-city>London</affiliation-city><affiliation-country>United Kingdom</affiliation-country></affiliation><affiliation><affilname>Barts and The London Queen Mary's School of Medicine and Dentistry</affilname><affiliation-city>London</affiliation-city><affiliation-country>United Kingdom</affiliation-country></affiliation><pubmed-id>18724071</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype><subtypeDescription>Review</subtypeDescription><source-id>26662</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:84874747481"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:84874747481?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84874747481&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84874747481&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:84874747481</prism:url><dc:identifier>SCOPUS_ID:84874747481</dc:identifier><eid>2-s2.0-84874747481</eid><dc:title>Cancer screening in the United States, 2013: A review of current american cancer society guidelines, current issues in cancer screening, and new guidance on cervical cancer screening and lung cancer screening</dc:title><dc:creator>Smith R.</dc:creator><prism:publicationName>CA Cancer Journal for Clinicians</prism:publicationName><prism:issn>00079235</prism:issn><prism:eIssn>15424863</prism:eIssn><prism:volume>63</prism:volume><prism:issueIdentifier>2</prism:issueIdentifier><prism:pageRange>87-105</prism:pageRange><prism:coverDate>2013-03-01</prism:coverDate><prism:coverDisplayDate>March 2013</prism:coverDisplayDate><prism:doi>10.3322/caac.21174</prism:doi><citedby-count>95</citedby-count><affiliation><affilname>American Cancer Society</affilname><affiliation-city>Atlanta</affiliation-city><affiliation-country>United States</affiliation-country></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype><subtypeDescription>Review</subtypeDescription><source-id>28773</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:77955462853"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:77955462853?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=77955462853&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=77955462853&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:77955462853</prism:url><dc:identifier>SCOPUS_ID:77955462853</dc:identifier><eid>2-s2.0-77955462853</eid><dc:title>Global patterns of cancer incidence and mortality rates and trends</dc:title><dc:creator>Jemal A.</dc:creator><prism:publicationName>Cancer Epidemiology Biomarkers and Prevention</prism:publicationName><prism:issn>10559965</prism:issn><prism:volume>19</prism:volume><prism:issueIdentifier>8</prism:issueIdentifier><prism:pageRange>1893-1907</prism:pageRange><prism:coverDate>2010-08-01</prism:coverDate><prism:coverDisplayDate>August 2010</prism:coverDisplayDate><prism:doi>10.1158/1055-9965.EPI-10-0437</prism:doi><citedby-count>812</citedby-count><affiliation><affilname>American Cancer Society</affilname><affiliation-city>Atlanta</affiliation-city><affiliation-country>United States</affiliation-country></affiliation><pubmed-id>20647400</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype><subtypeDescription>Review</subtypeDescription><source-id>29124</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:79951834315"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:79951834315?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=79951834315&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=79951834315&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:79951834315</prism:url><dc:identifier>SCOPUS_ID:79951834315</dc:identifier><eid>2-s2.0-79951834315</eid><dc:title>Cancer screening in the United States, 2011: A review of current American Cancer Society guidelines and issues in cancer screening</dc:title><dc:creator>Smith R.</dc:creator><prism:publicationName>CA Cancer Journal for Clinicians</prism:publicationName><prism:issn>00079235</prism:issn><prism:eIssn>15424863</prism:eIssn><prism:volume>61</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>8-30</prism:pageRange><prism:coverDate>2011-01-01</prism:coverDate><prism:coverDisplayDate>January 2011</prism:coverDisplayDate><prism:doi>10.3322/caac.20096</prism:doi><citedby-count>162</citedby-count><affiliation><affilname>American Cancer Society</affilname><affiliation-city>Atlanta</affiliation-city><affiliation-country>United States</affiliation-country></affiliation><pubmed-id>21205832</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><source-id>28773</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:80155159982"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:80155159982?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=80155159982&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=80155159982&amp;origin=inward"/><link ref="full-text" href="http://api.elsevier.com/content/article/eid:1-s2.0-S0959804911003273"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:80155159982</prism:url><dc:identifier>SCOPUS_ID:80155159982</dc:identifier><eid>2-s2.0-80155159982</eid><dc:title>Recent developments in treatment stratification for metastatic breast cancer</dc:title><dc:creator>Barton S.</dc:creator><prism:publicationName>Drugs</prism:publicationName><prism:issn>00126667</prism:issn><prism:eIssn>11791950</prism:eIssn><prism:volume>71</prism:volume><prism:issueIdentifier>16</prism:issueIdentifier><prism:pageRange>2099-2113</prism:pageRange><prism:coverDate>2011-11-07</prism:coverDate><prism:coverDisplayDate>2011</prism:coverDisplayDate><prism:doi>10.2165/11594480-000000000-00000</prism:doi><citedby-count>5</citedby-count><affiliation><affilname>Royal Marsden Hospital, Sutton</affilname><affiliation-city>Sutton</affiliation-city><affiliation-country>United Kingdom</affiliation-country></affiliation><pubmed-id>22035512</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><source-id>21239</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:0037077867"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:0037077867?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=0037077867&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=0037077867&amp;origin=inward"/><link ref="full-text" href="http://api.elsevier.com/content/article/eid:1-s2.0-S0140673602099580"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:0037077867</prism:url><dc:identifier>SCOPUS_ID:0037077867</dc:identifier><eid>2-s2.0-0037077867</eid><dc:title>The effect of diet on risk of cancer</dc:title><dc:creator>Key T.</dc:creator><prism:publicationName>Lancet</prism:publicationName><prism:issn>01406736</prism:issn><prism:volume>360</prism:volume><prism:issueIdentifier>9336</prism:issueIdentifier><prism:pageRange>861-868</prism:pageRange><prism:coverDate>2002-09-14</prism:coverDate><prism:coverDisplayDate>14 September 2002</prism:coverDisplayDate><prism:doi>10.1016/S0140-6736(02)09958-0</prism:doi><citedby-count>285</citedby-count><affiliation><affilname>University of Oxford</affilname><affiliation-city>Oxford</affiliation-city><affiliation-country>United Kingdom</affiliation-country></affiliation><pubmed-id>12243933</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype><subtypeDescription>Review</subtypeDescription><source-id>16590</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:84861851519"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:84861851519?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861851519&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861851519&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:84861851519</prism:url><dc:identifier>SCOPUS_ID:84861851519</dc:identifier><eid>2-s2.0-84861851519</eid><dc:title>Cancer chromosomal instability: Therapeutic and diagnostic challenges</dc:title><dc:creator>McGranahan N.</dc:creator><prism:publicationName>EMBO Reports</prism:publicationName><prism:issn>1469221X</prism:issn><prism:eIssn>14693178</prism:eIssn><prism:volume>13</prism:volume><prism:issueIdentifier>6</prism:issueIdentifier><prism:pageRange>528-538</prism:pageRange><prism:coverDate>2012-06-01</prism:coverDate><prism:coverDisplayDate>June 2012</prism:coverDisplayDate><prism:doi>10.1038/embor.2012.61</prism:doi><pii>EMBOR201261</pii><citedby-count>69</citedby-count><affiliation><affilname>CRUK London Research Institute</affilname><affiliation-city>London</affiliation-city><affiliation-country>United Kingdom</affiliation-country></affiliation><affiliation><affilname>UCL</affilname><affiliation-city>London</affiliation-city><affiliation-country>United Kingdom</affiliation-country></affiliation><affiliation><affilname>UCL</affilname><affiliation-city>London</affiliation-city><affiliation-country>United Kingdom</affiliation-country></affiliation><pubmed-id>22595889</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype><subtypeDescription>Review</subtypeDescription><source-id>22088</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:77949726422"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:77949726422?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=77949726422&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=77949726422&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:77949726422</prism:url><dc:identifier>SCOPUS_ID:77949726422</dc:identifier><eid>2-s2.0-77949726422</eid><dc:title>Declining death rates reflect progress against cancer</dc:title><dc:creator>Jemal A.</dc:creator><prism:publicationName>PLoS ONE</prism:publicationName><prism:eIssn>19326203</prism:eIssn><prism:volume>5</prism:volume><prism:issueIdentifier>3</prism:issueIdentifier><prism:coverDate>2010-03-09</prism:coverDate><prism:coverDisplayDate>9 March 2010</prism:coverDisplayDate><prism:doi>10.1371/journal.pone.0009584</prism:doi><citedby-count>95</citedby-count><affiliation><affilname>American Cancer Society</affilname><affiliation-city>Atlanta</affiliation-city><affiliation-country>United States</affiliation-country></affiliation><pubmed-id>20231893</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><article-number>e9584</article-number><source-id>10600153309</source-id></entry></feed>
+
+
+
+
     http_version: 
-  recorded_at: Mon, 06 Aug 2012 15:27:16 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Thu, 17 Sep 2015 20:54:52 GMT
+recorded_with: VCR 2.9.3

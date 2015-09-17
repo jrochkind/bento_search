@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: http://api.elsevier.com/content/search/index:SCOPUS?count=10&query=aldfjkadf%20lakdj%20zdfzzzz&sort=refeid
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       X-Els-Apikey:
@@ -13,55 +13,44 @@ http_interactions:
       - XOCS
       Accept:
       - application/atom+xml
-      Cookie:
-      - JSESSIONID=FC9EA38206AB6BFD7D48F6B1ED186E57.KLCIns3Dy2n2GJ9KNkUA
   response:
     status:
-      code: 400
-      message: !binary |-
-        QmFkIFJlcXVlc3Q=
+      code: 200
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        YXBpLmVsc2V2aWVyLmNvbSAgOTk5OQ==
-      !binary "WC1FbHMtU3RhdHVz":
-      - !binary |-
-        SU5WQUxJRF9JTlBVVChSZXN1bHQgc2V0IHdhcyBlbXB0eSBvciBTdGFydCB2
-        YWx1ZSBiZXlvbmQgcmVzdWx0IHNldCk=
-      !binary "WC1FbHMtUmVxaWQ=":
-      - !binary |-
-        MDAwMDAxMzhmYjRkMGIyYi01NjVmNg==
-      !binary "WC1FbHMtQXBpa2V5":
-      - !binary |-
-        RFVNTVlfQVBJX0tFWQ==
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        SlNFU1NJT05JRD0zRjNEOTkyOTBEMTZFMTU2QUQxRkI2RkMwRjBCOTA3Ri4y
-        VWlvdmVvMVhNU0tyTDZlU2FJTk1ROyBEb21haW49YXBpLmVsc2V2aWVyLmNv
-        bTsgUGF0aD0vY29udGVudC9zZWFyY2g=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC94bWw7Y2hhcnNldD11dGYtOA==
-      !binary "Q29udGVudC1MZW5ndGg=":
-      - !binary |-
-        MTc1
-      !binary "RGF0ZQ==":
-      - !binary |-
-        TW9uLCAwNiBBdWcgMjAxMiAxNToyNzoxNiBHTVQ=
-      !binary "WC1DbmVjdGlvbg==":
-      - !binary |-
-        Y2xvc2U=
-      !binary "WC1SZS1SZWY=":
-      - !binary |-
-        MSAtMjA5NDcyNDU1MQ==
-      !binary "UDNw":
-      - !binary |-
-        Q1A9IklEQyBEU1AgTEFXIEFETSBERVYgVEFJIFBTQSBQU0QgSVZBIElWRCBD
-        T04gSElTIFRFTCBPVVIgREVMIFNBTSBPVFIgSU5EIE9UQyI=
+      Server:
+      - api.elsevier.com  9999
+      X-Els-Status:
+      - NO_SEARCH_RESULTS(Result set was empty)
+      X-Els-Reqid:
+      - 0000014f72d218c9-4edd3d0
+      X-Els-Apikey:
+      - DUMMY_API_KEY
+      X-Els-Transid:
+      - a0fa9a66-4a95-4446-ae02-3149fec4ea15
+      Allow:
+      - GET
+      Content-Type:
+      - application/atom+xml;charset=UTF-8
+      Content-Length:
+      - '1063'
+      Date:
+      - Thu, 17 Sep 2015 20:54:47 GMT
+      X-Re-Ref:
+      - 1 -1608368997
+      P3p:
+      - CP="IDC DSP LAW ADM DEV TAI PSA PSD IVA IVD CON HIS TEL OUR DEL SAM OTR IND
+        OTC"
     body:
-      encoding: US-ASCII
-      string: ! "<service-error>\n\t<status>\n\t\t<statusCode>INVALID_INPUT</statusCode>\n\t\t<statusText>Result
-        set was empty or Start value beyond result set</statusText>\n\t</status>\n</service-error>"
+      encoding: UTF-8
+      string: '<feed xmlns="http://www.w3.org/2005/Atom" xmlns:atom="http://www.w3.org/2005/Atom"
+        xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"><title>SCOPUS Search Results:
+        aldfjkadf+lakdj+zdfzzzz</title><updated>2015-09-17T20:54:47.802Z</updated><author><name>Elsevier,
+        Inc.</name></author><id>http://api.elsevier.com:80/content/search/index:SCOPUS?query=aldfjkadf+lakdj+zdfzzzz&amp;count=10&amp;start=0&amp;view=STANDARD&amp;field=&amp;query=aldfjkadf+lakdj+zdfzzzz&amp;sort=refeid</id><opensearch:totalResults>0</opensearch:totalResults><opensearch:startIndex>0</opensearch:startIndex><opensearch:itemsPerPage>0</opensearch:itemsPerPage><opensearch:Query
+        role="request" searchTerms="aldfjkadf+lakdj+zdfzzzz" startPage="0"/><link
+        ref="self" href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=0&amp;count=10&amp;query=aldfjkadf+lakdj+zdfzzzz&amp;sort=refeid"
+        type="application/atom+xml"/><entry><error>Result set was empty</error></entry></feed>'
     http_version: 
-  recorded_at: Mon, 06 Aug 2012 15:27:16 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Thu, 17 Sep 2015 20:54:48 GMT
+recorded_with: VCR 2.9.3

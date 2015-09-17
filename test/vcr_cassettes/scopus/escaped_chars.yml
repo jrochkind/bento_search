@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: http://api.elsevier.com/content/search/index:SCOPUS?count=10&query=monkey%20%20brain%20&sort=refeid
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       X-Els-Apikey:
@@ -16,172 +16,40 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        YXBpLmVsc2V2aWVyLmNvbSAgOTk5OQ==
-      !binary "WC1FbHMtU3RhdHVz":
-      - !binary |-
-        T0s=
-      !binary "WC1FbHMtUmVxaWQ=":
-      - !binary |-
-        MDAwMDAxMzhlODI3MmEwNC0yZDQwYmE=
-      !binary "WC1FbHMtQXBpa2V5":
-      - !binary |-
-        RFVNTVlfQVBJX0tFWQ==
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        SlNFU1NJT05JRD02NjNGNENFRjg0Mjk4RDM0MTQ1NDgxMkVGRDM1NTE3NS54
-        RGFMQmxvQmduTXRmYnpTSDN2NnNnOyBEb21haW49YXBpLmVsc2V2aWVyLmNv
-        bTsgUGF0aD0vY29udGVudC9zZWFyY2g=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC94bWw7Y2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "RGF0ZQ==":
-      - !binary |-
-        TW9uLCAwNiBBdWcgMjAxMiAxNToyMDoxNyBHTVQ=
-      !binary "WC1SZS1SZWY=":
-      - !binary |-
-        MSAtMjA5NDcyNDU1MQ==
-      !binary "UDNw":
-      - !binary |-
-        Q1A9IklEQyBEU1AgTEFXIEFETSBERVYgVEFJIFBTQSBQU0QgSVZBIElWRCBD
-        T04gSElTIFRFTCBPVVIgREVMIFNBTSBPVFIgSU5EIE9UQyI=
+      Server:
+      - api.elsevier.com  9999
+      X-Els-Status:
+      - OK
+      X-Els-Reqid:
+      - 0000014fbd65b37c-1657ede
+      X-Els-Apikey:
+      - DUMMY_API_KEY
+      X-Els-Transid:
+      - a4b3185c-60c1-4574-9ef3-3d9ce7e1e8b2
+      Allow:
+      - GET
+      Content-Type:
+      - application/atom+xml;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 17 Sep 2015 20:54:48 GMT
+      X-Re-Ref:
+      - 1 -1608368997
+      P3p:
+      - CP="IDC DSP LAW ADM DEV TAI PSA PSD IVA IVD CON HIS TEL OUR DEL SAM OTR IND
+        OTC"
     body:
       encoding: UTF-8
-      string: ! '<feed xmlns="http://www.w3.org/2005/Atom" xmlns:atom="http://www.w3.org/2005/Atom"
-        xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/"
-        xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/"><title>SCOPUS
-        Search Results: monkey++brain+</title><updated>2012-08-06T15:20:17.568Z</updated><author><name>Elsevier,
-        Inc.</name></author><id>http://api.elsevier.com:80/content/search/index:SCOPUS?query=monkey++brain+&amp;count=10&amp;start=0&amp;view=STANDARD&amp;field=</id><opensearch:totalResults>186581</opensearch:totalResults><opensearch:startIndex>0</opensearch:startIndex><opensearch:itemsPerPage>10</opensearch:itemsPerPage><opensearch:Query
-        role="request" searchTerms="monkey++brain+" startPage="0"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=0&amp;count=10&amp;query=monkey++brain+&amp;sort=refeid"
-        ref="self" type="application/atom+xml"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=0&amp;count=10&amp;query=monkey++brain+&amp;sort=refeid"
-        ref="first" type="application/atom+xml"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=10&amp;count=10&amp;query=monkey++brain+&amp;sort=refeid"
-        ref="next" type="application/atom+xml"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=1990&amp;count=10&amp;query=monkey++brain+&amp;sort=refeid"
-        ref="last" type="application/atom+xml"/><entry><link href="http://api.elsevier.com/content/abstract/SCOPUS_ID:0032124433"
-        ref="self"/><link href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=0032124433"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=0032124433"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:0032124433</prism:url><dc:identifier>SCOPUS_ID:0032124433</dc:identifier><dc:title>How
-        it is to be the brain of a monkey</dc:title><dc:creator>Krüger, J.</dc:creator><prism:publicationName>Zeitschrift
-        fur Naturforschung - Section C Journal of Biosciences</prism:publicationName><prism:issn>09395075</prism:issn><prism:volume>53</prism:volume><prism:issueIdentifier>7-8</prism:issueIdentifier><prism:pageRange>599-609</prism:pageRange><prism:coverDate>1998-07-01</prism:coverDate><citedby-count>1</citedby-count><affiliation><affilname>AG
-        Hirnforschung | AG Hirnforschung ^ Universität Freiburg, AG Hirnforschung</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>cp</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:0033550926" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=0033550926"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=0033550926"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:0033550926</prism:url><dc:identifier>SCOPUS_ID:0033550926</dc:identifier><dc:title>Cellular
-        localization of brain-derived neurotrophic factor-like immunoreactivity in
-        adult monkey brain</dc:title><dc:creator>Kawamoto, Y.</dc:creator><prism:publicationName>Brain
-        Research</prism:publicationName><prism:issn>00068993</prism:issn><prism:volume>821</prism:volume><prism:issueIdentifier>2</prism:issueIdentifier><prism:pageRange>341-349</prism:pageRange><prism:coverDate>1999-03-13</prism:coverDate><prism:doi>10.1016/S0006-8993(99)01082-3</prism:doi><citedby-count>16</citedby-count><affiliation><affilname>Kyoto
-        University | Kyoto University</affilname></affiliation><affiliation><affilname>Hyogo
-        Inst. Aging Brain Cogn. D. | Hyogo Inst. Aging Brain Cogn. D. ^ Hyogo Institute
-        for Aging Brain and Cognitive Disorders</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:0032489683" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=0032489683"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=0032489683"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:0032489683</prism:url><dc:identifier>SCOPUS_ID:0032489683</dc:identifier><dc:title>Topographical
-        distribution of [125I]-glial cell line-derived neurotrophic factor in unlesioned
-        and MPTP-lesioned rhesus monkey brain following a bolus intraventricular injection</dc:title><dc:creator>Lapchak,
-        P.A.</dc:creator><prism:publicationName>Brain Research</prism:publicationName><prism:issn>00068993</prism:issn><prism:volume>789</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>9-22</prism:pageRange><prism:coverDate>1998-04-06</prism:coverDate><prism:doi>10.1016/S0006-8993(97)01495-9</prism:doi><citedby-count>16</citedby-count><affiliation><affilname>Amgen
-        Incorporated | Amgen Inc. ^ ^ Amgen, Inc.</affilname></affiliation><affiliation><affilname>University
-        of Kentucky | University of Kentucky</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:0033986040" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=0033986040"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=0033986040"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:0033986040</prism:url><dc:identifier>SCOPUS_ID:0033986040</dc:identifier><dc:title>The
-        distribution of neuropeptide Y and brain-derived neurotrophic factor immunoreactivity
-        in hippocampal formation of the monkey and rat</dc:title><dc:creator>Iritani,
-        S.</dc:creator><prism:publicationName>Brain Research</prism:publicationName><prism:issn>00068993</prism:issn><prism:volume>852</prism:volume><prism:issueIdentifier>2</prism:issueIdentifier><prism:pageRange>475-478</prism:pageRange><prism:coverDate>2000-01-10</prism:coverDate><prism:doi>10.1016/S0006-8993(99)02139-3</prism:doi><citedby-count>4</citedby-count><affiliation><affilname>Brain
-        Res. Inst. | Brain Res. Inst. ^ Brain Research Institute</affilname></affiliation><affiliation><affilname>Tokyo
-        Institute of Psychiatry | Tokyo Institute of Psychiatry ^ Psychiatric Research
-        Institute of Tokyo</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>sh</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:1642338756" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=1642338756"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=1642338756"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:1642338756</prism:url><dc:identifier>SCOPUS_ID:1642338756</dc:identifier><dc:title>Monkey
-        brain areas underlying remote-controlled operation</dc:title><dc:creator>Obayashi,
-        S.</dc:creator><prism:publicationName>European Journal of Neuroscience</prism:publicationName><prism:issn>0953816X</prism:issn><prism:volume>19</prism:volume><prism:issueIdentifier>5</prism:issueIdentifier><prism:pageRange>1397-1407</prism:pageRange><prism:coverDate>2004-03-01</prism:coverDate><prism:doi>10.1111/j.1460-9568.2004.03200.x</prism:doi><citedby-count>4</citedby-count><affiliation><affilname>National
-        Institute of Radiological Sciences Chiba | National Institute of Radiological
-        Sciences ^ Natl. Inst. of Radiological Sciences</affilname></affiliation><affiliation><affilname>Tokyo
-        Medical and Dental University | Tokyo Medical and Dental University</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:0141817927" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=0141817927"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=0141817927"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:0141817927</prism:url><dc:identifier>SCOPUS_ID:0141817927</dc:identifier><dc:title>Functional
-        brain imaging of olfactory processing in monkeys</dc:title><dc:creator>Boyett-Anderson,
-        J.M.</dc:creator><prism:publicationName>NeuroImage</prism:publicationName><prism:issn>10538119</prism:issn><prism:volume>20</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>257-264</prism:pageRange><prism:coverDate>2003-09-01</prism:coverDate><prism:doi>10.1016/S1053-8119(03)00288-X</prism:doi><citedby-count>7</citedby-count><affiliation><affilname>Stanford
-        University | Stanford University ^ Stanford Univ</affilname></affiliation><affiliation><affilname>Stanford
-        University | Stanford University ^ Stanford Univ</affilname></affiliation><affiliation><affilname>Stanford
-        University | Stanford University ^ Stanford Univ</affilname></affiliation><affiliation><affilname>Stanford
-        University | Stanford University ^ Stanford Univ</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:78650248015" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=78650248015"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=78650248015"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:78650248015</prism:url><dc:identifier>SCOPUS_ID:78650248015</dc:identifier><dc:title>A
-        web-based brain atlas of the vervet monkey, Chlorocebus aethiops</dc:title><dc:creator>Woods,
-        R.P.</dc:creator><prism:publicationName>NeuroImage</prism:publicationName><prism:issn>10538119</prism:issn><prism:volume>54</prism:volume><prism:issueIdentifier>3</prism:issueIdentifier><prism:pageRange>1872-1880</prism:pageRange><prism:coverDate>2011-02-01</prism:coverDate><prism:doi>10.1016/j.neuroimage.2010.09.070</prism:doi><citedby-count>1</citedby-count><affiliation><affilname>University
-        of California, Los Angeles | University of California ^ UCLA</affilname></affiliation><affiliation><affilname>University
-        of California, Los Angeles | University of California ^ UCLA</affilname></affiliation><affiliation><affilname>University
-        of California, Los Angeles | University of California ^ UCLA</affilname></affiliation><affiliation><affilname>David
-        Geffen School of Medicine at UCLA | UCLA School of Medicine</affilname></affiliation><affiliation><affilname>Wake
-        Forest University School of Medicine | ^ Wake Forest University School of
-        Medicine ^ Wake Forest University ^ Wake Forest Univ. School of Medicine</affilname></affiliation><affiliation><affilname>David
-        Geffen School of Medicine at UCLA | UCLA School of Medicine</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84860589702" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84860589702"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84860589702"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84860589702</prism:url><dc:identifier>SCOPUS_ID:84860589702</dc:identifier><dc:title>Calorie
-        restriction reduces the influence of glucoregulatory dysfunction on regional
-        brain volume in aged rhesus monkeys</dc:title><dc:creator>Willette, A.A.</dc:creator><prism:publicationName>Diabetes</prism:publicationName><prism:issn>00121797</prism:issn><prism:eIssn>1939327X</prism:eIssn><prism:volume>61</prism:volume><prism:issueIdentifier>5</prism:issueIdentifier><prism:pageRange>1036-1042</prism:pageRange><prism:coverDate>2012-05-01</prism:coverDate><prism:doi>10.2337/db11-1187</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>VA
-        Medical Center</affilname></affiliation><affiliation><affilname>University
-        of Wisconsin Madison | University of Wisconsin-Madison</affilname></affiliation><affiliation><affilname>University
-        of Wisconsin Madison | University of Wisconsin-Madison</affilname></affiliation><affiliation><affilname>Wisconsin
-        National Primate Research Center | University of Wisconsin ^ Wisconsin Regional
-        Primate Research Center ^ University of Wisconsin-Madison</affilname></affiliation><affiliation><affilname>University
-        of Wisconsin Madison | University of Wisconsin-Madison</affilname></affiliation><affiliation><affilname>University
-        of Wisconsin Madison | University of Wisconsin-Madison</affilname></affiliation><affiliation><affilname>University
-        of Alabama at Birmingham | University of Alabama at Birmingham</affilname></affiliation><affiliation><affilname>Wake
-        Forest University School of Medicine | ^ Wake Forest University School of
-        Medicine ^ Wake Forest University ^ Wake Forest Univ. School of Medicine</affilname></affiliation><affiliation><affilname>University
-        of Wisconsin Madison | University of Wisconsin-Madison</affilname></affiliation><affiliation><affilname>University
-        of Wisconsin Madison | University of Wisconsin-Madison</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861193734" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861193734"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861193734"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84861193734</prism:url><dc:identifier>SCOPUS_ID:84861193734</dc:identifier><dc:title>Calorie
-        restriction reduces psychological stress reactivity and its association with
-        brain volume and microstructure in aged rhesus monkeys</dc:title><dc:creator>Willette,
-        A.A.</dc:creator><prism:publicationName>Psychoneuroendocrinology</prism:publicationName><prism:issn>03064530</prism:issn><prism:eIssn>18733360</prism:eIssn><prism:volume>37</prism:volume><prism:issueIdentifier>7</prism:issueIdentifier><prism:pageRange>903-916</prism:pageRange><prism:coverDate>2012-07-01</prism:coverDate><prism:doi>10.1016/j.psyneuen.2011.10.006</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>VA
-        Medical Center</affilname></affiliation><affiliation><affilname>Wisconsin
-        National Primate Research Center | University of Wisconsin ^ Wisconsin Regional
-        Primate Research Center ^ University of Wisconsin-Madison</affilname></affiliation><affiliation><affilname>University
-        of Wisconsin School of Medicine and Public Health | University of Wisconsin
-        Medical School ^ Univ. of Wisconsin Medical School ^ Univ. Wisconsin Med.
-        Sch.</affilname></affiliation><affiliation><affilname>University of Wisconsin
-        Madison | University of Wisconsin-Madison</affilname></affiliation><affiliation><affilname>University
-        of Wisconsin Madison | University of Wisconsin-Madison</affilname></affiliation><affiliation><affilname>University
-        of Wisconsin Madison | University of Wisconsin-Madison</affilname></affiliation><affiliation><affilname>University
-        of Alabama at Birmingham | University of Alabama at Birmingham</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:35748973905" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=35748973905"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=35748973905"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:35748973905</prism:url><dc:identifier>SCOPUS_ID:35748973905</dc:identifier><dc:title>Changes
-        in the rates of the tricarboxylic acid (TCA) cycle and glutamine synthesis
-        in the monkey brain with hemiparkinsonism induced by intracarotid infusion
-        of 1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine (MPTP): Studies by non-invasive
-        13C-magnetic resonance spectroscopy</dc:title><dc:creator>Kanamatsu, T.</dc:creator><prism:publicationName>Brain
-        Research</prism:publicationName><prism:issn>00068993</prism:issn><prism:volume>1181</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>142-148</prism:pageRange><prism:coverDate>2007-11-21</prism:coverDate><prism:doi>10.1016/j.brainres.2007.08.051</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Soka
-        University | Soka University</affilname></affiliation><affiliation><affilname>National
-        Center of Neurology and Psychiatry Kodaira | National Center of Neurology
-        and Psychiatry ^ NCNP ^ Natl. Ctr. of Neurol. and Psychiatry</affilname></affiliation><affiliation><affilname>Tokyo
-        Metropolitan Institute of Neuroscience | Tokyo Metropolitan Institute for
-        Neuroscience ^ Tokyo Metropol. Inst. for Neurosci. ^ Tokyo Metropolitan Institute
-        for Neurosciences</affilname></affiliation><affiliation><affilname>Toshiba
-        Corporation | Toshiba Corp ^ Toshiba Corporation</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry></feed>'
+      string: |2+
+
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:cto="http://www.elsevier.com/xml/cto/dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:dc="http://purl.org/dc/elements/1.1/"><title>SCOPUS Search Results: monkey++brain+</title><updated>2015-09-17T20:54:49.023Z</updated><author><name>Elsevier, Inc.</name></author><id>http://api.elsevier.com:80/content/search/index:SCOPUS?&amp;count=10&amp;start=0&amp;query=monkey++brain+&amp;sort=refeid</id><opensearch:totalResults>288201</opensearch:totalResults><opensearch:startIndex>0</opensearch:startIndex><opensearch:itemsPerPage>10</opensearch:itemsPerPage><opensearch:Query role="request" searchTerms="monkey++brain+" startPage="0"/><link ref="self" href="http://api.elsevier.com:80/content/search/index:scopus?start=0&amp;count=10&amp;query=monkey++brain+&amp;sort=refeid" type="application/atom+xml"/><link ref="first" href="http://api.elsevier.com:80/content/search/index:scopus?start=0&amp;count=10&amp;query=monkey++brain+&amp;sort=refeid" type="application/atom+xml"/><link ref="next" href="http://api.elsevier.com:80/content/search/index:scopus?start=10&amp;count=10&amp;query=monkey++brain+&amp;sort=refeid" type="application/atom+xml"/><link ref="last" href="http://api.elsevier.com:80/content/search/index:scopus?start=4990&amp;count=10&amp;query=monkey++brain+&amp;sort=refeid" type="application/atom+xml"/><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:0032124433"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:0032124433?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=0032124433&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=0032124433&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:0032124433</prism:url><dc:identifier>SCOPUS_ID:0032124433</dc:identifier><eid>2-s2.0-0032124433</eid><dc:title>How it is to be the brain of a monkey</dc:title><dc:creator>Krüger J.</dc:creator><prism:publicationName>Zeitschrift fur Naturforschung - Section C Journal of Biosciences</prism:publicationName><prism:issn>09395075</prism:issn><prism:volume>53</prism:volume><prism:issueIdentifier>7-8</prism:issueIdentifier><prism:pageRange>599-609</prism:pageRange><prism:coverDate>1998-07-01</prism:coverDate><prism:coverDisplayDate>July 1998</prism:coverDisplayDate><citedby-count>1</citedby-count><affiliation><affilname>AG Hirnforschung</affilname><affiliation-city>Freiburg</affiliation-city><affiliation-country>Germany</affiliation-country></affiliation><pubmed-id>9755514</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>cp</subtype><subtypeDescription>Conference Paper</subtypeDescription><source-id>14954</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:0033986040"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:0033986040?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=0033986040&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=0033986040&amp;origin=inward"/><link ref="full-text" href="http://api.elsevier.com/content/article/eid:1-s2.0-S0006899399021393"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:0033986040</prism:url><dc:identifier>SCOPUS_ID:0033986040</dc:identifier><eid>2-s2.0-0033986040</eid><dc:title>The distribution of neuropeptide Y and brain-derived neurotrophic factor immunoreactivity in hippocampal formation of the monkey and rat</dc:title><dc:creator>Iritani S.</dc:creator><prism:publicationName>Brain Research</prism:publicationName><prism:issn>00068993</prism:issn><prism:volume>852</prism:volume><prism:issueIdentifier>2</prism:issueIdentifier><prism:pageRange>475-478</prism:pageRange><prism:coverDate>2000-01-10</prism:coverDate><prism:coverDisplayDate>10 January 2000</prism:coverDisplayDate><prism:doi>10.1016/S0006-8993(99)02139-3</prism:doi><pii>S0006899399021393</pii><citedby-count>5</citedby-count><affiliation><affilname>Tokyo Metropol. Matsuzawa H.</affilname><affiliation-city>Tokyo</affiliation-city><affiliation-country>Japan</affiliation-country></affiliation><pubmed-id>10678776</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>sh</subtype><subtypeDescription>Short Survey</subtypeDescription><source-id>14346</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:1642338756"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:1642338756?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=1642338756&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=1642338756&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:1642338756</prism:url><dc:identifier>SCOPUS_ID:1642338756</dc:identifier><eid>2-s2.0-1642338756</eid><dc:title>Monkey brain areas underlying remote-controlled operation</dc:title><dc:creator>Obayashi S.</dc:creator><prism:publicationName>European Journal of Neuroscience</prism:publicationName><prism:issn>0953816X</prism:issn><prism:volume>19</prism:volume><prism:issueIdentifier>5</prism:issueIdentifier><prism:pageRange>1397-1407</prism:pageRange><prism:coverDate>2004-03-01</prism:coverDate><prism:coverDisplayDate>March 2004</prism:coverDisplayDate><prism:doi>10.1111/j.1460-9568.2004.03200.x</prism:doi><citedby-count>6</citedby-count><affiliation><affilname>National Institute of Radiological Sciences Chiba</affilname><affiliation-city>Chiba</affiliation-city><affiliation-country>Japan</affiliation-country></affiliation><affiliation><affilname>Tokyo Medical and Dental University</affilname><affiliation-city>Tokyo</affiliation-city><affiliation-country>Japan</affiliation-country></affiliation><pubmed-id>15016097</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><source-id>15550</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:0030739158"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:0030739158?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=0030739158&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=0030739158&amp;origin=inward"/><link ref="full-text" href="http://api.elsevier.com/content/article/eid:1-s2.0-S0361923096004297"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:0030739158</prism:url><dc:identifier>SCOPUS_ID:0030739158</dc:identifier><eid>2-s2.0-0030739158</eid><dc:title>A three-dimensional multimodality brain map of the nemestrina monkey</dc:title><dc:creator>Cannestra A.</dc:creator><prism:publicationName>Brain Research Bulletin</prism:publicationName><prism:issn>03619230</prism:issn><prism:volume>43</prism:volume><prism:issueIdentifier>2</prism:issueIdentifier><prism:pageRange>141-148</prism:pageRange><prism:coverDate>1997-07-18</prism:coverDate><prism:coverDisplayDate>1997</prism:coverDisplayDate><prism:doi>10.1016/S0361-9230(96)00429-7</prism:doi><pii>S0361923096004297</pii><citedby-count>28</citedby-count><affiliation><affilname>David Geffen School of Medicine at UCLA</affilname><affiliation-city>Los Angeles</affiliation-city><affiliation-country>United States</affiliation-country></affiliation><pubmed-id>9222526</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><source-id>14347</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:16544388482"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:16544388482?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=16544388482&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=16544388482&amp;origin=inward"/><link ref="full-text" href="http://api.elsevier.com/content/article/eid:1-s2.0-S0168010204000033"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:16544388482</prism:url><dc:identifier>SCOPUS_ID:16544388482</dc:identifier><eid>2-s2.0-16544388482</eid><dc:title>Three-dimensional ultrasonography of monkey brain</dc:title><dc:creator>Tokuno H.</dc:creator><prism:publicationName>Neuroscience Research</prism:publicationName><prism:issn>01680102</prism:issn><prism:volume>49</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>133-138</prism:pageRange><prism:coverDate>2004-05-01</prism:coverDate><prism:coverDisplayDate>May 2004</prism:coverDisplayDate><prism:doi>10.1016/j.neures.2004.01.001</prism:doi><pii>S0168010204000033</pii><citedby-count>3</citedby-count><affiliation><affilname>Tokyo Metropolitan Institute of Neuroscience</affilname><affiliation-city>Fuchu</affiliation-city><affiliation-country>Japan</affiliation-country></affiliation><pubmed-id>15099711</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><source-id>18054</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:33845943261"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:33845943261?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=33845943261&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=33845943261&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:33845943261</prism:url><dc:identifier>SCOPUS_ID:33845943261</dc:identifier><eid>2-s2.0-33845943261</eid><dc:title>Immunohistochemical distribution of NGF, BDNF, NT-3, and NT-4 in adult rhesus monkey brains</dc:title><dc:creator>Zhang H.</dc:creator><prism:publicationName>Journal of Histochemistry and Cytochemistry</prism:publicationName><prism:issn>00221554</prism:issn><prism:volume>55</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>1-19</prism:pageRange><prism:coverDate>2007-01-01</prism:coverDate><prism:coverDisplayDate>January 2007</prism:coverDisplayDate><prism:doi>10.1369/jhc.6A6952.2006</prism:doi><citedby-count>47</citedby-count><affiliation><affilname>Kunming Medical College</affilname><affiliation-city>Kunming</affiliation-city><affiliation-country>China</affiliation-country></affiliation><pubmed-id>16899765</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><source-id>18566</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:9644284300"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:9644284300?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=9644284300&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=9644284300&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:9644284300</prism:url><dc:identifier>SCOPUS_ID:9644284300</dc:identifier><eid>2-s2.0-9644284300</eid><dc:title>Differential expression patterns of TrkB ligands in the macaque monkey brain</dc:title><dc:creator>Mori T.</dc:creator><prism:publicationName>NeuroReport</prism:publicationName><prism:issn>09594965</prism:issn><prism:volume>15</prism:volume><prism:issueIdentifier>16</prism:issueIdentifier><prism:pageRange>2507-2511</prism:pageRange><prism:coverDate>2004-12-15</prism:coverDate><prism:coverDisplayDate>15 December 2004</prism:coverDisplayDate><prism:doi>10.1097/00001756-200411150-00015</prism:doi><citedby-count>10</citedby-count><affiliation><affilname>Kyoto University</affilname><affiliation-city>Kyoto</affiliation-city><affiliation-country>Japan</affiliation-country></affiliation><pubmed-id>15538184</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><source-id>18022</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:0034816412"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:0034816412?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=0034816412&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=0034816412&amp;origin=inward"/><link ref="full-text" href="http://api.elsevier.com/content/article/eid:1-s2.0-S105381190190878X"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:0034816412</prism:url><dc:identifier>SCOPUS_ID:0034816412</dc:identifier><eid>2-s2.0-0034816412</eid><dc:title>Functional brain mapping of monkey tool use</dc:title><dc:creator>Obayashi S.</dc:creator><prism:publicationName>NeuroImage</prism:publicationName><prism:issn>10538119</prism:issn><prism:volume>14</prism:volume><prism:issueIdentifier>4</prism:issueIdentifier><prism:pageRange>853-861</prism:pageRange><prism:coverDate>2001-10-16</prism:coverDate><prism:coverDisplayDate>2001</prism:coverDisplayDate><prism:doi>10.1006/nimg.2001.0878</prism:doi><citedby-count>95</citedby-count><affiliation><affilname>National Institute of Radiological Sciences Chiba</affilname><affiliation-city>Chiba</affiliation-city><affiliation-country>Japan</affiliation-country></affiliation><affiliation><affilname>Toho University School of Medicine</affilname><affiliation-city>Tokyo</affiliation-city><affiliation-country>Japan</affiliation-country></affiliation><affiliation><affilname>Tokyo Medical and Dental University</affilname><affiliation-city>Tokyo</affiliation-city><affiliation-country>Japan</affiliation-country></affiliation><pubmed-id>11554804</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><source-id>17495</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:0034706065"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:0034706065?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=0034706065&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=0034706065&amp;origin=inward"/><link ref="full-text" href="http://api.elsevier.com/content/article/eid:1-s2.0-S0306452200002359"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:0034706065</prism:url><dc:identifier>SCOPUS_ID:0034706065</dc:identifier><eid>2-s2.0-0034706065</eid><dc:title>Autoradiographic analysis of N-methyl-D-aspartate receptor binding in monkey brain: Effects of 1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine and levodopa treatment</dc:title><dc:creator>He L.</dc:creator><prism:publicationName>Neuroscience</prism:publicationName><prism:issn>03064522</prism:issn><prism:volume>99</prism:volume><prism:issueIdentifier>4</prism:issueIdentifier><prism:pageRange>697-704</prism:pageRange><prism:coverDate>2000-08-23</prism:coverDate><prism:coverDisplayDate>23 August 2000</prism:coverDisplayDate><prism:doi>10.1016/S0306-4522(00)00235-9</prism:doi><pii>S0306452200002359</pii><citedby-count>12</citedby-count><affiliation><affilname>Parkinson's Institute</affilname><affiliation-city>Sunnyvale</affiliation-city><affiliation-country>United States</affiliation-country></affiliation><pubmed-id>10974432</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><source-id>18042</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:0030850665"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:0030850665?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=0030850665&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=0030850665&amp;origin=inward"/><link ref="full-text" href="http://api.elsevier.com/content/article/eid:1-s2.0-S0024320597008072"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:0030850665</prism:url><dc:identifier>SCOPUS_ID:0030850665</dc:identifier><eid>2-s2.0-0030850665</eid><dc:title>Biotransformation in monkey brain: Coupling of sulfation to glutathione conjugation</dc:title><dc:creator>Baranczyk-Kuzma A.</dc:creator><prism:publicationName>Life Sciences</prism:publicationName><prism:issn>00243205</prism:issn><prism:volume>61</prism:volume><prism:issueIdentifier>18</prism:issueIdentifier><prism:pageRange>1829-1841</prism:pageRange><prism:coverDate>1997-09-26</prism:coverDate><prism:coverDisplayDate>26 September 1997</prism:coverDisplayDate><prism:doi>10.1016/S0024-3205(97)00807-2</prism:doi><pii>S0024320597008072</pii><citedby-count>1</citedby-count><affiliation><affilname>Medical University of Warsaw</affilname><affiliation-city>Warsaw</affiliation-city><affiliation-country>Poland</affiliation-country></affiliation><pubmed-id>9365230</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><source-id>20473</source-id></entry></feed>
+
+
+
+
     http_version: 
-  recorded_at: Mon, 06 Aug 2012 15:27:14 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Thu, 17 Sep 2015 20:54:49 GMT
+recorded_with: VCR 2.9.3

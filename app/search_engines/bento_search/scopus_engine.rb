@@ -69,12 +69,12 @@ module BentoSearch
       rescue TimeoutError, HTTPClient::ConfigurationError, HTTPClient::BadResponseError, Nokogiri::SyntaxError  => e
         exception = e        
       end
-      
-      
+
       # handle errors
       if (response.nil? || xml.nil? || exception || 
           (! HTTP::Status.successful? response.status) ||
-          xml.at_xpath("service-error")
+          xml.at_xpath("service-error") ||
+          xml.at_xpath("./atom:feed/atom:entry/atom:error", xml_ns)
           )
       
         # UGH. Scopus reports 0 hits as an error, not entirely distinguishable
@@ -89,14 +89,22 @@ module BentoSearch
           # PROBABLY 0 hit count, although could be something else I'm afraid. 
           results.total_items = 0
           return results
+        elsif (
+            (response.status == 200) &&
+            xml &&
+            (error_xml = xml.at_xpath("./atom:feed/atom:entry/atom:error", xml_ns)) &&
+            (error_xml.text == "Result set was empty")
+          )
+          # NEW way of Scopus reporting an error that makes no sense either
+          results.total_items = 0
+          return results
         else
           # real error              
           results.error ||= {}
           results.error[:exception] = e
           results.error[:status] = response.status if response
-          # keep from storing the entire possibly huge response as error
-          # but sometimes it's an error message. 
-          results.error[:error_info] = xml.at_xpath("service_error") if xml
+          results.error[:error_info] = xml.at_xpath("service-error").text.gsub!(/[\n\t ]+/, " ") if xml
+          results.error[:error_info] ||= xml.at_xpath("./atom:feed/atom:entry/atom:error", xml_ns).text if xml
           return results
         end
       end                  

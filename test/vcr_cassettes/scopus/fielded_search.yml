@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: http://api.elsevier.com/content/search/index:SCOPUS?count=10&query=TITLE(cancer)&sort=refeid
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       X-Els-Apikey:
@@ -13,164 +13,43 @@ http_interactions:
       - XOCS
       Accept:
       - application/atom+xml
-      Cookie:
-      - JSESSIONID=663F4CEF84298D341454812EFD355175.xDaLBloBgnMtfbzSH3v6sg
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        YXBpLmVsc2V2aWVyLmNvbSAgOTk5OQ==
-      !binary "WC1FbHMtU3RhdHVz":
-      - !binary |-
-        T0s=
-      !binary "WC1FbHMtUmVxaWQ=":
-      - !binary |-
-        MDAwMDAxMzhmYjRkMGIyYi01NjVlMA==
-      !binary "WC1FbHMtQXBpa2V5":
-      - !binary |-
-        RFVNTVlfQVBJX0tFWQ==
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        SlNFU1NJT05JRD04QTNDNDVCNDUzODFDNTIwQTg3NTg3Nzc5MjE2QTFEMy4y
-        VWlvdmVvMVhNU0tyTDZlU2FJTk1ROyBEb21haW49YXBpLmVsc2V2aWVyLmNv
-        bTsgUGF0aD0vY29udGVudC9zZWFyY2g=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC94bWw7Y2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "RGF0ZQ==":
-      - !binary |-
-        TW9uLCAwNiBBdWcgMjAxMiAxNToyNzoxNSBHTVQ=
-      !binary "WC1SZS1SZWY=":
-      - !binary |-
-        MSAtMjA5NDcyNDU1MQ==
-      !binary "UDNw":
-      - !binary |-
-        Q1A9IklEQyBEU1AgTEFXIEFETSBERVYgVEFJIFBTQSBQU0QgSVZBIElWRCBD
-        T04gSElTIFRFTCBPVVIgREVMIFNBTSBPVFIgSU5EIE9UQyI=
+      Server:
+      - api.elsevier.com  9999
+      X-Els-Status:
+      - OK
+      X-Els-Reqid:
+      - 0000014fbd65b37c-1657f18
+      X-Els-Apikey:
+      - DUMMY_API_KEY
+      X-Els-Transid:
+      - 08877c61-7c69-468a-bfd4-d9b40ae5315e
+      Allow:
+      - GET
+      Content-Type:
+      - application/atom+xml;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 17 Sep 2015 20:54:49 GMT
+      X-Re-Ref:
+      - 1 -1608368997
+      P3p:
+      - CP="IDC DSP LAW ADM DEV TAI PSA PSD IVA IVD CON HIS TEL OUR DEL SAM OTR IND
+        OTC"
     body:
       encoding: UTF-8
-      string: ! '<feed xmlns="http://www.w3.org/2005/Atom" xmlns:atom="http://www.w3.org/2005/Atom"
-        xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/"
-        xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/"><title>SCOPUS
-        Search Results: TITLE%28cancer%29</title><updated>2012-08-06T15:27:15.526Z</updated><author><name>Elsevier,
-        Inc.</name></author><id>http://api.elsevier.com:80/content/search/index:SCOPUS?query=TITLE%28cancer%29&amp;count=10&amp;start=0&amp;view=STANDARD&amp;field=</id><opensearch:totalResults>643097</opensearch:totalResults><opensearch:startIndex>0</opensearch:startIndex><opensearch:itemsPerPage>10</opensearch:itemsPerPage><opensearch:Query
-        role="request" searchTerms="TITLE%28cancer%29" startPage="0"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=0&amp;count=10&amp;query=TITLE%28cancer%29&amp;sort=refeid"
-        ref="self" type="application/atom+xml"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=0&amp;count=10&amp;query=TITLE%28cancer%29&amp;sort=refeid"
-        ref="first" type="application/atom+xml"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=10&amp;count=10&amp;query=TITLE%28cancer%29&amp;sort=refeid"
-        ref="next" type="application/atom+xml"/><link href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=1990&amp;count=10&amp;query=TITLE%28cancer%29&amp;sort=refeid"
-        ref="last" type="application/atom+xml"/><entry><link href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861159278"
-        ref="self"/><link href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861159278"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861159278"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84861159278</prism:url><dc:identifier>SCOPUS_ID:84861159278</dc:identifier><dc:title>Potential
-        Use of G Protein-Coupled Receptor-Blocking Monoclonal Antibodies as Therapeutic
-        Agents for Cancers</dc:title><dc:creator>Herr, D.R.</dc:creator><prism:publicationName>International
-        Review of Cell and Molecular Biology</prism:publicationName><prism:issn>19376448</prism:issn><prism:volume>297</prism:volume><prism:pageRange>45-81</prism:pageRange><prism:coverDate>2012-05-22</prism:coverDate><prism:doi>10.1016/B978-0-12-394308-8.00002-9</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Expression
-        Drug Designs, LLC | Expression Drug Designs, LLC</affilname></affiliation><affiliation><affilname>San
-        Diego State University | San Diego State University</affilname></affiliation><prism:aggregationType>Book
-        Series</prism:aggregationType><subtype>ar</subtype></entry><entry><link href="http://api.elsevier.com/content/abstract/SCOPUS_ID:0036879853"
-        ref="self"/><link href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=0036879853"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=0036879853"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:0036879853</prism:url><dc:identifier>SCOPUS_ID:0036879853</dc:identifier><dc:title>Cancer
-        incidence in Singapore, 1998 to 1999</dc:title><dc:creator>Chia, K.S.</dc:creator><prism:publicationName>Annals
-        of the Academy of Medicine Singapore</prism:publicationName><prism:issn>03044602</prism:issn><prism:volume>31</prism:volume><prism:issueIdentifier>6</prism:issueIdentifier><prism:pageRange>745-750</prism:pageRange><prism:coverDate>2002-11-01</prism:coverDate><citedby-count>11</citedby-count><affiliation><affilname>National
-        University of Singapore | National University of Singapore</affilname></affiliation><affiliation><affilname>Yong
-        Loo Lin School of Medicine | National University of Singapore</affilname></affiliation><affiliation><affilname>National
-        University of Singapore, Faculty of Medicine | Faculty of Medicine ^ Fac.
-        Med.</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84859172018" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84859172018"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84859172018"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84859172018</prism:url><dc:identifier>SCOPUS_ID:84859172018</dc:identifier><dc:title>"You''re
-        too young for this": Adolescent and young adults'' perspectives on cancer
-        survivorship</dc:title><dc:creator>Kent, E.E.</dc:creator><prism:publicationName>Journal
-        of Psychosocial Oncology</prism:publicationName><prism:issn>07347332</prism:issn><prism:eIssn>15407586</prism:eIssn><prism:volume>30</prism:volume><prism:issueIdentifier>2</prism:issueIdentifier><prism:pageRange>260-279</prism:pageRange><prism:coverDate>2012-03-01</prism:coverDate><prism:doi>10.1080/07347332.2011.644396</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>National
-        Cancer Institute | National Cancer Institute ^ NIH</affilname></affiliation><affiliation><affilname>UC
-        Irvine | University of California ^ University of California, Irvine</affilname></affiliation><affiliation><affilname>UC
-        Irvine | University of California ^ University of California, Irvine</affilname></affiliation><affiliation><affilname>UC
-        Irvine | University of California ^ University of California, Irvine</affilname></affiliation><affiliation><affilname>University
-        of California Irvine Medical Center, University Children''s Hospital | Children''s
-        Hospital of Orange County</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:35748929961" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=35748929961"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=35748929961"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:35748929961</prism:url><dc:identifier>SCOPUS_ID:35748929961</dc:identifier><dc:title>Glucocorticoid
-        receptor changes its cellular location with breast cancer development.</dc:title><dc:creator>Conde,
-        I.</dc:creator><prism:publicationName>Histology and histopathology</prism:publicationName><prism:issn>16995848</prism:issn><prism:volume>23</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>77-85</prism:pageRange><prism:coverDate>2008-01-01</prism:coverDate><citedby-count>8</citedby-count><affiliation><affilname>Universidad
-        de Alcala | Universidad de Alcalá ^ University of Alcalá ^ Universidad de
-        Alcalá de Henares</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84863494541" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84863494541"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84863494541"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84863494541</prism:url><dc:identifier>SCOPUS_ID:84863494541</dc:identifier><dc:title>Correlation
-        of the risk of breast cancer and disruption of the circadian rhythm (Review)</dc:title><dc:creator>Leonardi,
-        G.C.</dc:creator><prism:publicationName>Oncology Reports</prism:publicationName><prism:issn>1021335X</prism:issn><prism:eIssn>17912431</prism:eIssn><prism:volume>28</prism:volume><prism:issueIdentifier>2</prism:issueIdentifier><prism:pageRange>418-428</prism:pageRange><prism:coverDate>2012-08-01</prism:coverDate><prism:doi>10.3892/or.2012.1839</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Università
-        degli Studi di Catania | University of Catania ^ Università di Catania</affilname></affiliation><affiliation><affilname>Università
-        degli Studi di Catania | University of Catania ^ Università di Catania</affilname></affiliation><affiliation><affilname>AUSL
-        3 | AUSL 3 ^ AUSL 3 Catania ^ A.U.S.L. 3</affilname></affiliation><affiliation><affilname>Azienda
-        Ospedaliera Cannizzaro | Cannizzaro Hospital ^ Ospedale Cannizzaro ^ Azienda
-        Ospedaliera Cannizzaro</affilname></affiliation><affiliation><affilname>Università
-        degli Studi di Messina | University of Messina ^ Università di Messina</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84863992249" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84863992249"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84863992249"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84863992249</prism:url><dc:identifier>SCOPUS_ID:84863992249</dc:identifier><dc:title>Damnacanthal,
-        a noni component, exhibits antitumorigenic activity in human colorectal cancer
-        cells</dc:title><dc:creator>Nualsanit, T.</dc:creator><prism:publicationName>Journal
-        of Nutritional Biochemistry</prism:publicationName><prism:issn>09552863</prism:issn><prism:eIssn>18734847</prism:eIssn><prism:volume>23</prism:volume><prism:issueIdentifier>8</prism:issueIdentifier><prism:pageRange>915-923</prism:pageRange><prism:coverDate>2012-08-01</prism:coverDate><prism:doi>10.1016/j.jnutbio.2011.04.017</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>University
-        of Tennessee, Knoxville | University of Tennessee</affilname></affiliation><affiliation><affilname>Mahidol
-        University | Mahidol University</affilname></affiliation><affiliation><affilname>Mahidol
-        University | Mahidol University</affilname></affiliation><affiliation><affilname>University
-        of Tennessee, Knoxville | University of Tennessee</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84864015232" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84864015232"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84864015232"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84864015232</prism:url><dc:identifier>SCOPUS_ID:84864015232</dc:identifier><dc:title>Follow-up
-        of breast cancer survivors</dc:title><dc:creator>Warner, E.</dc:creator><prism:publicationName>Journal
-        of Clinical Oncology</prism:publicationName><prism:issn>0732183X</prism:issn><prism:eIssn>15277755</prism:eIssn><prism:volume>30</prism:volume><prism:issueIdentifier>15</prism:issueIdentifier><prism:pageRange>1893</prism:pageRange><prism:coverDate>2012-05-20</prism:coverDate><prism:doi>10.1200/JCO.2012.41.9770</prism:doi><citedby-count>1</citedby-count><affiliation><affilname>Odette
-        Cancer Centre</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>le</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84861320235" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84861320235"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84861320235"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84861320235</prism:url><dc:identifier>SCOPUS_ID:84861320235</dc:identifier><dc:title>Targeting
-        tumor angiogenesis in combination with endocrine therapy in patients with
-        hormone-receptor positive metastatic breast cancer</dc:title><dc:creator>Jhaveri,
-        K.</dc:creator><prism:publicationName>European journal of Clinical and Medical
-        Oncology</prism:publicationName><prism:issn>17598958</prism:issn><prism:eIssn>17598966</prism:eIssn><prism:volume>3</prism:volume><prism:issueIdentifier>4</prism:issueIdentifier><prism:pageRange>24-32</prism:pageRange><prism:coverDate>2011-12-01</prism:coverDate><citedby-count>0</citedby-count><affiliation><affilname>Memorial
-        Sloan-Kettering Cancer Center | Memorial Sloan-Kettering Cancer Center ^ Mem.
-        Sloan-Kettering Cancer Center</affilname></affiliation><affiliation><affilname>University
-        of San Francisco | Univ. San Francisco ^ University of San Francisco</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84862870797" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84862870797"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84862870797"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84862870797</prism:url><dc:identifier>SCOPUS_ID:84862870797</dc:identifier><dc:title>Hypermethylation
-        of collagen α2 (I) gene (COL1A2) is an independent predictor of survival in
-        head and neck cancer</dc:title><dc:creator>Misawa, K.</dc:creator><prism:publicationName>Cancer
-        Biomarkers</prism:publicationName><prism:issn>15740153</prism:issn><prism:eIssn>18758592</prism:eIssn><prism:volume>10</prism:volume><prism:issueIdentifier>3-4</prism:issueIdentifier><prism:pageRange>135-144</prism:pageRange><prism:coverDate>2011-12-01</prism:coverDate><prism:doi>10.3233/CBM-2012-0242</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Hamamatsu
-        University School of Medicine | Hamamatsu University School of Medicine ^
-        Hamamatsu Univ. School of Medicine</affilname></affiliation><affiliation><affilname>Jichi
-        Medical University | Jichi Medical University ^ Jichi Medical University School
-        of Medicine</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry><entry><link
-        href="http://api.elsevier.com/content/abstract/SCOPUS_ID:84863986842" ref="self"/><link
-        href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84863986842"
-        ref="scopus"/><link href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84863986842"
-        ref="scopus-citedby"/><prism:url>http://api.elsevier.com/content/abstract/SCOPUS_ID:84863986842</prism:url><dc:identifier>SCOPUS_ID:84863986842</dc:identifier><dc:title>Overexpression
-        of PTGIS could predict liver metastasis and is correlated with poor prognosis
-        in colon cancer patients</dc:title><dc:creator>Sun, L.</dc:creator><prism:publicationName>Pathology
-        and Oncology Research</prism:publicationName><prism:issn>12194956</prism:issn><prism:eIssn>15322807</prism:eIssn><prism:volume>18</prism:volume><prism:issueIdentifier>3</prism:issueIdentifier><prism:pageRange>563-569</prism:pageRange><prism:coverDate>2012-07-01</prism:coverDate><prism:doi>10.1007/s12253-011-9478-4</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Cancer
-        Institute and Hospital, Chinese Academy of Medical Sciences | Chinese Academy
-        of Medical Sciences ^ Cancer Institute (Hospital)</affilname></affiliation><affiliation><affilname>China-Japan
-        Friendship Hospital | China-Japan Friendship Hospital</affilname></affiliation><affiliation><affilname>Cancer
-        Institute and Hospital, Chinese Academy of Medical Sciences | Chinese Academy
-        of Medical Sciences ^ Cancer Institute (Hospital)</affilname></affiliation><affiliation><affilname>Cancer
-        Institute and Hospital, Chinese Academy of Medical Sciences | Chinese Academy
-        of Medical Sciences ^ Cancer Institute (Hospital)</affilname></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype></entry></feed>'
+      string: |2+
+
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:cto="http://www.elsevier.com/xml/cto/dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:dc="http://purl.org/dc/elements/1.1/"><title>SCOPUS Search Results: TITLE%28cancer%29</title><updated>2015-09-17T20:54:50.267Z</updated><author><name>Elsevier, Inc.</name></author><id>http://api.elsevier.com:80/content/search/index:SCOPUS?&amp;count=10&amp;start=0&amp;query=TITLE%28cancer%29&amp;sort=refeid</id><opensearch:totalResults>827018</opensearch:totalResults><opensearch:startIndex>0</opensearch:startIndex><opensearch:itemsPerPage>10</opensearch:itemsPerPage><opensearch:Query role="request" searchTerms="TITLE%28cancer%29" startPage="0"/><link ref="self" href="http://api.elsevier.com:80/content/search/index:scopus?start=0&amp;count=10&amp;query=TITLE%28cancer%29&amp;sort=refeid" type="application/atom+xml"/><link ref="first" href="http://api.elsevier.com:80/content/search/index:scopus?start=0&amp;count=10&amp;query=TITLE%28cancer%29&amp;sort=refeid" type="application/atom+xml"/><link ref="next" href="http://api.elsevier.com:80/content/search/index:scopus?start=10&amp;count=10&amp;query=TITLE%28cancer%29&amp;sort=refeid" type="application/atom+xml"/><link ref="last" href="http://api.elsevier.com:80/content/search/index:scopus?start=4990&amp;count=10&amp;query=TITLE%28cancer%29&amp;sort=refeid" type="application/atom+xml"/><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:84888411673"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:84888411673?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84888411673&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84888411673&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:84888411673</prism:url><dc:identifier>SCOPUS_ID:84888411673</dc:identifier><eid>2-s2.0-84888411673</eid><dc:title>Biological influence of brain-derived neurotrophic factor (BDNF) on colon cancer cells</dc:title><dc:creator>Yang X.</dc:creator><prism:publicationName>Experimental and Therapeutic Medicine</prism:publicationName><prism:issn>17920981</prism:issn><prism:eIssn>17921015</prism:eIssn><prism:volume>6</prism:volume><prism:issueIdentifier>6</prism:issueIdentifier><prism:pageRange>1475-1481</prism:pageRange><prism:coverDate>2013-12-03</prism:coverDate><prism:coverDisplayDate>2013</prism:coverDisplayDate><prism:doi>10.3892/etm.2013.1330</prism:doi><citedby-count>3</citedby-count><affiliation><affilname>Cardiff University</affilname><affiliation-city>Cardiff</affiliation-city><affiliation-country>United Kingdom</affiliation-country></affiliation><affiliation><affilname>Capital Medical University China</affilname><affiliation-city>Beijing</affiliation-city><affiliation-country>China</affiliation-country></affiliation><affiliation><affilname>Capital Medical University China</affilname><affiliation-city>Beijing</affiliation-city><affiliation-country>China</affiliation-country></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><source-id>19700176236</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:84940734581"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:84940734581?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84940734581&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84940734581&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:84940734581</prism:url><dc:identifier>SCOPUS_ID:84940734581</dc:identifier><eid>2-s2.0-84940734581</eid><dc:title>Human epidermal growth factor receptor 2 (HER2) impedes MLK3 kinase activity to support breast cancer cell survival</dc:title><dc:creator>Das S.</dc:creator><prism:publicationName>Journal of Biological Chemistry</prism:publicationName><prism:issn>00219258</prism:issn><prism:eIssn>1083351X</prism:eIssn><prism:volume>290</prism:volume><prism:issueIdentifier>35</prism:issueIdentifier><prism:pageRange>21705-21712</prism:pageRange><prism:coverDate>2015-08-28</prism:coverDate><prism:coverDisplayDate>28 August 2015</prism:coverDisplayDate><prism:doi>10.1074/jbc.M115.655563</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Loyola University of Chicago</affilname><affiliation-city>Chicago</affiliation-city><affiliation-country>United States</affiliation-country></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><source-id>17592</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:0024424114"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:0024424114?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=0024424114&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=0024424114&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:0024424114</prism:url><dc:identifier>SCOPUS_ID:0024424114</dc:identifier><eid>2-s2.0-0024424114</eid><dc:title>Comparison of surgical therapy and combined irradiation in rectal cancer - First report, effect of irradiation on the tumor</dc:title><dc:creator>Kimura K.</dc:creator><prism:publicationName>Japanese Journal of Cancer and Chemotherapy</prism:publicationName><prism:issn>03850684</prism:issn><prism:volume>16</prism:volume><prism:issueIdentifier>9</prism:issueIdentifier><prism:pageRange>3161-3172</prism:pageRange><prism:coverDate>1989-01-01</prism:coverDate><prism:coverDisplayDate>1989</prism:coverDisplayDate><citedby-count>4</citedby-count><affiliation><affilname>Tokyo Medical University School of Medicine</affilname><affiliation-city>Tokyo</affiliation-city><affiliation-country>Japan</affiliation-country></affiliation><pubmed-id>2675768</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><source-id>29789</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:0034755933"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:0034755933?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=0034755933&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=0034755933&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:0034755933</prism:url><dc:identifier>SCOPUS_ID:0034755933</dc:identifier><eid>2-s2.0-0034755933</eid><dc:title>Treatment results of intraoperative radiotherapy for pancreatic cancer and experience of clinical use of non-docking cone</dc:title><dc:creator>Kusuda J.</dc:creator><prism:publicationName>Japanese Journal of Clinical Radiology</prism:publicationName><prism:issn>00099252</prism:issn><prism:volume>46</prism:volume><prism:issueIdentifier>11</prism:issueIdentifier><prism:pageRange>1423-1428</prism:pageRange><prism:coverDate>2001-01-01</prism:coverDate><prism:coverDisplayDate>2001</prism:coverDisplayDate><citedby-count>0</citedby-count><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><source-id>17886</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:0028357232"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:0028357232?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=0028357232&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=0028357232&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:0028357232</prism:url><dc:identifier>SCOPUS_ID:0028357232</dc:identifier><eid>2-s2.0-0028357232</eid><dc:title>Endoluminal ultrasonography in the follow-up of patients with rectal cancer</dc:title><dc:creator>Ramirez J.</dc:creator><prism:publicationName>British Journal of Surgery</prism:publicationName><prism:issn>00071323</prism:issn><prism:volume>81</prism:volume><prism:issueIdentifier>5</prism:issueIdentifier><prism:pageRange>692-694</prism:pageRange><prism:coverDate>1994-06-17</prism:coverDate><prism:coverDisplayDate>1994</prism:coverDisplayDate><prism:doi>10.1002/bjs.1800810521</prism:doi><citedby-count>45</citedby-count><affiliation><affilname>John Radcliffe Hospital</affilname><affiliation-city>Oxford</affiliation-city><affiliation-country>United Kingdom</affiliation-country></affiliation><pubmed-id>8044549</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>cp</subtype><subtypeDescription>Conference Paper</subtypeDescription><source-id>20996</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:84878872860"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:84878872860?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84878872860&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84878872860&amp;origin=inward"/><link ref="full-text" href="http://api.elsevier.com/content/article/eid:1-s2.0-S1359644612003029"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:84878872860</prism:url><dc:identifier>SCOPUS_ID:84878872860</dc:identifier><eid>2-s2.0-84878872860</eid><dc:title>High-content multiplexed tissue imaging and quantification for cancer drug discovery</dc:title><dc:creator>Falcon B.</dc:creator><prism:publicationName>Drug Discovery Today</prism:publicationName><prism:issn>13596446</prism:issn><prism:eIssn>18785832</prism:eIssn><prism:volume>18</prism:volume><prism:issueIdentifier>11-12</prism:issueIdentifier><prism:pageRange>510-522</prism:pageRange><prism:coverDate>2013-06-01</prism:coverDate><prism:coverDisplayDate>June 2013</prism:coverDisplayDate><prism:doi>10.1016/j.drudis.2012.08.008</prism:doi><pii>S1359644612003029</pii><citedby-count>2</citedby-count><affiliation><affilname>Eli Lilly and Company</affilname><affiliation-city>Indianapolis</affiliation-city><affiliation-country>United States</affiliation-country></affiliation><pubmed-id>22944609</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype><subtypeDescription>Review</subtypeDescription><source-id>21196</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:84931840479"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:84931840479?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84931840479&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84931840479&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:84931840479</prism:url><dc:identifier>SCOPUS_ID:84931840479</dc:identifier><eid>2-s2.0-84931840479</eid><dc:title>Supraclavicular lymph node metastasis as a first sign of rectal cancer without visceral metastasis</dc:title><dc:creator>Chan D.</dc:creator><prism:publicationName>ANZ Journal of Surgery</prism:publicationName><prism:issn>14451433</prism:issn><prism:eIssn>14452197</prism:eIssn><prism:volume>84</prism:volume><prism:issueIdentifier>11</prism:issueIdentifier><prism:pageRange>896-897</prism:pageRange><prism:coverDate>2014-01-01</prism:coverDate><prism:coverDisplayDate>1 November 2014</prism:coverDisplayDate><prism:doi>10.1111/ans.12813</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Khoo Teck Puat Hospital</affilname><affiliation-city/><affiliation-country>Singapore</affiliation-country></affiliation><pubmed-id>25348922</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>le</subtype><subtypeDescription>Letter</subtypeDescription><source-id>20395</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:84907487475"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:84907487475?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84907487475&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84907487475&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:84907487475</prism:url><dc:identifier>SCOPUS_ID:84907487475</dc:identifier><eid>2-s2.0-84907487475</eid><dc:title>Diffusion-weighted MRI as a potential imaging biomarker reflecting the metastatic potential of upper urinary tract cancer</dc:title><dc:creator>Uchida Y.</dc:creator><prism:publicationName>British Journal of Radiology</prism:publicationName><prism:issn>00071285</prism:issn><prism:volume>87</prism:volume><prism:issueIdentifier>1042</prism:issueIdentifier><prism:coverDate>2014-01-01</prism:coverDate><prism:coverDisplayDate>1 October 2014</prism:coverDisplayDate><prism:doi>10.1259/bjr.20130791</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>Tokyo Medical and Dental University</affilname><affiliation-city>Tokyo</affiliation-city><affiliation-country>Japan</affiliation-country></affiliation><pubmed-id>25074719</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><article-number>20130791</article-number><source-id>16576</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:84866612775"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:84866612775?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84866612775&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84866612775&amp;origin=inward"/><link ref="full-text" href="http://api.elsevier.com/content/article/eid:1-s2.0-S0011853212000651"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:84866612775</prism:url><dc:identifier>SCOPUS_ID:84866612775</dc:identifier><eid>2-s2.0-84866612775</eid><dc:title>Dermatology of the head and neck: Skin cancer and benign skin lesions</dc:title><dc:creator>Halem M.</dc:creator><prism:publicationName>Dental Clinics of North America</prism:publicationName><prism:issn>00118532</prism:issn><prism:volume>56</prism:volume><prism:issueIdentifier>4</prism:issueIdentifier><prism:pageRange>771-790</prism:pageRange><prism:coverDate>2012-10-01</prism:coverDate><prism:coverDisplayDate>October 2012</prism:coverDisplayDate><prism:doi>10.1016/j.cden.2012.07.005</prism:doi><pii>S0011853212000651</pii><citedby-count>0</citedby-count><affiliation><affilname>Columbia University in the City of New York</affilname><affiliation-city>New York</affiliation-city><affiliation-country>United States</affiliation-country></affiliation><pubmed-id>23017550</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype><subtypeDescription>Review</subtypeDescription><source-id>24458</source-id></entry><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:84930670380"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:84930670380?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84930670380&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84930670380&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:84930670380</prism:url><dc:identifier>SCOPUS_ID:84930670380</dc:identifier><eid>2-s2.0-84930670380</eid><dc:title>How Can We Boost Colorectal and Hepatocellular Cancer Screening Among Underserved Populations?</dc:title><dc:creator>Goebel M.</dc:creator><prism:publicationName>Current Gastroenterology Reports</prism:publicationName><prism:issn>15228037</prism:issn><prism:eIssn>1534312X</prism:eIssn><prism:volume>17</prism:volume><prism:issueIdentifier>6</prism:issueIdentifier><prism:coverDate>2015-06-04</prism:coverDate><prism:coverDisplayDate>4 June 2015</prism:coverDisplayDate><prism:doi>10.1007/s11894-015-0445-1</prism:doi><citedby-count>0</citedby-count><affiliation><affilname>UCSD Medical Center, Moores Cancer Center</affilname><affiliation-city>San Diego</affiliation-city><affiliation-country>United States</affiliation-country></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>re</subtype><subtypeDescription>Review</subtypeDescription><article-number>22</article-number><source-id>28287</source-id></entry></feed>
+
+
+
+
     http_version: 
-  recorded_at: Mon, 06 Aug 2012 15:27:15 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Thu, 17 Sep 2015 20:54:50 GMT
+recorded_with: VCR 2.9.3

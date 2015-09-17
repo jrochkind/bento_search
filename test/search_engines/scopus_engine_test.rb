@@ -72,8 +72,11 @@ class ScopusEngineTest < ActiveSupport::TestCase
     @engine = BentoSearch::ScopusEngine.new(:api_key => "BAD_KEY_ERROR")
     
     results = @engine.search(:query => "cancer")
-    
+
     assert results.failed?, "response.failed? should be"  
+
+    assert_present results.error[:error_info]
+    assert_includes results.error[:error_info], "AUTHORIZATION_ERROR"
   end
   
   test_with_cassette("simple search", :scopus) do

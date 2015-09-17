@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: http://api.elsevier.com/content/search/index:SCOPUS?count=10&query=cancer&sort=refeid
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       X-Els-Apikey:
@@ -16,45 +16,37 @@ http_interactions:
   response:
     status:
       code: 401
-      message: !binary |-
-        VW5hdXRob3JpemVk
+      message: Unauthorized
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        YXBpLmVsc2V2aWVyLmNvbSAgOTk5OQ==
-      !binary "WC1FbHMtU3RhdHVz":
-      - !binary |-
-        QVVUSE9SSVpBVElPTl9FUlJPUihBUElLZXkgQkFEX0tFWV9FUlJPUiB3aXRo
-        IElQIGFkZHJlc3MgMTI4LjIyMC4yMDUuMTI1IGlzIHVucmVjb2duaXplZCBv
-        ciBoYXMgaW5zdWZmaWNpZW50IHByaXZpbGVnZXMgZm9yIGFjY2VzcyB0byB0
-        aGlzIHJlc291cmNlKQ==
-      !binary "WC1FbHMtUmVxaWQ=":
-      - !binary |-
-        MDAwMDAxMzhmYjRkMGIyYi01NjVkNg==
-      !binary "WC1FbHMtQXBpa2V5":
-      - !binary |-
-        QkFEX0tFWV9FUlJPUg==
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC94bWw7Y2hhcnNldD11dGYtOA==
-      !binary "Q29udGVudC1MZW5ndGg=":
-      - !binary |-
-        MjU1
-      !binary "RGF0ZQ==":
-      - !binary |-
-        TW9uLCAwNiBBdWcgMjAxMiAxNToyNzoxMyBHTVQ=
-      !binary "WC1SZS1SZWY=":
-      - !binary |-
-        MSAtMjA5NDcyNDU1MQ==
-      !binary "UDNw":
-      - !binary |-
-        Q1A9IklEQyBEU1AgTEFXIEFETSBERVYgVEFJIFBTQSBQU0QgSVZBIElWRCBD
-        T04gSElTIFRFTCBPVVIgREVMIFNBTSBPVFIgSU5EIE9UQyI=
+      Server:
+      - api.elsevier.com  9999
+      X-Els-Status:
+      - AUTHORIZATION_ERROR(APIKey BAD_KEY_ERROR with IP address 128.220.159.5 is
+        unrecognized or has insufficient privileges for access to this resource)
+      X-Els-Reqid:
+      - 0000014f72d218c9-4edd497
+      X-Els-Apikey:
+      - BAD_KEY_ERROR
+      X-Els-Transid:
+      - c07c7285-8ddc-4f83-bf7d-d961dd5b721e
+      Allow:
+      - GET
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '253'
+      Date:
+      - Thu, 17 Sep 2015 20:54:52 GMT
+      X-Re-Ref:
+      - 1 -1608368997
+      P3p:
+      - CP="IDC DSP LAW ADM DEV TAI PSA PSD IVA IVD CON HIS TEL OUR DEL SAM OTR IND
+        OTC"
     body:
-      encoding: US-ASCII
-      string: ! "<service-error>\n\t<status>\n\t\t<statusCode>AUTHORIZATION_ERROR</statusCode>\n\t\t<statusText>APIKey
-        BAD_KEY_ERROR with IP address 128.220.205.125 is unrecognized or has insufficient
+      encoding: UTF-8
+      string: "<service-error>\n\t<status>\n\t\t<statusCode>AUTHORIZATION_ERROR</statusCode>\n\t\t<statusText>APIKey
+        BAD_KEY_ERROR with IP address 128.220.159.5 is unrecognized or has insufficient
         privileges for access to this resource</statusText>\n\t</status>\n</service-error>"
     http_version: 
-  recorded_at: Mon, 06 Aug 2012 15:27:14 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Thu, 17 Sep 2015 20:54:52 GMT
+recorded_with: VCR 2.9.3
