@@ -4,65 +4,42 @@ http_interactions:
     method: get
     uri: http://www.worldcat.org/webservices/catalog/search/sru?maximumRecords=10&query=srw.no%20=%20%22NOT%22%20AND%20srw.no%20=%20%22EXISTING%22&recordSchema=info:srw/schema/1/dc&wskey=DUMMY_API_KEY
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers: {}
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "RGF0ZQ==":
-      - !binary |-
-        VGh1LCAwMyBKYW4gMjAxMyAwMDozMTo1NCBHTVQ=
-      !binary "U2VydmVy":
-      - !binary |-
-        QXBhY2hl
-      !binary "Q29udGVudC1MZW5ndGg=":
-      - !binary |-
-        OTUx
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC94bWw7Y2hhcnNldD11dGYtOA==
+      Date:
+      - Mon, 21 Sep 2015 14:47:59 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '951'
+      Content-Type:
+      - text/xml;charset=utf-8
     body:
-      encoding: US-ASCII
-      string: ! '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <?xml-stylesheet type='text/xsl' href='/webservices/catalog/xsl/searchRetrieveResponse.xsl'?>
 
-        <?xml-stylesheet type="text/xsl" href="/webservices/catalog/xsl/searchRetrieveResponse.xsl"?>
-
-
-        <searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/" xmlns:oclcterms="http://purl.org/oclc/terms/"
-        xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
+        <searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/" xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <version>1.1</version>
-
         <numberOfRecords>0</numberOfRecords>
-
         <echoedSearchRetrieveRequest xmlns:srw="http://www.loc.gov/zing/srw/">
-
         <version>1.1</version>
-
         <query>srw.no = "NOT" AND srw.no = "EXISTING"</query>
-
         <maximumRecords>10</maximumRecords>
-
         <recordSchema>info:srw/schema/1/dc</recordSchema>
-
         <recordPacking>xml</recordPacking>
-
         <startRecord>1</startRecord>
-
         <sortKeys>relevance</sortKeys>
-
         <wskey>DUMMY_API_KEY</wskey>
-
         </echoedSearchRetrieveRequest>
-
         </searchRetrieveResponse>
-
-'
     http_version: 
-  recorded_at: Thu, 03 Jan 2013 00:31:55 GMT
-recorded_with: VCR 2.3.0
+  recorded_at: Mon, 21 Sep 2015 14:47:59 GMT
+recorded_with: VCR 2.9.3

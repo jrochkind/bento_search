@@ -4,164 +4,86 @@ http_interactions:
     method: get
     uri: http://www.worldcat.org/webservices/catalog/search/sru?maximumRecords=10&query=srw.kw%20=%20%22cancer%22&recordSchema=info:srw/schema/1/dc&startRecord=9999&wskey=DUMMY_API_KEY
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers: {}
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "RGF0ZQ==":
-      - !binary |-
-        V2VkLCAyNiBTZXAgMjAxMiAyMTozOTozOCBHTVQ=
-      !binary "U2VydmVy":
-      - !binary |-
-        QXBhY2hl
-      !binary "Q29udGVudC1MZW5ndGg=":
-      - !binary |-
-        MzMyOQ==
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC94bWw7Y2hhcnNldD11dGYtOA==
+      Date:
+      - Mon, 21 Sep 2015 14:48:01 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '3146'
+      Content-Type:
+      - text/xml;charset=utf-8
     body:
-      encoding: US-ASCII
-      string: ! '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <?xml-stylesheet type='text/xsl' href='/webservices/catalog/xsl/searchRetrieveResponse.xsl'?>
 
-        <?xml-stylesheet type="text/xsl" href="/webservices/catalog/xsl/searchRetrieveResponse.xsl"?>
-
-
-        <searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/" xmlns:oclcterms="http://purl.org/oclc/terms/"
-        xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
+        <searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/" xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <version>1.1</version>
-
-        <numberOfRecords>410602</numberOfRecords>
-
+        <numberOfRecords>568561</numberOfRecords>
         <records>
-
         <record>
-
         <recordSchema>info:srw/schema/1/dc</recordSchema>
-
         <recordPacking>xml</recordPacking>
-
         <recordData>
-
         <oclcdcs>
-
-        <dc:description>For people living in rural areas.</dc:description>
-
-        <dc:contributor>Rural Health Education Foundation (Australia)</dc:contributor>
-
-        <dc:contributor>Australia. Department of Health and Aging.</dc:contributor>
-
-        <dc:date>2004</dc:date>
-
-        <dc:description>PAL recording system.</dc:description>
-
-        <dc:description>This program will provide information for primary care providers
-        on the prevention, early detection and treatment of skin cancer for people
-        living in rural areas.</dc:description>
-
-        <dc:format>1 videocassette (VHS) (95 min.) : sd. col. ; 1/2 in +</dc:format>
-
+        <dc:contributor>National Cancer Institute Bethesda, Md.</dc:contributor>
+        <dc:date>[1974]</dc:date>
+        <dc:format>Getr. Zählung graph. Darst 27 cm</dc:format>
         <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
-
-        <dc:publisher>The Foundation in collaboration with the Australian Government.
-        Dept. of Health and Aging</dc:publisher>
-
-        <dc:relation>Education Life Line to the Bush ; 415</dc:relation>
-
-        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Cancer--Prevention.</dc:subject>
-
-        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Skin--Cancer--Diagnosis.</dc:subject>
-
-        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Health education--Australia.</dc:subject>
-
-        <dc:title>Skin cancer ''spot'' decisions </dc:title>
-
-        <dc:type>Image</dc:type>
-
-        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">050314</oclcterms:recordCreationDate>
-
-        <oclcterms:recordIdentifier>224073476</oclcterms:recordIdentifier>
-
-        </oclcdcs>
-
-        </recordData>
-
-        </record>
-
-        <record>
-
-        <recordSchema>info:srw/schema/1/dc</recordSchema>
-
-        <recordPacking>xml</recordPacking>
-
-        <recordData>
-
-        <oclcdcs>
-
-        <dc:contributor>Vande Woude, George F.</dc:contributor>
-
-        <dc:contributor>Klein, George.</dc:contributor>
-
-        <dc:date>2003</dc:date>
-
-        <dc:format>192 p. : 24 cm.</dc:format>
-
-        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
-
-        <dc:publisher>Academic</dc:publisher>
-
-        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Cancer--Research.</dc:subject>
-
-        <dc:title>Advances in cancer research. Vol. 89 </dc:title>
-
+        <dc:publisher>U.S. Dept. of Health, Education, and Welfare, Public Health Service, National Institutes of Health</dc:publisher>
+        <dc:relation>DHEW publication 74-570 NIH</dc:relation>
+        <dc:title>Digest of scientific recommendations for the National Cancer Program Plan</dc:title>
         <dc:type>Text</dc:type>
-
-        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">040610</oclcterms:recordCreationDate>
-
-        <oclcterms:recordIdentifier>55623433</oclcterms:recordIdentifier>
-
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">991109</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>247452425</oclcterms:recordIdentifier>
         </oclcdcs>
-
         </recordData>
-
         </record>
-
-        </records>
-
-        <nextRecordPosition>10001</nextRecordPosition>
-
-        <resultSetIdleTime/>
-
-        <echoedSearchRetrieveRequest xmlns:srw="http://www.loc.gov/zing/srw/">
-
-        <version>1.1</version>
-
-        <query>srw.kw = "cancer"</query>
-
-        <maximumRecords>2</maximumRecords>
-
+        <record>
         <recordSchema>info:srw/schema/1/dc</recordSchema>
-
         <recordPacking>xml</recordPacking>
-
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Society for the Prevention and Relief of Cancer (London, England)</dc:contributor>
+        <dc:date>1913-1922</dc:date>
+        <dc:format>2 v.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Society for the Prevention and Relief of Cancer</dc:publisher>
+        <dc:subject xsi:type="http://purl.org/dc/terms/MESH">Society for the Prevention and Relief of Cancer (London, England)</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/MESH">Medical Oncology--Periodicals.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/MESH">Neoplasms--Periodicals.</dc:subject>
+        <dc:title>Journal of cancer.</dc:title>
+        <dc:title>Journal of cancer (Society for the Prevention and Relief of Cancer (London, England))</dc:title>
+        <dc:type>Text</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">011214</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">  2005243329</oclcterms:recordIdentifier>
+        <oclcterms:recordIdentifier>48616757</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        </records>
+        <nextRecordPosition>10001</nextRecordPosition>
+        <resultSetIdleTime/>
+        <echoedSearchRetrieveRequest xmlns:srw="http://www.loc.gov/zing/srw/">
+        <version>1.1</version>
+        <query>srw.kw = "cancer"</query>
+        <maximumRecords>2</maximumRecords>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
         <startRecord>9999</startRecord>
-
         <sortKeys>relevance</sortKeys>
-
         <wskey>DUMMY_API_KEY</wskey>
-
         </echoedSearchRetrieveRequest>
-
         </searchRetrieveResponse>
-
-'
     http_version: 
-  recorded_at: Wed, 26 Sep 2012 21:39:42 GMT
-recorded_with: VCR 2.2.5
+  recorded_at: Mon, 21 Sep 2015 14:48:07 GMT
+recorded_with: VCR 2.9.3
