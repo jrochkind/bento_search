@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://www.googleapis.com/books/v1/volumes?maxResults=10&q=%22mongy%20frongy%20alkdjf%20mzytladf%22
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers: {}
   response:
@@ -13,13 +13,16 @@ http_interactions:
       message: OK
     headers:
       Expires:
-      - Wed, 22 Aug 2012 17:29:38 GMT
+      - Mon, 21 Sep 2015 14:28:04 GMT
       Date:
-      - Wed, 22 Aug 2012 17:29:38 GMT
+      - Mon, 21 Sep 2015 14:28:04 GMT
       Cache-Control:
       - private, max-age=0, must-revalidate, no-transform
       Etag:
-      - ! '"5GSe85DoVh7vVXxRyeM6HeaC0Cg/W6k8nbDP-T9StSHXQg5D9u2ieE8"'
+      - '"AEqHJ39cYOcHij976IZqD9LCWzE/oMWMqbsluP5m2PCo8Y7WmWeHGP4"'
+      Vary:
+      - Origin
+      - X-Origin
       Content-Type:
       - application/json; charset=UTF-8
       X-Content-Type-Options:
@@ -28,13 +31,21 @@ http_interactions:
       - SAMEORIGIN
       X-Xss-Protection:
       - 1; mode=block
+      Content-Length:
+      - '47'
       Server:
       - GSE
-      Transfer-Encoding:
-      - chunked
+      Alternate-Protocol:
+      - 443:quic,p=1
+      Alt-Svc:
+      - quic=":443"; p="1"; ma=604800
     body:
-      encoding: US-ASCII
-      string: ! "{\n \"kind\": \"books#volumes\",\n \"totalItems\": 0\n}\n"
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "books#volumes",
+         "totalItems": 0
+        }
     http_version: 
-  recorded_at: Wed, 22 Aug 2012 17:29:38 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Mon, 21 Sep 2015 14:28:04 GMT
+recorded_with: VCR 2.9.3

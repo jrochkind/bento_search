@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://www.googleapis.com/books/v1/volumes?maxResults=10&q=cancer
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers: {}
   response:
@@ -13,13 +13,16 @@ http_interactions:
       message: OK
     headers:
       Expires:
-      - Thu, 03 Jan 2013 00:21:28 GMT
+      - Mon, 21 Sep 2015 14:28:04 GMT
       Date:
-      - Thu, 03 Jan 2013 00:21:28 GMT
+      - Mon, 21 Sep 2015 14:28:04 GMT
       Cache-Control:
       - private, max-age=0, must-revalidate, no-transform
       Etag:
-      - ! '"qUmHz46zG1FyTSJljpHfN8HJvB4/lf941uGoP3mR0wysnC6bYofpyI0"'
+      - '"AEqHJ39cYOcHij976IZqD9LCWzE/KK950eRXdoSL_tb3tMcp5_ialPo"'
+      Vary:
+      - Origin
+      - X-Origin
       Content-Type:
       - application/json; charset=UTF-8
       X-Content-Type-Options:
@@ -28,388 +31,973 @@ http_interactions:
       - SAMEORIGIN
       X-Xss-Protection:
       - 1; mode=block
+      Content-Length:
+      - '33241'
       Server:
       - GSE
-      Transfer-Encoding:
-      - chunked
+      Alternate-Protocol:
+      - 443:quic,p=1
+      Alt-Svc:
+      - quic=":443"; p="1"; ma=604800
     body:
       encoding: UTF-8
-      string: ! "{\n \"kind\": \"books#volumes\",\n \"totalItems\": 1240,\n \"items\":
-        [\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"aVTMqaclr_kC\",\n   \"etag\":
-        \"WneTtdCv7dU\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/aVTMqaclr_kC\",\n
-        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"authors\": [\n     \"Alvin
-        Silverstein\",\n     \"Virginia B. Silverstein\",\n     \"Laura Silverstein
-        Nunn\"\n    ],\n    \"publisher\": \"Twenty First Century Books\",\n    \"publishedDate\":
-        \"2006\",\n    \"description\": \"Explains different types of cancer, their
-        causes, symptoms and treatment, and, through case studies, what it is like
-        to live with cancer.\",\n    \"industryIdentifiers\": [\n     {\n      \"type\":
-        \"ISBN_10\",\n      \"identifier\": \"0761328335\"\n     },\n     {\n      \"type\":
-        \"ISBN_13\",\n      \"identifier\": \"9780761328339\"\n     }\n    ],\n    \"pageCount\":
-        121,\n    \"printType\": \"BOOK\",\n    \"contentVersion\": \"0.1.0.0.preview.0\",\n
-        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks3.books.google.com/books?id=aVTMqaclr_kC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks3.books.google.com/books?id=aVTMqaclr_kC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=aVTMqaclr_kC&printsec=frontcover&dq=cancer&hl=&cd=1&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=aVTMqaclr_kC&dq=cancer&hl=&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?hl=&id=aVTMqaclr_kC\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
-        false,\n    \"textToSpeechPermission\": \"ALLOWED\",\n    \"epub\": {\n     \"isAvailable\":
-        false\n    },\n    \"pdf\": {\n     \"isAvailable\": false\n    },\n    \"webReaderLink\":
-        \"http://books.google.com/books/reader?id=aVTMqaclr_kC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"Explains different types of cancer, their causes, symptoms and treatment,
-        and, through case studies, what it is like to live with cancer.\"\n   }\n
-        \ },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"5rF_31RVTnMC\",\n
-        \  \"etag\": \"ccK4JS83KTI\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/5rF_31RVTnMC\",\n
-        \  \"volumeInfo\": {\n    \"title\": \"The Emperor of All Maladies\",\n    \"subtitle\":
-        \"A Biography of Cancer\",\n    \"authors\": [\n     \"Siddhartha Mukherjee\"\n
-        \   ],\n    \"publisher\": \"Scribner\",\n    \"publishedDate\": \"2010-11-16\",\n
-        \   \"description\": \"The Emperor of All Maladies is a magnificent, profoundly
-        humane “biography” of cancer—from its first documented appearances thousands
-        of years ago through the epic battles in the twentieth century to cure, control,
-        and conquer it to a radical new understanding of its essence. Physician, researcher,
-        and award-winning science writer, Siddhartha Mukherjee examines cancer with
-        a cellular biologist’s precision, a historian’s perspective, and a biographer’s
-        passion. The result is an astonishingly lucid and eloquent chronicle of a
-        disease humans have lived with—and perished from—for more than five thousand
-        years. The story of cancer is a story of human ingenuity, resilience, and
-        perseverance, but also of hubris, paternalism, and misperception. Mukherjee
-        recounts centuries of discoveries, setbacks, victories, and deaths, told through
-        the eyes of his predecessors and peers, training their wits against an infinitely
-        resourceful adversary that, just three decades ago, was thought to be easily
-        vanquished in an all-out “war against cancer.” The book reads like a literary
-        thriller with cancer as the protagonist. From the Persian Queen Atossa, whose
-        Greek slave cut off her malignant breast, to the nineteenth-century recipients
-        of primitive radiation and chemotherapy to Mukherjee’s own leukemia patient,
-        Carla, The Emperor of All Maladies is about the people who have soldiered
-        through fiercely demanding regimens in order to survive—and to increase our
-        understanding of this iconic disease. Riveting, urgent, and surprising, The
-        Emperor of All Maladies provides a fascinating glimpse into the future of
-        cancer treatments. It is an illuminating book that provides hope and clarity
-        to those seeking to demystify cancer.\",\n    \"industryIdentifiers\": [\n
-        \    {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"1439107955\"\n
-        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9781439107959\"\n
-        \    }\n    ],\n    \"pageCount\": 592,\n    \"printType\": \"BOOK\",\n    \"averageRating\":
-        4.5,\n    \"ratingsCount\": 61,\n    \"contentVersion\": \"0.2.3.0.preview.2\",\n
-        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks1.books.google.com/books?id=5rF_31RVTnMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks1.books.google.com/books?id=5rF_31RVTnMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=5rF_31RVTnMC&printsec=frontcover&dq=cancer&hl=&cd=2&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=5rF_31RVTnMC&dq=cancer&hl=&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/The_Emperor_of_All_Maladies.html?hl=&id=5rF_31RVTnMC\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"FOR_SALE\",\n    \"isEbook\": true,\n    \"listPrice\": {\n     \"amount\":
-        13.11,\n     \"currencyCode\": \"USD\"\n    },\n    \"retailPrice\": {\n     \"amount\":
-        11.14,\n     \"currencyCode\": \"USD\"\n    },\n    \"buyLink\": \"http://books.google.com/books?id=5rF_31RVTnMC&dq=cancer&hl=&buy=&source=gbs_api\"\n
-        \  },\n   \"accessInfo\": {\n    \"country\": \"US\",\n    \"viewability\":
-        \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\": false,\n    \"textToSpeechPermission\":
-        \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\": {\n     \"isAvailable\": true,\n
-        \    \"acsTokenLink\": \"http://books.google.com/books/download/The_Emperor_of_All_Maladies-sample-epub.acsm?id=5rF_31RVTnMC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
-        \   },\n    \"pdf\": {\n     \"isAvailable\": false\n    },\n    \"webReaderLink\":
-        \"http://books.google.com/books/reader?id=5rF_31RVTnMC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"The story of cancer is a story of human ingenuity, resilience, and perseverance,
-        but also of hubris, paternalism, and misperception.\"\n   }\n  },\n  {\n   \"kind\":
-        \"books#volume\",\n   \"id\": \"PMbLAT1JJqUC\",\n   \"etag\": \"9aO7Eb3TNUU\",\n
-        \  \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/PMbLAT1JJqUC\",\n
-        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"authors\": [\n     \"Oliver
-        Gillie\"\n    ],\n    \"publisher\": \"Heinemann Library\",\n    \"publishedDate\":
-        \"2004-05-01\",\n    \"description\": \"Provides an overview of cancer, describing
-        what it is, what the various forms are that it takes, what it is like to live
-        with this disease, and some of the available treatments.\",\n    \"industryIdentifiers\":
-        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"1403451443\"\n
-        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9781403451446\"\n
-        \    }\n    ],\n    \"pageCount\": 56,\n    \"printType\": \"BOOK\",\n    \"contentVersion\":
-        \"preview-1.0.0\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks9.books.google.com/books?id=PMbLAT1JJqUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks9.books.google.com/books?id=PMbLAT1JJqUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=PMbLAT1JJqUC&printsec=frontcover&dq=cancer&hl=&cd=3&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=PMbLAT1JJqUC&dq=cancer&hl=&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?hl=&id=PMbLAT1JJqUC\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
-        false,\n    \"textToSpeechPermission\": \"ALLOWED\",\n    \"epub\": {\n     \"isAvailable\":
-        false\n    },\n    \"pdf\": {\n     \"isAvailable\": false\n    },\n    \"webReaderLink\":
-        \"http://books.google.com/books/reader?id=PMbLAT1JJqUC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"Provides an overview of cancer, describing what it is, what the various
-        forms are that it takes, what it is like to live with this disease, and some
-        of the available treatments.\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
-        \  \"id\": \"_Nr57uKNEe8C\",\n   \"etag\": \"4LduIm5k/xM\",\n   \"selfLink\":
-        \"https://www.googleapis.com/books/v1/volumes/_Nr57uKNEe8C\",\n   \"volumeInfo\":
-        {\n    \"title\": \"Cancer\",\n    \"authors\": [\n     \"F. Bernoville\"\n
-        \   ],\n    \"publisher\": \"B Jain Pub Pvt Limited\",\n    \"publishedDate\":
-        \"1999-01-01\",\n    \"industryIdentifiers\": [\n     {\n      \"type\": \"ISBN_10\",\n
-        \     \"identifier\": \"8170212871\"\n     },\n     {\n      \"type\": \"ISBN_13\",\n
-        \     \"identifier\": \"9788170212874\"\n     }\n    ],\n    \"pageCount\":
-        48,\n    \"printType\": \"BOOK\",\n    \"contentVersion\": \"0.0.1.0.preview.0\",\n
-        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks3.books.google.com/books?id=_Nr57uKNEe8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks3.books.google.com/books?id=_Nr57uKNEe8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=_Nr57uKNEe8C&printsec=frontcover&dq=cancer&hl=&cd=4&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=_Nr57uKNEe8C&dq=cancer&hl=&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?hl=&id=_Nr57uKNEe8C\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
-        false,\n    \"textToSpeechPermission\": \"ALLOWED\",\n    \"epub\": {\n     \"isAvailable\":
-        false\n    },\n    \"pdf\": {\n     \"isAvailable\": false\n    },\n    \"webReaderLink\":
-        \"http://books.google.com/books/reader?id=_Nr57uKNEe8C&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"SAMPLE\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
-        \  \"id\": \"xhN8s8QCAbQC\",\n   \"etag\": \"BTJCd5lYM9o\",\n   \"selfLink\":
-        \"https://www.googleapis.com/books/v1/volumes/xhN8s8QCAbQC\",\n   \"volumeInfo\":
-        {\n    \"title\": \"Cancer\",\n    \"authors\": [\n     \"Farokh J. Master\"\n
-        \   ],\n    \"publisher\": \"B Jain Pub Pvt Limited\",\n    \"publishedDate\":
-        \"2003-01-01\",\n    \"description\": \"In this booklet the author has tried
-        to make the difficult problem of the treatment of cancer patients much more
-        easier.\",\n    \"industryIdentifiers\": [\n     {\n      \"type\": \"ISBN_10\",\n
-        \     \"identifier\": \"817021615X\"\n     },\n     {\n      \"type\": \"ISBN_13\",\n
-        \     \"identifier\": \"9788170216155\"\n     }\n    ],\n    \"pageCount\":
-        37,\n    \"printType\": \"BOOK\",\n    \"contentVersion\": \"0.0.1.0.preview.0\",\n
-        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks5.books.google.com/books?id=xhN8s8QCAbQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks5.books.google.com/books?id=xhN8s8QCAbQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=xhN8s8QCAbQC&printsec=frontcover&dq=cancer&hl=&cd=5&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=xhN8s8QCAbQC&dq=cancer&hl=&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?hl=&id=xhN8s8QCAbQC\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
-        false,\n    \"textToSpeechPermission\": \"ALLOWED\",\n    \"epub\": {\n     \"isAvailable\":
-        false\n    },\n    \"pdf\": {\n     \"isAvailable\": false\n    },\n    \"webReaderLink\":
-        \"http://books.google.com/books/reader?id=xhN8s8QCAbQC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"In this booklet the author has tried to make the difficult problem of the
-        treatment of cancer patients much more easier.\"\n   }\n  },\n  {\n   \"kind\":
-        \"books#volume\",\n   \"id\": \"g_QY9jR98ZIC\",\n   \"etag\": \"WcLgf59/Y20\",\n
-        \  \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/g_QY9jR98ZIC\",\n
-        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"Personal
-        Horoscopes 2013\",\n    \"authors\": [\n     \"Dan Liebman\"\n    ],\n    \"publisher\":
-        \"Collins\",\n    \"publishedDate\": \"2012-10-16\",\n    \"description\":
-        \"Find out what 2013 holds in store for you, Cancer. Packed with insightful
-        information to make 2013 a meaningful year for the Crab, the fourth sign of
-        the zodiac, Cancer: Personal Horoscopes 2013 includes: Week-by-week forecasts
-        for your sign, covering love and relationships, family and friends, finance,
-        health, career and travel At-a-glance monthly charts highlighting the best
-        and worst days for romance, friendship, career, health and more Your zodiac
-        sign’ s qualities, elements, planets and houses Personality profiles of famous
-        Canadian and international figures born in your sign Compatibility guides
-        for every combination of signs, detailing your best relationship matches —
-        and those that may challenge you Start 2013 off right with your personalized
-        look at the stars.\",\n    \"industryIdentifiers\": [\n     {\n      \"type\":
-        \"ISBN_10\",\n      \"identifier\": \"144341848X\"\n     },\n     {\n      \"type\":
-        \"ISBN_13\",\n      \"identifier\": \"9781443418485\"\n     }\n    ],\n    \"pageCount\":
-        50,\n    \"printType\": \"BOOK\",\n    \"contentVersion\": \"preview-1.0.0\",\n
-        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks4.books.google.com/books?id=g_QY9jR98ZIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks4.books.google.com/books?id=g_QY9jR98ZIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=g_QY9jR98ZIC&printsec=frontcover&dq=cancer&hl=&cd=6&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=g_QY9jR98ZIC&dq=cancer&hl=&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?hl=&id=g_QY9jR98ZIC\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": false,\n    \"publicDomain\":
-        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
-        {\n     \"isAvailable\": true,\n     \"acsTokenLink\": \"http://books.google.com/books/download/Cancer-sample-epub.acsm?id=g_QY9jR98ZIC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
-        \   },\n    \"pdf\": {\n     \"isAvailable\": false\n    },\n    \"webReaderLink\":
-        \"http://books.google.com/books/reader?id=g_QY9jR98ZIC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"Find out what 2013 holds in store for you, Cancer.\"\n   }\n  },\n  {\n
-        \  \"kind\": \"books#volume\",\n   \"id\": \"0-1KOKAZBKcC\",\n   \"etag\":
-        \"+o/lhxM3LZY\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/0-1KOKAZBKcC\",\n
-        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"Zodiac
-        Signs\",\n    \"authors\": [\n     \"Sanjay Garima\"\n    ],\n    \"publisher\":
-        \"Health Harmony\",\n    \"publishedDate\": \"2006-01-01\",\n    \"description\":
-        \"A gift book which tells all about the person and his life on the basis of
-        the zodiac sign.\",\n    \"industryIdentifiers\": [\n     {\n      \"type\":
-        \"ISBN_10\",\n      \"identifier\": \"8180560678\"\n     },\n     {\n      \"type\":
-        \"ISBN_13\",\n      \"identifier\": \"9788180560675\"\n     }\n    ],\n    \"pageCount\":
-        124,\n    \"printType\": \"BOOK\",\n    \"contentVersion\": \"0.0.1.0.preview.0\",\n
-        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks6.books.google.com/books?id=0-1KOKAZBKcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks6.books.google.com/books?id=0-1KOKAZBKcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=0-1KOKAZBKcC&printsec=frontcover&dq=cancer&hl=&cd=7&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=0-1KOKAZBKcC&dq=cancer&hl=&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?hl=&id=0-1KOKAZBKcC\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
-        false,\n    \"textToSpeechPermission\": \"ALLOWED\",\n    \"epub\": {\n     \"isAvailable\":
-        false\n    },\n    \"pdf\": {\n     \"isAvailable\": false\n    },\n    \"webReaderLink\":
-        \"http://books.google.com/books/reader?id=0-1KOKAZBKcC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"A gift book which tells all about the person and his life on the basis of
-        the zodiac sign.\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\":
-        \"ZpUjSiq8KKgC\",\n   \"etag\": \"kev1gBUVCag\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/ZpUjSiq8KKgC\",\n
-        \  \"volumeInfo\": {\n    \"title\": \"Cancer: Fight It with the Blood Type
-        Diet\",\n    \"subtitle\": \"Fight It with the Blood Type Diet\",\n    \"authors\":
-        [\n     \"Dr. Peter J. D'Adamo\",\n     \"Catherine Whitney\"\n    ],\n    \"publisher\":
-        \"Berkley\",\n    \"publishedDate\": \"2004-08-03\",\n    \"description\":
-        \"Dr. Peter J. D'Adamo has forever changed the strategy for eating right to
-        lose weight and achieving maximum health. Because he discovered what many
-        already instinctively knew-that a plan that works for one person may make
-        another ill-there will never be a one-size-fits-all diet again. And since
-        we now know that each blood type is affected differently by common diseases
-        and conditions, there will never be a one-size-fits-all plan of action. With
-        more than 2 million copies of his books in print, G. P. Putnam's Sons announces
-        the launch of Dr. D'Adamo's Eat Right 4 (for) Your Type Library. Over the
-        next two years, eight books will be published on eight different conditions,
-        the first two being cancer and diabetes. In these books, readers will find
-        new information individualized for their blood type and illness. In addition
-        to the food categories Beneficial, Neutral, and Avoid, Dr. D'Adamo introduces
-        a new category-Superbeneficial-for helping your body fight disease. He also
-        introduces self-assessment tests to determine status and measure progress.
-        Supplement, lifestyle, and exercise protocols are tailored to each blood type
-        and condition. There has never been a better arsenal for fighting disease,
-        and never an easier or clearer tool\",\n    \"industryIdentifiers\": [\n     {\n
-        \     \"type\": \"ISBN_10\",\n      \"identifier\": \"1440678081\"\n     },\n
-        \    {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9781440678080\"\n
-        \    }\n    ],\n    \"pageCount\": 224,\n    \"printType\": \"BOOK\",\n    \"averageRating\":
-        3.0,\n    \"ratingsCount\": 1,\n    \"contentVersion\": \"0.0.3.0.preview.2\",\n
-        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks9.books.google.com/books?id=ZpUjSiq8KKgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks9.books.google.com/books?id=ZpUjSiq8KKgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=ZpUjSiq8KKgC&printsec=frontcover&dq=cancer&hl=&cd=8&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=ZpUjSiq8KKgC&dq=cancer&hl=&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer_Fight_It_with_the_Blood_Type_Diet.html?hl=&id=ZpUjSiq8KKgC\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"FOR_SALE\",\n    \"isEbook\": true,\n    \"listPrice\": {\n     \"amount\":
-        11.99,\n     \"currencyCode\": \"USD\"\n    },\n    \"retailPrice\": {\n     \"amount\":
-        11.99,\n     \"currencyCode\": \"USD\"\n    },\n    \"buyLink\": \"http://books.google.com/books?id=ZpUjSiq8KKgC&dq=cancer&hl=&buy=&source=gbs_api\"\n
-        \  },\n   \"accessInfo\": {\n    \"country\": \"US\",\n    \"viewability\":
-        \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\": false,\n    \"textToSpeechPermission\":
-        \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\": {\n     \"isAvailable\": true,\n
-        \    \"acsTokenLink\": \"http://books.google.com/books/download/Cancer_Fight_It_with_the_Blood_Type_Diet-sample-epub.acsm?id=ZpUjSiq8KKgC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
-        \   },\n    \"pdf\": {\n     \"isAvailable\": false\n    },\n    \"webReaderLink\":
-        \"http://books.google.com/books/reader?id=ZpUjSiq8KKgC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"Over the next two years, eight books will be published on eight different
-        conditions, the first two being cancer and diabetes. In these books, readers
-        will find new information individualized for their blood type and illness.\"\n
-        \  }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"qaxuIglnhZoC\",\n
-        \  \"etag\": \"vUxJl0nDvSY\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/qaxuIglnhZoC\",\n
-        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"Its
-        Cases, Symptoms and Treatment\",\n    \"authors\": [\n     \"Eli G. Jones\"\n
-        \   ],\n    \"publisher\": \"B. Jain Publishers\",\n    \"publishedDate\":
-        \"2004-01-01\",\n    \"description\": \"Giving the results of over 40 years
-        experience in the medical treatment of this disease.The author gave post graduate
-        instructions to physicians of his method of treatment.\",\n    \"industryIdentifiers\":
-        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"8170211425\"\n
-        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9788170211426\"\n
-        \    }\n    ],\n    \"pageCount\": 301,\n    \"printType\": \"BOOK\",\n    \"contentVersion\":
-        \"0.0.1.0.preview.0\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks1.books.google.com/books?id=qaxuIglnhZoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks1.books.google.com/books?id=qaxuIglnhZoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=qaxuIglnhZoC&printsec=frontcover&dq=cancer&hl=&cd=9&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=qaxuIglnhZoC&dq=cancer&hl=&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?hl=&id=qaxuIglnhZoC\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
-        false,\n    \"textToSpeechPermission\": \"ALLOWED\",\n    \"epub\": {\n     \"isAvailable\":
-        false\n    },\n    \"pdf\": {\n     \"isAvailable\": false\n    },\n    \"webReaderLink\":
-        \"http://books.google.com/books/reader?id=qaxuIglnhZoC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"Giving the results of over 40 years experience in the medical treatment
-        of this disease.The author gave post graduate instructions to physicians of
-        his method of treatment.\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
-        \  \"id\": \"SI5J2zKEGsUC\",\n   \"etag\": \"pvzLa0OOfHA\",\n   \"selfLink\":
-        \"https://www.googleapis.com/books/v1/volumes/SI5J2zKEGsUC\",\n   \"volumeInfo\":
-        {\n    \"title\": \"Cancer\",\n    \"authors\": [\n     \"Paula Taylor\"\n
-        \   ],\n    \"publisher\": \"Creative Education\",\n    \"publishedDate\":
-        \"1978\",\n    \"description\": \"Describes character traits and attitudes
-        reputedly possessed by individuals born under the sun sign Cancer.\",\n    \"industryIdentifiers\":
-        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"0871916444\"\n
-        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9780871916440\"\n
-        \    }\n    ],\n    \"pageCount\": 47,\n    \"printType\": \"BOOK\",\n    \"categories\":
-        [\n     \"Body, Mind & Spirit\"\n    ],\n    \"contentVersion\": \"preview-1.0.0\",\n
-        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks8.books.google.com/books?id=SI5J2zKEGsUC&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks8.books.google.com/books?id=SI5J2zKEGsUC&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=SI5J2zKEGsUC&q=cancer&dq=cancer&hl=&cd=10&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=SI5J2zKEGsUC&dq=cancer&hl=&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?hl=&id=SI5J2zKEGsUC\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"NO_PAGES\",\n    \"embeddable\": false,\n
-        \   \"publicDomain\": false,\n    \"textToSpeechPermission\": \"ALLOWED\",\n
-        \   \"epub\": {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=SI5J2zKEGsUC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"NONE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"Describes character traits and attitudes reputedly possessed by individuals
-        born under the sun sign Cancer.\"\n   }\n  }\n ]\n}\n"
+      string: |
+        {
+         "kind": "books#volumes",
+         "totalItems": 1585,
+         "items": [
+          {
+           "kind": "books#volume",
+           "id": "-TAxAAAAQBAJ",
+           "etag": "n9cAvaUys7o",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/-TAxAAAAQBAJ",
+           "volumeInfo": {
+            "title": "The Mayo Clinic Breast Cancer Book",
+            "authors": [
+             "Mayo Clinic"
+            ],
+            "publisher": "RosettaBooks",
+            "publishedDate": "2012-11-16",
+            "description": "From the breast health experts at Mayo Clinic comes a guide to the many aspects of breast cancer—from prevention, to care and coping, to survival, to living with hope. Trustworthy information offered in a spirit of companionship. “This is the best source for readable, up-to-date information—from the world’s experts.” —Dr. Thomas J. Smith, Johns Hopkins Hospital “If you’re looking for a comprehensive, easy-to-read book about an often confusing topic, The Mayo Clinic Breast Cancer Book is for you.” —Henry M. Kuerer, M.D., Ph.D., FACS, Professor and Director, Breast Surgical Oncology Training Program, MD Anderson Cancer Center “Readers will likely return again and again to this book as a convenient source of knowledge, insight, and reassurance as they confront the many decisions required in the treatment of breast cancer.” —Clifford A. Hudis, M.D., Chief, Breast Cancer Medicine Service, Memorial Sloan-Kettering Cancer Center Mayo Clinic Cancer Center is dedicated to understanding and discovering new ways to predict, prevent, diagnose and treat cancer, transforming the quality of life for cancer patients today and into the future. With a multisite national presence, its three campuses—in Pheonix/Scottsdale, Ariz.; Jacksonville, Fla.; and Rochester, Minn.—offer a broad geographic reach to serve patients. Designated as a Comprehensive Cancer Center by the National Cancer Institute, Mayo Clinic Cancer Center is a leader in translating discoveries into effective improvements in patient care. ABOUT THE AUTHOR Mayo Clinic took root in farm fields near Rochester, Minn., in the late 1800s. It grew from the medical practice of a country doctor, William Worrall Mayo, and the partnership of his two sons, William J. and Charles H. Mayo—affectionately known as Dr. Will and Dr. Charlie. The brothers' innovative ideas and tireless work in learning and creating new surgical techniques attracted international attention. Physicians from around the world came to watch the Mayo brothers perform surgery. The Mayo brothers invited other doctors to join them, forming teams of medical experts. Today, Mayo Clinic—one of the world’s oldest and largest multispecialty group practices—comprises more than 45,000 physicians, scientists, nurses and other staff at its three locations in Rochester, Minn., Jacksonville, Fla., and Scottsdale, Ariz., and its regional community-based health care practices.",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_13",
+              "identifier": "9780795331893"
+             },
+             {
+              "type": "ISBN_10",
+              "identifier": "0795331894"
+             }
+            ],
+            "readingModes": {
+             "text": true,
+             "image": true
+            },
+            "pageCount": 453,
+            "printType": "BOOK",
+            "categories": [
+             "Health & Fitness"
+            ],
+            "averageRating": 4.5,
+            "ratingsCount": 2,
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "1.2.2.0.preview.3",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=-TAxAAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=-TAxAAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=-TAxAAAAQBAJ&printsec=frontcover&dq=cancer&hl=&cd=1&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=-TAxAAAAQBAJ&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/The_Mayo_Clinic_Breast_Cancer_Book.html?hl=&id=-TAxAAAAQBAJ"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "FOR_SALE",
+            "isEbook": true,
+            "listPrice": {
+             "amount": 11.99,
+             "currencyCode": "USD"
+            },
+            "retailPrice": {
+             "amount": 11.99,
+             "currencyCode": "USD"
+            },
+            "buyLink": "http://books.google.com/books?id=-TAxAAAAQBAJ&dq=cancer&hl=&buy=&source=gbs_api",
+            "offers": [
+             {
+              "finskyOfferType": 1,
+              "listPrice": {
+               "amountInMicros": 1.199E7,
+               "currencyCode": "USD"
+              },
+              "retailPrice": {
+               "amountInMicros": 1.199E7,
+               "currencyCode": "USD"
+              }
+             }
+            ]
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+             "isAvailable": true,
+             "acsTokenLink": "http://books.google.com/books/download/The_Mayo_Clinic_Breast_Cancer_Book-sample-epub.acsm?id=-TAxAAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+             "isAvailable": true,
+             "acsTokenLink": "http://books.google.com/books/download/The_Mayo_Clinic_Breast_Cancer_Book-sample-pdf.acsm?id=-TAxAAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=-TAxAAAAQBAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           },
+           "searchInfo": {
+            "textSnippet": "Thomas J. Smith, Johns Hopkins Hospital “If you’re looking for a comprehensive, easy-to-read book about an often confusing topic, The Mayo Clinic Breast Cancer Book is for you.” —Henry M. Kuerer, M.D., Ph.D., FACS, Professor and ..."
+           }
+          },
+          {
+           "kind": "books#volume",
+           "id": "g0Fpf0mPXmQC",
+           "etag": "Y5kMeCHyq54",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/g0Fpf0mPXmQC",
+           "volumeInfo": {
+            "title": "Anticancer, A New Way of Life, New Edition",
+            "authors": [
+             "David Servan-Schreiber MD, PhD"
+            ],
+            "publisher": "Penguin",
+            "publishedDate": "2009-12-31",
+            "description": "The New York Times and international bestseller-now updated with the latest research Anticancer has been a bestselling phenomenon since Viking first published it in fall 2008. Now, a new edition addresses current developments in cancer research and offers more tips on how people living with cancer can fight it and how healthy people can prevent it. The new edition of Anticancer includes: • The latest research on anticancer foods, including new alternatives to sugar and cautions about some that are now on the market • New information about how vitamin D strengthens the immune system • Warnings about common food contaminants that have recently been proven to contribute to cancer progression • A new chapter on mind-body approaches to stress reduction, with recent studies that show how our reactions to stress can interfere with natural defenses and how friendships can support healing in ways never before understood • A groundbreaking study showing that lifestyle modification, as originally proposed in Anticancer, reduces mortality for breast cancer by an astounding 68 percent after completion of treatment • New supporting evidence for the entire Anticancer program",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_13",
+              "identifier": "9781101163054"
+             },
+             {
+              "type": "ISBN_10",
+              "identifier": "1101163054"
+             }
+            ],
+            "readingModes": {
+             "text": true,
+             "image": false
+            },
+            "pageCount": 288,
+            "printType": "BOOK",
+            "categories": [
+             "Health & Fitness"
+            ],
+            "averageRating": 4.0,
+            "ratingsCount": 35,
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "1.2.0.0.preview.2",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=g0Fpf0mPXmQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=g0Fpf0mPXmQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=g0Fpf0mPXmQC&printsec=frontcover&dq=cancer&hl=&cd=2&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=g0Fpf0mPXmQC&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/Anticancer_A_New_Way_of_Life_New_Edition.html?hl=&id=g0Fpf0mPXmQC"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "FOR_SALE",
+            "isEbook": true,
+            "listPrice": {
+             "amount": 18.99,
+             "currencyCode": "USD"
+            },
+            "retailPrice": {
+             "amount": 18.99,
+             "currencyCode": "USD"
+            },
+            "buyLink": "http://books.google.com/books?id=g0Fpf0mPXmQC&dq=cancer&hl=&buy=&source=gbs_api",
+            "offers": [
+             {
+              "finskyOfferType": 1,
+              "listPrice": {
+               "amountInMicros": 1.899E7,
+               "currencyCode": "USD"
+              },
+              "retailPrice": {
+               "amountInMicros": 1.899E7,
+               "currencyCode": "USD"
+              }
+             }
+            ]
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+            "epub": {
+             "isAvailable": true,
+             "acsTokenLink": "http://books.google.com/books/download/Anticancer_A_New_Way_of_Life_New_Edition-sample-epub.acsm?id=g0Fpf0mPXmQC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+             "isAvailable": false
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=g0Fpf0mPXmQC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           },
+           "searchInfo": {
+            "textSnippet": "A revised edition of a best-selling reference incorporates the latest recommendations for recovering from cancer, from foods to eat or avoid and mind-body stress reduction practices to strategic lifestyle modifications and immune system ..."
+           }
+          },
+          {
+           "kind": "books#volume",
+           "id": "MzMmAgAAQBAJ",
+           "etag": "7pvUsXBge1g",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/MzMmAgAAQBAJ",
+           "volumeInfo": {
+            "title": "The Biology of Cancer, Second Edition",
+            "authors": [
+             "Robert Weinberg"
+            ],
+            "publisher": "Garland Science",
+            "publishedDate": "2013-05-14",
+            "description": "Thoroughly updated and incorporating the most important advances in the fast-growing field of cancer biology, The Biology of Cancer, Second Edition, maintains all of its hallmark features admired by students, instructors, researchers, and clinicians around the world. The Biology of Cancer is a textbook for students studying the molecular and cellular bases of cancer at the undergraduate, graduate, and medical school levels. The principles of cancer biology are presented in an organized, cogent, and in-depth manner. The clarity of writing, supported by an extensive full-color art program and numerous pedagogical features, makes the book accessible and engaging. The information unfolds through the presentation of key experiments that give readers a sense of discovery and provide insights into the conceptual foundation underlying modern cancer biology.",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_13",
+              "identifier": "9781317963462"
+             },
+             {
+              "type": "ISBN_10",
+              "identifier": "1317963466"
+             }
+            ],
+            "readingModes": {
+             "text": false,
+             "image": true
+            },
+            "pageCount": 960,
+            "printType": "BOOK",
+            "categories": [
+             "Science"
+            ],
+            "averageRating": 4.5,
+            "ratingsCount": 7,
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "preview-1.0.0",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=MzMmAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=MzMmAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=MzMmAgAAQBAJ&printsec=frontcover&dq=cancer&hl=&cd=3&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=MzMmAgAAQBAJ&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/The_Biology_of_Cancer_Second_Edition.html?hl=&id=MzMmAgAAQBAJ"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "FOR_SALE",
+            "isEbook": true,
+            "listPrice": {
+             "amount": 155.0,
+             "currencyCode": "USD"
+            },
+            "retailPrice": {
+             "amount": 124.0,
+             "currencyCode": "USD"
+            },
+            "buyLink": "http://books.google.com/books?id=MzMmAgAAQBAJ&dq=cancer&hl=&buy=&source=gbs_api",
+            "offers": [
+             {
+              "finskyOfferType": 1,
+              "listPrice": {
+               "amountInMicros": 1.55E8,
+               "currencyCode": "USD"
+              },
+              "retailPrice": {
+               "amountInMicros": 1.24E8,
+               "currencyCode": "USD"
+              }
+             }
+            ]
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+             "isAvailable": false
+            },
+            "pdf": {
+             "isAvailable": true,
+             "acsTokenLink": "http://books.google.com/books/download/The_Biology_of_Cancer_Second_Edition-sample-pdf.acsm?id=MzMmAgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=MzMmAgAAQBAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           },
+           "searchInfo": {
+            "textSnippet": "The principles of cancer biology are presented in an organized, cogent, and in-depth manner. The clarity of writing, supported by an extensive full-color art program and numerous pedagogical features, makes the book accessible and engaging."
+           }
+          },
+          {
+           "kind": "books#volume",
+           "id": "NIaiHLcr0n8C",
+           "etag": "/s8ehM1HC08",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/NIaiHLcr0n8C",
+           "volumeInfo": {
+            "title": "Cancer",
+            "authors": [
+             "Joanna Martine Woolfolk"
+            ],
+            "publisher": "Taylor Trade Publications",
+            "publishedDate": "2011",
+            "description": "Each of these elegant little volumes is packed with everything you'd want to know about your Sun Sign from such basics as your ruling planet, symbol, constellation, lucky numbers and birthstone, to keywords and illuminating quotes from the rich and famous who share your sign. Naturally, romance comes into play with suggested amorous combinations for each sign and even an exploration of each sign's distinctive erogenous zones for the benefit of a would-be lover.",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_13",
+              "identifier": "9781589795563"
+             },
+             {
+              "type": "ISBN_10",
+              "identifier": "1589795563"
+             }
+            ],
+            "readingModes": {
+             "text": false,
+             "image": true
+            },
+            "pageCount": 96,
+            "printType": "BOOK",
+            "categories": [
+             "Body, Mind & Spirit"
+            ],
+            "averageRating": 3.5,
+            "ratingsCount": 2,
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "preview-1.0.0",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=NIaiHLcr0n8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=NIaiHLcr0n8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=NIaiHLcr0n8C&printsec=frontcover&dq=cancer&hl=&cd=4&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=NIaiHLcr0n8C&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/Cancer.html?hl=&id=NIaiHLcr0n8C"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+             "isAvailable": false
+            },
+            "pdf": {
+             "isAvailable": true,
+             "acsTokenLink": "http://books.google.com/books/download/Cancer-sample-pdf.acsm?id=NIaiHLcr0n8C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=NIaiHLcr0n8C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           },
+           "searchInfo": {
+            "textSnippet": "Each of these elegant little volumes is packed with everything you&#39;d want to know about your Sun Sign from such basics as your ruling planet, symbol, constellation, lucky numbers and birthstone, to keywords and illuminating quotes from the ..."
+           }
+          },
+          {
+           "kind": "books#volume",
+           "id": "8Rlxz7ETndcC",
+           "etag": "T2HhbBWwAAo",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/8Rlxz7ETndcC",
+           "volumeInfo": {
+            "title": "Breast Cancer Q & A",
+            "subtitle": "Insightful Answers to the 100 Most Frequently Asked Questions",
+            "authors": [
+             "Charyn Pfeuffer"
+            ],
+            "publisher": "Penguin",
+            "publishedDate": "2003",
+            "description": "Provides information on breast cancer, covering such topics as medical terminology, support groups, medication, and alternative treatments.",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_10",
+              "identifier": "158333145X"
+             },
+             {
+              "type": "ISBN_13",
+              "identifier": "9781583331453"
+             }
+            ],
+            "readingModes": {
+             "text": false,
+             "image": false
+            },
+            "pageCount": 326,
+            "printType": "BOOK",
+            "categories": [
+             "Health & Fitness"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "preview-1.0.0",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=8Rlxz7ETndcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=8Rlxz7ETndcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=8Rlxz7ETndcC&printsec=frontcover&dq=cancer&hl=&cd=5&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=8Rlxz7ETndcC&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/Breast_Cancer_Q_A.html?hl=&id=8Rlxz7ETndcC"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+            "epub": {
+             "isAvailable": false
+            },
+            "pdf": {
+             "isAvailable": false
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=8Rlxz7ETndcC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           },
+           "searchInfo": {
+            "textSnippet": "Provides information on breast cancer, covering such topics as medical terminology, support groups, medication, and alternative treatments."
+           }
+          },
+          {
+           "kind": "books#volume",
+           "id": "GisSelWBVtoC",
+           "etag": "jsiL7yp2oGo",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/GisSelWBVtoC",
+           "volumeInfo": {
+            "title": "Fatigue in Cancer",
+            "subtitle": "A Multidimensional Approach",
+            "authors": [
+             "Maryl Lynne Winningham",
+             "Margaret Barton-Burke"
+            ],
+            "publisher": "Jones & Bartlett Learning",
+            "publishedDate": "2000",
+            "description": "This book takes an extraordinary approach to an evasive topic. it winds its way through a universe of fatigue-related topics, including theory, research, historical roots, contemporary thoughts, self-reports, survivor stories, poetic interpretations, and pencil sketch illustrations. it is a composite of ideas from many sources and many disciplines. the clinician is left with a new understanding of fatigue that will impact his or her practice forever.",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_10",
+              "identifier": "0763706302"
+             },
+             {
+              "type": "ISBN_13",
+              "identifier": "9780763706302"
+             }
+            ],
+            "readingModes": {
+             "text": false,
+             "image": true
+            },
+            "pageCount": 445,
+            "printType": "BOOK",
+            "categories": [
+             "Medical"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "0.1.0.0.preview.1",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=GisSelWBVtoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=GisSelWBVtoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=GisSelWBVtoC&printsec=frontcover&dq=cancer&hl=&cd=6&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=GisSelWBVtoC&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/Fatigue_in_Cancer.html?hl=&id=GisSelWBVtoC"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+             "isAvailable": false
+            },
+            "pdf": {
+             "isAvailable": false
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=GisSelWBVtoC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           },
+           "searchInfo": {
+            "textSnippet": "This book takes an extraordinary approach to an evasive topic. it winds its way through a universe of fatigue-related topics, including theory, research, historical roots, contemporary thoughts, self-reports, survivor stories, poetic ..."
+           }
+          },
+          {
+           "kind": "books#volume",
+           "id": "LteAUrJQyfEC",
+           "etag": "C4MvG7z+FiY",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/LteAUrJQyfEC",
+           "volumeInfo": {
+            "title": "Cancer",
+            "authors": [
+             "Susan Pories",
+             "Marsha A. Moses",
+             "Margaret M. Lotz"
+            ],
+            "publisher": "ABC-CLIO",
+            "publishedDate": "2009",
+            "description": "Cancer is a diagnosis that causes fear and confusion. It is really a family of diseases, and the process, causes, and prognosis can vary widely. Get an overview of the history of cancer as well as seminal figures and discoveries on the path to today's understanding of cancer.",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_13",
+              "identifier": "9780313359798"
+             },
+             {
+              "type": "ISBN_10",
+              "identifier": "0313359792"
+             }
+            ],
+            "readingModes": {
+             "text": true,
+             "image": true
+            },
+            "pageCount": 174,
+            "printType": "BOOK",
+            "categories": [
+             "Health & Fitness"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "0.0.2.0.preview.3",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=LteAUrJQyfEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=LteAUrJQyfEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=LteAUrJQyfEC&printsec=frontcover&dq=cancer&hl=&cd=7&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=LteAUrJQyfEC&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/Cancer.html?hl=&id=LteAUrJQyfEC"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "FOR_SALE",
+            "isEbook": true,
+            "listPrice": {
+             "amount": 45.0,
+             "currencyCode": "USD"
+            },
+            "retailPrice": {
+             "amount": 36.0,
+             "currencyCode": "USD"
+            },
+            "buyLink": "http://books.google.com/books?id=LteAUrJQyfEC&dq=cancer&hl=&buy=&source=gbs_api",
+            "offers": [
+             {
+              "finskyOfferType": 1,
+              "listPrice": {
+               "amountInMicros": 4.5E7,
+               "currencyCode": "USD"
+              },
+              "retailPrice": {
+               "amountInMicros": 3.6E7,
+               "currencyCode": "USD"
+              }
+             }
+            ]
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+             "isAvailable": true,
+             "acsTokenLink": "http://books.google.com/books/download/Cancer-sample-epub.acsm?id=LteAUrJQyfEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+             "isAvailable": true,
+             "acsTokenLink": "http://books.google.com/books/download/Cancer-sample-pdf.acsm?id=LteAUrJQyfEC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=LteAUrJQyfEC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           },
+           "searchInfo": {
+            "textSnippet": "Cancer is a diagnosis that causes fear and confusion."
+           }
+          },
+          {
+           "kind": "books#volume",
+           "id": "5ziWNCqD7OEC",
+           "etag": "f1ifq4eL4JA",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/5ziWNCqD7OEC",
+           "volumeInfo": {
+            "title": "Cancer",
+            "subtitle": "The Evolutionary Legacy",
+            "authors": [
+             "Mel Greaves"
+            ],
+            "publisher": "Oxford University Press on Demand",
+            "publishedDate": "2001",
+            "description": "In this lucid and entertaining book, Mel Greaves argues that evolutionary biology offers a new perspective that can help us unravel the riddle of cancer. Why, for example, have women always had such a raw deal in the cancer stakes? And why are some cancers, such as prostate cancer, increasing in incidence? Greaves argues that Darwinian selection millions of years ago has endowed our genes and cells with inherently cancerous credentials, and this is exacerbated by our rapid social evolution and exotic behavioural traits that outpace genetic adaptation. The book is full of novel insights, the latest scientific discoveries, and wonderful historical anecdotes. It provides a unique portrait of cancer, past, present, and future.",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_10",
+              "identifier": "0192628348"
+             },
+             {
+              "type": "ISBN_13",
+              "identifier": "9780192628343"
+             }
+            ],
+            "readingModes": {
+             "text": false,
+             "image": true
+            },
+            "pageCount": 276,
+            "printType": "BOOK",
+            "categories": [
+             "Medical"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "preview-1.0.0",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=5ziWNCqD7OEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=5ziWNCqD7OEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=5ziWNCqD7OEC&printsec=frontcover&dq=cancer&hl=&cd=8&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=5ziWNCqD7OEC&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/Cancer.html?hl=&id=5ziWNCqD7OEC"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+             "isAvailable": false
+            },
+            "pdf": {
+             "isAvailable": false
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=5ziWNCqD7OEC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           },
+           "searchInfo": {
+            "textSnippet": "Greaves argues that Darwinian selection millions of years ago has endowed our genes and cells with inherently cancerous credentials, and this is exacerbated by our rapid social evolution and exotic behavioural traits that outpace genetic ..."
+           }
+          },
+          {
+           "kind": "books#volume",
+           "id": "nFoz31cKpFgC",
+           "etag": "D814JdvJ+4w",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/nFoz31cKpFgC",
+           "volumeInfo": {
+            "title": "Cancer",
+            "subtitle": "My Story",
+            "authors": [
+             "Daniel Feist",
+             "Stan Shatenstein"
+            ],
+            "publisher": "CanWest Books",
+            "publishedDate": "2006",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_10",
+              "identifier": "1897229089"
+             },
+             {
+              "type": "ISBN_13",
+              "identifier": "9781897229088"
+             }
+            ],
+            "readingModes": {
+             "text": false,
+             "image": true
+            },
+            "pageCount": 125,
+            "printType": "BOOK",
+            "categories": [
+             "Cancer"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "preview-1.0.0",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=nFoz31cKpFgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=nFoz31cKpFgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=nFoz31cKpFgC&printsec=frontcover&dq=cancer&hl=&cd=9&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=nFoz31cKpFgC&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/Cancer.html?hl=&id=nFoz31cKpFgC"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+             "isAvailable": false
+            },
+            "pdf": {
+             "isAvailable": false
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=nFoz31cKpFgC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           }
+          },
+          {
+           "kind": "books#volume",
+           "id": "Av6R41nQhboC",
+           "etag": "egVJlcCH1cI",
+           "selfLink": "https://www.googleapis.com/books/v1/volumes/Av6R41nQhboC",
+           "volumeInfo": {
+            "title": "Cancer",
+            "subtitle": "50 Essential Things to Do",
+            "authors": [
+             "Greg Anderson"
+            ],
+            "publisher": "Penguin",
+            "publishedDate": "2009",
+            "description": "Written by a cancer survivor, this invaluable guide to cancer recovery offers an easily accessible holistic action plan for patients and family members who choose to adopt a stance of hope and take charge of their diagnosis. Reprint.",
+            "industryIdentifiers": [
+             {
+              "type": "ISBN_10",
+              "identifier": "0452290104"
+             },
+             {
+              "type": "ISBN_13",
+              "identifier": "9780452290105"
+             }
+            ],
+            "readingModes": {
+             "text": false,
+             "image": false
+            },
+            "pageCount": 198,
+            "printType": "BOOK",
+            "categories": [
+             "Health & Fitness"
+            ],
+            "averageRating": 3.5,
+            "ratingsCount": 7,
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "0.0.2.0.preview.0",
+            "imageLinks": {
+             "smallThumbnail": "http://books.google.com/books/content?id=Av6R41nQhboC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+             "thumbnail": "http://books.google.com/books/content?id=Av6R41nQhboC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=Av6R41nQhboC&printsec=frontcover&dq=cancer&hl=&cd=10&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=Av6R41nQhboC&dq=cancer&hl=&source=gbs_api",
+            "canonicalVolumeLink": "http://books.google.com/books/about/Cancer.html?hl=&id=Av6R41nQhboC"
+           },
+           "saleInfo": {
+            "country": "US",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false
+           },
+           "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+            "epub": {
+             "isAvailable": false
+            },
+            "pdf": {
+             "isAvailable": false
+            },
+            "webReaderLink": "http://books.google.com/books/reader?id=Av6R41nQhboC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+           },
+           "searchInfo": {
+            "textSnippet": "Written by a cancer survivor, this invaluable guide to cancer recovery offers an easily accessible holistic action plan for patients and family members who choose to adopt a stance of hope and take charge of their diagnosis. Reprint."
+           }
+          }
+         ]
+        }
     http_version: 
-  recorded_at: Thu, 03 Jan 2013 00:21:28 GMT
+  recorded_at: Mon, 21 Sep 2015 14:28:04 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/books/v1/volumes/aVTMqaclr_kC
+    uri: https://www.googleapis.com/books/v1/volumes/-TAxAAAAQBAJ
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers: {}
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "RXhwaXJlcw==":
-      - !binary |-
-        VGh1LCAwMyBKYW4gMjAxMyAwMDoyMToyOSBHTVQ=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        VGh1LCAwMyBKYW4gMjAxMyAwMDoyMToyOSBHTVQ=
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZSwgbWF4LWFnZT0wLCBtdXN0LXJldmFsaWRhdGUsIG5vLXRyYW5z
-        Zm9ybQ==
-      !binary "RXRhZw==":
-      - !binary |-
-        InFVbUh6NDZ6RzFGeVRTSmxqcEhmTjhISnZCNC9LR01QMWJOZFZxLWY3WDZC
-        MVdxVU9xTFVVSnMi
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD1VVEYtOA==
-      !binary "WC1Db250ZW50LVR5cGUtT3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "WC1GcmFtZS1PcHRpb25z":
-      - !binary |-
-        U0FNRU9SSUdJTg==
-      !binary "WC1Yc3MtUHJvdGVjdGlvbg==":
-      - !binary |-
-        MTsgbW9kZT1ibG9jaw==
-      !binary "U2VydmVy":
-      - !binary |-
-        R1NF
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
+      Expires:
+      - Mon, 21 Sep 2015 14:28:04 GMT
+      Date:
+      - Mon, 21 Sep 2015 14:28:04 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - '"AEqHJ39cYOcHij976IZqD9LCWzE/Jt2OBK3nxJZMLOmX6FYFwwJT32E"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '7283'
+      Server:
+      - GSE
+      Alternate-Protocol:
+      - 443:quic,p=1
+      Alt-Svc:
+      - quic=":443"; p="1"; ma=604800
     body:
-      encoding: US-ASCII
-      string: ! "{\n \"kind\": \"books#volume\",\n \"id\": \"aVTMqaclr_kC\",\n \"etag\":
-        \"0uXJYR4gymw\",\n \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/aVTMqaclr_kC\",\n
-        \"volumeInfo\": {\n  \"title\": \"Cancer\",\n  \"authors\": [\n   \"Alvin
-        Silverstein\",\n   \"Virginia B. Silverstein\",\n   \"Laura Silverstein Nunn\"\n
-        \ ],\n  \"publisher\": \"Twenty-First Century Books\",\n  \"publishedDate\":
-        \"2006\",\n  \"description\": \"Explains different types of cancer, their
-        causes, symptoms and treatment, and, through case studies, what it is like
-        to live with cancer.\",\n  \"industryIdentifiers\": [\n   {\n    \"type\":
-        \"ISBN_10\",\n    \"identifier\": \"0761328335\"\n   },\n   {\n    \"type\":
-        \"ISBN_13\",\n    \"identifier\": \"9780761328339\"\n   }\n  ],\n  \"pageCount\":
-        121,\n  \"dimensions\": {\n   \"height\": \"24.00 cm\",\n   \"width\": \"16.41
-        cm\",\n   \"thickness\": \"1.35 cm\"\n  },\n  \"printType\": \"BOOK\",\n  \"categories\":
-        [\n   \"Juvenile Nonfiction / General\",\n   \"Juvenile Nonfiction / Health
-        & Daily Living / Diseases, Illnesses & Injuries\",\n   \"Medical / Oncology\"\n
-        \ ],\n  \"contentVersion\": \"0.1.0.0.preview.0\",\n  \"imageLinks\": {\n
-        \  \"smallThumbnail\": \"http://bks3.books.google.com/books?id=aVTMqaclr_kC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE71igvCnCBWjjExqWNOM7miK_saps_p5pUBAbhmr-NjYsu_XbIXe9Hpz_8Bqa_a7mqJUXHT4gWkPTvNfHB6x0ABzy5ZtQ4bzqvIF000G4oc4DhVXQrA&source=gbs_api\",\n
-        \  \"thumbnail\": \"http://bks3.books.google.com/books?id=aVTMqaclr_kC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72lW0lpni9_Gnea-T6uYqy5LDdaixHof8hFxITpoQc0Rj5U8LKJlwT4yBPiy9VPL6FlV4FL8VxFvfvOyEHTNk1jBP--eoLNAUmExzmDeSXIqtAW-Sk&source=gbs_api\",\n
-        \  \"small\": \"http://bks3.books.google.com/books?id=aVTMqaclr_kC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE70qpuJvWVCeMWVDw90V5Zb_WEF_DsEi79vbpOUTIaPf9b1pnxCc9eNIPLFxZLVIW8k1CYr_zG56jdM5vxg9l4cImNAX-kpdQynY8Ql7U9IO3BAg1fA&source=gbs_api\",\n
-        \  \"medium\": \"http://bks3.books.google.com/books?id=aVTMqaclr_kC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE70uZ_RoJ8PZDpC5IjyL1IJTLOqM4NgMB3Dk1NQciR8FzKT4TEEMDr2KGyMx8HfugTHTHM7mKi15rYdxAB22FZj_AEyGmGJwa3xPUyq8Q-jzq79It8k&source=gbs_api\",\n
-        \  \"large\": \"http://bks3.books.google.com/books?id=aVTMqaclr_kC&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE71yIskM8SzZ5souq-7z7vzo_NFnjFWWWWLU9TVgnMVBwsCFfwqNSknS6eS8XKhkcj3FzXiVST_NORv6cBb5C0TYHlk7qIJpozMB-PPF1HRRWEV71mA&source=gbs_api\",\n
-        \  \"extraLarge\": \"http://bks3.books.google.com/books?id=aVTMqaclr_kC&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE71qMR_EshJYvOS3iz0NZlFtT5uwUf7FM05B93kPlTaMO88URbX14LBWgH_l1dfUOoWeYnCyND7iIMqixHSsW_zw5RqGBSHVZNGF6-WL_C5ENrOx0ac&source=gbs_api\"\n
-        \ },\n  \"language\": \"en\",\n  \"previewLink\": \"http://books.google.com/books?id=aVTMqaclr_kC&hl=&source=gbs_api\",\n
-        \ \"infoLink\": \"http://books.google.com/books?id=aVTMqaclr_kC&hl=&source=gbs_api\",\n
-        \ \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?hl=&id=aVTMqaclr_kC\"\n
-        },\n \"saleInfo\": {\n  \"country\": \"US\",\n  \"saleability\": \"NOT_FOR_SALE\",\n
-        \ \"isEbook\": false\n },\n \"accessInfo\": {\n  \"country\": \"US\",\n  \"viewability\":
-        \"PARTIAL\",\n  \"embeddable\": true,\n  \"publicDomain\": false,\n  \"textToSpeechPermission\":
-        \"ALLOWED\",\n  \"epub\": {\n   \"isAvailable\": false\n  },\n  \"pdf\": {\n
-        \  \"isAvailable\": false\n  },\n  \"webReaderLink\": \"http://books.google.com/books/reader?id=aVTMqaclr_kC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \ \"accessViewStatus\": \"SAMPLE\"\n }\n}\n"
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "books#volume",
+         "id": "-TAxAAAAQBAJ",
+         "etag": "T0SJ48C/wGM",
+         "selfLink": "https://www.googleapis.com/books/v1/volumes/-TAxAAAAQBAJ",
+         "volumeInfo": {
+          "title": "The Mayo Clinic Breast Cancer Book",
+          "authors": [
+           "Mayo Clinic"
+          ],
+          "publisher": "RosettaBooks",
+          "publishedDate": "2012-11-16",
+          "description": "\u003cp\u003eFrom the breast health experts at Mayo Clinic comes a guide to the many aspects of breast cancer—from prevention, to care and coping, to survival, to living with hope. Trustworthy information offered in a spirit of companionship.\u003c/p\u003e \u003cp\u003e\u003c/p\u003e \u003cp\u003e“This is the best source for readable, up-to-date information—from the world’s experts.” —Dr. Thomas J. Smith, Johns Hopkins Hospital\u003c/p\u003e \u003cp\u003e\u003c/p\u003e \u003cp\u003e“If you’re looking for a comprehensive, easy-to-read book about an often confusing topic, \u003ci\u003eThe Mayo Clinic Breast Cancer Book\u003c/i\u003e is for you.” —Henry M. Kuerer, M.D., Ph.D., FACS, Professor and Director, Breast Surgical Oncology Training Program, MD Anderson Cancer Center\u003c/p\u003e \u003cp\u003e\u003c/p\u003e \u003cp\u003e“Readers will likely return again and again to this book as a convenient source of knowledge, insight, and reassurance as they confront the many decisions required in the treatment of breast cancer.” —Clifford A. Hudis, M.D., Chief, Breast Cancer Medicine Service, Memorial Sloan-Kettering Cancer Center\u003c/p\u003e \u003cp\u003e\u003c/p\u003e \u003cp\u003eMayo Clinic Cancer Center is dedicated to understanding and discovering new ways to predict, prevent, diagnose and treat cancer, transforming the quality of life for cancer patients today and into the future. With a multisite national presence, its three campuses—in Pheonix/Scottsdale, Ariz.; Jacksonville, Fla.; and Rochester, Minn.—offer a broad geographic reach to serve patients. Designated as a Comprehensive Cancer Center by the National Cancer Institute, Mayo Clinic Cancer Center is a leader in translating discoveries into effective improvements in patient care.\u003c/p\u003e \u003cp\u003e\u003c/p\u003e \u003cp\u003eABOUT THE AUTHOR\u003c/p\u003e \u003cp\u003e\u003c/p\u003e \u003cp\u003eMayo Clinic took root in farm fields near Rochester, Minn., in the late 1800s. It grew from the medical practice of a country doctor, William Worrall Mayo, and the partnership of his two sons, William J. and Charles H. Mayo—affectionately known as Dr. Will and Dr. Charlie.\u003c/p\u003e \u003cp\u003e\u003c/p\u003e \u003cp\u003eThe brothers' innovative ideas and tireless work in learning and creating new surgical techniques attracted international attention. Physicians from around the world came to watch the Mayo brothers perform surgery.\u003c/p\u003e \u003cp\u003e\u003c/p\u003e \u003cp\u003eThe Mayo brothers invited other doctors to join them, forming teams of medical experts. Today, Mayo Clinic—one of the world’s oldest and largest multispecialty group practices—comprises more than 45,000 physicians, scientists, nurses and other staff at its three locations in Rochester, Minn., Jacksonville, Fla., and Scottsdale, Ariz., and its regional community-based health care practices.\u003c/p\u003e",
+          "industryIdentifiers": [
+           {
+            "type": "ISBN_10",
+            "identifier": "0795331894"
+           },
+           {
+            "type": "ISBN_13",
+            "identifier": "9780795331893"
+           }
+          ],
+          "readingModes": {
+           "text": true,
+           "image": true
+          },
+          "pageCount": 453,
+          "printedPageCount": 837,
+          "printType": "BOOK",
+          "categories": [
+           "Health & Fitness / Diseases / Cancer",
+           "Health & Fitness / Women's Health"
+          ],
+          "averageRating": 4.5,
+          "ratingsCount": 2,
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": true,
+          "contentVersion": "1.2.2.0.preview.3",
+          "imageLinks": {
+           "smallThumbnail": "http://books.google.com/books/content?id=-TAxAAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70r3eCExVr6PxqyqtVZb7SeowOVtnOtpwHKYx5Wf8w6fA8F7A9gOjlvU_hwUdZOHm7b5YIus7oVXu9Hxtn38IAmak95FIk0zILZUDeN1OyX42RdeU55YvIId9EqR06Mhg2GuF3e&source=gbs_api",
+           "thumbnail": "http://books.google.com/books/content?id=-TAxAAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73_abQZwpGJHP_FCcdunhE9yUa_EDseNVFXoRfAIC7Mr123eRtv1Tk4zs8Hfjg31yfjGKZmyEdJCFobFCmF3G8h-eIL_pf_0pIa42MC6BlR8qysPCVrgB1IrPSxp1-KYH4Kvuh-&source=gbs_api",
+           "small": "http://books.google.com/books/content?id=-TAxAAAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE70qlqrnAekGlsmqCwVbBK9ak-jLs5XBqa7GYMZ-Mxpdwsn1hHx87A0XlFveoalKYa8szEM6_yO_b_Hg5_D4lEOl7L89ps2omW7AnMIMRwnqPk7w9dY3haGpJCS9ncpnHoVSLltu&source=gbs_api",
+           "medium": "http://books.google.com/books/content?id=-TAxAAAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE73Wz7vq33VE0NKflKXjISn6SxgrF55tDbR5DHodigPdio8cN3ZvvgrHq4v4GIBCGbtgsRU8gcGHcrdeWOK4zAu9I9WOn6vS2fEDAWJDGzLZ3Ri5QuN9bYokW1wuzqq0Ti5C3bUY&source=gbs_api",
+           "large": "http://books.google.com/books/content?id=-TAxAAAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE701Qk5up99WkoNJXBydoQZc-yOjzb0RALwanKSJuk8hAbOJrAFaBbywlFTlLa0EgSAwat6QSpE1DGFj1pDht_T6q80SaCkbwAfB5Txb15fBvITBg5aNZswO8nn6M9dQnRVnBkmL&source=gbs_api",
+           "extraLarge": "http://books.google.com/books/content?id=-TAxAAAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE739XnIOiHtXCcIG6ha6Ac4Fv1IxR_CGPpf8FrRkDpkxn3NIeEJUaDaQD-P_Ld6Bi-JnqPM5zhmglwYgawL75nSHTyt4fI5W-67bLuqhiPRR6IjikgHCYJKZ8-1vDXYZL9wo20Z5&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com/books?id=-TAxAAAAQBAJ&hl=&source=gbs_api",
+          "infoLink": "http://books.google.com/books?id=-TAxAAAAQBAJ&hl=&source=gbs_api",
+          "canonicalVolumeLink": "http://books.google.com/books/about/The_Mayo_Clinic_Breast_Cancer_Book.html?hl=&id=-TAxAAAAQBAJ"
+         },
+         "layerInfo": {
+          "layers": [
+           {
+            "layerId": "geo",
+            "volumeAnnotationsVersion": "8"
+           }
+          ]
+         },
+         "saleInfo": {
+          "country": "US",
+          "saleability": "FOR_SALE",
+          "isEbook": true,
+          "listPrice": {
+           "amount": 11.99,
+           "currencyCode": "USD"
+          },
+          "retailPrice": {
+           "amount": 11.99,
+           "currencyCode": "USD"
+          },
+          "buyLink": "http://books.google.com/books?id=-TAxAAAAQBAJ&hl=&buy=&source=gbs_api",
+          "offers": [
+           {
+            "finskyOfferType": 1,
+            "listPrice": {
+             "amountInMicros": 1.199E7,
+             "currencyCode": "USD"
+            },
+            "retailPrice": {
+             "amountInMicros": 1.199E7,
+             "currencyCode": "USD"
+            }
+           }
+          ]
+         },
+         "accessInfo": {
+          "country": "US",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+           "isAvailable": true,
+           "acsTokenLink": "http://books.google.com/books/download/The_Mayo_Clinic_Breast_Cancer_Book-sample-epub.acsm?id=-TAxAAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "pdf": {
+           "isAvailable": true,
+           "acsTokenLink": "http://books.google.com/books/download/The_Mayo_Clinic_Breast_Cancer_Book-sample-pdf.acsm?id=-TAxAAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "webReaderLink": "http://books.google.com/books/reader?id=-TAxAAAAQBAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+         }
+        }
     http_version: 
-  recorded_at: Thu, 03 Jan 2013 00:21:29 GMT
-recorded_with: VCR 2.3.0
+  recorded_at: Mon, 21 Sep 2015 14:28:04 GMT
+recorded_with: VCR 2.9.3
