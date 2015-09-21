@@ -334,7 +334,7 @@ module BentoSearch
       # Multi-field search
       if arguments[:query].kind_of? Hash
         # Only if allowed
-        unless self.supports_multi_search?
+        unless self.multi_field_search?
           raise ArgumentError.new("You supplied a :query as a hash, but this engine (#{self.class}) does not suport multi-search. #{arguments[:query].inspect}")
         end
         # Multi-field search incompatible with :search_field or :semantic_search_field

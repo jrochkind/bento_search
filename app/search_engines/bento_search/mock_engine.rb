@@ -67,8 +67,8 @@ class BentoSearch::MockEngine
       configuration.search_field_definitions.try(:to_hash).try(:stringify_keys) || {}
     end
 
-    def supports_multi_search?
-      configuration.supports_multi_search || false
+    def multi_field_search?
+      configuration.multi_field_search || false
     end
     
 end

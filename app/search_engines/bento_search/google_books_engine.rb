@@ -205,7 +205,7 @@ module BentoSearch
       }
     end
 
-    def supports_multi_search?
+    def multi_field_search?
       true
     end
 

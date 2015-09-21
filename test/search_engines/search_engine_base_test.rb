@@ -159,18 +159,18 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
 
   describe "multi-field search" do
     it "complains with multi-query and search_field" do
-      engine = MockEngine.new(:supports_multi_search => true)
+      engine = MockEngine.new(:multi_field_search => true)
       assert_raises(ArgumentError) { engine.search(:query => {:title => "foo"}, :semantic_search_field => :author)}
       assert_raises(ArgumentError) { engine.search(:query => {:title => "foo"}, :search_field => "something")}
     end
 
     it "rejects if search engine does not support" do
-      engine = MockEngine.new(:supports_multi_search => false)
+      engine = MockEngine.new(:multi_field_search => false)
       assert_raises(ArgumentError) { engine.search(:query => {:title => "title", :author => "author"}) }
     end
 
     it "converts semantic search fields" do
-      engine = MockEngine.new(:supports_multi_search => true, 
+      engine = MockEngine.new(:multi_field_search => true, 
         :search_field_definitions => {
           "internal_title_field"  => {:semantic => :title},
           "internal_author_field" => {:semantic => :author}  
@@ -186,7 +186,7 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
     end
 
     it "passes through other fields" do
-      engine = MockEngine.new(:supports_multi_search => true, 
+      engine = MockEngine.new(:multi_field_search => true, 
         :search_field_definitions => {
           "internal_title_field"  => {:semantic => :title},
           "internal_author_field" => {:semantic => :author}  
@@ -201,7 +201,7 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
     end
 
     it "complains on unrecognized field if configured" do
-      engine = MockEngine.new(:supports_multi_search => true, 
+      engine = MockEngine.new(:multi_field_search => true, 
         :unrecognized_search_field => "raise",
         :search_field_definitions => {
           "internal_title_field"  => {:semantic => :title},

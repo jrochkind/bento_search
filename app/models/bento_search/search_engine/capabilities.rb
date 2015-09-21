@@ -77,7 +77,7 @@ module BentoSearch::SearchEngine::Capabilities
       # normalized to internal names before engine receives them. 
       # The multi-field search is meant to be run as a boolean AND
       # of all field/values. 
-      def supports_multi_search?
+      def multi_field_search?
         return false
       end
       
