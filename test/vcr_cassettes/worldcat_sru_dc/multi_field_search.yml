@@ -1,0 +1,1839 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.worldcat.org/webservices/catalog/search/sru?maximumRecords=10&query=srw.au%20=%20%22Noam%22%20AND%20srw.au%20=%20%22Chomsky%22%20AND%20%20srw.ti%20=%20%22Manufacturing%20Consent%22&recordSchema=info:srw/schema/1/dc&wskey=DUMMY_API_KEY
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 21 Sep 2015 15:15:39 GMT
+      Server:
+      - Apache
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml;charset=utf-8
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <?xml-stylesheet type='text/xsl' href='/webservices/catalog/xsl/searchRetrieveResponse.xsl'?>
+
+        <searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/" xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <version>1.1</version>
+        <numberOfRecords>55</numberOfRecords>
+        <records>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:description>Not rated by MPAA.</dc:description>
+        <dc:contributor>Chomsky, Noam,</dc:contributor>
+        <dc:contributor>Achbar, Mark,</dc:contributor>
+        <dc:contributor>Wintonick, Peter,</dc:contributor>
+        <dc:contributor>Neale, Colin,</dc:contributor>
+        <dc:contributor>Murphy, Dennis R.,</dc:contributor>
+        <dc:contributor>Symansky, Adam,</dc:contributor>
+        <dc:contributor>Herman, Edward S.,</dc:contributor>
+        <dc:contributor>Moyers, Bill D.,</dc:contributor>
+        <dc:contributor>Jennings, Peter, 1938-2005,</dc:contributor>
+        <dc:contributor>Flook, Kelvin,</dc:contributor>
+        <dc:contributor>Buckley, William F., Jr., 1925-2008,</dc:contributor>
+        <dc:contributor>Miquet, Francis,</dc:contributor>
+        <dc:contributor>Bunge, Norbert,</dc:contributor>
+        <dc:contributor>Turnley, William,</dc:contributor>
+        <dc:contributor>Foucault, Michel, 1926-1984,</dc:contributor>
+        <dc:contributor>Necessary Illusions (Firm),</dc:contributor>
+        <dc:contributor>National Film Board of Canada,</dc:contributor>
+        <dc:contributor>Zeitgeist Films,</dc:contributor>
+        <dc:description>"Includes 45 minutes of extra video material"--Container.</dc:description>
+        <dc:description>Originally produced as a motion picture in 1992.</dc:description>
+        <dc:description>Disc also issued in Zeitgeist Video box set: Great minds: 20 years of thinkers on film.</dc:description>
+        <dc:description>Special features: Noam Chomsky vs. William F. Buckley from Firing Line, 1969 (18 min.); Noam Chomsky vs. Michel Foucault from Deel Vier, 1971 (13 min.); Noam Chomsky reflects on the film (14 min.); Filmmaker bios.</dc:description>
+        <dc:description>Explores the political life and times of the controversial author, linguist, and radical philosopher Noam Chomsky. Focuses on Chomsky's analysis of the hidden use of ideological manipulation in democratic societies.</dc:description>
+        <dc:description>pt. 1. Thought control in a democratic society -- pt. 2. Activating dissent.</dc:description>
+        <dc:format>1 videodisc (167 min.) : sound, color with black &amp; white sequences ; 4 3/4 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:relation>Thought control in a democratic society.</dc:relation>
+        <dc:relation>Activating dissent.</dc:relation>
+        <dc:relation>DVD, NTSC.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam--Political and social views.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">United States--Politics and government.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">United States--Foreign relations.</dc:subject>
+        <dc:title>Manufacturing consent : Noam Chomsky and the media </dc:title>
+        <dc:title>Noam Chomsky and the media</dc:title>
+        <dc:type>Feature films--Canada.</dc:type>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">020418</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>49610706</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam.</dc:contributor>
+        <dc:creator>Herman, Edward S.</dc:creator>
+        <dc:date>©1988</dc:date>
+        <dc:description>1st ed.</dc:description>
+        <dc:description>Discusses the ways in which the mass media are manipulated to present the news according to an underlying elite consenus which affects the manner in which similar events in different parts of the world are presented.</dc:description>
+        <dc:description>A propaganda model -- Worthy and unworthy victims -- Legitimizing versus meaningless Third World elections : El Salvador, Guatemala, and Nicaragua -- The KGB-Bulgarian plot to kill the Pope : free-market disinformation as "news" -- The Indochina wars (I) : Vietnam -- The Indochina wars (II) : Laos and Cambodia -- Conclusions -- Appendix 1 : The U.S. official observers in Guatemala, July 1-2, 1984 -- Appendix 2 : Tagliabue's finale on the Bulgarian connection : a case study in bias -- Baestrup's Big Story : some "Freedom House exclusives."</dc:description>
+        <dc:format>xvi, 412 pages ; 25 cm</dc:format>
+        <dc:identifier>0394549260</dc:identifier>
+        <dc:identifier>9780394549262</dc:identifier>
+        <dc:identifier>0679720340</dc:identifier>
+        <dc:identifier>9780679720348</dc:identifier>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Pantheon Books</dc:publisher>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://www.gbv.de/dms/bowker/toc/9780679720348.pdf</dc:relation>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://catdir.loc.gov/catdir/bios/random056/88042614.html</dc:relation>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://catdir.loc.gov/catdir/description/random042/88042614.html</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">World politics--1975-1985.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">World politics--1985-1995.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Public opinion--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Objectivity--United States.</dc:subject>
+        <dc:title>Manufacturing consent : the political economy of the mass media </dc:title>
+        <dc:type>Text</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">880413</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">   88042614 </oclcterms:recordIdentifier>
+        <oclcterms:recordIdentifier>17877574</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:description>Rated: G.</dc:description>
+        <dc:contributor>Symansky, Adam.</dc:contributor>
+        <dc:contributor>Wintonick, Peter.</dc:contributor>
+        <dc:contributor>Achbar, Mark.</dc:contributor>
+        <dc:contributor>Chomsky, Noam.</dc:contributor>
+        <dc:contributor>National Film Board of Canada.</dc:contributor>
+        <dc:date>2004</dc:date>
+        <dc:description>Special features include: Extended excerpts from the 1969 'firing Line' debate between Noam Chomsky and William F. Buckley Jr. ; 1971 discussion between Noam Chomsky and Michel Foucault ; Noam Chomsky interview reflecting on managing consent 10 years later ; Resources and links for Noam Chomsky.</dc:description>
+        <dc:description>MMA2005.</dc:description>
+        <dc:description>Funny, provocative and surprisingly accessible, Manufacturing Consent explores the political life and ideas of Noam Chomsky, world-renowned linguist, intellectual and political activist. In a dynamic collage of new and original footage, biography, archival gems, imaginative graphics and outrageous illustrations, the film highlights Chomsky's probing analysis of mass media. A mammoth, two-part project, Manufacturing Consent is nonetheless light on its feet, favoring a style that encourages viewers to question its own workings, as Chomsky himself encourages his listeners to extricate themselves from this "web of deceit" by undertaking a course of "intellectual self-defense." Travelling with him through Canada, Japan, Europe and across the USA, we witness a tireless activist informing, challenging and being confronted by the public and the press.</dc:description>
+        <dc:format>1 videodisc (DVD) (167 min.) : sd., col. ; 4 3/4 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Madman Cinema </dc:publisher>
+        <dc:publisher>AV Channel [distributor]</dc:publisher>
+        <dc:relation>DVD ; region All ; PAL.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media policy.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Influence.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Moral and ethical aspects.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Objectivity.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects.</dc:subject>
+        <dc:title>Manufacturing consent</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">021023</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>224323981</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam.</dc:contributor>
+        <dc:contributor>Achbar, Mark.</dc:contributor>
+        <dc:contributor>Wintonick, Peter.</dc:contributor>
+        <dc:contributor>Symansky, Adam.</dc:contributor>
+        <dc:contributor>Necessary Illusions (Firm)</dc:contributor>
+        <dc:contributor>Zeitgeist Films.</dc:contributor>
+        <dc:date>[1992? ;</dc:date>
+        <dc:date>1994]</dc:date>
+        <dc:description>Closed captioned for the hearing impaired.</dc:description>
+        <dc:description>"A Necessary Illusions/National Film Board of Canada co-production."</dc:description>
+        <dc:description>"A Zeitgeist Films release."--Cassette lables.</dc:description>
+        <dc:description>"113C, 9192 072"--Container.</dc:description>
+        <dc:description>Explores the political life and times of author, linguist, and radical philosopher, Noam Chomsky. Highlighting his analysis of media, Chomsky focuses on democratic societies where populations not disciplined by force are subject to more subtle forms of ideological control.</dc:description>
+        <dc:format>1 videocassette (94 min.) : sd., col. ; 1/2 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Necessary Illusions</dc:publisher>
+        <dc:publisher>Zeitgeist Films [distributor</dc:publisher>
+        <dc:relation>VHS format.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Films for the hearing impaired.</dc:subject>
+        <dc:title>Manufacturing consent, Noam Chomsky and the media. Part one, Thought control in a democratic society</dc:title>
+        <dc:title>Thought control in a democratic society</dc:title>
+        <dc:title>Noam Chomsky and the media</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">020820</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>50436383</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam, 1928-</dc:contributor>
+        <dc:contributor>Necessary Illusions Productions.</dc:contributor>
+        <dc:contributor>National Film Board of Canada.</dc:contributor>
+        <dc:date>[c1994]</dc:date>
+        <dc:description>"A thematic module excerpted from Manufacturing consent : Noam Chomsky and the media."</dc:description>
+        <dc:description>Accompanied by series companion book.</dc:description>
+        <dc:description>Focusses on the formative influences in Noam Chomsky's life - those factors which enabled him to become a politically engaged intellectual. Starting out as a linguist at the Massachusetts Institute of Technology, where his work revolutionized the study of language, Chomsky was radicalized by the 1960s anti-war movement and become a major critic of American policy. We learn about the important Jewish intellectual influences of his family, as well as those defining incidents in his early schooling that made a lasting impression.</dc:description>
+        <dc:format>1 videocassette (28 min.) : sd., col. with b&amp;w sequences ; 1/2 in. (VHS).</dc:format>
+        <dc:language>Closed-captioned.</dc:language>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>NFB</dc:publisher>
+        <dc:relation>Manufacturing consent : Noam Chomsky and the media ; pt. 5</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Political activists--United States--Biography.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Intellectuals--Political activity--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Video recordings for the hearing impaired.</dc:subject>
+        <dc:title>Noam Chomsky personal influences </dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">960311</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>496879741</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Sargent, Lydia.</dc:contributor>
+        <dc:contributor>Z Video Productions.</dc:contributor>
+        <dc:creator>Chomsky, Noam.</dc:creator>
+        <dc:date>c2002</dc:date>
+        <dc:description>Chomsky discusses the war on terrorism, media disinformation, Mideast politics, and U.S. foreign policy.</dc:description>
+        <dc:format>1 videodisc (76 min.) : sd., col. ; 4 3/4 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Z Video Productions</dc:publisher>
+        <dc:relation>South End Press 25th anniversary series</dc:relation>
+        <dc:relation>DVD.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--United States--Objectivity.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Public opinion--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Press and propaganda.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">United States--Foreign relations.</dc:subject>
+        <dc:title>Manufacturing consent in a time of war a talk </dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">020910</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>50576585</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Wintonick, Peter, 1953-....</dc:contributor>
+        <dc:contributor>Chomsky, Noam, 1928-....</dc:contributor>
+        <dc:date>[DL 2009]</dc:date>
+        <dc:description>Contient des images d'archives.</dc:description>
+        <dc:description>Cop. : Necessary illusions : National film board of Canada, 1992.</dc:description>
+        <dc:format>1 DVD vidéo monoface simple couche toutes zones (1 h 13 min) : 4/3, coul. avec séquences n. et b. (PAL), son.</dc:format>
+        <dc:language>Document en version originale anglaise sous-titrée en français.</dc:language>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Centre national de la cinématographie [distrib.]</dc:publisher>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://catalogue.bnf.fr/ark:/12148/cb41453940s</dc:relation>
+        <dc:relation>Images de la culture, Médias</dc:relation>
+        <dc:title>Manufacturing consent : Noam Chomsky and the media. 2</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">090326</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>676507496</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Wintonick, Peter (1953-2013).</dc:contributor>
+        <dc:contributor>Chomsky, Noam (1928-....).</dc:contributor>
+        <dc:creator>Achbar, Mark.</dc:creator>
+        <dc:date>[2008]</dc:date>
+        <dc:description>Film en version originale anglaise, sous-titrée en français.</dc:description>
+        <dc:description>2008 d'après la date de réception du document.</dc:description>
+        <dc:description>Copyright : Necessary illusions, cop. 1992.</dc:description>
+        <dc:description>Durée du film : 2 h 48 min.</dc:description>
+        <dc:description>Noam Chomsky, linguiste, philosophe et militant politique de renom examine le pouvoir de l'information et les forces qui, dans les sociétés, s'exercent sur sa formulation et sa propagation. Ses commentaires sont entrecoupés de documents d'archives, d'interviews, de conférences retraçant sa trajectoire, ses travaux en linguistique et de débats avec des personnalités directement impliquées dans le système de l'information.[Jaquette].</dc:description>
+        <dc:format>1 DVD vidéo double face simple couche zone 2 (3 h 01 min) : coul. (PAL), sonore.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>K-Films Vidéo [prod., éd.]</dc:publisher>
+        <dc:title>Manufacturing consent Noam Chomsky and the media = La fabrication du consentement : Noam Chomsky et les médias </dc:title>
+        <dc:title>fabrication du consentement : Noam chomsky et les médias</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">071129</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>496679243</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Achbar, Mark.</dc:contributor>
+        <dc:contributor>Wintonick, Peter.</dc:contributor>
+        <dc:contributor>Chomsky, Noam.</dc:contributor>
+        <dc:contributor>National Film Board of Canada.</dc:contributor>
+        <dc:contributor>Necessary Illusions (Firm)</dc:contributor>
+        <dc:date>[1994?]</dc:date>
+        <dc:description>The film is a co-production by Necessary Illusions and the National Film Board of Canada.</dc:description>
+        <dc:description>Cover title.</dc:description>
+        <dc:format>35 pages ; 27 cm</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>[Necessary Illusions]</dc:publisher>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam--Political and social views.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Manufacturing consent (Motion picture)</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media and public opinion.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">United States--Politics and government--1945-</dc:subject>
+        <dc:title>Manufacturing consent : Noam Chomsky and the media : a feature documentary by Mark Achbar and Peter Wintonick.</dc:title>
+        <dc:type>Text</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">020607</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">   94154599 </oclcterms:recordIdentifier>
+        <oclcterms:recordIdentifier>85105038</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam, 1928-</dc:contributor>
+        <dc:contributor>Necessary Illusions Productions.</dc:contributor>
+        <dc:contributor>National Film Board of Canada.</dc:contributor>
+        <dc:date>[c1994]</dc:date>
+        <dc:description>"A thematic module excerpted from Manufacturing consent : Noam Chomsky and the media."</dc:description>
+        <dc:description>Accompanied by series companion book.</dc:description>
+        <dc:description>Examines the implications of television structure and format, especially the demand for conciseness, exploring how these factors can shape the messages of the medium. Also discusses how mainstream media ignore and/or marginalize dissent and dissenters such as Chomsky.</dc:description>
+        <dc:format>1 videocassette (15 min.) : sd., col. with b&amp;w sequences ; 1/2 in. (VHS).</dc:format>
+        <dc:language>Closed-captioned.</dc:language>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>NFB</dc:publisher>
+        <dc:relation>Manufacturing consent : Noam Chomsky and the media ; [pt. 3]</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam--Political and social views.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Television broadcasting of news.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Video recordings for the hearing impaired.</dc:subject>
+        <dc:title>Concision no time for new ideas </dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">960311</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>496879749</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        </records>
+        <nextRecordPosition>11</nextRecordPosition>
+        <resultSetIdleTime/>
+        <echoedSearchRetrieveRequest xmlns:srw="http://www.loc.gov/zing/srw/">
+        <version>1.1</version>
+        <query>srw.au = "Noam" AND srw.au = "Chomsky" AND  srw.ti = "Manufacturing Consent"</query>
+        <maximumRecords>10</maximumRecords>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <startRecord>1</startRecord>
+        <sortKeys>relevance</sortKeys>
+        <wskey>DUMMY_API_KEY</wskey>
+        </echoedSearchRetrieveRequest>
+        </searchRetrieveResponse>
+    http_version: 
+  recorded_at: Mon, 21 Sep 2015 15:15:41 GMT
+- request:
+    method: get
+    uri: http://www.worldcat.org/webservices/catalog/search/sru?maximumRecords=10&query=srw.au%20=%20%22Noam%22%20AND%20srw.au%20=%20%22Chomsky%22%20AND%20%20srw.ti%20=%20%22Manufacturing%22%20AND%20srw.ti%20=%20%22Consent%22&recordSchema=info:srw/schema/1/dc&wskey=DUMMY_API_KEY
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 21 Sep 2015 15:18:03 GMT
+      Server:
+      - Apache
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml;charset=utf-8
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <?xml-stylesheet type='text/xsl' href='/webservices/catalog/xsl/searchRetrieveResponse.xsl'?>
+
+        <searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/" xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <version>1.1</version>
+        <numberOfRecords>55</numberOfRecords>
+        <records>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:description>Not rated by MPAA.</dc:description>
+        <dc:contributor>Chomsky, Noam,</dc:contributor>
+        <dc:contributor>Achbar, Mark,</dc:contributor>
+        <dc:contributor>Wintonick, Peter,</dc:contributor>
+        <dc:contributor>Neale, Colin,</dc:contributor>
+        <dc:contributor>Murphy, Dennis R.,</dc:contributor>
+        <dc:contributor>Symansky, Adam,</dc:contributor>
+        <dc:contributor>Herman, Edward S.,</dc:contributor>
+        <dc:contributor>Moyers, Bill D.,</dc:contributor>
+        <dc:contributor>Jennings, Peter, 1938-2005,</dc:contributor>
+        <dc:contributor>Flook, Kelvin,</dc:contributor>
+        <dc:contributor>Buckley, William F., Jr., 1925-2008,</dc:contributor>
+        <dc:contributor>Miquet, Francis,</dc:contributor>
+        <dc:contributor>Bunge, Norbert,</dc:contributor>
+        <dc:contributor>Turnley, William,</dc:contributor>
+        <dc:contributor>Foucault, Michel, 1926-1984,</dc:contributor>
+        <dc:contributor>Necessary Illusions (Firm),</dc:contributor>
+        <dc:contributor>National Film Board of Canada,</dc:contributor>
+        <dc:contributor>Zeitgeist Films,</dc:contributor>
+        <dc:description>"Includes 45 minutes of extra video material"--Container.</dc:description>
+        <dc:description>Originally produced as a motion picture in 1992.</dc:description>
+        <dc:description>Disc also issued in Zeitgeist Video box set: Great minds: 20 years of thinkers on film.</dc:description>
+        <dc:description>Special features: Noam Chomsky vs. William F. Buckley from Firing Line, 1969 (18 min.); Noam Chomsky vs. Michel Foucault from Deel Vier, 1971 (13 min.); Noam Chomsky reflects on the film (14 min.); Filmmaker bios.</dc:description>
+        <dc:description>Explores the political life and times of the controversial author, linguist, and radical philosopher Noam Chomsky. Focuses on Chomsky's analysis of the hidden use of ideological manipulation in democratic societies.</dc:description>
+        <dc:description>pt. 1. Thought control in a democratic society -- pt. 2. Activating dissent.</dc:description>
+        <dc:format>1 videodisc (167 min.) : sound, color with black &amp; white sequences ; 4 3/4 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:relation>Thought control in a democratic society.</dc:relation>
+        <dc:relation>Activating dissent.</dc:relation>
+        <dc:relation>DVD, NTSC.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam--Political and social views.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">United States--Politics and government.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">United States--Foreign relations.</dc:subject>
+        <dc:title>Manufacturing consent : Noam Chomsky and the media </dc:title>
+        <dc:title>Noam Chomsky and the media</dc:title>
+        <dc:type>Feature films--Canada.</dc:type>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">020418</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>49610706</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam.</dc:contributor>
+        <dc:creator>Herman, Edward S.</dc:creator>
+        <dc:date>©1988</dc:date>
+        <dc:description>1st ed.</dc:description>
+        <dc:description>Discusses the ways in which the mass media are manipulated to present the news according to an underlying elite consenus which affects the manner in which similar events in different parts of the world are presented.</dc:description>
+        <dc:description>A propaganda model -- Worthy and unworthy victims -- Legitimizing versus meaningless Third World elections : El Salvador, Guatemala, and Nicaragua -- The KGB-Bulgarian plot to kill the Pope : free-market disinformation as "news" -- The Indochina wars (I) : Vietnam -- The Indochina wars (II) : Laos and Cambodia -- Conclusions -- Appendix 1 : The U.S. official observers in Guatemala, July 1-2, 1984 -- Appendix 2 : Tagliabue's finale on the Bulgarian connection : a case study in bias -- Baestrup's Big Story : some "Freedom House exclusives."</dc:description>
+        <dc:format>xvi, 412 pages ; 25 cm</dc:format>
+        <dc:identifier>0394549260</dc:identifier>
+        <dc:identifier>9780394549262</dc:identifier>
+        <dc:identifier>0679720340</dc:identifier>
+        <dc:identifier>9780679720348</dc:identifier>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Pantheon Books</dc:publisher>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://www.gbv.de/dms/bowker/toc/9780679720348.pdf</dc:relation>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://catdir.loc.gov/catdir/bios/random056/88042614.html</dc:relation>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://catdir.loc.gov/catdir/description/random042/88042614.html</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">World politics--1975-1985.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">World politics--1985-1995.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Public opinion--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Objectivity--United States.</dc:subject>
+        <dc:title>Manufacturing consent : the political economy of the mass media </dc:title>
+        <dc:type>Text</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">880413</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">   88042614 </oclcterms:recordIdentifier>
+        <oclcterms:recordIdentifier>17877574</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:description>Rated: G.</dc:description>
+        <dc:contributor>Symansky, Adam.</dc:contributor>
+        <dc:contributor>Wintonick, Peter.</dc:contributor>
+        <dc:contributor>Achbar, Mark.</dc:contributor>
+        <dc:contributor>Chomsky, Noam.</dc:contributor>
+        <dc:contributor>National Film Board of Canada.</dc:contributor>
+        <dc:date>2004</dc:date>
+        <dc:description>Special features include: Extended excerpts from the 1969 'firing Line' debate between Noam Chomsky and William F. Buckley Jr. ; 1971 discussion between Noam Chomsky and Michel Foucault ; Noam Chomsky interview reflecting on managing consent 10 years later ; Resources and links for Noam Chomsky.</dc:description>
+        <dc:description>MMA2005.</dc:description>
+        <dc:description>Funny, provocative and surprisingly accessible, Manufacturing Consent explores the political life and ideas of Noam Chomsky, world-renowned linguist, intellectual and political activist. In a dynamic collage of new and original footage, biography, archival gems, imaginative graphics and outrageous illustrations, the film highlights Chomsky's probing analysis of mass media. A mammoth, two-part project, Manufacturing Consent is nonetheless light on its feet, favoring a style that encourages viewers to question its own workings, as Chomsky himself encourages his listeners to extricate themselves from this "web of deceit" by undertaking a course of "intellectual self-defense." Travelling with him through Canada, Japan, Europe and across the USA, we witness a tireless activist informing, challenging and being confronted by the public and the press.</dc:description>
+        <dc:format>1 videodisc (DVD) (167 min.) : sd., col. ; 4 3/4 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Madman Cinema </dc:publisher>
+        <dc:publisher>AV Channel [distributor]</dc:publisher>
+        <dc:relation>DVD ; region All ; PAL.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media policy.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Influence.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Moral and ethical aspects.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Objectivity.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects.</dc:subject>
+        <dc:title>Manufacturing consent</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">021023</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>224323981</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam.</dc:contributor>
+        <dc:contributor>Achbar, Mark.</dc:contributor>
+        <dc:contributor>Wintonick, Peter.</dc:contributor>
+        <dc:contributor>Symansky, Adam.</dc:contributor>
+        <dc:contributor>Necessary Illusions (Firm)</dc:contributor>
+        <dc:contributor>Zeitgeist Films.</dc:contributor>
+        <dc:date>[1992? ;</dc:date>
+        <dc:date>1994]</dc:date>
+        <dc:description>Closed captioned for the hearing impaired.</dc:description>
+        <dc:description>"A Necessary Illusions/National Film Board of Canada co-production."</dc:description>
+        <dc:description>"A Zeitgeist Films release."--Cassette lables.</dc:description>
+        <dc:description>"113C, 9192 072"--Container.</dc:description>
+        <dc:description>Explores the political life and times of author, linguist, and radical philosopher, Noam Chomsky. Highlighting his analysis of media, Chomsky focuses on democratic societies where populations not disciplined by force are subject to more subtle forms of ideological control.</dc:description>
+        <dc:format>1 videocassette (94 min.) : sd., col. ; 1/2 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Necessary Illusions</dc:publisher>
+        <dc:publisher>Zeitgeist Films [distributor</dc:publisher>
+        <dc:relation>VHS format.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Films for the hearing impaired.</dc:subject>
+        <dc:title>Manufacturing consent, Noam Chomsky and the media. Part one, Thought control in a democratic society</dc:title>
+        <dc:title>Thought control in a democratic society</dc:title>
+        <dc:title>Noam Chomsky and the media</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">020820</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>50436383</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam, 1928-</dc:contributor>
+        <dc:contributor>Necessary Illusions Productions.</dc:contributor>
+        <dc:contributor>National Film Board of Canada.</dc:contributor>
+        <dc:date>[c1994]</dc:date>
+        <dc:description>"A thematic module excerpted from Manufacturing consent : Noam Chomsky and the media."</dc:description>
+        <dc:description>Accompanied by series companion book.</dc:description>
+        <dc:description>Focusses on the formative influences in Noam Chomsky's life - those factors which enabled him to become a politically engaged intellectual. Starting out as a linguist at the Massachusetts Institute of Technology, where his work revolutionized the study of language, Chomsky was radicalized by the 1960s anti-war movement and become a major critic of American policy. We learn about the important Jewish intellectual influences of his family, as well as those defining incidents in his early schooling that made a lasting impression.</dc:description>
+        <dc:format>1 videocassette (28 min.) : sd., col. with b&amp;w sequences ; 1/2 in. (VHS).</dc:format>
+        <dc:language>Closed-captioned.</dc:language>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>NFB</dc:publisher>
+        <dc:relation>Manufacturing consent : Noam Chomsky and the media ; pt. 5</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Political activists--United States--Biography.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Intellectuals--Political activity--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Video recordings for the hearing impaired.</dc:subject>
+        <dc:title>Noam Chomsky personal influences </dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">960311</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>496879741</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Sargent, Lydia.</dc:contributor>
+        <dc:contributor>Z Video Productions.</dc:contributor>
+        <dc:creator>Chomsky, Noam.</dc:creator>
+        <dc:date>c2002</dc:date>
+        <dc:description>Chomsky discusses the war on terrorism, media disinformation, Mideast politics, and U.S. foreign policy.</dc:description>
+        <dc:format>1 videodisc (76 min.) : sd., col. ; 4 3/4 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Z Video Productions</dc:publisher>
+        <dc:relation>South End Press 25th anniversary series</dc:relation>
+        <dc:relation>DVD.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--United States--Objectivity.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Public opinion--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Press and propaganda.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">United States--Foreign relations.</dc:subject>
+        <dc:title>Manufacturing consent in a time of war a talk </dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">020910</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>50576585</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Achbar, Mark.</dc:contributor>
+        <dc:contributor>Wintonick, Peter.</dc:contributor>
+        <dc:contributor>Chomsky, Noam.</dc:contributor>
+        <dc:contributor>National Film Board of Canada.</dc:contributor>
+        <dc:contributor>Necessary Illusions (Firm)</dc:contributor>
+        <dc:date>[1994?]</dc:date>
+        <dc:description>The film is a co-production by Necessary Illusions and the National Film Board of Canada.</dc:description>
+        <dc:description>Cover title.</dc:description>
+        <dc:format>35 pages ; 27 cm</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>[Necessary Illusions]</dc:publisher>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam--Political and social views.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Manufacturing consent (Motion picture)</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media and public opinion.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">United States--Politics and government--1945-</dc:subject>
+        <dc:title>Manufacturing consent : Noam Chomsky and the media : a feature documentary by Mark Achbar and Peter Wintonick.</dc:title>
+        <dc:type>Text</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">020607</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">   94154599 </oclcterms:recordIdentifier>
+        <oclcterms:recordIdentifier>85105038</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam, 1928-</dc:contributor>
+        <dc:contributor>Necessary Illusions Productions.</dc:contributor>
+        <dc:contributor>National Film Board of Canada.</dc:contributor>
+        <dc:date>[c1994]</dc:date>
+        <dc:description>"A thematic module excerpted from Manufacturing consent : Noam Chomsky and the media."</dc:description>
+        <dc:description>Accompanied by series companion book.</dc:description>
+        <dc:description>Examines the implications of television structure and format, especially the demand for conciseness, exploring how these factors can shape the messages of the medium. Also discusses how mainstream media ignore and/or marginalize dissent and dissenters such as Chomsky.</dc:description>
+        <dc:format>1 videocassette (15 min.) : sd., col. with b&amp;w sequences ; 1/2 in. (VHS).</dc:format>
+        <dc:language>Closed-captioned.</dc:language>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>NFB</dc:publisher>
+        <dc:relation>Manufacturing consent : Noam Chomsky and the media ; [pt. 3]</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam--Political and social views.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Television broadcasting of news.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Video recordings for the hearing impaired.</dc:subject>
+        <dc:title>Concision no time for new ideas </dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">960311</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>496879749</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam, 1928-</dc:contributor>
+        <dc:contributor>Necessary Illusions Productions.</dc:contributor>
+        <dc:contributor>National Film Board of Canada.</dc:contributor>
+        <dc:date>[c1994]</dc:date>
+        <dc:description>"A thematic module excerpted from Manufacturing consent : Noam Chomsky and the media."</dc:description>
+        <dc:description>Accompanied by series companion book.</dc:description>
+        <dc:description>Examines the misunderstanding (and misrepresentation in the media) of Chomsky's freedom of speech/civil rights defence of Robert Faurisson, a French intellectual brought to trial for his holocaust denial publications.</dc:description>
+        <dc:format>1 videocassette (12 min.) : sd., col. with b&amp;w sequences ; 1/2 in. (VHS).</dc:format>
+        <dc:language>Closed-captioned.</dc:language>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>NFB</dc:publisher>
+        <dc:relation>Manufacturing consent : Noam Chomsky and the media ; pt. 4</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam--Political and social views.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Freedom of speech.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Holocaust denial.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Video recordings for the hearing impaired.</dc:subject>
+        <dc:title>Holocaust denial vs. freedom of speech</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">960311</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>496879745</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam, 1928-</dc:contributor>
+        <dc:contributor>Necessary Illusions Productions.</dc:contributor>
+        <dc:contributor>National Film Board of Canada.</dc:contributor>
+        <dc:date>[c1994]</dc:date>
+        <dc:description>"A thematic module excerpted from Manufacturing consent : Noam Chomsky and the media."</dc:description>
+        <dc:description>Accompanied by series companion book.</dc:description>
+        <dc:description>Chomsky presents his ideas for the intellectual self-defence of "ordinary people" &amp; the bringing about of social change. Topics include: combatting isolation, understanding the intrinsically violent nature of the state (e.g. near-genocide of aboriginal peoples), challenging institutions (government, media, corporate elites) for unjustified actions, political activism based on the interests of the global community.</dc:description>
+        <dc:format>1 videocassette (23 min.) : sd., col. with b&amp;w sequences ; 1/2 in. (VHS).</dc:format>
+        <dc:language>Closed-captioned.</dc:language>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>NFB</dc:publisher>
+        <dc:relation>Manufacturing consent : Noam Chomsky and the media ; pt. 6</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam--Political and social views.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Political participation.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Social change.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Video recordings for the hearing impaired.</dc:subject>
+        <dc:title>Toward a vision of a future society</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">960311</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>496879731</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        </records>
+        <nextRecordPosition>11</nextRecordPosition>
+        <resultSetIdleTime/>
+        <echoedSearchRetrieveRequest xmlns:srw="http://www.loc.gov/zing/srw/">
+        <version>1.1</version>
+        <query>srw.au = "Noam" AND srw.au = "Chomsky" AND  srw.ti = "Manufacturing" AND srw.ti = "Consent"</query>
+        <maximumRecords>10</maximumRecords>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <startRecord>1</startRecord>
+        <sortKeys>relevance</sortKeys>
+        <wskey>DUMMY_API_KEY</wskey>
+        </echoedSearchRetrieveRequest>
+        </searchRetrieveResponse>
+    http_version: 
+  recorded_at: Mon, 21 Sep 2015 15:18:04 GMT
+- request:
+    method: get
+    uri: http://www.worldcat.org/webservices/catalog/search/sru?maximumRecords=10&query=srw.au%20=%20%22Noam%22%20AND%20srw.au%20=%20%22Chomsky%22%20AND%20%20srw.ti%20=%20%22Manufacturing%22&recordSchema=info:srw/schema/1/dc&wskey=DUMMY_API_KEY
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 21 Sep 2015 15:18:17 GMT
+      Server:
+      - Apache
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml;charset=utf-8
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <?xml-stylesheet type='text/xsl' href='/webservices/catalog/xsl/searchRetrieveResponse.xsl'?>
+
+        <searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/" xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <version>1.1</version>
+        <numberOfRecords>59</numberOfRecords>
+        <records>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:description>Not rated by MPAA.</dc:description>
+        <dc:contributor>Chomsky, Noam,</dc:contributor>
+        <dc:contributor>Achbar, Mark,</dc:contributor>
+        <dc:contributor>Wintonick, Peter,</dc:contributor>
+        <dc:contributor>Neale, Colin,</dc:contributor>
+        <dc:contributor>Murphy, Dennis R.,</dc:contributor>
+        <dc:contributor>Symansky, Adam,</dc:contributor>
+        <dc:contributor>Herman, Edward S.,</dc:contributor>
+        <dc:contributor>Moyers, Bill D.,</dc:contributor>
+        <dc:contributor>Jennings, Peter, 1938-2005,</dc:contributor>
+        <dc:contributor>Flook, Kelvin,</dc:contributor>
+        <dc:contributor>Buckley, William F., Jr., 1925-2008,</dc:contributor>
+        <dc:contributor>Miquet, Francis,</dc:contributor>
+        <dc:contributor>Bunge, Norbert,</dc:contributor>
+        <dc:contributor>Turnley, William,</dc:contributor>
+        <dc:contributor>Foucault, Michel, 1926-1984,</dc:contributor>
+        <dc:contributor>Necessary Illusions (Firm),</dc:contributor>
+        <dc:contributor>National Film Board of Canada,</dc:contributor>
+        <dc:contributor>Zeitgeist Films,</dc:contributor>
+        <dc:description>"Includes 45 minutes of extra video material"--Container.</dc:description>
+        <dc:description>Originally produced as a motion picture in 1992.</dc:description>
+        <dc:description>Disc also issued in Zeitgeist Video box set: Great minds: 20 years of thinkers on film.</dc:description>
+        <dc:description>Special features: Noam Chomsky vs. William F. Buckley from Firing Line, 1969 (18 min.); Noam Chomsky vs. Michel Foucault from Deel Vier, 1971 (13 min.); Noam Chomsky reflects on the film (14 min.); Filmmaker bios.</dc:description>
+        <dc:description>Explores the political life and times of the controversial author, linguist, and radical philosopher Noam Chomsky. Focuses on Chomsky's analysis of the hidden use of ideological manipulation in democratic societies.</dc:description>
+        <dc:description>pt. 1. Thought control in a democratic society -- pt. 2. Activating dissent.</dc:description>
+        <dc:format>1 videodisc (167 min.) : sound, color with black &amp; white sequences ; 4 3/4 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:relation>Thought control in a democratic society.</dc:relation>
+        <dc:relation>Activating dissent.</dc:relation>
+        <dc:relation>DVD, NTSC.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam--Political and social views.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">United States--Politics and government.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">United States--Foreign relations.</dc:subject>
+        <dc:title>Manufacturing consent : Noam Chomsky and the media </dc:title>
+        <dc:title>Noam Chomsky and the media</dc:title>
+        <dc:type>Feature films--Canada.</dc:type>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">020418</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>49610706</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam.</dc:contributor>
+        <dc:creator>Herman, Edward S.</dc:creator>
+        <dc:date>©1988</dc:date>
+        <dc:description>1st ed.</dc:description>
+        <dc:description>Discusses the ways in which the mass media are manipulated to present the news according to an underlying elite consenus which affects the manner in which similar events in different parts of the world are presented.</dc:description>
+        <dc:description>A propaganda model -- Worthy and unworthy victims -- Legitimizing versus meaningless Third World elections : El Salvador, Guatemala, and Nicaragua -- The KGB-Bulgarian plot to kill the Pope : free-market disinformation as "news" -- The Indochina wars (I) : Vietnam -- The Indochina wars (II) : Laos and Cambodia -- Conclusions -- Appendix 1 : The U.S. official observers in Guatemala, July 1-2, 1984 -- Appendix 2 : Tagliabue's finale on the Bulgarian connection : a case study in bias -- Baestrup's Big Story : some "Freedom House exclusives."</dc:description>
+        <dc:format>xvi, 412 pages ; 25 cm</dc:format>
+        <dc:identifier>0394549260</dc:identifier>
+        <dc:identifier>9780394549262</dc:identifier>
+        <dc:identifier>0679720340</dc:identifier>
+        <dc:identifier>9780679720348</dc:identifier>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Pantheon Books</dc:publisher>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://www.gbv.de/dms/bowker/toc/9780679720348.pdf</dc:relation>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://catdir.loc.gov/catdir/bios/random056/88042614.html</dc:relation>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://catdir.loc.gov/catdir/description/random042/88042614.html</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">World politics--1975-1985.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">World politics--1985-1995.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Public opinion--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Objectivity--United States.</dc:subject>
+        <dc:title>Manufacturing consent : the political economy of the mass media </dc:title>
+        <dc:type>Text</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">880413</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">   88042614 </oclcterms:recordIdentifier>
+        <oclcterms:recordIdentifier>17877574</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam.</dc:contributor>
+        <dc:contributor>Achbar, Mark.</dc:contributor>
+        <dc:contributor>Wintonick, Peter.</dc:contributor>
+        <dc:contributor>Symansky, Adam.</dc:contributor>
+        <dc:contributor>Necessary Illusions (Firm)</dc:contributor>
+        <dc:contributor>Zeitgeist Films.</dc:contributor>
+        <dc:date>[1992? ;</dc:date>
+        <dc:date>1994]</dc:date>
+        <dc:description>Closed captioned for the hearing impaired.</dc:description>
+        <dc:description>"A Necessary Illusions/National Film Board of Canada co-production."</dc:description>
+        <dc:description>"A Zeitgeist Films release."--Cassette lables.</dc:description>
+        <dc:description>"113C, 9192 072"--Container.</dc:description>
+        <dc:description>Explores the political life and times of author, linguist, and radical philosopher, Noam Chomsky. Highlighting his analysis of media, Chomsky focuses on democratic societies where populations not disciplined by force are subject to more subtle forms of ideological control.</dc:description>
+        <dc:format>1 videocassette (94 min.) : sd., col. ; 1/2 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Necessary Illusions</dc:publisher>
+        <dc:publisher>Zeitgeist Films [distributor</dc:publisher>
+        <dc:relation>VHS format.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Films for the hearing impaired.</dc:subject>
+        <dc:title>Manufacturing consent, Noam Chomsky and the media. Part one, Thought control in a democratic society</dc:title>
+        <dc:title>Thought control in a democratic society</dc:title>
+        <dc:title>Noam Chomsky and the media</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">020820</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>50436383</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam, 1928-</dc:contributor>
+        <dc:contributor>Necessary Illusions Productions.</dc:contributor>
+        <dc:contributor>National Film Board of Canada.</dc:contributor>
+        <dc:date>[c1994]</dc:date>
+        <dc:description>"A thematic module excerpted from Manufacturing consent : Noam Chomsky and the media."</dc:description>
+        <dc:description>Accompanied by series companion book.</dc:description>
+        <dc:description>Focusses on the formative influences in Noam Chomsky's life - those factors which enabled him to become a politically engaged intellectual. Starting out as a linguist at the Massachusetts Institute of Technology, where his work revolutionized the study of language, Chomsky was radicalized by the 1960s anti-war movement and become a major critic of American policy. We learn about the important Jewish intellectual influences of his family, as well as those defining incidents in his early schooling that made a lasting impression.</dc:description>
+        <dc:format>1 videocassette (28 min.) : sd., col. with b&amp;w sequences ; 1/2 in. (VHS).</dc:format>
+        <dc:language>Closed-captioned.</dc:language>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>NFB</dc:publisher>
+        <dc:relation>Manufacturing consent : Noam Chomsky and the media ; pt. 5</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Political activists--United States--Biography.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Intellectuals--Political activity--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Video recordings for the hearing impaired.</dc:subject>
+        <dc:title>Noam Chomsky personal influences </dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">960311</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>496879741</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:description>MPAA rating: R; for some language.</dc:description>
+        <dc:contributor>Melnyk, Debbie.</dc:contributor>
+        <dc:contributor>Caine, Rick.</dc:contributor>
+        <dc:contributor>Persistence of Vision Productions.</dc:contributor>
+        <dc:contributor>CHUM Television.</dc:contributor>
+        <dc:contributor>Canal D.</dc:contributor>
+        <dc:contributor>Special Broadcasting Service (Australia)</dc:contributor>
+        <dc:contributor>Liberation Entertainment (Firm)</dc:contributor>
+        <dc:contributor>Starz Home Entertainment (Firm)</dc:contributor>
+        <dc:date>c2007</dc:date>
+        <dc:description>Widescreen format (1.85:1).</dc:description>
+        <dc:description>Originally released as a motion picture in 2007.</dc:description>
+        <dc:description>Special features (29 min.): photo gallery (1 min.); featurette (8 min.); 11 deleted scenes (18 min. total); trailer (2 min.).</dc:description>
+        <dc:description>"In the realm of documentary filmmaking there is no greater icon than Michael Moore, but are his films really the truth, the whole truth, and nothing but the truth? At what point is manipulation of 'fact' a work of fiction? See for yourself when the lens is turned on the most controversial director of our time."--Container.</dc:description>
+        <dc:format>1 videodisc (97 min.) : sd., col. ; 4 3/4 in.</dc:format>
+        <dc:language>In English.</dc:language>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Liberation Entertainment </dc:publisher>
+        <dc:publisher>Distributed by Starz Home Entertainment</dc:publisher>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://www.manufacturingdissentmovie.com/</dc:relation>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://www.mrqe.com/movies/m100001169?s=1</dc:relation>
+        <dc:relation>DVD, region 1; Dolby digital 2.0.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Moore, Michael, 1954 April 23---Criticism and interpretation.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Motion picture producers and directors--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Motion pictures--Political aspects--United States.</dc:subject>
+        <dc:title>Manufacturing dissent</dc:title>
+        <dc:title>Subtitle on disc label: Uncovering Michael Moore</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">070820</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>166147359</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Sargent, Lydia.</dc:contributor>
+        <dc:contributor>Z Video Productions.</dc:contributor>
+        <dc:creator>Chomsky, Noam.</dc:creator>
+        <dc:date>c2002</dc:date>
+        <dc:description>Chomsky discusses the war on terrorism, media disinformation, Mideast politics, and U.S. foreign policy.</dc:description>
+        <dc:format>1 videodisc (76 min.) : sd., col. ; 4 3/4 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Z Video Productions</dc:publisher>
+        <dc:relation>South End Press 25th anniversary series</dc:relation>
+        <dc:relation>DVD.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--United States--Objectivity.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Public opinion--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Press and propaganda.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">United States--Foreign relations.</dc:subject>
+        <dc:title>Manufacturing consent in a time of war a talk </dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">020910</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>50576585</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:description>Rated: G.</dc:description>
+        <dc:contributor>Symansky, Adam.</dc:contributor>
+        <dc:contributor>Wintonick, Peter.</dc:contributor>
+        <dc:contributor>Achbar, Mark.</dc:contributor>
+        <dc:contributor>Chomsky, Noam.</dc:contributor>
+        <dc:contributor>National Film Board of Canada.</dc:contributor>
+        <dc:date>2004</dc:date>
+        <dc:description>Special features include: Extended excerpts from the 1969 'firing Line' debate between Noam Chomsky and William F. Buckley Jr. ; 1971 discussion between Noam Chomsky and Michel Foucault ; Noam Chomsky interview reflecting on managing consent 10 years later ; Resources and links for Noam Chomsky.</dc:description>
+        <dc:description>MMA2005.</dc:description>
+        <dc:description>Funny, provocative and surprisingly accessible, Manufacturing Consent explores the political life and ideas of Noam Chomsky, world-renowned linguist, intellectual and political activist. In a dynamic collage of new and original footage, biography, archival gems, imaginative graphics and outrageous illustrations, the film highlights Chomsky's probing analysis of mass media. A mammoth, two-part project, Manufacturing Consent is nonetheless light on its feet, favoring a style that encourages viewers to question its own workings, as Chomsky himself encourages his listeners to extricate themselves from this "web of deceit" by undertaking a course of "intellectual self-defense." Travelling with him through Canada, Japan, Europe and across the USA, we witness a tireless activist informing, challenging and being confronted by the public and the press.</dc:description>
+        <dc:format>1 videodisc (DVD) (167 min.) : sd., col. ; 4 3/4 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Madman Cinema </dc:publisher>
+        <dc:publisher>AV Channel [distributor]</dc:publisher>
+        <dc:relation>DVD ; region All ; PAL.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media policy.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Influence.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Moral and ethical aspects.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Objectivity.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects.</dc:subject>
+        <dc:title>Manufacturing consent</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">021023</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>224323981</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam, 1928-</dc:contributor>
+        <dc:contributor>Necessary Illusions Productions.</dc:contributor>
+        <dc:contributor>National Film Board of Canada.</dc:contributor>
+        <dc:date>[c1994]</dc:date>
+        <dc:description>"A thematic module excerpted from Manufacturing consent : Noam Chomsky and the media."</dc:description>
+        <dc:description>Accompanied by series companion book.</dc:description>
+        <dc:description>Examines the implications of television structure and format, especially the demand for conciseness, exploring how these factors can shape the messages of the medium. Also discusses how mainstream media ignore and/or marginalize dissent and dissenters such as Chomsky.</dc:description>
+        <dc:format>1 videocassette (15 min.) : sd., col. with b&amp;w sequences ; 1/2 in. (VHS).</dc:format>
+        <dc:language>Closed-captioned.</dc:language>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>NFB</dc:publisher>
+        <dc:relation>Manufacturing consent : Noam Chomsky and the media ; [pt. 3]</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam--Political and social views.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Television broadcasting of news.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Video recordings for the hearing impaired.</dc:subject>
+        <dc:title>Concision no time for new ideas </dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">960311</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>496879749</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam, 1928-</dc:contributor>
+        <dc:contributor>Necessary Illusions Productions.</dc:contributor>
+        <dc:contributor>National Film Board of Canada.</dc:contributor>
+        <dc:date>[c1994]</dc:date>
+        <dc:description>"A thematic module excerpted from Manufacturing consent : Noam Chomsky and the media."</dc:description>
+        <dc:description>Accompanied by series companion book.</dc:description>
+        <dc:description>Examines the misunderstanding (and misrepresentation in the media) of Chomsky's freedom of speech/civil rights defence of Robert Faurisson, a French intellectual brought to trial for his holocaust denial publications.</dc:description>
+        <dc:format>1 videocassette (12 min.) : sd., col. with b&amp;w sequences ; 1/2 in. (VHS).</dc:format>
+        <dc:language>Closed-captioned.</dc:language>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>NFB</dc:publisher>
+        <dc:relation>Manufacturing consent : Noam Chomsky and the media ; pt. 4</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam--Political and social views.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Freedom of speech.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Holocaust denial.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Video recordings for the hearing impaired.</dc:subject>
+        <dc:title>Holocaust denial vs. freedom of speech</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">960311</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>496879745</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam, 1928-</dc:contributor>
+        <dc:contributor>Necessary Illusions Productions.</dc:contributor>
+        <dc:contributor>National Film Board of Canada.</dc:contributor>
+        <dc:date>[c1994]</dc:date>
+        <dc:description>"A thematic module excerpted from Manufacturing consent : Noam Chomsky and the media."</dc:description>
+        <dc:description>Accompanied by series companion book.</dc:description>
+        <dc:description>Chomsky presents his ideas for the intellectual self-defence of "ordinary people" &amp; the bringing about of social change. Topics include: combatting isolation, understanding the intrinsically violent nature of the state (e.g. near-genocide of aboriginal peoples), challenging institutions (government, media, corporate elites) for unjustified actions, political activism based on the interests of the global community.</dc:description>
+        <dc:format>1 videocassette (23 min.) : sd., col. with b&amp;w sequences ; 1/2 in. (VHS).</dc:format>
+        <dc:language>Closed-captioned.</dc:language>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>NFB</dc:publisher>
+        <dc:relation>Manufacturing consent : Noam Chomsky and the media ; pt. 6</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam--Political and social views.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Political participation.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Social change.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Video recordings for the hearing impaired.</dc:subject>
+        <dc:title>Toward a vision of a future society</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">960311</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>496879731</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        </records>
+        <nextRecordPosition>11</nextRecordPosition>
+        <resultSetIdleTime/>
+        <echoedSearchRetrieveRequest xmlns:srw="http://www.loc.gov/zing/srw/">
+        <version>1.1</version>
+        <query>srw.au = "Noam" AND srw.au = "Chomsky" AND  srw.ti = "Manufacturing"</query>
+        <maximumRecords>10</maximumRecords>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <startRecord>1</startRecord>
+        <sortKeys>relevance</sortKeys>
+        <wskey>DUMMY_API_KEY</wskey>
+        </echoedSearchRetrieveRequest>
+        </searchRetrieveResponse>
+    http_version: 
+  recorded_at: Mon, 21 Sep 2015 15:18:18 GMT
+- request:
+    method: get
+    uri: http://www.worldcat.org/webservices/catalog/search/sru?maximumRecords=10&query=srw.au%20=%20%22Chomsky%22%20AND%20%20srw.ti%20=%20%22Manufacturing%22&recordSchema=info:srw/schema/1/dc&wskey=DUMMY_API_KEY
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 21 Sep 2015 15:34:38 GMT
+      Server:
+      - Apache
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml;charset=utf-8
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <?xml-stylesheet type='text/xsl' href='/webservices/catalog/xsl/searchRetrieveResponse.xsl'?>
+
+        <searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/" xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <version>1.1</version>
+        <numberOfRecords>60</numberOfRecords>
+        <records>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:description>Not rated by MPAA.</dc:description>
+        <dc:contributor>Chomsky, Noam,</dc:contributor>
+        <dc:contributor>Achbar, Mark,</dc:contributor>
+        <dc:contributor>Wintonick, Peter,</dc:contributor>
+        <dc:contributor>Neale, Colin,</dc:contributor>
+        <dc:contributor>Murphy, Dennis R.,</dc:contributor>
+        <dc:contributor>Symansky, Adam,</dc:contributor>
+        <dc:contributor>Herman, Edward S.,</dc:contributor>
+        <dc:contributor>Moyers, Bill D.,</dc:contributor>
+        <dc:contributor>Jennings, Peter, 1938-2005,</dc:contributor>
+        <dc:contributor>Flook, Kelvin,</dc:contributor>
+        <dc:contributor>Buckley, William F., Jr., 1925-2008,</dc:contributor>
+        <dc:contributor>Miquet, Francis,</dc:contributor>
+        <dc:contributor>Bunge, Norbert,</dc:contributor>
+        <dc:contributor>Turnley, William,</dc:contributor>
+        <dc:contributor>Foucault, Michel, 1926-1984,</dc:contributor>
+        <dc:contributor>Necessary Illusions (Firm),</dc:contributor>
+        <dc:contributor>National Film Board of Canada,</dc:contributor>
+        <dc:contributor>Zeitgeist Films,</dc:contributor>
+        <dc:description>"Includes 45 minutes of extra video material"--Container.</dc:description>
+        <dc:description>Originally produced as a motion picture in 1992.</dc:description>
+        <dc:description>Disc also issued in Zeitgeist Video box set: Great minds: 20 years of thinkers on film.</dc:description>
+        <dc:description>Special features: Noam Chomsky vs. William F. Buckley from Firing Line, 1969 (18 min.); Noam Chomsky vs. Michel Foucault from Deel Vier, 1971 (13 min.); Noam Chomsky reflects on the film (14 min.); Filmmaker bios.</dc:description>
+        <dc:description>Explores the political life and times of the controversial author, linguist, and radical philosopher Noam Chomsky. Focuses on Chomsky's analysis of the hidden use of ideological manipulation in democratic societies.</dc:description>
+        <dc:description>pt. 1. Thought control in a democratic society -- pt. 2. Activating dissent.</dc:description>
+        <dc:format>1 videodisc (167 min.) : sound, color with black &amp; white sequences ; 4 3/4 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:relation>Thought control in a democratic society.</dc:relation>
+        <dc:relation>Activating dissent.</dc:relation>
+        <dc:relation>DVD, NTSC.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam--Political and social views.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">United States--Politics and government.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">United States--Foreign relations.</dc:subject>
+        <dc:title>Manufacturing consent : Noam Chomsky and the media </dc:title>
+        <dc:title>Noam Chomsky and the media</dc:title>
+        <dc:type>Feature films--Canada.</dc:type>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">020418</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>49610706</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam.</dc:contributor>
+        <dc:creator>Herman, Edward S.</dc:creator>
+        <dc:date>©1988</dc:date>
+        <dc:description>1st ed.</dc:description>
+        <dc:description>Discusses the ways in which the mass media are manipulated to present the news according to an underlying elite consenus which affects the manner in which similar events in different parts of the world are presented.</dc:description>
+        <dc:description>A propaganda model -- Worthy and unworthy victims -- Legitimizing versus meaningless Third World elections : El Salvador, Guatemala, and Nicaragua -- The KGB-Bulgarian plot to kill the Pope : free-market disinformation as "news" -- The Indochina wars (I) : Vietnam -- The Indochina wars (II) : Laos and Cambodia -- Conclusions -- Appendix 1 : The U.S. official observers in Guatemala, July 1-2, 1984 -- Appendix 2 : Tagliabue's finale on the Bulgarian connection : a case study in bias -- Baestrup's Big Story : some "Freedom House exclusives."</dc:description>
+        <dc:format>xvi, 412 pages ; 25 cm</dc:format>
+        <dc:identifier>0394549260</dc:identifier>
+        <dc:identifier>9780394549262</dc:identifier>
+        <dc:identifier>0679720340</dc:identifier>
+        <dc:identifier>9780679720348</dc:identifier>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Pantheon Books</dc:publisher>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://www.gbv.de/dms/bowker/toc/9780679720348.pdf</dc:relation>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://catdir.loc.gov/catdir/bios/random056/88042614.html</dc:relation>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://catdir.loc.gov/catdir/description/random042/88042614.html</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">World politics--1975-1985.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">World politics--1985-1995.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Public opinion--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Objectivity--United States.</dc:subject>
+        <dc:title>Manufacturing consent : the political economy of the mass media </dc:title>
+        <dc:type>Text</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">880413</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">   88042614 </oclcterms:recordIdentifier>
+        <oclcterms:recordIdentifier>17877574</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:description>MPAA rating: R; for some language.</dc:description>
+        <dc:contributor>Melnyk, Debbie.</dc:contributor>
+        <dc:contributor>Caine, Rick.</dc:contributor>
+        <dc:contributor>Persistence of Vision Productions.</dc:contributor>
+        <dc:contributor>CHUM Television.</dc:contributor>
+        <dc:contributor>Canal D.</dc:contributor>
+        <dc:contributor>Special Broadcasting Service (Australia)</dc:contributor>
+        <dc:contributor>Liberation Entertainment (Firm)</dc:contributor>
+        <dc:contributor>Starz Home Entertainment (Firm)</dc:contributor>
+        <dc:date>c2007</dc:date>
+        <dc:description>Widescreen format (1.85:1).</dc:description>
+        <dc:description>Originally released as a motion picture in 2007.</dc:description>
+        <dc:description>Special features (29 min.): photo gallery (1 min.); featurette (8 min.); 11 deleted scenes (18 min. total); trailer (2 min.).</dc:description>
+        <dc:description>"In the realm of documentary filmmaking there is no greater icon than Michael Moore, but are his films really the truth, the whole truth, and nothing but the truth? At what point is manipulation of 'fact' a work of fiction? See for yourself when the lens is turned on the most controversial director of our time."--Container.</dc:description>
+        <dc:format>1 videodisc (97 min.) : sd., col. ; 4 3/4 in.</dc:format>
+        <dc:language>In English.</dc:language>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Liberation Entertainment </dc:publisher>
+        <dc:publisher>Distributed by Starz Home Entertainment</dc:publisher>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://www.manufacturingdissentmovie.com/</dc:relation>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://www.mrqe.com/movies/m100001169?s=1</dc:relation>
+        <dc:relation>DVD, region 1; Dolby digital 2.0.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Moore, Michael, 1954 April 23---Criticism and interpretation.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Motion picture producers and directors--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Motion pictures--Political aspects--United States.</dc:subject>
+        <dc:title>Manufacturing dissent</dc:title>
+        <dc:title>Subtitle on disc label: Uncovering Michael Moore</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">070820</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>166147359</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:description>Rated: G.</dc:description>
+        <dc:contributor>Symansky, Adam.</dc:contributor>
+        <dc:contributor>Wintonick, Peter.</dc:contributor>
+        <dc:contributor>Achbar, Mark.</dc:contributor>
+        <dc:contributor>Chomsky, Noam.</dc:contributor>
+        <dc:contributor>National Film Board of Canada.</dc:contributor>
+        <dc:date>2004</dc:date>
+        <dc:description>Special features include: Extended excerpts from the 1969 'firing Line' debate between Noam Chomsky and William F. Buckley Jr. ; 1971 discussion between Noam Chomsky and Michel Foucault ; Noam Chomsky interview reflecting on managing consent 10 years later ; Resources and links for Noam Chomsky.</dc:description>
+        <dc:description>MMA2005.</dc:description>
+        <dc:description>Funny, provocative and surprisingly accessible, Manufacturing Consent explores the political life and ideas of Noam Chomsky, world-renowned linguist, intellectual and political activist. In a dynamic collage of new and original footage, biography, archival gems, imaginative graphics and outrageous illustrations, the film highlights Chomsky's probing analysis of mass media. A mammoth, two-part project, Manufacturing Consent is nonetheless light on its feet, favoring a style that encourages viewers to question its own workings, as Chomsky himself encourages his listeners to extricate themselves from this "web of deceit" by undertaking a course of "intellectual self-defense." Travelling with him through Canada, Japan, Europe and across the USA, we witness a tireless activist informing, challenging and being confronted by the public and the press.</dc:description>
+        <dc:format>1 videodisc (DVD) (167 min.) : sd., col. ; 4 3/4 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Madman Cinema </dc:publisher>
+        <dc:publisher>AV Channel [distributor]</dc:publisher>
+        <dc:relation>DVD ; region All ; PAL.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media policy.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Influence.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Moral and ethical aspects.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Objectivity.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects.</dc:subject>
+        <dc:title>Manufacturing consent</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">021023</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>224323981</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam.</dc:contributor>
+        <dc:contributor>Achbar, Mark.</dc:contributor>
+        <dc:contributor>Wintonick, Peter.</dc:contributor>
+        <dc:contributor>Symansky, Adam.</dc:contributor>
+        <dc:contributor>Necessary Illusions (Firm)</dc:contributor>
+        <dc:contributor>Zeitgeist Films.</dc:contributor>
+        <dc:date>[1992? ;</dc:date>
+        <dc:date>1994]</dc:date>
+        <dc:description>Closed captioned for the hearing impaired.</dc:description>
+        <dc:description>"A Necessary Illusions/National Film Board of Canada co-production."</dc:description>
+        <dc:description>"A Zeitgeist Films release."--Cassette lables.</dc:description>
+        <dc:description>"113C, 9192 072"--Container.</dc:description>
+        <dc:description>Explores the political life and times of author, linguist, and radical philosopher, Noam Chomsky. Highlighting his analysis of media, Chomsky focuses on democratic societies where populations not disciplined by force are subject to more subtle forms of ideological control.</dc:description>
+        <dc:format>1 videocassette (94 min.) : sd., col. ; 1/2 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Necessary Illusions</dc:publisher>
+        <dc:publisher>Zeitgeist Films [distributor</dc:publisher>
+        <dc:relation>VHS format.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Films for the hearing impaired.</dc:subject>
+        <dc:title>Manufacturing consent, Noam Chomsky and the media. Part one, Thought control in a democratic society</dc:title>
+        <dc:title>Thought control in a democratic society</dc:title>
+        <dc:title>Noam Chomsky and the media</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">020820</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>50436383</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam, 1928-</dc:contributor>
+        <dc:contributor>Necessary Illusions Productions.</dc:contributor>
+        <dc:contributor>National Film Board of Canada.</dc:contributor>
+        <dc:date>[c1994]</dc:date>
+        <dc:description>"A thematic module excerpted from Manufacturing consent : Noam Chomsky and the media."</dc:description>
+        <dc:description>Accompanied by series companion book.</dc:description>
+        <dc:description>Focusses on the formative influences in Noam Chomsky's life - those factors which enabled him to become a politically engaged intellectual. Starting out as a linguist at the Massachusetts Institute of Technology, where his work revolutionized the study of language, Chomsky was radicalized by the 1960s anti-war movement and become a major critic of American policy. We learn about the important Jewish intellectual influences of his family, as well as those defining incidents in his early schooling that made a lasting impression.</dc:description>
+        <dc:format>1 videocassette (28 min.) : sd., col. with b&amp;w sequences ; 1/2 in. (VHS).</dc:format>
+        <dc:language>Closed-captioned.</dc:language>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>NFB</dc:publisher>
+        <dc:relation>Manufacturing consent : Noam Chomsky and the media ; pt. 5</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Political activists--United States--Biography.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Intellectuals--Political activity--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Video recordings for the hearing impaired.</dc:subject>
+        <dc:title>Noam Chomsky personal influences </dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">960311</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>496879741</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Sargent, Lydia.</dc:contributor>
+        <dc:contributor>Z Video Productions.</dc:contributor>
+        <dc:creator>Chomsky, Noam.</dc:creator>
+        <dc:date>c2002</dc:date>
+        <dc:description>Chomsky discusses the war on terrorism, media disinformation, Mideast politics, and U.S. foreign policy.</dc:description>
+        <dc:format>1 videodisc (76 min.) : sd., col. ; 4 3/4 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Z Video Productions</dc:publisher>
+        <dc:relation>South End Press 25th anniversary series</dc:relation>
+        <dc:relation>DVD.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--United States--Objectivity.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Public opinion--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Press and propaganda.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">United States--Foreign relations.</dc:subject>
+        <dc:title>Manufacturing consent in a time of war a talk </dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">020910</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>50576585</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Wintonick, Peter, 1953-....</dc:contributor>
+        <dc:contributor>Chomsky, Noam, 1928-....</dc:contributor>
+        <dc:date>[DL 2009]</dc:date>
+        <dc:description>Contient des images d'archives.</dc:description>
+        <dc:description>Cop. : Necessary illusions : National film board of Canada, 1992.</dc:description>
+        <dc:format>1 DVD vidéo monoface simple couche toutes zones (1 h 13 min) : 4/3, coul. avec séquences n. et b. (PAL), son.</dc:format>
+        <dc:language>Document en version originale anglaise sous-titrée en français.</dc:language>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Centre national de la cinématographie [distrib.]</dc:publisher>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://catalogue.bnf.fr/ark:/12148/cb41453940s</dc:relation>
+        <dc:relation>Images de la culture, Médias</dc:relation>
+        <dc:title>Manufacturing consent : Noam Chomsky and the media. 2</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">090326</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>676507496</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Wintonick, Peter.</dc:contributor>
+        <dc:contributor>Chomsky, Noam (1928-....).</dc:contributor>
+        <dc:contributor>Foucault, Michel (1926-1984).</dc:contributor>
+        <dc:creator>Achbar, Mark.</dc:creator>
+        <dc:date>[DL 2007]</dc:date>
+        <dc:description>Version originale en anglais sous-titrée en français.</dc:description>
+        <dc:description>Copyright : Necessary illusions ; National Board of Canada, cop. 1992.</dc:description>
+        <dc:description>Durée du film : 2 h 47 min.</dc:description>
+        <dc:description>Titre figurant sur la jaquette : Chomsky, les médias et les illusions nécessaires.</dc:description>
+        <dc:format>1 DVD zone 0 (3 h) : coul. (PAL), sonore.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>K films vidéo [éd., distrib.]</dc:publisher>
+        <dc:title>Manufacturing consents</dc:title>
+        <dc:title>Fabrication du consentement : Noam Chomsky et les médias</dc:title>
+        <dc:title>Chomsky, les médias et les illusions nécessaires</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">071018</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>496664221</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Wintonick, Peter (1953-2013).</dc:contributor>
+        <dc:contributor>Chomsky, Noam (1928-....).</dc:contributor>
+        <dc:creator>Achbar, Mark.</dc:creator>
+        <dc:date>[2008]</dc:date>
+        <dc:description>Film en version originale anglaise, sous-titrée en français.</dc:description>
+        <dc:description>2008 d'après la date de réception du document.</dc:description>
+        <dc:description>Copyright : Necessary illusions, cop. 1992.</dc:description>
+        <dc:description>Durée du film : 2 h 48 min.</dc:description>
+        <dc:description>Noam Chomsky, linguiste, philosophe et militant politique de renom examine le pouvoir de l'information et les forces qui, dans les sociétés, s'exercent sur sa formulation et sa propagation. Ses commentaires sont entrecoupés de documents d'archives, d'interviews, de conférences retraçant sa trajectoire, ses travaux en linguistique et de débats avec des personnalités directement impliquées dans le système de l'information.[Jaquette].</dc:description>
+        <dc:format>1 DVD vidéo double face simple couche zone 2 (3 h 01 min) : coul. (PAL), sonore.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>K-Films Vidéo [prod., éd.]</dc:publisher>
+        <dc:title>Manufacturing consent Noam Chomsky and the media = La fabrication du consentement : Noam Chomsky et les médias </dc:title>
+        <dc:title>fabrication du consentement : Noam chomsky et les médias</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">071129</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>496679243</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        </records>
+        <nextRecordPosition>11</nextRecordPosition>
+        <resultSetIdleTime/>
+        <echoedSearchRetrieveRequest xmlns:srw="http://www.loc.gov/zing/srw/">
+        <version>1.1</version>
+        <query>srw.au = "Chomsky" AND  srw.ti = "Manufacturing"</query>
+        <maximumRecords>10</maximumRecords>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <startRecord>1</startRecord>
+        <sortKeys>relevance</sortKeys>
+        <wskey>DUMMY_API_KEY</wskey>
+        </echoedSearchRetrieveRequest>
+        </searchRetrieveResponse>
+    http_version: 
+  recorded_at: Mon, 21 Sep 2015 15:34:40 GMT
+- request:
+    method: get
+    uri: http://www.worldcat.org/webservices/catalog/search/sru?maximumRecords=10&query=srw.au%20=%20%22Chomsky%22%20AND%20srw.ti%20=%20%22Manufacturing%22&recordSchema=info:srw/schema/1/dc&wskey=DUMMY_API_KEY
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 21 Sep 2015 15:36:20 GMT
+      Server:
+      - Apache
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml;charset=utf-8
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <?xml-stylesheet type='text/xsl' href='/webservices/catalog/xsl/searchRetrieveResponse.xsl'?>
+
+        <searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/" xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <version>1.1</version>
+        <numberOfRecords>60</numberOfRecords>
+        <records>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:description>Not rated by MPAA.</dc:description>
+        <dc:contributor>Chomsky, Noam,</dc:contributor>
+        <dc:contributor>Achbar, Mark,</dc:contributor>
+        <dc:contributor>Wintonick, Peter,</dc:contributor>
+        <dc:contributor>Neale, Colin,</dc:contributor>
+        <dc:contributor>Murphy, Dennis R.,</dc:contributor>
+        <dc:contributor>Symansky, Adam,</dc:contributor>
+        <dc:contributor>Herman, Edward S.,</dc:contributor>
+        <dc:contributor>Moyers, Bill D.,</dc:contributor>
+        <dc:contributor>Jennings, Peter, 1938-2005,</dc:contributor>
+        <dc:contributor>Flook, Kelvin,</dc:contributor>
+        <dc:contributor>Buckley, William F., Jr., 1925-2008,</dc:contributor>
+        <dc:contributor>Miquet, Francis,</dc:contributor>
+        <dc:contributor>Bunge, Norbert,</dc:contributor>
+        <dc:contributor>Turnley, William,</dc:contributor>
+        <dc:contributor>Foucault, Michel, 1926-1984,</dc:contributor>
+        <dc:contributor>Necessary Illusions (Firm),</dc:contributor>
+        <dc:contributor>National Film Board of Canada,</dc:contributor>
+        <dc:contributor>Zeitgeist Films,</dc:contributor>
+        <dc:description>"Includes 45 minutes of extra video material"--Container.</dc:description>
+        <dc:description>Originally produced as a motion picture in 1992.</dc:description>
+        <dc:description>Disc also issued in Zeitgeist Video box set: Great minds: 20 years of thinkers on film.</dc:description>
+        <dc:description>Special features: Noam Chomsky vs. William F. Buckley from Firing Line, 1969 (18 min.); Noam Chomsky vs. Michel Foucault from Deel Vier, 1971 (13 min.); Noam Chomsky reflects on the film (14 min.); Filmmaker bios.</dc:description>
+        <dc:description>Explores the political life and times of the controversial author, linguist, and radical philosopher Noam Chomsky. Focuses on Chomsky's analysis of the hidden use of ideological manipulation in democratic societies.</dc:description>
+        <dc:description>pt. 1. Thought control in a democratic society -- pt. 2. Activating dissent.</dc:description>
+        <dc:format>1 videodisc (167 min.) : sound, color with black &amp; white sequences ; 4 3/4 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:relation>Thought control in a democratic society.</dc:relation>
+        <dc:relation>Activating dissent.</dc:relation>
+        <dc:relation>DVD, NTSC.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam--Political and social views.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">United States--Politics and government.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">United States--Foreign relations.</dc:subject>
+        <dc:title>Manufacturing consent : Noam Chomsky and the media </dc:title>
+        <dc:title>Noam Chomsky and the media</dc:title>
+        <dc:type>Feature films--Canada.</dc:type>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">020418</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>49610706</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam.</dc:contributor>
+        <dc:creator>Herman, Edward S.</dc:creator>
+        <dc:date>©1988</dc:date>
+        <dc:description>1st ed.</dc:description>
+        <dc:description>Discusses the ways in which the mass media are manipulated to present the news according to an underlying elite consenus which affects the manner in which similar events in different parts of the world are presented.</dc:description>
+        <dc:description>A propaganda model -- Worthy and unworthy victims -- Legitimizing versus meaningless Third World elections : El Salvador, Guatemala, and Nicaragua -- The KGB-Bulgarian plot to kill the Pope : free-market disinformation as "news" -- The Indochina wars (I) : Vietnam -- The Indochina wars (II) : Laos and Cambodia -- Conclusions -- Appendix 1 : The U.S. official observers in Guatemala, July 1-2, 1984 -- Appendix 2 : Tagliabue's finale on the Bulgarian connection : a case study in bias -- Baestrup's Big Story : some "Freedom House exclusives."</dc:description>
+        <dc:format>xvi, 412 pages ; 25 cm</dc:format>
+        <dc:identifier>0394549260</dc:identifier>
+        <dc:identifier>9780394549262</dc:identifier>
+        <dc:identifier>0679720340</dc:identifier>
+        <dc:identifier>9780679720348</dc:identifier>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Pantheon Books</dc:publisher>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://www.gbv.de/dms/bowker/toc/9780679720348.pdf</dc:relation>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://catdir.loc.gov/catdir/bios/random056/88042614.html</dc:relation>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://catdir.loc.gov/catdir/description/random042/88042614.html</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">World politics--1975-1985.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">World politics--1985-1995.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Public opinion--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Objectivity--United States.</dc:subject>
+        <dc:title>Manufacturing consent : the political economy of the mass media </dc:title>
+        <dc:type>Text</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">880413</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">   88042614 </oclcterms:recordIdentifier>
+        <oclcterms:recordIdentifier>17877574</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:description>MPAA rating: R; for some language.</dc:description>
+        <dc:contributor>Melnyk, Debbie.</dc:contributor>
+        <dc:contributor>Caine, Rick.</dc:contributor>
+        <dc:contributor>Persistence of Vision Productions.</dc:contributor>
+        <dc:contributor>CHUM Television.</dc:contributor>
+        <dc:contributor>Canal D.</dc:contributor>
+        <dc:contributor>Special Broadcasting Service (Australia)</dc:contributor>
+        <dc:contributor>Liberation Entertainment (Firm)</dc:contributor>
+        <dc:contributor>Starz Home Entertainment (Firm)</dc:contributor>
+        <dc:date>c2007</dc:date>
+        <dc:description>Widescreen format (1.85:1).</dc:description>
+        <dc:description>Originally released as a motion picture in 2007.</dc:description>
+        <dc:description>Special features (29 min.): photo gallery (1 min.); featurette (8 min.); 11 deleted scenes (18 min. total); trailer (2 min.).</dc:description>
+        <dc:description>"In the realm of documentary filmmaking there is no greater icon than Michael Moore, but are his films really the truth, the whole truth, and nothing but the truth? At what point is manipulation of 'fact' a work of fiction? See for yourself when the lens is turned on the most controversial director of our time."--Container.</dc:description>
+        <dc:format>1 videodisc (97 min.) : sd., col. ; 4 3/4 in.</dc:format>
+        <dc:language>In English.</dc:language>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Liberation Entertainment </dc:publisher>
+        <dc:publisher>Distributed by Starz Home Entertainment</dc:publisher>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://www.manufacturingdissentmovie.com/</dc:relation>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://www.mrqe.com/movies/m100001169?s=1</dc:relation>
+        <dc:relation>DVD, region 1; Dolby digital 2.0.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Moore, Michael, 1954 April 23---Criticism and interpretation.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Motion picture producers and directors--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Motion pictures--Political aspects--United States.</dc:subject>
+        <dc:title>Manufacturing dissent</dc:title>
+        <dc:title>Subtitle on disc label: Uncovering Michael Moore</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">070820</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>166147359</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:description>Rated: G.</dc:description>
+        <dc:contributor>Symansky, Adam.</dc:contributor>
+        <dc:contributor>Wintonick, Peter.</dc:contributor>
+        <dc:contributor>Achbar, Mark.</dc:contributor>
+        <dc:contributor>Chomsky, Noam.</dc:contributor>
+        <dc:contributor>National Film Board of Canada.</dc:contributor>
+        <dc:date>2004</dc:date>
+        <dc:description>Special features include: Extended excerpts from the 1969 'firing Line' debate between Noam Chomsky and William F. Buckley Jr. ; 1971 discussion between Noam Chomsky and Michel Foucault ; Noam Chomsky interview reflecting on managing consent 10 years later ; Resources and links for Noam Chomsky.</dc:description>
+        <dc:description>MMA2005.</dc:description>
+        <dc:description>Funny, provocative and surprisingly accessible, Manufacturing Consent explores the political life and ideas of Noam Chomsky, world-renowned linguist, intellectual and political activist. In a dynamic collage of new and original footage, biography, archival gems, imaginative graphics and outrageous illustrations, the film highlights Chomsky's probing analysis of mass media. A mammoth, two-part project, Manufacturing Consent is nonetheless light on its feet, favoring a style that encourages viewers to question its own workings, as Chomsky himself encourages his listeners to extricate themselves from this "web of deceit" by undertaking a course of "intellectual self-defense." Travelling with him through Canada, Japan, Europe and across the USA, we witness a tireless activist informing, challenging and being confronted by the public and the press.</dc:description>
+        <dc:format>1 videodisc (DVD) (167 min.) : sd., col. ; 4 3/4 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Madman Cinema </dc:publisher>
+        <dc:publisher>AV Channel [distributor]</dc:publisher>
+        <dc:relation>DVD ; region All ; PAL.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media policy.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Influence.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Moral and ethical aspects.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Objectivity.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects.</dc:subject>
+        <dc:title>Manufacturing consent</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">021023</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>224323981</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam.</dc:contributor>
+        <dc:contributor>Achbar, Mark.</dc:contributor>
+        <dc:contributor>Wintonick, Peter.</dc:contributor>
+        <dc:contributor>Symansky, Adam.</dc:contributor>
+        <dc:contributor>Necessary Illusions (Firm)</dc:contributor>
+        <dc:contributor>Zeitgeist Films.</dc:contributor>
+        <dc:date>[1992? ;</dc:date>
+        <dc:date>1994]</dc:date>
+        <dc:description>Closed captioned for the hearing impaired.</dc:description>
+        <dc:description>"A Necessary Illusions/National Film Board of Canada co-production."</dc:description>
+        <dc:description>"A Zeitgeist Films release."--Cassette lables.</dc:description>
+        <dc:description>"113C, 9192 072"--Container.</dc:description>
+        <dc:description>Explores the political life and times of author, linguist, and radical philosopher, Noam Chomsky. Highlighting his analysis of media, Chomsky focuses on democratic societies where populations not disciplined by force are subject to more subtle forms of ideological control.</dc:description>
+        <dc:format>1 videocassette (94 min.) : sd., col. ; 1/2 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Necessary Illusions</dc:publisher>
+        <dc:publisher>Zeitgeist Films [distributor</dc:publisher>
+        <dc:relation>VHS format.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Films for the hearing impaired.</dc:subject>
+        <dc:title>Manufacturing consent, Noam Chomsky and the media. Part one, Thought control in a democratic society</dc:title>
+        <dc:title>Thought control in a democratic society</dc:title>
+        <dc:title>Noam Chomsky and the media</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">020820</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>50436383</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Chomsky, Noam, 1928-</dc:contributor>
+        <dc:contributor>Necessary Illusions Productions.</dc:contributor>
+        <dc:contributor>National Film Board of Canada.</dc:contributor>
+        <dc:date>[c1994]</dc:date>
+        <dc:description>"A thematic module excerpted from Manufacturing consent : Noam Chomsky and the media."</dc:description>
+        <dc:description>Accompanied by series companion book.</dc:description>
+        <dc:description>Focusses on the formative influences in Noam Chomsky's life - those factors which enabled him to become a politically engaged intellectual. Starting out as a linguist at the Massachusetts Institute of Technology, where his work revolutionized the study of language, Chomsky was radicalized by the 1960s anti-war movement and become a major critic of American policy. We learn about the important Jewish intellectual influences of his family, as well as those defining incidents in his early schooling that made a lasting impression.</dc:description>
+        <dc:format>1 videocassette (28 min.) : sd., col. with b&amp;w sequences ; 1/2 in. (VHS).</dc:format>
+        <dc:language>Closed-captioned.</dc:language>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>NFB</dc:publisher>
+        <dc:relation>Manufacturing consent : Noam Chomsky and the media ; pt. 5</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Chomsky, Noam.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Political activists--United States--Biography.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Intellectuals--Political activity--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Video recordings for the hearing impaired.</dc:subject>
+        <dc:title>Noam Chomsky personal influences </dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">960311</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>496879741</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Sargent, Lydia.</dc:contributor>
+        <dc:contributor>Z Video Productions.</dc:contributor>
+        <dc:creator>Chomsky, Noam.</dc:creator>
+        <dc:date>c2002</dc:date>
+        <dc:description>Chomsky discusses the war on terrorism, media disinformation, Mideast politics, and U.S. foreign policy.</dc:description>
+        <dc:format>1 videodisc (76 min.) : sd., col. ; 4 3/4 in.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Z Video Productions</dc:publisher>
+        <dc:relation>South End Press 25th anniversary series</dc:relation>
+        <dc:relation>DVD.</dc:relation>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media criticism--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--United States--Objectivity.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mass media--Political aspects--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Public opinion--United States.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Press and propaganda.</dc:subject>
+        <dc:subject xsi:type="http://purl.org/dc/terms/LCSH">United States--Foreign relations.</dc:subject>
+        <dc:title>Manufacturing consent in a time of war a talk </dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">020910</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>50576585</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Wintonick, Peter, 1953-....</dc:contributor>
+        <dc:contributor>Chomsky, Noam, 1928-....</dc:contributor>
+        <dc:date>[DL 2009]</dc:date>
+        <dc:description>Contient des images d'archives.</dc:description>
+        <dc:description>Cop. : Necessary illusions : National film board of Canada, 1992.</dc:description>
+        <dc:format>1 DVD vidéo monoface simple couche toutes zones (1 h 13 min) : 4/3, coul. avec séquences n. et b. (PAL), son.</dc:format>
+        <dc:language>Document en version originale anglaise sous-titrée en français.</dc:language>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>Centre national de la cinématographie [distrib.]</dc:publisher>
+        <dc:relation xsi:type="http://purl.org/dc/terms/URI">http://catalogue.bnf.fr/ark:/12148/cb41453940s</dc:relation>
+        <dc:relation>Images de la culture, Médias</dc:relation>
+        <dc:title>Manufacturing consent : Noam Chomsky and the media. 2</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">090326</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>676507496</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Wintonick, Peter.</dc:contributor>
+        <dc:contributor>Chomsky, Noam (1928-....).</dc:contributor>
+        <dc:contributor>Foucault, Michel (1926-1984).</dc:contributor>
+        <dc:creator>Achbar, Mark.</dc:creator>
+        <dc:date>[DL 2007]</dc:date>
+        <dc:description>Version originale en anglais sous-titrée en français.</dc:description>
+        <dc:description>Copyright : Necessary illusions ; National Board of Canada, cop. 1992.</dc:description>
+        <dc:description>Durée du film : 2 h 47 min.</dc:description>
+        <dc:description>Titre figurant sur la jaquette : Chomsky, les médias et les illusions nécessaires.</dc:description>
+        <dc:format>1 DVD zone 0 (3 h) : coul. (PAL), sonore.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>K films vidéo [éd., distrib.]</dc:publisher>
+        <dc:title>Manufacturing consents</dc:title>
+        <dc:title>Fabrication du consentement : Noam Chomsky et les médias</dc:title>
+        <dc:title>Chomsky, les médias et les illusions nécessaires</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">071018</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>496664221</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        <record>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <recordData>
+        <oclcdcs>
+        <dc:contributor>Wintonick, Peter (1953-2013).</dc:contributor>
+        <dc:contributor>Chomsky, Noam (1928-....).</dc:contributor>
+        <dc:creator>Achbar, Mark.</dc:creator>
+        <dc:date>[2008]</dc:date>
+        <dc:description>Film en version originale anglaise, sous-titrée en français.</dc:description>
+        <dc:description>2008 d'après la date de réception du document.</dc:description>
+        <dc:description>Copyright : Necessary illusions, cop. 1992.</dc:description>
+        <dc:description>Durée du film : 2 h 48 min.</dc:description>
+        <dc:description>Noam Chomsky, linguiste, philosophe et militant politique de renom examine le pouvoir de l'information et les forces qui, dans les sociétés, s'exercent sur sa formulation et sa propagation. Ses commentaires sont entrecoupés de documents d'archives, d'interviews, de conférences retraçant sa trajectoire, ses travaux en linguistique et de débats avec des personnalités directement impliquées dans le système de l'information.[Jaquette].</dc:description>
+        <dc:format>1 DVD vidéo double face simple couche zone 2 (3 h 01 min) : coul. (PAL), sonore.</dc:format>
+        <dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+        <dc:publisher>K-Films Vidéo [prod., éd.]</dc:publisher>
+        <dc:title>Manufacturing consent Noam Chomsky and the media = La fabrication du consentement : Noam Chomsky et les médias </dc:title>
+        <dc:title>fabrication du consentement : Noam chomsky et les médias</dc:title>
+        <dc:type>Image</dc:type>
+        <oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">071129</oclcterms:recordCreationDate>
+        <oclcterms:recordIdentifier>496679243</oclcterms:recordIdentifier>
+        </oclcdcs>
+        </recordData>
+        </record>
+        </records>
+        <nextRecordPosition>11</nextRecordPosition>
+        <resultSetIdleTime/>
+        <echoedSearchRetrieveRequest xmlns:srw="http://www.loc.gov/zing/srw/">
+        <version>1.1</version>
+        <query>srw.au = "Chomsky" AND srw.ti = "Manufacturing"</query>
+        <maximumRecords>10</maximumRecords>
+        <recordSchema>info:srw/schema/1/dc</recordSchema>
+        <recordPacking>xml</recordPacking>
+        <startRecord>1</startRecord>
+        <sortKeys>relevance</sortKeys>
+        <wskey>DUMMY_API_KEY</wskey>
+        </echoedSearchRetrieveRequest>
+        </searchRetrieveResponse>
+    http_version: 
+  recorded_at: Mon, 21 Sep 2015 15:36:21 GMT
+recorded_with: VCR 2.9.3

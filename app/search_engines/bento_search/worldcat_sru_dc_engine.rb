@@ -263,12 +263,25 @@ class BentoSearch::WorldcatSruDcEngine
   #
   # returns CQL that is NOT uri escaped yet. 
   def construct_cql_query(args)
+    if args[:query].kind_of?(Hash)
+      # multi-field
+      args[:query].collect {|field, query| fielded_cql_query(query, field)}.join(" AND ")
+    else
+      fielded_cql_query(args[:query], args[:search_field] || "srw.kw")
+    end
+  end
+
+  # construct valid CQL for the API's "query" param, from search
+  # args. Tricky because we need to split terms/phrases ourselves
+  #
+  # returns CQL that is NOT uri escaped yet. 
+  def fielded_cql_query(query, field = nil)
     # default is srw.kw, Keyword anywhere. 
-    field = args[:search_field] || "srw.kw" 
+    field ||= "srw.kw" 
     
     # We need to split terms and phrases, so we can formulate
     # CQL with seperate clauses for each, bah. 
-    tokens = args[:query].split(%r{\s|("[^"]+")}).delete_if {|a| a.blank?}
+    tokens = query.split(%r{\s|("[^"]+")}).delete_if {|a| a.blank?}
     
 
     
@@ -331,6 +344,10 @@ class BentoSearch::WorldcatSruDcEngine
       :linking_base_url => "http://worldcat.org/oclc/",
       :auth => false
     }
+  end
+
+  def supports_multi_search?
+    true
   end
   
 end
