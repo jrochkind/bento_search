@@ -205,6 +205,10 @@ module BentoSearch
       }
     end
 
+    def multi_field_search?
+      true
+    end
+
     protected
 
 
@@ -217,7 +221,10 @@ module BentoSearch
     # turns it into a URL for Google API. Factored out to make testing
     # possible.
     def args_to_search_url(arguments)
-      query = if arguments[:search_field]
+      query = if arguments[:query].kind_of? Hash
+        #multi-field
+        arguments[:query].collect {|field, query| fielded_query(query, field)}.join(" ")
+      elsif arguments[:search_field]
         fielded_query(arguments[:query], arguments[:search_field])
       else
         arguments[:query]

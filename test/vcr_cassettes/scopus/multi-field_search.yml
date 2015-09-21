@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.elsevier.com/content/search/index:SCOPUS?count=10&query=TITLE(Protein%20measurement%20with%20the%20folin%20phenol%20reagent)%20AND%20AUTH(Lowry)%20AND%20ISSN(0021-9258)&sort=refeid
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      X-Els-Apikey:
+      - DUMMY_API_KEY
+      X-Els-Resourceversion:
+      - XOCS
+      Accept:
+      - application/atom+xml
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - api.elsevier.com  9999
+      X-Els-Status:
+      - OK
+      X-Els-Reqid:
+      - 0000014f72d218c9-4eef949
+      X-Els-Apikey:
+      - DUMMY_API_KEY
+      X-Els-Transid:
+      - 42632bf9-4ec5-415d-8590-d2820c7034ba
+      Allow:
+      - GET
+      Content-Type:
+      - application/atom+xml;charset=UTF-8
+      Content-Length:
+      - '2914'
+      Date:
+      - Thu, 17 Sep 2015 21:22:54 GMT
+      X-Re-Ref:
+      - 1 77227510
+      P3p:
+      - CP="IDC DSP LAW ADM DEV TAI PSA PSD IVA IVD CON HIS TEL OUR DEL SAM OTR IND
+        OTC"
+    body:
+      encoding: UTF-8
+      string: |2+
+
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:cto="http://www.elsevier.com/xml/cto/dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:dc="http://purl.org/dc/elements/1.1/"><title>SCOPUS Search Results: TITLE%28Protein+measurement+with+the+folin+phenol+reagent%29+AND+AUTH%28Lowry%29+AND+ISSN%280021-9258%29</title><updated>2015-09-17T21:22:53.739Z</updated><author><name>Elsevier, Inc.</name></author><id>http://api.elsevier.com:80/content/search/index:SCOPUS?&amp;count=10&amp;start=0&amp;query=TITLE%28Protein+measurement+with+the+folin+phenol+reagent%29+AND+AUTH%28Lowry%29+AND+ISSN%280021-9258%29&amp;sort=refeid</id><opensearch:totalResults>1</opensearch:totalResults><opensearch:startIndex>0</opensearch:startIndex><opensearch:itemsPerPage>1</opensearch:itemsPerPage><opensearch:Query role="request" searchTerms="TITLE%28Protein+measurement+with+the+folin+phenol+reagent%29+AND+AUTH%28Lowry%29+AND+ISSN%280021-9258%29" startPage="0"/><link ref="self" href="http://api.elsevier.com:80/content/search/index:scopus?start=0&amp;count=10&amp;query=TITLE%28Protein+measurement+with+the+folin+phenol+reagent%29+AND+AUTH%28Lowry%29+AND+ISSN%280021-9258%29&amp;sort=refeid" type="application/atom+xml"/><link ref="first" href="http://api.elsevier.com:80/content/search/index:scopus?start=0&amp;count=10&amp;query=TITLE%28Protein+measurement+with+the+folin+phenol+reagent%29+AND+AUTH%28Lowry%29+AND+ISSN%280021-9258%29&amp;sort=refeid" type="application/atom+xml"/><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:71849104860"/><link ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:71849104860?field=author,affiliation"/><link ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=71849104860&amp;origin=inward"/><link ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=71849104860&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:71849104860</prism:url><dc:identifier>SCOPUS_ID:71849104860</dc:identifier><eid>2-s2.0-71849104860</eid><dc:title>Protein measurement with the Folin phenol reagent.</dc:title><dc:creator>LOWRY O.</dc:creator><prism:publicationName>The Journal of biological chemistry</prism:publicationName><prism:issn>00219258</prism:issn><prism:volume>193</prism:volume><prism:issueIdentifier>1</prism:issueIdentifier><prism:pageRange>265-275</prism:pageRange><prism:coverDate>1951-11-01</prism:coverDate><prism:coverDisplayDate>November 1951</prism:coverDisplayDate><citedby-count>173170</citedby-count><pubmed-id>14907713</pubmed-id><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><source-id>17592</source-id></entry></feed>
+
+
+
+
+    http_version: 
+  recorded_at: Thu, 17 Sep 2015 21:22:54 GMT
+recorded_with: VCR 2.9.3

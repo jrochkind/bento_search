@@ -205,6 +205,3 @@ DEPENDENCIES
   sqlite3
   vcr (~> 2.4)
   webmock (~> 1.11.0)
-
-BUNDLED WITH
-   1.10.6

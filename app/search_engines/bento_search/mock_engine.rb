@@ -9,6 +9,7 @@
 #                     specified per_page, or 10)
 # [:total_items]  total_items to report
 # [:sort_definitions] hash for #sort_definitions
+# [:search_field_definitions] hash for #search_field_definitions
 # [:link]             link to give to each item in results
 # [:error]            set to an error value hash and results returned
 #                     will all be failed? with that error hash. 
@@ -16,6 +17,7 @@
 #                     to be caught by BentoSearch::SearchEngine wrapper possibly. 
 # [:timing]           in seconds, fill out the results as if they took
 #                     this long. 
+# [:supports_multi_search] true or false
 class BentoSearch::MockEngine
     include BentoSearch::SearchEngine
     
@@ -58,11 +60,15 @@ class BentoSearch::MockEngine
     end
     
     def sort_definitions
-      configuration.sort_definitions || {}
+      configuration.sort_definitions.try(:to_hash).try(:stringify_keys) || {}
     end
     
     def search_field_definitions
-      configuration.search_field_definitions || {}
+      configuration.search_field_definitions.try(:to_hash).try(:stringify_keys) || {}
+    end
+
+    def multi_field_search?
+      configuration.multi_field_search || false
     end
     
 end

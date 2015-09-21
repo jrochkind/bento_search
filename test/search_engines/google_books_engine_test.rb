@@ -122,8 +122,24 @@ class GoogleBooksEngineTest < ActiveSupport::TestCase
     
     query_params = CGI.parse( URI.parse(url).query )
     
-    assert_match /^|\sintitle\:cancer\s|$/, query_params["q"].first
-    assert_match /^|\sintitle\:"by radiation"\s|$/, query_params["q"].first
+    assert_match /(^|\s)intitle\:cancer(\s|$)/, query_params["q"].first
+    assert_match /(^|\s)intitle\:"by radiation"(\s|$)/, query_params["q"].first
+  end
+
+  def test_multi_search
+    # Have to use protected methods to get at what we want to test. 
+    # Is there a better way to factor this for testing?
+    norm_args = @engine.send(:parse_search_arguments, 
+      :query => {:title => "manufacturing consent", :author => "chomsky", "inpublisher" => "something"}
+    )
+    url = @engine.send(:args_to_search_url, norm_args)
+
+    query_params = CGI.parse( URI.parse(url).query )
+    
+    assert_match /(^|\s)intitle\:manufacturing(\s|$)/, query_params["q"].first
+    assert_match /(^|\s)intitle\:consent(\s|$)/, query_params["q"].first
+    assert_match /(^|\s)inauthor\:chomsky(\s|$)/, query_params["q"].first
+    assert_match /(^|\s)inpublisher\:something(\s|$)/, query_params["q"].first
   end
     
   

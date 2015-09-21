@@ -66,6 +66,20 @@ module BentoSearch::SearchEngine::Capabilities
           end.compact        
         ]
       end
+
+
+      # Engines that support multi-field search should
+      # override to return true. Returns false in base
+      # default implementation. 
+      #
+      # If an engine returns true here, it can receive in :query
+      # a Hash of multiple fields/values. The fields will all be
+      # normalized to internal names before engine receives them. 
+      # The multi-field search is meant to be run as a boolean AND
+      # of all field/values. 
+      def multi_field_search?
+        return false
+      end
       
 
 end

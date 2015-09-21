@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.elsevier.com/content/search/index:SCOPUS?count=10&query=ISSN(15385132)%20AND%20VOLUME(12)%20AND%20ISSUE(2)%20AND%20PAGEFIRST(179)&sort=refeid
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      X-Els-Apikey:
+      - DUMMY_API_KEY
+      X-Els-Resourceversion:
+      - XOCS
+      Accept:
+      - application/atom+xml
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        YXBpLmVsc2V2aWVyLmNvbSAgOTk5OQ==
+      !binary "WC1FbHMtU3RhdHVz":
+      - !binary |-
+        T0s=
+      !binary "WC1FbHMtUmVxaWQ=":
+      - !binary |-
+        MDAwMDAxNGZlZWI5ZTZmNC0yOTQyMzQ=
+      !binary "WC1FbHMtQXBpa2V5":
+      - !binary |-
+        RFVNTVlfQVBJX0tFWQ==
+      !binary "WC1FbHMtVHJhbnNpZA==":
+      - !binary |-
+        ZmE0YWQ5YmMtOTc4My00OWY2LWFkMDctNTIwNzAxZWIzYTQ5
+      !binary "QWxsb3c=":
+      - !binary |-
+        R0VU
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vYXRvbSt4bWw7Y2hhcnNldD1VVEYtOA==
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        MzA0NA==
+      !binary "RGF0ZQ==":
+      - !binary |-
+        TW9uLCAyMSBTZXAgMjAxNSAxODoxNzozMCBHTVQ=
+      !binary "WC1SZS1SZWY=":
+      - !binary |-
+        MSAtNDUzNDQzMzgw
+      !binary "UDNw":
+      - !binary |-
+        Q1A9IklEQyBEU1AgTEFXIEFETSBERVYgVEFJIFBTQSBQU0QgSVZBIElWRCBD
+        T04gSElTIFRFTCBPVVIgREVMIFNBTSBPVFIgSU5EIE9UQyI=
+    body:
+      encoding: US-ASCII
+      string: ! '
+
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:cto="http://www.elsevier.com/xml/cto/dtd"
+        xmlns:atom="http://www.w3.org/2005/Atom" xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/"
+        xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:dc="http://purl.org/dc/elements/1.1/"><title>SCOPUS
+        Search Results: ISSN%2815385132%29+AND+VOLUME%2812%29+AND+ISSUE%282%29+AND+PAGEFIRST%28179%29</title><updated>2015-09-21T18:17:30.349Z</updated><author><name>Elsevier,
+        Inc.</name></author><id>http://api.elsevier.com:80/content/search/index:SCOPUS?&amp;count=10&amp;start=0&amp;query=ISSN%2815385132%29+AND+VOLUME%2812%29+AND+ISSUE%282%29+AND+PAGEFIRST%28179%29&amp;sort=refeid</id><opensearch:totalResults>1</opensearch:totalResults><opensearch:startIndex>0</opensearch:startIndex><opensearch:itemsPerPage>1</opensearch:itemsPerPage><opensearch:Query
+        role="request" searchTerms="ISSN%2815385132%29+AND+VOLUME%2812%29+AND+ISSUE%282%29+AND+PAGEFIRST%28179%29"
+        startPage="0"/><link ref="self" href="http://api.elsevier.com:80/content/search/index:scopus?start=0&amp;count=10&amp;query=ISSN%2815385132%29+AND+VOLUME%2812%29+AND+ISSUE%282%29+AND+PAGEFIRST%28179%29&amp;sort=refeid"
+        type="application/atom+xml"/><link ref="first" href="http://api.elsevier.com:80/content/search/index:scopus?start=0&amp;count=10&amp;query=ISSN%2815385132%29+AND+VOLUME%2812%29+AND+ISSUE%282%29+AND+PAGEFIRST%28179%29&amp;sort=refeid"
+        type="application/atom+xml"/><entry><link ref="self" href="http://api.elsevier.com/content/abstract/scopus_id:84875913241"/><link
+        ref="author-affiliation" href="http://api.elsevier.com/content/abstract/scopus_id:84875913241?field=author,affiliation"/><link
+        ref="scopus" href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84875913241&amp;origin=inward"/><link
+        ref="scopus-citedby" href="http://www.scopus.com/inward/citedby.url?partnerID=HzOxMe3b&amp;scp=84875913241&amp;origin=inward"/><prism:url>http://api.elsevier.com/content/abstract/scopus_id:84875913241</prism:url><dc:identifier>SCOPUS_ID:84875913241</dc:identifier><eid>2-s2.0-84875913241</eid><dc:title>Architects
+        and planners in the middle of a road war: The urban design concept team in
+        Baltimore, 1966-71</dc:title><dc:creator>Wong S.</dc:creator><prism:publicationName>Journal
+        of Planning History</prism:publicationName><prism:issn>15385132</prism:issn><prism:eIssn>15526585</prism:eIssn><prism:volume>12</prism:volume><prism:issueIdentifier>2</prism:issueIdentifier><prism:pageRange>179-202</prism:pageRange><prism:coverDate>2013-05-01</prism:coverDate><prism:coverDisplayDate>May
+        2013</prism:coverDisplayDate><prism:doi>10.1177/1538513212471167</prism:doi><citedby-count>1</citedby-count><affiliation><affilname>Morgan
+        State University</affilname><affiliation-city>Baltimore</affiliation-city><affiliation-country>United
+        States</affiliation-country></affiliation><prism:aggregationType>Journal</prism:aggregationType><subtype>ar</subtype><subtypeDescription>Article</subtypeDescription><source-id>5700166917</source-id></entry></feed>
+
+
+
+
+
+'
+    http_version: 
+  recorded_at: Mon, 21 Sep 2015 18:17:31 GMT
+recorded_with: VCR 2.9.3

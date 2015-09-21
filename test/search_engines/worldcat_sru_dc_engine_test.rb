@@ -93,6 +93,18 @@ class WorldcatSruDcEngineTest < ActiveSupport::TestCase
       assert_includes components, clause
     end        
   end
+
+  def test_construt_cql_multi_field
+    cql = @engine.construct_cql_query(:query => {"srw.ti" => "manufacturing", "srw.au" => "chomsky"})
+
+    components = cql.split(" AND ")
+
+    assert_equal 2, components.length
+
+    ['srw.au = "chomsky"', 'srw.ti = "manufacturing"'].each do |clause|
+      assert_includes components, clause
+    end
+  end
   
   test_with_cassette("max_out_pagination", :worldcat_sru_dc) do
     #worldcat maxes out at start 9999, we silently correct
@@ -145,6 +157,11 @@ class WorldcatSruDcEngineTest < ActiveSupport::TestCase
     assert_raise(BentoSearch::NotFound) do
       @engine.get("NOT EXISTING")
     end
+  end
+
+  test_with_cassette("multi field search", :worldcat_sru_dc) do
+    results = @engine.search(:query => {:author => "Chomsky", :title => "Manufacturing"})
+    assert ! results.failed?
   end
   
   
