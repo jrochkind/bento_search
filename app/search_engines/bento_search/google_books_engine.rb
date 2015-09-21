@@ -89,6 +89,10 @@ module BentoSearch
       # Have to use different API endpoint, can't do a fielded search.
       url = base_url + "volumes/#{CGI.escape id}"
 
+      if configuration.api_key
+        url += "?key=#{configuration.api_key}"
+      end
+
       response = http_client.get( url )
 
       if response.status == 404
