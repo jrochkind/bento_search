@@ -328,6 +328,14 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     assert_present first.issn
   end
 
+  test_with_cassette("affiliation search", :ebscohost) do
+    results = @engine.search('"johns hopkins"', :semantic_search_field => :author_affiliation)
+
+    assert ! results.failed?
+
+    assert_present results
+  end
+
 
 
 end
