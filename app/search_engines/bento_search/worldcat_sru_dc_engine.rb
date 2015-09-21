@@ -324,7 +324,9 @@ class BentoSearch::WorldcatSruDcEngine
       "srw.au"      => {:semantic => :author},
       "srw.su"      => {:semantic => :subject},
       "srw.bn"      => {:semantic => :isbn},
-      # Oddly no ISSN index, all we get is 'number'
+      "srw.in"      => {:semantic => :issn},
+      "srw.dn"      => {:semantic => :lccn},
+      # generic 'number', probably not useful
       "srw.sn"      => {:semantic => :number},
       "srw.no"      => {:semantic => :oclcnum}
     }

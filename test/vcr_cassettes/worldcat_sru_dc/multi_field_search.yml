@@ -1484,7 +1484,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 21 Sep 2015 15:36:20 GMT
+      - Mon, 21 Sep 2015 16:26:16 GMT
       Server:
       - Apache
       Transfer-Encoding:
@@ -1835,5 +1835,5 @@ http_interactions:
         </echoedSearchRetrieveRequest>
         </searchRetrieveResponse>
     http_version: 
-  recorded_at: Mon, 21 Sep 2015 15:36:21 GMT
+  recorded_at: Mon, 21 Sep 2015 16:26:19 GMT
 recorded_with: VCR 2.9.3

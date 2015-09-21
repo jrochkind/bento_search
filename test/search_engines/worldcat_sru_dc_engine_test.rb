@@ -159,7 +159,7 @@ class WorldcatSruDcEngineTest < ActiveSupport::TestCase
     end
   end
 
-  test_with_cassette("multi field search", :worldcat_sru_dc, :record => :all) do
+  test_with_cassette("multi field search", :worldcat_sru_dc) do
     results = @engine.search(:query => {:author => "Chomsky", :title => "Manufacturing"})
     assert ! results.failed?
   end
