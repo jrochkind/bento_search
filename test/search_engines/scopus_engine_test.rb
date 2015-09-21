@@ -158,6 +158,22 @@ class ScopusEngineTest < ActiveSupport::TestCase
       assert_includes result.title.downcase, "Protein measurement with the folin phenol reagent".downcase
     end
   end
+
+  test_with_cassette("multi-fielded citation details search", :scopus) do
+    results = @engine.search(:query =>{
+      :issn       => "15385132",
+      :volume     => "12",
+      :issue      => "2",
+      :start_page => "179"
+    })
+
+    assert ! results.failed?
+    assert_equal 1, results.total_items 
+
+    item = results.first
+
+    assert item.title.start_with?("Architects and planners in the middle of a road war")
+  end
     
   
 end

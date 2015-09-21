@@ -30,8 +30,11 @@ module BentoSearch
   # * http://api.elsevier.com/documentation/SCOPUSSearchAPI.wadl
   # * http://api.elsevier.com/documentation/search/SCOPUSSearchViews.htm
   #
+  # Query syntax and search fields:
+  # * http://api.elsevier.com/documentation/search/SCOPUSSearchTips.htm
+  #
   # Some more docs on response elements and query elements:
-  # * http://api.elsevier.com/content/search/#d0n14606
+  # * http://api.elsevier.com/content/search/#d0n14606  
   # 
   # Other API's in the suite not being used by this code at present: 
   # * http://www.developers.elsevier.com/devcms/content-api-retrieval-request
@@ -204,7 +207,14 @@ module BentoSearch
         # controlled and author-assigned keywords
         "KEY"         => {:semantic => :subject},
         "ISBN"        => {:semantic => :isbn},
-        "ISSN"        => {:semantic => :issn},              
+        "ISSN"        => {:semantic => :issn},
+        "VOLUME"      => {:semantic => :volume},
+        "ISSUE"       => {:semantic => :issue},
+        "PAGEFIRST"   => {:semantic => :start_page},
+        # Should we use SRCTITLE instead? I think exact match might be better?
+        "EXACTSRCTITLE" => {:semantic => :publication_title},
+        "DOI"         => {:semantic => :doi},
+        "PUBYEAR"     => {:semantic => :year}
       }
     end
     
