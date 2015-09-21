@@ -60,11 +60,11 @@ class BentoSearch::MockEngine
     end
     
     def sort_definitions
-      configuration.sort_definitions.try(:to_h).try(:stringify_keys) || {}
+      configuration.sort_definitions.try(:to_hash).try(:stringify_keys) || {}
     end
     
     def search_field_definitions
-      configuration.search_field_definitions.try(:to_h).try(:stringify_keys) || {}
+      configuration.search_field_definitions.try(:to_hash).try(:stringify_keys) || {}
     end
 
     def supports_multi_search?
