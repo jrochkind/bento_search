@@ -99,6 +99,12 @@ module BentoSearch
         raise BentoSearch::NotFound.new("ID: #{id}")
       end
 
+      # GBS has switched to returning a 503 for bad id's???
+      # Prob a bug on Google's end, but we have to deal with it.
+      if response.status == 503
+        raise BentoSearch::NotFound.new("ID: #{id} (503 error from Google, tests show indicates not found ID however)")
+      end
+
       json = MultiJson.load( response.body )
 
       if json["error"]
