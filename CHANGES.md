@@ -1,4 +1,8 @@
-## 1.4.3
+### 1.4.4
+
+* Google Books Engine: Catch buggy invalid ID http response in #get
+
+### 1.4.3
 
 * Fix Scopus to properly handle zero-hit results, respond to undoc'd Scopus API change. 
 
