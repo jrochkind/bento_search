@@ -310,6 +310,36 @@ class EbscoHostEngineTest < ActiveSupport::TestCase
     end
   end
 
+  test_with_cassette("multi-field author title", :ebscohost) do
+    results = @engine.search(:query => {:title => '"Reflections on the History of Debt Resistance"',
+                              :author => "Caffentzis"})
+
+    assert ! results.failed?
+
+    assert_equal 1, results.total_items
+
+    result = results.first
+
+    assert_equal "10.1215/00382876-2345315", result.doi
+  end
+
+  test_with_cassette("multi-field citation numbers", :ebscohost) do
+    results = @engine.search(:query => {
+      :issn       => "00382876",
+      :volume     => "112",
+      :issue      => "4",
+      :start_page => "824"
+    })
+
+    assert ! results.failed?
+    
+    assert_equal 1, results.total_items
+
+    result = results.first
+
+    assert_equal "10.1215/00382876-2345315", result.doi
+  end
+
 
   test("illegal arg for get with id with no colon") do
     assert_raise ArgumentError do

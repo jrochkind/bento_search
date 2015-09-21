@@ -358,12 +358,11 @@ class BentoSearch::EbscoHostEngine
     url =
       "#{configuration.base_url}/Search?prof=#{configuration.profile_id}&pwd=#{configuration.profile_password}"
 
-    query = ebsco_query_prepare  args[:query]
-
-
-    # wrap in (FI $query) if fielded search
-    if args[:search_field]
-      query = "(#{args[:search_field]} #{query})"
+    query = if args[:query].kind_of?(Hash)
+      # multi-field query
+      args[:query].collect {|field, query| fielded_query(query, field)}.join(" AND ")
+    else 
+      fielded_query(args[:query], args[:search_field])
     end
 
     # peer-reviewed only?
@@ -399,6 +398,17 @@ class BentoSearch::EbscoHostEngine
     end
 
     return url
+  end
+
+  def fielded_query(query, field = nil)
+    output = ebsco_query_prepare(query)
+
+    # wrap in (FI $query) if fielded search
+    if field.present?
+      output= "(#{field} #{query})"
+    end
+
+    return output
   end
 
   # pass in a nokogiri representing an EBSCO <rec> result,
@@ -555,6 +565,10 @@ class BentoSearch::EbscoHostEngine
       "SP"    => {:semantic => :start_page},
       "AF"    => {:semantic => :author_affiliation}
     }
+  end
+
+  def multi_field_search?
+    true
   end
 
   def max_per_page
