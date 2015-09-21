@@ -2,9 +2,9 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.googleapis.com/customsearch/v1?cx=DUMMY_CX&key=DUMMY_API_KEY&num=10&q=Adobe%20PDF
+    uri: https://www.googleapis.com/customsearch/v1?cx=DUMMY_CX&key=DUMMY_API_KEY&num=10&q=PDF
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers: {}
   response:
@@ -13,13 +13,16 @@ http_interactions:
       message: OK
     headers:
       Expires:
-      - Mon, 19 Nov 2012 22:28:22 GMT
+      - Mon, 21 Sep 2015 14:46:41 GMT
       Date:
-      - Mon, 19 Nov 2012 22:28:22 GMT
+      - Mon, 21 Sep 2015 14:46:41 GMT
       Cache-Control:
       - private, max-age=0, must-revalidate, no-transform
       Etag:
-      - ! '"5n-ABuX6AxBQtv21jBFt-w_behM/xWVxFkcqkjg50VIXRJyKFTP4wto"'
+      - '"ENTgmThqWzhSab7OnAl_tX_Fk04/uCXx2kfy7zw4TAS4Ghv2NprjCBU"'
+      Vary:
+      - Origin
+      - X-Origin
       Content-Type:
       - application/json; charset=UTF-8
       X-Content-Type-Options:
@@ -28,205 +31,438 @@ http_interactions:
       - SAMEORIGIN
       X-Xss-Protection:
       - 1; mode=block
+      Content-Length:
+      - '21120'
       Server:
       - GSE
-      Transfer-Encoding:
-      - chunked
+      Alternate-Protocol:
+      - 443:quic,p=1
+      Alt-Svc:
+      - quic=":443"; p="1"; ma=604800
     body:
       encoding: UTF-8
-      string: ! "{\n \"kind\": \"customsearch#search\",\n \"url\": {\n  \"type\":
-        \"application/json\",\n  \"template\": \"https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json\"\n
-        },\n \"queries\": {\n  \"nextPage\": [\n   {\n    \"title\": \"Google Custom
-        Search - Adobe PDF\",\n    \"totalResults\": \"358\",\n    \"searchTerms\":
-        \"Adobe PDF\",\n    \"count\": 10,\n    \"startIndex\": 11,\n    \"inputEncoding\":
-        \"utf8\",\n    \"outputEncoding\": \"utf8\",\n    \"safe\": \"off\",\n    \"cx\":
-        \"DUMMY_CX\"\n   }\n  ],\n  \"request\": [\n   {\n    \"title\": \"Google
-        Custom Search - Adobe PDF\",\n    \"totalResults\": \"358\",\n    \"searchTerms\":
-        \"Adobe PDF\",\n    \"count\": 10,\n    \"startIndex\": 1,\n    \"inputEncoding\":
-        \"utf8\",\n    \"outputEncoding\": \"utf8\",\n    \"safe\": \"off\",\n    \"cx\":
-        \"DUMMY_CX\"\n   }\n  ]\n },\n \"context\": {\n  \"title\": \"JHU Libraries
-        test\"\n },\n \"searchInformation\": {\n  \"searchTime\": 0.091685,\n  \"formattedSearchTime\":
-        \"0.09\",\n  \"totalResults\": \"358\",\n  \"formattedTotalResults\": \"358\"\n
-        },\n \"items\": [\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\":
-        \"E-Readers - E-Books - Library Guides at Johns Hopkins University\",\n   \"htmlTitle\":
-        \"E-Readers - E-Books - Library Guides at Johns Hopkins University\",\n   \"link\":
-        \"http://guides.library.jhu.edu/content.php?pid=156837&sid=1328261\",\n   \"displayLink\":
-        \"guides.library.jhu.edu\",\n   \"snippet\": \"Adobe Reader software is the
-        global standard for electronic document sharing. It   is the only PDF file
-        viewer that can open and interact with all PDF documents ...\",\n   \"htmlSnippet\":
-        \"\\u003cb\\u003eAdobe\\u003c/b\\u003e Reader software is the global standard
-        for electronic document sharing. It \\u003cbr\\u003e  is the only \\u003cb\\u003ePDF\\u003c/b\\u003e
-        file viewer that can open and interact with all \\u003cb\\u003ePDF\\u003c/b\\u003e
-        documents \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"formattedUrl\": \"guides.library.jhu.edu/content.php?pid=156837&sid=1328261\",\n
-        \  \"htmlFormattedUrl\": \"guides.library.jhu.edu/content.php?pid=156837&amp;sid=1328261\",\n
-        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Sue Vazakas\",\n
-        \     \"copyright\": \"Copyright Johns Hopkins University 2012\",\n      \"dc.title\":
-        \"Library Guides. E-Books. E-Readers.\",\n      \"dc.creator\": \"Sue Vazakas\",\n
-        \     \"dc.subject\": \"E-Readers E-Books Library Guides\",\n      \"dc.description\":
-        \"How to find electronic books and resources in the library's catalog. E-books
-        are usually read on dedicated hardware devices known as e-Readers or e-book
-        devices\",\n      \"dc.publisher\": \"Johns Hopkins University Sheridan Libraries\",\n
-        \     \"dc.rights\": \"Copyright Johns Hopkins University 2012\",\n      \"dc.language\":
-        \"en\",\n      \"dc.identifier\": \"http://guides.library.jhu.edu/ebooks\",\n
-        \     \"dc.date.created\": \"May 9, 2011\",\n      \"dc.date.modified\": \"Nov
-        15, 2012\",\n      \"dc.unused\": \"Contributor, Date, Type, Format, Source,
-        Relation, Coverage\",\n      \"y_key\": \"65baedbaee9038f3\"\n     }\n    ]\n
-        \  }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\": \"Introduction
-        to Web Accessibility\",\n   \"htmlTitle\": \"Introduction to Web Accessibility\",\n
-        \  \"link\": \"http://ldp.library.jhu.edu/documents/welch_class.pdf\",\n   \"displayLink\":
-        \"ldp.library.jhu.edu\",\n   \"snippet\": \"a tagged Adobe PDF file from an
-        untagged PDF file. This allows a pdf document   to be read by a screen reader
-        for greater accessibility. PDF Tags are used to ...\",\n   \"htmlSnippet\":
-        \"a tagged \\u003cb\\u003eAdobe PDF\\u003c/b\\u003e file from an untagged
-        PDF file. This allows a pdf document \\u003cbr\\u003e  to be read by a screen
-        reader for greater accessibility. PDF Tags are used to \\u003cb\\u003e...\\u003c/b\\u003e\",\n
-        \  \"cacheId\": \"Svr2mu2ExfYJ\",\n   \"mime\": \"application/pdf\",\n   \"fileFormat\":
-        \"PDF/Adobe Acrobat\",\n   \"formattedUrl\": \"ldp.library.jhu.edu/documents/welch_class.pdf\",\n
-        \  \"htmlFormattedUrl\": \"ldp.library.jhu.edu/documents/welch_class.\\u003cb\\u003epdf\\u003c/b\\u003e\",\n
-        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"moddate\": \"D:20050804170729-04'00'\",\n
-        \     \"creationdate\": \"D:20050804165740-04'00'\",\n      \"title\": \"welch_class.ppt\",\n
-        \     \"creator\": \"PowerPoint\",\n      \"author\": \"System Administrator\",\n
-        \     \"producer\": \"Mac OS X 10.4.1 Quartz PDFContext\"\n     }\n    ]\n
-        \  }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\": \"an
-        archaeology of knowledge\",\n   \"htmlTitle\": \"an archaeology of knowledge\",\n
-        \  \"link\": \"https://jscholarship.library.jhu.edu/bitstream/handle/1774.2/36138/080912_QRR%20label.pdf\",\n
-        \  \"displayLink\": \"jscholarship.library.jhu.edu\",\n   \"snippet\": \"Aug
-        9, 2012 ... Mounting Hardware. Scale: Full. Color. White (semigloss) - Panel.
-        Dark Blue -   Text. Typeface. Adobe Garamond. Adobe Garamond Bold.\",\n   \"htmlSnippet\":
-        \"Aug 9, 2012 \\u003cb\\u003e...\\u003c/b\\u003e Mounting Hardware. Scale:
-        Full. Color. White (semigloss) - Panel. Dark Blue - \\u003cbr\\u003e  Text.
-        Typeface. \\u003cb\\u003eAdobe\\u003c/b\\u003e Garamond. \\u003cb\\u003eAdobe\\u003c/b\\u003e
-        Garamond Bold.\",\n   \"cacheId\": \"NlFbq6EZxYQJ\",\n   \"mime\": \"application/pdf\",\n
-        \  \"fileFormat\": \"PDF/Adobe Acrobat\",\n   \"formattedUrl\": \"https://jscholarship.library.jhu.edu/bitstream/.../080912_QRR%20label.pdf\",\n
-        \  \"htmlFormattedUrl\": \"https://jscholarship.library.jhu.edu/bitstream/.../080912_QRR%20label.\\u003cb\\u003epdf\\u003c/b\\u003e\",\n
-        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"creationdate\": \"D:20120809132032-04'00'\",\n
-        \     \"creator\": \"Adobe Illustrator CS5\",\n      \"moddate\": \"D:20120809132032-04'00'\",\n
-        \     \"producer\": \"Adobe PDF library 9.90\",\n      \"title\": \"080912_QRR
-        label\"\n     }\n    ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n
-        \  \"title\": \"Reserve Course Readings - Spring and Summer 2012\",\n   \"htmlTitle\":
-        \"Reserve Course Readings - Spring and Summer 2012\",\n   \"link\": \"http://reserves.library.jhu.edu/access/reserves/findit/articles/index.php\",\n
-        \  \"displayLink\": \"reserves.library.jhu.edu\",\n   \"snippet\": \"May 11,
-        2012 ... To access these materials, you will need a current version of Adobe's
-        Acrobat   Reader software. Macintosh users: The default Apple PDF reader ...\",\n
-        \  \"htmlSnippet\": \"May 11, 2012 \\u003cb\\u003e...\\u003c/b\\u003e To access
-        these materials, you will need a current version of \\u003cb\\u003eAdobe&#39;s\\u003c/b\\u003e
-        Acrobat \\u003cbr\\u003e  Reader software. Macintosh users: The default Apple
-        \\u003cb\\u003ePDF\\u003c/b\\u003e reader \\u003cb\\u003e...\\u003c/b\\u003e\",\n
-        \  \"cacheId\": \"-lOOb_87l3UJ\",\n   \"formattedUrl\": \"reserves.library.jhu.edu/access/reserves/findit/articles/index.php\",\n
-        \  \"htmlFormattedUrl\": \"reserves.library.jhu.edu/access/reserves/findit/articles/index.php\",\n
-        \  \"pagemap\": {\n    \"cse_image\": [\n     {\n      \"src\": \"http://www.library.jhu.edu/bin/v/r/8.jpg\"\n
-        \    }\n    ],\n    \"cse_thumbnail\": [\n     {\n      \"width\": \"90\",\n
-        \     \"height\": \"73\",\n      \"src\": \"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT4xkB6ir-E-ryjtD3bPCPLNRIYL1eIyQ-iMw6QqfaDP1qJlP39wSejJg\"\n
-        \    }\n    ],\n    \"metatags\": [\n     {\n      \"dc.identifier\": \"http://reserves.library.jhu.edu/access/reserves/findit/articles/index.php\",\n
-        \     \"dc.title\": \"Reserve Course Readings - Spring 2012\",\n      \"dc.subject\":
-        \"readings, article, reserve, required, list, syllabus\",\n      \"dc.date.created\":
-        \"2008-11-04\",\n      \"dc.creator\": \"Bolgiano, John\",\n      \"dc.publisher\":
-        \"Sheridan Libraries, The Johns Hopkins University\"\n     }\n    ]\n   }\n
-        \ },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\": \"Short Dysfunctional
-        Telomeres Impair Tumorigenesis in the INK4a 2 ...\",\n   \"htmlTitle\": \"Short
-        Dysfunctional Telomeres Impair Tumorigenesis in the INK4a 2 \\u003cb\\u003e...\\u003c/b\\u003e\",\n
-        \  \"link\": \"https://jscholarship.library.jhu.edu/bitstream/handle/1774.2/33670/Cell1999-3.pdf\",\n
-        \  \"displayLink\": \"jscholarship.library.jhu.edu\",\n   \"snippet\": \"overlaid
-        in Adobe Photoshop (Adobe Sys- tems, Mountain View ..... value and   then
-        by the number of planes restored in the PDF (Femino et al., 1998).\",\n   \"htmlSnippet\":
-        \"overlaid in \\u003cb\\u003eAdobe\\u003c/b\\u003e Photoshop (\\u003cb\\u003eAdobe\\u003c/b\\u003e
-        Sys- tems, Mountain View \\u003cb\\u003e.....\\u003c/b\\u003e value and \\u003cbr\\u003e
-        \ then by the number of planes restored in the \\u003cb\\u003ePDF\\u003c/b\\u003e
-        (Femino et al., 1998).\",\n   \"cacheId\": \"Lt6CvWe-Uw4J\",\n   \"mime\":
-        \"application/pdf\",\n   \"fileFormat\": \"PDF/Adobe Acrobat\",\n   \"formattedUrl\":
-        \"https://jscholarship.library.jhu.edu/bitstream/handle/1774.../Cell1999-3.pdf\",\n
-        \  \"htmlFormattedUrl\": \"https://jscholarship.library.jhu.edu/bitstream/handle/1774.../Cell1999-3.\\u003cb\\u003epdf\\u003c/b\\u003e\",\n
-        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"creationdate\": \"D:19990507131745\",\n
-        \     \"producer\": \"Acrobat Distiller Daemon 3.01 for Solaris 2.3 and later
-        (SPARC)\",\n      \"creator\": \"SYSTEM400 Rev 11.14\",\n      \"title\":
-        \"088538u010\",\n      \"moddate\": \"D:20030317115205+01'00'\"\n     }\n
-        \   ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\":
-        \"List of features required for compliance - Web Advisory Council ...\",\n
-        \  \"htmlTitle\": \"List of features required for compliance - Web Advisory
-        Council \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"link\": \"https://wiki.library.jhu.edu/display/WAC/List+of+features+required+for+compliance\",\n
-        \  \"displayLink\": \"wiki.library.jhu.edu\",\n   \"snippet\": \"Sep 7, 2007
-        ... To learn more about Adobe's efforts to enhance PDF access, please visit
-        Adobe's   Accessibility page: http://www.adobe.com/accessibility.\",\n   \"htmlSnippet\":
-        \"Sep 7, 2007 \\u003cb\\u003e...\\u003c/b\\u003e To learn more about \\u003cb\\u003eAdobe&#39;s\\u003c/b\\u003e
-        efforts to enhance \\u003cb\\u003ePDF\\u003c/b\\u003e access, please visit
-        \\u003cb\\u003eAdobe&#39;s\\u003c/b\\u003e \\u003cbr\\u003e  Accessibility
-        page: http://www.\\u003cb\\u003eadobe\\u003c/b\\u003e.com/accessibility.\",\n
-        \  \"cacheId\": \"B-KLGktiXO8J\",\n   \"formattedUrl\": \"https://wiki.library.jhu.edu/.../List+of+features+required+for+compliance\",\n
-        \  \"htmlFormattedUrl\": \"https://wiki.library.jhu.edu/.../List+of+features+required+for+compliance\",\n
-        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"confluence-space-key\":
-        \"WAC\",\n      \"confluence-request-time\": \"1352954763940\"\n     }\n    ]\n
-        \  }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\": \"d.
-        Printing - Bloomberg - Library Guides at Johns Hopkins University\",\n   \"htmlTitle\":
-        \"d. Printing - Bloomberg - Library Guides at Johns Hopkins University\",\n
-        \  \"link\": \"http://guides.library.jhu.edu/content.php?pid=36657&sid=772161\",\n
-        \  \"displayLink\": \"guides.library.jhu.edu\",\n   \"snippet\": \"Aug 24,
-        2012 ... Follow Bloomberg's prompts to download PDF documents, reports, and
-        user   guides. Choose the print command within the Adobe reader.\",\n   \"htmlSnippet\":
-        \"Aug 24, 2012 \\u003cb\\u003e...\\u003c/b\\u003e Follow Bloomberg&#39;s prompts
-        to download \\u003cb\\u003ePDF\\u003c/b\\u003e documents, reports, and user
-        \\u003cbr\\u003e  guides. Choose the print command within the \\u003cb\\u003eAdobe\\u003c/b\\u003e
-        reader.\",\n   \"formattedUrl\": \"guides.library.jhu.edu/content.php?pid=36657&sid=772161\",\n
-        \  \"htmlFormattedUrl\": \"guides.library.jhu.edu/content.php?pid=36657&amp;sid=772161\",\n
-        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"Heather
-        Tapager\",\n      \"copyright\": \"Copyright Johns Hopkins University 2012\",\n
-        \     \"dc.title\": \"Library Guides. Bloomberg. d. Printing.\",\n      \"dc.creator\":
-        \"Heather Tapager\",\n      \"dc.subject\": \"d. Printing Bloomberg Library
-        Guides\",\n      \"dc.description\": \"A guide to using JHU's on-campus Bloomberg
-        terminals.\",\n      \"dc.publisher\": \"Johns Hopkins University Sheridan
-        Libraries\",\n      \"dc.rights\": \"Copyright Johns Hopkins University 2012\",\n
-        \     \"dc.language\": \"en\",\n      \"dc.identifier\": \"http://guides.library.jhu.edu/bloomberg\",\n
-        \     \"dc.date.created\": \"Apr 14, 2010\",\n      \"dc.date.modified\":
-        \"Aug 24, 2012\",\n      \"dc.unused\": \"Contributor, Date, Type, Format,
-        Source, Relation, Coverage\",\n      \"y_key\": \"65baedbaee9038f3\"\n     }\n
-        \   ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\":
-        \"Coding Reference:\",\n   \"htmlTitle\": \"Coding Reference:\",\n   \"link\":
-        \"https://jscholarship.library.jhu.edu/bitstream/handle/1774.2/36224/ARL_Assessment_handout_2012.pdf\",\n
-        \  \"displayLink\": \"jscholarship.library.jhu.edu\",\n   \"snippet\": \"Poster
-        and handouts created using Adobe InDesign and EightShapes Unify.   Ellen Keith.
-        Current Director of. Research & Access,. Chicago History. Museum ...\",\n
-        \  \"htmlSnippet\": \"Poster and handouts created using \\u003cb\\u003eAdobe\\u003c/b\\u003e
-        InDesign and EightShapes Unify. \\u003cbr\\u003e  Ellen Keith. Current Director
-        of. Research &amp; Access,. Chicago History. Museum \\u003cb\\u003e...\\u003c/b\\u003e\",\n
-        \  \"cacheId\": \"7_VnXAOna6oJ\",\n   \"mime\": \"application/pdf\",\n   \"fileFormat\":
-        \"PDF/Adobe Acrobat\",\n   \"formattedUrl\": \"https://jscholarship.library.jhu.edu/.../ARL_Assessment_handout_2012.pdf\",\n
-        \  \"htmlFormattedUrl\": \"https://jscholarship.library.jhu.edu/.../ARL_Assessment_handout_2012.\\u003cb\\u003epdf\\u003c/b\\u003e\",\n
-        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"author\": \"akoenig7\",\n
-        \     \"creationdate\": \"D:20121026172031-04'00'\",\n      \"creator\": \"PScript5.dll
-        Version 5.2.2\",\n      \"moddate\": \"D:20121107104559-05'00'\",\n      \"producer\":
-        \"Acrobat Distiller 10.1.3 (Windows)\"\n     }\n    ]\n   }\n  },\n  {\n   \"kind\":
-        \"customsearch#result\",\n   \"title\": \"November 2007\",\n   \"htmlTitle\":
-        \"November 2007\",\n   \"link\": \"http://saislibrary.blogspot.com/2007_11_01_archive.html\",\n
-        \  \"displayLink\": \"saislibrary.blogspot.com\",\n   \"snippet\": \"Nov 1,
-        2007 ... Foxit Reader 2.2 for Windows is a .pdf reader similar to Adobe Reader,
-        except it's   got a couple of nifty features Adobe doesn't: Launches faster
-        ...\",\n   \"htmlSnippet\": \"Nov 1, 2007 \\u003cb\\u003e...\\u003c/b\\u003e
-        Foxit Reader 2.2 for Windows is a .\\u003cb\\u003epdf\\u003c/b\\u003e reader
-        similar to \\u003cb\\u003eAdobe\\u003c/b\\u003e Reader, except it&#39;s \\u003cbr\\u003e
-        \ got a couple of nifty features \\u003cb\\u003eAdobe\\u003c/b\\u003e doesn&#39;t:
-        Launches faster \\u003cb\\u003e...\\u003c/b\\u003e\",\n   \"cacheId\": \"jtO1C5ou780J\",\n
-        \  \"formattedUrl\": \"saislibrary.blogspot.com/2007_11_01_archive.html\",\n
-        \  \"htmlFormattedUrl\": \"saislibrary.blogspot.com/2007_11_01_archive.html\",\n
-        \  \"pagemap\": {\n    \"cse_image\": [\n     {\n      \"src\": \"http://128.220.183.18/Blogftp/uploaded_images/srcover_novdec07-785465.jpg\"\n
-        \    }\n    ],\n    \"cse_thumbnail\": [\n     {\n      \"width\": \"211\",\n
-        \     \"height\": \"134\",\n      \"src\": \"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQSSprYiGlaGX8kPxyWVQ3KwMKxONv-PbbPVlR07lRMV3AEYMVMDMtMHiid\"\n
-        \    }\n    ]\n   }\n  },\n  {\n   \"kind\": \"customsearch#result\",\n   \"title\":
-        \"Process Overview Results Results Background Future Work\",\n   \"htmlTitle\":
-        \"Process Overview Results Results Background Future Work\",\n   \"link\":
-        \"https://jscholarship.library.jhu.edu/bitstream/handle/1774.2/35437/OffcampPoster.pdf\",\n
-        \  \"displayLink\": \"jscholarship.library.jhu.edu\",\n   \"snippet\": \"Embed
-        services into additional \\\"high impact\\\" courses. • Conduct virtual office
-        \  hours pilot using Adobe Connect. • Gauge success over time through continuous
-        ...\",\n   \"htmlSnippet\": \"Embed services into additional &quot;high impact&quot;
-        courses. • Conduct virtual office \\u003cbr\\u003e  hours pilot using \\u003cb\\u003eAdobe\\u003c/b\\u003e
-        Connect. • Gauge success over time through continuous \\u003cb\\u003e...\\u003c/b\\u003e\",\n
-        \  \"cacheId\": \"xC5AdxJwbeoJ\",\n   \"mime\": \"application/pdf\",\n   \"fileFormat\":
-        \"PDF/Adobe Acrobat\",\n   \"formattedUrl\": \"https://jscholarship.library.jhu.edu/bitstream/handle/.../OffcampPoster.pdf\",\n
-        \  \"htmlFormattedUrl\": \"https://jscholarship.library.jhu.edu/bitstream/handle/.../OffcampPoster.\\u003cb\\u003epdf\\u003c/b\\u003e\",\n
-        \  \"pagemap\": {\n    \"metatags\": [\n     {\n      \"creationdate\": \"D:20100408153903-04'00'\",\n
-        \     \"author\": \"jcastal2\",\n      \"creator\": \"PScript5.dll Version
-        5.2.2\",\n      \"producer\": \"Acrobat Distiller 7.0.5 (Windows)\",\n      \"moddate\":
-        \"D:20100408153903-04'00'\",\n      \"title\": \"Microsoft PowerPoint - offcamp
-        posterfinal [Compatibility Mode]\"\n     }\n    ]\n   }\n  }\n ]\n}\n"
+      string: |
+        {
+         "kind": "customsearch#search",
+         "url": {
+          "type": "application/json",
+          "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+         },
+         "queries": {
+          "nextPage": [
+           {
+            "title": "Google Custom Search - PDF",
+            "totalResults": "1880",
+            "searchTerms": "PDF",
+            "count": 10,
+            "startIndex": 11,
+            "inputEncoding": "utf8",
+            "outputEncoding": "utf8",
+            "safe": "off",
+            "cx": "DUMMY_CX"
+           }
+          ],
+          "request": [
+           {
+            "title": "Google Custom Search - PDF",
+            "totalResults": "1880",
+            "searchTerms": "PDF",
+            "count": 10,
+            "startIndex": 1,
+            "inputEncoding": "utf8",
+            "outputEncoding": "utf8",
+            "safe": "off",
+            "cx": "DUMMY_CX"
+           }
+          ]
+         },
+         "context": {
+          "title": "JHU Libraries test"
+         },
+         "searchInformation": {
+          "searchTime": 0.338664,
+          "formattedSearchTime": "0.34",
+          "totalResults": "1880",
+          "formattedTotalResults": "1,880"
+         },
+         "items": [
+          {
+           "kind": "customsearch#result",
+           "title": "Creating PDF/A Files - Electronic Theses and Dissertations - Guides ...",
+           "htmlTitle": "Creating \u003cb\u003ePDF\u003c/b\u003e/A Files - Electronic Theses and Dissertations - Guides \u003cb\u003e...\u003c/b\u003e",
+           "link": "http://guides.library.jhu.edu/etd/pdfa",
+           "displayLink": "guides.library.jhu.edu",
+           "snippet": "PDF/A is an ISO-standardized version of the Portable Document Format (PDF) \nspecialized for the digital preservation of electronic documents. You need to save\n ...",
+           "htmlSnippet": "\u003cb\u003ePDF\u003c/b\u003e/A is an ISO-standardized version of the Portable Document Format (\u003cb\u003ePDF\u003c/b\u003e) \u003cbr\u003e\nspecialized for the digital preservation of electronic documents. You need to save\u003cbr\u003e\n&nbsp;...",
+           "formattedUrl": "guides.library.jhu.edu/etd/pdfa",
+           "htmlFormattedUrl": "guides.library.jhu.edu/etd/\u003cb\u003epdf\u003c/b\u003ea",
+           "pagemap": {
+            "educationalorganization": [
+             {
+              "name": "Johns Hopkins University"
+             }
+            ],
+            "cse_image": [
+             {
+              "src": "http://s3.amazonaws.com/libapps/accounts/35355/profiles/29773/10505086_10100563935595395_9032951608364274484_o.jpg"
+             }
+            ],
+            "cse_thumbnail": [
+             {
+              "width": "225",
+              "height": "225",
+              "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRn1k3N4GGfi8VuOEhKGn2OzTRqeUOPgc1NqXeZzeANNySWnr0EWN3FVNc"
+             }
+            ],
+            "postaladdress": [
+             {
+              "streetaddress": "3400 North Charles Street",
+              "addresslocality": "Baltimore",
+              "addressregion": "MD",
+              "postalcode": "21218"
+             }
+            ],
+            "library": [
+             {
+              "name": "The Sheridan Libraries",
+              "telephone": "(410) 516-8335"
+             }
+            ],
+            "metatags": [
+             {
+              "viewport": "width=device-width, initial-scale=1.0",
+              "dc.title": "Guides: Electronic Theses and Dissertations: Creating PDF/A Files",
+              "dc.creator": "David Reynolds",
+              "dc.subject": "Library Information & Services, Research Tools, Writing, Citing, and Publishing",
+              "dc.description": "This guide will help you format and submit your electronic thesis or dissertation",
+              "dc.publishers": "Johns Hopkins University",
+              "dc.rights": "Copyright Johns Hopkins University 2015",
+              "dc.language": "en",
+              "dc.identifier": "http://guides.library.jhu.edu/etd/pdfa",
+              "dc.date.created": "Mar 30, 2013",
+              "dc.date.modified": "Aug 17, 2015"
+             }
+            ]
+           }
+          },
+          {
+           "kind": "customsearch#result",
+           "title": "Marginalized Multilevel Models and Likelihood Inference",
+           "htmlTitle": "Marginalized Multilevel Models and Likelihood Inference",
+           "link": "https://jhir.library.jhu.edu/bitstream/handle/1774.2/32863/2000-Marginalized.pdf?sequence=1",
+           "displayLink": "jhir.library.jhu.edu",
+           "snippet": "Statistical Science. 2000, Vol. 15, No. 1, 126. Marginalized Multilevel Models and \nLikelihood Inference. Patrick J. Heagerty and Scott L. Zeger. Abstract.",
+           "htmlSnippet": "Statistical Science. 2000, Vol. 15, No. 1, 126. Marginalized Multilevel Models and \u003cbr\u003e\nLikelihood Inference. Patrick J. Heagerty and Scott L. Zeger. Abstract.",
+           "cacheId": "8ZIyZ-9q2iAJ",
+           "mime": "application/pdf",
+           "fileFormat": "PDF/Adobe Acrobat",
+           "formattedUrl": "https://jhir.library.jhu.edu/bitstream/...2/.../2000-Marginalized.pdf?...",
+           "htmlFormattedUrl": "https://jhir.library.jhu.edu/bitstream/...2/.../2000-Marginalized.\u003cb\u003epdf\u003c/b\u003e?...",
+           "pagemap": {
+            "metatags": [
+             {
+              "creationdate": "D:20000508152218",
+              "producer": "Acrobat Distiller 4.05 for Windows",
+              "author": "?",
+              "creator": "TTI Custom Software (Technical Typesetting Inc.)",
+              "title": "234ssci.p"
+             }
+            ]
+           }
+          },
+          {
+           "kind": "customsearch#result",
+           "title": "Got the PDF organization blues? If so…we've got some help | The ...",
+           "htmlTitle": "Got the \u003cb\u003ePDF\u003c/b\u003e organization blues? If so…we&#39;ve got some help | The \u003cb\u003e...\u003c/b\u003e",
+           "link": "http://blogs.library.jhu.edu/wordpress/2012/09/got-the-pdf-organization-blues-if-so-weve-got-some-help/",
+           "displayLink": "blogs.library.jhu.edu",
+           "snippet": "Sep 10, 2012 ... Now that you found reams and reams of good stuff, how can you keep it from \nbecoming a jumbled up PDF mess on your desktop? Luckily, there ...",
+           "htmlSnippet": "Sep 10, 2012 \u003cb\u003e...\u003c/b\u003e Now that you found reams and reams of good stuff, how can you keep it from \u003cbr\u003e\nbecoming a jumbled up \u003cb\u003ePDF\u003c/b\u003e mess on your desktop? Luckily, there&nbsp;...",
+           "cacheId": "5WEFcOn_Q2MJ",
+           "formattedUrl": "blogs.library.jhu.edu/.../got-the-pdf-organization-blues-if-so-weve-got-some- help/",
+           "htmlFormattedUrl": "blogs.library.jhu.edu/.../got-the-\u003cb\u003epdf\u003c/b\u003e-organization-blues-if-so-weve-got-some- help/",
+           "pagemap": {
+            "cse_image": [
+             {
+              "src": "http://blogs.library.jhu.edu/wordpress/wp-content/uploads/2012/09/CitationWorkshop1.bmp"
+             }
+            ],
+            "cse_thumbnail": [
+             {
+              "width": "265",
+              "height": "190",
+              "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSn-xpYwzdvEjnohC4lqMlC_HOwWfPsoVrxHidgrbcPzgE2SY54xFS8SQpq"
+             }
+            ],
+            "metatags": [
+             {
+              "viewport": "width=device-width, initial-scale=1, maximum-scale=1"
+             }
+            ]
+           }
+          },
+          {
+           "kind": "customsearch#result",
+           "title": "Zotero Tricks - Zotero - Guides at Johns Hopkins University",
+           "htmlTitle": "Zotero Tricks - Zotero - Guides at Johns Hopkins University",
+           "link": "http://guides.library.jhu.edu/c.php?g=202551&p=1335531",
+           "displayLink": "guides.library.jhu.edu",
+           "snippet": "Aug 17, 2015 ... Just drag documents on your computer into Zotero and use the 'retrieve metadata \nfor PDF' function. If you've just found a PDF somewhere, ...",
+           "htmlSnippet": "Aug 17, 2015 \u003cb\u003e...\u003c/b\u003e Just drag documents on your computer into Zotero and use the &#39;retrieve metadata \u003cbr\u003e\nfor \u003cb\u003ePDF\u003c/b\u003e&#39; function. If you&#39;ve just found a \u003cb\u003ePDF\u003c/b\u003e somewhere,&nbsp;...",
+           "formattedUrl": "guides.library.jhu.edu/c.php?g=202551&p=1335531",
+           "htmlFormattedUrl": "guides.library.jhu.edu/c.php?g=202551&amp;p=1335531",
+           "pagemap": {
+            "educationalorganization": [
+             {
+              "name": "Johns Hopkins University"
+             }
+            ],
+            "postaladdress": [
+             {
+              "streetaddress": "3400 North Charles Street",
+              "addresslocality": "Baltimore",
+              "addressregion": "MD",
+              "postalcode": "21218"
+             }
+            ],
+            "library": [
+             {
+              "name": "The Sheridan Libraries",
+              "telephone": "(410) 516-8335"
+             }
+            ],
+            "metatags": [
+             {
+              "viewport": "width=device-width, initial-scale=1.0",
+              "dc.title": "Guides: Zotero: Zotero Tricks",
+              "dc.creator": "Ask a Librarian",
+              "dc.subject": "Research Tools, Writing, Citing, and Publishing",
+              "dc.description": "Zotero is a Firefox addon that collects, manages, and cites research sources. It's free and easy to use.",
+              "dc.publishers": "Johns Hopkins University",
+              "dc.rights": "Copyright Johns Hopkins University 2015",
+              "dc.language": "en",
+              "dc.identifier": "http://guides.library.jhu.edu/c.php?g=202551&p=1335531",
+              "dc.date.created": "May 13, 2009",
+              "dc.date.modified": "Aug 17, 2015"
+             }
+            ]
+           }
+          },
+          {
+           "kind": "customsearch#result",
+           "title": "Sexual Behavior.pdf",
+           "htmlTitle": "Sexual Behavior.\u003cb\u003epdf\u003c/b\u003e",
+           "link": "https://jhir.library.jhu.edu/bitstream/handle/1774.2/923/Sexual%20Behavior.pdf?sequence=1",
+           "displayLink": "jhir.library.jhu.edu",
+           "snippet": "A Bargaining Theory of Sexual Behavior in Women's Adolescence. Constance A. \nNathanson and. Robert Schoen. The Johns Hopkins University. Revised ...",
+           "htmlSnippet": "A Bargaining Theory of Sexual Behavior in Women&#39;s Adolescence. Constance A. \u003cbr\u003e\nNathanson and. Robert Schoen. The Johns Hopkins University. Revised&nbsp;...",
+           "cacheId": "MrF2hzOdRmcJ",
+           "mime": "application/pdf",
+           "fileFormat": "PDF/Adobe Acrobat",
+           "formattedUrl": "https://jhir.library.jhu.edu/bitstream/...2/.../Sexual%20Behavior.pdf?...",
+           "htmlFormattedUrl": "https://jhir.library.jhu.edu/bitstream/...2/.../Sexual%20Behavior.\u003cb\u003epdf\u003c/b\u003e?...",
+           "pagemap": {
+            "metatags": [
+             {
+              "creationdate": "D:20060802112657-04'00'",
+              "creator": "Adobe Acrobat 7.0",
+              "producer": "Adobe Acrobat 7.0 Paper Capture Plug-in",
+              "moddate": "D:20060802113154-04'00'"
+             }
+            ]
+           }
+          },
+          {
+           "kind": "customsearch#result",
+           "title": "2. Free E-Books - E-Books - Guides at Johns Hopkins University",
+           "htmlTitle": "2. Free E-Books - E-Books - Guides at Johns Hopkins University",
+           "link": "http://guides.library.jhu.edu/c.php?g=202571&p=1335971",
+           "displayLink": "guides.library.jhu.edu",
+           "snippet": "Aug 27, 2015 ... Most of them are in PDF, mobi, or EPUB. This list is arranged alphabetically by \nlanguage. BELARUSIAN. Belarusian e-Library: http://knihi.com ...",
+           "htmlSnippet": "Aug 27, 2015 \u003cb\u003e...\u003c/b\u003e Most of them are in \u003cb\u003ePDF\u003c/b\u003e, mobi, or EPUB. This list is arranged alphabetically by \u003cbr\u003e\nlanguage. BELARUSIAN. Belarusian e-Library: http://knihi.com&nbsp;...",
+           "formattedUrl": "guides.library.jhu.edu/c.php?g=202571&p=1335971",
+           "htmlFormattedUrl": "guides.library.jhu.edu/c.php?g=202571&amp;p=1335971",
+           "pagemap": {
+            "educationalorganization": [
+             {
+              "name": "Johns Hopkins University"
+             }
+            ],
+            "postaladdress": [
+             {
+              "streetaddress": "3400 North Charles Street",
+              "addresslocality": "Baltimore",
+              "addressregion": "MD",
+              "postalcode": "21218"
+             }
+            ],
+            "library": [
+             {
+              "name": "The Sheridan Libraries",
+              "telephone": "(410) 516-8335"
+             }
+            ],
+            "metatags": [
+             {
+              "viewport": "width=device-width, initial-scale=1.0",
+              "dc.title": "Guides: E-Books: 2. Free E-Books",
+              "dc.creator": "Sue Vazakas",
+              "dc.subject": "Library Information & Services, Literature, Research Tools, Writing, Citing, and Publishing",
+              "dc.description": "How to find electronic books and resources in the library's catalog.",
+              "dc.publishers": "Johns Hopkins University",
+              "dc.rights": "Copyright Johns Hopkins University 2015",
+              "dc.language": "en",
+              "dc.identifier": "http://guides.library.jhu.edu/c.php?g=202571&p=1335971",
+              "dc.date.created": "Oct 12, 2010",
+              "dc.date.modified": "Aug 27, 2015"
+             }
+            ]
+           }
+          },
+          {
+           "kind": "customsearch#result",
+           "title": "The Decline of Childhood Mortality Kenneth Hill Department of ...",
+           "htmlTitle": "The Decline of Childhood Mortality Kenneth Hill Department of \u003cb\u003e...\u003c/b\u003e",
+           "link": "https://jhir.library.jhu.edu/bitstream/handle/1774.2/936/WP90-07_Childhood_Mortality.pdf?sequence=1",
+           "displayLink": "jhir.library.jhu.edu",
+           "snippet": "The Decline of Childhood Mortality. Kenneth Hill. Department of Population \nDynamics. School of Hygiene and Public Health. Johns Hopkins University ...",
+           "htmlSnippet": "The Decline of Childhood Mortality. Kenneth Hill. Department of Population \u003cbr\u003e\nDynamics. School of Hygiene and Public Health. Johns Hopkins University&nbsp;...",
+           "cacheId": "8qlRRyT9N6YJ",
+           "mime": "application/pdf",
+           "fileFormat": "PDF/Adobe Acrobat",
+           "formattedUrl": "https://jhir.library.jhu.edu/.../WP90-07_Childhood_Mortality.pdf?...",
+           "htmlFormattedUrl": "https://jhir.library.jhu.edu/.../WP90-07_Childhood_Mortality.\u003cb\u003epdf\u003c/b\u003e?...",
+           "pagemap": {
+            "metatags": [
+             {
+              "creationdate": "D:20060802101747-04'00'",
+              "creator": "Adobe Acrobat 7.0",
+              "producer": "Adobe Acrobat 7.0 Paper Capture Plug-in",
+              "moddate": "D:20060802102230-04'00'"
+             }
+            ]
+           }
+          },
+          {
+           "kind": "customsearch#result",
+           "title": "Open Source ePublishing Systems White Paper.pdf",
+           "htmlTitle": "Open Source ePublishing Systems White Paper.\u003cb\u003epdf\u003c/b\u003e",
+           "link": "https://wiki.library.jhu.edu/download/attachments/22964/Open+Source+ePublishing+Systems+White+Paper.pdf?version=1",
+           "displayLink": "wiki.library.jhu.edu",
+           "snippet": "Apr 28, 2008 ... Creative Commons Attribution-Noncommercial-Share Alike 3.0 United States. A \nSurvey and Evaluation of Open-Source Electronic Publishing ...",
+           "htmlSnippet": "Apr 28, 2008 \u003cb\u003e...\u003c/b\u003e Creative Commons Attribution-Noncommercial-Share Alike 3.0 United States. A \u003cbr\u003e\nSurvey and Evaluation of Open-Source Electronic Publishing&nbsp;...",
+           "cacheId": "e8ZAE-5327EJ",
+           "mime": "application/pdf",
+           "fileFormat": "PDF/Adobe Acrobat",
+           "formattedUrl": "https://wiki.library.jhu.edu/.../Open+Source+ePublishing+Systems+White+ Paper.pdf?...",
+           "htmlFormattedUrl": "https://wiki.library.jhu.edu/.../Open+Source+ePublishing+Systems+White+ Paper.\u003cb\u003epdf\u003c/b\u003e?...",
+           "pagemap": {
+            "metatags": [
+             {
+              "producer": "GPL Ghostscript 8.54",
+              "creationdate": "D:20080428100556-04'00'",
+              "moddate": "D:20080428100556",
+              "title": "Open Source ePublishing Systems White Paper",
+              "creator": "PDFCreator Version 0.9.3",
+              "author": "Mark Cyzyk"
+             }
+            ]
+           }
+          },
+          {
+           "kind": "customsearch#result",
+           "title": "New Horizons for Learning",
+           "htmlTitle": "New Horizons for Learning",
+           "link": "http://jhepp.library.jhu.edu/ojs/index.php/newhorizons/article/view/30/28",
+           "displayLink": "jhepp.library.jhu.edu",
+           "snippet": "The PDF file you selected should load here if your Web browser has a PDF \nreader plug-in installed (for example, a recent version of Adobe Acrobat Reader).",
+           "htmlSnippet": "The \u003cb\u003ePDF\u003c/b\u003e file you selected should load here if your Web browser has a \u003cb\u003ePDF\u003c/b\u003e \u003cbr\u003e\nreader plug-in installed (for example, a recent version of Adobe Acrobat Reader).",
+           "cacheId": "mXDT0V1z-5EJ",
+           "formattedUrl": "jhepp.library.jhu.edu/ojs/index.php/newhorizons/article/view/.../28",
+           "htmlFormattedUrl": "jhepp.library.jhu.edu/ojs/index.php/newhorizons/article/view/.../28",
+           "pagemap": {
+            "metatags": [
+             {
+              "dc.creator.personalname": "Tracey Tokuhama-Espinosa",
+              "dc.date.created": "2011-01-01",
+              "dc.date.datesubmitted": "2012-03-12",
+              "dc.date.issued": "2011-01-01",
+              "dc.date.modified": "2012-03-12",
+              "dc.description": "The complex problems faced in education today need equally elaborate solutions. This article explains how Mind, Brain, and Education (MBE) science combines perspectives from neuroscience, psychology and pedagogy that contribute to a better understanding of how humans learn, and consequently, how we should teach. Better than neuro-education, more powerful than cognitive psychology and easier to understand than cognitive neuroscience, MBE is a paradigm shift in our understanding of the teaching profession.",
+              "dc.format": "application/pdf",
+              "dc.identifier": "30",
+              "dc.identifier.uri": "http://jhepp.library.jhu.edu/ojs/index.php/newhorizons/article/view/30",
+              "dc.rights": "Copyright (c) 2015 New Horizons for Learning",
+              "dc.source": "New Horizons for Learning",
+              "dc.source.issn": "2372-4838",
+              "dc.source.issue": "1",
+              "dc.source.uri": "http://jhepp.library.jhu.edu/ojs/index.php/newhorizons",
+              "dc.source.volume": "9",
+              "dc.title": "Why Mind, Brain, and Education Scienceis the \"New\" Brain-Based Education",
+              "dc.type": "Text.Serial.Journal",
+              "dc.type.articletype": "Articles",
+              "gs_meta_revision": "1.1",
+              "citation_journal_title": "New Horizons for Learning",
+              "citation_issn": "2372-4838",
+              "citation_author": "Tracey Tokuhama-Espinosa",
+              "citation_title": "Why Mind, Brain, and Education Scienceis the \"New\" Brain-Based Education",
+              "citation_date": "2011/01/01",
+              "citation_volume": "9",
+              "citation_issue": "1",
+              "citation_abstract_html_url": "http://jhepp.library.jhu.edu/ojs/index.php/newhorizons/article/view/30",
+              "citation_pdf_url": "http://jhepp.library.jhu.edu/ojs/index.php/newhorizons/article/download/30/28"
+             }
+            ]
+           }
+          },
+          {
+           "kind": "customsearch#result",
+           "title": "The Many Hats of a Teacher | Jones | New Horizons for Learning",
+           "htmlTitle": "The Many Hats of a Teacher | Jones | New Horizons for Learning",
+           "link": "http://jhepp.library.jhu.edu/ojs/index.php/newhorizons/article/view/69/67",
+           "displayLink": "jhepp.library.jhu.edu",
+           "snippet": "The PDF file you selected should load here if your Web browser has a PDF \nreader plug-in installed (for example, a recent version of Adobe Acrobat Reader).",
+           "htmlSnippet": "The \u003cb\u003ePDF\u003c/b\u003e file you selected should load here if your Web browser has a \u003cb\u003ePDF\u003c/b\u003e \u003cbr\u003e\nreader plug-in installed (for example, a recent version of Adobe Acrobat Reader).",
+           "cacheId": "cBXAgrQ7z-kJ",
+           "formattedUrl": "jhepp.library.jhu.edu/ojs/index.php/newhorizons/article/view/.../67",
+           "htmlFormattedUrl": "jhepp.library.jhu.edu/ojs/index.php/newhorizons/article/view/.../67",
+           "pagemap": {
+            "metatags": [
+             {
+              "dc.creator.personalname": "Brian A. Jones",
+              "dc.date.created": "2010-04-01",
+              "dc.date.datesubmitted": "2012-03-13",
+              "dc.date.issued": "2010-04-01",
+              "dc.date.modified": "2012-03-13",
+              "dc.description": "Drawing on one of his favorite Dr. Seuss books, The 500 Hats of Bartholomew Cubbins, Jones shares his modest list of the “hats” inherent in the occupation of middle school teacher. You may be as amazed as our author to find the list awkwardly lengthy - requiring more than just the front and back of his original napkin at the restaurant. This list was constructed with the middle school teaching experience in mind, but it certainly encompasses all levels of teaching, from pre-k through university levels. Jones invites readers to add their own individual “hats” in the margins, if they feel moved. Although, I warn this bard’s haiku and limerick dexterity are tough acts to follow.",
+              "dc.format": "application/pdf",
+              "dc.identifier": "69",
+              "dc.identifier.uri": "http://jhepp.library.jhu.edu/ojs/index.php/newhorizons/article/view/69",
+              "dc.rights": "Copyright (c) 2015 New Horizons for Learning",
+              "dc.source": "New Horizons for Learning",
+              "dc.source.issn": "2372-4838",
+              "dc.source.issue": "1",
+              "dc.source.uri": "http://jhepp.library.jhu.edu/ojs/index.php/newhorizons",
+              "dc.source.volume": "8",
+              "dc.title": "The Many Hats of a Teacher",
+              "dc.type": "Text.Serial.Journal",
+              "dc.type.articletype": "Articles",
+              "gs_meta_revision": "1.1",
+              "citation_journal_title": "New Horizons for Learning",
+              "citation_issn": "2372-4838",
+              "citation_author": "Brian A. Jones",
+              "citation_title": "The Many Hats of a Teacher",
+              "citation_date": "2010/04/01",
+              "citation_volume": "8",
+              "citation_issue": "1",
+              "citation_abstract_html_url": "http://jhepp.library.jhu.edu/ojs/index.php/newhorizons/article/view/69",
+              "citation_pdf_url": "http://jhepp.library.jhu.edu/ojs/index.php/newhorizons/article/download/69/67"
+             }
+            ]
+           }
+          }
+         ]
+        }
     http_version: 
-  recorded_at: Mon, 19 Nov 2012 22:28:22 GMT
-recorded_with: VCR 2.2.5
+  recorded_at: Mon, 21 Sep 2015 14:46:41 GMT
+recorded_with: VCR 2.9.3

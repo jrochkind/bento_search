@@ -118,8 +118,8 @@ class GoogleSiteSearchTest < ActiveSupport::TestCase
   end
   
   test_with_cassette("gets format string", :google_site) do
-    results = @engine.search("Adobe PDF")
-        
+    results = @engine.search("PDF")
+
     # assume at least one result had a PDF format, which it does
     # in our current VCR capture. For a new one, find a search where
     # it does. 
