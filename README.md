@@ -218,6 +218,31 @@ Kaminari's paginate method:
     <%= paginate results.pagination %>
 ~~~~
 
+### Multi-field search
+
+Some search engines support-multi field searching, an engine advertises if it does:
+
+    engine_instance.multi_field_searching? # => `true` or `false`
+
+The bento_search multi-field search feature always combines multiple
+fields with boolean 'and' (intersection). You call a multi-field search
+with a :query hash argument whose value is a hash of search-fields and
+queries:
+
+    engine.search(:query => {
+      :title  => '"Reflections on the History of Debt Resistance"',
+      :author => 'Caffentzis'
+    })
+
+The search field keys can be either semantic_search_field names, or internal
+engine search fields, or a combination. If the key matches a semantic search field
+declared for the engine, that will be preferred.
+
+This can be used to expose a multi-field search to users, and the `bento_field_hash_for`
+helper method might be helpful in creating your UI. But this is also useful for looking
+up known-item citations -- either by author/title, or issn/volume/issue/page, or doi, or
+anything else -- as back-end support for various possible functions. 
+
 ### Concurrent searching
 
 If you're going to search 2 or more search engines at once, you'll want to execute

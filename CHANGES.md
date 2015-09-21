@@ -1,3 +1,8 @@
+## 1.5
+
+* multi-field searching
+* TODO: DOAJ search engine
+
 ### 1.4.4
 
 * Google Books Engine: Catch buggy invalid ID http response in #get
