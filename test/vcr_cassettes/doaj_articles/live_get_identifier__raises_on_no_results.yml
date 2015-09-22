@@ -2,11 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://doaj.org/api/v1/search/articles/id:no+such+id?pageSize=10
+    uri: https://doaj.org/api/v1/search/articles/id:no_such_id?pageSize=10
     body:
       encoding: UTF-8
       string: ''
-    headers: {}
+    headers:
+      Cookie:
+      - session=UspzkET/3IS3Z8PIxKnLAhLnXDY=?_id=UycyNmYyZmZkMzhkMjA5MWE0NmNjZTU2YTI4OGJjNDZlNycKcDEKLg==
   response:
     status:
       code: 200
@@ -15,7 +17,7 @@ http_interactions:
       Server:
       - nginx/1.4.6 (Ubuntu)
       Date:
-      - Wed, 16 Sep 2015 19:51:07 GMT
+      - Tue, 22 Sep 2015 21:59:39 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -32,8 +34,8 @@ http_interactions:
         Path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: '{"pageSize": 10, "timestamp": "2015-0916T19:51:07Z", "results": [],
-        "query": "id:no+such+id", "total": 0, "page": 1}'
+      string: '{"pageSize": 10, "timestamp": "2015-0922T21:59:39Z", "results": [],
+        "query": "id:no_such_id", "total": 0, "page": 1}'
     http_version: 
-  recorded_at: Wed, 16 Sep 2015 19:51:07 GMT
+  recorded_at: Tue, 22 Sep 2015 21:59:39 GMT
 recorded_with: VCR 2.9.3

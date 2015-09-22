@@ -1,0 +1,106 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://doaj.org/api/v1/search/articles/bibjson.author.name:Huxtable%20bibjson.title:%22Global%20Unions%20as%20the%20Missing%20Link%20in%20Labour%20Movement%20Studies%22?pageSize=10
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Cookie:
+      - session=UspzkET/3IS3Z8PIxKnLAhLnXDY=?_id=UycyNmYyZmZkMzhkMjA5MWE0NmNjZTU2YTI4OGJjNDZlNycKcDEKLg==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Tue, 22 Sep 2015 21:59:39 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '5323'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Set-Cookie:
+      - session="UspzkET/3IS3Z8PIxKnLAhLnXDY=?_id=UycyNmYyZmZkMzhkMjA5MWE0NmNjZTU2YTI4OGJjNDZlNycKcDEKLg==";
+        Path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"pageSize": 10, "timestamp": "2015-0922T21:59:39Z", "results": [{"last_updated":
+        "2015-04-22T01:21:52Z", "id": "002526e0d06f465c9942cbb1b01aa98c", "bibjson":
+        {"identifier": [{"type": "pissn", "id": "1918-2821"}], "start_page": "1",
+        "title": "A Most Curious Lack of Curiosity: Global Unions as the Missing Link
+        in Labour Movement Studies", "journal": {"publisher": "Society for Socialist
+        Studies", "language": ["English"], "title": "Socialist Studies", "country":
+        "CA", "number": "1", "volume": "5"}, "author": [{"name": "David Huxtable"}],
+        "month": "05", "link": [{"url": "http://www.socialiststudies.com/index.php/sss/article/view/71/70",
+        "type": "fulltext"}], "year": "2009", "subject": [{"code": "HX1-970.7", "term":
+        "Socialism. Communism. Anarchism", "scheme": "LCC"}, {"code": "H", "term":
+        "Social Sciences", "scheme": "LCC"}, {"term": "Political Science", "scheme":
+        "DOAJ"}, {"term": "Law and Political Science", "scheme": "DOAJ"}, {"code":
+        "HX1-970.7", "term": "Socialism. Communism. Anarchism", "scheme": "LCC"},
+        {"code": "H", "term": "Social Sciences", "scheme": "LCC"}, {"term": "Political
+        Science", "scheme": "DOAJ"}, {"term": "Law and Political Science", "scheme":
+        "DOAJ"}, {"code": "HX1-970.7", "term": "Socialism. Communism. Anarchism",
+        "scheme": "LCC"}, {"code": "H", "term": "Social Sciences", "scheme": "LCC"},
+        {"term": "Political Science", "scheme": "DOAJ"}, {"term": "Law and Political
+        Science", "scheme": "DOAJ"}, {"code": "HX1-970.7", "term": "Socialism. Communism.
+        Anarchism", "scheme": "LCC"}, {"code": "H", "term": "Social Sciences", "scheme":
+        "LCC"}, {"term": "Political Science", "scheme": "DOAJ"}, {"term": "Law and
+        Political Science", "scheme": "DOAJ"}, {"code": "HX1-970.7", "term": "Socialism.
+        Communism. Anarchism", "scheme": "LCC"}, {"code": "H", "term": "Social Sciences",
+        "scheme": "LCC"}, {"code": "HX1-970.7", "term": "Socialism. Communism. Anarchism",
+        "scheme": "LCC"}, {"code": "H", "term": "Social Sciences", "scheme": "LCC"},
+        {"code": "HX1-970.7", "term": "Socialism. Communism. Anarchism", "scheme":
+        "LCC"}, {"code": "H", "term": "Social Sciences", "scheme": "LCC"}], "abstract":
+        "This paper is based on the author\u2019s contribution to \u2018The Research
+        Agenda for the Left Today\u2019 panel held during the Society for Socialist
+        Studies 2006 conference. It arguesthat, despite the recent renewal of academic
+        interest in labour movements, there is a gap in contemporary research on organized
+        labour around the existence of and potential futurerole for actually existing
+        global trade unions. The purpose of this paper is to spark an interest amongst
+        left academics in a future research project on the organizations whichcomprise
+        the recently created Council of Global Unions, and in particular the recently
+        created International Trade Union Confederation. After a brief introduction
+        to the historyof these organizations and an outline of their activities, the
+        author offers a number of questions that may prove interesting for those concerned
+        about the future direction oforganized labour at the global level.", "end_page":
+        "23"}, "created_date": "2013-11-09T19:15:55Z"}, {"last_updated": "2015-04-22T03:00:16Z",
+        "id": "7b844f616faf4d6bafecb0d9de7e2c26", "bibjson": {"identifier": [{"type":
+        "eissn", "id": "2213-0969"}], "start_page": "119", "title": "The Problem of
+        Personality on the Soviet Screen, 1950s-1960s", "journal": {"publisher": "Netherlands
+        Institute for Sound and Vision", "language": ["English"], "license": [{"type":
+        "CC BY-NC-ND", "title": "CC BY-NC-ND"}], "title": "View : Journal of European
+        Television History and Culture", "country": "NL", "number": "5", "volume":
+        "3"}, "author": [{"affiliation": "Loughborough University", "email": "sjhuxtable@gmail.com",
+        "name": "Simon Huxtable"}], "month": "6", "link": [{"url": "http://viewjournal.eu/index.php/view/article/view/89",
+        "type": "fulltext", "content_type": "html"}], "year": "2014", "keywords":
+        ["Personalities", "Soviet Union", "Television"], "end_page": "130", "abstract":
+        "<p>Over the course of the 1950s and 1960s, Soviet television acquired a growing
+        popularity amongst the public. In a period when its technical and artistic
+        quality remained low, the welcoming presence of TV personalities like Valentina
+        Leont\u2019eva and Iurii Fokin was one key reason for TV\u2019s popularity.
+        In this article, which combines an analysis of selected TV shows with archival
+        documents and press articles, professionals\u2019 discussions over the desirable
+        qualities that personalities needed to possess are placed within a wider historical
+        context where cultivating one''s personality was seen as essential for the
+        reconstruction of society after the excesses of Stalinism.</p><p>\u00a0</p>",
+        "subject": [{"code": "P87-96", "term": "Communication. Mass media", "scheme":
+        "LCC"}, {"code": "P1-1091", "term": "Philology. Linguistics", "scheme": "LCC"},
+        {"code": "P", "term": "Language and Literature", "scheme": "LCC"}, {"code":
+        "P87-96", "term": "Communication. Mass media", "scheme": "LCC"}, {"code":
+        "P1-1091", "term": "Philology. Linguistics", "scheme": "LCC"}, {"code": "P",
+        "term": "Language and Literature", "scheme": "LCC"}]}, "created_date": "2014-08-21T15:30:04Z"}],
+        "query": "bibjson.author.name:Huxtable bibjson.title:\"Global Unions as the
+        Missing Link in Labour Movement Studies\"", "total": 2, "page": 1}'
+    http_version: 
+  recorded_at: Tue, 22 Sep 2015 21:59:39 GMT
+recorded_with: VCR 2.9.3

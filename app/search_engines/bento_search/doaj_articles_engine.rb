@@ -10,6 +10,7 @@ module BentoSearch
   # Phrase searches with double quotes are respected. 
   #
   # Supports #get by unique_id feature
+  #
   class DoajArticlesEngine
     include BentoSearch::SearchEngine
     include ActionView::Helpers::SanitizeHelper
@@ -32,6 +33,7 @@ module BentoSearch
       results = Results.new
 
       begin
+        Rails.logger.debug("DoajEngine: requesting #{query_url}")
         response = http_client.get( query_url )
         json = JSON.parse(response.body)
       rescue TimeoutError, HTTPClient::TimeoutError,
@@ -73,13 +75,23 @@ module BentoSearch
 
 
     def args_to_search_url(arguments)
-      query = if arguments[:search_field]
-        fielded_query(arguments[:query], arguments[:search_field])
+      query = if arguments[:query].kind_of?(Hash)
+        # multi-field query
+        arguments[:query].collect {|field, query| fielded_query(query, field)}.join(" ")
       else
-        escape_query(arguments[:query])
+        fielded_query(arguments[:query], arguments[:search_field])
       end
 
-      url = self.base_url + CGI.escape(query)
+      # We need to escape this for going in a PATH component,
+      # not a query. So space can't be "+", it needs to be "%20",
+      # and indeed DOAJ API does not like "+".
+      # 
+      # But neither CGI.escape nor URI.escape does quite
+      # the right kind of escaping, seems to work out
+      # if we do CGI.escape but then replace '+'
+      # with '%20'
+      escaped_query = CGI.escape(query).gsub('+', '%20')
+      url = self.base_url + escaped_query
 
       query_args = {}
 
@@ -103,8 +115,12 @@ module BentoSearch
       return url
     end
 
-    def fielded_query(query, field)
-      "#{field}:#{escape_query query}"
+    def fielded_query(query, field = nil)
+      if field.present?
+        "#{field}:#{escape_query query}"
+      else
+        escape_query query
+      end
     end
 
     # Converts from item found in DOAJ results to BentoSearch::ResultItem
@@ -204,6 +220,10 @@ module BentoSearch
         "license" => {},
         "id"      => {}
       }
+    end
+
+    def multi_field_search?
+      true
     end
 
     def sort_definitions

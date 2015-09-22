@@ -85,7 +85,27 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
   end
 
   test_with_cassette("live get(identifier) raises on no results", :doaj_articles) do
-    assert_raises(BentoSearch::NotFound) { item = @engine.get( "no such id" ) }
+    assert_raises(BentoSearch::NotFound) { item = @engine.get( "no_such_id" ) }
+  end
+
+  test_with_cassette("multifield author-title", :doaj_articles) do
+    results = @engine.search(:query => {
+      :author => "Huxtable",
+      :title => '"Global Unions as the Missing Link in Labour Movement Studies"'
+    })
+
+    assert ! results.failed?
+
+    assert_present results
+  end
+
+  test "escapes spaces how DOAJ likes it" do
+    url = @engine.args_to_search_url(:query => "One Two")
+    parsed = URI.parse(url)
+    last_path = parsed.path.split('/').last
+
+    # %20 not + for space
+    assert_equal "One%20Two", last_path
   end
 
   test "escapes special chars" do

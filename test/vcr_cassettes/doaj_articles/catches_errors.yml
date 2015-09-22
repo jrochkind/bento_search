@@ -15,7 +15,7 @@ http_interactions:
       Server:
       - nginx/1.4.6 (Ubuntu)
       Date:
-      - Wed, 16 Sep 2015 19:14:37 GMT
+      - Tue, 22 Sep 2015 21:59:38 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -34,7 +34,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"status": "not_found", "error": "No endpoint at search/articles_bad_url/something.
         See https://doaj.org/api/v1/swagger.json for valid paths or read the documentation
-        at https://doaj.org/api/v1/docs. (ref: 2bdeefac-5ca7-11e5-b3b8-04014a62b401)"}'
+        at https://doaj.org/api/v1/docs. (ref: 37ef22b2-6175-11e5-ab24-04014a62b401)"}'
     http_version: 
-  recorded_at: Wed, 16 Sep 2015 19:14:37 GMT
+  recorded_at: Tue, 22 Sep 2015 21:59:38 GMT
 recorded_with: VCR 2.9.3
