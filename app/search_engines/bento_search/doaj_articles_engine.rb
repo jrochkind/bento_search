@@ -115,12 +115,43 @@ module BentoSearch
       return url
     end
 
+    # Prepares a DOAJ API (elastic search) query component for 
+    # given textual query in a given field (or default non-fielded search)
+    #
+    # Separates query string into tokens (bare words and phrases),
+    # so they can each be made mandatory for ElasticSearch. Default
+    # DOAJ API makes them all optional, with a very low mm, which
+    # leads to low-precision odd looking results for standard use
+    # cases. 
+    #
+    # Escapes all remaining special characters as literals (not including
+    # double quotes which can be used for phrases, which are respected. )
+    #
+    # Eg:
+    #     fielded_query('apple orange "strawberry banana"', field_name)
+    #     # => 'field_name(+apple +orange +"strawberry banana")'
     def fielded_query(query, field = nil)
       if field.present?
-        "#{field}:#{escape_query query}"
+        "#{field}:(#{prepare_mandatory_terms(query)})"
       else
-        escape_query query
+        prepare_mandatory_terms(query)
       end
+    end
+
+    # Takes a query string, prepares an ElasticSearch query
+    # doing what we want: 
+    #   * tokenizes into bare words and double-quoted phrases
+    #   * Escapes other punctuation to be literal not ElasticSearch operator.
+    #     (Does NOT do URI escaping)
+    #   * Makes each token mandatory with an ElasticSearch "+" operator prefixed. 
+    def prepare_mandatory_terms(query)      
+      # use string split with regex to too-cleverly split into space
+      # seperated terms and phrases, keeping phrases as unit.
+      terms = query.split %r{[[:space:]]+|("[^"]+")}
+      # Wound up with some empty strings, get rid of em
+      terms.delete_if {|t| t.blank?}
+
+      terms.collect {|token| "+" + escape_query(token)}.join(" ")
     end
 
     # Converts from item found in DOAJ results to BentoSearch::ResultItem

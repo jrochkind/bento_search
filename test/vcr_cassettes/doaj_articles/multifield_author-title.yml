@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://doaj.org/api/v1/search/articles/bibjson.author.name:Huxtable%20bibjson.title:%22Global%20Unions%20as%20the%20Missing%20Link%20in%20Labour%20Movement%20Studies%22?pageSize=10
+    uri: https://doaj.org/api/v1/search/articles/bibjson.author.name:(+Huxtable)%20bibjson.title:(+%22Global%20Unions%20as%20the%20Missing%20Link%20in%20Labour%20Movement%20Studies%22)?pageSize=10
     body:
       encoding: UTF-8
       string: ''
@@ -17,11 +17,11 @@ http_interactions:
       Server:
       - nginx/1.4.6 (Ubuntu)
       Date:
-      - Tue, 22 Sep 2015 21:59:39 GMT
+      - Wed, 23 Sep 2015 15:25:49 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '5323'
+      - '5329'
       Connection:
       - keep-alive
       Vary:
@@ -34,7 +34,7 @@ http_interactions:
         Path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: '{"pageSize": 10, "timestamp": "2015-0922T21:59:39Z", "results": [{"last_updated":
+      string: '{"pageSize": 10, "timestamp": "2015-0923T15:25:49Z", "results": [{"last_updated":
         "2015-04-22T01:21:52Z", "id": "002526e0d06f465c9942cbb1b01aa98c", "bibjson":
         {"identifier": [{"type": "pissn", "id": "1918-2821"}], "start_page": "1",
         "title": "A Most Curious Lack of Curiosity: Global Unions as the Missing Link
@@ -99,8 +99,8 @@ http_interactions:
         "P87-96", "term": "Communication. Mass media", "scheme": "LCC"}, {"code":
         "P1-1091", "term": "Philology. Linguistics", "scheme": "LCC"}, {"code": "P",
         "term": "Language and Literature", "scheme": "LCC"}]}, "created_date": "2014-08-21T15:30:04Z"}],
-        "query": "bibjson.author.name:Huxtable bibjson.title:\"Global Unions as the
-        Missing Link in Labour Movement Studies\"", "total": 2, "page": 1}'
+        "query": "bibjson.author.name:(+Huxtable) bibjson.title:(+\"Global Unions
+        as the Missing Link in Labour Movement Studies\")", "total": 2, "page": 1}'
     http_version: 
-  recorded_at: Tue, 22 Sep 2015 21:59:39 GMT
+  recorded_at: Wed, 23 Sep 2015 15:25:49 GMT
 recorded_with: VCR 2.9.3

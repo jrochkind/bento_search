@@ -104,8 +104,9 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
     parsed = URI.parse(url)
     last_path = parsed.path.split('/').last
 
-    # %20 not + for space
-    assert_equal "One%20Two", last_path
+    # %20 not + for space.
+    # %2B for "+""
+    assert_equal "%2BOne%20%2BTwo", last_path
   end
 
   test "escapes special chars" do
@@ -116,7 +117,7 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
     last_path = parsed.path.split('/').last
     last_path = CGI.unescape(last_path)
 
-    assert_equal "Me\\: And\\\/Or You", last_path
+    assert_equal "+Me\\: +And\\\/Or +You", last_path
   end
 
   test "generates fielded searches" do
@@ -127,7 +128,7 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
     last_path = parsed.path.split('/').last
     last_path = CGI.unescape(last_path)
 
-    assert_equal "bibjson.author.name:Smith", last_path
+    assert_equal "bibjson.author.name:(+Smith)", last_path
   end
 
   test "does not escape double quotes" do
@@ -139,7 +140,18 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
     last_path = parsed.path.split('/').last
     last_path = CGI.unescape(last_path)
 
-    assert_equal '"This is a phrase"', last_path
+    assert_equal '+"This is a phrase"', last_path
+  end
+
+  test "multi-token fielded search" do
+    url = @engine.args_to_search_url(:query => 'apple orange "strawberry banana"', :search_field => "bibjson.title")
+
+    parsed = URI.parse(url)
+
+    last_path = parsed.path.split('/').last
+    last_path = CGI.unescape(last_path)
+
+    assert_equal 'bibjson.title:(+apple +orange +"strawberry banana")', last_path
   end
 
   test "adds sort to query url" do
