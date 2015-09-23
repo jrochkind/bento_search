@@ -17,7 +17,7 @@ http_interactions:
       Server:
       - nginx/1.4.6 (Ubuntu)
       Date:
-      - Wed, 23 Sep 2015 15:25:49 GMT
+      - Wed, 23 Sep 2015 15:51:26 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -34,7 +34,7 @@ http_interactions:
         Path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: '{"pageSize": 10, "timestamp": "2015-0923T15:25:49Z", "results": [{"last_updated":
+      string: '{"pageSize": 10, "timestamp": "2015-0923T15:51:26Z", "results": [{"last_updated":
         "2015-04-22T01:47:22Z", "id": "1c7e32e140c94c7cb5c7902ec96f1136", "bibjson":
         {"title": "Cancer Incidence in Egypt:  Results of the National Population-Based
         Cancer Registry Program", "journal": {"publisher": "Hindawi Publishing Corporation",
@@ -322,10 +322,10 @@ http_interactions:
         "115"}, "created_date": "2011-03-20T10:19:56Z"}], "query": "+cancer", "total":
         65140, "page": 1}'
     http_version: 
-  recorded_at: Wed, 23 Sep 2015 15:25:49 GMT
+  recorded_at: Wed, 23 Sep 2015 15:51:26 GMT
 - request:
     method: get
-    uri: https://doaj.org/api/v1/search/articles/id:(+1c7e32e140c94c7cb5c7902ec96f1136)?pageSize=10
+    uri: https://doaj.org/api/v1/search/articles/+id:(+1c7e32e140c94c7cb5c7902ec96f1136)?pageSize=10
     body:
       encoding: UTF-8
       string: ''
@@ -340,11 +340,11 @@ http_interactions:
       Server:
       - nginx/1.4.6 (Ubuntu)
       Date:
-      - Wed, 23 Sep 2015 15:25:49 GMT
+      - Wed, 23 Sep 2015 15:51:26 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '1986'
+      - '1987'
       Connection:
       - keep-alive
       Vary:
@@ -357,7 +357,7 @@ http_interactions:
         Path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: '{"pageSize": 10, "timestamp": "2015-0923T15:25:49Z", "results": [{"last_updated":
+      string: '{"pageSize": 10, "timestamp": "2015-0923T15:51:26Z", "results": [{"last_updated":
         "2015-04-22T01:47:22Z", "id": "1c7e32e140c94c7cb5c7902ec96f1136", "bibjson":
         {"title": "Cancer Incidence in Egypt:  Results of the National Population-Based
         Cancer Registry Program", "journal": {"publisher": "Hindawi Publishing Corporation",
@@ -381,7 +381,7 @@ http_interactions:
         Tumors. Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code":
         "RC31-1245", "term": "Internal medicine", "scheme": "LCC"}, {"code": "R",
         "term": "Medicine", "scheme": "LCC"}]}, "created_date": "2014-10-20T08:05:15Z"}],
-        "query": "id:(+1c7e32e140c94c7cb5c7902ec96f1136)", "total": 1, "page": 1}'
+        "query": "+id:(+1c7e32e140c94c7cb5c7902ec96f1136)", "total": 1, "page": 1}'
     http_version: 
-  recorded_at: Wed, 23 Sep 2015 15:25:49 GMT
+  recorded_at: Wed, 23 Sep 2015 15:51:27 GMT
 recorded_with: VCR 2.9.3

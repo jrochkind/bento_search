@@ -17,7 +17,7 @@ http_interactions:
       Server:
       - nginx/1.4.6 (Ubuntu)
       Date:
-      - Wed, 23 Sep 2015 15:25:49 GMT
+      - Wed, 23 Sep 2015 15:51:27 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -34,7 +34,7 @@ http_interactions:
         Path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: '{"pageSize": 20, "timestamp": "2015-0923T15:25:49Z", "results": [{"last_updated":
+      string: '{"pageSize": 20, "timestamp": "2015-0923T15:51:27Z", "results": [{"last_updated":
         "2015-04-22T03:06:02Z", "id": "82c9dc39aebe429d8e37b55469ed882d", "bibjson":
         {"identifier": [{"type": "doi", "id": "10.1007/s11805-011-0562-z"}, {"type":
         "pissn", "id": "2095-3941"}], "start_page": "77", "title": "The Role of Inflammation
@@ -187,54 +187,10 @@ http_interactions:
         "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
         "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
         {"code": "R", "term": "Medicine", "scheme": "LCC"}]}, "created_date": "2010-03-19T00:00:00Z"},
-        {"last_updated": "2015-04-22T04:38:00Z", "id": "f978d4678cb9485984658a52aa8420d5",
-        "bibjson": {"start_page": "552", "title": "Screening of Finnish <it>RAD51C</it>
-        founder mutations in prostate and colorectal cancer patients", "journal":
-        {"publisher": "BioMed Central", "language": ["English"], "license": [{"type":
-        "CC BY", "title": "CC BY"}], "title": "BMC Cancer", "country": "GB", "number":
-        "1", "volume": "12"}, "author": [{"name": "Pelttari Liisa M"}, {"name": "Nurminen
-        Riikka"}, {"name": "Gylfe Alexandra"}, {"name": "Aaltonen Lauri A"}, {"name":
-        "Schleutker Johanna"}, {"name": "Nevanlinna Heli"}], "month": "11", "link":
-        [{"url": "http://www.biomedcentral.com/1471-2407/12/552", "type": "fulltext"}],
-        "year": "2012", "keywords": ["<it>RAD51C</it>", "Prostate cancer", "Colorectal
-        cancer", "Breast cancer", "Ovarian cancer", "Founder mutation"], "identifier":
-        [{"type": "doi", "id": "10.1186/1471-2407-12-552"}, {"type": "pissn", "id":
-        "1471-2407"}], "abstract": "<p>Abstract</p> <p>Background</p> <p>Rare, heterozygous
-        germline mutations in the <it>RAD51C</it> gene have been found in breast and
-        ovarian cancer families. In the Finnish population, we have identified two
-        founder mutations in <it>RAD51C</it> that increase the risk of ovarian cancer
-        but not breast cancer in the absence of ovarian cancer. Risk for other cancers
-        has not been studied.</p> <p>Methods</p> <p>To study the role of <it>RAD51C</it>
-        mutations in other common cancer types, we genotyped the Finnish <it>RAD51C</it>
-        founder mutations c.837\u2009+\u20091G\u2009>\u2009A and c.93delG in 1083
-        prostate cancer patients and 802 colorectal cancer patients using TaqMan Real-Time
-        PCR.</p> <p>Results</p> <p>No <it>RAD51C</it> mutations c.837\u2009+\u20091G\u2009>\u2009A
-        or c.93delG were detected among the prostate or colorectal cancer patients.</p>
-        <p>Conclusions</p> <p>The results suggest that the <it>RAD51C</it> mutations
-        do not predispose to prostate or colorectal cancer.</p> ", "subject": [{"code":
-        "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens",
-        "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme":
-        "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology",
-        "scheme": "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term":
-        "Health Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms.
-        Tumors. Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code":
-        "RC31-1245", "term": "Internal medicine", "scheme": "LCC"}, {"code": "R",
-        "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"},
-        {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health Sciences",
-        "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
-        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
-        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
-        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
-        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
-        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
-        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
-        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
-        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
-        "scheme": "LCC"}]}, "created_date": "2013-03-12T01:30:35Z"}, {"last_updated":
-        "2015-04-22T04:39:55Z", "id": "fc05eb22a7dc48e593cb2074bc140a1b", "bibjson":
-        {"identifier": [{"type": "pissn", "id": "0019-509X"}], "start_page": "87",
-        "title": "Positron emission tomography imaging in evaluation of cancer patients.",
-        "journal": {"publisher": "Medknow Publications", "language": ["English"],
+        {"last_updated": "2015-04-22T04:39:55Z", "id": "fc05eb22a7dc48e593cb2074bc140a1b",
+        "bibjson": {"identifier": [{"type": "pissn", "id": "0019-509X"}], "start_page":
+        "87", "title": "Positron emission tomography imaging in evaluation of cancer
+        patients.", "journal": {"publisher": "Medknow Publications", "language": ["English"],
         "title": "Indian Journal of Cancer", "country": "IN", "number": "3", "volume":
         "40"}, "author": [{"name": "Kumar R"}, {"name": "Bhargava P"}, {"name": "Bozkurt
         M"}, {"name": "Zhuang H"}, {"name": "Potenta S"}, {"name": "Alavi A"}], "link":
@@ -275,13 +231,57 @@ http_interactions:
         has also been discussed in brief. The aim of this review article is to review
         the clinical applications of PET in various malignancies and only limited
         number of important studies will be discussed for this effort.", "end_page":
-        "100"}, "created_date": "2007-04-14T00:00:00Z"}, {"last_updated": "2015-04-22T02:51:03Z",
-        "id": "6fa2255d42074743a7e884afcc4b8546", "bibjson": {"title": "Alteration
-        of pancreatic cancer cell functions by tumor-stromal cell interaction", "journal":
-        {"volume": "4", "country": "CH", "publisher": "Frontiers", "language": ["English"],
-        "title": "Frontiers in Physiology"}, "author": [{"affiliation": "Tohoku University
-        Graduate School of Medicine", "email": "hamadas@med.tohoku.ac.jp", "name":
-        "ShinHamada"}], "month": "11", "link": [{"url": "http://journal.frontiersin.org/Journal/10.3389/fphys.2013.00318/full",
+        "100"}, "created_date": "2007-04-14T00:00:00Z"}, {"last_updated": "2015-04-22T04:38:00Z",
+        "id": "f978d4678cb9485984658a52aa8420d5", "bibjson": {"start_page": "552",
+        "title": "Screening of Finnish <it>RAD51C</it> founder mutations in prostate
+        and colorectal cancer patients", "journal": {"publisher": "BioMed Central",
+        "language": ["English"], "license": [{"type": "CC BY", "title": "CC BY"}],
+        "title": "BMC Cancer", "country": "GB", "number": "1", "volume": "12"}, "author":
+        [{"name": "Pelttari Liisa M"}, {"name": "Nurminen Riikka"}, {"name": "Gylfe
+        Alexandra"}, {"name": "Aaltonen Lauri A"}, {"name": "Schleutker Johanna"},
+        {"name": "Nevanlinna Heli"}], "month": "11", "link": [{"url": "http://www.biomedcentral.com/1471-2407/12/552",
+        "type": "fulltext"}], "year": "2012", "keywords": ["<it>RAD51C</it>", "Prostate
+        cancer", "Colorectal cancer", "Breast cancer", "Ovarian cancer", "Founder
+        mutation"], "identifier": [{"type": "doi", "id": "10.1186/1471-2407-12-552"},
+        {"type": "pissn", "id": "1471-2407"}], "abstract": "<p>Abstract</p> <p>Background</p>
+        <p>Rare, heterozygous germline mutations in the <it>RAD51C</it> gene have
+        been found in breast and ovarian cancer families. In the Finnish population,
+        we have identified two founder mutations in <it>RAD51C</it> that increase
+        the risk of ovarian cancer but not breast cancer in the absence of ovarian
+        cancer. Risk for other cancers has not been studied.</p> <p>Methods</p> <p>To
+        study the role of <it>RAD51C</it> mutations in other common cancer types,
+        we genotyped the Finnish <it>RAD51C</it> founder mutations c.837\u2009+\u20091G\u2009>\u2009A
+        and c.93delG in 1083 prostate cancer patients and 802 colorectal cancer patients
+        using TaqMan Real-Time PCR.</p> <p>Results</p> <p>No <it>RAD51C</it> mutations
+        c.837\u2009+\u20091G\u2009>\u2009A or c.93delG were detected among the prostate
+        or colorectal cancer patients.</p> <p>Conclusions</p> <p>The results suggest
+        that the <it>RAD51C</it> mutations do not predispose to prostate or colorectal
+        cancer.</p> ", "subject": [{"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine (General)", "scheme":
+        "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"}, {"code": "RC254-282",
+        "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"code": "RC254-282",
+        "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"code": "RC254-282",
+        "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}]}, "created_date": "2013-03-12T01:30:35Z"},
+        {"last_updated": "2015-04-22T02:51:03Z", "id": "6fa2255d42074743a7e884afcc4b8546",
+        "bibjson": {"title": "Alteration of pancreatic cancer cell functions by tumor-stromal
+        cell interaction", "journal": {"volume": "4", "country": "CH", "publisher":
+        "Frontiers", "language": ["English"], "title": "Frontiers in Physiology"},
+        "author": [{"affiliation": "Tohoku University Graduate School of Medicine",
+        "email": "hamadas@med.tohoku.ac.jp", "name": "ShinHamada"}], "month": "11",
+        "link": [{"url": "http://journal.frontiersin.org/Journal/10.3389/fphys.2013.00318/full",
         "type": "fulltext", "content_type": "html"}], "year": "2013", "keywords":
         ["Epithelial-Mesenchymal Transition", "Mast Cells", "Pancreatic Stellate Cells",
         "cancer stem cells", "desmoplasia", "bone marrow derived cells"], "identifier":
@@ -308,36 +308,6 @@ http_interactions:
         "scheme": "LCC"}, {"code": "Q", "term": "Science", "scheme": "LCC"}, {"code":
         "QP1-981", "term": "Physiology", "scheme": "LCC"}, {"code": "Q", "term": "Science",
         "scheme": "LCC"}]}, "created_date": "2014-05-22T09:44:27Z"}, {"last_updated":
-        "2015-04-22T03:37:55Z", "id": "ac4e51bd6f464828a5859b0731f49ced", "bibjson":
-        {"start_page": "A42", "title": "An audit of families with unreported or misreported
-        cancers verified through a population-based cancer registry: implications
-        for providing cancer risk assessment and management advice by a Familial Cancer
-        Centre", "journal": {"publisher": "BioMed Central", "language": ["English"],
-        "license": [{"type": "CC BY", "title": "CC BY"}], "title": "Hereditary Cancer
-        in Clinical Practice ", "country": "GB", "number": "Suppl 2", "volume": "10"},
-        "author": [{"name": "Kentwell M"}, {"name": "Bogwitz M"}, {"name": "Donoghue
-        L"}, {"name": "McArdle T"}], "month": "4", "link": [{"url": "http://www.hccpjournal.com/content/10/S2/A42",
-        "type": "fulltext"}], "year": "2012", "identifier": [{"type": "doi", "id":
-        "10.1186/1897-4287-10-S2-A42"}, {"type": "pissn", "id": "1897-4287"}], "subject":
-        [{"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
-        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
-        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
-        {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine (General)", "scheme":
-        "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"}, {"code": "RC254-282",
-        "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
-        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
-        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
-        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
-        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
-        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
-        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
-        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
-        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
-        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
-        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
-        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
-        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
-        "scheme": "LCC"}]}, "created_date": "2013-03-12T11:28:12Z"}, {"last_updated":
         "2015-04-22T04:34:56Z", "id": "f5782fa584a44c4ca3cc2ead2d06873a", "bibjson":
         {"title": "Platinum-sensitive recurrence in ovarian cancer: The role of tumor
         microenvironment", "journal": {"publisher": "Frontiers", "language": ["English"],
@@ -398,14 +368,44 @@ http_interactions:
         "license": [{"type": "CC BY-NC-SA", "title": "CC BY-NC-SA"}], "title": "International
         Journal of Medical Research and Health Sciences", "country": "IN", "number":
         "3", "volume": "4"}, "subject": [{"code": "A", "term": "General Works", "scheme":
-        "LCC"}]}, "created_date": "2015-08-03T05:28:29Z"}, {"last_updated": "2015-04-22T03:17:54Z",
-        "id": "9211366b848e4bf59cb2823168046b79", "bibjson": {"identifier": [{"type":
-        "pissn", "id": "0019-509X"}], "start_page": "139", "title": "The relevance
-        of cervical cancer screening and the future of cervical cancer control in
-        India in the light of the approval of the vaccine against cervical cancer",
-        "journal": {"publisher": "Medknow Publications", "language": ["English"],
-        "title": "Indian Journal of Cancer", "country": "IN", "number": "3", "volume":
-        "43"}, "author": [{"name": "Basu M"}], "link": [{"url": "http://www.bioline.org.br/request?06023",
+        "LCC"}]}, "created_date": "2015-08-03T05:28:29Z"}, {"last_updated": "2015-04-22T03:37:55Z",
+        "id": "ac4e51bd6f464828a5859b0731f49ced", "bibjson": {"start_page": "A42",
+        "title": "An audit of families with unreported or misreported cancers verified
+        through a population-based cancer registry: implications for providing cancer
+        risk assessment and management advice by a Familial Cancer Centre", "journal":
+        {"publisher": "BioMed Central", "language": ["English"], "license": [{"type":
+        "CC BY", "title": "CC BY"}], "title": "Hereditary Cancer in Clinical Practice
+        ", "country": "GB", "number": "Suppl 2", "volume": "10"}, "author": [{"name":
+        "Kentwell M"}, {"name": "Bogwitz M"}, {"name": "Donoghue L"}, {"name": "McArdle
+        T"}], "month": "4", "link": [{"url": "http://www.hccpjournal.com/content/10/S2/A42",
+        "type": "fulltext"}], "year": "2012", "identifier": [{"type": "doi", "id":
+        "10.1186/1897-4287-10-S2-A42"}, {"type": "pissn", "id": "1897-4287"}], "subject":
+        [{"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine (General)", "scheme":
+        "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"}, {"code": "RC254-282",
+        "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}]}, "created_date": "2013-03-12T11:28:12Z"}, {"last_updated":
+        "2015-04-22T03:17:54Z", "id": "9211366b848e4bf59cb2823168046b79", "bibjson":
+        {"identifier": [{"type": "pissn", "id": "0019-509X"}], "start_page": "139",
+        "title": "The relevance of cervical cancer screening and the future of cervical
+        cancer control in India in the light of the approval of the vaccine against
+        cervical cancer", "journal": {"publisher": "Medknow Publications", "language":
+        ["English"], "title": "Indian Journal of Cancer", "country": "IN", "number":
+        "3", "volume": "43"}, "author": [{"name": "Basu M"}], "link": [{"url": "http://www.bioline.org.br/request?06023",
         "type": "fulltext"}], "year": "2006", "subject": [{"code": "RC254-282", "term":
         "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
         "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
@@ -687,5 +687,5 @@ http_interactions:
         "scheme": "LCC"}]}, "created_date": "2010-06-18T00:00:00Z"}], "query": "+cancer",
         "total": 65140, "page": 3}'
     http_version: 
-  recorded_at: Wed, 23 Sep 2015 15:25:49 GMT
+  recorded_at: Wed, 23 Sep 2015 15:51:27 GMT
 recorded_with: VCR 2.9.3

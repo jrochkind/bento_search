@@ -129,10 +129,14 @@ module BentoSearch
     #
     # Eg:
     #     fielded_query('apple orange "strawberry banana"', field_name)
-    #     # => 'field_name(+apple +orange +"strawberry banana")'
+    #     # => '+field_name(+apple +orange +"strawberry banana")'
+    #
+    # The "+" prefixed before field-name is to make sure all separate
+    # fields are also mandatory when doing multi-field searches. It should
+    # make no difference for a single-field search. 
     def fielded_query(query, field = nil)
       if field.present?
-        "#{field}:(#{prepare_mandatory_terms(query)})"
+        "+#{field}:(#{prepare_mandatory_terms(query)})"
       else
         prepare_mandatory_terms(query)
       end

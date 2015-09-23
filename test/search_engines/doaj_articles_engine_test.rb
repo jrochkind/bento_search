@@ -99,6 +99,25 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
     assert_present results
   end
 
+  test_with_cassette("complex multi-field", :doaj_articles) do
+    results = @engine.search(:query => {
+      nil     => "Anti-war",
+      :author => "Caffentzis",
+      :title  => '"Respect Your Enemies" first rule of peace',
+      :publication_title => '"Revista Theomai"'
+    })
+
+    assert ! results.failed?
+
+    assert_equal 1, results.total_items
+    assert_equal 1, results.count
+
+    result = results.first
+
+    assert_equal "Revista Theomai", result.source_title
+    assert_equal "Respect Your Enemies - The First Rule of Peace: An Essay Addressed to the U. S. Anti-war Movement", result.title
+  end
+
   test "escapes spaces how DOAJ likes it" do
     url = @engine.args_to_search_url(:query => "One Two")
     parsed = URI.parse(url)
@@ -128,7 +147,22 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
     last_path = parsed.path.split('/').last
     last_path = CGI.unescape(last_path)
 
-    assert_equal "bibjson.author.name:(+Smith)", last_path
+    assert_equal "+bibjson.author.name:(+Smith)", last_path
+  end
+
+  test "generates multi-field search" do
+    url = @engine.args_to_search_url(:query => {
+      nil     => "Anti-war",
+      :author => "Caffentzis",
+      :title  => '"Respect Your Enemies" first rule of peace'
+    })
+
+    parsed = URI.parse(url)
+
+    last_path = parsed.path.split('/').last
+    last_path = CGI.unescape(last_path)
+
+    assert_equal '+Anti\-war +author:(+Caffentzis) +title:(+"Respect Your Enemies" +first +rule +of +peace)', last_path
   end
 
   test "does not escape double quotes" do
@@ -151,7 +185,7 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
     last_path = parsed.path.split('/').last
     last_path = CGI.unescape(last_path)
 
-    assert_equal 'bibjson.title:(+apple +orange +"strawberry banana")', last_path
+    assert_equal '+bibjson.title:(+apple +orange +"strawberry banana")', last_path
   end
 
   test "adds sort to query url" do
