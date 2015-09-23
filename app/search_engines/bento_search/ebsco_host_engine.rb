@@ -558,7 +558,7 @@ class BentoSearch::EbscoHostEngine
       "SU"    => {:semantic => :subject},
       "IS"    => {:semantic => :issn},
       "IB"    => {:semantic => :isbn},
-      "SO"    => {:semantic => :publication_title},
+      "SO"    => {:semantic => :source_title},
       # These may not be defined in all databases....
       "VI"    => {:semantic => :volume},
       "IP"    => {:semantic => :issue},

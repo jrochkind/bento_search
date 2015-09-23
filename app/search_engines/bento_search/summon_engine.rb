@@ -471,7 +471,7 @@ class BentoSearch::SummonEngine
         "ISBN"                => {:semantic => :isbn},
         "ISSN"                => {:semantic => :issn},
         "OCLC"                => {:semantic => :oclcnum},
-        "PublicationSeriesTitle" => {:semantic => :publication_title }
+        "PublicationSeriesTitle" => {:semantic => :source_title }
       }
   end
 

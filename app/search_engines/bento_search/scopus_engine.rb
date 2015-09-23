@@ -212,7 +212,7 @@ module BentoSearch
         "ISSUE"       => {:semantic => :issue},
         "PAGEFIRST"   => {:semantic => :start_page},
         # Should we use SRCTITLE instead? I think exact match might be better?
-        "EXACTSRCTITLE" => {:semantic => :publication_title},
+        "EXACTSRCTITLE" => {:semantic => :source_title},
         "DOI"         => {:semantic => :doi},
         "PUBYEAR"     => {:semantic => :year}
       }

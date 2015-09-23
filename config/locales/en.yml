@@ -48,7 +48,7 @@ en:
       lccn:         "LCCN"
       doi:          "DOI"
       publisher:    "Publisher"
-      publication_title: "Publication"
+      source_title: "Publication"
       volume:       "Volume"
       issue:        "Issue"
       start_page:   "Start Page"

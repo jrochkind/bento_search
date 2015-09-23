@@ -104,7 +104,7 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
       nil     => "Anti-war",
       :author => "Caffentzis",
       :title  => '"Respect Your Enemies" first rule of peace',
-      :publication_title => '"Revista Theomai"'
+      :source_title => '"Revista Theomai"'
     })
 
     assert ! results.failed?

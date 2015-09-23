@@ -246,7 +246,7 @@ module BentoSearch
         "bibjson.author.name"   => {:semantic => :author},
         "publisher"             => {:semantic => :publisher},
         "bibjson.subject.term"  => {:semantic => :subject},
-        "bibjson.journal.title" => {:semantic => :publication_title},
+        "bibjson.journal.title" => {:semantic => :source_title},
         "issn"                  => {:semantic => :issn},
         "doi"                   => {:semantic => :doi},
         "bibjson.journal.volume"   => {:semantic => :volume},
