@@ -33,7 +33,7 @@ Adapters currently included in bento_search
 * [EBSCO Discovery Service](https://www.ebscohost.com/discovery) (requires license)
 * [EBSCOHost](https://www.ebscohost.com/) 'traditional' API (requires license)
 * [WorldCat Search](https://www.worldcat.org/) (requires OCLC membership to get api key)
-* [Google Site Search'(https://www.google.com/work/search/products/gss.html) (requires sign-up for more than 100 searches/day)
+* [Google Site Search](https://www.google.com/work/search/products/gss.html) (requires sign-up for more than 100 searches/day)
 * [JournalTOCs](http://www.journaltocs.hw.ac.uk/) (limited support for fetching current articles by ISSN, free but requires registration)
 
 
