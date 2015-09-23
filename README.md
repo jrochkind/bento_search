@@ -10,34 +10,31 @@ Rails 3.x or 4.x.   ruby 1.9.3+
 ### Goals: To help you
 
 * **Get up and running as quickly as possible** with searching and displaying
-  results from a  third-party service. Solutions to idiosyncracies and
-  undocumented workarounds are encoded in a shared codebase, which abstracts
-  everything to a good, simple code API giving you building blocks to focus
-  on your needs, not the search service's problems.
+  results from a  third-party service. Simple common code API, with idiosyncracies and
+  undocumented workarounds abstracted away.
 * Let you switch out one search service for another in an already built
   application with as little code rewriting as possible. **Avoid vendor lock-in**.
 * Give you the harness to **write adapters for new search services**, without
   having to rewrite common general functionality, just focus on the interface
   with the new API you want to support.
 
-bento_search is focused on use cases for academic libraries, which is mainly
-evidenced by the search engine adapters currently included, and by the
-generalized domain models including fields that matter in our domain (issn,
-vol/issue/page, etc), and some targetted functionality (OpenURL generation).
-But it ought to be useful for more general basic use
-cases too (we include a google site search adapter for instance).
+bento_search is focused on use cases for academic libraries; the shared
+model for search results includes including fields that matter in our domain (issn,
+vol/issue/page, etc), although they ought to have what's needed for general
+basic use too. There is some targetted functionality for academic library/publishing use
+(eg OpenURL generation).
 
 Adapters currently included in bento_search
 
-* Google Books (requires free api key)
-* Scopus (requires license)
-* Serial Solution Summon (requires license)
-* Ex Libris Primo (requires license)
-* EBSCO Discovery Service (requires license)
-* EBSCOHost 'traditional' API (requires license)
-* WorldCat Search (requires OCLC membership to get api key)
-* Google Site Search (requires sign-up for more than 100 searches/day)
-* JournalTOCs (limited support for fetching current articles by ISSN, free but requires registration)
+* [Google Books](https://books.google.com/) (requires free api key)
+* [Scopus](http://www.elsevier.com/solutions/scopus) (requires license)
+* [Serial Solution Summon](http://www.proquest.com/products-services/The-Summon-Service.html) (requires license)
+* [Ex Libris Primo](http://www.exlibrisgroup.com/category/PrimoOverview) (requires license)
+* [EBSCO Discovery Service](https://www.ebscohost.com/discovery) (requires license)
+* [EBSCOHost](https://www.ebscohost.com/) 'traditional' API (requires license)
+* [WorldCat Search](https://www.worldcat.org/) (requires OCLC membership to get api key)
+* [Google Site Search'(https://www.google.com/work/search/products/gss.html) (requires sign-up for more than 100 searches/day)
+* [JournalTOCs](http://www.journaltocs.hw.ac.uk/) (limited support for fetching current articles by ISSN, free but requires registration)
 
 
 
