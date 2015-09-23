@@ -1,7 +1,8 @@
 ## 1.5
 
 * multi-field searching
-* TODO: DOAJ search engine
+* DOAJArticlesEngine new search engine
+* New standard semantic fields including :source_title, :volume, :issue, :start_page
 
 ### 1.4.4
 
