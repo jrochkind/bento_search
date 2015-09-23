@@ -1,0 +1,691 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://doaj.org/api/v1/search/articles/+cancer?page=3&pageSize=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Cookie:
+      - session=UspzkET/3IS3Z8PIxKnLAhLnXDY=?_id=UycyNmYyZmZkMzhkMjA5MWE0NmNjZTU2YTI4OGJjNDZlNycKcDEKLg==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Wed, 23 Sep 2015 15:51:27 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '51877'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Set-Cookie:
+      - session="UspzkET/3IS3Z8PIxKnLAhLnXDY=?_id=UycyNmYyZmZkMzhkMjA5MWE0NmNjZTU2YTI4OGJjNDZlNycKcDEKLg==";
+        Path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"pageSize": 20, "timestamp": "2015-0923T15:51:27Z", "results": [{"last_updated":
+        "2015-04-22T03:06:02Z", "id": "82c9dc39aebe429d8e37b55469ed882d", "bibjson":
+        {"identifier": [{"type": "doi", "id": "10.1007/s11805-011-0562-z"}, {"type":
+        "pissn", "id": "2095-3941"}], "start_page": "77", "title": "The Role of Inflammation
+        in Breast Cancer and Prostate Cancer", "journal": {"publisher": "Cancer Biology
+        & Medicine", "language": ["English"], "title": "Cancer Biology & Medicine",
+        "country": "CN", "number": "2", "volume": "8"}, "author": [{"name": "Wen-liang
+        Zhang"}], "month": "06", "link": [{"url": "http://www.cancerbiomed.org/index.php/cocr/article/view/48",
+        "type": "fulltext"}], "year": "2011", "keywords": ["breast cancer", "prostate
+        cancer", "inflammation"], "subject": [{"code": "RC254-282", "term": "Neoplasms.
+        Tumors. Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code":
+        "RC31-1245", "term": "Internal medicine", "scheme": "LCC"}, {"code": "R",
+        "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"},
+        {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health Sciences",
+        "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}],
+        "abstract": "Inflammatory conditions increase the risk of cancer. Strong evidences
+        showed that inflammation contributes to breast cancer and prostate cancer
+        in different ways such as inflammation-induced DNA or RNA damage, overexpression
+        cytokines, chemokines etc. Recent studies have begun to unravel molecular
+        pathways linking inflammation and cancer. Some possible mechanisms by which
+        inflammation can contribute to carcinogenesis have been found. These mechanisms
+        bywhich inflammation contributes to cancer give broader views of cancer development.
+        These insights are fostering new anti-inflammatory therapeutic approaches
+        to cancer development.", "end_page": "84"}, "created_date": "2013-05-28T04:38:15Z"},
+        {"last_updated": "2015-04-22T03:40:51Z", "id": "b029e7276dc04946bed67f41e0da3f88",
+        "bibjson": {"title": "Cancer Stem Cells and Epithelial Ovarian Cancer", "journal":
+        {"publisher": "Hindawi Publishing Corporation", "language": ["English"], "license":
+        [{"type": "CC BY", "title": "CC BY"}], "title": "Journal of Oncology", "country":
+        "EG", "volume": "2010"}, "author": [{"name": "Dimitra Dafou"}, {"name": "Sheetal
+        Dyall"}, {"name": "Simon A. Gayther"}], "link": [{"url": "http://dx.doi.org/10.1155/2010/105269",
+        "type": "fulltext"}], "year": "2010", "identifier": [{"type": "doi", "id":
+        "10.1155/2010/105269"}, {"type": "pissn", "id": "1687-8450"}, {"type": "eissn",
+        "id": "1687-8469"}], "subject": [{"code": "RC254-282", "term": "Neoplasms.
+        Tumors. Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code":
+        "RC31-1245", "term": "Internal medicine", "scheme": "LCC"}, {"code": "R",
+        "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"},
+        {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health Sciences",
+        "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}]},
+        "created_date": "2011-03-07T15:02:17Z"}, {"last_updated": "2015-04-22T01:56:03Z",
+        "id": "27b89368a80b42219ae2459abb01859c", "bibjson": {"identifier": [{"type":
+        "doi", "id": "10.2298/AOO0403168R"}, {"type": "pissn", "id": "0354-7310"}],
+        "start_page": "168", "title": "Cancer pain syndromes and pharmacotherapy of
+        cancer pain", "journal": {"publisher": "Institute of Oncology Sremska Kamenica",
+        "language": ["English"], "title": "Archive of Oncology", "country": "RS",
+        "number": "3", "volume": "12"}, "author": [{"name": "Ripamonti Carla"}], "link":
+        [{"url": "http://www.doiserbia.nb.rs/img/doi/0354-7310/2004/0354-73100403168R.pdf",
+        "type": "fulltext"}], "year": "2004", "keywords": ["neoplasms", "pain", "drug
+        therapy", "analgesics"], "subject": [{"code": "RC254-282", "term": "Neoplasms.
+        Tumors. Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code":
+        "RC31-1245", "term": "Internal medicine", "scheme": "LCC"}, {"code": "R",
+        "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"},
+        {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health Sciences",
+        "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}],
+        "end_page": "170"}, "created_date": "2010-10-08T13:28:32Z"}, {"last_updated":
+        "2015-04-22T03:21:53Z", "id": "973ebcc0ac544b758dfac883d2e221b0", "bibjson":
+        {"start_page": "52", "title": "German cancer statistics 2004", "journal":
+        {"publisher": "BioMed Central", "language": ["English"], "license": [{"type":
+        "CC BY", "title": "CC BY"}], "title": "BMC Cancer", "country": "GB", "number":
+        "1", "volume": "10"}, "author": [{"name": "Ziese Thomas"}, {"name": "Wolf
+        Ute"}, {"name": "Bertz Joachim"}, {"name": "Haberland J\u00f6rg"}, {"name":
+        "Kurth B\u00e4rbel-Maria"}], "month": "2", "link": [{"url": "http://www.biomedcentral.com/1471-2407/10/52",
+        "type": "fulltext"}], "year": "2010", "identifier": [{"type": "doi", "id":
+        "10.1186/1471-2407-10-52"}, {"type": "pissn", "id": "1471-2407"}], "abstract":
+        "<p>Abstract</p> <p>Background</p> <p>For years the Robert Koch Institute
+        (RKI) has been annually pooling and reviewing the data from the German population-based
+        cancer registries and evaluating them together with the cause-of-death statistics
+        provided by the statistical offices. Traditionally, the RKI periodically estimates
+        the number of new cancer cases in Germany on the basis of the available data
+        from the regional cancer registries in which registration is complete; this
+        figure, in turn, forms the basis for further important indicators.</p> <p>Methods</p>
+        <p>This article gives a brief overview of current indicators - such as incidence,
+        prevalence, mortality, survival rates - on the most common types of cancer,
+        as well as important ratios on the risks of developing and dying of cancer
+        in Germany.</p> <p>Results</p> <p>According to the latest estimate, there
+        were a total of 436,500 new cancer cases in Germany in 2004. The most common
+        cancer in men is prostate cancer with over 58,000 new cases per annum, followed
+        by colorectal and lung cancer. In women, breast cancer remains the most common
+        cancer with an estimated 57,000 new cases every year, also followed by colorectal
+        cancer. These and further findings on selected cancer sites can be found in
+        the current brochure on \"Cancer in Germany\", which is regularly published
+        by the RKI together with the Association of Population-based Cancer Registries
+        in Germany (GEKID). In addition, the RKI made cancer-prevalence estimates
+        and calculated current morbidity and mortality risks at the federal level
+        for the first time. According to these figures, the 5-year partial prevalence
+        - i.e. the total number of cancer patients diagnosed over the past five years
+        who are currently still living - exceeds 600,000 in men; the figure is about
+        the same among women. Here, too, the most common cancers are prostate cancer
+        in men and breast cancer in women. The lifetime risk of developing cancer,
+        which is more related to the individual, is estimated to be higher among men
+        (48.5%) than among women (40.3%). In roughly rounded figures, therefore, about
+        every second person in Germany develops cancer in the course of their lives.
+        One in four men and one in five women die of cancer.</p> <p>Conclusions</p>
+        <p>In recent years, population-based cancer registration in Germany has come
+        significantly closer to the aim of the complete, nationwide coverage of cancer.
+        The continuous improvements in the data situation help describe cancer development
+        in Germany.</p> ", "subject": [{"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine (General)", "scheme":
+        "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"}, {"code": "RC254-282",
+        "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"code": "RC254-282",
+        "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"code": "RC254-282",
+        "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}]}, "created_date": "2010-03-19T00:00:00Z"},
+        {"last_updated": "2015-04-22T04:39:55Z", "id": "fc05eb22a7dc48e593cb2074bc140a1b",
+        "bibjson": {"identifier": [{"type": "pissn", "id": "0019-509X"}], "start_page":
+        "87", "title": "Positron emission tomography imaging in evaluation of cancer
+        patients.", "journal": {"publisher": "Medknow Publications", "language": ["English"],
+        "title": "Indian Journal of Cancer", "country": "IN", "number": "3", "volume":
+        "40"}, "author": [{"name": "Kumar R"}, {"name": "Bhargava P"}, {"name": "Bozkurt
+        M"}, {"name": "Zhuang H"}, {"name": "Potenta S"}, {"name": "Alavi A"}], "link":
+        [{"url": "http://www.indianjcancer.com/article.asp?issn=0019-509X;year=2003;volume=40;issue=3;spage=87;epage=100;aulast=Kumar",
+        "type": "fulltext"}], "year": "2003", "keywords": ["Positron emission tomography",
+        "Fluorodeoxyglucose", "Lymphoma", "colonic cancer", "Lung nodule and lung
+        cancer", "Breast cancer", "Head and neck cancer", "Ovarian cancer", "Melanoma",
+        "Gastric and esophageal cancer."], "subject": [{"code": "RC254-282", "term":
+        "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}],
+        "abstract": "Positron emission tomography (PET) is a diagnostic imaging technique
+        that has progressed rapidly from being a research technique in laboratories
+        to a routine clinical imaging modality. The most widely used radiotracer in
+        PET is Fluorine18-fluorodeoxyglucose (F18-FDG), which is an analogue of glucose.
+        The FDG uptake in cells is directly proportional to glucose metabolism of
+        cells. Since glucose metabolism is increased many fold in malignant tumors
+        PET has a high sensitivity and a high negative predictive value. PET with
+        FDG is now the standard of care in initial staging, monitoring the response
+        to the therapy, and management of lung cancer, colonic cancer, lymphoma, melanoma,
+        esophageal cancer, head and neck cancer and breast cancer. Other indications
+        of PET like bone tumor, ovarian cancer and cancer of unknown primary (CUP)
+        has also been discussed in brief. The aim of this review article is to review
+        the clinical applications of PET in various malignancies and only limited
+        number of important studies will be discussed for this effort.", "end_page":
+        "100"}, "created_date": "2007-04-14T00:00:00Z"}, {"last_updated": "2015-04-22T04:38:00Z",
+        "id": "f978d4678cb9485984658a52aa8420d5", "bibjson": {"start_page": "552",
+        "title": "Screening of Finnish <it>RAD51C</it> founder mutations in prostate
+        and colorectal cancer patients", "journal": {"publisher": "BioMed Central",
+        "language": ["English"], "license": [{"type": "CC BY", "title": "CC BY"}],
+        "title": "BMC Cancer", "country": "GB", "number": "1", "volume": "12"}, "author":
+        [{"name": "Pelttari Liisa M"}, {"name": "Nurminen Riikka"}, {"name": "Gylfe
+        Alexandra"}, {"name": "Aaltonen Lauri A"}, {"name": "Schleutker Johanna"},
+        {"name": "Nevanlinna Heli"}], "month": "11", "link": [{"url": "http://www.biomedcentral.com/1471-2407/12/552",
+        "type": "fulltext"}], "year": "2012", "keywords": ["<it>RAD51C</it>", "Prostate
+        cancer", "Colorectal cancer", "Breast cancer", "Ovarian cancer", "Founder
+        mutation"], "identifier": [{"type": "doi", "id": "10.1186/1471-2407-12-552"},
+        {"type": "pissn", "id": "1471-2407"}], "abstract": "<p>Abstract</p> <p>Background</p>
+        <p>Rare, heterozygous germline mutations in the <it>RAD51C</it> gene have
+        been found in breast and ovarian cancer families. In the Finnish population,
+        we have identified two founder mutations in <it>RAD51C</it> that increase
+        the risk of ovarian cancer but not breast cancer in the absence of ovarian
+        cancer. Risk for other cancers has not been studied.</p> <p>Methods</p> <p>To
+        study the role of <it>RAD51C</it> mutations in other common cancer types,
+        we genotyped the Finnish <it>RAD51C</it> founder mutations c.837\u2009+\u20091G\u2009>\u2009A
+        and c.93delG in 1083 prostate cancer patients and 802 colorectal cancer patients
+        using TaqMan Real-Time PCR.</p> <p>Results</p> <p>No <it>RAD51C</it> mutations
+        c.837\u2009+\u20091G\u2009>\u2009A or c.93delG were detected among the prostate
+        or colorectal cancer patients.</p> <p>Conclusions</p> <p>The results suggest
+        that the <it>RAD51C</it> mutations do not predispose to prostate or colorectal
+        cancer.</p> ", "subject": [{"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine (General)", "scheme":
+        "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"}, {"code": "RC254-282",
+        "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"code": "RC254-282",
+        "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"code": "RC254-282",
+        "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}]}, "created_date": "2013-03-12T01:30:35Z"},
+        {"last_updated": "2015-04-22T02:51:03Z", "id": "6fa2255d42074743a7e884afcc4b8546",
+        "bibjson": {"title": "Alteration of pancreatic cancer cell functions by tumor-stromal
+        cell interaction", "journal": {"volume": "4", "country": "CH", "publisher":
+        "Frontiers", "language": ["English"], "title": "Frontiers in Physiology"},
+        "author": [{"affiliation": "Tohoku University Graduate School of Medicine",
+        "email": "hamadas@med.tohoku.ac.jp", "name": "ShinHamada"}], "month": "11",
+        "link": [{"url": "http://journal.frontiersin.org/Journal/10.3389/fphys.2013.00318/full",
+        "type": "fulltext", "content_type": "html"}], "year": "2013", "keywords":
+        ["Epithelial-Mesenchymal Transition", "Mast Cells", "Pancreatic Stellate Cells",
+        "cancer stem cells", "desmoplasia", "bone marrow derived cells"], "identifier":
+        [{"type": "pissn", "id": "1664-042X"}, {"type": "doi", "id": "10.3389/fphys.2013.00318"}],
+        "abstract": "Pancreatic cancer shows a characteristic tissue structure called
+        desmoplasia, which consists of dense fibrotic stroma surrounding cancer cells.
+        Interactions between pancreatic cancer cells and stromal cells promote invasive
+        growth of cancer cells and establish a specific microenvironment such as hypoxia
+        which further aggravates the malignant behavior of cancer cells. Pancreatic
+        stellate cells (PSCs) play pivotal role in the development of fibrosis within
+        the pancreatic cancer tissue, and also affect the cancer cell functions. PSCs
+        induce epithelial-mesenchymal transition and cancer stem cell (CSC)-related
+        phenotypes in pancreatic cancer cells by activating multiple signaling pathways.
+        In addition, pancreatic cancer cells and PSCs recruit myeloid-derived suppressor
+        cells which attenuate the immune reaction against pancreatic cancer cells.
+        As a result, pancreatic cancer cells become refractory against conventional
+        therapies. The formation of the CSC-niche by stromal cells facilitates postoperative
+        recurrence, re-growth of therapy-resistant tumors and distant metastasis.
+        Conventional therapies targeting cancer cells failed to conquer pancreatic
+        cancer, but targeting stromal cells and immune cells effectively improved
+        the therapeutic responses in experimental conditions. A combination of novel
+        strategies altering stromal cell functions could contribute to improving the
+        pancreatic cancer prognosis. ", "subject": [{"code": "QP1-981", "term": "Physiology",
+        "scheme": "LCC"}, {"code": "Q", "term": "Science", "scheme": "LCC"}, {"code":
+        "QP1-981", "term": "Physiology", "scheme": "LCC"}, {"code": "Q", "term": "Science",
+        "scheme": "LCC"}]}, "created_date": "2014-05-22T09:44:27Z"}, {"last_updated":
+        "2015-04-22T04:34:56Z", "id": "f5782fa584a44c4ca3cc2ead2d06873a", "bibjson":
+        {"title": "Platinum-sensitive recurrence in ovarian cancer: The role of tumor
+        microenvironment", "journal": {"publisher": "Frontiers", "language": ["English"],
+        "license": [{"type": "CC BY", "title": "CC BY"}], "title": "Frontiers in Oncology",
+        "country": "CH", "volume": "3"}, "author": [{"affiliation": "Mayo Clinic College
+        of Medicine", "email": "kuang@cs.umn.edu", "name": "RuiKuang"}], "month":
+        "9", "link": [{"url": "http://journal.frontiersin.org/Journal/10.3389/fonc.2013.00251/full",
+        "type": "fulltext", "content_type": "html"}], "year": "2013", "keywords":
+        ["Extracellular Matrix", "Cancer stem cell", "ovarian cancer", "platinum-sensitive
+        recurrence", "platinum resistance"], "identifier": [{"type": "pissn", "id":
+        "2234-943X"}, {"type": "doi", "id": "10.3389/fonc.2013.00251"}], "abstract":
+        "Despite several advances in the understanding of ovarian cancer pathobiology,
+        in terms of driver genetic alterations in high-grade serous cancer, histology
+        heterogeneity of epithelial ovarian cancer, cell-of-origin for ovarian cancer,
+        the survival rate from ovarian cancer is disappointingly low when compared
+        to that of breast or prostate cancer.  One of the factors contributing to
+        the poor survival rate from ovarian cancer is the development of chemotherapy
+        resistance following several rounds of chemotherapy.  Although unicellular
+        drug resistance mechanisms contribute to chemotherapy resistance, tumor microenvironment
+        and the extracellular matrix, in particular, is emerging as a significant
+        determinant of a tumor\u2019s response to chemotherapy.  In this review, we
+        discuss the potential role of the tumor microenvironment in ovarian cancer
+        recurrence and resistance to chemotherapy.  Finally, we propose an alternative
+        view of platinum-sensitive recurrence to describe a potential role of the
+        extracellular matrix in the process. ", "subject": [{"code": "RC254-282",
+        "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"code": "RC254-282",
+        "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}]}, "created_date": "2014-05-22T09:49:32Z"},
+        {"last_updated": "2015-08-03T05:28:29Z", "id": "03f3114aebec453896864b46b07b5979",
+        "bibjson": {"identifier": [{"type": "doi", "id": "10.5958/2319-5886.2015.00100.9"},
+        {"type": "pissn", "id": "2319-5886"}, {"type": "eissn", "id": "2319-5886"}],
+        "start_page": "519", "title": "A COMPARATIVE STUDY OF CAREGIVER BURDEN IN
+        CANCER CERVIX AND CANCER BREAST ILLNESSES", "abstract": "Background: Caregivers
+        of individuals suffering from cancer illnesses are at risk of having subjected
+        to mental health consequences. There is a paucity of data comparing the caregiver
+        burden of cancer breast and cancer cervix patients. Aim:  The aim of the present
+        study is to compare the caregiver burden of cancer breast and cancer cervix
+        patients. To study the association of caregiver burden with demographic factors
+        like age, gender, duration of caregiving etc. Materials & Methods:  This Cross
+        sectional study is performed on the key relatives of patients of 31 cancer
+        cervix and 31 cancer breast patients. Burden assessment schedule was used.
+        Results:  Our findings suggest burden is more in male caregivers of breast
+        cancer patients. It is not so in caregivers of cancer cervix patients. Whenever
+        the caregiver is closely related to the patients the burden is high in both
+        groups. Whenever the burden scores were high the depression scores were also
+        high. Treatment modalities as a whole correlates with burden scores in caregivers
+        of breast cancer patients but not in cancer cervix patients. Conclusion:  Caregivers
+        with breast and cervical cancer patients are vulnerable if the caregiver is
+        male, from low socioeconomical background, more closely related and when the
+        patients received poor treatment modalities.", "author": [{"affiliation":
+        "", "name": "Srinivasagopalan, Nappinnai, Solayappan"}], "month": "7", "link":
+        [{"url": "http://ijmrhs.com/wp-content/plugins/download-attachments/includes/download.php?id=4238",
+        "type": "fulltext"}], "year": "2015", "keywords": ["Burden", "caregiver",
+        "cancer breast"], "end_page": "526", "journal": {"language": ["English"],
+        "license": [{"type": "CC BY-NC-SA", "title": "CC BY-NC-SA"}], "title": "International
+        Journal of Medical Research and Health Sciences", "country": "IN", "number":
+        "3", "volume": "4"}, "subject": [{"code": "A", "term": "General Works", "scheme":
+        "LCC"}]}, "created_date": "2015-08-03T05:28:29Z"}, {"last_updated": "2015-04-22T03:37:55Z",
+        "id": "ac4e51bd6f464828a5859b0731f49ced", "bibjson": {"start_page": "A42",
+        "title": "An audit of families with unreported or misreported cancers verified
+        through a population-based cancer registry: implications for providing cancer
+        risk assessment and management advice by a Familial Cancer Centre", "journal":
+        {"publisher": "BioMed Central", "language": ["English"], "license": [{"type":
+        "CC BY", "title": "CC BY"}], "title": "Hereditary Cancer in Clinical Practice
+        ", "country": "GB", "number": "Suppl 2", "volume": "10"}, "author": [{"name":
+        "Kentwell M"}, {"name": "Bogwitz M"}, {"name": "Donoghue L"}, {"name": "McArdle
+        T"}], "month": "4", "link": [{"url": "http://www.hccpjournal.com/content/10/S2/A42",
+        "type": "fulltext"}], "year": "2012", "identifier": [{"type": "doi", "id":
+        "10.1186/1897-4287-10-S2-A42"}, {"type": "pissn", "id": "1897-4287"}], "subject":
+        [{"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine (General)", "scheme":
+        "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"}, {"code": "RC254-282",
+        "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}]}, "created_date": "2013-03-12T11:28:12Z"}, {"last_updated":
+        "2015-04-22T03:17:54Z", "id": "9211366b848e4bf59cb2823168046b79", "bibjson":
+        {"identifier": [{"type": "pissn", "id": "0019-509X"}], "start_page": "139",
+        "title": "The relevance of cervical cancer screening and the future of cervical
+        cancer control in India in the light of the approval of the vaccine against
+        cervical cancer", "journal": {"publisher": "Medknow Publications", "language":
+        ["English"], "title": "Indian Journal of Cancer", "country": "IN", "number":
+        "3", "volume": "43"}, "author": [{"name": "Basu M"}], "link": [{"url": "http://www.bioline.org.br/request?06023",
+        "type": "fulltext"}], "year": "2006", "subject": [{"code": "RC254-282", "term":
+        "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}],
+        "end_page": "139"}, "created_date": "2006-11-17T00:00:00Z"}, {"last_updated":
+        "2015-04-22T02:04:16Z", "id": "32930792261249ebbf3805fa7fa7ca06", "bibjson":
+        {"identifier": [{"type": "doi", "id": "10.1007/s11805-011-0584-6"}, {"type":
+        "pissn", "id": "2095-3941"}], "start_page": "220", "title": "Multi-Targeted
+        Therapies in Non-Small Cell Lung Cancer", "journal": {"publisher": "Cancer
+        Biology & Medicine", "language": ["English"], "title": "Cancer Biology & Medicine",
+        "country": "CN", "number": "4", "volume": "8"}, "author": [{"name": "Kai WANG"},
+        {"name": "Jin WEI"}], "month": "12", "link": [{"url": "http://www.cancerbiomed.org/index.php/cocr/article/view/31",
+        "type": "fulltext"}], "year": "2011", "keywords": ["multi-targeted therapies",
+        "non-small cell lung cancer"], "subject": [{"code": "RC254-282", "term": "Neoplasms.
+        Tumors. Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code":
+        "RC31-1245", "term": "Internal medicine", "scheme": "LCC"}, {"code": "R",
+        "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"},
+        {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health Sciences",
+        "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}],
+        "abstract": "Current treatment modalities provide limitedimprovement in the
+        natural course of lung cancer, and prognosisremains poor. Lung cancer is a
+        malignancy with great molecularheterogeneity. The complexity of the signaling
+        process leading tocancer cell proliferation and to the neoplastic phenotype
+        supportsthe necessity of interfering at different stages to avoid cancer cellresistance
+        to therapy. For this reason, new strategies for thesimultaneous inhibition
+        of multiple molecular targets are beingpursued.", "end_page": "223"}, "created_date":
+        "2013-05-10T09:22:54Z"}, {"last_updated": "2015-04-22T02:46:12Z", "id": "6956736037c84de3b74c82921eafa553",
+        "bibjson": {"identifier": [{"type": "doi", "id": "10.3390/cancers2041830"},
+        {"type": "pissn", "id": "2072-6694"}], "start_page": "1830", "title": "Pancreatic
+        Cancer Biomarkers and Their Implication in Cancer Diagnosis and Epidemiology",
+        "journal": {"publisher": "Molecular Diversity Preservation International",
+        "language": ["English"], "license": [{"type": "CC BY", "title": "CC BY"}],
+        "title": "Cancers", "country": "CH", "number": "4", "volume": "2"}, "author":
+        [{"name": "Mukesh Verma"}], "month": "11", "link": [{"url": "http://www.mdpi.com/2072-6694/2/4/1830/",
+        "type": "fulltext"}], "year": "2010", "keywords": ["biomarker", "cancer",
+        "diagnosis", "epidemiology", "epigenetics", "glycans", "methylation index",
+        "pancreas", "prognosis", "sensitivity", "specificity", "survival", "treatment"],
+        "subject": [{"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including
+        cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine (General)", "scheme":
+        "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"}, {"code": "RC254-282",
+        "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}], "abstract": "Pancreatic cancer is the fourth most common
+        cause of cancer-related mortality in the United States. Biomarkers are needed
+        to detect this cancer early during the disease development and for screening
+        populations to identify those who are at risk. In cancer, \u201cbiomarker\u201d
+        refers to a substance or process that is indicative of the presence of cancer
+        in the body. A biomarker might be either a molecule secreted by a tumor or
+        it can be a specific response of the body to the presence of cancer. Genetic,
+        epigenetic, proteomic, glycomic, and imaging biomarkers can be used for cancer
+        diagnosis, prognosis, and epidemiology. A number of potential biomarkers have
+        been identified for pancreatic cancer. These markers can be assayed in non-invasively
+        collected biofluids. These biomarkers need analytical and clinical validation
+        so that they can be used for the purpose of screening and diagnosing pancreatic
+        cancer and determining disease prognosis. In this article, the latest developments
+        in pancreatic cancer biomarkers are discussed. ", "end_page": "1837"}, "created_date":
+        "2010-11-08T17:41:19Z"}, {"last_updated": "2015-04-22T03:29:01Z", "id": "a0af6fc8a0e14324afe2bc68cf9033d1",
+        "bibjson": {"identifier": [{"type": "pissn", "id": "1837-9664"}], "start_page":
+        "503", "title": "Cavitary Lung Cancer Lined with Normal Bronchial Epithelium
+        and Cancer Cells", "journal": {"publisher": "Ivyspring International Publisher",
+        "language": ["English"], "license": [{"type": "CC BY-NC-ND", "title": "CC
+        BY-NC-ND"}], "title": "Journal of Cancer", "country": "AU", "number": "1",
+        "volume": "2"}, "author": [{"name": "Taichiro Goto, Arafumi Maeshima, Yoshitaka
+        Oyamada, Ryoichi Kato"}], "link": [{"url": "http://www.jcancer.org/v02p0503.htm",
+        "type": "fulltext"}], "year": "2011", "subject": [{"code": "RC254-282", "term":
+        "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}],
+        "abstract": "<p>Reports of cavitary lung cancer are not uncommon, and the
+        cavity generally contains either dilated bronchi or cancer cells. Recently,
+        we encountered a surgical case of cavitary lung cancer whose cavity tended
+        to enlarge during long-term follow-up, and was found to be lined with normal
+        bronchial epithelium and adenocarcinoma cells.</p>", "end_page": "506"}, "created_date":
+        "2011-12-23T12:51:13Z"}, {"last_updated": "2015-04-22T03:10:27Z", "id": "885a4bff30424964a24f39cc76e59e0a",
+        "bibjson": {"start_page": "557", "title": "Mode of primary cancer detection
+        as an indicator of screening practice for second primary cancer in cancer
+        survivors: a nationwide survey in Korea", "journal": {"publisher": "BioMed
+        Central", "language": ["English"], "license": [{"type": "CC BY", "title":
+        "CC BY"}], "title": "BMC Cancer", "country": "GB", "number": "1", "volume":
+        "12"}, "author": [{"name": "Suh Beomseok"}, {"name": "Shin Dong"}, {"name":
+        "Kim So"}, {"name": "Park Jae-Hyun"}, {"name": "Chang Weon"}, {"name": "Lim
+        Seung"}, {"name": "Yim Chang-Yeol"}, {"name": "Cho Be-Long"}, {"name": "Park
+        Eun-Cheol"}, {"name": "Park Jong-Hyock"}], "month": "11", "link": [{"url":
+        "http://www.biomedcentral.com/1471-2407/12/557", "type": "fulltext"}], "year":
+        "2012", "keywords": ["Cancer survivor", "Second primary cancer", "Screening",
+        "Mode of detection", "Screen-detected"], "identifier": [{"type": "doi", "id":
+        "10.1186/1471-2407-12-557"}, {"type": "pissn", "id": "1471-2407"}], "abstract":
+        "<p>Abstract</p> <p>Background</p> <p>While knowledge and risk perception
+        have been associated with screening for second primary cancer (SPC), there
+        are no clinically useful indicators to identify who is at risk of not being
+        properly screened for SPC. We investigated whether the mode of primary cancer
+        detection (i.e. screen-detected vs. non-screen-detected) is associated with
+        subsequent completion of all appropriate SPC screening in cancer survivors.</p>
+        <p>Methods</p> <p>Data were collected from cancer patients treated at the
+        National Cancer Center and nine regional cancer centers across Korea. A total
+        of 512 cancer survivors older than 40, time since diagnosis more than 2 years,
+        and whose first primary cancer was not advanced or metastasized were selected.
+        Multivariate logistic regression was used to examine factors, including mode
+        of primary cancer detection, associated with completion of all appropriate
+        SPC screening according to national cancer screening guidelines.</p> <p>Results</p>
+        <p>Being screen-detected for their first primary cancer was found to be significantly
+        associated with completion of all appropriate SPC screening (adjusted odds
+        ratio, 2.13; 95% confidence interval, 1.36\u20133.33), after controlling for
+        demographic and clinical variables. Screen-detected cancer survivors were
+        significantly more likely to have higher household income, have other comorbidities,
+        and be within 5 years since diagnosis.</p> <p>Conclusions</p> <p>The mode
+        of primary cancer detection, a readily available clinical information, can
+        be used as an indicator for screening practice for SPC in cancer survivors.
+        Education about the importance of SPC screening will be helpful particularly
+        for cancer survivors whose primary cancer was not screen-detected.</p> ",
+        "subject": [{"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including
+        cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine (General)", "scheme":
+        "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"}, {"code": "RC254-282",
+        "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}]}, "created_date": "2013-03-12T01:30:43Z"}, {"last_updated":
+        "2015-04-22T03:30:50Z", "id": "a3058decc18d4c3ab5e9b6a101da00c5", "bibjson":
+        {"start_page": "4", "title": "Ovarian cancer: emerging concept on cancer stem
+        cells", "journal": {"publisher": "BioMed Central", "language": ["English"],
+        "license": [{"type": "CC BY", "title": "CC BY"}], "title": "Journal of Ovarian
+        Research ", "country": "GB", "number": "1", "volume": "1"}, "author": [{"name":
+        "Ponnusamy Moorthy P"}, {"name": "Batra Surinder K"}], "month": "10", "link":
+        [{"url": "http://www.ovarianresearch.com/content/1/1/4", "type": "fulltext"}],
+        "year": "2008", "identifier": [{"type": "doi", "id": "10.1186/1757-2215-1-4"},
+        {"type": "pissn", "id": "1757-2215"}], "abstract": "<p>Abstract</p> <p>Emerging
+        evidence suggests that the capacity of a tumor to grow and propagate is dependent
+        on a small subset of cells within a tumor, termed cancer stem cells. In fact,
+        cancer cells, like stem cells, can proliferate indefinitely through a dysregulated
+        cellular self-renewal capacity. Cancer stem cells may originate due to the
+        distribution into self-renewal and differentiation pathways occurring in multi-potential
+        stem cells, tissue-specific stem cells, progenitor cells and cancer cells.
+        Recent studies have shown that ovarian cancer also contains stem cells or
+        tumor-initiating cells. Moreover, ovarian serous adenocarcinomas were disaggregated
+        and subjected to growth conditions to select for self-renewing, non-adherent
+        spheroids previously shown to be derived from tissue stem cells. A recent
+        study showed that epithelial ovarian cancer was derived from a sub population
+        of CD44<sup>+</sup>, CD117<sup>+ </sup>and CD133<sup>+ </sup>cells. The existence
+        of cancer stem cells would explain why only a small minority of cancer cells
+        is capable of extensive proliferation of the tumor. In this review, we have
+        discussed the studies on ovarian cancer stem cells along with the molecular
+        pathways that could be involved in these cancer stem cells.</p> ", "subject":
+        [{"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine (General)", "scheme":
+        "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"}, {"code": "RC254-282",
+        "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}]}, "created_date": "2013-03-12T10:43:05Z"}, {"last_updated":
+        "2015-08-04T06:02:34Z", "id": "c45f789380c84b7fbeab41d62ea29527", "bibjson":
+        {"identifier": [{"type": "pissn", "id": "0019-509X"}, {"type": "eissn", "id":
+        "1998-4774"}, {"type": "doi", "id": "10.4103/0019-509X.82871"}], "start_page":
+        "145", "title": "Cetuximab in head and neck cancer", "journal": {"publisher":
+        "Medknow Publications", "language": ["English"], "title": "Indian Journal
+        of Cancer", "country": "IN", "number": "2", "volume": "48"}, "author": [{"name":
+        "P M Parikh"}, {"name": "G S Bhattacharyya"}, {"name": "A Vora"}], "link":
+        [{"url": "http://www.indianjcancer.com/article.asp?issn=0019-509X;year=2011;volume=48;issue=2;spage=145;epage=147;aulast=Parikh",
+        "type": "fulltext", "content_type": "html"}], "year": "2011", "end_page":
+        "147", "subject": [{"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}]}, "created_date": "2011-09-09T00:00:00Z"}, {"last_updated":
+        "2015-08-04T06:01:22Z", "id": "48f9ed5ffade434e81f7d48d7596c06d", "bibjson":
+        {"identifier": [{"type": "pissn", "id": "0019-509X"}, {"type": "eissn", "id":
+        "1998-4774"}, {"type": "doi", "id": "10.4103/0019-509X.64704"}], "start_page":
+        "344", "title": "Cervical cancer screening in developing countries", "journal":
+        {"publisher": "Medknow Publications", "language": ["English"], "title": "Indian
+        Journal of Cancer", "country": "IN", "number": "3", "volume": "47"}, "author":
+        [{"name": "S Patra"}, {"name": "D Panda"}], "link": [{"url": "http://www.indianjcancer.com/article.asp?issn=0019-509X;year=2010;volume=47;issue=3;spage=344;epage=345;aulast=Patra",
+        "type": "fulltext", "content_type": "html"}], "year": "2010", "end_page":
+        "345", "subject": [{"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}]}, "created_date": "2010-07-23T00:00:00Z"}, {"last_updated":
+        "2015-08-04T05:30:03Z", "id": "0710f1ff7e564b5a96daa7a7603ceb59", "bibjson":
+        {"identifier": [{"type": "pissn", "id": "0019-509X"}, {"type": "eissn", "id":
+        "1998-4774"}, {"type": "doi", "id": "10.4103/0019-509X.48588"}], "start_page":
+        "1", "title": "Tackling the cancer Tsunami", "journal": {"publisher": "Medknow
+        Publications", "language": ["English"], "title": "Indian Journal of Cancer",
+        "country": "IN", "number": "1", "volume": "46"}, "author": [{"name": "P Kumar"},
+        {"name": "G S Bhattacharyya"}, {"name": "S Dattatreya"}, {"name": "H Malhotra"}],
+        "link": [{"url": "http://www.indianjcancer.com/article.asp?issn=0019-509X;year=2009;volume=46;issue=1;spage=1;epage=4;aulast=Kumar",
+        "type": "fulltext", "content_type": "html"}], "year": "2009", "end_page":
+        "4", "subject": [{"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}]}, "created_date": "2009-04-12T00:00:00Z"}, {"last_updated":
+        "2015-08-04T06:01:04Z", "id": "f82a22f9acac4852bdf483a9b8ca4f0e", "bibjson":
+        {"identifier": [{"type": "pissn", "id": "0019-509X"}, {"type": "eissn", "id":
+        "1998-4774"}, {"type": "doi", "id": "10.4103/0019-509X.63015"}], "start_page":
+        "231", "title": "Swine flu: High mortality in cancer patients", "journal":
+        {"publisher": "Medknow Publications", "language": ["English"], "title": "Indian
+        Journal of Cancer", "country": "IN", "number": "2", "volume": "47"}, "author":
+        [{"name": "V Wiwanitkit"}], "link": [{"url": "http://www.indianjcancer.com/article.asp?issn=0019-509X;year=2010;volume=47;issue=2;spage=231;epage=231;aulast=Wiwanitkit",
+        "type": "fulltext", "content_type": "html"}], "year": "2010", "end_page":
+        "231", "subject": [{"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}]}, "created_date": "2010-06-18T00:00:00Z"}], "query": "+cancer",
+        "total": 65140, "page": 3}'
+    http_version: 
+  recorded_at: Wed, 23 Sep 2015 15:51:27 GMT
+recorded_with: VCR 2.9.3

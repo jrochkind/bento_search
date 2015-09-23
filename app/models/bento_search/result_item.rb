@@ -224,7 +224,7 @@ module BentoSearch
     # Short summary of item.
     # Mark .html_safe if it includes html -- creator is responsible
     # for making sure html is safely sanitizied and/or stripped,
-    # rails ActionView::Helpers::Sanistize #sanitize and #strip_tags
+    # rails ActionView::Helpers::SanitizeHelper #sanitize and #strip_tags
     # may be helpful.
     serializable_attr_accessor :abstract
 

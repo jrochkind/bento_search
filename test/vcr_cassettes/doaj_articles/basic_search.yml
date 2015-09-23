@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://doaj.org/api/v1/search/articles/+Breast%20+cancer%20+patients%20+with%20+lobular%20+cancer%20+more%20+commonly%20+have%20+a%20+father%20+than%20+a%20+mother%20+diagnosed%20+with%20+cancer?pageSize=10
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Cookie:
+      - session=UspzkET/3IS3Z8PIxKnLAhLnXDY=?_id=UycyNmYyZmZkMzhkMjA5MWE0NmNjZTU2YTI4OGJjNDZlNycKcDEKLg==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Wed, 23 Sep 2015 15:51:24 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '4515'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Set-Cookie:
+      - session="UspzkET/3IS3Z8PIxKnLAhLnXDY=?_id=UycyNmYyZmZkMzhkMjA5MWE0NmNjZTU2YTI4OGJjNDZlNycKcDEKLg==";
+        Path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"pageSize": 10, "timestamp": "2015-0923T15:51:24Z", "results": [{"last_updated":
+        "2015-04-22T03:59:29Z", "id": "c7cbb0516de24de2bdcfb3d81a40ab1b", "bibjson":
+        {"start_page": "497", "title": "Breast cancer patients with lobular cancer
+        more commonly have a father than a mother diagnosed with cancer", "journal":
+        {"publisher": "BioMed Central", "language": ["English"], "license": [{"type":
+        "CC BY", "title": "CC BY"}], "title": "BMC Cancer", "country": "GB", "number":
+        "1", "volume": "11"}, "author": [{"name": "Ellberg Carolina"}, {"name": "Olsson
+        H\u00e5kan"}], "month": "11", "link": [{"url": "http://www.biomedcentral.com/1471-2407/11/497",
+        "type": "fulltext"}], "year": "2011", "identifier": [{"type": "doi", "id":
+        "10.1186/1471-2407-11-497"}, {"type": "pissn", "id": "1471-2407"}], "abstract":
+        "<p>Abstract</p> <p>Background</p> <p>The association between lobular breast
+        cancer and family history is not clear. The aim of the study was to possibly
+        identifying new hereditary patterns predisposing for cancer in the different
+        histopathologic subtypes of breast cancer, with focus on patients with lobular
+        breast cancer and cancer in their first degree relatives.</p> <p>Methods</p>
+        <p>In 1676 consecutive breast cancer patients detailed family history of cancer
+        was related to histopathologic subtype of breast cancer.</p> <p>Results</p>
+        <p>Patients with lobular breast cancer were found to be significantly positively
+        associated with having a father diagnosed with cancer, OR 2.17 (95% confidence
+        interval (CI) 1.37-3.46). The finding persisted after excluding breast cancer
+        in the family. Ductal breast cancer was associated with having a mother diagnosed
+        with cancer. There was a significant association between lobular breast cancer
+        and having a father with prostate cancer, OR 2.4 (CI 1.1-5.3). The occurrence
+        of having a father with prostate cancer for lobular breast cancer patients
+        was higher in the younger patient group, OR 2.9 (CI 1.1-7.8), and was still
+        high but lost statistical significance in the older patient group, OR 1.9
+        (CI 0.5-7.4). The association between lobular breast cancer and a father remained
+        significant after excluding fathers with prostate cancer, OR 1.94 (CI 1.20-3.14).
+        Other commonly occurring tumor types in the father included sarcoma and leukemia.</p>
+        <p>Conclusion</p> <p>We propose that lobular breast cancer is associated with
+        having a father diagnosed with cancer, most commonly prostate carcinoma. Since
+        the association remained after excluding family history of breast cancer,
+        the association seems independent of classical breast cancer heredity. The
+        association with a father diagnosed with cancer also remained after removing
+        prostate cancer, indicating an independence from prostate cancer as well.
+        The reason for this association is genetically unclear, but could involve
+        sex-specific imprinting.</p> ", "subject": [{"code": "RC254-282", "term":
+        "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}]},
+        "created_date": "2013-03-12T01:21:44Z"}], "query": "+Breast +cancer +patients
+        +with +lobular +cancer +more +commonly +have +a +father +than +a +mother +diagnosed
+        +with +cancer", "total": 1, "page": 1}'
+    http_version: 
+  recorded_at: Wed, 23 Sep 2015 15:51:24 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://doaj.org/api/v1/search/articles/+Anti%5C-war%20+bibjson.author.name:(+Caffentzis)%20+bibjson.title:(+%22Respect%20Your%20Enemies%22%20+first%20+rule%20+of%20+peace)%20+bibjson.journal.title:(+%22Revista%20Theomai%22)?pageSize=10
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Wed, 23 Sep 2015 15:58:02 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2314'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Set-Cookie:
+      - session="UspzkET/3IS3Z8PIxKnLAhLnXDY=?_id=UycyNmYyZmZkMzhkMjA5MWE0NmNjZTU2YTI4OGJjNDZlNycKcDEKLg==";
+        Path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"pageSize": 10, "timestamp": "2015-0923T15:58:02Z", "results": [{"last_updated":
+        "2015-09-18T18:30:31Z", "id": "3de5b56aa21342f6adb2d313c16c6c63", "bibjson":
+        {"start_page": "0", "title": "Respect Your Enemies - The First Rule of Peace:
+        An Essay Addressed to the U. S. Anti-war Movement", "journal": {"country":
+        "AR", "publisher": "Red Internacional de Estudios sobre Sociedad, Naturaleza
+        y Desarrollo", "number": "7", "language": ["Spanish", "English", "French",
+        "Italian", "Portuguese"], "title": "Revista Theomai"}, "author": [{"name":
+        "George Caffentzis"}], "link": [{"url": "http://www.redalyc.org/articulo.oa?id=12400710",
+        "type": "fulltext", "content_type": "pdf"}], "year": "2003", "identifier":
+        [{"type": "pissn", "id": "1666-2830"}, {"type": "eissn", "id": "1515-6443"}],
+        "abstract": "There is now a fledgling anti-interventionist, anti-war movement
+        in the US. It will have a lot of work to do in the near future, although the
+        present threat of war on Iraq is the most pressing issue it faces. The question
+        is: can the antiwar movement do its work effectively and successfully? At
+        the moment it is not completely marginalized, if the votes in Congress are
+        any indication. On October 9, between one-quarter to one-third of the congressional
+        representatives voted against granting George W. Bush \"war powers.\" But
+        in order to show itself as expressing the majority perspective in this country,
+        it needs new arguments, a new respect (as in \"look again\") for its opponents,
+        a deeper understanding of the reasons for the actions of its opponents, and
+        a realistic assessment of their weaknesses. For its old arguments do not seem
+        convincing to the majority of US citizens, and its lack of curiosity about
+        its opponents and their reasoning is dulling its strategic sense.", "subject":
+        [{"code": "H1-99", "term": "Social sciences (General)", "scheme": "LCC"},
+        {"code": "H", "term": "Social Sciences", "scheme": "LCC"}, {"code": "GE1-350",
+        "term": "Environmental sciences", "scheme": "LCC"}, {"code": "G", "term":
+        "Geography. Anthropology. Recreation", "scheme": "LCC"}]}, "created_date":
+        "2012-03-28T00:03:02Z"}], "query": "+Anti\\-war +bibjson.author.name:(+Caffentzis)
+        +bibjson.title:(+\"Respect Your Enemies\" +first +rule +of +peace) +bibjson.journal.title:(+\"Revista
+        Theomai\")", "total": 1, "page": 1}'
+    http_version: 
+  recorded_at: Wed, 23 Sep 2015 15:58:02 GMT
+recorded_with: VCR 2.9.3

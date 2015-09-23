@@ -1,0 +1,387 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://doaj.org/api/v1/search/articles/+cancer?pageSize=10
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Cookie:
+      - session=UspzkET/3IS3Z8PIxKnLAhLnXDY=?_id=UycyNmYyZmZkMzhkMjA5MWE0NmNjZTU2YTI4OGJjNDZlNycKcDEKLg==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Wed, 23 Sep 2015 15:51:26 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '22874'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Set-Cookie:
+      - session="UspzkET/3IS3Z8PIxKnLAhLnXDY=?_id=UycyNmYyZmZkMzhkMjA5MWE0NmNjZTU2YTI4OGJjNDZlNycKcDEKLg==";
+        Path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"pageSize": 10, "timestamp": "2015-0923T15:51:26Z", "results": [{"last_updated":
+        "2015-04-22T01:47:22Z", "id": "1c7e32e140c94c7cb5c7902ec96f1136", "bibjson":
+        {"title": "Cancer Incidence in Egypt:  Results of the National Population-Based
+        Cancer Registry Program", "journal": {"publisher": "Hindawi Publishing Corporation",
+        "language": ["English"], "license": [{"type": "CC BY", "title": "CC BY"}],
+        "title": "Journal of Cancer Epidemiology", "country": "EG", "volume": "2014"},
+        "author": [{"affiliation": "Department of Biostatistics and Cancer Epidemiology,
+        National Cancer Institute, Cairo University, Cairo, Egypt", "email": "ibrahimamalsamy@gmail.com",
+        "name": "Amal S. Ibrahim"}, {"affiliation": "Department of Medical Oncology,
+        National Cancer Institute, Cairo University, Cairo, Egypt", "email": "khussein528@gmail.com",
+        "name": "Hussein M. Khaled"}, {"affiliation": "Department of Biostatistics
+        and Cancer Epidemiology, South Egypt Cancer Institute, Assiut University,
+        Assiut, Egypt", "email": "nabiel.mikhail@gmail.com", "name": "Nabiel NH Mikhail"},
+        {"affiliation": "Department of Computer Engineering, Faculty of Engineering,
+        Cairo University, Giza, Egypt", "email": "hbaraka@mcit.gov.eg", "name": "Hoda
+        Baraka"}, {"affiliation": "Department of Medical Oncology, National Cancer
+        Institute, Cairo University, Cairo, Egypt", "email": "hkamel@cu.edu.eg", "name":
+        "Hossam Kamel"}], "link": [{"url": "http://dx.doi.org/10.1155/2014/437971",
+        "type": "fulltext"}], "year": "2014", "identifier": [{"type": "pissn", "id":
+        "1687-8558"}, {"type": "eissn", "id": "1687-8566"}, {"type": "doi", "id":
+        "10.1155/2014/437971"}], "subject": [{"code": "RC254-282", "term": "Neoplasms.
+        Tumors. Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code":
+        "RC31-1245", "term": "Internal medicine", "scheme": "LCC"}, {"code": "R",
+        "term": "Medicine", "scheme": "LCC"}]}, "created_date": "2014-10-20T08:05:15Z"},
+        {"last_updated": "2015-04-22T03:59:29Z", "id": "c7cbb0516de24de2bdcfb3d81a40ab1b",
+        "bibjson": {"start_page": "497", "title": "Breast cancer patients with lobular
+        cancer more commonly have a father than a mother diagnosed with cancer", "journal":
+        {"publisher": "BioMed Central", "language": ["English"], "license": [{"type":
+        "CC BY", "title": "CC BY"}], "title": "BMC Cancer", "country": "GB", "number":
+        "1", "volume": "11"}, "author": [{"name": "Ellberg Carolina"}, {"name": "Olsson
+        H\u00e5kan"}], "month": "11", "link": [{"url": "http://www.biomedcentral.com/1471-2407/11/497",
+        "type": "fulltext"}], "year": "2011", "identifier": [{"type": "doi", "id":
+        "10.1186/1471-2407-11-497"}, {"type": "pissn", "id": "1471-2407"}], "abstract":
+        "<p>Abstract</p> <p>Background</p> <p>The association between lobular breast
+        cancer and family history is not clear. The aim of the study was to possibly
+        identifying new hereditary patterns predisposing for cancer in the different
+        histopathologic subtypes of breast cancer, with focus on patients with lobular
+        breast cancer and cancer in their first degree relatives.</p> <p>Methods</p>
+        <p>In 1676 consecutive breast cancer patients detailed family history of cancer
+        was related to histopathologic subtype of breast cancer.</p> <p>Results</p>
+        <p>Patients with lobular breast cancer were found to be significantly positively
+        associated with having a father diagnosed with cancer, OR 2.17 (95% confidence
+        interval (CI) 1.37-3.46). The finding persisted after excluding breast cancer
+        in the family. Ductal breast cancer was associated with having a mother diagnosed
+        with cancer. There was a significant association between lobular breast cancer
+        and having a father with prostate cancer, OR 2.4 (CI 1.1-5.3). The occurrence
+        of having a father with prostate cancer for lobular breast cancer patients
+        was higher in the younger patient group, OR 2.9 (CI 1.1-7.8), and was still
+        high but lost statistical significance in the older patient group, OR 1.9
+        (CI 0.5-7.4). The association between lobular breast cancer and a father remained
+        significant after excluding fathers with prostate cancer, OR 1.94 (CI 1.20-3.14).
+        Other commonly occurring tumor types in the father included sarcoma and leukemia.</p>
+        <p>Conclusion</p> <p>We propose that lobular breast cancer is associated with
+        having a father diagnosed with cancer, most commonly prostate carcinoma. Since
+        the association remained after excluding family history of breast cancer,
+        the association seems independent of classical breast cancer heredity. The
+        association with a father diagnosed with cancer also remained after removing
+        prostate cancer, indicating an independence from prostate cancer as well.
+        The reason for this association is genetically unclear, but could involve
+        sex-specific imprinting.</p> ", "subject": [{"code": "RC254-282", "term":
+        "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}]},
+        "created_date": "2013-03-12T01:21:44Z"}, {"last_updated": "2015-04-22T04:16:36Z",
+        "id": "de1a7c4a93394d28b6e7ad0cf1e4d3c9", "bibjson": {"identifier": [{"type":
+        "pissn", "id": "1000-467X"}, {"type": "eissn", "id": "1944-446X"}, {"type":
+        "doi", "id": "10.5732/cjc.014.10153"}], "start_page": "413", "title": "Cancer
+        immunotherapy", "journal": {"publisher": "Cancer Center,Sun Yat-sen University",
+        "language": ["English"], "title": "Chinese Journal of Cancer", "country":
+        "CN", "number": "9", "volume": "33"}, "author": [{"name": "Li Yan "}, {"name":
+        " Helen X. Chen"}], "month": "9", "link": [{"url": "\n http://www.cjcsysu.com/abstract.asp?fr=doaj&idno=21152",
+        "type": "fulltext", "content_type": "pdf"}], "year": "2014", "subject": [{"code":
+        "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens",
+        "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme":
+        "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}], "end_page": "415"},
+        "created_date": "2014-09-30T10:00:07Z"}, {"last_updated": "2015-04-22T03:13:42Z",
+        "id": "8c8c9d89e036455aa8a3c0d2b482364a", "bibjson": {"identifier": [{"type":
+        "pissn", "id": "1179-299X"}], "start_page": "11", "title": "Biomarkers of
+        HIV-associated Cancer", "journal": {"publisher": "Libertas Academica", "language":
+        ["English"], "license": [{"type": "CC BY", "title": "CC BY"}], "title": "Biomarkers
+        in Cancer", "country": "NZ", "number": "6", "volume": "2014"}, "author": [{"name":
+        "Brian Thabile Flepisi"}, {"name": "Patrick Bouic"}, {"name": "Gerhard Sissolak"},
+        {"name": "Bernd Rosenkranz"}], "month": "7", "link": [{"url": "http://www.la-press.com/biomarkers-of-hiv-associated-cancer-article-a4282",
+        "type": "fulltext", "content_type": "html"}], "year": "2014", "end_page":
+        "20", "subject": [{"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}]}, "created_date": "2014-08-06T01:30:02Z"}, {"last_updated":
+        "2015-08-25T02:30:15Z", "id": "db0db6262a8d4098ab991d8cab40cce8", "bibjson":
+        {"identifier": [{"type": "pissn", "id": "1179-299X"}], "start_page": "31",
+        "title": "Infrequent Expression of the Cancer-Testis Antigen, PASD1, in Ovarian
+        Cancer", "journal": {"publisher": "Libertas Academica", "language": ["EN"],
+        "license": [{"url": "http://www.la-press.com/about_us.php?folder_id=160",
+        "open_access": true, "type": "CC BY-NC", "title": "CC BY-NC"}], "title": "Biomarkers
+        in Cancer", "country": "NZ", "number": "7", "volume": "2015"}, "author": [{"name":
+        "Ghazala Khan"}, {"name": "Suzanne E. Brooks"}, {"name": "Ken I. Mills"},
+        {"name": "Barbara-Ann Guinn"}], "month": "8", "link": [{"url": "http://www.la-press.com/infrequent-expression-of-the-cancer-testis-antigen-pasd1-in-ovarian-ca-article-a5005",
+        "type": "fulltext", "content_type": "html"}], "year": "2015", "end_page":
+        "38", "subject": [{"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology.
+        Including cancer and carcinogens", "scheme": "LCC"}]}, "created_date": "2015-08-25T02:30:15Z"},
+        {"last_updated": "2015-04-22T03:54:10Z", "id": "c0e1a6cb7dbb4e57b633c1563b3c4987",
+        "bibjson": {"identifier": [{"type": "pissn", "id": "1000-467X"}, {"type":
+        "eissn", "id": "1944-446X"}, {"type": "doi", "id": "10.5732/cjc.014.10116"}],
+        "start_page": "369", "title": " Large-scale molecular characterization and
+        analysis of gastric cancer", "journal": {"publisher": "Cancer Center,Sun Yat-sen
+        University", "language": ["English"], "title": "Chinese Journal of Cancer",
+        "country": "CN", "number": "8", "volume": "33"}, "author": [{"name": "Ilya
+        Shmulevich"}], "month": "8", "link": [{"url": "\n http://www.cjcsysu.com/abstract.asp?fr=doaj&idno=21115",
+        "type": "fulltext", "content_type": "pdf"}], "year": "2014", "subject": [{"code":
+        "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens",
+        "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme":
+        "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}], "end_page": "370"},
+        "created_date": "2014-09-30T10:00:02Z"}, {"last_updated": "2015-04-22T03:05:35Z",
+        "id": "823bf5d81e5d4693b21990899f4e09b8", "bibjson": {"identifier": [{"type":
+        "pissn", "id": "1000-467X"}, {"type": "eissn", "id": "1944-446X"}, {"type":
+        "doi", "id": "10.5732/cjc.014.10117"}], "start_page": "469", "title": " TCGA
+        divides gastric cancer into four molecular subtypes: implications for individualized
+        therapeutics", "journal": {"publisher": "Cancer Center,Sun Yat-sen University",
+        "language": ["English"], "title": "Chinese Journal of Cancer", "country":
+        "CN", "number": "10", "volume": "33"}, "author": [{"name": "Wei Zhang"}],
+        "month": "10", "link": [{"url": "\n http://www.cjcsysu.com/abstract.asp?fr=doaj&idno=21116",
+        "type": "fulltext", "content_type": "pdf"}], "year": "2014", "subject": [{"code":
+        "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer and carcinogens",
+        "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme":
+        "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}], "abstract": "Gastric
+        cancer is a leading cause of cancer deaths in the world. The treatment of
+        gastric cancer is challenging because of its highly heterogeneous etiology
+        and clinical characteristics. Recent genomic and molecular characterization
+        of gastric cancer, especially the findings reported by the Cancer Genome Atlas
+        (TCGA), have shed light on the heterogeneity and potential targeted therapeutics
+        for four different subtypes of gastric cancer.", "end_page": "470"}, "created_date":
+        "2014-09-30T10:00:12Z"}, {"last_updated": "2015-04-22T04:13:41Z", "id": "da6d367e9f8e4b82aa9413f36485adb3",
+        "bibjson": {"identifier": [{"type": "doi", "id": "10.5732/cjc.013.10018"},
+        {"type": "pissn", "id": "1000-467X"}, {"type": "eissn", "id": "1944-446X"}],
+        "start_page": "106", "title": "The incidences and mortalities of major cancers
+        in China, 2009", "journal": {"publisher": "Sun Yat-sen University Cancer Center",
+        "language": ["English"], "title": "Chinese Journal of Cancer", "country":
+        "CN", "number": "3", "volume": "32"}, "author": [{"name": "Wanqing Chen"},
+        {"name": "Rongshou Zheng"}, {"name": "Siwei Zhang"}, {"name": "Ping Zhao"},
+        {"name": "Guanglin Li"}, {"name": "Lingyou Wu"}, {"name": "Jie He"}], "month":
+        "03", "link": [{"url": "http://www.cjcsysu.com/abstract.asp?idno=20517", "type":
+        "fulltext"}], "year": "2013", "keywords": ["Cancer registry", "incidence",
+        "mortality", "epidemiology", "China"], "subject": [{"code": "RC254-282", "term":
+        "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}],
+        "abstract": "In 2012, the National Central Cancer Registry (NCCR) of China
+        collected cancer registration information for the year 2009 from local cancer
+        registries and analyzed it to describe the incidences and mortalities of cancers
+        in China. Based on the data quality criteria from NCCR, data from 104 registries
+        covering 85,470,522 people (57,489,009 in urban areas and 27,981,513 in rural
+        areas) were checked and evaluated. The data from 72 registries were qualified
+        and accepted for the cancer registry annual report in 2012. The total cancer
+        incident cases and cancer deaths were 244,366 and 154,310, respectively. The
+        morphologically verified cases accounted for 67.23%, and 3.14% of the incident
+        cases only had information from death certifications. The crude incidence
+        in the Chinese cancer registration areas was 285.91/100,000 (317.97/100,000
+        in males and 253.09/100,000 in females). The age-standardized rates for incidences
+        based on the Chinese standard population (ASRIC) and the world standard population
+        (ASRIW) were 146.87/100,000 and 191.72/100,000, respectively, with a cumulative
+        incidence of 22.08%. The cancer mortality in the Chinese cancer registration
+        areas was 180.54/100,000 (224.20/100,000 in males and 135.85/100,000 in females).
+        The age-standardized rates for mortalities based on the Chinese standard population(ASRMC)
+        and the world standard population (ASRMW) were 85.06/100,000 and 115.65/100,000,
+        respectively, and the cumulative mortality was 12.94%. Lung cancer, gastric
+        cancer, colorectal cancer, liver cancer, esophageal cancer, pancreatic cancer,
+        encephaloma, lymphoma, female breast cancer, and cervical cancer were the
+        most common cancers, accounting for 75% of all cancer cases. Lung cancer,
+        gastric cancer, liver cancer, esophageal cancer, colorectal cancer, pancreatic
+        cancer, breast cancer, encephaloma, leukemia, and lymphoma accounted for 80%
+        of all cancer deaths. The cancer registration''s population coverage has been
+        increasing, and its data quality is improving. As the basis of the cancer
+        control program, the cancer registry plays an important role in directing
+        anticancer strategies in the medium and long term. Because cancer burdens
+        are different in urban and rural areas in China, prevention and control efforts
+        should be based on practical situations.  ", "end_page": "112"}, "created_date":
+        "2013-03-19T08:31:56Z"}, {"last_updated": "2015-04-22T03:15:55Z", "id": "8f79f8dcc5bf4b789a97a2cc67ff6da5",
+        "bibjson": {"identifier": [{"type": "doi", "id": "10.5732/cjc.011.10444"},
+        {"type": "pissn", "id": "1000-467X"}, {"type": "eissn", "id": "1944-446X"}],
+        "start_page": "564", "title": "A new prospect in cancer therapy: targeting
+        cancer stem cells to eradicate cancer", "journal": {"publisher": "Sun Yat-sen
+        University Cancer Center", "language": ["English"], "title": "Chinese Journal
+        of Cancer", "country": "CN", "number": "12", "volume": "31"}, "author": [{"name":
+        "Yi-Min Zhu"}, {"name": "Li-Hua Yuan"}, {"name": "Ke-Feng Pu"}, {"name": "Bing
+        Dong"}, {"name": "An-Xin Wang"}, {"name": "Li-Sha Chen"}], "month": "12",
+        "link": [{"url": "http://www.cjcsysu.com/abstract.asp?fr=doaj&idno=20081",
+        "type": "fulltext"}], "year": "2012", "subject": [{"code": "RC254-282", "term":
+        "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}],
+        "abstract": "According to the cancer stem cell theory, cancers can be initiated
+        by cancer stem cells. This makes cancer stem cells prime targets for therapeutic
+        intervention. Eradicating cancer stem cells by efficient targeting agents
+        may have the potential to cure cancer. In this review, we summarize recent
+        breakthroughs that have improved our understanding of cancer stem cells, and
+        we discuss the therapeutic strategy of targeting cancer stem cells, a promising
+        future direction for cancer stem cell research.", "end_page": "572"}, "created_date":
+        "2013-04-26T10:30:03Z"}, {"last_updated": "2015-04-22T03:51:28Z", "id": "bd4c138833f54e558052765bada05514",
+        "bibjson": {"identifier": [{"type": "pissn", "id": "1837-9664"}], "start_page":
+        "107", "title": "Human Cancer Classification: A Systems Biology- Based Model
+        Integrating Morphology, Cancer Stem Cells, Proteomics, and Genomics", "journal":
+        {"publisher": "Ivyspring International Publisher", "language": ["English"],
+        "license": [{"type": "CC BY-NC-ND", "title": "CC BY-NC-ND"}], "title": "Journal
+        of Cancer", "country": "AU", "number": "1", "volume": "2"}, "author": [{"name":
+        "Halliday A Idikio"}], "link": [{"url": "http://www.jcancer.org/v02p0107.htm",
+        "type": "fulltext"}], "year": "2011", "subject": [{"code": "RC254-282", "term":
+        "Neoplasms. Tumors. Oncology. Including cancer and carcinogens", "scheme":
+        "LCC"}, {"code": "RC31-1245", "term": "Internal medicine", "scheme": "LCC"},
+        {"code": "R", "term": "Medicine", "scheme": "LCC"}, {"term": "Oncology", "scheme":
+        "DOAJ"}, {"term": "Medicine (General)", "scheme": "DOAJ"}, {"term": "Health
+        Sciences", "scheme": "DOAJ"}, {"code": "RC254-282", "term": "Neoplasms. Tumors.
+        Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245",
+        "term": "Internal medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine",
+        "scheme": "LCC"}, {"term": "Oncology", "scheme": "DOAJ"}, {"term": "Medicine
+        (General)", "scheme": "DOAJ"}, {"term": "Health Sciences", "scheme": "DOAJ"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"},
+        {"code": "RC254-282", "term": "Neoplasms. Tumors. Oncology. Including cancer
+        and carcinogens", "scheme": "LCC"}, {"code": "RC31-1245", "term": "Internal
+        medicine", "scheme": "LCC"}, {"code": "R", "term": "Medicine", "scheme": "LCC"}],
+        "abstract": "<p>Human cancer classification is currently based on the idea
+        of cell of origin, light and electron microscopic attributes of the cancer.
+        What is not yet integrated into cancer classification are the functional attributes
+        of these cancer cells. Recent innovative techniques in biology have provided
+        a wealth of information on the genomic, transcriptomic and proteomic changes
+        in cancer cells. The emergence of the concept of cancer stem cells needs to
+        be included in a classification model to capture the known attributes of cancer
+        stem cells and their potential contribution to treatment response, and metastases.
+        The integrated model of cancer classification presented here incorporates
+        all morphology, cancer stem cell contributions, genetic, and functional attributes
+        of cancer. Integrated cancer classification models could eliminate the unclassifiable
+        cancers as used in current classifications. Future cancer treatment may be
+        advanced by using an integrated model of cancer classification.</p>", "end_page":
+        "115"}, "created_date": "2011-03-20T10:19:56Z"}], "query": "+cancer", "total":
+        65140, "page": 1}'
+    http_version: 
+  recorded_at: Wed, 23 Sep 2015 15:51:26 GMT
+- request:
+    method: get
+    uri: https://doaj.org/api/v1/search/articles/+id:(+1c7e32e140c94c7cb5c7902ec96f1136)?pageSize=10
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Cookie:
+      - session=UspzkET/3IS3Z8PIxKnLAhLnXDY=?_id=UycyNmYyZmZkMzhkMjA5MWE0NmNjZTU2YTI4OGJjNDZlNycKcDEKLg==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Wed, 23 Sep 2015 15:51:26 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1987'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Set-Cookie:
+      - session="UspzkET/3IS3Z8PIxKnLAhLnXDY=?_id=UycyNmYyZmZkMzhkMjA5MWE0NmNjZTU2YTI4OGJjNDZlNycKcDEKLg==";
+        Path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"pageSize": 10, "timestamp": "2015-0923T15:51:26Z", "results": [{"last_updated":
+        "2015-04-22T01:47:22Z", "id": "1c7e32e140c94c7cb5c7902ec96f1136", "bibjson":
+        {"title": "Cancer Incidence in Egypt:  Results of the National Population-Based
+        Cancer Registry Program", "journal": {"publisher": "Hindawi Publishing Corporation",
+        "language": ["English"], "license": [{"type": "CC BY", "title": "CC BY"}],
+        "title": "Journal of Cancer Epidemiology", "country": "EG", "volume": "2014"},
+        "author": [{"affiliation": "Department of Biostatistics and Cancer Epidemiology,
+        National Cancer Institute, Cairo University, Cairo, Egypt", "email": "ibrahimamalsamy@gmail.com",
+        "name": "Amal S. Ibrahim"}, {"affiliation": "Department of Medical Oncology,
+        National Cancer Institute, Cairo University, Cairo, Egypt", "email": "khussein528@gmail.com",
+        "name": "Hussein M. Khaled"}, {"affiliation": "Department of Biostatistics
+        and Cancer Epidemiology, South Egypt Cancer Institute, Assiut University,
+        Assiut, Egypt", "email": "nabiel.mikhail@gmail.com", "name": "Nabiel NH Mikhail"},
+        {"affiliation": "Department of Computer Engineering, Faculty of Engineering,
+        Cairo University, Giza, Egypt", "email": "hbaraka@mcit.gov.eg", "name": "Hoda
+        Baraka"}, {"affiliation": "Department of Medical Oncology, National Cancer
+        Institute, Cairo University, Cairo, Egypt", "email": "hkamel@cu.edu.eg", "name":
+        "Hossam Kamel"}], "link": [{"url": "http://dx.doi.org/10.1155/2014/437971",
+        "type": "fulltext"}], "year": "2014", "identifier": [{"type": "pissn", "id":
+        "1687-8558"}, {"type": "eissn", "id": "1687-8566"}, {"type": "doi", "id":
+        "10.1155/2014/437971"}], "subject": [{"code": "RC254-282", "term": "Neoplasms.
+        Tumors. Oncology. Including cancer and carcinogens", "scheme": "LCC"}, {"code":
+        "RC31-1245", "term": "Internal medicine", "scheme": "LCC"}, {"code": "R",
+        "term": "Medicine", "scheme": "LCC"}]}, "created_date": "2014-10-20T08:05:15Z"}],
+        "query": "+id:(+1c7e32e140c94c7cb5c7902ec96f1136)", "total": 1, "page": 1}'
+    http_version: 
+  recorded_at: Wed, 23 Sep 2015 15:51:27 GMT
+recorded_with: VCR 2.9.3
