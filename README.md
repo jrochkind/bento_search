@@ -50,9 +50,8 @@ named by Tito Sierra@NCSU), as well as more expanded single-search-on-a-page
 uses -- or back-end functionality supporting features that are not straight discovery. 
 
 * bento_search provides abstract functionality for pagination, sorting,
-and single-field-specified queries. Faceting, generalized limiting, and 'advanced'
-multi-field searches are not yet supported, but possibly will be built
-out in the future.
+and single-field-specified queries. Faceting and generalized limiting are
+not yet supported, but possibly will be built out in the future. 
 
 Not all search engine adapters support all features.  Some engines offer
 engine-specific features, such as limiting. Search engine adapters can
