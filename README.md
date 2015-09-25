@@ -47,7 +47,7 @@ search' functionality, but it does not and will never support merging results
 from multiple engines into one result set. It is meant to support displaying the
 first few results from multiple engines on one page, "bento box" style (as
 named by Tito Sierra@NCSU), as well as more expanded single-search-on-a-page
-uses.
+uses -- or back-end functionality supporting features that are not straight discovery. 
 
 * bento_search provides abstract functionality for pagination, sorting,
 and single-field-specified queries. Faceting, generalized limiting, and 'advanced'
