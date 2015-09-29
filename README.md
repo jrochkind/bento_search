@@ -423,8 +423,6 @@ Probably:
 * Support for display facets for engines that support such, as well as
   search with limits from controlled vocabulary (ie, selected facet, but
   also may be supported by some engines that do not support facetting).
-* Support for multi-field, multi-entry-box 'advanced search' UI's, in
-  a normalized cross-engine way.
 
 Other needs or suggestions?
 
