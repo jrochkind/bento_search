@@ -12,8 +12,11 @@ require "rails/test_help"
 
 # We're not supposed to have to manually install rails-controller-testing, not
 # sure why we do.
-require 'rails-controller-testing'
-Rails::Controller::Testing.install
+begin
+  require 'rails-controller-testing'
+  Rails::Controller::Testing.install
+rescue LoadError
+end
 
 Rails.backtrace_cleaner.remove_silencers!
 
