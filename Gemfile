@@ -21,13 +21,19 @@ group "manual_development" do
 end
 
 # Can't test rails5 under mri 2.3. Hey, we get Rails 4 testing like this too...
-if Gem::Version.new(RUBY_VERSION) < Gem::Version.new("2.3")
+if Gem::Version.new(RUBY_VERSION.dup) < Gem::Version.new("2.3")
   gem 'rails', "~> 4.2"
 else
   # Only for Rails5, to restore tests we need, gah.
   group "test" do
     gem 'rails-controller-testing', '~> 1.0'
   end
+end
+
+if Gem::Version.new(RUBY_VERSION.dup) < Gem::Version.new("2.0")
+  # Can't quite explain this one, but for ruby 1.9....
+  # https://github.com/rails/rails/issues/24749
+  gem 'mime-types', '2.6.2'
 end
 
 
