@@ -132,7 +132,7 @@ class BentoSearch::SummonEngine
     begin
       response = http_client.get(uri, nil, headers)
       hash = MultiJson.load( response.body )
-    rescue TimeoutError, HTTPClient::ConfigurationError, HTTPClient::BadResponseError, MultiJson::DecodeError, Nokogiri::SyntaxError => e
+    rescue BentoSearch::RubyTimeoutClass, HTTPClient::ConfigurationError, HTTPClient::BadResponseError, MultiJson::DecodeError, Nokogiri::SyntaxError => e
       exception = e
     end
     # handle some errors

@@ -9,18 +9,18 @@ require 'nokogiri'
 
 module BentoSearch
   # Usually raised by #get on an engine, when result for specified identifier
-  # can't be found. 
+  # can't be found.
   class ::BentoSearch::NotFound < ::BentoSearch::Error ; end
-  # Usually raised by #get when identifier results in more than one record. 
+  # Usually raised by #get when identifier results in more than one record.
   class ::BentoSearch::TooManyFound < ::BentoSearch::Error ; end
   # Raised for problem contacting or unexpected response from
-  # remote service. Not yet universally used. 
+  # remote service. Not yet universally used.
   class ::BentoSearch::FetchError < ::BentoSearch::Error ; end
 
-  
-  # Module mix-in for bento_search search engines. 
+
+  # Module mix-in for bento_search search engines.
   #
-  # ==Using a SearchEngine 
+  # ==Using a SearchEngine
   #
   # See a whole bunch more examples in the project README.
   #
@@ -43,18 +43,18 @@ module BentoSearch
   #  of BentoSearch::Results
   #
   #  results = engine.search("query")
-  # 
-  #  See more docs under #search, as well as project README.  
   #
-  # == Standard configuration variables. 
-  # 
+  #  See more docs under #search, as well as project README.
+  #
+  # == Standard configuration variables.
+  #
   # Some engines require their own engine-specific configuration for api keys
   # and such, and offer their own engine-specific configuration for engine-specific
-  # features. 
+  # features.
   #
   # An additional semi-standard configuration variable, some engines take
   # an `:auth => true` to tell the engine to assume that all access is by
-  # authenticated local users who should be given elevated access to results.  
+  # authenticated local users who should be given elevated access to results.
   #
   # Additional standard configuration keys that are implemented by the bento_search
   # framework:
@@ -63,7 +63,7 @@ module BentoSearch
   #      String name of decorator class that will be applied by #bento_decorate
   #      helper in standard view. See wiki for more info on decorators. Must be
   #      string name, actual class object not supported (to make it easier
-  #      to serialize and transport configuration). 
+  #      to serialize and transport configuration).
   #
   # == Implementing a SearchEngine
   #
@@ -71,7 +71,7 @@ module BentoSearch
   # generally only responsible for the parts specific to your search engine:
   # receiving a query, making a call to the external search engine, and
   # translating it's result to standard a BentoSearch::Results full of
-  # BentoSearch::ResultItems. 
+  # BentoSearch::ResultItems.
   #
   # Start out by simply including the search engine module:
   #
@@ -85,64 +85,64 @@ module BentoSearch
   # BentoSearch::Results item.
   #
   # The Results object should have #total_items set with total hitcount, and
-  # contain BentoSearch::ResultItem objects for each hit in the current page. 
-  # See individual class documentation for more info. 
+  # contain BentoSearch::ResultItem objects for each hit in the current page.
+  # See individual class documentation for more info.
   #
   # That's about the extent of your responsibilities. If the search failed
   # for some reason due to an error, you should return a Results object
   # with it's #error object set, so it will be `failed?`.  The framework
   # will take care of this for you for certain uncaught exceptions you allow
   # to rise out of #search_implementation (timeouts, HTTPClient timeouts,
-  # nokogiri and MultiJson parse errors). 
+  # nokogiri and MultiJson parse errors).
   #
   # A SearchEngine object can be re-used for multiple searches, possibly
   # under concurrent multi-threading. Do not store search-specific state
   # in the search object. but you can store configuration-specific state there
-  # of course. 
-  # 
+  # of course.
+  #
   # Recommend use of HTTPClient, if possible, for http searches. Especially
   # using a class-level HTTPClient instance, to re-use persistent http
   # connections accross searches (can be esp important if you need to contact
   # external search api via https/ssl).
   #
-  # If you have required configuration keys, you can register that with 
-  # class-level required_configuration_keys method. 
+  # If you have required configuration keys, you can register that with
+  # class-level required_configuration_keys method.
   #
-  # You can also advertise max per-page value by overriding max_per_page. 
+  # You can also advertise max per-page value by overriding max_per_page.
   #
-  # If you support fielded searching, you should over-ride 
+  # If you support fielded searching, you should over-ride
   # #search_field_definitions; if you support sorting, you should
   # override #sort_definitions. See BentoSearch::SearchEngine::Capabilities
-  # module for documentation. 
-  # 
+  # module for documentation.
+  #
   #
   module SearchEngine
     DefaultPerPage = 10
-    
 
-    
-    
+
+
+
     extend ActiveSupport::Concern
-    
+
     include Capabilities
-    
+
     included do
-      attr_accessor :configuration      
+      attr_accessor :configuration
     end
-    
+
     # If specific SearchEngine calls initialize, you want to call super
     # handles configuration loading, mostly. Argument is a
-    # Confstruct::Configuration or Hash. 
+    # Confstruct::Configuration or Hash.
     def initialize(aConfiguration = Confstruct::Configuration.new)
       # To work around weird confstruct bug, we need to change
-      # a hash to a Confstruct ourselves. 
+      # a hash to a Confstruct ourselves.
       # https://github.com/mbklein/confstruct/issues/14
       unless aConfiguration.kind_of? Confstruct::Configuration
         aConfiguration = Confstruct::Configuration.new aConfiguration
       end
-        
-      
-      # init, from copy of default, or new      
+
+
+      # init, from copy of default, or new
       if self.class.default_configuration
         self.configuration = Confstruct::Configuration.new(self.class.default_configuration)
       else
@@ -150,187 +150,187 @@ module BentoSearch
       end
       # merge in current instance config
       self.configuration.configure ( aConfiguration )
-      
-      # global defaults?      
+
+      # global defaults?
       self.configuration[:for_display] ||= {}
-            
+
       # check for required keys -- have to be present, and not nil
       if self.class.required_configuration
-        self.class.required_configuration.each do |required_key|          
+        self.class.required_configuration.each do |required_key|
           if ["**NOT_FOUND**", nil].include? self.configuration.lookup!(required_key.to_s, "**NOT_FOUND**")
             raise ArgumentError.new("#{self.class.name} requires configuration key #{required_key}")
           end
         end
       end
-      
+
     end
-    
-    
-    # Method used to actually get results from a search engine.  
+
+
+    # Method used to actually get results from a search engine.
     #
     # When implementing a search engine, you do not override this #search
     # method, but instead override #search_implementation. #search will
     # call your specific #search_implementation, first normalizing the query
-    # arguments, and then normalizing and adding standard metadata to your return value.      
+    # arguments, and then normalizing and adding standard metadata to your return value.
     #
     #  Most engines support pagination, sorting, and searching in a specific
-    #  field. 
+    #  field.
     #
     #      # 1-based page index
     #      engine.search("query", :per_page => 20, :page => 5)
     #      # or use 0-based per-record index, engines that don't
-    #      # support this will round to nearest page. 
+    #      # support this will round to nearest page.
     #      engine.search("query", :start => 20)
     #
     #  You can ask an engine what search fields it supports with engine.search_keys
     #      engine.search("query", :search_field => "engine_search_field_name")
     #
     #  There are also normalized 'semantic' names you can use accross engines
-    #  (if they support them): :title, :author, :subject, maybe more. 
+    #  (if they support them): :title, :author, :subject, maybe more.
     #
     #      engine.search("query", :semantic_search_field => :title)
     #
     #  Ask an engine what semantic field names it supports with `engine.semantic_search_keys`
     #
-    #  Unrecognized search fields will be ignored, unless you pass in 
-    #  :unrecognized_search_field => :raise (or do same in config). 
+    #  Unrecognized search fields will be ignored, unless you pass in
+    #  :unrecognized_search_field => :raise (or do same in config).
     #
     #  Ask an engine what sort fields it supports with `engine.sort_keys`. See
     #  list of standard sort keys in I18n file at ./config/locales/en.yml, in
-    #  `en.bento_search.sort_keys`. 
+    #  `en.bento_search.sort_keys`.
     #
     #      engine.search("query", :sort => "some_sort_key")
     #
     #  Some engines support additional arguments to 'search', see individual
     #  engine documentation. For instance, some engines support `:auth => true`
     #  to give the user elevated search privileges when you have an authenticated
-    #  local user. 
+    #  local user.
     #
     # Query as first arg is just a convenience, you can also use a single hash
-    # argument. 
+    # argument.
     #
     #      engine.search(:query => "query", :per_page => 20, :page => 4)
     #
     def search(*arguments)
       start_t = Time.now
-      
+
       arguments = normalized_search_arguments(*arguments)
 
       results = search_implementation(arguments)
-      
+
       fill_in_search_metadata_for(results, arguments)
-            
+
       results.timing = (Time.now - start_t)
-                    
+
       return results
     rescue *auto_rescue_exceptions => e
       # Uncaught exception, log and turn into failed Results object. We
       # only catch certain types of exceptions, or it makes dev really
       # confusing eating exceptions. This is intentionally a convenience
       # to allow search engine implementations to just raise the exception
-      # and we'll turn it into a proper error. 
+      # and we'll turn it into a proper error.
       cleaned_backtrace = Rails.backtrace_cleaner.clean(e.backtrace)
       log_msg = "BentoSearch::SearchEngine failed results: #{e.inspect}\n    #{cleaned_backtrace.join("\n    ")}"
       Rails.logger.error log_msg
-      
+
       failed = BentoSearch::Results.new
       failed.error ||= {}
       failed.error[:exception] = e
-      
+
       failed.timing                = (Time.now - start_t)
-      
+
       fill_in_search_metadata_for(failed, arguments)
 
-      
+
       return failed
     end
-    
+
     # SOME of the elements of Results to be returned that SearchEngine implementation
     # fills in automatically post-search. Extracted into a method for DRY in
     # error handling to try to fill these in even in errors. Also can be used
-    # as public method for de-serialized or mock results. 
+    # as public method for de-serialized or mock results.
     def fill_in_search_metadata_for(results, normalized_arguments = {})
       results.search_args           = normalized_arguments
       results.start = normalized_arguments[:start] || 0
       results.per_page = normalized_arguments[:per_page]
-      
+
       results.engine_id             = configuration.id
       results.display_configuration = configuration.for_display
 
       # We copy some configuraton info over to each Item, as a convenience
       # to display logic that may have decide what to do given only an item,
       # and may want to parameterize based on configuration.
-      results.each do |item| 
-        item.engine_id              = configuration.id 
+      results.each do |item|
+        item.engine_id              = configuration.id
         item.decorator              = configuration.lookup!("for_display.decorator")
         item.display_configuration  = configuration.for_display
       end
 
       results
     end
-        
+
 
     # Take the arguments passed into #search, which can be flexibly given
     # in several ways, and normalize to an expected single hash that
     # will be passed to an engine's #search_implementation. The output
     # of this method is a single hash, and is what a #search_implementation
-    # can expect to receive as an argument, with keys: 
+    # can expect to receive as an argument, with keys:
     #
     # [:query]        the query
     # [:per_page]     will _always_ be present, using the default per_page if
     #                 none given by caller
     # [:start, :page] both :start and :page will _always_ be present, regardless
     #                 of which the caller used. They will both be integers, even if strings passed in.
-    # [:search_field] A search field from the engine's #search_field_definitions, as string.  
+    # [:search_field] A search field from the engine's #search_field_definitions, as string.
     #                 Even if the caller used :semantic_search_field, it'll be normalized
-    #                 to the actual local search_field key on output. 
-    # [:sort]         Sort key. 
+    #                 to the actual local search_field key on output.
+    # [:sort]         Sort key.
     #
     def normalized_search_arguments(*orig_arguments)
       arguments = {}
-      
+
       # Two-arg style to one hash, if present
       if (orig_arguments.length > 1 ||
           (orig_arguments.length == 1 && ! orig_arguments.first.kind_of?(Hash)))
-        arguments[:query] = orig_arguments.delete_at(0)      
+        arguments[:query] = orig_arguments.delete_at(0)
       end
 
       arguments.merge!(orig_arguments.first)  if orig_arguments.length > 0
-      
-      
+
+
       # allow strings for pagination (like from url query), change to
-      # int please. 
+      # int please.
       [:page, :per_page, :start].each do |key|
         arguments.delete(key) if arguments[key].blank?
         arguments[key] = arguments[key].to_i if arguments[key]
-      end   
+      end
       arguments[:per_page] ||= DefaultPerPage
-      
-      # illegal arguments      
+
+      # illegal arguments
       if (arguments[:start] && arguments[:page])
         raise ArgumentError.new("Can't supply both :page and :start")
       end
-      if ( arguments[:per_page] && 
-           self.max_per_page && 
+      if ( arguments[:per_page] &&
+           self.max_per_page &&
            arguments[:per_page] > self.max_per_page)
         raise ArgumentError.new("#{arguments[:per_page]} is more than maximum :per_page of #{self.max_per_page} for #{self.class}")
       end
-   
-      
+
+
       # Normalize :page to :start, and vice versa
       if arguments[:page]
         arguments[:start] = (arguments[:page] - 1) * arguments[:per_page]
       elsif arguments[:start]
         arguments[:page] = (arguments[:start] / arguments[:per_page]) + 1
       end
-      
+
       # normalize :sort from possibly symbol to string
       # TODO: raise if unrecognized sort key?
       if arguments[:sort]
         arguments[:sort] = arguments[:sort].to_s
       end
 
-      
+
       # Multi-field search
       if arguments[:query].kind_of? Hash
         # Only if allowed
@@ -348,7 +348,7 @@ module BentoSearch
         # translate semantic fields, raising for unfound fields if configured
         arguments[:query].transform_keys! do |key|
           new_key = self.semantic_search_map[key.to_s] || key
-          
+
           if ( config_arg(arguments, :unrecognized_search_field) == "raise" &&
               ! self.search_keys.include?(new_key))
             raise ArgumentError.new("#{self.class.name} does not know about search_field #{new_key}, in query Hash #{arguments[:query]}")
@@ -358,60 +358,60 @@ module BentoSearch
         end
 
       end
-      
+
       # translate semantic_search_field to search_field, or raise if
-      # can't. 
+      # can't.
       if (semantic = arguments.delete(:semantic_search_field)) && ! semantic.blank?
         semantic = semantic.to_s
         # Legacy publication_title is now called source_title
         semantic = "source_title" if semantic == "publication_title"
 
         mapped = self.semantic_search_map[semantic]
-        if config_arg(arguments, :unrecognized_search_field) == "raise" && ! mapped 
+        if config_arg(arguments, :unrecognized_search_field) == "raise" && ! mapped
           raise ArgumentError.new("#{self.class.name} does not know about :semantic_search_field #{semantic}")
         end
         arguments[:search_field] = mapped
-      end      
+      end
       if config_arg(arguments, :unrecognized_search_field) == "raise" && ! search_keys.include?(arguments[:search_field])
         raise ArgumentError.new("#{self.class.name} does not know about :search_field #{arguments[:search_field]}")
       end
-        
-              
+
+
       return arguments
     end
     alias_method :parse_search_arguments, :normalized_search_arguments
-    
-    
-    # Used mainly/only by the AJAX results loading. 
+
+
+    # Used mainly/only by the AJAX results loading.
     # an array WHITELIST of attributes that can be sent as non-verified
     # request params and used to execute a search. For instance, 'auth' is
-    # NOT on there, you can't trust a web request as to 'auth' status. 
+    # NOT on there, you can't trust a web request as to 'auth' status.
     # individual engines may over-ride, call super, and add additional
-    # engine-specific attributes. 
+    # engine-specific attributes.
     def public_settable_search_args
       [:query, :search_field, :semantic_search_field, :sort, :page, :start, :per_page]
     end
-   
-    
+
+
     protected
 
     # get value of an arg that can be supplied in search args OR config,
     # with search_args over-ridding config. Also normalizes value to_s
-    # (for symbols/strings). 
+    # (for symbols/strings).
     def config_arg(arguments, key, default = nil)
       value = if arguments[key].present?
         arguments[key]
       else
         configuration[key]
       end
-      
+
       value = value.to_s if value.kind_of? Symbol
-      
+
       return value
     end
-    
+
     # What exceptions should our #search wrapper rescue and turn
-    # into failed results instead of fatal errors? 
+    # into failed results instead of fatal errors?
     #
     # Can't rescue everything, or we eat VCR/webmock errors, and lots
     # of other errors we don't want to eat either, making
@@ -420,29 +420,29 @@ module BentoSearch
     #
     # This default list is probably useful already, but individual
     # engines can override if it's convenient for their own errorau
-    # handling. 
+    # handling.
     def auto_rescue_exceptions
-      [TimeoutError, HTTPClient::TimeoutError, 
+      [BentoSearch::RubyTimeoutClass, HTTPClient::TimeoutError,
             HTTPClient::ConfigurationError, HTTPClient::BadResponseError,
             MultiJson::DecodeError, Nokogiri::SyntaxError]
     end
-    
-    
+
+
     module ClassMethods
-      
-      # Over-ride returning a hash or Confstruct with 
-      # any configuration values you want by default. 
+
+      # Over-ride returning a hash or Confstruct with
+      # any configuration values you want by default.
       # actual user-specified config values will be deep-merged
-      # into the defaults. 
+      # into the defaults.
       def default_configuration
       end
-      
+
       # Over-ride returning an array of symbols for required
       # configuration keys.
       def required_configuration
       end
-      
+
     end
-    
+
   end
 end

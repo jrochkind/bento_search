@@ -131,14 +131,14 @@ class BentoSearch::EbscoHostEngine
     url = query_url(args)
 
     Rails.logger.debug("EbscoHostEngine Search for: #{url}")
-  
+
     results = BentoSearch::Results.new
     xml, response, exception = nil, nil, nil
 
     begin
       response = http_client.get(url)
       xml = Nokogiri::XML(response.body)
-    rescue TimeoutError, HTTPClient::ConfigurationError, HTTPClient::BadResponseError, Nokogiri::SyntaxError  => e
+    rescue BentoSearch::RubyTimeoutClass, HTTPClient::ConfigurationError, HTTPClient::BadResponseError, Nokogiri::SyntaxError  => e
         exception = e
     end
     # error handle
@@ -361,7 +361,7 @@ class BentoSearch::EbscoHostEngine
     query = if args[:query].kind_of?(Hash)
       # multi-field query
       args[:query].collect {|field, query| fielded_query(query, field)}.join(" AND ")
-    else 
+    else
       fielded_query(args[:query], args[:search_field])
     end
 

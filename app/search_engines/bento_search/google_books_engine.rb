@@ -48,7 +48,7 @@ module BentoSearch
         json = MultiJson.load( response.body )
         # Can't rescue everything, or we catch VCR errors, making
         # things confusing.
-      rescue TimeoutError, HTTPClient::TimeoutError,
+      rescue BentoSearch::RubyTimeoutClass, HTTPClient::TimeoutError,
             HTTPClient::ConfigurationError, HTTPClient::BadResponseError  => e
         results.error ||= {}
         results.error[:exception] = e
