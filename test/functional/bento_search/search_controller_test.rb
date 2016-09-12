@@ -38,7 +38,7 @@ module BentoSearch
 
 
     test "search" do
-      get :search, {:engine_id => "mock", :query => "my search"}
+      get_search_with_params :engine_id => "mock", :query => "my search"
       assert_response :success
       assert_not_nil assigns(:results)
 
@@ -50,7 +50,7 @@ module BentoSearch
     end
 
     test "failed search" do
-      get :search, {:engine_id => "failed_response", :query => "my search"}
+      get_search_with_params :engine_id => "failed_response", :query => "my search"
 
       # should this really be a success? Yes, I think so, we don't
       # want to stop ajax from getting it, it'll just have an error
@@ -69,7 +69,7 @@ module BentoSearch
 
 
     test "custom layout config" do
-      get :search, {:engine_id => "with_layout_config", :query => "my search"}
+      get_search_with_params :engine_id => "with_layout_config", :query => "my search"
 
       assert_response :success
 
@@ -80,22 +80,22 @@ module BentoSearch
     end
 
     test "non-routable engine" do
-      get :search, {:engine_id => "not_routable", :query => "my search"}
+      get_search_with_params :engine_id => "not_routable", :query => "my search"
 
       assert_response 403
     end
 
     test "non-existent engine" do
-      get :search, {:engine_id => "not_existing", :query => "my search"}
+      get_search_with_params :engine_id => "not_existing", :query => "my search"
 
       assert_response 404
     end
 
 
     test "respects public_settable_search_args" do
-      get :search, {:engine_id => "mock",
+      get_search_with_params :engine_id => "mock",
           'query' => "query", 'sort' => "sort", 'per_page' => "15",
-      'page' => "6", 'search_field' => "title", 'not_allowed' => "not allowed"}
+          'page' => "6", 'search_field' => "title", 'not_allowed' => "not allowed"
 
 
       search_args = assigns[:engine].last_args
@@ -131,7 +131,7 @@ module BentoSearch
         end
         @controller = CustomSearchController.new
 
-        get :search, {:engine_id => "mock", :query => "my search"}
+        get_search_with_params :engine_id => "mock", :query => "my search"
 
         assert_response 403
       ensure
@@ -142,8 +142,14 @@ module BentoSearch
     end
 
 
-
-
+    # Do rails4 or rails5
+    def get_search_with_params(params)
+      if Gem::Version.new(Rails.version) >= Gem::Version.new(5.0)
+        get :search, params: params
+      else
+        get :search, params
+      end
+    end
 
   end
 end
