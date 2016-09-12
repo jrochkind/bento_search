@@ -2,23 +2,23 @@ module BentoSearch
   # This is a controller that provides stand-alone search results
   # for registered engines. Right now, this is only for automatic
   # AJAX delayed loading. In the future it may be used for atom results,
-  # or other such. 
+  # or other such.
   #
   # You need to make sure to include routing for this controller in your
   # app to use it, for instance with `BentoSearch::Routes.new(self).draw`
   # in your ./config/routes.rb
   #
   # # Authorization Issues
-  # 
+  #
   # You may have some engines which should not be publically searchable,
   # they should only be searchable by certain auth'd users. This controller
   # could accidentally provide a non-protected endpoint to get results if
-  # nothing were done to prevent it. 
+  # nothing were done to prevent it.
   #
   # Only engines which have a :allow_routable_results => true key
-  # in their config will be served by this controller. 
+  # in their config will be served by this controller.
   #
-  # If you need routable results on an engine which ALSO needs to 
+  # If you need routable results on an engine which ALSO needs to
   # be protected by auth, you can add your own Rails before_filter
   # to provide auth. Say, in an initializer in your app:
   #
@@ -27,26 +27,26 @@ module BentoSearch
   #          raise BentoSearch::SearchController::AccessDenied
   #       end
   #     end
-  #    
-  # 
+  #
+  #
   # We may provide fancier/nicer API for this in the future, if there's
-  # demand. 
+  # demand.
   class SearchController < BentoSearchController
     class AccessDenied < BentoSearch::Error ; end
 
-    
+
     rescue_from AccessDenied, :with => :deny_access
     rescue_from NoSuchEngine, :with => :render_404
-      
+
     # returns partial HTML results, suitable for
-    # AJAX to insert into DOM. 
+    # AJAX to insert into DOM.
     # arguments for engine.search are taken from URI request params, whitelisted
-    def search           
+    def search
       engine  =  BentoSearch.get_engine(params[:engine_id])
-      # put it in an iVar mainly for testing purposes. 
+      # put it in an iVar mainly for testing purposes.
       @engine = engine
 
-      
+
       unless engine.configuration.allow_routable_results == true
         raise AccessDenied.new("engine needs to be registered with :allow_routable_results => true")
       end
@@ -54,28 +54,28 @@ module BentoSearch
       @results         = engine.search safe_search_args(engine, params)
       # template name of a partial with 'yield' to use to wrap the results
       @partial_wrapper = @results.display_configuration.lookup!("ajax.wrapper_template")
-      
+
       # partial HTML results
-      render "bento_search/search/search", :layout => false 
+      render "bento_search/search/search", :layout => false
 
     end
-    
 
-    
-    protected 
-    
+
+
+    protected
+
     def safe_search_args(engine, params)
-      params.to_hash.symbolize_keys.slice( *engine.public_settable_search_args )       
+      params.to_hash.symbolize_keys.slice( *engine.public_settable_search_args )
     end
-    
+
     def deny_access(exception)
       render :text => exception.message, :status => 403
     end
-    
-    def render_404(exception)      
+
+    def render_404(exception)
       render :text => exception.message, :status => 404
     end
-    
-    
+
+
   end
 end
