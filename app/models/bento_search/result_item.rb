@@ -156,7 +156,7 @@ module BentoSearch
     serializable_attr_accessor :language_code
     attr_writer :language_str
     def language_str
-      @language_str || language_code.try do |code|
+      (@language_str ||= nil) || language_code.try do |code|
         LanguageList::LanguageInfo.find(code).try do |lang_obj|
           lang_obj.name
         end

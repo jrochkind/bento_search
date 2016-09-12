@@ -131,7 +131,7 @@ class BentoSearch::EdsEngine
   # an object that includes some Rails helper modules for
   # text handling.
   def helper
-    unless @helper
+    unless @helper ||= nil
       @helper = Object.new
       @helper.extend ActionView::Helpers::TextHelper # for truncate
       @helper.extend ActionView::Helpers::OutputSafetyHelper # for safe_join

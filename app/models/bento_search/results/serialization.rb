@@ -98,7 +98,7 @@ module BentoSearch::Results::Serialization
     hash = {}
     self._serializable_attrs.each do |accessor|
       accessor = accessor.to_s
-      value = self.instance_variable_get("@#{accessor}")
+      value = self.instance_variable_defined?("@#{accessor}") && self.instance_variable_get("@#{accessor}")
 
       next if value.blank?
 
