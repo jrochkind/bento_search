@@ -251,7 +251,7 @@ module BentoSearch
        "prism"      => "http://prismstandard.org/namespaces/basic/2.0/",
        "dc"         => "http://purl.org/dc/elements/1.1/",
        "atom"       => "http://www.w3.org/2005/Atom"}
-     end
+    end
 
     # Maps from Scopus "doctype" as listed at http://www.developers.elsevier.com/devcms/content/search-fields-overview
     # and delivered in the XML response as atom:subtype.
