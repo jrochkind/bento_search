@@ -28,7 +28,10 @@ env:
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
 before_install:
-  - gem install bundler
+  # Bundler 1.13 seems to not work with jruby 1.7 and rails4 for
+  # some reasons I can't figure out. jruby 1.7 is old, but we want
+  # to keep testing with it until a major version release.
+  - if [[ `ruby -v` == jruby\ 1.7* ]]; then gem install bundler -v 1.12.5; else gem install bundler; fi
 # use new faster travis infrastructure
 sudo: false
 # which let's us do caching
