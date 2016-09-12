@@ -77,7 +77,7 @@ module BentoSearch
     def args_to_search_url(arguments)
       query = if arguments[:query].kind_of?(Hash)
         # multi-field query
-        arguments[:query].collect {|field, query| fielded_query(query, field)}.join(" ")
+        arguments[:query].collect {|field, query_value| fielded_query(query_value, field)}.join(" ")
       else
         fielded_query(arguments[:query], arguments[:search_field])
       end
