@@ -70,11 +70,11 @@ module BentoSearch
     end
 
     def deny_access(exception)
-      render :text => exception.message, :status => 403
+      render :plain => exception.message, :status => 403
     end
 
     def render_404(exception)
-      render :text => exception.message, :status => 404
+      render :plain => exception.message, :status => 404
     end
 
 
