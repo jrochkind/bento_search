@@ -31,6 +31,7 @@ module BentoSearch::Results::Serialization
     self._serializable_attr_options = {}
   end
 
+
   class_methods do
     # Just a macro to mark a property name serializable -- the name is
     # of an instance method that will be included in our serializations
@@ -67,14 +68,14 @@ module BentoSearch::Results::Serialization
 
 
         if _serializable_attr_options[key] && _serializable_attr_options[key][:collection_of]
-          klass = qualified_const_get(_serializable_attr_options[key][:collection_of])
+          klass = correct_const_get(_serializable_attr_options[key][:collection_of])
           value = value.collect do |item|
             klass.from_internal_state_hash(item)
           end
         end
 
         if _serializable_attr_options[key] && _serializable_attr_options[key][:serializer]
-          klass = qualified_const_get(_serializable_attr_options[key][:serializer])
+          klass = correct_const_get(_serializable_attr_options[key][:serializer])
           value = klass.load(value)
         end
 
@@ -92,6 +93,14 @@ module BentoSearch::Results::Serialization
       self.from_internal_state_hash( JSON.parse! json_str )
     end
 
+    def correct_const_get(str)
+      if Gem::Version.new(Rails.version) > Gem::Version.new('4.2.99')
+        const_get(str)
+      else
+        qualified_const_get(str)
+      end
+    end
+
   end
 
   def internal_state_hash
@@ -103,7 +112,7 @@ module BentoSearch::Results::Serialization
       next if value.blank?
 
       if _serializable_attr_options[accessor] && _serializable_attr_options[accessor][:serializer]
-        klass = self.class.qualified_const_get(_serializable_attr_options[accessor][:serializer])
+        klass = self.class.correct_const_get(_serializable_attr_options[accessor][:serializer])
         value = klass.dump(value)
       elsif value.respond_to?(:to_ary)
         value = value.to_ary.collect do |item|
