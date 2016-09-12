@@ -25,7 +25,7 @@ load 'rails/tasks/engine.rake'
 
 
 
-Bundler::GemHelper.install_tasks
+require 'bundler/gem_tasks'
 
 require 'rake/testtask'
 
