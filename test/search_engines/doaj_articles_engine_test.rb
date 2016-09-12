@@ -5,7 +5,7 @@ require 'cgi'
 class DoajArticlesEngineTest < ActiveSupport::TestCase
   extend TestWithCassette
 
-  def setup    
+  def setup
     @engine = BentoSearch::DoajArticlesEngine.new
     # tell it not to send our bad API key
   end
@@ -13,15 +13,15 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
   test_with_cassette("basic search", :doaj_articles) do
     results = @engine.search("Breast cancer patients with lobular cancer more commonly have a father than a mother diagnosed with cancer")
 
-    assert_kind_of BentoSearch::Results, results    
+    assert_kind_of BentoSearch::Results, results
     assert ! results.failed?
 
     assert_not_nil results.total_items
     assert_equal 0, results.start
     assert_equal 10, results.per_page
-    
+
     assert_not_empty results
-    
+
     first = results.first
 
     assert_present first.unique_id
@@ -52,11 +52,11 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
 
   test_with_cassette("pagination", :doaj_articles) do
     results = @engine.search("cancer", :per_page => 20, :page => 3)
-    
+
     assert ! results.failed?
-    
+
     assert_equal 20, results.length
-    
+
     assert_equal 20, results.size
     assert_equal 40, results.start
     assert_equal 20, results.per_page
@@ -70,7 +70,7 @@ class DoajArticlesEngineTest < ActiveSupport::TestCase
     assert results.failed?
     assert_kind_of Hash, results.error
     assert_present results.error[:message]
-    assert_present results.error[:status]    
+    assert_present results.error[:status]
   end
 
   test_with_cassette("live #get(identifier) round trip", :doaj_articles) do
