@@ -65,7 +65,8 @@ module BentoSearch
     protected
 
     def safe_search_args(engine, params)
-      params.to_hash.symbolize_keys.slice( *engine.public_settable_search_args )
+      all_hash = params.respond_to?(:to_unsafe_hash) ? params.to_unsafe_hash : params.to_hash
+      all_hash.symbolize_keys.slice( *engine.public_settable_search_args )
     end
 
     def deny_access(exception)
