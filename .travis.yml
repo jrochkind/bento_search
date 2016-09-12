@@ -1,19 +1,23 @@
 language: ruby
 bundler_args: --without manual_development
-rvm:
-  #- 1.8.7
-  #- 1.9.2
-  - 1.9.3
-  - 2.2.1
-  - 2.3.1
-  #- jruby-18mode # JRuby in 1.8 mode
-  - jruby-19mode # JRuby in 1.9 mode
-  - jruby-9.1.5.0
-  #- rbx-18mode
-  #- rbx-19mode
+matrix:
+  include:
+    - rvm: 1.9.3
+      env: RAILS_VERSION_SPEC=4.2.0
+    - rvm: 2.2.1
+      env: RAILS_VERSION_SPEC=4.2.0
+    - rvm: 2.3.1
+      env: RAILS_VERSION_SPEC=4.2.0
+    - rvm: 2.3.1
+      env: RAILS_VERSION_SPEC=5.0.0
+    - rvm: jruby-19mode
+      env: RAILS_VERSION_SPEC=4.2.0
+    - rvm: jruby-9.1.5.0
+      env: RAILS_VERSION_SPEC=4.2.0
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
 before_install:
