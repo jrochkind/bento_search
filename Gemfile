@@ -20,25 +20,31 @@ group "manual_development" do
   gem 'byebug',   :platform => [:mri_21, :mri_22, :mri_23]
 end
 
-# Can't test rails5 under mri 2.3. Hey, we get Rails 4 testing like this too...
-if Gem::Version.new(RUBY_VERSION.dup) < Gem::Version.new("2.3")
-  gem 'rails', "~> 4.2"
+# For allowing testing under multiple Rails versions from travis or command
+# line. Can't test Rails5 under MRI less than 2.3.
+rails_version = if ENV['RAILS_VERSION_SPEC'] && !ENV['RAILS_VERSION_SPEC'].empty?
+  ENV['RAILS_VERSION_SPEC']
 else
+  "5.0.0"
+end
+
+gem 'rails', "~> #{rails_version}"
+
+if Gem::Version.new(rails_version) > Gem::Version.new("4.2.999999")
   # Only for Rails5, to restore tests we need, gah.
   group "test" do
     gem 'rails-controller-testing', '~> 1.0'
   end
 end
 
+# Can't quite explain this one, but for ruby 1.9....
+# https://github.com/rails/rails/issues/24749
 if Gem::Version.new(RUBY_VERSION.dup) < Gem::Version.new("2.0")
-  # Can't quite explain this one, but for ruby 1.9....
-  # https://github.com/rails/rails/issues/24749
   gem 'mime-types', '2.6.2'
 end
 
 
+# SQLite for testing
 gem "sqlite3", :platform => [:ruby, :mswin, :mingw]
-
 # for JRuby
-
-gem "jdbc-sqlite3", :platform => :jruby
+gem "activerecord-jdbcsqlite3-adapter", :platform => :jruby
