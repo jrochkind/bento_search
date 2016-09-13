@@ -4,10 +4,10 @@ require 'http_client_patch/include_client'
 require 'json'
 
 module BentoSearch
-  # DOAJ Articles search. 
+  # DOAJ Articles search.
   # https://doaj.org/api/v1/docs
   #
-  # Phrase searches with double quotes are respected. 
+  # Phrase searches with double quotes are respected.
   #
   # Supports #get by unique_id feature
   #
@@ -36,7 +36,7 @@ module BentoSearch
         Rails.logger.debug("DoajEngine: requesting #{query_url}")
         response = http_client.get( query_url )
         json = JSON.parse(response.body)
-      rescue TimeoutError, HTTPClient::TimeoutError,
+      rescue BentoSearch::RubyTimeoutClass, HTTPClient::TimeoutError,
              HTTPClient::ConfigurationError, HTTPClient::BadResponseError,
              JSON::ParserError  => e
         results.error ||= {}
@@ -77,7 +77,7 @@ module BentoSearch
     def args_to_search_url(arguments)
       query = if arguments[:query].kind_of?(Hash)
         # multi-field query
-        arguments[:query].collect {|field, query| fielded_query(query, field)}.join(" ")
+        arguments[:query].collect {|field, query_value| fielded_query(query_value, field)}.join(" ")
       else
         fielded_query(arguments[:query], arguments[:search_field])
       end
@@ -85,7 +85,7 @@ module BentoSearch
       # We need to escape this for going in a PATH component,
       # not a query. So space can't be "+", it needs to be "%20",
       # and indeed DOAJ API does not like "+".
-      # 
+      #
       # But neither CGI.escape nor URI.escape does quite
       # the right kind of escaping, seems to work out
       # if we do CGI.escape but then replace '+'
@@ -98,7 +98,7 @@ module BentoSearch
       if arguments[:per_page]
         query_args["pageSize"]  = arguments[:per_page]
       end
-      
+
       if arguments[:page]
         query_args["page"]      = arguments[:page]
       end
@@ -115,14 +115,14 @@ module BentoSearch
       return url
     end
 
-    # Prepares a DOAJ API (elastic search) query component for 
+    # Prepares a DOAJ API (elastic search) query component for
     # given textual query in a given field (or default non-fielded search)
     #
     # Separates query string into tokens (bare words and phrases),
     # so they can each be made mandatory for ElasticSearch. Default
     # DOAJ API makes them all optional, with a very low mm, which
     # leads to low-precision odd looking results for standard use
-    # cases. 
+    # cases.
     #
     # Escapes all remaining special characters as literals (not including
     # double quotes which can be used for phrases, which are respected. )
@@ -133,7 +133,7 @@ module BentoSearch
     #
     # The "+" prefixed before field-name is to make sure all separate
     # fields are also mandatory when doing multi-field searches. It should
-    # make no difference for a single-field search. 
+    # make no difference for a single-field search.
     def fielded_query(query, field = nil)
       if field.present?
         "+#{field}:(#{prepare_mandatory_terms(query)})"
@@ -143,12 +143,12 @@ module BentoSearch
     end
 
     # Takes a query string, prepares an ElasticSearch query
-    # doing what we want: 
+    # doing what we want:
     #   * tokenizes into bare words and double-quoted phrases
     #   * Escapes other punctuation to be literal not ElasticSearch operator.
     #     (Does NOT do URI escaping)
-    #   * Makes each token mandatory with an ElasticSearch "+" operator prefixed. 
-    def prepare_mandatory_terms(query)      
+    #   * Makes each token mandatory with an ElasticSearch "+" operator prefixed.
+    def prepare_mandatory_terms(query)
       # use string split with regex to too-cleverly split into space
       # seperated terms and phrases, keeping phrases as unit.
       terms = query.split %r{[[:space:]]+|("[^"]+")}
@@ -174,13 +174,13 @@ module BentoSearch
 
       item.start_page = bibjson["start_page"]
       item.end_page   = bibjson["end_page"]
-      
+
       item.year       = bibjson["year"]
       if (year = bibjson["year"].to_i) && (month = bibjson["month"].to_i)
         if year != 0 && month != 0
           item.publication_date = Date.new(bibjson["year"].to_i, bibjson["month"].to_i)
         end
-      end      
+      end
 
       item.abstract   = sanitize(bibjson["abstract"]) if bibjson.has_key?("abstract")
 
@@ -222,9 +222,9 @@ module BentoSearch
     # punctuation that needs to be escaped and how to escape (backslash)
     # for ES documented here: https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html
     #
-    # We do not escape double quotes, want to allow them for phrases. 
+    # We do not escape double quotes, want to allow them for phrases.
     #
-    # This method does NOT return URI-escaped, it returns literal, escaped for ES. 
+    # This method does NOT return URI-escaped, it returns literal, escaped for ES.
     def escape_query(q)
       q.gsub(/([\+\-\=\&\|\>\<\!\(\)\{\}\[\]\^\~\*\?\:\\\/])/) {|m| "\\#{$1}"}
     end
@@ -242,7 +242,7 @@ module BentoSearch
       { nil                     => {:semantic => :general},
         "bibjson.title"         => {:semantic => :title},
         # Using 'exact' seems to produce much better results for
-        # author, don't entirely understand what's up. 
+        # author, don't entirely understand what's up.
         "bibjson.author.name"   => {:semantic => :author},
         "publisher"             => {:semantic => :publisher},
         "bibjson.subject.term"  => {:semantic => :subject},
@@ -263,7 +263,7 @@ module BentoSearch
 
     def sort_definitions
       # Don't believe DOAJ supports sorting by author
-      {        
+      {
         "relevance" => {:implementation => nil}, # default
         "title" => {:implementation => "title:asc"},
         # We don't quite have publication date sorting, but we'll use

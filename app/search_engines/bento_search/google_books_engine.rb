@@ -48,7 +48,7 @@ module BentoSearch
         json = MultiJson.load( response.body )
         # Can't rescue everything, or we catch VCR errors, making
         # things confusing.
-      rescue TimeoutError, HTTPClient::TimeoutError,
+      rescue BentoSearch::RubyTimeoutClass, HTTPClient::TimeoutError,
             HTTPClient::ConfigurationError, HTTPClient::BadResponseError  => e
         results.error ||= {}
         results.error[:exception] = e
@@ -223,7 +223,7 @@ module BentoSearch
     def args_to_search_url(arguments)
       query = if arguments[:query].kind_of? Hash
         #multi-field
-        arguments[:query].collect {|field, query| fielded_query(query, field)}.join(" ")
+        arguments[:query].collect {|field, query_value| fielded_query(query_value, field)}.join(" ")
       elsif arguments[:search_field]
         fielded_query(arguments[:query], arguments[:search_field])
       else

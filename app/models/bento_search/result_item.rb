@@ -36,12 +36,12 @@ module BentoSearch
     # search service it came from. May be alphanumeric. May be nil
     # for engines that don't support it.
     serializable_attr_accessor :unique_id
-    
+
 
     # If set to true, item will refuse to generate an openurl,
     # returning nil from #to_openurl or #openurl_kev
     serializable_attr_accessor :openurl_disabled
-    
+
 
     # Array (possibly empty) of BentoSearch::Link objects
     # representing additional links. Often SearchEngine's themselves
@@ -52,7 +52,7 @@ module BentoSearch
 
     # * dc.title
     # * schema.org CreativeWork: 'name'
-    serializable_attr_accessor :title    
+    serializable_attr_accessor :title
     # backwards compat, we used to have separate titles and subtitles
     alias_method :complete_title, :title
 
@@ -112,7 +112,7 @@ module BentoSearch
     #
     # Note: We're re-thinking this, might allow uncontrolled
     # in here instead.
-    serializable_attr_accessor :format    
+    serializable_attr_accessor :format
 
     # Translated from internal format vocab at #format. Outputs
     # eg http://schema.org/Book
@@ -137,7 +137,7 @@ module BentoSearch
     # uncontrolled presumably english-language format string.
     # if supplied will be used in display in place of controlled
     # format.
-    serializable_attr_accessor :format_str    
+    serializable_attr_accessor :format_str
 
     # Language of materials. Producer can set language_code to an ISO 639-1 (two
     # letter) or 639-3 (three letter) language code. If you do this, you don't
@@ -153,10 +153,10 @@ module BentoSearch
     # #language_iso_639_2 (either may be null), or #language_str for uncontrolled
     # string. If engine just sets one of these, internals take care of filling
     # out the others. r
-    serializable_attr_accessor :language_code    
+    serializable_attr_accessor :language_code
     attr_writer :language_str
     def language_str
-      @language_str || language_code.try do |code|
+      (@language_str ||= nil) || language_code.try do |code|
         LanguageList::LanguageInfo.find(code).try do |lang_obj|
           lang_obj.name
         end
@@ -230,12 +230,12 @@ module BentoSearch
 
     # An ARRAY of string query-in-context snippets. Will usually
     # have highlighting <b> tags in it. Creator is responsible
-    # for making sure it's otherwise html-safe. 
+    # for making sure it's otherwise html-safe.
     #
     # Not all engines may stores Snippets array in addition to abstract,
     # some may only store one or the other. Some may store both but
     # with same content formatted differently (array of multiple vs
-    # one combined string), some engines they may be different. 
+    # one combined string), some engines they may be different.
     attr_accessor :snippets
     serializable_attr :snippets
 
@@ -263,7 +263,7 @@ module BentoSearch
     # for it? Nice thing about the configuration has instead is it's
     # easily serializable, it's just data.
     #
-    # Although we intentionally do NOT include these in JSON serialization, ha. 
+    # Although we intentionally do NOT include these in JSON serialization, ha.
     attr_accessor :display_configuration
     attr_accessor :engine_id
 

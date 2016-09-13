@@ -23,17 +23,36 @@ end
 APP_RAKEFILE = File.expand_path("../test/dummy/Rakefile", __FILE__)
 load 'rails/tasks/engine.rake'
 
+load 'rails/tasks/statistics.rake'
+
+require 'bundler/gem_tasks'
 
 
-Bundler::GemHelper.install_tasks
+if Gem::Version.new(Rails.version) > Gem::Version.new('4.2.99999')
+  desc "Run tests"
+  task :test do
+    Rake::Task["app:test"].invoke
+  end
+  # use built-in Rails test command
+  # task :test do
+  #   require "rails/test_unit/minitest_plugin"
+  #   #$: << File.expand_path('test', ENGINE_ROOT)
+  #   Minitest.rake_run([])
 
-require 'rake/testtask'
+  #   # require 'rails/engine/commands_tasks'
+  #   # Rails::Engine::CommandsTasks.new("").run_command!('test')
+  # end
+else
+  # old rails4 style
+  require 'rake/testtask'
 
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'lib'
-  t.libs << 'test'
-  t.pattern = 'test/**/*_test.rb'
-  t.verbose = false
+  Rake::TestTask.new(:test) do |t|
+    t.libs << 'lib'
+    t.libs << 'test'
+    t.pattern = 'test/**/*_test.rb'
+    t.verbose = false
+    t.warning = false
+  end
 end
 
 

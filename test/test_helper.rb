@@ -2,13 +2,24 @@
 ENV["RAILS_ENV"] = "test"
 
 require File.expand_path("../dummy/config/environment.rb",  __FILE__)
+ActiveRecord::Migrator.migrations_paths = [File.expand_path("../../test/dummy/db/migrate", __FILE__)]
 
-# we insist on minitest, when only the best will do. 
-# Rails will build on top of it if it's there. 
-require 'minitest/autorun'
-require 'minitest/unit'
-
+# we insist on minitest, when only the best will do.
+# Rails will build on top of it if it's there.
+require 'minitest/spec'
 require "rails/test_help"
+
+# Filter out Minitest backtrace while allowing backtrace from other libraries
+# to be shown.
+Minitest.backtrace_filter = Minitest::BacktraceFilter.new
+
+# We're not supposed to have to manually install rails-controller-testing, not
+# sure why we do.
+begin
+  require 'rails-controller-testing'
+  Rails::Controller::Testing.install
+rescue LoadError
+end
 
 Rails.backtrace_cleaner.remove_silencers!
 
@@ -25,23 +36,23 @@ end
 # back. Useful for efficiency, also useful for
 # testing code against API's that not everyone
 # has access to -- the responses can be cached
-# and re-used. 
+# and re-used.
 require 'vcr'
 require 'webmock'
 
 # To allow us to do real HTTP requests in a VCR.turned_off, we
-# have to tell webmock to let us. 
+# have to tell webmock to let us.
 WebMock.allow_net_connect!
 
 VCR.configure do |c|
   c.cassette_library_dir = 'test/vcr_cassettes'
   # webmock needed for HTTPClient testing
-  c.hook_into :webmock 
+  c.hook_into :webmock
 end
 
 # Silly way to not have to rewrite all our tests if we
 # temporarily disable VCR, make VCR.use_cassette a no-op
-# instead of no-such-method. 
+# instead of no-such-method.
 if ! defined? VCR
   module VCR
     def self.use_cassette(*args)
@@ -50,9 +61,9 @@ if ! defined? VCR
   end
 end
 
-# re-open to add 
+# re-open to add
 # some custom assertions, that used to be in mini-test, or that
-# we wanted to add. 
+# we wanted to add.
 class ActiveSupport::TestCase
 
   def assert_present(object, msg = nil)
