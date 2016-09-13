@@ -5,7 +5,7 @@
 
 bento_search provides an abstraction/normalization layer for querying and
 displaying results from external search engines, in Ruby on Rails. Works with
-Rails 3.x or 4.x.   ruby 1.9.3+
+Rails 3.x, 4.x, or 5.0. ruby 1.9.3+
 
 ### Goals: To help you
 
@@ -47,11 +47,11 @@ search' functionality, but it does not and will never support merging results
 from multiple engines into one result set. It is meant to support displaying the
 first few results from multiple engines on one page, "bento box" style (as
 named by Tito Sierra@NCSU), as well as more expanded single-search-on-a-page
-uses -- or back-end functionality supporting features that are not straight discovery. 
+uses -- or back-end functionality supporting features that are not straight discovery.
 
 * bento_search provides abstract functionality for pagination, sorting,
 and single-field-specified queries. Faceting and generalized limiting are
-not yet supported, but possibly will be built out in the future. 
+not yet supported, but possibly will be built out in the future.
 
 Not all search engine adapters support all features.  Some engines offer
 engine-specific features, such as limiting. Search engine adapters can
@@ -238,7 +238,7 @@ declared for the engine, that will be preferred.
 This can be used to expose a multi-field search to users, and the `bento_field_hash_for`
 helper method might be helpful in creating your UI. But this is also useful for looking
 up known-item citations -- either by author/title, or issn/volume/issue/page, or doi, or
-anything else -- as back-end support for various possible functions. 
+anything else -- as back-end support for various possible functions.
 
 ### Concurrent searching
 
@@ -375,7 +375,7 @@ There are additional details that might matter to you, for more info see the
 ### Round-Trip Serialization to JSON
 
 You can serialize BentoSearch::Results to a simple straightforward JSON structure, and de-serialize
-them back into BentoSearch::Results. 
+them back into BentoSearch::Results.
 
 ~~~ruby
 json_str          = results.dump_to_json
@@ -383,19 +383,19 @@ copy_of_results   = BentoSearch::Results.load_json(json_str)
 ~~~
 
 Search context (query, start, per_page) are not serialized, and will be lost
-on de-serialization. 
+on de-serialization.
 
 Unlike the Atom serialization, **the JSON serialization is of internal data
-state, without decoration.** Configuration context is not serialized.  
+state, without decoration.** Configuration context is not serialized.
 
-However, the engine_id is included in serialization if present, 
+However, the engine_id is included in serialization if present,
 and configuration from the specified engine
 will be re-assigned on de-serialization.  This means if the configuration
 changed between serialization and de-serialization, you get the new stuff
-assigned on de-serialization. 
+assigned on de-serialization.
 
 The use case guiding JSON serialization is storage somewhere, and
-round-trip de-serialization in the current app context. 
+round-trip de-serialization in the current app context.
 
 If you want to take de-serialized results that did not have an engine_id,
 or set configuration on them to a different engine (registered or not) you can:
@@ -410,7 +410,7 @@ or set configuration on them to a different engine (registered or not) you can:
 
 If you want a serialization to be consumed by something other than an
 app using the bento_search gem, as an API, we recommend the [Atom serialization](https://github.com/jrochkind/bento_search/wiki/Machine-Readable-Serialization-With-Atom)
-instead. 
+instead.
 
 ## Planned Features
 
