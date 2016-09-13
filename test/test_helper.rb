@@ -2,13 +2,16 @@
 ENV["RAILS_ENV"] = "test"
 
 require File.expand_path("../dummy/config/environment.rb",  __FILE__)
+ActiveRecord::Migrator.migrations_paths = [File.expand_path("../../test/dummy/db/migrate", __FILE__)]
 
 # we insist on minitest, when only the best will do.
 # Rails will build on top of it if it's there.
-require 'minitest/autorun'
-require 'minitest/unit'
-
+require 'minitest/spec'
 require "rails/test_help"
+
+# Filter out Minitest backtrace while allowing backtrace from other libraries
+# to be shown.
+Minitest.backtrace_filter = Minitest::BacktraceFilter.new
 
 # We're not supposed to have to manually install rails-controller-testing, not
 # sure why we do.
