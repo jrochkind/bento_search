@@ -4,8 +4,10 @@ matrix:
   include:
     - rvm: 1.9.3
       env: RAILS_VERSION_SPEC=4.2.0
-    - rvm: 2.2.1
+    - rvm: 2.2.2
       env: RAILS_VERSION_SPEC=4.2.0
+    - rvm: 2.2.2
+      env: RAILS_VERSION_SPEC=5.0.0
     - rvm: 2.3.1
       env: RAILS_VERSION_SPEC=4.2.0
     - rvm: 2.3.1
