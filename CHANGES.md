@@ -1,3 +1,9 @@
+## 1.6
+
+* Test under Rails5
+* Test under MRI 2.3
+
+
 ## 1.5
 
 * multi-field searching
