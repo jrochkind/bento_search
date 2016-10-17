@@ -419,12 +419,12 @@ module BentoSearch
     # to be something diff in production and dev?
     #
     # This default list is probably useful already, but individual
-    # engines can override if it's convenient for their own errorau
+    # engines can override if it's convenient for their own error
     # handling.
     def auto_rescue_exceptions
       [BentoSearch::RubyTimeoutClass, HTTPClient::TimeoutError,
             HTTPClient::ConfigurationError, HTTPClient::BadResponseError,
-            MultiJson::DecodeError, Nokogiri::SyntaxError]
+            MultiJson::DecodeError, Nokogiri::SyntaxError, SocketError]
     end
 
 
