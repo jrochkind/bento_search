@@ -304,7 +304,7 @@ module BentoSearch
         arguments.delete(key) if arguments[key].blank?
         arguments[key] = arguments[key].to_i if arguments[key]
       end
-      arguments[:per_page] ||= DefaultPerPage
+      arguments[:per_page] ||= configuration.default_per_page || DefaultPerPage
 
       # illegal arguments
       if (arguments[:start] && arguments[:page])
