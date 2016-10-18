@@ -1,5 +1,7 @@
 ## 1.7
 * auto_rescue includes SocketError
+* search engines now have a `configuration.default_per_page`
+
 
 ## 1.6
 

@@ -110,6 +110,17 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
     assert_raise(ArgumentError) { d.test_parse(:query => "query", :per_page => 1000) }
   end
 
+  def test_default_per_page
+    d = Dummy.new
+
+    args = d.test_parse(:query => "query")
+    assert_equal(Dummy::DefaultPerPage, args[:per_page])
+
+    d.configuration[:default_per_page] = 2
+    args = d.test_parse(:query => "query")
+    assert_equal(2, args[:per_page])
+  end
+
   def test_search_field_keys
     assert_equal ["my_title", "my_author", "my_other"], Dummy.new.search_keys
     assert_equal ["title", "author"], Dummy.new.semantic_search_keys
