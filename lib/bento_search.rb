@@ -47,6 +47,17 @@ module BentoSearch
   # Avoid deprecation warnings in ruby 2.3.0
   RubyTimeoutClass = (defined?(Timeout::Error) ? Timeout::Error : TimeoutError)
 
+  @@defaults = Confstruct::Configuration.new(
+    error_partial: 'bento_search/search_error',
+    item_partial: 'bento_search/std_item',
+    no_results_partial: 'bento_search/no_results'
+  )
+  def self.set_defaults(hash)
+    @@defaults.merge!(hash)
+  end
+  def self.defaults
+    @@defaults
+  end
 end
 
 
