@@ -20,6 +20,7 @@ module BentoSearchHelper
   #   * for_display.error_partial => gets `results` local
   #   * for_display.no_results_partial => gets `results` local
   #   * for_display.item_partial => `:collection => results, :as => :item, :locals => {:results => results}`
+  #   * for_display.ajax_loading_partial => local `engine`
   #
   # If not specified for a particular engine, the partials listed in BentoSearch.defaults will be used.
   #
@@ -60,19 +61,9 @@ module BentoSearchHelper
         :"data-bento-search-load" => load_mode.to_s,
         :"data-bento-ajax-url"    => to_bento_search_url( {:engine_id => engine.configuration.id}.merge(options) )) do
 
-      # An initially hidden div with loading msg/spinner that will be shown
-      # by js on ajax load
-      content_tag("noscript") do
-        I18n.t("bento_search.ajax_noscript")
-      end +
-      content_tag(:div,
-        :class => "bento_search_ajax_loading",
-        :style => "display:none") do
-          image_tag("bento_search/large_loader.gif",
-            :alt => I18n.translate("bento_search.ajax_loading")
-          )
+          partial = (engine.configuration.for_display.ajax_loading_partial if engine.configuration.for_display) || BentoSearch.defaults.ajax_loading_partial
+          render :partial => partial, locals: { engine: engine }
         end
-      end
     else
       results = engine.search(options) unless results
 
