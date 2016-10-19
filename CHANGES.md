@@ -1,6 +1,8 @@
 ## 1.7
 * auto_rescue includes SocketError
 * search engines now have a `configuration.default_per_page`
+* partials used by `bento_search` helper can be configured in BentoSearch.defaults,
+  or at the engine config level as well. Now including `ajax_loading_partial`.
 
 
 ## 1.6
