@@ -33,7 +33,10 @@ begin
     # If called multiple times, returns the same results each time, does
     # not re-run searches.
     def results
-      @results ||= @futures.collect { |future| [future.value!.engine_id, future.value!] }.to_h.freeze
+      @results ||= begin
+        pairs = @futures.collect { |future| [future.value!.engine_id, future.value!] }
+        Hash[ pairs ].freeze
+      end
     end
 
   end
