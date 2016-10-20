@@ -37,6 +37,14 @@ if Gem::Version.new(rails_version) > Gem::Version.new("4.2.999999")
   end
 end
 
+if Gem::Version.new(rails_version) < Gem::Version.new("5.0")
+  # Previous to Rails5, we need to include concurrent-ruby explicitly,
+  # in 5.x it's a dependency of Rails.
+  group "test" do
+    gem 'concurrent-ruby', '~> 1.0'
+  end
+end
+
 # Can't quite explain this one, but for ruby 1.9....
 # https://github.com/rails/rails/issues/24749
 if Gem::Version.new(RUBY_VERSION.dup) < Gem::Version.new("2.0")
