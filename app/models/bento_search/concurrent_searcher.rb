@@ -37,7 +37,7 @@ begin
     # not re-run searches.
     def results
       @results ||= begin
-        pairs = rails_collect_wrap do
+        pairs = rails_wait_wrap do
           @futures.collect { |future| [future.value!.engine_id, future.value!] }
         end
         Hash[ pairs ].freeze
@@ -47,11 +47,11 @@ begin
     protected
 
     # In Rails5, future body's need to be wrapped in an executor,
-    # to handle auto-loading right in dev-mode, among other things. 
+    # to handle auto-loading right in dev-mode, among other things.
     # Rails docs coming, see https://github.com/rails/rails/issues/26847
     @@rails_has_executor = Rails.application.respond_to?(:executor)
-    def rails_future_wrap
-      if @@rails_has_executor 
+    def rails__wrap
+      if @@rails_has_executor
         Rails.application.executor.wrap { yield }
       else
         yield
@@ -63,7 +63,7 @@ begin
     # give up the autoload lock. Rails docs coming, see https://github.com/rails/rails/issues/26847
     @@rails_needs_interlock_permit = ActiveSupport::Dependencies.respond_to?(:interlock) &&
       !(Rails.application.config.eager_load && Rails.application.config.cache_classes)
-    def rails_collect_wrap
+    def rails_wait_wrap
       if @@rails_needs_interlock_permit
         ActiveSupport::Dependencies.interlock.permit_concurrent_loads { yield }
       else
