@@ -61,9 +61,10 @@ begin
     # In Rails5, if we are collecting from within an action method
     # (ie the 'request loop'), as we usually will be, we need to
     # give up the autoload lock. Rails docs coming, see https://github.com/rails/rails/issues/26847
-    @@rails_has_interlock = ActiveSupport::Dependencies.respond_to?(:interlock)
+    @@rails_needs_interlock_permit = ActiveSupport::Dependencies.respond_to?(:interlock) &&
+      !(Rails.application.config.eager_load && Rails.application.config.cache_classes)
     def rails_collect_wrap
-      if @@rails_has_interlock
+      if @@rails_needs_interlock_permit
         ActiveSupport::Dependencies.interlock.permit_concurrent_loads { yield }
       else
         yield
