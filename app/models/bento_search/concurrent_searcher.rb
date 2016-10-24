@@ -51,7 +51,7 @@ begin
     # to handle auto-loading right in dev-mode, among other things.
     # Rails docs coming, see https://github.com/rails/rails/issues/26847
     @@rails_has_executor = Rails.application.respond_to?(:executor)
-    def rails__wrap
+    def rails_future_wrap
       if @@rails_has_executor
         Rails.application.executor.wrap { yield }
       else
