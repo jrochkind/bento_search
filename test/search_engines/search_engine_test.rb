@@ -132,11 +132,23 @@ class SearchEngineTest < ActiveSupport::TestCase
 
       assert          results.failed?, "marked failed"
       assert_present  results.error
+      assert_present  results.error[:exception]
       assert_equal    "raises", results.engine_id
       assert_present  results.search_args
       assert_equal    "foo", results.search_args[:query]
 
       assert_equal(  {:foo => "foo"}, results.display_configuration )
+    end
+
+    test "can set auto rescued exceptions on instance" do
+      engine = MockEngine.new(:id => "raises", :raise_exception_class => "StandardError", :for_display => {:foo => "foo"})
+      engine.auto_rescue_exceptions = [StandardError]
+
+      results = engine.search("foo", :per_page => 20)
+
+      assert          results.failed?, "marked failed"
+      assert_present  results.error
+      assert_present  results.error[:exception]
     end
 
 
