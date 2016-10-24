@@ -122,8 +122,8 @@ module BentoSearch
 
     include Capabilities
 
-    mattr_accessor :default_auto_rescue_exceptions
-    self.default_auto_rescue_exceptions = [
+    mattr_accessor :default_auto_rescued_exceptions
+    self.default_auto_rescued_exceptions = [
         BentoSearch::RubyTimeoutClass,
         HTTPClient::TimeoutError,
         HTTPClient::ConfigurationError,
@@ -148,12 +148,11 @@ module BentoSearch
       # engines can override if it's convenient for their own error
       # handling.
       #
-      # Override by just using `auto_rescue_exceptions=` on class _or_ method,
-      # although some legacy code may override `def auto_rescue_exceptions` which
-      # should work too.
-      self.class_attribute :auto_rescue_exceptions
-      self.auto_rescue_exceptions = ::BentoSearch::SearchEngine.default_auto_rescue_exceptions
-
+      # Override by just using `auto_rescued_exceptions=` on class _or_ method,
+      # although some legacy code may override `def auto_rescue_exceptions` (note
+      # old `rescue` vs new `rescued`) which should work too.
+      self.class_attribute :auto_rescued_exceptions
+      self.auto_rescued_exceptions = ::BentoSearch::SearchEngine.default_auto_rescued_exceptions
 
       # Over-ride returning a hash or Confstruct with
       # any configuration values you want by default.
@@ -432,6 +431,13 @@ module BentoSearch
 
 
     protected
+
+    # For legacy reasons old name auto_rescue_exceptions is here, some
+    # sub-classes may override it. Now preferred to use auto_rescued_exceptions
+    # setter instead.
+    def auto_rescue_exceptions
+      self.auto_rescued_exceptions
+    end
 
     # get value of an arg that can be supplied in search args OR config,
     # with search_args over-ridding config. Also normalizes value to_s

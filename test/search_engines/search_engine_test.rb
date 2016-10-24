@@ -142,7 +142,7 @@ class SearchEngineTest < ActiveSupport::TestCase
 
     test "can set auto rescued exceptions on instance" do
       engine = MockEngine.new(:id => "raises", :raise_exception_class => "StandardError", :for_display => {:foo => "foo"})
-      engine.auto_rescue_exceptions = [StandardError]
+      engine.auto_rescued_exceptions = [StandardError]
 
       results = engine.search("foo", :per_page => 20)
 
