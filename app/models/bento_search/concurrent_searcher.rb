@@ -23,6 +23,7 @@ begin
 
     # Starts all searches, returns self so you can chain method calls if you like.
     def search(*search_args)
+      search_args.freeze
       @futures = @engines.collect do |engine|
         Concurrent::Future.execute { rails_future_wrap { engine.search(*search_args) } }
       end
