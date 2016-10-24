@@ -13,6 +13,9 @@
 
 * EdsEngine gets much more structured citation data. EDS API has gotten better
   since it was written, it's now updated to take advantage of more.
+  * `assume_first_custom_link_openurl` now defaults to **false**, as it should
+     no longer be neccesary to get a good OpenURL out of EDS. But set to true
+     if you want old behavior.
 
 ## 1.6
 

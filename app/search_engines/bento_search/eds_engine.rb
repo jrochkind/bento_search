@@ -40,30 +40,25 @@ require 'http_client_patch/include_client'
 # openurl. http://support.ebsco.com/knowledge_base/detail.php?id=1111 (May
 # have to ask EBSCO support for help, it's confusing!).
 #
-# TODO: May have to add configuration code to pull the OpenURL link out by
-# it's configured name or label, not assume first one is it.
-#
 # As always, you can customize links and other_links with Item Decorators.
 #
 # == Technical Notes and Difficulties
 #
 # This API is enormously difficult to work with. Also the response is very odd
-# to deal with and missing some key elements. We quite possibly got something
-# wrong or non-optimal in this implementation, but we did our best.
+# to deal with. We think we are currently (as of bento_search 1.7) getting
+# fairly complete citation detail out, at least for articles, but may be missing
+# some on weird edge cases, books/book chapters, etc)
 #
 # Auth issues may make this slow -- you need to spend a (not too speedy) HTTP
 # request making a session for every new end-user -- as we have no way to keep
 # track of end-users, we do it on every request in this implementation.
 #
-# Responses don't include much metadata -- we don't actually have journal title,
-# volume, issue, etc.  We probably _could_ parse it out of the OpenURL that's
-# there depending on your profile configuration, but we're not right now.
-# Instead we're using the chunk of user-displayable citation/reference it does
-# give us (which is very difficult to parse into something usable already),
-# and a custom Decorator to display that instead of normalized citation
-# made from individual elements.
-#
-# EBSCO says they plan to improve some of these issues in a September 2012 release.
+# An older version of the EDS API returned much less info, and we tried
+# to scrape out what we could anyway. Much of this logic is still there
+# as backup. In the older version, not enough info was there for an
+# OpenURL link, `configuration.assume_first_custom_link_openurl` was true
+# by default, and used to create an OpenURL link. It now defaults to false,
+# and should no longer be neccessary.
 #
 # Title and abstract data seems to be HTML with tags and character entities and
 # escaped special chars. We're trusting it and passing it on as html_safe.
@@ -550,7 +545,7 @@ class BentoSearch::EdsEngine
       :base_url => "http://eds-api.ebscohost.com/edsapi/rest/",
       :highlighting => true,
       :truncate_highlighted => 280,
-      :assume_first_custom_link_openurl => true,
+      :assume_first_custom_link_openurl => false,
       :search_mode => 'all' # any | bool | all | smart ; http://support.epnet.com/knowledge_base/detail.php?topic=996&id=1288&page=1
     }
   end
