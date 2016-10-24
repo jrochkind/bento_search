@@ -24,7 +24,7 @@ begin
     # Starts all searches, returns self so you can chain method calls if you like.
     def search(*search_args)
       @futures = @engines.collect do |engine|
-        Concurrent::Future.execute { engine.search(*search_args) }
+        Concurrent::Future.execute { rails_future_wrap { engine.search(*search_args) } }
       end
       return self
     end
@@ -37,8 +37,36 @@ begin
     # not re-run searches.
     def results
       @results ||= begin
-        pairs = @futures.collect { |future| [future.value!.engine_id, future.value!] }
+        pairs = rails_collect_wrap do
+          @futures.collect { |future| [future.value!.engine_id, future.value!] }
+        end
         Hash[ pairs ].freeze
+      end
+    end
+
+    protected
+
+    # In Rails5, future body's need to be wrapped in an executor,
+    # to handle auto-loading right in dev-mode, among other things. 
+    # Rails docs coming, see https://github.com/rails/rails/issues/26847
+    @@rails_has_executor = Rails.application.respond_to?(:executor)
+    def rails_future_wrap
+      if @@rails_has_executor 
+        Rails.application.executor.wrap { yield }
+      else
+        yield
+      end
+    end
+
+    # In Rails5, if we are collecting from within an action method
+    # (ie the 'request loop'), as we usually will be, we need to
+    # give up the autoload lock. Rails docs coming, see https://github.com/rails/rails/issues/26847
+    @@rails_has_interlock = ActiveSupport::Dependencies.respond_to?(:interlock)
+    def rails_collect_wrap
+      if @@rails_has_interlock
+        ActiveSupport::Dependencies.interlock.permit_concurrent_loads { yield }
+      else
+        yield
       end
     end
 
