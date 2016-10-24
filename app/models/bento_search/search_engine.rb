@@ -149,7 +149,7 @@ module BentoSearch
         MultiJson::DecodeError,
         Nokogiri::SyntaxError,
         SocketError
-      ]
+      ].freeze
     end
 
     # If specific SearchEngine calls initialize, you want to call super
