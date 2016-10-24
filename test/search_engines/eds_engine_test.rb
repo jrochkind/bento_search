@@ -5,7 +5,7 @@ class EdsEngineTest < ActiveSupport::TestCase
 
   @@user_id   = (ENV['EDS_USER_ID'] || 'DUMMY_USER_ID')
   @@password  = (ENV['EDS_PASSWORD'] || 'DUMMY_PWD')
-  @@profile   = (ENV['EDS_PROFILE'] || 'edsapi')
+  @@profile   = (ENV['EDS_PROFILE'] || 'wsapi')
 
 
   VCR.configure do |c|
