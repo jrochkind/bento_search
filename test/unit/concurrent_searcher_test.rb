@@ -13,6 +13,11 @@ class ConcurrentSearcherTest < ActiveSupport::TestCase
     BentoSearch.register_engine("three") do |conf|
       conf.engine = "MockEngine"
     end
+
+    BentoSearch.register_engine("raiser") do |conf|
+      conf.engine = "MockEngine"
+      conf.raise_exception_class = "StandardError"
+    end
   end
 
   teardown do
@@ -41,7 +46,21 @@ class ConcurrentSearcherTest < ActiveSupport::TestCase
     assert( results.equal? new_results )
   end
 
+  def test_concurrent_search_uncaught_exception
+    searcher = BentoSearch::ConcurrentSearcher.new(:one, :raiser, :two)
+    results = searcher.search("cancer").results
+
+    [:one, :two].each do |success_engine_id|
+      assert( results[success_engine_id.to_s].kind_of?(BentoSearch::Results) )
+      assert( !results[success_engine_id.to_s].failed? )
+    end
 
 
+    error_results = results["raiser"]
 
+    assert( error_results.kind_of?(BentoSearch::Results) )
+    assert( error_results.failed? )
+    assert( error_results.error[:exception].present? )
+    assert( error_results.engine_id == "raiser" )
+  end
 end
