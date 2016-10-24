@@ -150,6 +150,19 @@ module BentoSearch
         Nokogiri::SyntaxError,
         SocketError
       ].freeze
+
+
+      # Over-ride returning a hash or Confstruct with
+      # any configuration values you want by default.
+      # actual user-specified config values will be deep-merged
+      # into the defaults.
+      def self.default_configuration
+      end
+
+      # Over-ride returning an array of symbols for required
+      # configuration keys.
+      def self.required_configuration
+      end
     end
 
     # If specific SearchEngine calls initialize, you want to call super
@@ -431,23 +444,5 @@ module BentoSearch
 
       return value
     end
-
-
-    module ClassMethods
-
-      # Over-ride returning a hash or Confstruct with
-      # any configuration values you want by default.
-      # actual user-specified config values will be deep-merged
-      # into the defaults.
-      def default_configuration
-      end
-
-      # Over-ride returning an array of symbols for required
-      # configuration keys.
-      def required_configuration
-      end
-
-    end
-
   end
 end
