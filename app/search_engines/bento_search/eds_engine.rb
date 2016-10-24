@@ -237,23 +237,32 @@ class BentoSearch::EdsEngine
 
           item.abstract = prepare_eds_payload( element_by_group(record_xml, "Ab"), true )
 
-          # Believe it or not, the authors are encoded as an escaped
-          # XML-ish payload, that we need to parse again and get the
-          # actual authors out of. WTF. Thanks for handling fragments
-          # nokogiri.
-          author_mess = element_by_group(record_xml, "Au")
-          # only SOMETIMES does it have XML tags, other times it's straight text.
-          # ARGH.
-          author_xml = Nokogiri::XML::fragment(author_mess)
-          searchLinks = author_xml.xpath(".//searchLink")
-          if searchLinks.size > 0
-            author_xml.xpath(".//searchLink").each do |author_node|
-              item.authors << BentoSearch::Author.new(:display => author_node.text)
+          # Much better way to get authors out of EDS response now...
+          author_full_names = record_xml.xpath("./RecordInfo/BibRecord/BibRelationships/HasContributorRelationships/HasContributor/PersonEntity/Name/NameFull")
+          author_full_names.each do |name_full_xml|
+            if name_full_xml && (text = name_full_xml.text).present?
+              item.authors << BentoSearch::Author.new(:display => text)
             end
-          else
-            item.authors << BentoSearch::Author.new(:display => author_xml.text)
           end
 
+          if item.authors.blank?
+            # Believe it or not, the authors are encoded as an escaped
+            # XML-ish payload, that we need to parse again and get the
+            # actual authors out of. WTF. Thanks for handling fragments
+            # nokogiri.
+            author_mess = element_by_group(record_xml, "Au")
+            # only SOMETIMES does it have XML tags, other times it's straight text.
+            # ARGH.
+            author_xml = Nokogiri::XML::fragment(author_mess)
+            searchLinks = author_xml.xpath(".//searchLink")
+            if searchLinks.size > 0
+              author_xml.xpath(".//searchLink").each do |author_node|
+                item.authors << BentoSearch::Author.new(:display => author_node.text)
+              end
+            else
+              item.authors << BentoSearch::Author.new(:display => author_xml.text)
+            end
+          end
 
           # PLink is main inward facing EBSCO link, put it as
           # main link.
