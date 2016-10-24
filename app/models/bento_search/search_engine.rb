@@ -17,7 +17,6 @@ module BentoSearch
   # remote service. Not yet universally used.
   class ::BentoSearch::FetchError < ::BentoSearch::Error ; end
 
-
   # Module mix-in for bento_search search engines.
   #
   # ==Using a SearchEngine
@@ -119,15 +118,54 @@ module BentoSearch
   module SearchEngine
     DefaultPerPage = 10
 
-
-
-
     extend ActiveSupport::Concern
 
     include Capabilities
 
+    mattr_accessor :default_auto_rescue_exceptions
+    self.default_auto_rescue_exceptions = [
+        BentoSearch::RubyTimeoutClass,
+        HTTPClient::TimeoutError,
+        HTTPClient::ConfigurationError,
+        HTTPClient::BadResponseError,
+        MultiJson::DecodeError,
+        Nokogiri::SyntaxError,
+        SocketError
+      ].freeze
+
     included do
       attr_accessor :configuration
+
+      # What exceptions should our #search wrapper rescue and turn
+      # into failed results instead of fatal errors?
+      #
+      # Can't rescue everything, or we eat VCR/webmock errors, and lots
+      # of other errors we don't want to eat either, making
+      # development really confusing.  Perhaps could set this
+      # to be something diff in production and dev?
+      #
+      # This default list is probably useful already, but individual
+      # engines can override if it's convenient for their own error
+      # handling.
+      #
+      # Override by just using `auto_rescue_exceptions=` on class _or_ method,
+      # although some legacy code may override `def auto_rescue_exceptions` which
+      # should work too.
+      self.class_attribute :auto_rescue_exceptions
+      self.auto_rescue_exceptions = ::BentoSearch::SearchEngine.default_auto_rescue_exceptions
+
+
+      # Over-ride returning a hash or Confstruct with
+      # any configuration values you want by default.
+      # actual user-specified config values will be deep-merged
+      # into the defaults.
+      def self.default_configuration
+      end
+
+      # Over-ride returning an array of symbols for required
+      # configuration keys.
+      def self.required_configuration
+      end
     end
 
     # If specific SearchEngine calls initialize, you want to call super
@@ -409,40 +447,5 @@ module BentoSearch
 
       return value
     end
-
-    # What exceptions should our #search wrapper rescue and turn
-    # into failed results instead of fatal errors?
-    #
-    # Can't rescue everything, or we eat VCR/webmock errors, and lots
-    # of other errors we don't want to eat either, making
-    # development really confusing.  Perhaps could set this
-    # to be something diff in production and dev?
-    #
-    # This default list is probably useful already, but individual
-    # engines can override if it's convenient for their own error
-    # handling.
-    def auto_rescue_exceptions
-      [BentoSearch::RubyTimeoutClass, HTTPClient::TimeoutError,
-            HTTPClient::ConfigurationError, HTTPClient::BadResponseError,
-            MultiJson::DecodeError, Nokogiri::SyntaxError, SocketError]
-    end
-
-
-    module ClassMethods
-
-      # Over-ride returning a hash or Confstruct with
-      # any configuration values you want by default.
-      # actual user-specified config values will be deep-merged
-      # into the defaults.
-      def default_configuration
-      end
-
-      # Over-ride returning an array of symbols for required
-      # configuration keys.
-      def required_configuration
-      end
-
-    end
-
   end
 end
