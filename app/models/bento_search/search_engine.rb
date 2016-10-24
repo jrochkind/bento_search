@@ -122,6 +122,17 @@ module BentoSearch
 
     include Capabilities
 
+    mattr_accessor :default_auto_rescue_exceptions
+    self.default_auto_rescue_exceptions = [
+        BentoSearch::RubyTimeoutClass,
+        HTTPClient::TimeoutError,
+        HTTPClient::ConfigurationError,
+        HTTPClient::BadResponseError,
+        MultiJson::DecodeError,
+        Nokogiri::SyntaxError,
+        SocketError
+      ].freeze
+
     included do
       attr_accessor :configuration
 
@@ -141,15 +152,7 @@ module BentoSearch
       # although some legacy code may override `def auto_rescue_exceptions` which
       # should work too.
       self.class_attribute :auto_rescue_exceptions
-      self.auto_rescue_exceptions = [
-        BentoSearch::RubyTimeoutClass,
-        HTTPClient::TimeoutError,
-        HTTPClient::ConfigurationError,
-        HTTPClient::BadResponseError,
-        MultiJson::DecodeError,
-        Nokogiri::SyntaxError,
-        SocketError
-      ].freeze
+      self.auto_rescue_exceptions = ::BentoSearch::SearchEngine.default_auto_rescue_exceptions
 
 
       # Over-ride returning a hash or Confstruct with
