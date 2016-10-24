@@ -1,12 +1,18 @@
 ## 1.7
 * auto_rescue includes SocketError
+
 * search engines now have a `configuration.default_per_page`
+
 * partials used by `bento_search` helper can be configured in BentoSearch.defaults,
   or at the engine config level as well. Now including `ajax_loading_partial`.
+
 * `auto_rescued_exceptions` is now a Rails `class_attribute`, so can be configured
    more easily on a per-class _or_ per-instance basis with `SearchEngineClass.auto_rescue_exceptions = `
    or `engine.auto_rescue_exceptions = `.  Old way of over-riding `auto_rescue_exceptions`
    (note `rescue` vs `rescued`) is deprecated.
+
+* EdsEngine gets much more structured citation data. EDS API has gotten better
+  since it was written, it's now updated to take advantage of more.
 
 ## 1.6
 

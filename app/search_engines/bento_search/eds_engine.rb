@@ -286,7 +286,40 @@ class BentoSearch::EdsEngine
           # Can't find a list of possible PubTypes to see what's there to try
           # and map to our internal controlled vocab. oh wells.
 
+          item.doi = at_xpath_text record_xml, "./RecordInfo/BibRecord/BibEntity/Identifiers/Identifier[child::Type[text()='doi']]/Value"
 
+          item.start_page = at_xpath_text(record_xml, "./RecordInfo/BibRecord/BibEntity/PhysicalDescription/Pagination/StartPage")
+          total_pages = at_xpath_text(record_xml, "./RecordInfo/BibRecord/BibEntity/PhysicalDescription/Pagination/PageCount")
+          if total_pages.to_i != 0 && item.start_page.to_i != 0
+            item.end_page = (item.start_page.to_i + total_pages.to_i - 1).to_s
+          end
+
+          # For some EDS results, we have actual citation information,
+          # for some we don't.
+          container_xml = record_xml.at_xpath("./RecordInfo/BibRecord/BibRelationships/IsPartOfRelationships/IsPartOf/BibEntity")
+          if container_xml
+
+
+            item.source_title = at_xpath_text(container_xml, "./Titles/Title[child::Type[text()='main']]/TitleFull")
+            item.volume = at_xpath_text(container_xml, "./Numbering/Number[child::Type[text()='volume']]/Value")
+            item.issue = at_xpath_text(container_xml, "./Numbering/Number[child::Type[text()='issue']]/Value")
+
+            item.issn = at_xpath_text(container_xml, "./Identifiers/Identifier[child::Type[text()='issn-print']]/Value")
+
+            if date_xml = container_xml.at_xpath("./Dates/Date")
+              item.year = at_xpath_text(date_xml, "./Y")
+
+              date = at_xpath_text(date_xml, "./D").to_i
+              month = at_xpath_text(date_xml, "./M").to_i
+              if item.year.to_i != 0 && date != 0 && month != 0
+                item.publication_date = Date.new(item.year.to_i, month, date)
+              end
+            end
+          end
+
+          # Legacy EDS citation extracting. We don't really need this any more
+          # because EDS api has improved, but leave it in in case anyone using
+          # older versions needed it.
 
           # We have a single blob of human-readable citation, that's also
           # littered with XML-ish tags we need to deal with. We'll save
@@ -305,7 +338,6 @@ class BentoSearch::EdsEngine
             # try another location
             item.custom_data["citation_blob"] = element_by_group(record_xml, "SrcInfo")
           end
-
 
           item.extend CitationMessDecorator
 
