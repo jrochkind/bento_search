@@ -15,6 +15,9 @@ begin
     # Adds an instantiated engine directly, rather than by id from global
     # registry.
     def add_engine(engine)
+      unless engine.configuration.id.present?
+        raise ArgumentError.new("ConcurrentSearcher engines need `configuration.id`, this one didn't have one: #{engine}")
+      end
       @engines << engine
     end
 
