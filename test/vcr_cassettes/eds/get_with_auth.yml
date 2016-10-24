@@ -5,8 +5,11 @@ http_interactions:
     uri: https://eds-api.ebscohost.com/authservice/rest/uidauth
     body:
       encoding: UTF-8
-      string: ! "      {\n        \"UserId\":\"DUMMY_USER_ID\",\n        \"Password\":\"DUMMY_PWD\"\n
-        \     }\n"
+      string: |2
+              {
+                "UserId":"DUMMY_USER_ID",
+                "Password":"DUMMY_PWD"
+              }
     headers:
       Accept:
       - application/json
@@ -20,9 +23,9 @@ http_interactions:
       Cache-Control:
       - private
       Content-Length:
-      - '73'
+      - '128'
       Content-Type:
-      - application/JSON; charset=utf-8
+      - application/json; charset=utf-8
       Server:
       - Microsoft-IIS/7.5
       X-Aspnet-Version:
@@ -30,192 +33,67 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Mon, 06 Aug 2012 23:07:54 GMT
+      - Mon, 24 Oct 2016 19:55:00 GMT
     body:
-      encoding: US-ASCII
-      string: ! '{"AuthToken":"2c9aa2a4-61b0-471c-9e85-a0cb306c296d","AuthTimeout":"1800"}'
+      encoding: UTF-8
+      string: '{"AuthToken":"ABw8Bz-zMdzAJUjyy8YxJLzD2nRNiFgObh17IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0","AuthTimeout":"1800"}'
     http_version: 
-  recorded_at: Mon, 06 Aug 2012 23:07:54 GMT
+  recorded_at: Mon, 24 Oct 2016 19:55:01 GMT
 - request:
     method: get
-    uri: http://eds-api.ebscohost.com/edsapi/rest/createsession?guest=y&profile=edsapi
+    uri: http://eds-api.ebscohost.com/edsapi/rest/createsession?guest=y&profile=wsapi
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       X-Authenticationtoken:
-      - 2c9aa2a4-61b0-471c-9e85-a0cb306c296d
+      - ABw8Bz-zMdzAJUjyy8YxJLzD2nRNiFgObh17IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0
       Accept:
       - application/xml
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1MZW5ndGg=":
-      - !binary |-
-        Mjc5
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24veG1sOyBjaGFyc2V0PXV0Zi04
-      !binary "U2VydmVy":
-      - !binary |-
-        TWljcm9zb2Z0LUlJUy83LjU=
-      !binary "WC1EeW5hdHJhY2U=":
-      - !binary |-
-        UFQ9MjgwNjQzO1BBPS0xNDcyMTU5NDk5O1BTPS03NjAxOTQ0MDc=
-      !binary "RHluYXRyYWNl":
-      - !binary |-
-        UFQ9MjgwNjQzO1BBPS0xNDcyMTU5NDk5O1BTPS03NjAxOTQ0MDc=
-      !binary "WC1Bc3BuZXQtVmVyc2lvbg==":
-      - !binary |-
-        NC4wLjMwMzE5
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        QVNQLk5FVA==
-      !binary "RGF0ZQ==":
-      - !binary |-
-        TW9uLCAwNiBBdWcgMjAxMiAyMzowNzo1NSBHTVQ=
+      Cache-Control:
+      - private
+      Content-Length:
+      - '279'
+      Content-Type:
+      - application/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      X-Sessiontoken:
+      - f1ac1f37-c6a5-431e-9138-71970d0998d8.dlIJa2X8Fg/o73sf1rsUhnWZewreYidVI/1JRzXALx4=
+      X-Authenticationtoken:
+      - ABw8Bz-zMdzAJUjyy8YxJLzD2nRNiFgObh17IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0
+      X-Msg-Correlid:
+      - 3d549046-081f-4025-829d-b395590110ed
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 24 Oct 2016 19:55:01 GMT
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: <CreateSessionResponseMessage xmlns="http://epnet.com/webservices/EbscoApi/Contracts"
-        xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><SessionToken>c6f7d532-8726-47a7-8e75-b3851a615c68.lS/LBviHYcah4372jECVTkM/b4/DpExjKLExBuNU0eA=</SessionToken></CreateSessionResponseMessage>
+        xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><SessionToken>f1ac1f37-c6a5-431e-9138-71970d0998d8.dlIJa2X8Fg/o73sf1rsUhnWZewreYidVI/1JRzXALx4=</SessionToken></CreateSessionResponseMessage>
     http_version: 
-  recorded_at: Mon, 06 Aug 2012 23:07:55 GMT
+  recorded_at: Mon, 24 Oct 2016 19:55:01 GMT
 - request:
     method: get
     uri: http://eds-api.ebscohost.com/edsapi/rest/info
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       X-Authenticationtoken:
-      - 2c9aa2a4-61b0-471c-9e85-a0cb306c296d
+      - ABw8Bz-zMdzAJUjyy8YxJLzD2nRNiFgObh17IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0
       Accept:
       - application/xml
       X-Sessiontoken:
-      - c6f7d532-8726-47a7-8e75-b3851a615c68.lS/LBviHYcah4372jECVTkM/b4/DpExjKLExBuNU0eA=
-  response:
-    status:
-      code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1MZW5ndGg=":
-      - !binary |-
-        MjU4Nw==
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24veG1sOyBjaGFyc2V0PXV0Zi04
-      !binary "U2VydmVy":
-      - !binary |-
-        TWljcm9zb2Z0LUlJUy83LjU=
-      !binary "WC1EeW5hdHJhY2U=":
-      - !binary |-
-        UFQ9MjgwNjQ0O1BBPS0xNDcyMTU5NDk5O1BTPS03NjAxOTQ0MDc=
-      !binary "RHluYXRyYWNl":
-      - !binary |-
-        UFQ9MjgwNjQ0O1BBPS0xNDcyMTU5NDk5O1BTPS03NjAxOTQ0MDc=
-      !binary "WC1Bc3BuZXQtVmVyc2lvbg==":
-      - !binary |-
-        NC4wLjMwMzE5
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        QVNQLk5FVA==
-      !binary "RGF0ZQ==":
-      - !binary |-
-        TW9uLCAwNiBBdWcgMjAxMiAyMzowNzo1NSBHTVQ=
-    body:
-      encoding: US-ASCII
-      string: <InfoResponseMessage xmlns="http://epnet.com/webservices/EbscoApi/Contracts"
-        xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><AvailableSearchCriteria><AvailableSorts><AvailableSort><Id>date</Id><Label>Date
-        Descending</Label><AddAction>setsort(date)</AddAction></AvailableSort><AvailableSort><Id>relevance</Id><Label>Relevance</Label><AddAction>setsort(relevance)</AddAction></AvailableSort><AvailableSort><Id>date2</Id><Label>Date
-        Ascending</Label><AddAction>setsort(date2)</AddAction></AvailableSort></AvailableSorts><AvailableSearchFields><AvailableSearchField><FieldCode>TX</FieldCode><Label>All
-        Text</Label></AvailableSearchField><AvailableSearchField><FieldCode>AU</FieldCode><Label>Author</Label></AvailableSearchField><AvailableSearchField><FieldCode>TI</FieldCode><Label>Title</Label></AvailableSearchField><AvailableSearchField><FieldCode>SU</FieldCode><Label>Subject
-        Terms</Label></AvailableSearchField><AvailableSearchField><FieldCode>SO</FieldCode><Label>Source</Label></AvailableSearchField><AvailableSearchField><FieldCode>AB</FieldCode><Label>Abstract</Label></AvailableSearchField><AvailableSearchField><FieldCode>IS</FieldCode><Label>ISSN</Label></AvailableSearchField><AvailableSearchField><FieldCode>IB</FieldCode><Label>ISBN</Label></AvailableSearchField></AvailableSearchFields><AvailableExpanders><AvailableExpander><Id>thesaurus</Id><Label>Apply
-        related words</Label><AddAction>addexpander(thesaurus)</AddAction></AvailableExpander><AvailableExpander><Id>fulltext</Id><Label>Also
-        search within the full text of the articles</Label><AddAction>addexpander(fulltext)</AddAction></AvailableExpander></AvailableExpanders><AvailableLimiters><AvailableLimiter><Id>FT</Id><Label>Full
-        Text</Label><Type>select</Type><AddAction>addlimiter(FT:value)</AddAction><LimiterValues
-        i:nil="true"/></AvailableLimiter><AvailableLimiter><Id>RV</Id><Label>Peer
-        Reviewed</Label><Type>select</Type><AddAction>addlimiter(RV:value)</AddAction><LimiterValues
-        i:nil="true"/></AvailableLimiter><AvailableLimiter><Id>SO</Id><Label>Journal
-        Name</Label><Type>text</Type><AddAction>addlimiter(SO:value)</AddAction><LimiterValues
-        i:nil="true"/></AvailableLimiter><AvailableLimiter><Id>DT1</Id><Label>Date
-        Published from</Label><Type>ymrange</Type><AddAction>addlimiter(DT1:value)</AddAction><LimiterValues
-        i:nil="true"/></AvailableLimiter><AvailableLimiter><Id>FT1</Id><Label>Available
-        in Library Collection</Label><Type>select</Type><AddAction>addlimiter(FT1:value)</AddAction><LimiterValues
-        i:nil="true"/></AvailableLimiter></AvailableLimiters></AvailableSearchCriteria></InfoResponseMessage>
-    http_version: 
-  recorded_at: Mon, 06 Aug 2012 23:07:55 GMT
-- request:
-    method: get
-    uri: http://eds-api.ebscohost.com/edsapi/rest/endsession?sessiontoken=c6f7d532-8726-47a7-8e75-b3851a615c68.lS/LBviHYcah4372jECVTkM/b4/DpExjKLExBuNU0eA=
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      X-Authenticationtoken:
-      - 2c9aa2a4-61b0-471c-9e85-a0cb306c296d
-      Accept:
-      - application/xml
-  response:
-    status:
-      code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZQ==
-      !binary "Q29udGVudC1MZW5ndGg=":
-      - !binary |-
-        MTc5
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24veG1sOyBjaGFyc2V0PXV0Zi04
-      !binary "U2VydmVy":
-      - !binary |-
-        TWljcm9zb2Z0LUlJUy83LjU=
-      !binary "WC1EeW5hdHJhY2U=":
-      - !binary |-
-        UFQ9MjgwNjQ1O1BBPS0xNDcyMTU5NDk5O1BTPS03NjAxOTQ0MDc=
-      !binary "RHluYXRyYWNl":
-      - !binary |-
-        UFQ9MjgwNjQ1O1BBPS0xNDcyMTU5NDk5O1BTPS03NjAxOTQ0MDc=
-      !binary "WC1Bc3BuZXQtVmVyc2lvbg==":
-      - !binary |-
-        NC4wLjMwMzE5
-      !binary "WC1Qb3dlcmVkLUJ5":
-      - !binary |-
-        QVNQLk5FVA==
-      !binary "RGF0ZQ==":
-      - !binary |-
-        TW9uLCAwNiBBdWcgMjAxMiAyMzowNzo1NSBHTVQ=
-    body:
-      encoding: US-ASCII
-      string: <EndSessionResponse xmlns="http://epnet.com/webservices/EbscoApi/Contracts"
-        xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><IsSuccessful>y</IsSuccessful></EndSessionResponse>
-    http_version: 
-  recorded_at: Mon, 06 Aug 2012 23:07:55 GMT
-- request:
-    method: post
-    uri: https://eds-api.ebscohost.com/authservice/rest/uidauth
-    body:
-      encoding: UTF-8
-      string: ! "      {\n        \"UserId\":\"DUMMY_USER_ID\",\n        \"Password\":\"DUMMY_PWD\"\n
-        \     }\n"
-    headers:
-      Accept:
-      - application/json
-      Content-Type:
-      - application/json
+      - f1ac1f37-c6a5-431e-9138-71970d0998d8.dlIJa2X8Fg/o73sf1rsUhnWZewreYidVI/1JRzXALx4=
   response:
     status:
       code: 200
@@ -224,20 +102,133 @@ http_interactions:
       Cache-Control:
       - private
       Content-Length:
-      - '73'
+      - '15860'
       Content-Type:
-      - application/JSON; charset=utf-8
+      - application/xml; charset=utf-8
       Server:
       - Microsoft-IIS/7.5
+      X-Sessiontoken:
+      - f1ac1f37-c6a5-431e-9138-71970d0998d8.dlIJa2X8Fg/o73sf1rsUhnWZewreYidVI/1JRzXALx4=
+      X-Authenticationtoken:
+      - ABw8Bz-zMdzAJUjyy8YxJLzD2nRNiFgObh17IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0
+      X-Msg-Correlid:
+      - 682bd968-81f5-48f2-bc8a-1ccc8586b7fa
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
       - ASP.NET
       Date:
-      - Mon, 06 Aug 2012 23:08:26 GMT
+      - Mon, 24 Oct 2016 19:55:01 GMT
     body:
-      encoding: US-ASCII
-      string: ! '{"AuthToken":"a4a67610-357d-4691-97a9-7ee1b88857a7","AuthTimeout":"1800"}'
+      encoding: UTF-8
+      string: <InfoResponseMessage xmlns="http://epnet.com/webservices/EbscoApi/Contracts"
+        xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><AvailableSearchCriteria><AvailableSorts><AvailableSort><Id>date</Id><Label>Date
+        Newest</Label><AddAction>setsort(date)</AddAction></AvailableSort><AvailableSort><Id>date2</Id><Label>Date
+        Oldest</Label><AddAction>setsort(date2)</AddAction></AvailableSort><AvailableSort><Id>author</Id><Label>Author</Label><AddAction>setsort(author)</AddAction></AvailableSort><AvailableSort><Id>relevance</Id><Label>Relevance</Label><AddAction>setsort(relevance)</AddAction></AvailableSort></AvailableSorts><AvailableSearchFields><AvailableSearchField><FieldCode>TX</FieldCode><Label>All
+        Text</Label></AvailableSearchField><AvailableSearchField><FieldCode>AU</FieldCode><Label>Author</Label></AvailableSearchField><AvailableSearchField><FieldCode>TI</FieldCode><Label>Title</Label></AvailableSearchField><AvailableSearchField><FieldCode>SU</FieldCode><Label>Subject
+        Terms</Label></AvailableSearchField><AvailableSearchField><FieldCode>SO</FieldCode><Label>Source</Label></AvailableSearchField><AvailableSearchField><FieldCode>AB</FieldCode><Label>Abstract</Label></AvailableSearchField><AvailableSearchField><FieldCode>IS</FieldCode><Label>ISSN</Label></AvailableSearchField><AvailableSearchField><FieldCode>IB</FieldCode><Label>ISBN</Label></AvailableSearchField></AvailableSearchFields><AvailableExpanders><AvailableExpander><Id>relatedsubjects</Id><Label>Apply
+        equivalent subjects</Label><AddAction>addexpander(relatedsubjects)</AddAction><DefaultOn>n</DefaultOn></AvailableExpander><AvailableExpander><Id>thesaurus</Id><Label>Apply
+        related words</Label><AddAction>addexpander(thesaurus)</AddAction><DefaultOn>n</DefaultOn></AvailableExpander><AvailableExpander><Id>fulltext</Id><Label>Also
+        search within the full text of the articles</Label><AddAction>addexpander(fulltext)</AddAction><DefaultOn>y</DefaultOn></AvailableExpander></AvailableExpanders><AvailableLimiters><AvailableLimiter><Id>FT</Id><Label>Full
+        Text</Label><Type>select</Type><AddAction>addlimiter(FT:value)</AddAction><DefaultOn>n</DefaultOn><Order>1</Order></AvailableLimiter><AvailableLimiter><Id>FR</Id><Label>References
+        Available</Label><Type>select</Type><AddAction>addlimiter(FR:value)</AddAction><DefaultOn>n</DefaultOn><Order>2</Order></AvailableLimiter><AvailableLimiter><Id>RV</Id><Label>Scholarly
+        (Peer Reviewed) Journals</Label><Type>select</Type><AddAction>addlimiter(RV:value)</AddAction><DefaultOn>n</DefaultOn><Order>3</Order></AvailableLimiter><AvailableLimiter><Id>DT1</Id><Label>Published
+        Date</Label><Type>ymrange</Type><AddAction>addlimiter(DT1:value)</AddAction><DefaultOn>n</DefaultOn><Order>4</Order></AvailableLimiter><AvailableLimiter><Id>GZ</Id><Label>Collection</Label><Type>multiselectvalue</Type><LimiterValues><LimiterValue><Value>Alumni
+        Events</Value><AddAction>addlimiter(GZ:Alumni Events)</AddAction></LimiterValue><LimiterValue><Value>Anniversaries</Value><AddAction>addlimiter(GZ:Anniversaries)</AddAction></LimiterValue><LimiterValue><Value>Center
+        on Law and Information Policy</Value><AddAction>addlimiter(GZ:Center on Law
+        and Information Policy)</AddAction></LimiterValue><LimiterValue><Value>Collins
+        Auditorium, Rose Hill (1905)</Value><AddAction>addlimiter(GZ:Collins Auditorium\,
+        Rose Hill \(1905\))</AddAction></LimiterValue><LimiterValue><Value>Commencements</Value><AddAction>addlimiter(GZ:Commencements)</AddAction></LimiterValue><LimiterValue><Value>Crowley
+        Mission Reports</Value><AddAction>addlimiter(GZ:Crowley Mission Reports)</AddAction></LimiterValue><LimiterValue><Value>Examinations
+        &amp;amp; Coursework</Value><AddAction>addlimiter(GZ:Examinations &amp;amp;
+        Coursework)</AddAction></LimiterValue><LimiterValue><Value>Faculty Bibliography</Value><AddAction>addlimiter(GZ:Faculty
+        Bibliography)</AddAction></LimiterValue><LimiterValue><Value>Faculty Meeting
+        Minutes</Value><AddAction>addlimiter(GZ:Faculty Meeting Minutes)</AddAction></LimiterValue><LimiterValue><Value>Faculty
+        Scholarship</Value><AddAction>addlimiter(GZ:Faculty Scholarship)</AddAction></LimiterValue><LimiterValue><Value>FLASH
+        Historical Exhibit Gallery</Value><AddAction>addlimiter(GZ:FLASH Historical
+        Exhibit Gallery)</AddAction></LimiterValue><LimiterValue><Value>Fordham Environmental
+        Law Review</Value><AddAction>addlimiter(GZ:Fordham Environmental Law Review)</AddAction></LimiterValue><LimiterValue><Value>Fordham
+        Intellectual Property, Media and Entertainment Law Journal</Value><AddAction>addlimiter(GZ:Fordham
+        Intellectual Property\, Media and Entertainment Law Journal)</AddAction></LimiterValue><LimiterValue><Value>Fordham
+        International Law Journal</Value><AddAction>addlimiter(GZ:Fordham International
+        Law Journal)</AddAction></LimiterValue><LimiterValue><Value>Fordham Journal
+        of Corporate &amp;amp; Financial Law</Value><AddAction>addlimiter(GZ:Fordham
+        Journal of Corporate &amp;amp; Financial Law)</AddAction></LimiterValue><LimiterValue><Value>Fordham
+        Law Review</Value><AddAction>addlimiter(GZ:Fordham Law Review)</AddAction></LimiterValue><LimiterValue><Value>Fordham
+        Lawyer</Value><AddAction>addlimiter(GZ:Fordham Lawyer)</AddAction></LimiterValue><LimiterValue><Value>Fordham
+        Urban Law Journal</Value><AddAction>addlimiter(GZ:Fordham Urban Law Journal)</AddAction></LimiterValue><LimiterValue><Value>General
+        Student Events</Value><AddAction>addlimiter(GZ:General Student Events)</AddAction></LimiterValue><LimiterValue><Value>Ghana
+        Summer Program 2009</Value><AddAction>addlimiter(GZ:Ghana Summer Program 2009)</AddAction></LimiterValue><LimiterValue><Value>Ghana
+        Summer Program 2012</Value><AddAction>addlimiter(GZ:Ghana Summer Program 2012)</AddAction></LimiterValue><LimiterValue><Value>Homepage
+        Gallery</Value><AddAction>addlimiter(GZ:Homepage Gallery)</AddAction></LimiterValue><LimiterValue><Value>Law
+        School Bulletins 1905-2000</Value><AddAction>addlimiter(GZ:Law School Bulletins
+        1905-2000)</AddAction></LimiterValue><LimiterValue><Value>Lexagram</Value><AddAction>addlimiter(GZ:Lexagram)</AddAction></LimiterValue><LimiterValue><Value>Lincoln
+        Center, 140 W 62 (1961-present)</Value><AddAction>addlimiter(GZ:Lincoln Center\,
+        140 W 62 \(1961-present\))</AddAction></LimiterValue><LimiterValue><Value>Miscellanea</Value><AddAction>addlimiter(GZ:Miscellanea)</AddAction></LimiterValue><LimiterValue><Value>Papers
+        of the Dean</Value><AddAction>addlimiter(GZ:Papers of the Dean)</AddAction></LimiterValue><LimiterValue><Value>Photographs</Value><AddAction>addlimiter(GZ:Photographs)</AddAction></LimiterValue><LimiterValue><Value>Policy
+        and Legislative Advocacy Clinic</Value><AddAction>addlimiter(GZ:Policy and
+        Legislative Advocacy Clinic)</AddAction></LimiterValue><LimiterValue><Value>Portraits
+        &amp; Miscellaneous Photographs</Value><AddAction>addlimiter(GZ:Portraits
+        &amp; Miscellaneous Photographs)</AddAction></LimiterValue><LimiterValue><Value>Registrar</Value><AddAction>addlimiter(GZ:Registrar)</AddAction></LimiterValue><LimiterValue><Value>Res
+        Gestae</Value><AddAction>addlimiter(GZ:Res Gestae)</AddAction></LimiterValue><LimiterValue><Value>Staff
+        Publications</Value><AddAction>addlimiter(GZ:Staff Publications)</AddAction></LimiterValue><LimiterValue><Value>Student
+        Life</Value><AddAction>addlimiter(GZ:Student Life)</AddAction></LimiterValue><LimiterValue><Value>Student
+        Publications</Value><AddAction>addlimiter(GZ:Student Publications)</AddAction></LimiterValue><LimiterValue><Value>The
+        Advocate</Value><AddAction>addlimiter(GZ:The Advocate)</AddAction></LimiterValue><LimiterValue><Value>Vincent
+        Building, 302 Broadway (1943-1961)</Value><AddAction>addlimiter(GZ:Vincent
+        Building\, 302 Broadway \(1943-1961\))</AddAction></LimiterValue><LimiterValue><Value>Woolworth
+        Building, 233 Broadway (1916-1943)</Value><AddAction>addlimiter(GZ:Woolworth
+        Building\, 233 Broadway \(1916-1943\))</AddAction></LimiterValue></LimiterValues><DefaultOn>n</DefaultOn><Order>5</Order></AvailableLimiter><AvailableLimiter><Id>AU</Id><Label>Author</Label><Type>text</Type><AddAction>addlimiter(AU:value)</AddAction><DefaultOn>n</DefaultOn><Order>6</Order></AvailableLimiter><AvailableLimiter><Id>SO</Id><Label>Publication</Label><Type>text</Type><AddAction>addlimiter(SO:value)</AddAction><DefaultOn>n</DefaultOn><Order>7</Order></AvailableLimiter><AvailableLimiter><Id>TI</Id><Label>Title</Label><Type>text</Type><AddAction>addlimiter(TI:value)</AddAction><DefaultOn>n</DefaultOn><Order>8</Order></AvailableLimiter><AvailableLimiter><Id>FC1</Id><Label>Institutional
+        Repository Only</Label><Type>select</Type><AddAction>addlimiter(FC1:value)</AddAction><DefaultOn>n</DefaultOn><Order>9</Order></AvailableLimiter><AvailableLimiter><Id>LA99</Id><Label>Language</Label><Type>multiselectvalue</Type><LimiterValues><LimiterValue><Value>Bosnian</Value><AddAction>addlimiter(LA99:Bosnian)</AddAction></LimiterValue><LimiterValue><Value>Chinese</Value><AddAction>addlimiter(LA99:Chinese)</AddAction></LimiterValue><LimiterValue><Value>Czech</Value><AddAction>addlimiter(LA99:Czech)</AddAction></LimiterValue><LimiterValue><Value>Dutch/Flemish</Value><AddAction>addlimiter(LA99:Dutch/Flemish)</AddAction></LimiterValue><LimiterValue><Value>English</Value><AddAction>addlimiter(LA99:English)</AddAction></LimiterValue><LimiterValue><Value>Finnish</Value><AddAction>addlimiter(LA99:Finnish)</AddAction></LimiterValue><LimiterValue><Value>French</Value><AddAction>addlimiter(LA99:French)</AddAction></LimiterValue><LimiterValue><Value>German</Value><AddAction>addlimiter(LA99:German)</AddAction></LimiterValue><LimiterValue><Value>Croatian</Value><AddAction>addlimiter(LA99:Croatian)</AddAction></LimiterValue><LimiterValue><Value>Hungarian</Value><AddAction>addlimiter(LA99:Hungarian)</AddAction></LimiterValue><LimiterValue><Value>Italian</Value><AddAction>addlimiter(LA99:Italian)</AddAction></LimiterValue><LimiterValue><Value>Latvian</Value><AddAction>addlimiter(LA99:Latvian)</AddAction></LimiterValue><LimiterValue><Value>Lithuanian</Value><AddAction>addlimiter(LA99:Lithuanian)</AddAction></LimiterValue><LimiterValue><Value>Norwegian</Value><AddAction>addlimiter(LA99:Norwegian)</AddAction></LimiterValue><LimiterValue><Value>Polish</Value><AddAction>addlimiter(LA99:Polish)</AddAction></LimiterValue><LimiterValue><Value>Portuguese</Value><AddAction>addlimiter(LA99:Portuguese)</AddAction></LimiterValue><LimiterValue><Value>Romanian</Value><AddAction>addlimiter(LA99:Romanian)</AddAction></LimiterValue><LimiterValue><Value>Russian</Value><AddAction>addlimiter(LA99:Russian)</AddAction></LimiterValue><LimiterValue><Value>Slovak</Value><AddAction>addlimiter(LA99:Slovak)</AddAction></LimiterValue><LimiterValue><Value>Slovenian</Value><AddAction>addlimiter(LA99:Slovenian)</AddAction></LimiterValue><LimiterValue><Value>Spanish</Value><AddAction>addlimiter(LA99:Spanish)</AddAction></LimiterValue><LimiterValue><Value>Serbian</Value><AddAction>addlimiter(LA99:Serbian)</AddAction></LimiterValue><LimiterValue><Value>Turkish</Value><AddAction>addlimiter(LA99:Turkish)</AddAction></LimiterValue><LimiterValue><Value>Ukrainian</Value><AddAction>addlimiter(LA99:Ukrainian)</AddAction></LimiterValue><LimiterValue><Value>Afrikaans</Value><AddAction>addlimiter(LA99:Afrikaans)</AddAction></LimiterValue><LimiterValue><Value>Arabic</Value><AddAction>addlimiter(LA99:Arabic)</AddAction></LimiterValue><LimiterValue><Value>Azerbaijani</Value><AddAction>addlimiter(LA99:Azerbaijani)</AddAction></LimiterValue><LimiterValue><Value>Basque</Value><AddAction>addlimiter(LA99:Basque)</AddAction></LimiterValue><LimiterValue><Value>Bulgarian</Value><AddAction>addlimiter(LA99:Bulgarian)</AddAction></LimiterValue><LimiterValue><Value>Catalan</Value><AddAction>addlimiter(LA99:Catalan)</AddAction></LimiterValue><LimiterValue><Value>Danish</Value><AddAction>addlimiter(LA99:Danish)</AddAction></LimiterValue><LimiterValue><Value>Greek</Value><AddAction>addlimiter(LA99:Greek)</AddAction></LimiterValue><LimiterValue><Value>Hebrew</Value><AddAction>addlimiter(LA99:Hebrew)</AddAction></LimiterValue><LimiterValue><Value>Hindi</Value><AddAction>addlimiter(LA99:Hindi)</AddAction></LimiterValue><LimiterValue><Value>Icelandic</Value><AddAction>addlimiter(LA99:Icelandic)</AddAction></LimiterValue><LimiterValue><Value>Indonesian</Value><AddAction>addlimiter(LA99:Indonesian)</AddAction></LimiterValue><LimiterValue><Value>Japanese</Value><AddAction>addlimiter(LA99:Japanese)</AddAction></LimiterValue><LimiterValue><Value>Korean</Value><AddAction>addlimiter(LA99:Korean)</AddAction></LimiterValue><LimiterValue><Value>Latin</Value><AddAction>addlimiter(LA99:Latin)</AddAction></LimiterValue><LimiterValue><Value>Malay</Value><AddAction>addlimiter(LA99:Malay)</AddAction></LimiterValue><LimiterValue><Value>Persian</Value><AddAction>addlimiter(LA99:Persian)</AddAction></LimiterValue><LimiterValue><Value>Serbo-Croatian</Value><AddAction>addlimiter(LA99:Serbo-Croatian)</AddAction></LimiterValue><LimiterValue><Value>Swedish</Value><AddAction>addlimiter(LA99:Swedish)</AddAction></LimiterValue><LimiterValue><Value>Urdu</Value><AddAction>addlimiter(LA99:Urdu)</AddAction></LimiterValue><LimiterValue><Value>Amharic</Value><AddAction>addlimiter(LA99:Amharic)</AddAction></LimiterValue><LimiterValue><Value>Dutch;
+        Flemish</Value><AddAction>addlimiter(LA99:Dutch; Flemish)</AddAction></LimiterValue><LimiterValue><Value>Irish</Value><AddAction>addlimiter(LA99:Irish)</AddAction></LimiterValue><LimiterValue><Value>Galician</Value><AddAction>addlimiter(LA99:Galician)</AddAction></LimiterValue><LimiterValue><Value>Greek,
+        Modern (1453-)</Value><AddAction>addlimiter(LA99:Greek\, Modern \(1453-\))</AddAction></LimiterValue><LimiterValue><Value>Interlingua</Value><AddAction>addlimiter(LA99:Interlingua)</AddAction></LimiterValue><LimiterValue><Value>Spanish;
+        Castilian</Value><AddAction>addlimiter(LA99:Spanish; Castilian)</AddAction></LimiterValue><LimiterValue><Value>Undetermined</Value><AddAction>addlimiter(LA99:Undetermined)</AddAction></LimiterValue><LimiterValue><Value>Welsh</Value><AddAction>addlimiter(LA99:Welsh)</AddAction></LimiterValue><LimiterValue><Value>Yiddish</Value><AddAction>addlimiter(LA99:Yiddish)</AddAction></LimiterValue></LimiterValues><DefaultOn>n</DefaultOn><Order>10</Order></AvailableLimiter><AvailableLimiter><Id>FT1</Id><Label>Available
+        in Library Collection</Label><Type>select</Type><AddAction>addlimiter(FT1:value)</AddAction><DefaultOn>y</DefaultOn><Order>11</Order></AvailableLimiter></AvailableLimiters><AvailableSearchModes><AvailableSearchMode><Mode>bool</Mode><Label>Boolean/Phrase</Label><DefaultOn>n</DefaultOn><AddAction>setsearchmode(bool)</AddAction></AvailableSearchMode><AvailableSearchMode><Mode>all</Mode><Label>Find
+        all my search terms</Label><DefaultOn>y</DefaultOn><AddAction>setsearchmode(all)</AddAction></AvailableSearchMode><AvailableSearchMode><Mode>any</Mode><Label>Find
+        any of my search terms</Label><DefaultOn>n</DefaultOn><AddAction>setsearchmode(any)</AddAction></AvailableSearchMode><AvailableSearchMode><Mode>smart</Mode><Label>SmartText
+        Searching</Label><DefaultOn>n</DefaultOn><AddAction>setsearchmode(smart)</AddAction></AvailableSearchMode></AvailableSearchModes><AvailableRelatedContent><AvailableRelatedContent><Type>emp</Type><Label>Exact
+        Match Publication</Label><DefaultOn>y</DefaultOn><AddAction>includerelatedcontent(emp)</AddAction></AvailableRelatedContent></AvailableRelatedContent><AvailableDidYouMeanOptions><AvailableDidYouMeanOption><Id>AutoSuggest</Id><Label>Did
+        You Mean</Label><DefaultOn>y</DefaultOn></AvailableDidYouMeanOption></AvailableDidYouMeanOptions></AvailableSearchCriteria><ViewResultSettings><ResultsPerPage>20</ResultsPerPage><ResultListView>brief</ResultListView></ViewResultSettings><ApplicationSettings><SessionTimeout>480</SessionTimeout></ApplicationSettings><ApiSettings><MaxRecordJumpAhead>250</MaxRecordJumpAhead></ApiSettings></InfoResponseMessage>
     http_version: 
-  recorded_at: Mon, 06 Aug 2012 23:08:26 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Mon, 24 Oct 2016 19:55:01 GMT
+- request:
+    method: get
+    uri: http://eds-api.ebscohost.com/edsapi/rest/endsession?sessiontoken=f1ac1f37-c6a5-431e-9138-71970d0998d8.dlIJa2X8Fg/o73sf1rsUhnWZewreYidVI/1JRzXALx4=
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      X-Authenticationtoken:
+      - ABw8Bz-zMdzAJUjyy8YxJLzD2nRNiFgObh17IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0
+      Accept:
+      - application/xml
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '179'
+      Content-Type:
+      - application/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      X-Authenticationtoken:
+      - ABw8Bz-zMdzAJUjyy8YxJLzD2nRNiFgObh17IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0
+      X-Msg-Correlid:
+      - 0add7ad2-39a4-4928-a7f6-0c8eb7781e02
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 24 Oct 2016 19:55:01 GMT
+    body:
+      encoding: UTF-8
+      string: <EndSessionResponse xmlns="http://epnet.com/webservices/EbscoApi/Contracts"
+        xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><IsSuccessful>y</IsSuccessful></EndSessionResponse>
+    http_version: 
+  recorded_at: Mon, 24 Oct 2016 19:55:01 GMT
+recorded_with: VCR 2.9.3

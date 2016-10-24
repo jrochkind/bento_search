@@ -5,8 +5,11 @@ http_interactions:
     uri: https://eds-api.ebscohost.com/authservice/rest/uidauth
     body:
       encoding: UTF-8
-      string: ! "      {\n        \"UserId\":\"DUMMY_USER_ID\",\n        \"Password\":\"DUMMY_PWD\"\n
-        \     }\n"
+      string: |2
+              {
+                "UserId":"DUMMY_USER_ID",
+                "Password":"DUMMY_PWD"
+              }
     headers:
       Accept:
       - application/json
@@ -20,9 +23,9 @@ http_interactions:
       Cache-Control:
       - private
       Content-Length:
-      - '73'
+      - '128'
       Content-Type:
-      - application/JSON; charset=utf-8
+      - application/json; charset=utf-8
       Server:
       - Microsoft-IIS/7.5
       X-Aspnet-Version:
@@ -30,46 +33,10 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Mon, 06 Aug 2012 23:07:54 GMT
-    body:
-      encoding: US-ASCII
-      string: ! '{"AuthToken":"8a5ad95a-cc1d-408c-8f14-af5016a8d146","AuthTimeout":"1800"}'
-    http_version: 
-  recorded_at: Mon, 06 Aug 2012 23:07:54 GMT
-- request:
-    method: post
-    uri: https://eds-api.ebscohost.com/authservice/rest/uidauth
+      - Mon, 24 Oct 2016 19:55:00 GMT
     body:
       encoding: UTF-8
-      string: ! "      {\n        \"UserId\":\"DUMMY_USER_ID\",\n        \"Password\":\"DUMMY_PWD\"\n
-        \     }\n"
-    headers:
-      Accept:
-      - application/json
-      Content-Type:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '73'
-      Content-Type:
-      - application/JSON; charset=utf-8
-      Server:
-      - Microsoft-IIS/7.5
-      X-Aspnet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Mon, 06 Aug 2012 23:08:26 GMT
-    body:
-      encoding: US-ASCII
-      string: ! '{"AuthToken":"76529f8e-ad33-419d-8315-a383b1fa57d9","AuthTimeout":"1800"}'
+      string: '{"AuthToken":"ABw8Bz-zMdzAJUjyy8YxJLzD2nRNiFgObh17IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0","AuthTimeout":"1800"}'
     http_version: 
-  recorded_at: Mon, 06 Aug 2012 23:08:26 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Mon, 24 Oct 2016 19:55:01 GMT
+recorded_with: VCR 2.9.3
