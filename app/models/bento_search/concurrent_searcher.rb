@@ -6,11 +6,11 @@ begin
 
   class BentoSearch::ConcurrentSearcher
     def initialize(*engine_ids)
-      auto_rescue_exceptions = [StandardError]
+      auto_rescued_exceptions = [StandardError]
 
       @engines = []
       engine_ids.each do |id|
-        add_engine( BentoSearch.get_engine(id).tap { |e| e.auto_rescue_exceptions = auto_rescue_exceptions + e.auto_rescue_exceptions })
+        add_engine( BentoSearch.get_engine(id).tap { |e| e.auto_rescued_exceptions = auto_rescued_exceptions + e.auto_rescued_exceptions })
       end
       @extra_auto_rescue_exceptions = [StandardError]
     end
