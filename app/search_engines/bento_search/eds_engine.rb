@@ -40,30 +40,25 @@ require 'http_client_patch/include_client'
 # openurl. http://support.ebsco.com/knowledge_base/detail.php?id=1111 (May
 # have to ask EBSCO support for help, it's confusing!).
 #
-# TODO: May have to add configuration code to pull the OpenURL link out by
-# it's configured name or label, not assume first one is it.
-#
 # As always, you can customize links and other_links with Item Decorators.
 #
 # == Technical Notes and Difficulties
 #
 # This API is enormously difficult to work with. Also the response is very odd
-# to deal with and missing some key elements. We quite possibly got something
-# wrong or non-optimal in this implementation, but we did our best.
+# to deal with. We think we are currently (as of bento_search 1.7) getting
+# fairly complete citation detail out, at least for articles, but may be missing
+# some on weird edge cases, books/book chapters, etc)
 #
 # Auth issues may make this slow -- you need to spend a (not too speedy) HTTP
 # request making a session for every new end-user -- as we have no way to keep
 # track of end-users, we do it on every request in this implementation.
 #
-# Responses don't include much metadata -- we don't actually have journal title,
-# volume, issue, etc.  We probably _could_ parse it out of the OpenURL that's
-# there depending on your profile configuration, but we're not right now.
-# Instead we're using the chunk of user-displayable citation/reference it does
-# give us (which is very difficult to parse into something usable already),
-# and a custom Decorator to display that instead of normalized citation
-# made from individual elements.
-#
-# EBSCO says they plan to improve some of these issues in a September 2012 release.
+# An older version of the EDS API returned much less info, and we tried
+# to scrape out what we could anyway. Much of this logic is still there
+# as backup. In the older version, not enough info was there for an
+# OpenURL link, `configuration.assume_first_custom_link_openurl` was true
+# by default, and used to create an OpenURL link. It now defaults to false,
+# and should no longer be neccessary.
 #
 # Title and abstract data seems to be HTML with tags and character entities and
 # escaped special chars. We're trusting it and passing it on as html_safe.
@@ -237,23 +232,32 @@ class BentoSearch::EdsEngine
 
           item.abstract = prepare_eds_payload( element_by_group(record_xml, "Ab"), true )
 
-          # Believe it or not, the authors are encoded as an escaped
-          # XML-ish payload, that we need to parse again and get the
-          # actual authors out of. WTF. Thanks for handling fragments
-          # nokogiri.
-          author_mess = element_by_group(record_xml, "Au")
-          # only SOMETIMES does it have XML tags, other times it's straight text.
-          # ARGH.
-          author_xml = Nokogiri::XML::fragment(author_mess)
-          searchLinks = author_xml.xpath(".//searchLink")
-          if searchLinks.size > 0
-            author_xml.xpath(".//searchLink").each do |author_node|
-              item.authors << BentoSearch::Author.new(:display => author_node.text)
+          # Much better way to get authors out of EDS response now...
+          author_full_names = record_xml.xpath("./RecordInfo/BibRecord/BibRelationships/HasContributorRelationships/HasContributor/PersonEntity/Name/NameFull")
+          author_full_names.each do |name_full_xml|
+            if name_full_xml && (text = name_full_xml.text).present?
+              item.authors << BentoSearch::Author.new(:display => text)
             end
-          else
-            item.authors << BentoSearch::Author.new(:display => author_xml.text)
           end
 
+          if item.authors.blank?
+            # Believe it or not, the authors are encoded as an escaped
+            # XML-ish payload, that we need to parse again and get the
+            # actual authors out of. WTF. Thanks for handling fragments
+            # nokogiri.
+            author_mess = element_by_group(record_xml, "Au")
+            # only SOMETIMES does it have XML tags, other times it's straight text.
+            # ARGH.
+            author_xml = Nokogiri::XML::fragment(author_mess)
+            searchLinks = author_xml.xpath(".//searchLink")
+            if searchLinks.size > 0
+              author_xml.xpath(".//searchLink").each do |author_node|
+                item.authors << BentoSearch::Author.new(:display => author_node.text)
+              end
+            else
+              item.authors << BentoSearch::Author.new(:display => author_xml.text)
+            end
+          end
 
           # PLink is main inward facing EBSCO link, put it as
           # main link.
@@ -286,7 +290,40 @@ class BentoSearch::EdsEngine
           # Can't find a list of possible PubTypes to see what's there to try
           # and map to our internal controlled vocab. oh wells.
 
+          item.doi = at_xpath_text record_xml, "./RecordInfo/BibRecord/BibEntity/Identifiers/Identifier[child::Type[text()='doi']]/Value"
 
+          item.start_page = at_xpath_text(record_xml, "./RecordInfo/BibRecord/BibEntity/PhysicalDescription/Pagination/StartPage")
+          total_pages = at_xpath_text(record_xml, "./RecordInfo/BibRecord/BibEntity/PhysicalDescription/Pagination/PageCount")
+          if total_pages.to_i != 0 && item.start_page.to_i != 0
+            item.end_page = (item.start_page.to_i + total_pages.to_i - 1).to_s
+          end
+
+          # For some EDS results, we have actual citation information,
+          # for some we don't.
+          container_xml = record_xml.at_xpath("./RecordInfo/BibRecord/BibRelationships/IsPartOfRelationships/IsPartOf/BibEntity")
+          if container_xml
+
+
+            item.source_title = at_xpath_text(container_xml, "./Titles/Title[child::Type[text()='main']]/TitleFull")
+            item.volume = at_xpath_text(container_xml, "./Numbering/Number[child::Type[text()='volume']]/Value")
+            item.issue = at_xpath_text(container_xml, "./Numbering/Number[child::Type[text()='issue']]/Value")
+
+            item.issn = at_xpath_text(container_xml, "./Identifiers/Identifier[child::Type[text()='issn-print']]/Value")
+
+            if date_xml = container_xml.at_xpath("./Dates/Date")
+              item.year = at_xpath_text(date_xml, "./Y")
+
+              date = at_xpath_text(date_xml, "./D").to_i
+              month = at_xpath_text(date_xml, "./M").to_i
+              if item.year.to_i != 0 && date != 0 && month != 0
+                item.publication_date = Date.new(item.year.to_i, month, date)
+              end
+            end
+          end
+
+          # Legacy EDS citation extracting. We don't really need this any more
+          # because EDS api has improved, but leave it in in case anyone using
+          # older versions needed it.
 
           # We have a single blob of human-readable citation, that's also
           # littered with XML-ish tags we need to deal with. We'll save
@@ -305,7 +342,6 @@ class BentoSearch::EdsEngine
             # try another location
             item.custom_data["citation_blob"] = element_by_group(record_xml, "SrcInfo")
           end
-
 
           item.extend CitationMessDecorator
 
@@ -509,7 +545,7 @@ class BentoSearch::EdsEngine
       :base_url => "http://eds-api.ebscohost.com/edsapi/rest/",
       :highlighting => true,
       :truncate_highlighted => 280,
-      :assume_first_custom_link_openurl => true,
+      :assume_first_custom_link_openurl => false,
       :search_mode => 'all' # any | bool | all | smart ; http://support.epnet.com/knowledge_base/detail.php?topic=996&id=1288&page=1
     }
   end

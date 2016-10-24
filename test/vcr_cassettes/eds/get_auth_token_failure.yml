@@ -5,8 +5,11 @@ http_interactions:
     uri: https://eds-api.ebscohost.com/authservice/rest/uidauth
     body:
       encoding: UTF-8
-      string: ! "      {\n        \"UserId\":\"bad\",\n        \"Password\":\"bad\"\n
-        \     }\n"
+      string: |2
+              {
+                "UserId":"bad",
+                "Password":"bad"
+              }
     headers:
       Accept:
       - application/json
@@ -30,10 +33,10 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Mon, 06 Aug 2012 23:07:54 GMT
+      - Mon, 24 Oct 2016 19:55:00 GMT
     body:
-      encoding: US-ASCII
-      string: ! '{"ErrorCode":1102,"Reason":"Invalid Credentials.","AdditionalDetail":null}'
+      encoding: UTF-8
+      string: '{"ErrorCode":1102,"Reason":"Invalid Credentials.","AdditionalDetail":null}'
     http_version: 
-  recorded_at: Mon, 06 Aug 2012 23:07:54 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Mon, 24 Oct 2016 19:55:01 GMT
+recorded_with: VCR 2.9.3
