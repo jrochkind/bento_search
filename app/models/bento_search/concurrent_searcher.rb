@@ -1,9 +1,50 @@
-# EXPERIMENTAL replacement for Celluloid-based MultiSearcher,
-# with ruby-concurrent base instead. Need docs about Rails dev-mode
-# auto-reloading and concurrency, argh.
 begin
   require 'concurrent'
 
+  # Concurrently runs multiple searches in separate threads. Since a search
+  # generally spends most of it's time waiting on foreign API, this is
+  # useful to significantly reduce total latency of running multiple searches,
+  # even in MRI.
+  #
+  # Uses [concurrent-ruby](https://github.com/ruby-concurrency/concurrent-ruby),
+  # already a dependency of Rails 5.x. To use with Rails previous to 5.x,
+  # just add concurrent-ruby to your `Gemfile`:
+  #
+  #     gem 'concurrent-ruby', '~> 1.0'
+  #
+  # # Usage
+  #
+  # initialize with id's of registered engines:
+  #
+  #     searcher = BentoBox::MultiSearcher.new(:gbs, :scopus)
+  #
+  # start the concurrent searches, params same as engine.search
+  #
+  #     searcher.search( query_params )
+  #
+  # retrieve results, blocking until all are completed:
+  #
+  #     results = searcher.results
+  #
+  # returns a Hash keyed by engine id, values BentoSearch::Results objects.
+  #
+  #     results # => { "gbs" => <BentoSearch::Results ...>, "scopus" =>  <BentoSearch::Results ...>}
+  #
+  # Calling results more than once will just return the initial results again
+  # (cached), it won't run a search again.
+  #
+  # ## Dev-mode autoloading and concurrency
+  #
+  # In Rails previous to Rails5, you may have to set config.cache_classes=true
+  # even in development to avoid problems. In Rails 5.x, we take advantage of
+  # new api that should allow concurrency-save autoloading. But if you run into
+  # any weird problems (such as a deadlock), `cache_classes = true` and
+  # `eager_load = true` should eliminate them, at the cost of dev-mode
+  # auto-reloading.
+  #
+  #
+  # TODO: have a method that returns Futures instead of only supplying the blocking
+  # results method? Several tricks, including making sure to properly terminate actors.
   class BentoSearch::ConcurrentSearcher
     def initialize(*engine_ids)
       auto_rescued_exceptions = [StandardError]

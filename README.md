@@ -250,12 +250,12 @@ to execute concurrently in seperate threads, so the total wait time is the slowe
 engine, not the sum of the engines.
 
 You can write your own logic using ruby threads to do this, but
-BentoSearch provides a multi-searching helper using [Celluloid](https://github.com/celluloid/celluloid)
+BentoSearch provides a multi-searching helper using [concurrent-ruby](https://github.com/ruby-concurrency/concurrent-ruby)
 to help you do this easily. Say, in a controller:
 
 ~~~~ruby
     # constructor takes id's registered with BentoSearch.register_engine
-    searcher = BentoSearch::MultiSearcher.new(:gbs, :scopus, :summon)
+    searcher = BentoSearch::ConcurentSearcher.new(:gbs, :scopus, :summon)
 
     # Call 'search' with any parameters you would give to an_engine.search
     searcher.search("my query", :semantic_search_field => :author, :sort => "title")
@@ -273,13 +273,22 @@ search execute in a seperate thread, so you can continue doing other work
 in the main thread (like search a local store of some kind outside of
 bento_search)
 
-You will need to add the 'celluloid' gem to your app to use this feature,
-BentoSearch doesn't automatically include the celluloid dependency. Note
-that Celluloid uses multi-threading in such a way that you might need
-to turn Rails config.cache_classes=true even in development.
+If you are using a Rails previous to 5.x, you will have to add the
+`concurrent-ruby` gem to your `Gemfile` (It's already a dependency of
+Rails5).
+
+If you are using Rails5, ConcurrentSearcher uses new Rails API that
+should make development-mode class reloading work fine even with
+the ConcurrentSearcher's concurrency.
+
+For more info, see [BentoSearch::ConcurrentSearcher](./app/models/bento_search/concurrent_searcher.rb).
+
+The previous **MultiSearcher** class is now deprecated, ConcurrentSearcher
+is the replacement, and will likely work as a drop-in replacement.
+See [CHANGES](./CHANGES.md#17) for more info.
 
 
-For more info, see [BentoSearch::MultiSearcher](./app/models/bento_search/multi_searcher.rb).
+
 
 ### Delayed results loading via AJAX (actually more like AJAHtml)
 

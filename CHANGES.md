@@ -17,6 +17,25 @@
      no longer be neccesary to get a good OpenURL out of EDS. But set to true
      if you want old behavior.
 
+* New BentoSearch::ConcurrentSearcher for threaded concurrent searching.
+  * With proper Rails 5 API usage to work with dev-mode class reloading,
+    without deadlocks (but still works in any supported pre-5 Rails as well).
+  * Based on [concurrent-ruby](https://github.com/ruby-concurrency/concurrent-ruby),
+    now a dependency in Rails 5. To use in Rails previous to 5, just add
+    `gem 'concurrent-ruby', '~> 1.0'` to your `Gemfile`.
+  * Replaces the celluloid-based BentoSearch::MultiSearcher, which is now
+    deprecated, but won't go away until bento_search 2.0.
+    * The ConcurrentSearcher API is pretty similar to MultiSearcher, you can
+      probably use it as a drop-in replacement.
+    * If you continue to use MultiSearcher in Rails 5, you may need to
+      turn off dev-mode class reloading (set `config.eager_load == true`
+      and `config.cache_classes = true` in development) to avoid deadlocks from the Rails5
+      autoload lock.
+    * If you stop using MultiSearcher, you can remove `celluloid` from your Gemfile,
+      unless you need it for some other reason.
+    * If you previously turned off Rails dev-mode class reloading, it should
+      work again in Rails5 with the ConcurrentSearcher.
+
 ## 1.6
 
 * Test under Rails5
