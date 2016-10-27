@@ -21,29 +21,26 @@ class MultiSearcherTest < ActiveSupport::TestCase
 
 
   def test_multisearch
-    searcher = BentoSearch::MultiSearcher.new(:one, :two, :three)
-    start_returnval = searcher.start("cancer")
+    ActiveSupport::Deprecation.silence do
+      searcher = BentoSearch::MultiSearcher.new(:one, :two, :three)
+      start_returnval = searcher.start("cancer")
 
-    assert_same searcher, start_returnval
+      assert_same searcher, start_returnval
 
-    results = searcher.results
+      results = searcher.results
 
-    assert_kind_of Hash, results
-    assert_equal ["one", "two", "three"].sort, results.keys.sort
+      assert_kind_of Hash, results
+      assert_equal ["one", "two", "three"].sort, results.keys.sort
 
-    ["one", "two", "three"].each do |key|
-      assert_kind_of BentoSearch::Results, results[key]
+      ["one", "two", "three"].each do |key|
+        assert_kind_of BentoSearch::Results, results[key]
+      end
+
+      # call results again, we get an empty hash, can only call
+      # results once per start.
+      new_results = searcher.results
+      assert_kind_of Hash, new_results
+      assert_empty new_results
     end
-
-    # call results again, we get an empty hash, can only call
-    # results once per start.
-    new_results = searcher.results
-    assert_kind_of Hash, new_results
-    assert_empty new_results
-
   end
-
-
-
-
 end
