@@ -36,6 +36,9 @@
     * If you previously turned off Rails dev-mode class reloading, it should
       work again in Rails5 with the ConcurrentSearcher.
 
+* BentoSearch::SearchEngine has `engine_id` and `display_configuration` cover
+  methods added, for consistency with BentoSearch::Results
+
 ## 1.6
 
 * Test under Rails5
