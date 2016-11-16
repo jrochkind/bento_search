@@ -16,7 +16,7 @@ module BentoSearch
     include ActionView::Helpers::SanitizeHelper
 
 
-    class_attribute :http_timeout
+    class_attribute :http_timeout, instance_writer: false
     self.http_timeout = 10
 
     extend HTTPClientPatch::IncludeClient
