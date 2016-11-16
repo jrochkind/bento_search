@@ -45,10 +45,14 @@ if Gem::Version.new(rails_version) < Gem::Version.new("5.0")
   end
 end
 
-# Can't quite explain this one, but for ruby 1.9....
-# https://github.com/rails/rails/issues/24749
 if Gem::Version.new(RUBY_VERSION.dup) < Gem::Version.new("2.0")
+  # Can't quite explain this one, but for ruby 1.9....
+  # https://github.com/rails/rails/issues/24749
   gem 'mime-types', '2.6.2'
+
+  # New versions of public-suffix require newer ruby than 1.9.3,
+  # lock to 1.4.x one to test under 1.9.3
+  gem 'public_suffix', '~> 1.4.0'
 end
 
 
