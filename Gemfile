@@ -23,7 +23,7 @@ end
 # For allowing testing under multiple Rails versions from travis or command
 # line. Can't test Rails5 under MRI less than 2.2.2.
 rails_version = if ENV['RAILS_VERSION_SPEC'] && !ENV['RAILS_VERSION_SPEC'].empty?
-  ENV['RAILS_VERSION_SPEC']
+  ENV['RAILS_VERSION_SPEC'].dup
 else
   "5.0.0"
 end
