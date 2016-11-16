@@ -43,6 +43,10 @@
 
   More documentation of JQuery success callback on the [wiki](https://github.com/jrochkind/bento_search/wiki/AJAX-results-loading)
 
+* BentoSearch::SearchEngine has `engine_id` and `display_configuration` cover
+  methods added, for consistency with BentoSearch::Results
+
+
 ## 1.6
 
 * Test under Rails5

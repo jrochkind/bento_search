@@ -429,6 +429,16 @@ module BentoSearch
       [:query, :search_field, :semantic_search_field, :sort, :page, :start, :per_page]
     end
 
+    # Cover method for consistent api with Results
+    def display_configuration
+      configuration.for_display
+    end
+
+    # Cover method for consistent api with Results
+    def engine_id
+      configuration.id
+    end
+
 
     protected
 

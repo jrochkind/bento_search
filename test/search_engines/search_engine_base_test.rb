@@ -288,5 +288,16 @@ class ParseSearchArgumentsTest < ActiveSupport::TestCase
     assert_equal "I am a horrible engine", results.error[:exception].message, "results.error has right exception"
   end
 
+  def test_cover_consistency_api
+    d = Dummy.new()
+    assert_nil d.engine_id
+    assert_equal({}, d.display_configuration)
+
+    d = Dummy.new(id: 'test', for_display: { testkey: 'test' })
+    assert_equal 'test', d.engine_id
+    assert_equal({ testkey: 'test' }, d.display_configuration)
+
+  end
+
 end
 
