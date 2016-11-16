@@ -96,11 +96,20 @@ class BentoSearch::EdsEngine
 
   # Can't change http timeout in config, because we keep an http
   # client at class-wide level, and config is not class-wide.
-  # Change this 'constant' if you want to change it, I guess.
+  # We used to keep in constant, but that's not good for custom setting,
+  # we now use class_attribute, but in a weird backwards-compat way for
+  # anyone who might be using the constant.
   HttpTimeout = 4
+
+  class_attribute :http_timeout, instance_writer: false
+  def self.http_timeout
+    defined?(@http_timeout) ? @http_timeout : HttpTimeout
+  end
+
+
   extend HTTPClientPatch::IncludeClient
   include_http_client do |client|
-    client.connect_timeout = client.send_timeout = client.receive_timeout = HttpTimeout
+    client.connect_timeout = client.send_timeout = client.receive_timeout = http_timeout
   end
 
   AuthHeader          = "x-authenticationToken"
