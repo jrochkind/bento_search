@@ -36,8 +36,16 @@
     * If you previously turned off Rails dev-mode class reloading, it should
       work again in Rails5 with the ConcurrentSearcher.
 
+* The JQuery ajax loader now allows you to set a default success callback
+  applying to all loads:
+
+      BentoSearch.ajax_load.default_success_callback = function(div) { ...
+
+  More documentation of JQuery success callback on the [wiki](https://github.com/jrochkind/bento_search/wiki/AJAX-results-loading)
+
 * BentoSearch::SearchEngine has `engine_id` and `display_configuration` cover
   methods added, for consistency with BentoSearch::Results
+
 
 ## 1.6
 
