@@ -11,13 +11,13 @@
    or `engine.auto_rescue_exceptions = `.  Old way of over-riding `auto_rescue_exceptions`
    (note `rescue` vs `rescued`) is deprecated.
 
-* EdsEngine gets much more structured citation data. EDS API has gotten better
-  since it was written, it's now updated to take advantage of more.
-  * `assume_first_custom_link_openurl` now defaults to **false**, as it should
-     no longer be neccesary to get a good OpenURL out of EDS. But set to true
-     if you want old behavior.
-
-* EdsEngine gets custom_data[:holdings] for catalog-type results.
+* EdsEngine improvements
+  * EdsEngine gets much more structured citation data. EDS API has gotten better
+    since it was written, it's now updated to take advantage of more.
+    * `assume_first_custom_link_openurl` now defaults to **false**, as it should
+       no longer be neccesary to get a good OpenURL out of EDS. But set to true
+       if you want old behavior.
+  * EdsEngine gets custom_data[:holdings] for catalog-type results.
 
 * New BentoSearch::ConcurrentSearcher for threaded concurrent searching.
   * With proper Rails 5 API usage to work with dev-mode class reloading,
