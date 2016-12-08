@@ -6,6 +6,8 @@ class EdsEngineTest < ActiveSupport::TestCase
   @@user_id   = (ENV['EDS_USER_ID'] || 'DUMMY_USER_ID')
   @@password  = (ENV['EDS_PASSWORD'] || 'DUMMY_PWD')
   @@profile   = (ENV['EDS_PROFILE'] || 'wsapi')
+  # something where the first hit will be from catalog for the profile above
+  @@catalog_result_query = (ENV['EDS_CATALOG_RESULT_QUERY'] || 'New York exposed the gilded age police scandal that launched the progressive era Daniel Czitrom')
 
 
   VCR.configure do |c|
@@ -159,6 +161,15 @@ class EdsEngineTest < ActiveSupport::TestCase
       assert_present first.unique_id
       # EDS id is db name, colon, accession number
       assert_match /.+\:.+/, first.unique_id
+  end
+
+  test_with_cassette("catalog query", :eds) do
+    results = @engine.search(@@catalog_result_query)
+
+    cat_result = results.first
+
+    assert_present cat_result.custom_data[:holdings]
+    assert cat_result.custom_data[:holdings].all? { |h| h.location.present? && h.call_number.present? }
   end
 
 
