@@ -42,6 +42,13 @@ require 'http_client_patch/include_client'
 #
 # As always, you can customize links and other_links with Item Decorators.
 #
+# == Custom Data
+#
+# If present, there is a custom_data[:holdings] value, an array of
+# BentoSearch::EdsEngine::Holding objects, each of which has a #location
+# and #call_number. There will usually (always?) be at most 1 item in the
+# array, as far as we can tell from how EDS works.
+#
 # == Technical Notes and Difficulties
 #
 # This API is enormously difficult to work with. Also the response is very odd
@@ -211,8 +218,6 @@ class BentoSearch::EdsEngine
 
         url = construct_search_url(args)
 
-
-
         response = get_with_auth(url, session_token)
 
         results = BentoSearch::Results.new
@@ -306,6 +311,20 @@ class BentoSearch::EdsEngine
           if total_pages.to_i != 0 && item.start_page.to_i != 0
             item.end_page = (item.start_page.to_i + total_pages.to_i - 1).to_s
           end
+
+
+          # location/call number, probably only for catalog results. We only see one
+          # in actual data, but XML structure allows multiple, so we'll store it as multiple.
+          copy_informations = record_xml.xpath("./Holdings/Holding/HoldingSimple/CopyInformationList/CopyInformation")
+          if copy_informations.present?
+            item.custom_data[:holdings] =
+              copy_informations.collect do |copy_information|
+                Holding.new(:location => at_xpath_text(copy_information, "Sublocation"),
+                            :call_number => at_xpath_text(copy_information, "ShelfLocator"))
+              end
+          end
+
+
 
           # For some EDS results, we have actual citation information,
           # for some we don't.
@@ -601,6 +620,14 @@ class BentoSearch::EdsEngine
   module CitationMessDecorator
     def published_in
       custom_data["citation_blob"]
+    end
+  end
+
+  class Holding
+    attr_reader :location, :call_number
+    def initialize(args)
+      @location = args[:location]
+      @call_number = args[:call_number]
     end
   end
 

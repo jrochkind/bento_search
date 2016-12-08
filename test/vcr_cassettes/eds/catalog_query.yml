@@ -1,0 +1,255 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://eds-api.ebscohost.com/authservice/rest/uidauth
+    body:
+      encoding: UTF-8
+      string: |2
+              {
+                "UserId":"DUMMY_USER_ID",
+                "Password":"DUMMY_PWD"
+              }
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '128'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 08 Dec 2016 18:31:29 GMT
+    body:
+      encoding: UTF-8
+      string: '{"AuthToken":"AB0djQtOJirfv7SIDlZ0QHowRCVRtVhJrgl7IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0","AuthTimeout":"1800"}'
+    http_version: 
+  recorded_at: Thu, 08 Dec 2016 18:31:29 GMT
+- request:
+    method: get
+    uri: http://eds-api.ebscohost.com/edsapi/rest/createsession?guest=n&profile=wsapi
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      X-Authenticationtoken:
+      - AB0djQtOJirfv7SIDlZ0QHowRCVRtVhJrgl7IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0
+      Accept:
+      - application/xml
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '279'
+      Content-Type:
+      - application/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Sessiontoken:
+      - c88b399d-ab46-49ea-8804-729b88d90b29.7ihrDv9DNEGoepQp99O/CpAgfE+DevS0jI0ZVYjGWP0=
+      X-Authenticationtoken:
+      - AB0djQtOJirfv7SIDlZ0QHowRCVRtVhJrgl7IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0
+      X-Msg-Correlid:
+      - 387352fa-8364-4db3-ae6b-7b2dc7786db1
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 08 Dec 2016 18:31:28 GMT
+    body:
+      encoding: UTF-8
+      string: <CreateSessionResponseMessage xmlns="http://epnet.com/webservices/EbscoApi/Contracts"
+        xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><SessionToken>c88b399d-ab46-49ea-8804-729b88d90b29.7ihrDv9DNEGoepQp99O/CpAgfE+DevS0jI0ZVYjGWP0=</SessionToken></CreateSessionResponseMessage>
+    http_version: 
+  recorded_at: Thu, 08 Dec 2016 18:31:29 GMT
+- request:
+    method: get
+    uri: http://eds-api.ebscohost.com/edsapi/rest/search?highlight=y&query=AND,New%20York%20exposed%20the%20gilded%20age%20police%20scandal%20that%20launched%20the%20progressive%20era%20Daniel%20Czitrom&resultsperpage=10&searchmode=all&view=detailed
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      X-Authenticationtoken:
+      - AB0djQtOJirfv7SIDlZ0QHowRCVRtVhJrgl7IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0
+      Accept:
+      - application/xml
+      X-Sessiontoken:
+      - c88b399d-ab46-49ea-8804-729b88d90b29.7ihrDv9DNEGoepQp99O/CpAgfE+DevS0jI0ZVYjGWP0=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '13330'
+      Content-Type:
+      - application/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Sessiontoken:
+      - c88b399d-ab46-49ea-8804-729b88d90b29.7ihrDv9DNEGoepQp99O/CpAgfE+DevS0jI0ZVYjGWP0=
+      X-Authenticationtoken:
+      - AB0djQtOJirfv7SIDlZ0QHowRCVRtVhJrgl7IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0
+      X-Msg-Correlid:
+      - 70854b2f-75b7-4ec8-8ff6-0928dd2d9e19
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 08 Dec 2016 18:31:29 GMT
+    body:
+      encoding: UTF-8
+      string: '<SearchResponseMessageGet xmlns="http://epnet.com/webservices/EbscoApi/Contracts"
+        xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><SearchRequestGet><QueryString>query-1=AND,New+York+exposed+the+gilded+age+police+scandal+that+launched+the+progressive+era+Daniel+Czitrom&amp;sort=relevance&amp;includefacets=y&amp;searchmode=all&amp;autosuggest=n&amp;view=detailed&amp;resultsperpage=10&amp;pagenumber=1&amp;highlight=y</QueryString><SearchCriteriaWithActions><QueriesWithAction><QueryWithAction><Query><BooleanOperator>AND</BooleanOperator><Term>New
+        York exposed the gilded age police scandal that launched the progressive era
+        Daniel Czitrom</Term></Query><RemoveAction>removequery(1)</RemoveAction></QueryWithAction></QueriesWithAction></SearchCriteriaWithActions></SearchRequestGet><SearchResult><Statistics><TotalHits>2</TotalHits><TotalSearchTime>207</TotalSearchTime><Databases><Database><Id>bth</Id><Label>Business
+        Source Complete</Label><Status>0</Status><Hits>0</Hits></Database><Database><Id>a9h</Id><Label/><Status>0</Status><Hits>1</Hits></Database><Database><Id>lpr</Id><Label>Index
+        to Legal Periodicals Retrospective: 1908-1981 (H.W. Wilson)</Label><Status>0</Status><Hits>0</Hits></Database><Database><Id>edshvr</Id><Label>Hoover''s
+        Company Profiles</Label><Status>0</Status><Hits>0</Hits></Database><Database><Id>edslex</Id><Label>LexisNexis
+        Academic: Law Reviews</Label><Status>0</Status><Hits>0</Hits></Database><Database><Id>edshol</Id><Label>HeinOnline</Label><Status>0</Status><Hits>0</Hits></Database><Database><Id>ir00629a</Id><Label>FLASH
+        (Institutional Repository)</Label><Status>0</Status><Hits>0</Hits></Database><Database><Id>edsglt</Id><Label>InfoTrac
+        LegalTrac</Label><Status>0</Status><Hits>0</Hits></Database><Database><Id>edsjsr</Id><Label>JSTOR
+        Journals</Label><Status>0</Status><Hits>0</Hits></Database><Database><Id>edsgml</Id><Label>Making
+        of Modern Law</Label><Status>0</Status><Hits>0</Hits></Database><Database><Id>edslmc</Id><Label>LLMC
+        Digital</Label><Status>0</Status><Hits>0</Hits></Database><Database><Id>cat05341a</Id><Label>The
+        Maloney Library</Label><Status>0</Status><Hits>1</Hits></Database></Databases></Statistics><Data><RecordFormat>EP
+        Display</RecordFormat><Records><Record><ResultId>1</ResultId><Header><DbId>cat05341a</DbId><DbLabel>The
+        Maloney Library</DbLabel><An>ford.b625775</An><RelevancyScore>1956</RelevancyScore><PubType>Book</PubType><PubTypeId>book</PubTypeId></Header><PLink>http://0-search.ebscohost.com.lawpac.lawnet.fordham.edu/login.aspx?direct=true&amp;site=eds-live&amp;db=cat05341a&amp;AN=ford.b625775</PLink><ImageInfo><CoverArt><Size>thumb</Size><Target>http://contentcafe2.btol.com/ContentCafe/jacket.aspx?UserID=ebsco-test&amp;Password=ebsco-test&amp;Return=T&amp;Type=S&amp;Value=9780199837007</Target></CoverArt><CoverArt><Size>medium</Size><Target>http://contentcafe2.btol.com/ContentCafe/jacket.aspx?UserID=ebsco-test&amp;Password=ebsco-test&amp;Return=T&amp;Type=M&amp;Value=9780199837007</Target></CoverArt></ImageInfo><FullText><Text><Availability>0</Availability></Text></FullText><Items><Item><Name>Title</Name><Label>Title</Label><Group>Ti</Group><Data>&lt;highlight&gt;New&lt;/highlight&gt;
+        &lt;highlight&gt;York&lt;/highlight&gt; &lt;highlight&gt;exposed&lt;/highlight&gt;
+        : &lt;highlight&gt;the&lt;/highlight&gt; &lt;highlight&gt;gilded&lt;/highlight&gt;
+        &lt;highlight&gt;age&lt;/highlight&gt; &lt;highlight&gt;police&lt;/highlight&gt;
+        &lt;highlight&gt;scandal&lt;/highlight&gt; &lt;highlight&gt;that&lt;/highlight&gt;
+        &lt;highlight&gt;launched&lt;/highlight&gt; &lt;highlight&gt;the&lt;/highlight&gt;
+        &lt;highlight&gt;progressive&lt;/highlight&gt; &lt;highlight&gt;era&lt;/highlight&gt;
+        / &lt;highlight&gt;Daniel&lt;/highlight&gt; &lt;highlight&gt;Czitrom&lt;/highlight&gt;.</Data></Item><Item><Name>Author</Name><Label>Authors</Label><Group>Au</Group><Data>&lt;searchLink
+        fieldCode="AR" term="%22Czitrom%2C+Daniel+J%2E%22"&gt;&lt;highlight&gt;Czitrom&lt;/highlight&gt;,
+        &lt;highlight&gt;Daniel&lt;/highlight&gt; J.&lt;/searchLink&gt;, 1951-, author</Data></Item><Item><Name>TypePub</Name><Label>Publication
+        Type</Label><Group>TypPub</Group><Data>Book</Data></Item><Item><Name>Subject</Name><Label>Subject
+        Terms</Label><Group>Su</Group><Data>&lt;searchLink fieldCode="DE" term="%22Police+corruption+--+New+York+%28State%29+--+New+York+--+History+--+19th+century%22"&gt;&lt;highlight&gt;Police&lt;/highlight&gt;
+        corruption -- &lt;highlight&gt;New&lt;/highlight&gt; &lt;highlight&gt;York&lt;/highlight&gt;
+        (State) -- &lt;highlight&gt;New&lt;/highlight&gt; &lt;highlight&gt;York&lt;/highlight&gt;
+        -- History -- 19th century&lt;/searchLink&gt;&lt;br /&gt;&lt;searchLink fieldCode="DE"
+        term="%22Vice+control+--+New+York+%28State%29+--+New+York+--+History+--+19th+century%22"&gt;Vice
+        control -- &lt;highlight&gt;New&lt;/highlight&gt; &lt;highlight&gt;York&lt;/highlight&gt;
+        (State) -- &lt;highlight&gt;New&lt;/highlight&gt; &lt;highlight&gt;York&lt;/highlight&gt;
+        -- History -- 19th century&lt;/searchLink&gt;&lt;br /&gt;&lt;searchLink fieldCode="DE"
+        term="%22Political+corruption+--+New+York+%28State%29+--+New+York+--+History+--+19th+century%22"&gt;Political
+        corruption -- &lt;highlight&gt;New&lt;/highlight&gt; &lt;highlight&gt;York&lt;/highlight&gt;
+        (State) -- &lt;highlight&gt;New&lt;/highlight&gt; &lt;highlight&gt;York&lt;/highlight&gt;
+        -- History -- 19th century&lt;/searchLink&gt;&lt;br /&gt;&lt;searchLink fieldCode="DE"
+        term="%22Progressivism+%28United+States+politics%29+--+History+--+19th+century%22"&gt;Progressivism
+        (United States politics) -- History -- 19th century&lt;/searchLink&gt;</Data></Item><Item><Name>SubjectGeographic</Name><Label>Subject
+        Terms</Label><Group>Su</Group><Data>&lt;searchLink fieldCode="DE" term="%22New+York+%28N%2EY%2E%29+--+History+--+1865-1898%22"&gt;&lt;highlight&gt;New&lt;/highlight&gt;
+        &lt;highlight&gt;York&lt;/highlight&gt; (N.Y.) -- History -- 1865-1898&lt;/searchLink&gt;</Data></Item><Item><Name>SubjectPerson</Name><Label>Subject
+        Terms</Label><Group>Su</Group><Data>&lt;searchLink fieldCode="DE" term="%22Parkhurst%2C+C%2E+H%2E+1842-1933%22"&gt;Parkhurst,
+        C. H. 1842-1933&lt;/searchLink&gt;</Data></Item></Items><RecordInfo><BibRecord><BibEntity><Languages><Language><Text>English</Text></Language></Languages><Subjects><Subject><SubjectFull>Parkhurst,
+        C. H. 1842-1933</SubjectFull><Type>general</Type></Subject><Subject><SubjectFull>Police
+        corruption -- New York (State) -- New York -- History -- 19th century</SubjectFull><Type>general</Type></Subject><Subject><SubjectFull>Vice
+        control -- New York (State) -- New York -- History -- 19th century</SubjectFull><Type>general</Type></Subject><Subject><SubjectFull>Political
+        corruption -- New York (State) -- New York -- History -- 19th century</SubjectFull><Type>general</Type></Subject><Subject><SubjectFull>Progressivism
+        (United States politics) -- History -- 19th century</SubjectFull><Type>general</Type></Subject><Subject><SubjectFull>New
+        York (N.Y.) -- History -- 1865-1898</SubjectFull><Type>general</Type></Subject></Subjects><Titles><Title><TitleFull>New
+        York exposed : the gilded age police scandal that launched the progressive
+        era.</TitleFull><Type>main</Type></Title></Titles></BibEntity><BibRelationships><HasContributorRelationships><HasContributor><PersonEntity><Name><NameFull>Czitrom,
+        Daniel J.</NameFull></Name></PersonEntity></HasContributor></HasContributorRelationships><IsPartOfRelationships><IsPartOf><BibEntity><Dates><Date><D>01</D><M>01</M><Type>published</Type><Y>2016</Y></Date></Dates><Identifiers><Identifier><Type>isbn-print</Type><Value>9780199837007</Value></Identifier><Identifier><Type>isbn-print</Type><Value>0199837007</Value></Identifier></Identifiers><Titles><Title><TitleFull>New
+        York exposed : the gilded age police scandal that launched the progressive
+        era / Daniel Czitrom.</TitleFull><Type>main</Type></Title></Titles></BibEntity></IsPartOf></IsPartOfRelationships></BibRelationships></BibRecord></RecordInfo><Holdings><Holding><HoldingSimple><CopyInformationList><CopyInformation><Sublocation>Stacks</Sublocation><ShelfLocator>HV8148.N5
+        C95 2016</ShelfLocator></CopyInformation></CopyInformationList></HoldingSimple></Holding></Holdings></Record><Record><ResultId>2</ResultId><Header><DbId>a9h</DbId><DbLabel/><An>115358726</An><RelevancyScore>1631</RelevancyScore><PubType>Review</PubType><PubTypeId>review</PubTypeId></Header><PLink>http://0-search.ebscohost.com.lawpac.lawnet.fordham.edu/login.aspx?direct=true&amp;site=eds-live&amp;db=a9h&amp;AN=115358726</PLink><FullText><Text><Availability>0</Availability></Text></FullText><Items><Item><Name>Title</Name><Label>Title</Label><Group>Ti</Group><Data>Crusader’s
+        Fury, and Mark Twain in Debt.</Data></Item><Item><Name>Author</Name><Label>Authors</Label><Group>Au</Group><Data>&lt;searchLink
+        fieldCode="AR" term="%22ROBERTS%2C+SAM%22"&gt;ROBERTS, SAM&lt;/searchLink&gt;</Data></Item><Item><Name>TitleSource</Name><Label>Source</Label><Group>Src</Group><Data>&lt;searchLink
+        fieldCode="JN" term="%22New+York+Times%22"&gt;&lt;highlight&gt;New&lt;/highlight&gt;
+        &lt;highlight&gt;York&lt;/highlight&gt; Times&lt;/searchLink&gt;. 5/15/2016,
+        Vol. 165 Issue 57233, Metropolitan p3-3. 1/5p.</Data></Item><Item><Name>Subject</Name><Label>Subject
+        Terms</Label><Group>Su</Group><Data>*&lt;searchLink fieldCode="DE" term="%22Nonfiction%22"&gt;Nonfiction&lt;/searchLink&gt;</Data></Item><Item><Name>SubjectProduct</Name><Label>Reviews
+        &amp; Products</Label><Group>Su</Group><Data>&lt;searchLink fieldCode="PS"
+        term="%22New+York+Exposed%3A+The+Gilded+Age+Police+Scandal+That+Launched+the+Progressive+Era+%28Book%29%22"&gt;&lt;highlight&gt;New&lt;/highlight&gt;
+        &lt;highlight&gt;York&lt;/highlight&gt; &lt;highlight&gt;Exposed&lt;/highlight&gt;:
+        The &lt;highlight&gt;Gilded&lt;/highlight&gt; &lt;highlight&gt;Age&lt;/highlight&gt;
+        &lt;highlight&gt;Police&lt;/highlight&gt; &lt;highlight&gt;Scandal&lt;/highlight&gt;
+        That &lt;highlight&gt;Launched&lt;/highlight&gt; the &lt;highlight&gt;Progressive&lt;/highlight&gt;
+        &lt;highlight&gt;Era&lt;/highlight&gt; (Book)&lt;/searchLink&gt;&lt;br /&gt;&lt;searchLink
+        fieldCode="PS" term="%22Chasing+the+Last+Laugh%3A+Mark+Twain''s+Raucous+%26+Redemptive+Round-The-World+Comedy+Tour+%28Book%29%22"&gt;Chasing
+        the Last Laugh: Mark Twain''s Raucous &amp; Redemptive Round-The-World Comedy
+        Tour (Book)&lt;/searchLink&gt;</Data></Item><Item><Name>SubjectPerson</Name><Label>People</Label><Group>Su</Group><Data>&lt;searchLink
+        fieldCode="PE" term="%22Czitrom%2C+Daniel+J%2E%2C+1951-%22"&gt;&lt;highlight&gt;Czitrom&lt;/highlight&gt;,
+        &lt;highlight&gt;Daniel&lt;/highlight&gt; J., 1951-&lt;/searchLink&gt;&lt;br
+        /&gt;&lt;searchLink fieldCode="PE" term="%22Zacks%2C+Richard%22"&gt;Zacks,
+        Richard&lt;/searchLink&gt;</Data></Item></Items><RecordInfo><BibRecord><BibEntity><Languages><Language><Code>eng</Code><Text>English</Text></Language></Languages><PhysicalDescription><Pagination><PageCount>0</PageCount><StartPage>3</StartPage></Pagination></PhysicalDescription><Subjects><Subject><SubjectFull>New
+        York Exposed: The Gilded Age Police Scandal That Launched the Progressive
+        Era (Book)</SubjectFull><Type>general</Type></Subject><Subject><SubjectFull>Chasing
+        the Last Laugh: Mark Twain''s Raucous &amp; Redemptive Round-The-World Comedy
+        Tour (Book)</SubjectFull><Type>general</Type></Subject><Subject><SubjectFull>Czitrom,
+        Daniel J., 1951-</SubjectFull><Type>general</Type></Subject><Subject><SubjectFull>Zacks,
+        Richard</SubjectFull><Type>general</Type></Subject><Subject><SubjectFull>Nonfiction</SubjectFull><Type>general</Type></Subject></Subjects><Titles><Title><TitleFull>Crusader’s
+        Fury, and Mark Twain in Debt.</TitleFull><Type>main</Type></Title></Titles></BibEntity><BibRelationships><HasContributorRelationships><HasContributor><PersonEntity><Name><NameFull>ROBERTS,
+        SAM</NameFull></Name></PersonEntity></HasContributor></HasContributorRelationships><IsPartOfRelationships><IsPartOf><BibEntity><Dates><Date><D>15</D><M>05</M><Text>5/15/2016</Text><Type>published</Type><Y>2016</Y></Date></Dates><Identifiers><Identifier><Type>issn-print</Type><Value>03624331</Value></Identifier></Identifiers><Numbering><Number><Type>volume</Type><Value>165</Value></Number><Number><Type>issue</Type><Value>57233</Value></Number></Numbering><Titles><Title><TitleFull>New
+        York Times</TitleFull><Type>main</Type></Title></Titles></BibEntity></IsPartOf></IsPartOfRelationships></BibRelationships></BibRecord></RecordInfo></Record></Records></Data><AvailableFacets><AvailableFacet><Id>SourceType</Id><Label>Source
+        Type</Label><AvailableFacetValues><AvailableFacetValue><Value>Reviews</Value><Count>1</Count><AddAction>addfacetfilter(SourceType:Reviews)</AddAction></AvailableFacetValue><AvailableFacetValue><Value>Books</Value><Count>1</Count><AddAction>addfacetfilter(SourceType:Books)</AddAction></AvailableFacetValue></AvailableFacetValues></AvailableFacet><AvailableFacet><Id>ContentProvider</Id><Label>Content
+        Provider</Label><AvailableFacetValues><AvailableFacetValue><Value>The Maloney
+        Library</Value><Count>1</Count><AddAction>addfacetfilter(ContentProvider:The
+        Maloney Library)</AddAction></AvailableFacetValue></AvailableFacetValues></AvailableFacet></AvailableFacets><AvailableCriteria><DateRange><MinDate>2016-01</MinDate><MaxDate>2016-05</MaxDate></DateRange></AvailableCriteria></SearchResult></SearchResponseMessageGet>'
+    http_version: 
+  recorded_at: Thu, 08 Dec 2016 18:31:30 GMT
+- request:
+    method: get
+    uri: http://eds-api.ebscohost.com/edsapi/rest/endsession?sessiontoken=c88b399d-ab46-49ea-8804-729b88d90b29.7ihrDv9DNEGoepQp99O/CpAgfE%2BDevS0jI0ZVYjGWP0=
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      X-Authenticationtoken:
+      - AB0djQtOJirfv7SIDlZ0QHowRCVRtVhJrgl7IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0
+      Accept:
+      - application/xml
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '179'
+      Content-Type:
+      - application/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Authenticationtoken:
+      - AB0djQtOJirfv7SIDlZ0QHowRCVRtVhJrgl7IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0
+      X-Msg-Correlid:
+      - 979d10a8-7881-4a0e-a232-38553997ff53
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 08 Dec 2016 18:31:29 GMT
+    body:
+      encoding: UTF-8
+      string: <EndSessionResponse xmlns="http://epnet.com/webservices/EbscoApi/Contracts"
+        xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><IsSuccessful>y</IsSuccessful></EndSessionResponse>
+    http_version: 
+  recorded_at: Thu, 08 Dec 2016 18:31:30 GMT
+recorded_with: VCR 2.9.3
