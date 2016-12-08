@@ -283,6 +283,19 @@ class BentoSearch::EdsEngine
               )
           end
 
+          # More other links in 'URL' Item, as embedded XML, really EBSCO?
+          record_xml.xpath("./Items/Item[child::Group[text()='URL']]/Data").each do |url_item|
+            node = Nokogiri::XML::fragment(url_item.text)
+            next unless link = node.at_xpath("./link")
+            next unless link["linkTerm"]
+
+            item.other_links << BentoSearch::Link.new(
+              :url => link["linkTerm"],
+              :label => helper.strip_tags(link.text)
+              )
+          end
+
+
           if (configuration.assume_first_custom_link_openurl &&
             (first = record_xml.xpath "./CustomLinks/CustomLink" ) &&
             (node = first.at_xpath "./Url" )

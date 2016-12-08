@@ -18,6 +18,8 @@
        no longer be neccesary to get a good OpenURL out of EDS. But set to true
        if you want old behavior.
   * EdsEngine gets custom_data[:holdings] for catalog-type results.
+  * EdsEngine notices weird `<Item><Group>URL</Group>` links in response,
+    and 'parses' them to add as item#other_links
 
 * New BentoSearch::ConcurrentSearcher for threaded concurrent searching.
   * With proper Rails 5 API usage to work with dev-mode class reloading,
