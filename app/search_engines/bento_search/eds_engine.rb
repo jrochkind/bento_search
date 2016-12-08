@@ -142,12 +142,7 @@ class BentoSearch::EdsEngine
   # an object that includes some Rails helper modules for
   # text handling.
   def helper
-    unless @helper ||= nil
-      @helper = Object.new
-      @helper.extend ActionView::Helpers::TextHelper # for truncate
-      @helper.extend ActionView::Helpers::OutputSafetyHelper # for safe_join
-    end
-    return @helper
+    @helper ||= Helper.new
   end
 
 
@@ -330,8 +325,6 @@ class BentoSearch::EdsEngine
           # for some we don't.
           container_xml = record_xml.at_xpath("./RecordInfo/BibRecord/BibRelationships/IsPartOfRelationships/IsPartOf/BibEntity")
           if container_xml
-
-
             item.source_title = at_xpath_text(container_xml, "./Titles/Title[child::Type[text()='main']]/TitleFull")
             item.volume = at_xpath_text(container_xml, "./Numbering/Number[child::Type[text()='volume']]/Value")
             item.issue = at_xpath_text(container_xml, "./Numbering/Number[child::Type[text()='issue']]/Value")
@@ -347,6 +340,12 @@ class BentoSearch::EdsEngine
                 item.publication_date = Date.new(item.year.to_i, month, date)
               end
             end
+          end
+
+          # EDS annoyingly repeats a monographic title in the same place
+          # we look for source/container title, take it away.
+          if item.start_page.blank? && helper.strip_tags(item.title) == item.source_title
+            item.source_title = nil
           end
 
           # Legacy EDS citation extracting. We don't really need this any more
@@ -621,6 +620,14 @@ class BentoSearch::EdsEngine
     def published_in
       custom_data["citation_blob"]
     end
+  end
+
+  # a class that includes some Rails helper modules for
+  # text handling.
+  class Helper
+    include ActionView::Helpers::SanitizeHelper # for strip_tags
+    include ActionView::Helpers::TextHelper # for truncate
+    include ActionView::Helpers::OutputSafetyHelper # for safe_join
   end
 
   class Holding
