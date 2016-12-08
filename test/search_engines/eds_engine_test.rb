@@ -8,7 +8,7 @@ class EdsEngineTest < ActiveSupport::TestCase
   @@profile   = (ENV['EDS_PROFILE'] || 'wsapi')
   # something where the first hit will be from catalog for the profile above
   @@catalog_result_query = (ENV['EDS_CATALOG_RESULT_QUERY'] || 'New York exposed the gilded age police scandal that launched the progressive era Daniel Czitrom')
-
+  @@catalog_ebook_result_query = (ENV['EDS_CATALOG_EBOOK_RESULT_QUERY'] || 'Stakeholder forum on federal wetlands mitigation environmental law institute')
 
   VCR.configure do |c|
     c.filter_sensitive_data("DUMMY_USER_ID", :eds) { @@user_id }
@@ -172,6 +172,10 @@ class EdsEngineTest < ActiveSupport::TestCase
     assert cat_result.custom_data[:holdings].all? { |h| h.location.present? && h.call_number.present? }
   end
 
+  test_with_cassette("catalog ebook query", :eds) do
+    result = @engine.search(@@catalog_ebook_result_query).first
 
+    assert_present result.other_links
+  end
 end
 
