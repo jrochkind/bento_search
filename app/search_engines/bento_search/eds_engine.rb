@@ -44,9 +44,9 @@ require 'http_client_patch/include_client'
 #
 # == Technical Notes and Difficulties
 #
-# This API is enormously difficult to work with. Also the response is very odd
-# to deal with. We think we are currently (as of bento_search 1.7) getting
-# fairly complete citation detail out, at least for articles, but may be missing
+# This API is pretty difficult to work with, and the response has many
+# idiosyncratic undocumented parts.  We think we are currently
+# getting fairly complete citation detail out, at least for articles, but may be missing
 # some on weird edge cases, books/book chapters, etc)
 #
 # Auth issues may make this slow -- you need to spend a (not too speedy) HTTP
