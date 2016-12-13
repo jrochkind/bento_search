@@ -20,6 +20,8 @@
   * EdsEngine gets custom_data[:holdings] for catalog-type results.
   * EdsEngine notices weird `<Item><Group>URL</Group>` links in response,
     and 'parses' them to add as item#other_links
+  * EdsEngine marks `link_is_fulltext=true` if api marks `plink` as
+    "pdflink".
 
 * New BentoSearch::ConcurrentSearcher for threaded concurrent searching.
   * With proper Rails 5 API usage to work with dev-mode class reloading,

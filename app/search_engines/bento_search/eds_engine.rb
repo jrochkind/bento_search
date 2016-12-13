@@ -25,20 +25,13 @@ require 'http_client_patch/include_client'
 # == Linking
 #
 # The link to record in EBSCO interface delivered as "PLink" will be listed
-# as record main link.
+# as record main link. If the record includes a node at `./FullText/Links/Link/Type[text() = 'pdflink']`,
+# the `plink` will be marked as fulltext. (There may be other cases of fulltext, but
+# this seems to be all EDS API tells us.)
 #
 # Any links listed under <CustomLinks> will be listed as other_links, using
-# configured name provided by EBSCO for CustomLink.
-#
-# EDS Response does not have sufficient metadata for us to generate an OpenURL
-# ourselves. However, in our testing, the first/only CustomLink was an
-# an OpenURL. If configuration.assume_first_custom_link_openurl is
-# true (as is default), it will be used to create an OpenURL link. However, in
-# our testing, many records don't have this at all. **Note** You want
-# to configure your profile so OpenURLs are ALWAYS included for all records, not
-# just records with no EBSCO fulltext, to ensure bento_search can get the
-# openurl. http://support.ebsco.com/knowledge_base/detail.php?id=1111 (May
-# have to ask EBSCO support for help, it's confusing!).
+# configured name provided by EBSCO for CustomLink. Same with links listed
+# as `<Item><Group>URL</Group>`.
 #
 # As always, you can customize links and other_links with Item Decorators.
 #
@@ -271,7 +264,11 @@ class BentoSearch::EdsEngine
           # PLink is main inward facing EBSCO link, put it as
           # main link.
           if direct_link = record_xml.at_xpath("./PLink")
-              item.link = direct_link.text
+            item.link = direct_link.text
+
+            if record_xml.at_xpath("./FullText/Links/Link/Type[text() = 'pdflink']")
+              item.link_is_fulltext = true
+            end
           end
 
           # Other links may be found in CustomLinks, it seems like usually
