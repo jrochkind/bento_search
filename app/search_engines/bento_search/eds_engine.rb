@@ -86,7 +86,7 @@ require 'http_client_patch/include_client'
 #
 # == EDS docs:
 #
-# * Console App to demo requests: https://eds-api.ebscohost.com/Console
+# * Console App to demo requests: <
 # * EDS Wiki: http://edswiki.ebscohost.com/EDS_API_Documentation
 # * You'll need to request an account to the EDS wiki, see: http://support.ebsco.com/knowledge_base/detail.php?id=5990
 #
@@ -280,16 +280,40 @@ class BentoSearch::EdsEngine
               )
           end
 
-          # More other links in 'URL' Item, as embedded XML, really EBSCO?
-          record_xml.xpath("./Items/Item[child::Group[text()='URL']]/Data").each do |url_item|
-            node = Nokogiri::XML::fragment(url_item.text)
-            next unless link = node.at_xpath("./link")
-            next unless link["linkTerm"]
+          # More other links in 'URL' Item, in unpredictable format sometimes being
+          # embedded XML. Really EBSCO?
+          record_xml.xpath("./Items/Item[child::Group[text()='URL']]").each do |url_item|
+            data_element = url_item.at_xpath("./Data")
+            next unless data_element
 
-            item.other_links << BentoSearch::Link.new(
-              :url => link["linkTerm"],
-              :label => helper.strip_tags(link.text)
+            # SOMETIMES the url and label are in an embedded escaped XML element...
+            if data_element.text.strip.start_with?("<link")
+              # Ugh, once unescpaed it has bare '&' in URL queries sometimes, which
+              # is not actually legal XML anymore, but Nokogiri::HTML parser will
+              # let us get away with it, but then doesn't put the actual text
+              # inside the 'link' item, but inside the <link> tag since it knows
+              # an HTML link tag has no content. Really EDS.
+              node = Nokogiri::HTML::fragment(data_element.text)
+              next unless link = node.at_xpath("./link")
+              next unless link["linkterm"].presence || link["linkTerm"].presence
+
+              item.other_links << BentoSearch::Link.new(
+                :url => link["linkterm"] || link["linkTerm"],
+                :label => helper.strip_tags(data_element.text).presence || "Link"
+                )
+            else
+              # it's just a straight URL in data element, with only label we've
+              # got in <label> element.
+              next unless data_element.text.strip.present?
+
+              label_element = url_item.at_xpath("./Label")
+              label = label_element.try(:text).try { |s| helper.strip_tags(s) }.presence || "Link"
+
+              item.other_links << BentoSearch::Link.new(
+                :url => data_element.text,
+                :label => label
               )
+            end
           end
 
 
