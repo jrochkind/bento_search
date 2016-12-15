@@ -1,0 +1,198 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://eds-api.ebscohost.com/authservice/rest/uidauth
+    body:
+      encoding: UTF-8
+      string: |2
+              {
+                "UserId":"DUMMY_USER_ID",
+                "Password":"DUMMY_PWD"
+              }
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '128'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 15 Dec 2016 18:24:34 GMT
+    body:
+      encoding: UTF-8
+      string: '{"AuthToken":"AB7DTA5LeJVaI3dRjsYua2M9p7NGF1hS5up7IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0","AuthTimeout":"1800"}'
+    http_version: 
+  recorded_at: Thu, 15 Dec 2016 18:24:34 GMT
+- request:
+    method: get
+    uri: http://eds-api.ebscohost.com/edsapi/rest/createsession?guest=n&profile=wsapi
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      X-Authenticationtoken:
+      - AB7DTA5LeJVaI3dRjsYua2M9p7NGF1hS5up7IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0
+      Accept:
+      - application/xml
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '279'
+      Content-Type:
+      - application/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Sessiontoken:
+      - b1a2c8b3-2a8b-4df4-b15c-4eee42480b7f.yNg5966GBNLWceUWWOOqGF2RD6hZIbLzIV/ojISTwSk=
+      X-Authenticationtoken:
+      - AB7DTA5LeJVaI3dRjsYua2M9p7NGF1hS5up7IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0
+      X-Msg-Correlid:
+      - 2763473e-d14e-4e3b-9101-9b961920556a
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 15 Dec 2016 18:24:33 GMT
+    body:
+      encoding: UTF-8
+      string: <CreateSessionResponseMessage xmlns="http://epnet.com/webservices/EbscoApi/Contracts"
+        xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><SessionToken>b1a2c8b3-2a8b-4df4-b15c-4eee42480b7f.yNg5966GBNLWceUWWOOqGF2RD6hZIbLzIV/ojISTwSk=</SessionToken></CreateSessionResponseMessage>
+    http_version: 
+  recorded_at: Thu, 15 Dec 2016 18:24:34 GMT
+- request:
+    method: get
+    uri: http://eds-api.ebscohost.com/edsapi/rest/search?highlight=y&query=AND,Drafting%20New%20York%20Civil-Litigation%20Documents%20Part%20XXIV%20Summary-Judgment%20Motions%20Continued&resultsperpage=10&searchmode=all&view=detailed
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      X-Authenticationtoken:
+      - AB7DTA5LeJVaI3dRjsYua2M9p7NGF1hS5up7IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0
+      Accept:
+      - application/xml
+      X-Sessiontoken:
+      - b1a2c8b3-2a8b-4df4-b15c-4eee42480b7f.yNg5966GBNLWceUWWOOqGF2RD6hZIbLzIV/ojISTwSk=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '6798'
+      Content-Type:
+      - application/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Sessiontoken:
+      - b1a2c8b3-2a8b-4df4-b15c-4eee42480b7f.yNg5966GBNLWceUWWOOqGF2RD6hZIbLzIV/ojISTwSk=
+      X-Authenticationtoken:
+      - AB7DTA5LeJVaI3dRjsYua2M9p7NGF1hS5up7IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0
+      X-Msg-Correlid:
+      - af1f70ab-929e-4766-837c-076132437711
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 15 Dec 2016 18:24:34 GMT
+    body:
+      encoding: UTF-8
+      string: '<SearchResponseMessageGet xmlns="http://epnet.com/webservices/EbscoApi/Contracts"
+        xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><SearchRequestGet><QueryString>query-1=AND,Drafting+New+York+Civil-Litigation+Documents+Part+XXIV+Summary-Judgment+Motions+Continued&amp;sort=relevance&amp;includefacets=y&amp;searchmode=all&amp;autosuggest=n&amp;view=detailed&amp;resultsperpage=10&amp;pagenumber=1&amp;highlight=y</QueryString><SearchCriteriaWithActions><QueriesWithAction><QueryWithAction><Query><BooleanOperator>AND</BooleanOperator><Term>Drafting
+        New York Civil-Litigation Documents Part XXIV Summary-Judgment Motions Continued</Term></Query><RemoveAction>removequery(1)</RemoveAction></QueryWithAction></QueriesWithAction></SearchCriteriaWithActions></SearchRequestGet><SearchResult><Statistics><TotalHits>1</TotalHits><TotalSearchTime>188</TotalSearchTime><Databases><Database><Id>bth</Id><Label>Business
+        Source Complete</Label><Status>0</Status><Hits>0</Hits></Database><Database><Id>a9h</Id><Label/><Status>0</Status><Hits>0</Hits></Database><Database><Id>lpr</Id><Label>Index
+        to Legal Periodicals Retrospective: 1908-1981 (H.W. Wilson)</Label><Status>0</Status><Hits>0</Hits></Database><Database><Id>edshvr</Id><Label>Hoover''s
+        Company Profiles</Label><Status>0</Status><Hits>0</Hits></Database><Database><Id>edslex</Id><Label>LexisNexis
+        Academic: Law Reviews</Label><Status>0</Status><Hits>0</Hits></Database><Database><Id>edshol</Id><Label>HeinOnline</Label><Status>0</Status><Hits>1</Hits></Database><Database><Id>ir00629a</Id><Label>FLASH
+        (Institutional Repository)</Label><Status>0</Status><Hits>0</Hits></Database><Database><Id>edsglt</Id><Label>InfoTrac
+        LegalTrac</Label><Status>0</Status><Hits>0</Hits></Database><Database><Id>edsjsr</Id><Label>JSTOR
+        Journals</Label><Status>0</Status><Hits>0</Hits></Database><Database><Id>edsgml</Id><Label>Making
+        of Modern Law</Label><Status>0</Status><Hits>0</Hits></Database><Database><Id>edslmc</Id><Label>LLMC
+        Digital</Label><Status>0</Status><Hits>0</Hits></Database><Database><Id>cat05341a</Id><Label>The
+        Maloney Library</Label><Status>0</Status><Hits>0</Hits></Database></Databases></Statistics><Data><RecordFormat>EP
+        Display</RecordFormat><Records><Record><ResultId>1</ResultId><Header><DbId>edshol</DbId><DbLabel>HeinOnline</DbLabel><An>hein.barjournals.nysbaj0085.48</An><RelevancyScore>1952</RelevancyScore><PubType>Periodical</PubType><PubTypeId>serialPeriodical</PubTypeId></Header><PLink>http://0-search.ebscohost.com.lawpac.lawnet.fordham.edu/login.aspx?direct=true&amp;site=eds-live&amp;db=edshol&amp;AN=hein.barjournals.nysbaj0085.48</PLink><FullText><Text><Availability>0</Availability></Text><CustomLinks><CustomLink><Url>http://widgets.ebscohost.com/prod/customlink/proxify/proxify.php?count=1&amp;encode=0&amp;proxy=&amp;find_1=http%3A%2F%2Fwww.heinonline.org&amp;replace_1=http%3A%2F%2F0-www.heinonline.org.lawpac.lawnet.fordham.edu&amp;target=http://www.heinonline.org/HOL/Page?handle=hein.barjournals/nysbaj0085&amp;div=48</Url><Name>EDS
+        - HeinOnline</Name><Category>fullText</Category><Text>Full Text from HeinOnline</Text><MouseOverText>Full
+        Text from HeinOnline</MouseOverText></CustomLink></CustomLinks></FullText><Items><Item><Name>Title</Name><Label>Title</Label><Group>Ti</Group><Data>&lt;highlight&gt;Drafting&lt;/highlight&gt;
+        &lt;highlight&gt;New&lt;/highlight&gt; &lt;highlight&gt;York&lt;/highlight&gt;
+        &lt;highlight&gt;Civil&lt;/highlight&gt;-&lt;highlight&gt;Litigation&lt;/highlight&gt;
+        &lt;highlight&gt;Documents&lt;/highlight&gt;: &lt;highlight&gt;Part&lt;/highlight&gt;
+        &lt;highlight&gt;XXIV&lt;/highlight&gt; - &lt;highlight&gt;Summary&lt;/highlight&gt;-&lt;highlight&gt;Judgment&lt;/highlight&gt;
+        &lt;highlight&gt;Motions&lt;/highlight&gt; &lt;highlight&gt;Continued&lt;/highlight&gt;
+        [comments]</Data></Item><Item><Name>Author</Name><Label>Authors</Label><Group>Au</Group><Data>&lt;searchLink
+        fieldCode="AR" term="%22Lebovits%2C+Gerald%22"&gt;Lebovits, Gerald&lt;/searchLink&gt;</Data></Item><Item><Name>TitleSource</Name><Label>Source</Label><Group>Src</Group><Data>&lt;highlight&gt;New&lt;/highlight&gt;
+        &lt;highlight&gt;York&lt;/highlight&gt; State Bar Association Journal, Vol.
+        85, Issue 4 (May 2013), pp. 64-[ii]&lt;br /&gt;Lebovits, Gerald&lt;br /&gt;85
+        N.Y. St. B.A. J. 64 (2013)</Data></Item><Item><Name>URL</Name><Label>Availability</Label><Group>URL</Group><Data>http://www.heinonline.org/HOL/Page?handle=hein.barjournals/nysbaj0085&amp;div=48</Data></Item></Items><RecordInfo><BibRecord><BibEntity><Languages><Language><Text>English</Text></Language></Languages><PhysicalDescription><Pagination><StartPage>64</StartPage></Pagination></PhysicalDescription><Titles><Title><TitleFull>Drafting
+        New York Civil-Litigation Documents: Part XXIV - Summary-Judgment Motions
+        Continued [comments]</TitleFull><Type>main</Type></Title></Titles></BibEntity><BibRelationships><HasContributorRelationships><HasContributor><PersonEntity><Name><NameFull>Lebovits,
+        Gerald</NameFull></Name></PersonEntity></HasContributor></HasContributorRelationships><IsPartOfRelationships><IsPartOf><BibEntity><Dates><Date><D>01</D><M>01</M><Type>published</Type><Y>2013</Y></Date></Dates><Identifiers><Identifier><Type>issn-print</Type><Value>15293769</Value></Identifier><Identifier><Type>issn-locals</Type><Value>barjournals</Value></Identifier><Identifier><Type>issn-locals</Type><Value>nysbaj</Value></Identifier><Identifier><Type>issn-locals</Type><Value>uberjournals</Value></Identifier><Identifier><Type>issn-locals</Type><Value>newyork</Value></Identifier><Identifier><Type>issn-locals</Type><Value>nybjjournals</Value></Identifier><Identifier><Type>issn-locals</Type><Value>journalsearch</Value></Identifier></Identifiers><Numbering><Number><Type>volume</Type><Value>85</Value></Number><Number><Type>issue</Type><Value>4</Value></Number></Numbering><Titles><Title><TitleFull>New
+        York State Bar Association Journal</TitleFull><Type>main</Type></Title></Titles></BibEntity></IsPartOf></IsPartOfRelationships></BibRelationships></BibRecord></RecordInfo></Record></Records></Data><AvailableFacets><AvailableFacet><Id>SourceType</Id><Label>Source
+        Type</Label><AvailableFacetValues><AvailableFacetValue><Value>Magazines</Value><Count>1</Count><AddAction>addfacetfilter(SourceType:Magazines)</AddAction></AvailableFacetValue></AvailableFacetValues></AvailableFacet><AvailableFacet><Id>ContentProvider</Id><Label>Content
+        Provider</Label><AvailableFacetValues><AvailableFacetValue><Value>HeinOnline</Value><Count>1</Count><AddAction>addfacetfilter(ContentProvider:HeinOnline)</AddAction></AvailableFacetValue></AvailableFacetValues></AvailableFacet></AvailableFacets><AvailableCriteria><DateRange><MinDate>2013-01</MinDate><MaxDate>2013-01</MaxDate></DateRange></AvailableCriteria></SearchResult></SearchResponseMessageGet>'
+    http_version: 
+  recorded_at: Thu, 15 Dec 2016 18:24:35 GMT
+- request:
+    method: get
+    uri: http://eds-api.ebscohost.com/edsapi/rest/endsession?sessiontoken=b1a2c8b3-2a8b-4df4-b15c-4eee42480b7f.yNg5966GBNLWceUWWOOqGF2RD6hZIbLzIV/ojISTwSk=
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      X-Authenticationtoken:
+      - AB7DTA5LeJVaI3dRjsYua2M9p7NGF1hS5up7IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0
+      Accept:
+      - application/xml
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '179'
+      Content-Type:
+      - application/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Authenticationtoken:
+      - AB7DTA5LeJVaI3dRjsYua2M9p7NGF1hS5up7IkN1c3RvbWVySWQiOiJzODk0NDc0MCIsIkdyb3VwSWQiOiJtYWluIn0
+      X-Msg-Correlid:
+      - 5e88b81c-6006-4a59-a6c7-d677b885a598
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 15 Dec 2016 18:24:34 GMT
+    body:
+      encoding: UTF-8
+      string: <EndSessionResponse xmlns="http://epnet.com/webservices/EbscoApi/Contracts"
+        xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><IsSuccessful>y</IsSuccessful></EndSessionResponse>
+    http_version: 
+  recorded_at: Thu, 15 Dec 2016 18:24:35 GMT
+recorded_with: VCR 2.9.3
