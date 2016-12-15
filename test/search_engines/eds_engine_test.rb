@@ -9,7 +9,7 @@ class EdsEngineTest < ActiveSupport::TestCase
   # something where the first hit will be from catalog for the profile above
   @@catalog_result_query = (ENV['EDS_CATALOG_RESULT_QUERY'] || 'New York exposed the gilded age police scandal that launched the progressive era Daniel Czitrom')
   @@catalog_ebook_result_query = (ENV['EDS_CATALOG_EBOOK_RESULT_QUERY'] || 'Stakeholder forum on federal wetlands mitigation environmental law institute')
-
+  @@catalog_custom_result_query = (ENV['EDS_CATALOG_CUSTOM_RESULT_QUERY'] || 'Drafting New York Civil-Litigation Documents Part XXIV Summary-Judgment Motions Continued')
   VCR.configure do |c|
     c.filter_sensitive_data("DUMMY_USER_ID", :eds) { @@user_id }
     c.filter_sensitive_data("DUMMY_PWD", :eds) { @@password }
@@ -176,6 +176,12 @@ class EdsEngineTest < ActiveSupport::TestCase
     result = @engine.search(@@catalog_ebook_result_query).first
 
     assert_present result.other_links
+  end
+
+  test_with_cassette("FullText CustomLink", :eds) do
+    result = @engine.search(@@catalog_custom_result_query).first
+    assert_present result
+    assert result.other_links.any? { |r| r.label.present? && r.label != "Link" && r.url.present? && URI::regexp =~ r.url && r.rel == "alternate"}
   end
 end
 

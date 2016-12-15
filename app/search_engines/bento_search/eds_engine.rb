@@ -208,6 +208,12 @@ class BentoSearch::EdsEngine
 
         response = get_with_auth(url, session_token)
 
+        if configuration.id == "articles"
+          file = File.open("sample-#{Time.now.to_s.parameterize}.xml", "w")
+          file.puts response
+          file.close
+        end
+
         results = BentoSearch::Results.new
 
         if (hits_node = at_xpath_text(response, "./SearchResponseMessageGet/SearchResult/Statistics/TotalHits"))
@@ -271,12 +277,19 @@ class BentoSearch::EdsEngine
             end
           end
 
+
           # Other links may be found in CustomLinks, it seems like usually
           # there will be at least one, hopefully the first one is the OpenURL?
-          record_xml.xpath("./CustomLinks/CustomLink").each do |custom_link|
+          #byebug if configuration.id == "articles"
+          record_xml.xpath("./CustomLinks/CustomLink|./FullText/CustomLinks/CustomLink").each do |custom_link|
+            # If it's in FullText section, give it a rel=alternate
+            # to indicate it's fulltext
+            rel = (custom_link.parent.parent.name.downcase == "fulltext") ? "alternate" : nil
+
             item.other_links << BentoSearch::Link.new(
               :url => custom_link.at_xpath("./Url").text,
-              :label => custom_link.at_xpath("./Name").text
+              :rel => rel,
+              :label => custom_link.at_xpath("./Text").try(:text).presence || custom_link.at_xpath("./Name").try(:text).presence || "Link"
               )
           end
 
