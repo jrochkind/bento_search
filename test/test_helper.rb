@@ -8,7 +8,7 @@ ActiveRecord::Migrator.migrations_paths = [File.expand_path("../../test/dummy/db
 # Rails will build on top of it if it's there.
 require 'minitest/spec'
 require "rails/test_help"
-require 'byebug'
+
 # Filter out Minitest backtrace while allowing backtrace from other libraries
 # to be shown.
 Minitest.backtrace_filter = Minitest::BacktraceFilter.new
@@ -48,8 +48,6 @@ VCR.configure do |c|
   c.cassette_library_dir = 'test/vcr_cassettes'
   # webmock needed for HTTPClient testing
   c.hook_into :webmock
-
-  c.allow_http_connections_when_no_cassette = true
 end
 
 # Silly way to not have to rewrite all our tests if we
