@@ -64,6 +64,11 @@ module BentoSearch
   #      string name, actual class object not supported (to make it easier
   #      to serialize and transport configuration).
   #
+  # [log_failed_results]
+  #       Default false, if true all failed results are logged to
+  #       `Rails.log.error`. Can set global default with
+  #        `BentoSearch.defaults.log_failed_results = true`
+  #
   # == Implementing a SearchEngine
   #
   # Implmeneting a new SearchEngine is relatively straightforward -- you are
@@ -190,6 +195,9 @@ module BentoSearch
 
       # global defaults?
       self.configuration[:for_display] ||= {}
+      unless self.configuration.has_key?(:log_failed_results)
+        self.configuration[:log_failed_results] = BentoSearch.defaults.log_failed_results
+      end
 
       # check for required keys -- have to be present, and not nil
       if self.class.required_configuration
@@ -278,8 +286,11 @@ module BentoSearch
 
       fill_in_search_metadata_for(failed, arguments)
 
-
       return failed
+    ensure
+      if results && configuration.log_failed_results && results.failed?
+        Rails.logger.error("Error fetching results for `#{configuration.id || self}`: #{arguments}: #{results.error}")
+      end
     end
 
     # SOME of the elements of Results to be returned that SearchEngine implementation
