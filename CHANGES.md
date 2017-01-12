@@ -52,6 +52,10 @@
 * BentoSearch::SearchEngine has `engine_id` and `display_configuration` cover
   methods added, for consistency with BentoSearch::Results
 
+* standard engine `log_failed_results` config, if true all failed results
+  are logged to `Rails.logger.error`. Can set global defaults with
+  `BentoSearch.defaults.log_failed_results = true`
+
 
 ## 1.6
 
