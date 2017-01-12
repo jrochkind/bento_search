@@ -208,12 +208,6 @@ class BentoSearch::EdsEngine
 
         response = get_with_auth(url, session_token)
 
-        if configuration.id == "articles"
-          file = File.open("sample-#{Time.now.to_s.parameterize}.xml", "w")
-          file.puts response
-          file.close
-        end
-
         results = BentoSearch::Results.new
 
         if (hits_node = at_xpath_text(response, "./SearchResponseMessageGet/SearchResult/Statistics/TotalHits"))
