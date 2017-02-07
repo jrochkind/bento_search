@@ -74,13 +74,25 @@ begin
       return self
     end
 
-    # Call after #start. Blocks until each included engine is finished
+    # Have you called #search yet? You can only call #results if you have.
+    # Will stay true forever, it doesn't tell you if the search is done or not.
+    def search_started?
+      !! @futures
+    end
+
+    # Call after #search. Blocks until each included engine is finished
     # then returns a Hash keyed by engine registered id, value is a
     # BentoSearch::Results object.
     #
     # If called multiple times, returns the same results each time, does
     # not re-run searches.
+    #
+    # It is an error to invoke without having previously called #search
     def results
+      unless search_started?
+        raise ArgumentError, "Can't call ConcurrentSearcher#results before you have executed a #search"
+      end
+
       @results ||= begin
         pairs = rails_wait_wrap do
           @futures.collect { |future| [future.value!.engine_id, future.value!] }
