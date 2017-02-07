@@ -80,7 +80,13 @@ begin
     #
     # If called multiple times, returns the same results each time, does
     # not re-run searches.
+    #
+    # It is an error to invoke without having previously called #search
     def results
+      unless @futures
+        raise ArgumentError, "Can't call ConcurrentSearcher#results before you have executed a #search"
+      end
+
       @results ||= begin
         pairs = rails_wait_wrap do
           @futures.collect { |future| [future.value!.engine_id, future.value!] }

@@ -46,6 +46,15 @@ class ConcurrentSearcherTest < ActiveSupport::TestCase
     assert( results.equal? new_results )
   end
 
+  def test_results_before_search
+    searcher = BentoSearch::ConcurrentSearcher.new(:one, :two, :three)
+
+    assert_raises(ArgumentError) do
+      results = searcher.results
+    end
+  end
+
+
   def test_concurrent_search_uncaught_exception
     searcher = BentoSearch::ConcurrentSearcher.new(:one, :raiser, :two)
     results = searcher.search("cancer").results
