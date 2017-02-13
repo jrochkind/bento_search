@@ -1,5 +1,4 @@
 ## 1.7
-* auto_rescue includes SocketError
 
 * search engines now have a `configuration.default_per_page`
 
@@ -10,6 +9,8 @@
    more easily on a per-class _or_ per-instance basis with `SearchEngineClass.auto_rescue_exceptions = `
    or `engine.auto_rescue_exceptions = `.  Old way of over-riding `auto_rescue_exceptions`
    (note `rescue` vs `rescued`) is deprecated.
+
+* auto_rescue includes SocketError
 
 * EdsEngine improvements
   * EdsEngine gets much more structured citation data. EDS API has gotten better
