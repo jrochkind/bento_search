@@ -317,7 +317,7 @@ class BentoSearch::SummonEngine
       query_params['s.sort'] =  literal
     end
 
-    if args[:auth] == true
+    if [true, "true"].include? args[:auth]
       query_params['s.role'] = "authenticated"
     end
 
