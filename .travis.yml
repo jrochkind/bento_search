@@ -24,6 +24,8 @@ matrix:
     # SQLite3, JRuby, and Rails5 seem to be not happy
     - rvm: jruby-9.1.5.0
       env: RAILS_VERSION_SPEC=5.0.0
+    - rvm: 2.4.1
+      env: RAILS_VERSION_SPEC=5.1.0.rc1
 
 env:
   global:
