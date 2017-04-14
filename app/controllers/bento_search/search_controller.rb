@@ -19,10 +19,10 @@ module BentoSearch
   # in their config will be served by this controller.
   #
   # If you need routable results on an engine which ALSO needs to
-  # be protected by auth, you can add your own Rails before_filter
+  # be protected by auth, you can add your own Rails before_action
   # to provide auth. Say, in an initializer in your app:
   #
-  #     SearchController.before_filter do |controller|
+  #     SearchController.before_action do |controller|
   #       unless controller.current_user
   #          raise BentoSearch::SearchController::AccessDenied
   #       end
