@@ -1,5 +1,6 @@
-## 1.7.1
+## 1.8.0
 
+* beforeSend param to ajax, see #30
 * Workaround backwards-incompat changes in language_list 1.2.0 (https://github.com/scsmith/language_list/issues/19)
 
 ## 1.7
