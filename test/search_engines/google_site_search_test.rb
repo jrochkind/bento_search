@@ -71,7 +71,7 @@ class GoogleSiteSearchTest < ActiveSupport::TestCase
 
     assert_present results
     assert_present results.total_items
-    assert_kind_of Fixnum, results.total_items
+    assert_kind_of 1.class, results.total_items
 
     first = results.first
 

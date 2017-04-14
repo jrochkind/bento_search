@@ -97,7 +97,7 @@ class ScopusEngineTest < ActiveSupport::TestCase
     results = @engine.search(:query => "cancer")
 
     assert_not_nil results.total_items, "total_items not nil"
-    assert_kind_of Fixnum, results.total_items
+    assert_kind_of 1.class, results.total_items
 
     assert_not_nil results.start, "start not nil"
     assert_not_nil results.per_page, "per_page not nil"
