@@ -17,7 +17,7 @@ gem "jquery-rails"
 # don't neccesarily want to exclude all 'development
 group "manual_development" do
   gem 'debugger', :platform => :mri_19
-  gem 'byebug',   :platform => [:mri_21, :mri_22, :mri_23]
+  gem 'byebug',   :platform => [:mri_21, :mri_22, :mri_23, :mri_24]
 end
 
 # For allowing testing under multiple Rails versions from travis or command
