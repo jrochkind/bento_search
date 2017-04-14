@@ -440,6 +440,12 @@ module BentoSearch
       [:query, :search_field, :semantic_search_field, :sort, :page, :start, :per_page]
     end
 
+    # Hook to allow engines to augment with certain params (e.g., auth)
+    # that are most naturally accomplished with protocol-awareness
+    def add_protocol_specific_args(params, protocol_specific_state)
+      params # default stub implementation returns params unmodified
+    end
+
     # Cover method for consistent api with Results
     def display_configuration
       configuration.for_display
