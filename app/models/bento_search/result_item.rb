@@ -157,7 +157,7 @@ module BentoSearch
     attr_writer :language_str
     def language_str
       (@language_str ||= nil) || language_code.try do |code|
-        LanguageList::LanguageInfo.find(code).try do |lang_obj|
+        LanguageList::LanguageInfo.find(code.dup).try do |lang_obj|
           lang_obj.name
         end
       end
@@ -167,7 +167,10 @@ module BentoSearch
     # if available, otherwise from direct language_str if available and
     # possible.
     def language_obj
-      @language_obj ||= LanguageList::LanguageInfo.find( self.language_code || self.language_str )
+      @language_obj ||= begin
+        lookup = self.language_code || self.language_str
+        LanguageList::LanguageInfo.find( lookup.dup ) if lookup
+      end
     end
 
     # Two letter ISO language code, or nil

@@ -1,3 +1,7 @@
+## 1.7.1
+
+* Workaround backwards-incompat changes in language_list 1.2.0 (https://github.com/scsmith/language_list/issues/19)
+
 ## 1.7
 
 * search engines now have a `configuration.default_per_page`
