@@ -14,10 +14,14 @@ var BentoSearch = BentoSearch || {}
 // You can set default success_callback function for all calls with:
 //
 //     BentoSearch.ajax_load.default_success_callback = function(div) { ...
-BentoSearch.ajax_load = function(node, success_callback) {
+BentoSearch.ajax_load = function(node, success_callback, beforeSend) {
   // default success_callback
   if (success_callback === undefined) {
     success_callback = BentoSearch.ajax_load.default_success_callback;
+  }
+  // default beforeSend
+  if (beforeSend === undefined) {
+    beforeSend = BentoSearch.ajax_load.default_beforeSend;
   }
 
   var div = $(node);
@@ -52,6 +56,7 @@ BentoSearch.ajax_load = function(node, success_callback) {
           div.replaceWith(response);
         }
       },
+      beforeSend: beforeSend,
       error: function(xhr, status, errorThrown) {
         var msg = "Sorry but there was an error: ";
         div.html(msg + xhr.status + " " + xhr.statusText + ", " + status);
