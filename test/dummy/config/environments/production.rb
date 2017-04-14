@@ -9,7 +9,11 @@ Dummy::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_files = false
+  if Rails::VERSION::MAJOR < 5
+    config.serve_static_files = false
+  else
+    config.public_file_server.enabled = false
+  end
 
   # Compress JavaScripts and CSS
   config.assets.compress = true

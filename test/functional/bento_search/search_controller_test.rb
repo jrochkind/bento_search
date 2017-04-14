@@ -114,7 +114,11 @@ module BentoSearch
       # SUPER HACKY, but I dunno what else to do.
 
       class CustomSearchController < BentoSearch::SearchController
-        before_filter :deny_everyone
+        if respond_to?(:before_action)
+          before_action :deny_everyone
+        else
+          before_filter :deny_everyone
+        end
 
         def deny_everyone
           raise BentoSearch::SearchController::AccessDenied
