@@ -50,8 +50,9 @@ module BentoSearch
       unless engine.configuration.allow_routable_results == true
         raise AccessDenied.new("engine needs to be registered with :allow_routable_results => true")
       end
-
-      @results         = engine.search safe_search_args(engine, params)
+      all_hash = safe_search_args(engine, params)
+      all_hash = protocol_specific_args(engine, all_hash)
+      @results         = engine.search all_hash
       # template name of a partial with 'yield' to use to wrap the results
       @partial_wrapper = @results.display_configuration.lookup!("ajax.wrapper_template")
 
@@ -63,6 +64,11 @@ module BentoSearch
 
 
     protected
+
+    def protocol_specific_args(engine, all_hash)
+      protocol_specific_state = { :http_request => request }
+      engine.add_protocol_specific_args(all_hash, protocol_specific_state)
+    end
 
     def safe_search_args(engine, params)
       all_hash = params.respond_to?(:to_unsafe_hash) ? params.to_unsafe_hash : params.to_hash
