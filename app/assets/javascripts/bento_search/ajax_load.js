@@ -14,10 +14,25 @@ var BentoSearch = BentoSearch || {}
 // You can set default success_callback function for all calls with:
 //
 //     BentoSearch.ajax_load.default_success_callback = function(div) { ...
-BentoSearch.ajax_load = function(node, success_callback) {
+//
+// optional beforeSend function.
+//
+// beforeSend: to be used by jQuery.ajax as the settings.beforeSend function.
+// this allows the outgoing request to modified, e.g. to add auth params
+// in the query param or in a header.
+// See https://api.jquery.com/jquery.ajax/#jQuery-ajax-settings
+//
+// You can set default beforeSend function for all calls with:
+//
+//     BentoSearch.ajax_load.default_beforeSend = function(xhr, settings) { ...
+BentoSearch.ajax_load = function(node, success_callback, beforeSend) {
   // default success_callback
   if (success_callback === undefined) {
     success_callback = BentoSearch.ajax_load.default_success_callback;
+  }
+  // default beforeSend
+  if (beforeSend === undefined) {
+    beforeSend = BentoSearch.ajax_load.default_beforeSend;
   }
 
   var div = $(node);
@@ -52,6 +67,7 @@ BentoSearch.ajax_load = function(node, success_callback) {
           div.replaceWith(response);
         }
       },
+      beforeSend: beforeSend,
       error: function(xhr, status, errorThrown) {
         var msg = "Sorry but there was an error: ";
         div.html(msg + xhr.status + " " + xhr.statusText + ", " + status);
