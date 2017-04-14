@@ -442,8 +442,8 @@ module BentoSearch
 
     # Hook to allow engines to augment with certain params (e.g., auth)
     # that are most naturally accomplished with protocol-awareness
-    def add_protocol_specific_args(params, protocol_specific_state)
-      params # default stub implementation returns params unmodified
+    def add_protocol_specific_args(all_hash, protocol_specific_state)
+      all_hash # default stub implementation returns params unmodified
     end
 
     # Cover method for consistent api with Results
