@@ -12,8 +12,10 @@ matrix:
       env: RAILS_VERSION_SPEC=4.2.0
     - rvm: 2.3.4
       env: RAILS_VERSION_SPEC=5.0.0
-    - rvm: 2.4.2
+    - rvm: 2.4.1
       env: RAILS_VERSION_SPEC=5.0.0
+    - rvm: 2.4.1
+      env: RAILS_VERSION_SPEC=5.1.0.rc1
     - rvm: jruby-19mode
       env: RAILS_VERSION_SPEC=4.2.0
     - rvm: jruby-9.1.8.0
@@ -26,6 +28,7 @@ matrix:
       env: RAILS_VERSION_SPEC=5.0.0
     - rvm: 2.4.1
       env: RAILS_VERSION_SPEC=5.1.0.rc1
+
 
 env:
   global:
