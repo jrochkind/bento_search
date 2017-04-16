@@ -28,11 +28,27 @@ module BentoSearch
   #       end
   #     end
   #
-  #
   # We may provide fancier/nicer API for this in the future, if there's
   # demand.
+  #
+  # Similarly, while by default all query params sent to the controller
+  # are passed on to the engine, you can add your own before_action
+  # to filter them, use `engine_args=`. For instance, if the params
+  # need to depend on the user's logged in state or other aspects of
+  # request, or need to be filtered for security.
+  #
+  #    SearchController.before_action do |controller|
+  #       controller.engine_args = my_custom_args(controller.params, controller.engine)
+  #    end
+  #
+  # Lastly, this is a pretty bare bones implementation -- feel
+  # free to sub-class it, or even just copy-and-paste it into
+  # your own implementation, and provide your own routing. (May need
+  # to make it easier or clearer how to do this? Let us know.)
   class SearchController < BentoSearchController
     class AccessDenied < BentoSearch::Error ; end
+
+    attr_writer :engine_args
 
 
     rescue_from AccessDenied, :with => :deny_access
@@ -42,27 +58,31 @@ module BentoSearch
     # AJAX to insert into DOM.
     # arguments for engine.search are taken from URI request params, whitelisted
     def search
-      engine  =  BentoSearch.get_engine(params[:engine_id])
-      # put it in an iVar mainly for testing purposes.
-      @engine = engine
-
-
       unless engine.configuration.allow_routable_results == true
         raise AccessDenied.new("engine needs to be registered with :allow_routable_results => true")
       end
 
-      @results         = engine.search safe_search_args(engine, params)
+      @results         = engine.search engine_args
       # template name of a partial with 'yield' to use to wrap the results
       @partial_wrapper = @results.display_configuration.lookup!("ajax.wrapper_template")
 
       # partial HTML results
       render "bento_search/search/search", :layout => false
-
     end
 
-
-
     protected
+
+    def engine
+      @engine ||= BentoSearch.get_engine(params[:engine_id])
+    end
+
+    def engine_args
+      if @engine_args
+        @engine_args
+      else
+        safe_search_args(engine, params)
+      end
+    end
 
     def safe_search_args(engine, params)
       all_hash = params.respond_to?(:to_unsafe_hash) ? params.to_unsafe_hash : params.to_hash
