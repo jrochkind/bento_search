@@ -63,4 +63,8 @@ end
 # SQLite for testing
 gem "sqlite3", :platform => [:ruby, :mswin, :mingw]
 # for JRuby
-gem "activerecord-jdbcsqlite3-adapter", :platform => :jruby
+if Gem::Version.new(rails_version) < Gem::Version.new("5.0")
+  gem "activerecord-jdbcsqlite3-adapter", :platform => :jruby
+else
+  gem "activerecord-jdbcsqlite3-adapter", :platform => :jruby, :git => 'https://github.com/jruby/activerecord-jdbc-adapter.git', :branch => 'rails-5'
+end
