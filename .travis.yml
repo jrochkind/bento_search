@@ -14,20 +14,23 @@ matrix:
       env: RAILS_VERSION_SPEC=5.0.0
     - rvm: 2.4.1
       env: RAILS_VERSION_SPEC=5.0.0
-    - rvm: 2.4.1
-      env: RAILS_VERSION_SPEC=5.1.0.rc1
+    - rvm: 2.5.1
+      env: RAILS_VERSION_SPEC=5.1.0
+    - rvm: 2.5.1
+      env: RAILS_VERSION_SPEC=5.2.0
     - rvm: jruby-19mode
       env: RAILS_VERSION_SPEC=4.2.0
     - rvm: jruby-9.1.8.0
       env: RAILS_VERSION_SPEC=4.2.0
     - rvm: jruby-9.1.8.0
       env: RAILS_VERSION_SPEC=5.0.0
+    - rvm: jruby-9.2.0.0
+      env: RAILS_VERSION_SPEC=5.2.0
+
   allow_failures:
     # SQLite3, JRuby, and Rails5 seem to be not happy
     - rvm: jruby-9.1.8.0
       env: RAILS_VERSION_SPEC=5.0.0
-    - rvm: 2.4.1
-      env: RAILS_VERSION_SPEC=5.1.0.rc1
 
 
 env:
