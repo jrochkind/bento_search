@@ -46,6 +46,13 @@ module Dummy
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Avoid Rails deprecation warning
+    if Gem::Version.new(Rails.version).release >= Gem::Version.new("5.2.0")
+      config.active_record.sqlite3.represent_boolean_as_integer = true
+    end
+
+    config.secret_key_base = '60f73d25f61301b1ea3119011efb9fd9a741fcc010757599341d45765fbda7676daf5d602fb17bb5085c3163a04e20c0750ad02562ee9cb7f03f813d1b62c639'
   end
 end
 

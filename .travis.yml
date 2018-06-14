@@ -1,34 +1,29 @@
 language: ruby
 bundler_args: --without manual_development
 matrix:
+  # sqlite3 and jruby are not happy in rails 5.0 and 5.1, so we don't
+  # bother testing there. happy again in rails 5.2.
   include:
     - rvm: 1.9.3
       env: RAILS_VERSION_SPEC=4.2.0
     - rvm: 2.2.7
       env: RAILS_VERSION_SPEC=4.2.0
+    - rvm: 2.3.4
+      env: RAILS_VERSION_SPEC=4.2.0
     - rvm: 2.2.7
       env: RAILS_VERSION_SPEC=5.0.0
     - rvm: 2.3.4
-      env: RAILS_VERSION_SPEC=4.2.0
-    - rvm: 2.3.4
       env: RAILS_VERSION_SPEC=5.0.0
     - rvm: 2.4.1
       env: RAILS_VERSION_SPEC=5.0.0
-    - rvm: 2.4.1
-      env: RAILS_VERSION_SPEC=5.1.0.rc1
+    - rvm: 2.5.1
+      env: RAILS_VERSION_SPEC=5.1.0
+    - rvm: 2.5.1
+      env: RAILS_VERSION_SPEC=5.2.0
     - rvm: jruby-19mode
       env: RAILS_VERSION_SPEC=4.2.0
-    - rvm: jruby-9.1.8.0
-      env: RAILS_VERSION_SPEC=4.2.0
-    - rvm: jruby-9.1.8.0
-      env: RAILS_VERSION_SPEC=5.0.0
-  allow_failures:
-    # SQLite3, JRuby, and Rails5 seem to be not happy
-    - rvm: jruby-9.1.8.0
-      env: RAILS_VERSION_SPEC=5.0.0
-    - rvm: 2.4.1
-      env: RAILS_VERSION_SPEC=5.1.0.rc1
-
+    - rvm: jruby-9.2.0.0
+      env: RAILS_VERSION_SPEC=5.2.0
 
 env:
   global:
