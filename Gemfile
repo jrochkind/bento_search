@@ -25,7 +25,7 @@ end
 rails_version = if ENV['RAILS_VERSION_SPEC'] && !ENV['RAILS_VERSION_SPEC'].empty?
   ENV['RAILS_VERSION_SPEC'].dup
 else
-  "5.0.0"
+  "5.2.0"
 end
 
 gem 'rails', "~> #{rails_version}"
@@ -62,5 +62,10 @@ end
 
 # SQLite for testing
 gem "sqlite3", :platform => [:ruby, :mswin, :mingw]
+
 # for JRuby
 gem "activerecord-jdbcsqlite3-adapter", :platform => :jruby
+if Gem::Version.new(rails_version).release < Gem::Version.new("5.0")
+  # https://github.com/jruby/activerecord-jdbc-adapter/issues/859
+  gem "activerecord-jdbc-adapter", "~> 1.3.0", :platform => :jruby
+end
