@@ -17,7 +17,7 @@
   # marker will be output after title, in class .bento_available_online
   #
   # %>
-  <h4 class="bento_item_title">
+  <h3 class="bento_item_title">
     <% if local_assigns[:index] %>
       <% id_attr = item.html_id(local_assigns[:id_prefix], index) %>
       <%= content_tag("span", :class => "bento_index", :id => (id_attr if id_attr)) do %>
@@ -39,6 +39,4 @@
     <% if item.display_configuration.try{|h| h[:indicate_fulltext]} && item.link_is_fulltext? %>
       <small class="bento_available_online">Online</small>
     <% end %>
-  </h4>
-
-
+  </h3>
