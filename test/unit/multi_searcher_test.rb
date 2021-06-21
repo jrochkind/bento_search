@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'celluloid'
 
 # Doesn't really test the concurrency, but basic smoke test with fake
 # searchers.
@@ -22,6 +23,7 @@ class MultiSearcherTest < ActiveSupport::TestCase
 
   def test_multisearch
     ActiveSupport::Deprecation.silence do
+      ::Celluloid.boot
       searcher = BentoSearch::MultiSearcher.new(:one, :two, :three)
       start_returnval = searcher.start("cancer")
 
