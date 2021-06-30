@@ -283,10 +283,6 @@ the ConcurrentSearcher's concurrency.
 
 For more info, see [BentoSearch::ConcurrentSearcher](./app/models/bento_search/concurrent_searcher.rb).
 
-The previous **MultiSearcher** class is now deprecated, ConcurrentSearcher
-is the replacement, and will likely work as a drop-in replacement.
-See [CHANGES](./CHANGES.md#17) for more info.
-
 
 
 
