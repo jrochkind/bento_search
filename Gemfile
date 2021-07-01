@@ -59,8 +59,6 @@ if Gem::Version.new(RUBY_VERSION.dup) < Gem::Version.new("2.1")
   gem 'nokogiri', '< 1.7'
 end
 
-
-# SQLite for testing
 gem "sqlite3", :platform => [:ruby, :mswin, :mingw]
 
 # for JRuby
