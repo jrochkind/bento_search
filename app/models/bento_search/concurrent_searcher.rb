@@ -16,7 +16,7 @@ begin
   #
   # initialize with id's of registered engines:
   #
-  #     searcher = BentoBox::MultiSearcher.new(:gbs, :scopus)
+  #     searcher = BentoBox::ConcurrentSearcher.new(:gbs, :scopus)
   #
   # start the concurrent searches, params same as engine.search
   #
@@ -37,7 +37,7 @@ begin
   #
   # In Rails previous to Rails5, you may have to set config.cache_classes=true
   # even in development to avoid problems. In Rails 5.x, we take advantage of
-  # new api that should allow concurrency-save autoloading. But if you run into
+  # new api that should allow concurrency-safe autoloading. But if you run into
   # any weird problems (such as a deadlock), `cache_classes = true` and
   # `eager_load = true` should eliminate them, at the cost of dev-mode
   # auto-reloading.
