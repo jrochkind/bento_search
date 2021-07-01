@@ -4,6 +4,9 @@
 
 * Drop support for ruby earlier than 2.5, and rails earlier than 5.2. Add support for Rails 6.0 and 6.1. https://github.com/jrochkind/bento_search/pull/49
 
+* Change item header in default bento_search display from h4 to h3, to be more likely to be
+  appropriate hieararchical level in expected usage. https://github.com/jrochkind/bento_search/pull/38
+
 ## 1.8.0
 
 * beforeSend param to ajax, see #30
