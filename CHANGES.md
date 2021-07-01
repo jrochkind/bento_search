@@ -1,3 +1,7 @@
+## 2.0.0 (in progress)
+
+* remove deprecated MultiSearcher class. Use ConcurrentSearcher instead, should be drop-in replacement in most cases.
+
 ## 1.8.0
 
 * beforeSend param to ajax, see #30
