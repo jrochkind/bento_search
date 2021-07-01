@@ -7,6 +7,8 @@
 * Change item header in default bento_search display from h4 to h3, to be more likely to be
   appropriate hieararchical level in expected usage. https://github.com/jrochkind/bento_search/pull/38
 
+* Removed `bento_search.js` wrapper sprockets JS file. If you had `//= require 'bento_search'` in your `application.js` or other sprockets pipeline, change to `//= require 'bento_search/ajax_load.js'` https://github.com/jrochkind/bento_search/pull/50
+
 ## 1.8.0
 
 * beforeSend param to ajax, see #30
