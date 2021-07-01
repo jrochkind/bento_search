@@ -19,12 +19,12 @@ jobs:
     strategy:
       matrix:
         include:
-          - ruby: 2.5.8
-            rails: 5.2.6
-          - ruby: 2.6.6
-            rails: 5.2.6
-          - ruby: 2.7.2
-            rails: 5.2.6
+          - ruby: 2.5
+            rails: 5.2
+          - ruby: 2.6
+            rails: 5.2
+          - ruby: 2.7
+            rails: 5.2
     env:
       RAILS_VERSION_SPEC: ${{ matrix.rails }}
 
