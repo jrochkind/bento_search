@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
   s.add_dependency "language_list", "~> 1.0" # ISO 639 language codes
   s.add_dependency "htmlentities" # replace htmlentities with straight unicode text, used to change HTML to plain text
 
-  s.add_development_dependency "vcr", "~> 2.4"
-  s.add_development_dependency "webmock", "~> 1.11.0"
+  s.add_development_dependency "vcr", "~> 6.0"
+  s.add_development_dependency "webmock", "~> 3.0"
   s.add_development_dependency "celluloid"
 end
