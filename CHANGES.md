@@ -2,6 +2,8 @@
 
 * remove deprecated MultiSearcher class. Use ConcurrentSearcher instead, should be drop-in replacement in most cases.
 
+* Drop support for ruby earlier than 2.5, and rails earlier than 5.2. Add support for Rails 6.0 and 6.1. https://github.com/jrochkind/bento_search/pull/49
+
 ## 1.8.0
 
 * beforeSend param to ajax, see #30

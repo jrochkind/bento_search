@@ -25,7 +25,7 @@ end
 rails_version = if ENV['RAILS_VERSION_SPEC'] && !ENV['RAILS_VERSION_SPEC'].empty?
   ENV['RAILS_VERSION_SPEC'].dup
 else
-  "5.2.0"
+  "6.1"
 end
 
 gem 'rails', "~> #{rails_version}"
