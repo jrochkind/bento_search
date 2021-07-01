@@ -48,7 +48,7 @@ module Dummy
     config.assets.version = '1.0'
 
     # Avoid Rails deprecation warning
-    if Gem::Version.new(Rails.version).release >= Gem::Version.new("5.2.0")
+    if Gem::Version.new(Rails.version).release >= Gem::Version.new("5.2.0") && Gem::Version.new(Rails.version).release < Gem::Version.new("6.0.0")
       config.active_record.sqlite3.represent_boolean_as_integer = true
     end
 

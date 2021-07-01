@@ -25,6 +25,11 @@ jobs:
             rails: 5.2
           - ruby: 2.7
             rails: 5.2
+          - ruby: 2.7
+            rails: 6.0
+          - ruby: 2.7
+            rails: 6.1
+
     env:
       RAILS_VERSION_SPEC: ${{ matrix.rails }}
 
