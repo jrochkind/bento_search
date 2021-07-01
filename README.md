@@ -1,6 +1,6 @@
 # BentoSearch
 
-[![Build Status](https://secure.travis-ci.org/jrochkind/bento_search.png)](http://travis-ci.org/jrochkind/bento_search)
+[![CI Build Status](https://github.com/jrochkind/bento_search/actions/workflows/ruby.yml/badge.svg)](https://github.com/jrochkind/bento_search/actions/workflows/ruby.yml)
 [![Gem Version](https://badge.fury.io/rb/bento_search.png)](http://badge.fury.io/rb/bento_search)
 
 bento_search provides an abstraction/normalization layer for querying and
