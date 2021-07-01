@@ -9,6 +9,9 @@
 
 * Removed `bento_search.js` wrapper sprockets JS file. If you had `//= require 'bento_search'` in your `application.js` or other sprockets pipeline, change to `//= require 'bento_search/ajax_load.js'` https://github.com/jrochkind/bento_search/pull/50
 
+* added `rails generate bento_search:install:ajax_load_js` to copy ajax load JS
+  into app for use with Webpacker. See https://github.com/jrochkind/bento_search/wiki/AJAX-results-loading for Webpacker instructions.
+
 ## 1.8.0
 
 * beforeSend param to ajax, see #30
