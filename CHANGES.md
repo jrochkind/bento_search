@@ -12,6 +12,17 @@
 * added `rails generate bento_search:install:ajax_load_js` to copy ajax load JS
   into app for use with Webpacker. See https://github.com/jrochkind/bento_search/wiki/AJAX-results-loading for Webpacker instructions.
 
+* Previous versions of bento_search provided some re-usable item decorators; they were deprecated,
+  it makes sense to write your own local/custom. https://github.com/jrochkind/bento_search/pull/53 The following item decorators are no longer
+  available in the gem, but have been moved to ./doc/examples_decorators for reference, you
+  can copy them into your local app to keep using them if you were before.
+
+  * app/item_decorators/bento_search/ebscohost/conditional_openurl_main_link.rb
+  * app/item_decorators/bento_search/openurl_main_link.rb
+  * app/item_decorators/bento_search/openurl_add_other_link.rb
+  * app/item_decorators/bento_search/openurl_main_link.rb
+
+
 ## 1.8.0
 
 * beforeSend param to ajax, see #30
