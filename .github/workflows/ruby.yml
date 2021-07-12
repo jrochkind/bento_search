@@ -29,6 +29,8 @@ jobs:
             rails: 6.0
           - ruby: 2.7
             rails: 6.1
+          - ruby: 3.0
+            rails: 6.1
 
     env:
       RAILS_VERSION_SPEC: ${{ matrix.rails }}
