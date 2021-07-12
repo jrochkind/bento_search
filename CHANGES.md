@@ -1,4 +1,12 @@
-## 2.0.0 (in progress)
+## NEXT
+
+*
+
+*
+
+*
+
+## 2.0.0(.rc1)
 
 * remove deprecated MultiSearcher class. Use ConcurrentSearcher instead, should be drop-in replacement in most cases.
 
