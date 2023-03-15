@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
 
   s.test_files = Dir["test/**/*"] - Dir["test/dummy/log/**/*"] - Dir["test/dummy/tmp/**/*"] - Dir["test/db/*.sqlite"] - Dir["test/dummy/db/**/*.sqlite3"]
 
-  s.add_dependency "rails", ">= 5.2", "< 7"
+  s.add_dependency "rails", ">= 5.2", "<= 7.1"
   # s.add_dependency "jquery-rails"
   s.add_dependency "confstruct", "~> 1.0"
   s.add_dependency "httpclient", ">= 2.2.5", "< 3.0.0"
@@ -25,6 +25,8 @@ Gem::Specification.new do |s|
   s.add_dependency "summon"
   s.add_dependency "language_list", "~> 1.0" # ISO 639 language codes
   s.add_dependency "htmlentities" # replace htmlentities with straight unicode text, used to change HTML to plain text
+
+  s.add_dependency "rails-controller-testing"
 
   s.add_development_dependency "vcr", "~> 6.0"
   s.add_development_dependency "webmock", "~> 3.0"

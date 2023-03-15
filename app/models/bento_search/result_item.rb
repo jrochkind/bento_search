@@ -1,4 +1,5 @@
 require 'language_list'
+require 'bento_search/results'
 require 'bento_search/author'
 require 'bento_search/link'
 
@@ -17,7 +18,7 @@ module BentoSearch
     include ERB::Util # for html_escape for our presentational stuff
     include ActionView::Helpers::OutputSafetyHelper # for safe_join
 
-    include ::BentoSearch::Results::Serialization
+    include BentoSearch::Results::Serialization
 
     # Can initialize with a hash of key/values
     def initialize(args = {})
