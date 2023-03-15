@@ -42,10 +42,12 @@ module Dummy
     # config.active_record.schema_format = :sql
 
     # Enable the asset pipeline
-    config.assets.enabled = true
+    # config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+    # config.assets.version = '1.0'
+
+    config.active_record.legacy_connection_handling = false
 
     # Avoid Rails deprecation warning
     if Gem::Version.new(Rails.version).release >= Gem::Version.new("5.2.0") && Gem::Version.new(Rails.version).release < Gem::Version.new("6.0.0")

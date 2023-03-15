@@ -1,0 +1,68 @@
+#!/usr/bin/env ruby
+require "fileutils"
+
+def setup
+  log "Installing gems"
+  # Only do bundle install if the much-faster
+  # bundle check indicates we need to
+  system! "gem install bundler --conservative"
+  system! 'bundle config --local path "vendor/bundle"'
+  system! "bundle check || bundle install"
+
+  log "All set up."
+  log ""
+  log "To see commonly-needed commands, run:"
+  log ""
+  log "    bin/setup help"
+  log ""
+end
+
+def help
+  log "Useful commands:"
+  log ""
+  log "  bin/run"
+  log "     # run app locally"
+  log ""
+  log ""
+  log "  bundle exec rubocop -A"
+  log "     # lints source code"
+  log ""
+  log "  RAILS_ENV=test bin/ci"
+  log "     # runs all tests and checks as CI would"
+  log ""
+  log "  RAILS_ENV=test bundle exec rspec"
+  log "     # run test specs"
+  log ""
+  log "  bin/setup help"
+  log "     # show this help"
+  log ""
+end
+
+# start of helpers
+
+# We don't want the setup method to have to do all this error
+# checking, and we also want to explicitly log what we are
+# executing. Thus, we use this method instead of Kernel#system
+def system!(*args)
+  log "Executing #{args}"
+  if system(*args)
+    log "#{args} succeeded"
+  else
+    log "#{args} failed"
+    abort
+  end
+end
+
+# It's helpful to know what messages came from this
+# script, so we'll use log instead of `puts`
+def log(message)
+  puts "[ bin/setup ] #{message}"
+end
+
+# end of helpers
+
+if ARGV[0] == "help"
+  help
+else
+  setup
+end
