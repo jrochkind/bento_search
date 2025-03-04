@@ -24,7 +24,7 @@ module BentoSearch
   # But note this 'spec' is often ignored/violated, even by the vendors
   # who wrote it. Wikipedia at http://en.wikipedia.org/wiki/RIS_(file_format)#Tags
   # contains some additional tags not mentioned in 'spec'. 
-  class RisCreator
+  class RISCreator
     def initialize(i)
       @item = i
       @ris_format = translate_ris_format
@@ -162,6 +162,4 @@ module BentoSearch
       end        
     end
   end
-
-  RISCreator = RisCreator
 end

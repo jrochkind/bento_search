@@ -2,7 +2,7 @@ require 'test_helper'
 
 
 class RISCreatorTest < ActiveSupport::TestCase
-  RISCreator = BentoSearch::RisCreator
+  RISCreator = BentoSearch::RISCreator
   ResultItem = BentoSearch::ResultItem
   Author     = BentoSearch::Author
   

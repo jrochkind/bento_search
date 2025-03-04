@@ -343,7 +343,7 @@ A class is included to convert an individual BentoSearch::ResultItem to
 the RIS format, suitable for import into EndNote, Refworks, etc.
 
 ~~~ruby
-    ris_data = RisCreator.new( bento_item ).export
+    ris_data = RISCreator.new( bento_item ).export
 ~~~
 
 Accomodating actual exports into the transactional flow of a web app can be
