@@ -137,9 +137,9 @@ module BentoSearchHelper
   # call partial directly:
   #  <%= render :partial => "bento_search/item_title", :object => item, :as => 'item'  %>
   def bento_item_title(item)
+    ActiveSupport::Deprecation.warn("#bento_item_title is deprecated.")
     render :partial => "bento_search/item_title", :object => item, :as => 'item'
   end
-  deprecate :bento_item_title
 
   # pass in 0-based rails current collection counter and a BentoSearch::Results,
   # calculates a user-displayable result set index label.

@@ -5,7 +5,7 @@
 
 bento_search provides an abstraction/normalization layer for querying and
 displaying results from external search engines, in Ruby on Rails. Works with
-Rails 5.2 - 6.1, ruby 2.5 through 3.0.
+Rails 7.1 - 8.0, ruby 3.1 through 3.3.
 
 ### Goals: To help you
 
@@ -343,7 +343,7 @@ A class is included to convert an individual BentoSearch::ResultItem to
 the RIS format, suitable for import into EndNote, Refworks, etc.
 
 ~~~ruby
-    ris_data = RISCreator.new( bento_item ).export
+    ris_data = RisCreator.new( bento_item ).export
 ~~~
 
 Accomodating actual exports into the transactional flow of a web app can be
