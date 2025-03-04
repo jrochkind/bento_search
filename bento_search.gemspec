@@ -15,7 +15,9 @@ Gem::Specification.new do |s|
 
   s.test_files = Dir["test/**/*"] - Dir["test/dummy/log/**/*"] - Dir["test/dummy/tmp/**/*"] - Dir["test/db/*.sqlite"] - Dir["test/dummy/db/**/*.sqlite3"]
 
-  s.add_dependency "rails", ">= 5.2", "< 7"
+  s.required_ruby_version = ">= 3.1"
+
+  s.add_dependency "rails", ">= 7.1", "< 9"
   # s.add_dependency "jquery-rails"
   s.add_dependency "confstruct", "~> 1.0"
   s.add_dependency "httpclient", ">= 2.2.5", "< 3.0.0"
@@ -28,4 +30,5 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "vcr", "~> 6.0"
   s.add_development_dependency "webmock", "~> 3.0"
+  s.add_development_dependency "rails-controller-testing"
 end

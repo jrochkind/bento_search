@@ -161,6 +161,5 @@ module BentoSearch
         return nil
       end        
     end
-    
   end
 end

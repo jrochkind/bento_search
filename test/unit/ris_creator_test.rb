@@ -1,5 +1,6 @@
 require 'test_helper'
 
+
 class RISCreatorTest < ActiveSupport::TestCase
   RISCreator = BentoSearch::RISCreator
   ResultItem = BentoSearch::ResultItem

@@ -5,7 +5,7 @@
 
 bento_search provides an abstraction/normalization layer for querying and
 displaying results from external search engines, in Ruby on Rails. Works with
-Rails 5.2 - 6.1, ruby 2.5 through 3.0.
+Rails 7.1 - 8.0, ruby 3.1 through 3.3.
 
 ### Goals: To help you
 

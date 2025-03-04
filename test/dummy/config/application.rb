@@ -41,11 +41,13 @@ module Dummy
     # like if you have constraints or database-specific column types
     # config.active_record.schema_format = :sql
 
-    # Enable the asset pipeline
-    config.assets.enabled = true
+    if config.respond_to?(:assets)
+      # Enable the asset pipeline
+      config.assets.enabled = true
 
-    # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+      # Version of your assets, change this if you want to expire all your assets
+      config.assets.version = '1.0'
+    end
 
     # Avoid Rails deprecation warning
     if Gem::Version.new(Rails.version).release >= Gem::Version.new("5.2.0") && Gem::Version.new(Rails.version).release < Gem::Version.new("6.0.0")
